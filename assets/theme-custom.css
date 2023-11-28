@@ -1,0 +1,97 @@
+/* 
+Name: Fusta
+Author: HasTech
+*/
+/* Ajax Spin Cart */
+.ajax-spin-cart .cart-loading, .ajax-spin-cart.add-item .cart-title, .ajax-spin-cart .cart-added, .ajax-spin-cart .cart-unavailable{
+  display: none;
+}
+.ajax-spin-cart.loading.add-item .cart-added, .ajax-spin-cart.loading.add-item .cart-unavailable{
+  display: none;
+}
+.ajax-spin-cart.loading .cart-loading, .ajax-spin-cart.add-item .cart-added{
+  display: inline-block;
+}
+
+.modal-open .ajax-spin-cart.add-item .cart-unavailable{
+  display: inline-block;
+}
+.modal-open .ajax-spin-cart.add-item .cart-loading{
+  display: none;
+}
+.modal-open .ajax-spin-cart.add-item .cart-added{
+  display: none;
+}
+
+/* Wishlist Button */
+.wishlist-action a {
+  display: inline-block;
+}
+.action-wishlist .loading-wishlist, .action-wishlist .remove-wishlist, a.go-to-wishlist{
+  display: none;
+}
+.action-wishlist.loading-wishlist .loading-wishlist{
+  display: inline-block;
+}
+.action-wishlist.loading-wishlist .add-wishlist, .action-wishlist.adding-wishlist .remove-wishlist, .action-wishlist.adding-wishlist + a.go-to-wishlist{
+  display: none;
+}
+.action-wishlist.is-active .add-wishlist{
+  display: none;
+}
+.action-wishlist.is-active .remove-wishlist, .action-wishlist.is-active + a.go-to-wishlist{
+  display: inline-block;
+}
+.action-wishlist.is-active.adding-wishlist .remove-wishlist, .action-wishlist.is-active.adding-wishlist + a.go-to-wishlist{
+  display: inline-block;
+}
+.action-wishlist.loading-wishlist.adding-wishlist .remove-wishlist, .action-wishlist.loading-wishlist.adding-wishlist + a.go-to-wishlist{
+  display: none;
+}
+
+.language-currency-wrapper ul li.drodown-show {
+  margin-bottom: 0;
+}
+
+.main-menu-area ul > li {
+  margin-bottom: 0px;
+}
+.featured-image {
+  position: relative;
+}
+
+.cart-tempty-title{
+  display: none;
+}
+
+.main-menu-area .mega-menu {
+  margin: 0;
+}
+.main-menu-area .mega-menu > li ul {
+  margin: 0;
+}
+.main-menu-area .mega-menu li ul li.mega-menu-title {
+  padding: 0;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.main-menu-area .sub-menu {
+    margin: 0;
+}
+
+
+.cart-buttons {
+}
+.spr-icon {
+    font-size: 12px !important;
+}
+
+.language-currency-wrapper ul.open-dropdown{
+    width: 200px;
+    margin: 0;
+}
+.mobile-menu .mean-bar .mean-nav > ul li {
+    margin-bottom: 0;
+}

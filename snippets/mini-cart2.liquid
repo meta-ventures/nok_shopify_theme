@@ -1,0 +1,134 @@
+{% if settings.mini_cart_style == "style2" %}
+{% assign itemStyle = '' %}{% if cart.item_count == 0 %}{% assign itemStyle = ' style="display:none;"' %}{% endif %}
+{% assign itemEmpty = '' %}{% if cart.item_count == 0 %}{% assign itemEmpty = ' style="display:block;"' %}{% endif %}
+<div class="shopping-widget">
+  <div class="shopping-cart">
+    <a href="javascript:void(0)" class="cart-count">
+      <div class="cart-title">{{ settings.cart_title }}</div>
+      <span class="cart-icon">
+        <i class="ri-shopping-bag-3-line"></i>
+      </span>
+      <span id="cart-total" class="bigcounter">{{ cart.item_count }}</span>
+      <span id="cart-total" class="subtotal-price">{{ cart.total_price | money }}</span>
+    </a>
+  </div>
+</div>
+<script>
+  $(document).ready(function() {
+    $(".shopping-cart a.cart-count").click(function(){
+      $(".mini-cart").addClass("show");
+      $(".mm-fullscreen-bg").addClass("active");
+    });
+    $(".shopping-cart-close i").click(function(){
+      $(".mini-cart").removeClass("show");
+      $(".mm-fullscreen-bg").removeClass("active");
+    });
+    $(".mm-fullscreen-bg").click(function(){
+      $(".mini-cart").removeClass("show");
+      $(".mm-fullscreen-bg").removeClass("active");
+    });
+  });
+</script>
+<style>
+  /* mini cart css */
+  .shopping-widget .shopping-cart {
+    position: relative;
+  }
+  .shopping-widget .shopping-cart a.cart-count {
+    {%- if template == 'index' -%}
+    color: {{ section.settings.header_text_color }};
+    {%- else -%}
+    color: {{ section.settings.other_header_text_color }};
+    {%- endif -%}
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+  }
+  .shopping-widget .shopping-cart a.cart-count:hover {
+    {%- if template == 'index' -%}
+    color: {{ section.settings.other_header_text_color }};
+    {%- else -%}
+    color: var(--font-color-primary);
+    {%- endif -%}
+  }
+  .is-sticky .shopping-widget .shopping-cart a.cart-count{
+     color: {{ section.settings.other_header_text_color }};
+  }
+  .is-sticky .shopping-widget .shopping-cart a.cart-count:hover {
+     color: var(--font-color-primary);
+  }
+  .shopping-widget .shopping-cart a.cart-count span.cart-icon i {
+    display: block;
+    line-height: 1;
+  }
+  .shopping-widget .shopping-cart a.cart-count .cart-title{
+    font-size: 14px;
+    {% if settings.enable_rtl %}
+    margin-left: 10px;
+    {% else %}
+    margin-right: 10px;
+    {% endif %}
+    display: none;
+  }
+  .shopping-widget .shopping-cart a.cart-count .cart-title span{
+    {% if settings.enable_rtl %}
+    padding-right: 2px;
+    {% else %}
+    padding-left: 2px;
+    {% endif %}
+  }
+  .shopping-widget .shopping-cart a.cart-count span.bigcounter {
+    color: #fff;
+    font-size: 12px;
+    line-height: 1;
+    height: 18px;
+    width: 18px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: var(--font-color-primary);
+  }
+  .shopping-widget .shopping-cart a.cart-count span.subtotal-price {
+    display: none;
+  }
+  .shopping-widget .shopping-cart a.cart-count span.cart-detail{
+    color: var(--font-color-header);
+    font-size: 13px;
+    {% if settings.enable_rtl %}
+    margin-right: 10px;
+    {% else %}
+    margin-left: 10px;
+    {% endif %}
+  }
+  .shopping-widget .shopping-cart a.cart-count span.cart-detail cart-title{
+    display: block;
+    text-transform: capitalize;
+  }
+  .shopping-widget .shopping-cart a.cart-count span.cart-detail span.subtotal-price{
+    display: block;
+  }
+  @media (max-width: 1599px) {
+    .shopping-widget .shopping-cart a.cart-count .cart-title span {
+      font-size: 14px;
+    }
+  }
+  @media (max-width: 1199px) {
+    .shopping-widget .shopping-cart a.cart-count{
+      width: auto;
+      height: auto;
+      background-color: transparent;
+    }
+    .shopping-widget .shopping-cart a.cart-count .cart-title {
+      display: none;
+    }
+    .shopping-widget .shopping-cart a.cart-count span.cart-detail{
+      display: none;
+    }
+  }
+</style>
+{% endif %}

@@ -1,0 +1,260 @@
+{% if section.settings.section_enable %}
+<footer class="copyright-area">
+    <div class="container">
+        <div class="row">
+          <div class="col">
+                <ul class="ft-bottom">
+                    <li class="copy-right">
+                        <div class="richtext">
+                            {{ section.settings.copy_right_text1 }}
+                        </div>
+                    </li>
+                    <li class="social-media">
+                        {% include 'social-midea' %}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+{% endif %}
+{% schema %}
+{
+    "name": "Copyright",
+    "settings": [
+    {
+        "type" : "header",
+        "content" : "Section enable/desable"
+    },
+    {
+      "type": "checkbox",
+      "id": "section_enable",
+      "label": "Section enable",
+      "default": true
+    },
+    {
+    "type": "header",
+    "content": "Section Padding"
+  },
+  {
+    "type" : "paragraph",
+    "content" : "Desktop / Laptop / tablet"
+  },
+  {
+    "type": "range",
+    "id": "section_padding_top",
+    "label": "Section Padding Top",
+    "min": 0,
+    "max": 100,
+    "step": 5,
+    "unit": "px",
+    "default": 60
+  },
+  {
+    "type": "range",
+    "id": "section_padding_bottom",
+    "label": "Section Padding Bottom",
+    "min": 0,
+    "max": 100,
+    "step": 5,
+    "unit": "px",
+    "default": 60
+  },
+  {
+    "type" : "paragraph",
+    "content" : "Ipad pro / Ipad"
+  },
+  {
+    "type": "range",
+    "id": "section_padding_top_ip",
+    "label": "Section Padding Top",
+    "min": 0,
+    "max": 100,
+    "step": 5,
+    "unit": "px",
+    "default": 30
+  },
+  {
+    "type": "range",
+    "id": "section_padding_bottom_ip",
+    "label": "Section Padding Bottom",
+    "min": 0,
+    "max": 100,
+    "step": 5,
+    "unit": "px",
+    "default": 30
+  },
+  {
+    "type" : "paragraph",
+    "content" : "Mobile"
+  },
+  {
+    "type": "range",
+    "id": "section_padding_top_xs",
+    "label": "Section Padding Top",
+    "min": 0,
+    "max": 100,
+    "step": 5,
+    "unit": "px",
+    "default": 20
+  },
+  {
+    "type": "range",
+    "id": "section_padding_bottom_xs",
+    "label": "Section Padding Bottom",
+    "min": 0,
+    "max": 100,
+    "step": 5,
+    "unit": "px",
+    "default": 20
+  },
+    {
+      "type": "checkbox",
+      "id": "bg_img_enable",
+      "label": "Background Image enable",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "bg_img",
+      "label": "Background Image",
+      "info": "Recommended Size: 1920 x 50px"
+    },   
+    {
+        "type" : "header",
+        "content" : "Background Color"
+    },
+    {
+        "type": "color",
+        "id": "foot_bt_bg_color",
+        "label": "Background Color",
+        "default": "#FFFFFF"
+    },
+    {
+        "type": "color",
+        "id": "foot_text_bg_color",
+        "label": "Text Color",
+        "default": "#fff"
+    },
+    {
+        "type" : "header",
+        "content" : "Section Border"
+    },
+    {
+        "type": "range",
+        "id": "foot_bt_border",
+        "label": "Border",
+        "min": 0,
+        "max": 2,
+        "step": 1,
+        "unit": "px",
+        "default": 1
+    },
+    {
+        "type": "color",
+        "id": "foot_bt_border_color",
+        "label": "Border Color",
+        "default": "#E2E2E2"
+    },
+    {
+        "type" : "checkbox",
+        "id" : "foot_bt_border_enable",
+        "label" : "Show Section Border",
+        "default" : true
+    },
+    {
+        "type" : "header",
+        "content" : "Copyright Text"
+    },
+    {
+        "type": "richtext",
+        "id": "copy_right_text1",
+        "label": "CopyRight Text1"
+    }
+    ],
+    "presets":[
+    {
+        "name": "Copyright",
+        "category": "Footer"
+    }
+    ]
+}
+{% endschema %}
+
+<style>
+    .copyright-area{
+        padding-top: {{ section.settings.section_padding_top }}px;
+        padding-bottom: {{ section.settings.section_padding_bottom }}px;
+        background-color: {{ section.settings.foot_bt_bg_color }};
+        {% if section.settings.foot_bt_border_enable %}
+        border-top: {{ section.settings.foot_bt_border }}px solid {{ section.settings.foot_bt_border_color }};
+        {% endif %}
+        {% if section.settings.bg_img_enable %}
+        background-image: url({% if section.settings.bg_img %}{{ section.settings.bg_img | img_url: 'master' }}{% else %}https://dummyimage.com/1920x50{% endif %});
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        {% endif %}
+    }
+    @media (max-width: 1199px){
+        .copyright-area {
+          padding-top: {{ section.settings.section_padding_top_ip }}px;
+          padding-bottom: {{ section.settings.section_padding_bottom_ip }}px;
+        }
+      }
+      @media (max-width: 767px){
+        .copyright-area {
+          padding-top: {{ section.settings.section_padding_top_xs }}px;
+          padding-bottom: {{ section.settings.section_padding_bottom_xs }}px;
+        }
+      }
+    .copyright-area ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .copyright-area ul li.right-block{
+        {% if settings.enable_rtl %}
+        text-align: left;
+        {% else %}
+        text-align: right;
+        {% endif %}
+    }
+    .copyright-area .richtext a,
+    .copyright-area .richtext p{
+        font-size: 16px;
+        color: {{ section.settings.foot_text_bg_color }};
+    }
+    .copyright-area .richtext a:hover{
+        color: var(--font-color-primary);
+    }
+    .copyright-area .richtext a:not(:first-child){
+        {% if settings.enable_rtl %}
+        margin-right: 15px;
+        {% else %}
+        margin-left: 15px;
+        {% endif %}        
+    } 
+    /* social css */
+    .copyright-area ul.ft-bottom li.social-media .social ul.social-icon {
+        {% if settings.enable_rtl %}
+        padding-right: 0px;
+        {% else %}
+        padding-left: 0px;
+        {% endif %}
+    } 
+    @media (max-width: 1199px) {
+        .copyright-area .richtext a,
+        .copyright-area .richtext p {
+            font-size: 14px;
+        }
+    }
+    @media (max-width: 479px) {
+        .copyright-area ul.ft-bottom {
+            flex-direction: column;
+        }
+        .copyright-area ul.ft-bottom li.social-media {
+            margin-top: 13px;    
+        }
+    }
+</style>

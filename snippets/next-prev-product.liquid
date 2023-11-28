@@ -1,0 +1,157 @@
+{% assign found_a_collection = false %}
+{% for c in product.collections %}
+{% if found_a_collection == false and c.handle != 'frontpage' and c.handle != 'all' and c.all_products_count > 1 %}
+{% assign found_a_collection = true %}
+{% assign collection = c %}
+{% endif %}
+{% endfor %}
+{% assign current = product.id %}
+{% if collection and collection.all_products_count > 1 %}
+{% for product in collection.products %}
+{% assign id = product.id %}
+{% if id == current %}
+{% if forloop.last %}
+{% assign next = 0 %}
+{% else %}
+{% assign next = forloop.index %}
+{% endif %}
+{% assign prev = forloop.index | minus:2 %}
+{% endif %}
+{% endfor %}
+
+{% if section.settings.next_prev_handle == "image" %}
+<!-- product_Prev_images start -->
+<a class="next-prev-product prev" href="{{ collection.products[prev].url }}" title="{{ collection.products[prev].title }}">
+  <img width="{{ collection.products[prev].featured_image.width }}" height="{{ collection.products[prev].featured_image.height }}" class="img-fluid" src="{{ collection.products[prev].featured_image | img_url: '45x60', crop: 'center' }}" alt="{{ collection.products[prev].featured_image.alt }}"/>
+</a>
+<!-- product_Next_images end -->
+<a class="next-prev-product next" href="{{ collection.products[next].url }}" title="{{ collection.products[next].title }}">
+  <img width="{{ collection.products[next].featured_image.width }}" height="{{ collection.products[next].featured_image.height }}" class="img-fluid" src="{{ collection.products[next].featured_image | img_url: '45x60', crop: 'center' }}" alt="{{ collection.products[next].featured_image.alt }}" />
+</a>
+
+{% else %}
+
+<!-- product_Prev_images start -->
+<a class="next-prev-product prev" href="{{ collection.products[prev].url }}" title="{{ collection.products[prev].title }}">
+  <span>{{ section.settings.product_prev_title }}</span>
+</a>
+<!-- product_Next_images end -->
+<a class="next-prev-product next" href="{{ collection.products[next].url }}" title="{{ collection.products[next].title }}">
+  <span>{{ section.settings.product_next_title }}</span>
+</a>
+{% endif %}
+
+{% endif %}
+<style>
+  a.next-prev-product{
+    display: block;
+    position: fixed;
+    bottom: 50%;
+    transform: translateY(50%);
+    z-index: 3;
+    -webkit-transform: translateY(50%);
+    -o-transform: translateY(50%);
+    transform: translateY(50%);
+    -webkit-transition: all 0s ease-in-out 0s;
+    -o-transition: all 0s ease-in-out 0s;
+    transition: all 0s ease-in-out 0s;
+  }
+
+  {% if section.settings.next_prev_handle == "image" %}
+  a.next-prev-product img{
+    backface-visibility: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    -webkit-transform: scale(1.0);
+    -o-transform: scale(1.0);
+    transform: scale(1.0);
+  }
+  a.next-prev-product img:hover{
+    -webkit-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  a.next-prev-product img,
+  a.next-prev-product img:hover{
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -o-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+  }
+  a.next-prev-product.prev{
+    {% if settings.enable_rtl %}
+    right: 0;
+    {% else %}
+    left: 0;
+    {% endif %}
+  }
+  a.next-prev-product.next{
+    {% if settings.enable_rtl %}
+    left: 0;
+    {% else %}
+    right: 0;
+    {% endif %}
+  }
+  a.next-prev-product.prev img{
+    {% if settings.enable_rtl %}
+    border-radius: 5px 0px 0px 5px;
+    {% else %}
+    border-radius: 0 5px 5px 0;
+    {% endif %}
+  }
+  a.next-prev-product.next img{
+    {% if settings.enable_rtl %}
+    border-radius: 0 5px 5px 0;
+    {% else %}
+    border-radius: 5px 0px 0px 5px;
+    {% endif %}    
+  }
+  @media (max-width: 1199px) {
+    a.next-prev-product{
+      display: none;
+    }
+  }
+  {% endif %}
+
+  /* text css */
+  {% if section.settings.next_prev_handle == "text" %}
+  a.next-prev-product{
+    color: var(--font-color-body);
+    -webkit-transform: translateY(50%) rotate(180deg);
+    -o-transform: translateY(50%) rotate(180deg);
+    transform: translateY(50%) rotate(180deg);
+    writing-mode: vertical-rl;
+    -ms-writing-mode: tb-rl;
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: 5px;
+  }
+  a.next-prev-product.prev{
+    {% if settings.enable_rtl %}
+    right: 15px;
+    {% else %}
+    left: 15px;
+    {% endif %}
+  }
+  a.next-prev-product.next{
+    {% if settings.enable_rtl %}
+    left: 15px;
+    {% else %}
+    right: 15px;
+    {% endif %}
+  }
+  a.next-prev-product span:hover{
+    transform: scale(1.2);
+  }
+  a.next-prev-product span,
+  a.next-prev-product span:hover{
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -o-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+  }
+  @media (max-width: 767px) {
+    a.next-prev-product{
+      display: none;
+    }
+  }
+  {% endif %}
+</style>

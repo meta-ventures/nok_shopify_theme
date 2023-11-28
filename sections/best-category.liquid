@@ -1,0 +1,291 @@
+<section class="best-category collection-category-{{ section.id }}">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="section-capture">
+          <div class="section-title">
+            <div class="section-cont-title">
+              {% if section.settings.section_best_title !='' %}
+              <h2>
+                <span>{{ section.settings.section_best_title }}</span>
+              </h2>
+              {% endif %}
+            </div>
+
+            {% if section.settings.section_best_desc !='' %}
+            <p>{{ section.settings.section_best_desc }}</p>
+            {% endif %}
+          </div>
+        </div>
+        {% assign category_product = collections[section.settings.best_label_product] %}
+        <div class="collection-slider owl-carousel owl-theme" id="pro-{{ section.id }}">
+          {% assign category_product_limit = section.settings.category_best_product_limit_handle %}
+          {% for product in category_product.products limit: category_product_limit %}
+          <div class="item">
+            {% include 'product-grid-item' %}
+          </div>
+          {% endfor %}
+        </div>
+        {% if section.settings.category_best_button_enable %}
+        <div class="collection-button">
+          <a href="{{ category_product.url }}" class="btn {% if section.settings.category_best_button_style == 'btn-style1' %}btn-style{% elsif section.settings.category_best_button_style == 'btn-style2' %}btn-style2{% else %}btn-style3{% endif %}">{{ section.settings.category_best_button_text }}</a>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+<script type="text/javascript">
+  addEventListener('DOMContentLoaded', (event) => {
+    $('#pro-{{ section.id }}').owlCarousel({
+      loop: false,
+      rewind: true,
+      margin: 0,
+      nav: true,
+      navText: ['<i class="ri-arrow-left-line"></i>','<i class="ri-arrow-right-line"></i>'],
+      dots: false,
+      {%- if settings.enable_rtl -%}
+      rtl: true,
+      {%- endif -%}
+      autoplay: true,
+      autoplayTimeout: 5000,
+      autoplayHoverPause: true,
+      responsive:{
+        0:{
+          items: 1
+        },
+        479:{
+          items: 1
+        },
+        540:{
+          items: 2
+        },
+        768:{
+          items: 2
+        },
+        979:{
+          items: 3
+        },
+        1199: {
+          items: {{ section.settings.category_best_product_limit }}
+        }
+      }
+    });
+  });
+</script>
+{% schema %}
+{
+  "name": "Best Product",
+  "settings": [
+  {
+    "type" : "header",
+    "content" : "Section Padding"
+  },
+  {
+    "type" : "paragraph",
+    "content" : "Desktop / Laptop / tablet"
+  },
+  {
+    "type": "range",
+    "id": "category_best_padding_top",
+    "label": "Section Padding Top",
+    "min": 0,
+    "max": 100,
+    "step": 1,
+    "unit": "px",
+    "default": 100
+  },
+  {
+    "type": "range",
+    "id": "category_best_padding_bottom",
+    "label": "Section Padding Bottom",
+    "min": 0,
+    "max": 100,
+    "step": 1,
+    "unit": "px",
+    "default": 0
+  },
+  {
+    "type" : "paragraph",
+    "content" : "Ipad pro / Ipad"
+  },
+  {
+    "type": "range",
+    "id": "category_best_padding_top_ip",
+    "label": "Section Padding Top",
+    "min": 0,
+    "max": 100,
+    "step": 1,
+    "unit": "px",
+    "default": 80
+  },
+  {
+    "type": "range",
+    "id": "category_best_padding_bottom_ip",
+    "label": "Section Padding Bottom",
+    "min": 0,
+    "max": 100,
+    "step": 1,
+    "unit": "px",
+    "default": 0
+  },
+  {
+    "type" : "paragraph",
+    "content" : "Mobile"
+  },
+  {
+    "type": "range",
+    "id": "category_best_padding_top_xs",
+    "label": "Section Padding Top",
+    "min": 0,
+    "max": 100,
+    "step": 1,
+    "unit": "px",
+    "default": 60
+  },
+  {
+    "type": "range",
+    "id": "category_best_padding_bottom_xs",
+    "label": "Section Padding Bottom",
+    "min": 0,
+    "max": 100,
+    "step": 1,
+    "unit": "px",
+    "default": 0
+  },
+  {
+    "type": "header",
+    "content": "Section Content"
+  },
+  {
+    "type": "text",
+    "id": "section_best_title",
+    "label": "Title",
+    "default": "Best products"
+  },
+  {
+    "type": "textarea",
+    "id": "section_best_desc",
+    "label": "Description",
+    "default": "Lorem Ipsum is printing & typesetting industry's standard dummy text since texts"    
+  },
+  {
+    "type": "header",
+    "content": "Product"
+  },
+  {
+    "type": "select",
+    "id": "category_best_product_limit",
+    "label": "slides Per View",
+    "options":[
+    {
+      "label": "2 Products",
+      "value": "2"
+    },
+    {
+      "label": "3 Products",
+      "value": "3"
+    },
+    {
+      "label": "4 Products",
+      "value": "4"
+    },
+    {
+      "label": "5 Products",
+      "value": "5"
+    }
+    ],
+    "default": "4"
+  },
+  {
+    "type": "text",
+    "id": "category_best_product_limit_handle",
+    "label": "Product Limit",
+    "default": "10"
+  },
+  {
+    "type" : "collection",
+    "id" : "best_label_product",
+    "label" : "Select Collection"
+  },
+  {
+    "type": "header",
+    "content": "Button Style"
+  },
+  {
+    "type": "text",
+    "id": "category_best_button_text",
+    "label": "Button Text",
+    "default": "See more"
+  },
+  {
+    "type": "select",
+    "id": "category_best_button_style",
+    "label": "Button Style",
+    "options": [
+    {
+      "label": "Button Style1",
+      "value": "btn-style1"
+    },
+    {
+      "label": "Button Style2",
+      "value": "btn-style2"
+    },
+    {
+      "label": "Button Style3",
+      "value": "btn-style3"
+    }
+    ],
+    "default": "btn-style3"
+  },
+  {
+    "type": "checkbox",
+    "id": "category_best_button_enable",
+    "label": "Show Collection Button",
+    "default": true
+  }
+  ],
+  "presets":[
+  {
+    "name": "Best Product",
+    "category": "Collection"
+  }
+  ]
+}
+{% endschema %}
+<style>
+  .collection-category-{{ section.id }}{
+    padding-top: {{ section.settings.category_best_padding_top }}px;
+    padding-bottom: {{ section.settings.category_best_padding_bottom }}px;
+  }
+  @media (max-width: 1199px) {
+    .collection-category-{{ section.id }}{
+      padding-top: {{ section.settings.category_best_padding_top_ip }}px;
+      padding-bottom: {{ section.settings.category_best_padding_bottom_ip }}px;
+    }
+  }
+  @media (max-width: 767px) {
+    .collection-category-{{ section.id }}{
+      padding-top: {{ section.settings.category_best_padding_top_xs }}px;
+      padding-bottom: {{ section.settings.category_best_padding_bottom_xs }}px;
+    }
+  }
+
+  {% if section.settings.category_best_button_enable %}
+  /* view button collection css */
+  .collection-button{
+    margin-top: {{ section.settings.category_best_padding_top | divided_by: 2 }}px;
+    text-align: center;
+  }
+  @media (max-width: 1199px){
+    .collection-button{
+      margin-top: {{ section.settings.category_best_padding_top_ip | divided_by: 2 }}px;
+    }
+  }
+  @media (max-width: 767px){
+    .collection-button{
+      margin-top: {{ section.settings.category_best_padding_top_xs | divided_by: 2 }}px;
+    }
+  }
+  {% endif %}
+</style>

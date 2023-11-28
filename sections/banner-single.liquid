@@ -1,0 +1,222 @@
+<!-- banner-area start -->
+<section class="banner-single">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="banner-block">
+                    <a href="{{ section.settings.banner2_url }}" class="banner-hover">
+                        <img width="{{ section.settings.banner2_img.width }}" height="{{ section.settings.banner2_img.height }}" class="img-fluid" src="{% if section.settings.banner2_img %}{{ section.settings.banner2_img | img_url: 'master' }}{% else %}https://dummyimage.com/1550x350{% endif %}" alt="">
+                    </a>
+                    <div class="text-content">
+                        {% if section.settings.banner_title != '' %}
+                        <h3 style="color: {{ section.settings.banner_title_color }};">{{ section.settings.banner_title }}</h3>
+                        {% endif %}
+                        {% if section.settings.banner_button != '' %}
+                        <a style="color: {{ section.settings.banner_button_color }};" href="{{ section.settings.banner2_url }}">{{ section.settings.banner_button }}</a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- banner-area end -->
+{% schema %}
+{
+    "name": "Banner Single",
+    "settings": [
+    {
+        "type": "header",
+        "content": "Section Padding"
+    },
+    {
+        "type" : "paragraph",
+        "content" : "Desktop / Laptop / tablet"
+    },
+    {
+        "type": "range",
+        "id": "banner2_padding_top",
+        "label": "Section Padding Top",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "default": 80
+    },
+    {
+        "type": "range",
+        "id": "banner2_padding_bottom",
+        "label": "Section Padding Bottom",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "default": 80
+    },
+    {
+        "type" : "paragraph",
+        "content" : "Ipad pro / Ipad"
+    },
+    {
+        "type": "range",
+        "id": "banner2_padding_top_ip",
+        "label": "Section Padding Top",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "default": 60
+    },
+    {
+        "type": "range",
+        "id": "banner2_padding_bottom_ip",
+        "label": "Section Padding Bottom",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "default": 60
+    },
+    {
+        "type" : "paragraph",
+        "content" : "Mobile"
+    },
+    {
+        "type": "range",
+        "id": "banner2_padding_top_xs",
+        "label": "Section Padding Top",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "default": 50
+    },
+    {
+        "type": "range",
+        "id": "banner2_padding_bottom_xs",
+        "label": "Section Padding Bottom",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "default": 50
+    },
+    {
+        "type": "header",
+        "content": "Banner Image"
+    },
+    {
+        "type": "image_picker",
+        "id": "banner2_img",
+        "label": "Banner Image",
+        "info": "Recommended Size: 1550px x 350px"
+    },
+    {
+        "type": "url",
+        "id": "banner2_url",
+        "label": "URL"
+    },
+    {
+        "type": "textarea",
+        "id": "banner_title",
+        "label": "Banner title",
+        "default": "Corona virus Protection"
+    },
+     {
+          "type": "color",
+          "id": "banner_title_color",
+          "label": "Bannertitle color",
+          "default": "#fff"
+      },
+    {
+        "type": "textarea",
+        "id": "banner_button",
+        "label": "Banner button",
+        "default": "Shop now"
+    },
+    {
+      "type": "color",
+      "id": "banner_button_color",
+      "label": "Banner button color",
+      "default": "#fff"
+  }
+    ],
+    "presets":[
+        {
+            "name": "Banner Single",
+            "category": "Banner"
+        }
+    ]
+}
+{% endschema %}
+<style>
+   .banner-single{
+        padding-top: {{ section.settings.banner2_padding_top }}px;
+        padding-bottom: {{ section.settings.banner2_padding_bottom }}px;
+    }
+    @media(max-width: 1199px){
+       .banner-single{
+            padding-top: {{ section.settings.banner2_padding_top_ip }}px;
+            padding-bottom: {{ section.settings.banner2_padding_bottom_ip }}px;
+        }
+    }
+    @media(max-width: 767px){
+       .banner-single{
+            padding-top: {{ section.settings.banner2_padding_top_xs }}px;
+            padding-bottom: {{ section.settings.banner2_padding_bottom_xs }}px;
+        }
+    }
+   .banner-single .banner-block{
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        -webkit-transition: all .3s ease-in-out 0s;
+        -o-transition: all .3s ease-in-out 0s;
+        transition: all .3s ease-in-out 0s;
+    }
+   .banner-single .banner-block:hover{
+        transform: translateY(-10px);
+    }
+   .banner-single .banner-block .text-content{
+        position: absolute;
+        left: 10%;
+    }
+   .banner-single .banner-block .text-content h3{
+        color: #Fff;
+        font-size: 38px;
+    }
+   .banner-single .banner-block .text-content a{
+        font-size: 16px;
+        text-transform: uppercase;
+        color: #Fff;
+        font-weight: 400;
+        padding-bottom: 10px;
+        margin-top: 30px;
+        border-bottom: 5px solid rgba(255,255,255,40%);
+    }
+    @media(max-width: 1199px){
+       .banner-single .banner-block .text-content{
+            left: 5%;
+        }
+       .banner-single .banner-block .text-content h3{   
+            font-size: 28px;
+        }
+       .banner-single .banner-block .text-content a{
+            font-size: 14px;
+            margin-top: 15px;
+            padding-bottom: 5px;
+        }
+    }
+    @media(max-width: 991px){
+       .banner-single .banner-block .text-content h3{   
+            font-size: 20px;
+        }
+    }
+    @media(max-width: 767px){
+       .banner-single .banner-block a img{
+            height: 200px;
+            object-fit: cover;
+        }
+    }
+</style>

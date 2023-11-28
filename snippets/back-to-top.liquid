@@ -1,0 +1,63 @@
+<a href="javascript:void(0)" id="top" class="scroll">
+    <span><i class="ri-arrow-up-line"></i></span>
+</a>
+<style>
+    a#top{
+        position: fixed;
+        bottom: 30px;
+        {% if settings.enable_rtl %}
+        left: 30px;
+        {% else %}
+        right: 30px;
+        {% endif %}
+        z-index: 2;
+        opacity: 0;
+        visibility: hidden;
+        border-radius: 5px;
+        overflow: hidden;
+        -webkit-transition: all 0s ease-in-out 0s;
+        -o-transition: all 0s ease-in-out 0s;
+        transition: all 0s ease-in-out 0s;
+    }
+    a#top.show{
+        opacity: 1;
+        visibility: visible;
+        -webkit-transition: all 0.3s ease-in-out 0s;
+        -o-transition: all 0.3s ease-in-out 0s;
+        transition: all 0.3s ease-in-out 0s;
+    }
+    a.scroll span{
+        color: #ffffff;
+        font-size: 16px;
+        height: 30px;
+        width: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: var(--gradient-color);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    }
+    a.scroll:hover span {
+        background-image: var(--hover-gradient-color);
+    }
+    a.scroll span i{
+        display: block;
+        line-height: 0;
+    }
+    a.scroll span,
+    a.scroll:hover span{
+        -webkit-transition: all 0.3s ease-in-out 0s;
+        -o-transition: all 0.3s ease-in-out 0s;
+        transition: all 0.3s ease-in-out 0s;
+    }
+    @media (max-width : 767px) {
+        a#top{
+            bottom: 15px;
+            {% if settings.enable_rtl %}
+            left: 15px;
+            {% else %}
+            right: 15px;
+            {% endif %}
+        }
+    }
+</style>

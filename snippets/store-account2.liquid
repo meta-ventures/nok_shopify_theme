@@ -1,0 +1,18 @@
+<div class="acc-desk-header">
+  {% if customer and shop.customer_accounts_enabled %}
+  <a href="{{ routes.account_url }}" class="acc-ti"><i class="ri-user-line"></i></a>
+  {% else %}
+  <a href="{{ routes.account_login_url }}" class="acc-ti"><i class="ri-user-line"></i></a>
+  {% endif %}
+</div>
+<style>
+  .acc-desk-header a.acc-ti{
+    display: block;
+    color: var(--font-color-header);
+    font-size: 16px;
+  }
+  .acc-desk-header a.acc-ti i{
+    display: block;
+    line-height: 0;
+  }
+</style>

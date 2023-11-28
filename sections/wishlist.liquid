@@ -1,0 +1,572 @@
+<section class="customer-page section-ptb">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="wishlist-page">
+          <div class="wishlist-grid">
+            <div class="wish-wrap">
+              <div class="wishlist-title">
+                <h6>{{ section.settings.wish_title }}</h6>
+                <span class="wish-count">
+                  <span class="wishlist-counter">{{ wishlist.count }}</span>
+                  <span class="wish-item-title">{{ section.settings.wish_item_title }}</span>
+                </span>
+              </div>
+              {% for product in collections.all.products %}
+              <ul class="wishlist-tile-container" data-product-id="{{ product.id }}" data-product-handle="{{ product.handle }}">
+                <li class="wishlist-info">
+                  <div class="item-img">
+                    <a href="{{ product.url }}">
+                      <img width="{{ product.featured_image.width }}" height="{{ product.featured_image.height }}" class="img-fluid" src="{{ product.featured_image | product_img_url: '100x120', crop: 'center' }}" alt="{{ product.title | escape }}">
+                    </a>
+                  </div>
+                  <div class="item-title">
+                    <a href="{{ product.url }}" title="{{ product.title }}">{{ product.title | truncate: 80 }}</a>
+                  </div>
+                </li>
+                <li class="item-add-remove">
+                  <div class="item-add">
+                    {% if product.available %}
+                    <a href="javascript:void(0);" onclick="Shopify.addItem({{ product.selected_or_first_available_variant.id }} , 1); return false;" class="add-to-cart ajax-spin-cart">
+                      <span>
+                        <span class="cart-title">{{ section.settings.wish_cart_title }}</span>
+                        <span class="cart-loading load-anim"><i class="{{ section.settings.wish_cart_loading }}"></i></span>
+                        <span class="cart-added">{{ section.settings.wish_cart_add }}</span>
+                        <span class="cart-unavailable"><i class="{{ section.settings.wish_cart_unvlbe }}"></i></span>
+                      </span>
+                    </a>
+                    {% else %}
+                    <a href="javascript:void(0);" class="disabled-add-to-cart out-of-stock text-danger">
+                      <span class="cart-title">{{ section.settings.wish_cart_stock_out }}</span>
+                    </a>
+                    {% endif %}
+                  </div>
+                  {% if product.available %}
+                  <div class="item-buy">
+                    <a href="/checkout" onClick="instantBuy()">
+                      <span>{{ section.settings.wish_buy_now }}</span>
+                    </a>
+                  </div>
+                  {% endif %}
+                </li>
+                <li class="item-price">
+                  <span class="product-price">
+                    {% if product.compare_at_price > product.price %}
+                    <span class="price-sale">{{ product.price | money }}</span>
+                    <span class="compare-price">{{ product.compare_at_price | money }}</span>
+                    {% else %}
+                    <span class="pro-price">{{ product.price | money }}</span>
+                    {% endif %}
+                  </span>
+                  <span class="item-remove">
+                    <a href="javascript:void(0)" class="action-wishlist wishlist-btn text-danger" onclick="reloadPage();" data-product-handle="{{ product.handle }}">
+                      <span class="remove-wishlist"><i class="ri-heart-fill"></i></span>
+                    </a>
+                  </span>
+                </li>
+              </ul>
+              {% endfor %}
+              <div class="wishlist-buttons">
+                <a href="/collections/all">{{ section.settings.wish_cart_conti }}</a>
+                <a href="javascript:void(0)" id="remove-done">{{ section.settings.wish_cart_clear }}</a>
+              </div>
+            </div>
+          </div>
+          <div class="wishlist-grid-empty-list">
+            <div class="empty-list-info">
+              <h2>
+                {{ section.settings.wishlist_empty_title }}
+              </h2>
+              <p>{{ section.settings.wishlist_empty_desc_text }}</p>
+              <p>{{ 'cart.general.continue_browsing_html' | t }}</p>
+            </div>
+          </div>
+          <!-- Loader -->
+          <div class="wishlist-loader" style="display: none;">
+            <p class="wishlist-loader--text">{{ settings.loading_wishlist }}</p>
+          </div>
+        </div>
+        <div class="login-wishlist d-none">
+          <ul>
+            <li>
+              <h6>{{ section.settings.login_request_title }}</h6>
+              {{ 'layout.customer.log_in' | t | customer_login_link }}
+            </li>
+            <li>
+              <h6>{{ settings.dnt_acc_title }}</h6>
+              {{ 'layout.customer.create_account' | t | customer_register_link }}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Wishlist Page",
+  "settings": [
+  {
+    "type": "header",
+    "content": "Section Content"
+  },
+  {
+    "type": "text",
+    "id": "wish_title",
+    "label": "My Wishlist Title",
+    "default": "My wishlist:"
+  },
+  {
+    "type": "text",
+    "id": "wish_item_title",
+    "label": "Item Title",
+    "default": "Item"
+  },
+  {
+    "type": "header",
+    "content": "Cart Button Label"
+  },
+  {
+    "type": "text",
+    "id": "wish_cart_title",
+    "label": "Add To Cart Title",
+    "default": "Add to cart"
+  },
+  {
+    "type": "text",
+    "id": "wish_cart_loading",
+    "label": "Loading Icon",
+    "default": "ri-loader-4-line"
+  },
+  {
+    "type": "text",
+    "id": "wish_cart_add",
+    "label": "Done Title",
+    "default": "Done!"
+  },
+  {
+    "type": "text",
+    "id": "wish_cart_unvlbe",
+    "label": "Alert Icon",
+    "default": "ri-alert-line"
+  },
+  {
+    "type": "text",
+    "id": "wish_cart_stock_out",
+    "label": "Out Of Stock Title",
+    "default": "Out of stock"
+  },
+  {
+    "type": "text",
+    "id": "wish_buy_now",
+    "label": "Buy Now Title",
+    "default": "Buy now"
+  },
+  {
+    "type": "header",
+    "content": "Button Title"
+  },
+  {
+    "type": "text",
+    "id": "wish_cart_conti",
+    "label": "Continue Shopping Title",
+    "default": "Continue shopping"
+  },
+  {
+    "type": "text",
+    "id": "wish_cart_clear",
+    "label": "Clear Wishlist Title",
+    "default": "Clear wishlist"
+  },
+  {
+    "type": "header",
+    "content": "When Wishlist Is Empty"
+  },
+  {
+    "type": "text",
+    "id": "wishlist_empty_title",
+    "label": "Wishlist Empty Title",
+    "default": "Your wishlist is empty"
+  },
+  {
+    "type": "textarea",
+    "id": "wishlist_empty_desc_text",
+    "label": "Description",
+    "default": "Sorry your wishlist has currently no more products, click on 'here' given below for continue browsing."
+  },
+  {
+    "type": "header",
+    "content": "When User Not Log In"
+  },
+  {
+    "type": "text",
+    "id": "login_request_title",
+    "label": "Login Request Title",
+    "default": "Please login your account"
+  }
+  ]
+}
+{% endschema %}
+<script>
+  function instantBuy(){
+    var $ = jQuery;
+    var formParams = $('form.cart').serialize();
+    $.ajax({
+      url: "/cart/add",
+      type: "post",
+      data: formParams,
+      success: function(){
+        window.location.href = "/checkout";
+      },
+      error: function(){
+      }
+    })
+  }
+ </script>
+<style>
+  .wishlist-page .wishlist-grid {
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+    
+  }
+  .wishlist-page .wishlist-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-top: 1px solid #e2e2e2;
+    border-bottom: 1px solid #e2e2e2;
+  }
+  .wishlist-page .wishlist-title h6 {
+    font-size: 18px;
+    text-transform: capitalize;
+    font-weight: 500;
+    line-height: 1;
+  }
+  .wishlist-page .wishlist-title span.wish-count {
+    background-image: var(--gradient-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-bottom: 1px solid var(--font-color-primary);
+    font-weight: 600;
+    line-height: 1;
+  }
+  @media (max-width: 767px) {
+    .wishlist-page .wishlist-grid {
+      padding: 30px 15px;
+    }
+  }
+
+  /* wishlist-item css */
+  .wishlist-page ul {
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-bottom: 1px solid #e2e2e2;
+  }
+  .wishlist-page ul li.item-add-remove,
+  .wishlist-page ul li.item-price {
+    width: 25%;
+  }
+  .wishlist-page ul li.wishlist-info {
+    width: 50%;
+  }
+  @media (max-width: 991px) {
+    .wishlist-page ul li.wishlist-info {
+      width: 75%;
+    }
+    .wishlist-page ul li.item-add-remove {
+      width: 100%;
+      order: 1;
+    }
+  }
+  @media (max-width: 767px) {
+    .wishlist-page ul li.wishlist-info,
+    .wishlist-page ul li.item-price {
+      width: 100%;
+    }
+    .wishlist-page ul li.item-add-remove {
+      order: 0;
+    }
+  }
+
+  /* wishlist image css */
+  .wishlist-page ul li.wishlist-info {
+    display: flex;
+    align-items: center;
+  }
+  .wishlist-page ul li.wishlist-info .item-img {
+    width: 100px;
+  }
+  .wishlist-page ul li.wishlist-info .item-img a img {
+    border: 1px solid #e2e2e2;
+    
+  }
+  .wishlist-page ul li.wishlist-info .item-title {
+    width: calc(100% - 100px);
+    padding: 0 15px;
+  }
+  .wishlist-page ul li.wishlist-info .item-title a {
+    display: block;
+    color: var(--font-color-header);
+    text-transform: capitalize;
+    font-weight: 500;
+  }
+  .wishlist-page ul li.wishlist-info .item-title a:hover {
+    background-image: var(--gradient-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* wishlist add-buy-out css */
+  .wishlist-page ul li.item-add-remove {
+    text-align: center;
+  }
+  .wishlist-page ul li.item-add-remove .item-add,
+  .wishlist-page ul li.item-add-remove .item-buy {
+    line-height: 1;
+  }
+  .wishlist-page ul li.item-add-remove .item-add a,
+  .wishlist-page ul li.item-add-remove .item-buy a {
+    color: var(--font-color-body);
+    font-size: 16px;
+    font-weight: 500;
+    -webkit-transition: all 0s ease-in-out 0s;
+    -o-transition: all 0s ease-in-out 0s;
+    transition: all 0s ease-in-out 0s;
+  }
+  .wishlist-page ul li.item-add-remove .item-add a.add-to-cart:hover span,
+  .wishlist-page ul li.item-add-remove .item-buy a:hover span{
+    background-image: var(--gradient-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .wishlist-page ul li.item-add-remove .item-add a.add-to-cart span span.cart-loading i{
+    display: block;
+    line-height: 0;
+  }
+  .wishlist-page ul li.item-add-remove .item-add a.out-of-stock:hover {
+    cursor: not-allowed;
+  }
+  .wishlist-page ul li.item-add-remove .item-buy {
+    margin-top: 15px;
+  }
+  @media (max-width: 991px) {
+    .wishlist-page ul li.item-add-remove {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 15px;
+      {%- if settings.enable_rtl -%}
+      text-align: right;
+      {%- else -%}
+      text-align: left;
+      {%- endif -%}
+    }
+    .wishlist-page ul li.item-add-remove .item-buy {
+      margin-top: 0px;
+    }
+  }
+
+  /* wishlist price css */
+  .wishlist-page ul li.item-price {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .wishlist-page ul li.item-price .product-price {
+    display: flex;
+  }
+  .wishlist-page ul li.item-price .product-price span.price-sale,
+  .wishlist-page ul li.item-price .product-price span.pro-price {
+    background-image: var(--gradient-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+  }
+  .wishlist-page ul li.item-price .product-price .compare-price {
+    {%- if settings.enable_rtl -%}
+    margin-right: 5px;
+    {%- else -%}
+    margin-left: 5px;
+    {%- endif -%}
+  }
+  .wishlist-page ul li.item-price .product-price .compare-price,
+  .wishlist-page ul li.item-price .product-price .compare-price span{
+    text-decoration: line-through;
+  }
+  .wishlist-page ul li.item-price .item-remove {
+    margin-top: 10px;
+  }
+  .wishlist-page ul li.item-price .item-remove a {
+    font-size: 20px;
+  }
+  .wishlist-page ul li.item-price .item-remove a span i {
+    display: block;
+  }
+  @media (max-width: 767px) {
+    .wishlist-page ul li.item-price {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+    .wishlist-page ul li.item-price .item-remove {
+      margin-top: 0;
+    }
+  }
+
+  /* wishlist button css */
+  .wishlist-page .wishlist-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #e2e2e2;
+  }
+  .wishlist-page .wishlist-buttons a {
+    color: var(--font-color-body);
+    font-size: 16px;
+    font-weight: 500;
+    -webkit-transition: all 0s ease-in-out 0s;
+    -o-transition: all 0s ease-in-out 0s;
+    transition: all 0s ease-in-out 0s;
+  }
+  .wishlist-page .wishlist-buttons a:hover {
+    background-image: var(--gradient-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  @media (max-width: 479px) {
+    .wishlist-page .wishlist-buttons {
+      flex-direction: column;
+    }
+    .wishlist-page .wishlist-buttons a {
+      margin-top: 15px;
+    }
+    .wishlist-page .wishlist-buttons a:first-child {
+      margin-top: 0px;
+    }
+  }
+
+  /* wishlist empty css */
+  .wishlist-page .wishlist-grid-empty-list .empty-list-info {
+    max-width: 58.33%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .wishlist-page .wishlist-grid-empty-list .empty-list-info h2 {
+    font-size: 30px;
+    line-height: 1;
+  }
+  .wishlist-page .wishlist-grid-empty-list .empty-list-info p {
+    color: #999;
+    font-size: 14px;
+    margin-top: 15px;
+    font-weight: 400;
+  }
+  .wishlist-page .wishlist-grid-empty-list .empty-list-info p a {
+    color: var(--font-color-primary);
+    text-decoration: underline;
+  }
+  @media (max-width: 1199px) {
+    .wishlist-page .wishlist-grid-empty-list .empty-list-info {
+      max-width: 66.66%;
+    }
+  }
+  @media (max-width: 991px) {
+    .wishlist-page .wishlist-grid-empty-list .empty-list-info {
+      max-width: 83.33%;
+    }
+  }
+  @media (max-width: 767px) {
+    .wishlist-page .wishlist-grid-empty-list .empty-list-info {
+      max-width: 100%;
+    }
+  }
+
+  /* wishlist login grid css */
+  .login-wishlist {
+    max-width: 58.33%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .login-wishlist ul {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    {%- if settings.enable_rtl -%}
+    margin: -30px -30px 0px 0px;
+    {%- else -%}
+    margin: -30px 0px 0px -30px;
+    {%- endif -%}
+  }
+  .login-wishlist ul li {
+    width: calc(50% - 30px);
+    padding: 60px 30px;
+    {%- if settings.enable_rtl -%}
+    margin: 30px 30px 0px 0px;
+    {%- else -%}
+    margin: 30px 0px 0px 30px;
+    {%- endif -%}
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+  }
+  @media (max-width: 1199px) {
+    .login-wishlist {
+      max-width: 66.66%;
+    }
+    .login-wishlist ul li {
+      width: calc(100% - 30px);
+    }
+  }
+  @media (max-width: 991px) {
+    .login-wishlist {
+      max-width: 83.33%;
+    }
+  }
+  @media (max-width: 767px) {
+    .login-wishlist {
+      max-width: 100%;
+    }
+    .login-wishlist ul {
+      {%- if settings.enable_rtl -%}
+      margin: -30px -15px 0px 0px;
+      {%- else -%}
+      margin: -30px 0px 0px -15px;
+      {%- endif -%}
+    }
+    .login-wishlist ul li {
+      width: calc(100% - 15px);
+      padding: 30px 15px;
+      {%- if settings.enable_rtl -%}
+      margin: 30px 15px 0px 0px;
+      {%- else -%}
+      margin: 30px 0px 0px 15px;
+      {%- endif -%}
+    }
+  }
+
+  /* wishlist login content css */
+  .login-wishlist ul li h6 {
+    font-size: 18px;
+    text-transform: capitalize;
+    font-weight: 500;
+    line-height: 1;
+  }
+  .login-wishlist ul li a {
+    color: var(--font-color-primary);
+    margin-top: 25px;
+    text-decoration: underline;
+    line-height: 1;
+    -webkit-transition: all 0s ease-in-out 0s;
+    -o-transition: all 0s ease-in-out 0s;
+    transition: all 0s ease-in-out 0s;
+  }
+</style>

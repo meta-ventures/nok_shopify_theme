@@ -1,0 +1,333 @@
+<!-- banner-area start -->
+<section class="custom-text">
+    <div class="container">
+        <div class="row custom-content">
+            <div class="col-xl-7 col-lg-7 col-md-6 col-sm-6 col-12 custom-text-content">
+                <div class="text-content-wrap">
+                    <div class="text-content">
+                        <h2>{{ section.settings.cust_text_title }}</h2>
+                        <p>{{ section.settings.cust_text_desc }}</p>
+                        <a href="{{ section.settings.cust_text_button_url }}" class="btn btn-style2">{{ section.settings.cust_text_button }}</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-5 col-lg-5 col-md-6 col-sm-6 col-12">
+                <div class="custom-text-banner">
+                    <a href="" class="banner-hover">
+                        <img width="{{ section.settings.cust_text_banner_img.width }}" height="{{ section.settings.cust_text_banner_img.height }}" src="{% if section.settings.cust_text_banner_img %}{{ section.settings.cust_text_banner_img | img_url: 'master' }}{% else %}https://dummyimage.com/550x500{% endif %}" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- banner-area end -->
+{% schema %}
+{
+    "name": "Custom Text",
+    "settings": [
+        {
+            "type": "header",
+            "content": "Section Padding"
+        },
+        {
+            "type" : "paragraph",
+            "content" : "Desktop / Laptop / tablet"
+        },
+        {
+            "type": "range",
+            "id": "customtext_padding_top",
+            "label": "Section Padding Top",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "px",
+            "default": 100
+        },
+        {
+            "type": "range",
+            "id": "customtext_padding_bottom",
+            "label": "Section Padding Bottom",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "px",
+            "default": 0
+        },
+        {
+            "type" : "paragraph",
+            "content" : "Ipad pro / Ipad"
+        },
+        {
+            "type": "range",
+            "id": "customtext_padding_top_ip",
+            "label": "Section Padding Top",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "px",
+            "default": 80
+        },
+        {
+            "type": "range",
+            "id": "customtext_padding_bottom_ip",
+            "label": "Section Padding Bottom",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "px",
+            "default": 0
+        },
+        {
+            "type" : "paragraph",
+            "content" : "Mobile"
+        },
+        {
+            "type": "range",
+            "id": "customtext_padding_top_xs",
+            "label": "Section Padding Top",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "px",
+            "default": 60
+        },
+        {
+            "type": "range",
+            "id": "customtext_padding_bottom_xs",
+            "label": "Section Padding Bottom",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "px",
+            "default": 0
+        },
+        {
+            "type" : "header",
+            "content" : "Section Background Color"
+        },
+        {
+            "type" : "color",
+            "id" : "custom_bgcolor",
+            "label" : "Background Color",
+            "default" : "#222"
+        },
+        {
+            "type" : "checkbox",
+            "id" : "custom_bg_check",
+            "label" : "Show Backgorund Color",
+            "default" : true
+        },
+        {
+            "type": "header",
+            "content": "Custom Text"
+        },
+        {
+            "type": "text",
+            "id": "cust_text_title",
+            "label": "Title",
+            "default": "Organic farming"
+        },
+        {
+            "type": "color",
+            "id": "cust_text_title_color",
+            "label": "Title Color",
+            "default": "#222"
+        },
+        {
+            "type": "textarea",
+            "id": "cust_text_desc",
+            "label": "Description",
+            "default": "Lorem Ipsum is simply dummy text of the printing and typesetting industry's standard dummy text ever since the texts"
+        },
+        {
+            "type": "color",
+            "id": "cust_text_desc_color",
+            "label": "Description Color",
+            "default": "#666"
+        },
+        {
+            "type": "text",
+            "id": "cust_text_button",
+            "label": "Button Title",
+            "default": "Shop now"
+        },
+        {
+            "type": "url",
+            "id": "cust_text_button_url",
+            "label": "URL"
+        },
+        {
+            "type": "header",
+            "content": "Custom Banner"
+        },
+        {
+            "type": "image_picker",
+            "id": "cust_text_banner_img",
+            "label": "Banner Image",
+            "info": "Recommended Size: 550px x 500px"
+        }
+    ],
+    "presets":[
+        {
+            "name": "Custom Text",
+            "category": "Custom"
+        }
+    ]
+}
+{% endschema %}
+<style>
+    .custom-text{
+        padding-top: {{ section.settings.customtext_padding_top }}px;
+        padding-bottom: {{ section.settings.customtext_padding_bottom }}px;
+
+        {% if section.settings.custom_bg_check %}
+        background-color: {{ section.settings.custom_bgcolor }};
+        {% endif %}
+    }
+    @media (max-width: 1199px){
+        .custom-text{
+            padding-top: {{ section.settings.customtext_padding_top_ip }}px;
+            padding-bottom: {{ section.settings.customtext_padding_bottom_ip }}px;
+        }
+    }
+    @media (max-width: 767px){
+        .custom-text{
+            padding-top: {{ section.settings.customtext_padding_top_xs }}px;
+            padding-bottom: {{ section.settings.customtext_padding_bottom_xs }}px;
+        }
+    }
+
+    /* text css */
+    .custom-text-content{
+        display: flex;
+        align-items: center;
+    }
+    @media (max-width: 767px){
+        .custom-text .custom-content{
+            flex-direction: column-reverse;
+        }
+    }
+
+    /* top border css */
+    .custom-text-content .text-content-wrap{
+        position: relative;
+    }
+    .custom-text-content .text-content-wrap::before,
+    .custom-text-content .text-content-wrap::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        {%- if settings.enable_rtl -%}
+        right: 0;
+        {%- else -%}
+        left: 0;
+        {%- endif -%}
+        background-color: var(--font-color-primary);
+    }
+    .custom-text-content .text-content-wrap::before{
+        width: 100px;
+        height: 2px;
+    }
+    .custom-text-content .text-content-wrap::after{
+        width: 2px;
+        height: 100px;
+    }
+    .custom-text-content .text-content-wrap:hover::before{
+        width: 100%;
+    }
+    .custom-text-content .text-content-wrap:hover::after{
+        height: 100%;
+    }
+    .custom-text-content .text-content-wrap::before,
+    .custom-text-content .text-content-wrap:hover::before,
+    .custom-text-content .text-content-wrap::after,
+    .custom-text-content .text-content-wrap:hover::after{
+        -webkit-transition: all 0.5s ease-in-out 0s;
+        -o-transition: all 0.5s ease-in-out 0s;
+        transition: all 0.5s ease-in-out 0s;
+    }
+    @media (max-width: 767px){
+        .custom-text-content .text-content-wrap {
+            margin-top: 15px;
+        }
+    }
+    
+
+    /* bottom border css */
+    .custom-text-content .text-content-wrap .text-content{
+        position: relative;
+        padding: 60px;
+    }
+    .custom-text-content .text-content-wrap .text-content::before,
+    .custom-text-content .text-content-wrap .text-content::after{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        {%- if settings.enable_rtl -%}
+        left: 0;
+        {%- else -%}
+        right: 0;
+        {%- endif -%}
+        background-color: var(--font-color-primary);
+    }
+    .custom-text-content .text-content-wrap .text-content::before{
+        width: 100px;
+        height: 2px;
+    }
+    .custom-text-content .text-content-wrap .text-content::after{
+        width: 2px;
+        height: 100px;
+    }
+    .custom-text-content .text-content-wrap:hover .text-content::before{
+        width: 100%;
+    }
+    .custom-text-content .text-content-wrap:hover .text-content::after{
+        height: 100%;
+    }
+    .custom-text-content .text-content-wrap .text-content::before,
+    .custom-text-content .text-content-wrap:hover .text-content::before,
+    .custom-text-content .text-content-wrap .text-content::after,
+    .custom-text-content .text-content-wrap:hover .text-content::after{
+        -webkit-transition: all 0.5s ease-in-out 0s;
+        -o-transition: all 0.5s ease-in-out 0s;
+        transition: all 0.5s ease-in-out 0s;
+    }
+    @media (max-width: 1199px){
+        .custom-text-content .text-content-wrap .text-content{
+            padding: 30px;
+        }
+    }
+    @media (max-width: 767px){}
+
+    /* text css */
+    .custom-text-content .text-content-wrap .text-content h2{
+        color: {{ section.settings.cust_text_title_color }};
+        font-size: 30px;
+        text-transform: capitalize;
+        line-height: 1;
+    }
+    .custom-text-content .text-content-wrap .text-content p{
+        color: {{ section.settings.cust_text_desc_color }};
+        margin-top: 18px;
+    }
+    .custom-text-content .text-content-wrap .text-content a{
+        margin-top: 22px;
+    }
+    @media (max-width: 1199px){
+        .custom-text-content .text-content-wrap .text-content p{
+            max-width: 100%;
+        }
+    }
+    @media (max-width: 767px){
+        .custom-text-content .text-content-wrap .text-content h2{
+            font-size: 20px;
+        }
+        .custom-text-content .text-content-wrap .text-content p{
+            margin-top: 10px;
+        }
+        .custom-text-content .text-content-wrap .text-content a{
+            margin-top: 12px;
+        }
+    }
+</style>

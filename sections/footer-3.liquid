@@ -1,0 +1,849 @@
+<footer class="footer-area" {% if section.settings.footer_bg_img_enable %}style="background-image: url('{% if section.settings.footer_bg_img %}{{ section.settings.footer_bg_img | img_url: 'master' }}{% else %}https://dummyimage.com/1920x450/f7f7f7/999999{% endif %}');"{% endif %} data-section-id="{{ section.id }}">
+  <div class="container">
+    <div class="footer-service">
+      <ul class="service-ul">
+        <li class="service-li">
+          <div class="block-item">
+            {% if section.settings.service_subtitle_1 != '' %}
+            <span class="subtitle">{{ section.settings.service_subtitle_1 }}</span>
+            {% endif %}
+            {% if section.settings.service_title_1 != '' %}
+            <h4 class="title">{{ section.settings.service_title_1 }}</h4>
+            {% endif %}
+          </div>
+        </li>
+        <li class="service-li">
+          <div class="block-item">
+            {% if section.settings.service_subtitle_2 != '' %}
+            <span class="subtitle">{{ section.settings.service_subtitle_2 }}</span>
+            {% endif %}
+            {% if section.settings.service_title_2 != '' %}
+            <h4 class="title">{{ section.settings.service_title_2 }}</h4>
+            {% endif %}
+          </div>
+        </li>
+        <li class="service-li">
+          <div class="block-item">
+            {% if section.settings.service_subtitle_3 != '' %}
+            <span class="subtitle">{{ section.settings.service_subtitle_3 }}</span>
+            {% endif %}
+            {% if section.settings.service_title_3 != '' %}
+            <h4 class="title">{{ section.settings.service_title_3 }}</h4>
+            {% endif %}
+          </div>
+        </li>
+        <li class="service-li">
+          <div class="block-item">
+            {% if section.settings.service_subtitle_4 != '' %}
+            <span class="subtitle">{{ section.settings.service_subtitle_4 }}</span>
+            {% endif %}
+            {% if section.settings.service_title_4 != '' %}
+            <h4 class="title">{{ section.settings.service_title_4 }}</h4>
+            {% endif %}
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="footer-list-wrap">
+      <ul class="footer-list">
+        {% for block in section.blocks %}
+        {%- assign row_width = row_width | plus: block.settings.container_width -%}
+        {%- case block.type -%}
+        {%- when 'logo_info' -%}
+        {%- assign text_align = block.settings.text_align -%}
+        {%- assign text_lg_align = block.settings.text_lg_align -%}
+        <li class="ftlink-li logo-info {{ text_align }} {{ text_lg_align }} width-{{ block.id }}">
+          <div class="footer-info">
+            {% if block.settings.logo_enable %}
+            {%- include 'company-logo-footer' -%}
+            {% endif %}
+            <div class="rich-text">
+              {{ block.settings.text_1 }}
+            </div>
+          </div>
+          {%- style -%}
+          .footer-list-wrap ul.footer-list li.width-{{ block.id }}{
+            width: calc({{ block.settings.container_width }}% - 30px);
+          }
+          {%- endstyle -%}
+        </li>
+        {%- when 'footer_menu' -%}
+        {%- assign text_align = block.settings.text_align -%}
+        {%- assign text_lg_align = block.settings.text_lg_align -%}
+        <li class="ftlink-li link-list {{ text_align }} {{ text_lg_align }} width-{{ block.id }}">
+          <ul class="footer-sublist link">
+            {% assign footer_menu = block.settings.footer_menu_handle %}
+            {% for link in linklists[footer_menu].links %}
+            {% if linklists[footer_menu].links != '' %}
+            <li class="ftsublink-li">
+              <a href="{{ link.url }}" class="ft-sublink">{{ link.title }}</a>
+            </li>
+            {% endif %}
+            {% endfor %}
+          </ul>
+          {% if block.settings.text != '' %}
+          <div class="rich-text">{{ block.settings.text }}</div>
+          {% endif %}
+          {%- style -%}
+          .footer-list-wrap ul.footer-list li.width-{{ block.id }}{
+            width: calc({{ block.settings.container_width }}% - 30px);
+          }
+          {%- endstyle -%}
+        </li>
+
+        {%- when 'custom_text' -%}
+        {%- assign text_align = block.settings.text_align -%}
+        {%- assign text_lg_align = block.settings.text_lg_align -%}
+        <li class="ftlink-li custom-text {{ text_align }} {{ text_lg_align }} width-{{ block.id }}">
+          <div class="custom-info">
+            <div class="text-block">
+              {% if block.settings.custom_text_1 != '' %}
+              {{ block.settings.custom_text_1 }}
+              {% endif %}
+              {% if block.settings.custom_text_2 != '' %}
+              {{ block.settings.custom_text_2 }}
+              {% endif %}
+            </div>       
+            <div class="footer-social">
+              {% include 'social-midea' %}
+            </div>     
+          </div>
+          {%- style -%}
+          .footer-list-wrap ul.footer-list li.width-{{ block.id }}{
+            width: calc({{ block.settings.container_width }}% - 30px);
+          }
+          {%- endstyle -%}
+        </li>
+
+        {%- endcase -%}
+        {%- endfor -%}
+      </ul>
+    </div>
+  </div>
+</footer>
+{% schema %}
+{
+  "name": "Footer",
+  "settings": [
+  {
+    "type": "header",
+    "content": "Section Padding"
+  },
+  {
+    "type" : "paragraph",
+    "content" : "Desktop / Laptop / tablet"
+  },
+  {
+    "type": "range",
+    "id": "foot_padding_top",
+    "label": "Section Padding Top",
+    "min": 0,
+    "max": 100,
+    "step": 5,
+    "unit": "px",
+    "default": 100
+  },
+  {
+    "type": "range",
+    "id": "foot_padding_bottom",
+    "label": "Section Padding Bottom",
+    "min": 0,
+    "max": 100,
+    "step": 5,
+    "unit": "px",
+    "default": 100
+  },
+  {
+    "type" : "paragraph",
+    "content" : "Ipad pro / Ipad"
+  },
+  {
+    "type": "range",
+    "id": "foot_padding_top_ipad",
+    "label": "Section Padding Top",
+    "min": 0,
+    "max": 100,
+    "step": 5,
+    "unit": "px",
+    "default": 80
+  },
+  {
+    "type": "range",
+    "id": "foot_padding_bottom_ipad",
+    "label": "Section Padding Bottom",
+    "min": 0,
+    "max": 100,
+    "step": 5,
+    "unit": "px",
+    "default": 80
+  },
+  {
+    "type" : "paragraph",
+    "content" : "Mobile"
+  },
+  {
+    "type": "range",
+    "id": "foot_padding_top_xs",
+    "label": "Section Padding Top",
+    "min": 0,
+    "max": 100,
+    "step": 5,
+    "unit": "px",
+    "default": 60
+  },
+  {
+    "type": "range",
+    "id": "foot_padding_bottom_xs",
+    "label": "Section Padding Bottom",
+    "min": 0,
+    "max": 100,
+    "step": 5,
+    "unit": "px",
+    "default": 60
+  },
+  {
+    "type": "header",
+    "content": "Footer background"
+  },
+  {
+    "type": "image_picker",
+    "id": "footer_bg_img",
+    "label": "Image",
+    "info": "Recommended Size: 1920 x 770px"
+  },
+  {
+    "type": "checkbox",
+    "id": "footer_bg_img_enable",
+    "label": "Show Background Image",
+    "default": false
+  },
+  {
+    "type": "color",
+    "id": "footer_bg_color",
+    "label": "Background Color",
+    "default": "#fff"
+  },
+  {
+    "type": "color",
+    "id": "text_color",
+    "label": "Text Color",
+    "default": "#f2f0ed"
+  },
+  {
+    "type": "color",
+    "id": "heading_color",
+    "label": "Heading Color",
+    "default": "#333"
+  },
+  {
+    "type": "header",
+    "content": "Footer Service"
+  },
+  {
+    "type": "header",
+    "content": "Service 1"
+  },
+  {
+    "type": "text",
+    "id": "service_subtitle_1",
+    "label": "Subtitle",
+    "default": "Totally free"
+  },
+  {
+    "type": "text",
+    "id": "service_title_1",
+    "label": "Title",
+    "default": "Bike test drive"
+  },
+  {
+    "type": "header",
+    "content": "Service 2"
+  },
+  {
+    "type": "text",
+    "id": "service_subtitle_2",
+    "label": "Subtitle",
+    "default": "Only in 30 days"
+  },
+  {
+    "type": "text",
+    "id": "service_title_2",
+    "label": "Title",
+    "default": "Free returns"
+  },
+  {
+    "type": "header",
+    "content": "Service 3"
+  },
+  {
+    "type": "text",
+    "id": "service_subtitle_3",
+    "label": "Subtitle",
+    "default": "For all standard offer"
+  },
+  {
+    "type": "text",
+    "id": "service_title_3",
+    "label": "Title",
+    "default": "Free shipping"
+  },
+  {
+    "type": "header",
+    "content": "Service 4"
+  },
+  {
+    "type": "text",
+    "id": "service_subtitle_4",
+    "label": "Subtitle",
+    "default": "Standard offer"
+  },
+  {
+    "type": "text",
+    "id": "service_title_4",
+    "label": "Title",
+    "default": "Ride & transport"
+  }
+  ],
+  "blocks":[
+  {
+    "type": "logo_info",
+    "name": "Logo information",
+    "settings": [
+    {
+      "type": "range",
+      "id": "container_width",
+      "label": "Column width",
+      "default": 25,
+      "min": 10,
+      "max": 100,
+      "unit": "%"
+    },
+    {
+      "type": "select",
+      "id": "text_lg_align",
+      "label": "Select text align",
+      "options": [
+        {
+          "value": "text-lg-start",
+          "label": "Text lg start"
+        },
+        {
+          "value": "text-lg-center",
+          "label": "Text lg center"
+        },
+        {
+          "value": "text-lg-end",
+          "label": "Text lg end"
+        }
+      ],
+      "default": "text-lg-center"
+    },
+    {
+      "type": "select",
+      "id": "text_align",
+      "label": "Select text align mobile",
+      "options": [
+        {
+          "value": "text-start",
+          "label": "Text start"
+        },
+        {
+          "value": "text-center",
+          "label": "Text center"
+        },
+        {
+          "value": "text-end",
+          "label": "Text end"
+        }
+      ],
+      "default": "text-start"
+    },
+    {
+      "type": "checkbox",
+      "id": "logo_enable",
+      "label": "Show logo",
+      "default": true
+    },
+    {
+      "type": "richtext",
+      "id": "text_1",
+      "label": "Text 1",
+      "info": "Optional"
+    }
+    ]
+  },
+  {
+    "type": "footer_menu",
+    "name": "Navigation",
+    "settings": [
+    {
+      "type": "range",
+      "id": "container_width",
+      "label": "Column width",
+      "default": 25,
+      "min": 10,
+      "max": 100,
+      "unit": "%"
+    },
+    {
+      "type": "select",
+      "id": "text_lg_align",
+      "label": "Select text align",
+      "options": [
+        {
+          "value": "text-lg-start",
+          "label": "Text lg start"
+        },
+        {
+          "value": "text-lg-center",
+          "label": "Text lg center"
+        },
+        {
+          "value": "text-lg-end",
+          "label": "Text lg end"
+        }
+      ],
+      "default": "text-lg-center"
+    },
+    {
+      "type": "select",
+      "id": "text_align",
+      "label": "Select text align mobile",
+      "options": [
+        {
+          "value": "text-start",
+          "label": "Text start"
+        },
+        {
+          "value": "text-center",
+          "label": "Text center"
+        },
+        {
+          "value": "text-end",
+          "label": "Text end"
+        }
+      ],
+      "default": "text-start"
+    },
+    {
+      "type": "link_list",
+      "id": "footer_menu_handle",
+      "label": "Select Menu"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text",
+      "info": "Optional"
+    }
+    ]
+  },
+  {
+    "type": "custom_text",
+    "name": "Custom text",
+    "settings": [
+    {
+      "type": "range",
+      "id": "container_width",
+      "label": "Column width",
+      "default": 25,
+      "min": 10,
+      "max": 100,
+      "unit": "%"
+    },
+    {
+      "type": "select",
+      "id": "text_lg_align",
+      "label": "Select text align",
+      "options": [
+        {
+          "value": "text-lg-start",
+          "label": "Text lg start"
+        },
+        {
+          "value": "text-lg-center",
+          "label": "Text lg center"
+        },
+        {
+          "value": "text-lg-end",
+          "label": "Text lg end"
+        }
+      ],
+      "default": "text-lg-center"
+    },
+    {
+      "type": "select",
+      "id": "text_align",
+      "label": "Select text align mobile",
+      "options": [
+        {
+          "value": "text-start",
+          "label": "Text start"
+        },
+        {
+          "value": "text-center",
+          "label": "Text center"
+        },
+        {
+          "value": "text-end",
+          "label": "Text end"
+        }
+      ],
+      "default": "text-start"
+    },
+    {
+      "type": "richtext",
+      "id": "custom_text_1",
+      "label": "Text 1",
+      "info": "Optional"
+    },
+    {
+      "type": "richtext",
+      "id": "custom_text_2",
+      "label": "Text 2",
+      "info": "Optional"
+    }
+    ]
+  }
+  ],
+  "presets":[
+  {
+    "name": "Footer"
+  }
+  ]
+}
+{% endschema %}
+<style>
+:root {
+  --color-text: {{ section.settings.text_color }};
+  --color-heading: {{ section.settings.heading_color }};
+}
+.footer-area{
+  {% if section.settings.footer_bg_img_enable %}
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  {% endif %}
+  background-color: {{ section.settings.footer_bg_color }};
+}
+.footer-area {
+  position: relative;
+  padding-top: {{ section.settings.foot_padding_top }}px;
+  padding-bottom: {{ section.settings.foot_padding_bottom }}px;
+}
+@media (max-width: 1199px){
+  .footer-area {
+    padding-top: {{ section.settings.foot_padding_top_ipad }}px;
+    padding-bottom: {{ section.settings.foot_padding_bottom_ipad }}px;
+  }
+}
+@media (max-width: 767px){
+  .footer-area {
+    padding-top: {{ section.settings.foot_padding_top_xs }}px;
+    padding-bottom: {{ section.settings.foot_padding_bottom_xs }}px;
+  }
+}
+
+.footer .container-col{
+  padding-left: 60px;
+  padding-right: 60px;
+}
+@media(max-width: 1599px){
+  .footer .container-col{
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media(max-width: 767px){
+  .footer .container-col{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+/* footer service css */
+.footer-area .footer-service ul.service-ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: -30px;
+  {%- if settings.enable_rtl -%}
+  margin-right: -30px;
+  {%- else -%}
+  margin-left: -30px;
+  {%- endif -%}
+}
+.footer-area .footer-service ul.service-ul li.service-li {
+  width: calc(25% - 30px);
+  margin-top: 30px;
+  {%- if settings.enable_rtl -%}
+  margin-right: 30px;
+  {%- else -%}
+  margin-left: 30px;
+  {%- endif -%}
+  border: 1px dashed #383a3d;
+  padding: 40px 15px;
+}
+.footer-area .footer-service ul.service-ul li.service-li .block-item {
+  text-align: center;
+}
+.footer-area .footer-service ul.service-ul li.service-li .block-item span.subtitle {
+  color: var(--color-text);
+  font-size: 18px;
+  line-height: 1;
+}
+.footer-area .footer-service ul.service-ul li.service-li .block-item h4.title {
+  color: var(--color-heading);
+  font-size: 18px;
+  margin-top: 14px;
+  font-weight: 400;
+  line-height: 1;
+  text-transform: uppercase;
+}
+@media (max-width: 1199px) {
+  .footer-area .footer-service ul.service-ul li.service-li {
+    padding: 30px 15px;
+  }
+  .footer-area .footer-service ul.service-ul li.service-li .block-item span.subtitle {
+    font-size: 16px;
+  }
+  .footer-area .footer-service ul.service-ul li.service-li .block-item h4.title {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+}
+@media (max-width: 991px) {
+  .footer-area .footer-service ul.service-ul li.service-li {
+    width: calc(50% - 30px);
+  }
+}
+@media (max-width: 767px) {
+  .footer-area .footer-service ul.service-ul {
+    {%- if settings.enable_rtl -%}
+    margin-right: -12px;
+    {%- else -%}
+    margin-left: -12px;
+    {%- endif -%}    
+  }
+  .footer-area .footer-service ul.service-ul li.service-li {
+    width: calc(50% - 12px);
+    {%- if settings.enable_rtl -%}
+    margin-right: 12px;
+    {%- else -%}
+    margin-left: 12px;
+    {%- endif -%}
+  }
+}
+@media (max-width: 479px) {
+  .footer-area .footer-service ul.service-ul {
+    {%- if settings.enable_rtl -%}
+    margin-right: 0px;
+    {%- else -%}
+    margin-left: 0px;
+    {%- endif -%}
+  }
+  .footer-area .footer-service ul.service-ul li.service-li {
+    width: calc(100% - 0px);
+    {%- if settings.enable_rtl -%}
+    margin-right: 0px;
+    {%- else -%}
+    margin-left: 0px;
+    {%- endif -%}
+  }
+} 
+
+/* footer link css */
+.footer-list-wrap {
+  margin-top: 100px;
+}
+.footer-list-wrap ul.footer-list{
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  {% if settings.enable_rtl %}
+  margin-right: -30px;
+  {% else %}
+  margin-left: -30px;
+  {% endif %}
+  margin-top: -100px;
+}
+.footer-list-wrap ul.footer-list li.ftlink-li{
+  {% if settings.enable_rtl %}
+  margin-right: 30px;
+  {% else %}
+  margin-left: 30px;
+  {% endif %}
+  margin-top: 100px;
+}
+.footer-list-wrap ul.footer-list li.ftlink-li .ft-title{
+  color: var(--color-heading);
+  font-size: 18px;
+  padding-bottom: 40px;
+  font-weight: 500;
+  line-height: 1;
+  font-style: italic;
+  text-transform: uppercase;
+}
+.footer-list-wrap ul.footer-list li.ftlink-li a.ft-title{
+  display: none;
+}
+.footer-list-wrap ul.footer-list li.ftlink-li .footer-sublist.collapse:not(.show){
+  display: block;
+}
+.footer-list-wrap ul.footer-list li.ftlink-li ul.footer-sublist li.ftsublink-li{
+  margin-top: 20px;
+}
+.footer-list-wrap ul.footer-list li.ftlink-li ul.footer-sublist li.ftsublink-li:first-child{
+  margin-top: 0px;
+}
+.footer-list-wrap ul.footer-list li.ftlink-li ul.footer-sublist li.ftsublink-li a{
+  color: var(--color-text);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.footer-list-wrap ul.footer-list li.ftlink-li ul.footer-sublist li.ftsublink-li a:hover{
+  background-image: var(--gradient-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/*logo info*/
+.footer-list-wrap ul.footer-list li.ftlink-li.logo-info .footer-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}.footer-list-wrap ul.footer-list li.ftlink-li.logo-info .footer-info .rich-text p {
+  color: var(--color-text);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+/*social icon*/
+.footer-area .footer-social{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* custom text */
+.footer-list-wrap li.custom-text.custom-text .custom-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.footer-list-wrap li.custom-text.custom-text .custom-info .text-block p {
+  color: var(--color-text);
+  font-size: 15px;
+  margin-top: 17px;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.footer-list-wrap li.custom-text.custom-text .custom-info .text-block p:first-child {
+  margin-top: 0px;
+}
+.footer-list-wrap li.custom-text.custom-text .custom-info .text-block p a {
+  color: var(--color-heading);
+  font-size: 24px;
+  font-weight: 400;
+}
+.footer-list-wrap li.custom-text.custom-text .custom-info .text-block p a:hover {
+  background-image: var(--gradient-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.footer-list-wrap li.custom-text.custom-text .custom-info .footer-social ul.social-icon li a {
+  color: var(--color-text);
+}
+.footer-list-wrap li.custom-text.custom-text .custom-info .footer-social ul.social-icon li a:hover {
+  background-image: var(--gradient-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 1199px){
+  .footer-list-wrap {
+    margin-top: 80px;
+  }
+  .footer-list-wrap ul.footer-list {
+    margin-top: -60px;
+  }
+  .footer-list-wrap ul.footer-list li.ftlink-li{
+    margin-top: 60px;
+  }
+  .footer-list-wrap ul.footer-list li.ftlink-li .ft-title{
+    font-size: 16px;
+  }
+  .footer-list-wrap ul.footer-list li.ftlink-li ul.footer-sublist li.ftsublink-li a {
+    font-size: 14px;
+  }
+  .footer-list-wrap li.custom-text.custom-text .custom-info .text-block p a {
+    font-size: 18px;
+  }
+}
+@media (max-width: 767px){  
+  .footer-list-wrap ul.footer-list {
+    margin-top: -40px;
+  }
+  .footer-list-wrap ul.footer-list li.ftlink-li {
+    width: calc(50% - 30px);
+    margin-top: 40px;
+  }
+  .footer-list-wrap ul.footer-list li.ftlink-li.logo-info .footer-info .rich-text p,
+  .footer-list-wrap li.custom-text.custom-text .custom-info .text-block p,
+  .footer-list-wrap ul.footer-list li.ftlink-li ul.footer-sublist li.ftsublink-li a,
+  .footer-list-wrap ul.footer-list li.ftlink-li a.ft-title i{
+    font-size: 13px;
+  }
+  .footer-list-wrap li.custom-text.custom-text .custom-info .text-block p a {
+    font-size: 17px;
+  }
+}
+@media (max-width: 479px) {
+  .footer-list-wrap {
+    margin-top: 60px;
+  }
+  .footer-list-wrap ul.footer-list {
+    margin-top: -20px;
+    {%- if settings.enable_rtl -%}
+    margin-right: 0px;
+    {%- else -%}
+    margin-left: 0px;
+    {%- endif -%}
+  }
+  .footer-list-wrap ul.footer-list li.ftlink-li {
+    width: calc(100% - 0px);
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #383a3d;
+    {%- if settings.enable_rtl -%}
+    margin-right: 0px;
+    {%- else -%}
+    margin-left: 0px;
+    {%- endif -%}
+  }
+  .footer-list-wrap ul.footer-list li.ftlink-li:first-child {
+    padding-top: 0px;
+    border: none;
+  }
+
+  /* logo info */
+  .footer-list-wrap ul.footer-list li.ftlink-li.logo-info a.footer-logo {
+    padding-bottom: 26px;
+  }
+
+  /* custom text css */  
+  .footer-list-wrap li.custom-text.custom-text .custom-info .text-block p {
+    margin-top: 12px;
+  }
+  .footer-area .footer-social {
+    margin-top: 25px;
+  }
+}
+</style>

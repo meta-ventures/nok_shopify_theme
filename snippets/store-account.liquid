@@ -1,0 +1,166 @@
+<div class="acc-desk">
+  <a class="acc-ti" href="JavaScript:void(0)">
+    <span class="acc-icon">{{ settings.my_acc_title }}</span>
+    <span class="acc-detail">
+      <span class="acc-text">Your account</span>
+      {% if customer and shop.customer_accounts_enabled %}
+      <span class="acc-user">Hello! {{ customer.first_name }}</span>
+      {% else %}
+      <span class="acc-user">Hello! signin</span>
+      {% endif %}
+    </span>
+  </a>
+  <a class="acc-ti acc-ti-lg" data-bs-toggle="collapse" href="#store-account">
+    <span class="acc-icon">{{ settings.my_acc_title }}</span>
+    <span class="acc-detail">
+      <span class="acc-text">Your account</span>
+      {% if customer and shop.customer_accounts_enabled %}
+      <span class="acc-user">Hello! {{ customer.first_name }}</span>
+      {% else %}
+      <span class="acc-user">Hello! signin</span>
+      {% endif %}
+    </span>
+  </a>
+  {% if customer and shop.customer_accounts_enabled %}
+  <div class="acc-re-lo collapse" id="store-account">
+    <a href="{{ routes.account_url }}">{{ settings.acc_title }}</a>
+    <a href="{{ routes.account_logout_url }}">{{ settings.acc_logout_title }}</a>
+  </div>
+  {% else %}
+  <div class="acc-re-lo collapse" id="store-account">
+    <a href="{{ routes.account_login_url }}">{{ settings.acc_login_title }}</a>
+    <a href="{{ routes.account_register_url }}">{{ settings.acc_register_title }}</a>
+  </div>
+  {% endif %}
+</div>
+<style>
+  .user-wrap .acc-desk{
+    padding: 10px 15px;
+    position: relative;
+    cursor: pointer;
+  }
+  .user-wrap .acc-desk a.acc-ti{
+    color: var(--font-color-header);
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    {% if settings.enable_rtl %}
+    padding-left: 15px;
+    {% else %}
+    padding-right: 15px;
+    {% endif %}
+  }
+  .user-wrap .acc-desk a.acc-ti.acc-ti-lg{
+    display: none;
+  }
+  .user-wrap .acc-desk a.acc-ti span.acc-icon{
+    text-transform: capitalize;
+  }
+  .user-wrap .acc-desk a.acc-ti span.acc-icon,
+  .user-wrap .acc-desk a.acc-ti[aria-expanded="false"] span.acc-icon{}
+  .user-wrap .acc-desk a.acc-ti:hover span.acc-icon,
+  .user-wrap .acc-desk a.acc-ti[aria-expanded="true"] span.acc-icon{}
+
+  .user-wrap .acc-desk a.acc-ti,
+  .user-wrap .acc-desk a.acc-ti:hover{
+    -webkit-transition: all 0s ease-in-out 0s;
+    -o-transition: all 0s ease-in-out 0s;
+    transition: all 0s ease-in-out 0s;
+  }
+  .user-wrap .acc-desk a.acc-ti span.acc-detail{
+    display: none;
+    {% if settings.enable_rtl %}
+    margin-right: 10px;
+    {% else %}
+    margin-left: 10px;
+    {% endif %}
+  }
+  .user-wrap .acc-desk a.acc-ti span.acc-detail span.acc-text{
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: capitalize;
+  }
+  .user-wrap .acc-desk a.acc-ti span.acc-detail span.acc-user{
+    display: block;
+    color: #ddd;
+    margin-top: 5px;
+    text-transform: capitalize;
+  }
+  .user-wrap .acc-desk a.acc-ti::after{
+    content: "\ea4e";
+    font-family: 'remixicon' !important;
+    position: absolute;
+    {% if settings.enable_rtl %}
+    left: 0;
+    {% else %}
+    right: 0;
+    {% endif %}
+    bottom: 50%;
+    transform: translateY(50%);
+  }
+  @media (max-width: 1199px) {
+    .user-wrap .acc-desk a.acc-ti{
+      display: none;
+    }
+    .user-wrap .acc-desk a.acc-ti.acc-ti-lg{
+      display: flex;
+    }
+    .user-wrap .acc-desk a.acc-ti span.acc-detail{
+      display: none;
+    }
+  }
+
+  .user-wrap .acc-desk .acc-re-lo.collapse:not(.show){
+    display: block;
+  }
+  .user-wrap .acc-desk .acc-re-lo{
+    position: absolute;
+    {% if settings.enable_rtl %}
+    left: 0;
+    {% else %}
+    right: 0;
+    {% endif %}
+    top: 100%;
+    width: 100%;
+    background-color: #fff;
+    z-index: 2;
+    opacity: 0;
+    visibility: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);    
+  }
+  .user-wrap .acc-desk:hover .acc-re-lo{
+    opacity: 1;
+    visibility: visible;
+  }
+  .user-wrap .acc-desk .acc-re-lo,
+  .user-wrap .acc-desk:hover .acc-re-lo{
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -o-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+  }
+  .user-wrap .acc-desk .acc-re-lo a{
+    display: block;
+    color: var(--font-color-header);
+    font-size: 13px;
+    padding: 10px 15px;
+    border-top: 1px solid #e2e2e2;
+  }
+  .user-wrap .acc-desk .acc-re-lo a:first-child{
+    border-top: none;
+  }
+  .user-wrap .acc-desk .acc-re-lo a:hover{
+    background-color: #F6F6F6;
+  }
+  @media (max-width: 1199px) {
+    .user-wrap .acc-desk .acc-re-lo.collapse:not(.show){
+      display: none;
+    }
+    .user-wrap .acc-desk .acc-re-lo{
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  @media (max-width: 991px) {}
+</style>

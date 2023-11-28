@@ -1,0 +1,189 @@
+<div class="contact-block">
+	{% if settings.section_title != '' %}
+	<div class="info-title-area">
+		{% if settings.section_subtitle != '' %}
+		<span>{{ settings.section_subtitle }}</span>
+		{% endif %}
+		<h1 class="title">{{ settings.section_title }}</h1>
+	</div>
+	{% endif %}
+	<ul class="contact-info-list">
+		<li class="info-contact-li text-1">
+			<div class="info-contact">
+				{% if settings.info_icon_1 != '' %}
+				<div class="icon">
+					<span>
+						<i class="{{ settings.info_icon_1 }}"></i>
+					</span>
+				</div>
+				{% endif %}
+				{% if settings.text_1 != '' %}
+				<div class="text">
+					<span class="s-title">{{ settings.subtitle_1 }}</span>
+					<div class="info-text">
+						{{ settings.text_1 }}
+					</div>
+				</div>
+				{% endif %}
+			</div>
+		</li>
+		<li class="info-contact-li text-2">
+			<div class="info-contact">
+				{% if settings.info_icon_2 != '' %}
+				<div class="icon">
+					<span>
+						<i class="{{ settings.info_icon_2 }}"></i>
+					</span>
+				</div>
+				{% endif %}
+				{% if settings.text_2 != '' %}
+				<div class="text">
+					<span class="s-title">{{ settings.subtitle_2 }}</span>
+					<div class="info-text">
+						{{ settings.text_2 }}
+					</div>
+				</div>
+				{% endif %}
+			</div>
+		</li>
+		<li class="info-contact-li text-3">
+			<div class="info-contact">
+				{% if settings.info_icon_3 != '' %}
+				<div class="icon">
+					<span>
+						<i class="{{ settings.info_icon_3 }}"></i>
+					</span>
+				</div>
+				{% endif %}
+				{% if settings.text_3 != '' %}
+				<div class="text">
+					<span class="s-title">{{ settings.subtitle_3 }}</span>
+					<div class="info-text">
+						{{ settings.text_3 }}
+					</div>
+				</div>
+				{% endif %}
+			</div>
+		</li>
+	</ul>
+	<div class="info-social">
+		{% include 'social-midea' %}
+	</div>
+</div>
+
+<style>
+/* title css */
+.contact-block .info-title-area span {
+	font-size: 18px;
+	margin-bottom: 16px;
+	line-height: 1;
+}
+.contact-block .info-title-area h1 {
+	font-size: 75px;
+	line-height: 1;
+}
+/* info css */
+.contact-block ul.contact-info-list {
+	margin-top: 85px;
+}
+.contact-block ul.contact-info-list li.info-contact-li {
+	margin-top: 49px;
+}
+.contact-block ul.contact-info-list li.info-contact-li:first-child {
+	margin-top: 0px;
+}
+.contact-block ul.contact-info-list li.info-contact-li .info-contact {
+	display: flex;
+	align-items: center;
+}
+.contact-block ul.contact-info-list li.info-contact-li .info-contact .icon {
+	margin-right: 20px;
+}
+.contact-block ul.contact-info-list li.info-contact-li .info-contact .icon span i {
+	background-image: var(--gradient-color);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-size: 36px;
+	line-height: 1;
+}
+.contact-block ul.contact-info-list li.info-contact-li .info-contact .text span.s-title {
+	font-size: 14px;
+	line-height: 1;
+	text-transform: uppercase;
+}
+.contact-block ul.contact-info-list li.info-contact-li .info-contact .text .info-text {
+	margin-top: 10px;
+}
+.contact-block ul.contact-info-list li.info-contact-li .info-contact .text .info-text p,
+.contact-block ul.contact-info-list li.info-contact-li .info-contact .text .info-text p a {
+	color: var(--font-color-body);
+	font-size: 20px;
+	font-weight: 500;
+}
+.contact-block ul.contact-info-list li.info-contact-li .info-contact .text .info-text p a:hover {
+	background-image: var(--gradient-color);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+/* social css */
+.contact-block .info-social {
+	margin-top: 54px;
+}
+.contact-block .info-social .social span.label {
+	display: none;
+}
+.contact-block .info-social ul.social-icon {
+	padding: 0px;
+}
+.contact-block .info-social ul.social-icon li a {
+	background-image: var(--gradient-color);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.contact-block .info-social ul.social-icon li a {
+	background-image: var(--hover-gradient-color);
+}
+@media (max-width: 1199px) {
+	.contact-block .info-title-area h1 {
+		font-size: 50px;
+	}
+	.contact-block ul.contact-info-list {
+		margin-top: 48px;
+	}
+	.contact-block ul.contact-info-list li.info-contact-li {
+		margin-top: 28px;
+	}
+	.contact-block ul.contact-info-list li.info-contact-li .info-contact .icon span i {
+		font-size: 25px;
+	}
+	.contact-block ul.contact-info-list li.info-contact-li .info-contact .text .info-text p,
+	.contact-block ul.contact-info-list li.info-contact-li .info-contact .text .info-text p a {
+		font-size: 18px;
+	}
+	.contact-block .info-social {
+		margin-top: 32px;
+	}
+}
+@media (max-width: 767px) {
+  	.contact-block .info-title-area span {
+  		font-size: 16px;
+  		margin-bottom: 10px;
+  	}
+  	.contact-block .info-title-area h1 {
+  		font-size: 30px;
+  	}
+  	.contact-block ul.contact-info-list {
+  		margin-top: 30px;
+  	}
+  	.contact-block ul.contact-info-list li.info-contact-li {
+  		margin-top: 18px;
+  	}
+  	.contact-block ul.contact-info-list li.info-contact-li .info-contact .text .info-text {
+  		margin-top: 5px;
+  	}
+  	.contact-block ul.contact-info-list li.info-contact-li .info-contact .text .info-text p,
+  	.contact-block ul.contact-info-list li.info-contact-li .info-contact .text .info-text p a {
+  		font-size: 16px;
+  	}
+  }
+</style>

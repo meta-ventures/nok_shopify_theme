@@ -1,0 +1,62 @@
+<a class="header-wishlist-btn" href="/pages/wishlist" title="Wishlist">
+    <span class="wishlist-title">{{ settings.wishlist_title }}</span>
+    <span class="wishlist-icon"><i class="ri-heart-line"></i></span>
+    <span class="wishlist-counter">{% if wishlist.count %}({{ wishlist.count }}{% else %}0{% endif %}</span>
+</a>
+<style>
+    a.header-wishlist-btn {
+        {%- if template == 'index' -%}
+        color: {{ section.settings.header_text_color }};
+        {%- else -%}
+        color: {{ section.settings.other_header_text_color }};
+        {%- endif -%}
+        display: flex;
+        align-items: center;
+        text-transform: uppercase
+    }
+    a.header-wishlist-btn:hover {
+        {%- if template == 'index' -%}
+        color: {{ section.settings.other_header_text_color }};
+        {%- else -%}
+        color: var(--font-color-primary);
+        {%- endif -%}
+    }
+    .is-sticky a.header-wishlist-btn {
+       color: {{ section.settings.other_header_text_color }};
+    }
+    .is-sticky a.header-wishlist-btn:hover {
+       color: var(--font-color-primary);
+    }
+    a.header-wishlist-btn span.wishlist-icon i {
+        display: block;
+        line-height: 1;
+    }
+    a.header-wishlist-btn span.wishlist-title{
+        {% if settings.enable_rtl %}
+        margin-left: 10px;
+        {% else %}
+        margin-right: 10px;
+        {% endif %}
+        display: none;
+    }
+    a.header-wishlist-btn span.wishlist-counter {
+        color: #fff;
+        font-size: 12px;
+        line-height: 1;
+        height: 18px;
+        width: 18px;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        border-radius: 100%;
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        background-color: var(--font-color-primary);
+    }
+    @media (max-width: 1199px) {
+        a.header-wishlist-btn span.wishlist-title {
+            display: none;
+        }
+    }
+</style>

@@ -1,0 +1,258 @@
+<section class="contact-support-area">
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<div class="support-area">
+					<ul class="contact-support-ul">
+						{% for block in section.blocks %}
+						<li class="contact-support-li">
+							<div class="support-block">
+								{% if block.settings.support_title != '' %}
+								<div class="title-area">
+									<h4 class="title">{{ block.settings.support_title }}</h4>
+								</div>
+								{% endif %}
+								{% if block.settings.support_desc != '' %}
+								<div class="desc-area">
+									<p>{{ block.settings.support_desc }}</p>
+								</div>
+								{% endif %}
+							</div>
+						</li>
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{% schema %}
+{
+	"name": "contact Modern Section 3",
+	"settings": [
+	{
+		"type": "header",
+		"content": "Section Padding"
+	},
+	{
+		"type" : "paragraph",
+		"content" : "Desktop / Laptop"
+	},
+	{
+		"type": "range",
+		"id": "section_padding_top",
+		"label": "Section Padding Top",
+		"min": 0,
+		"max": 100,
+		"step": 5,
+		"unit": "px",
+		"default": 100
+	},
+	{
+		"type": "range",
+		"id": "section_padding_bottom",
+		"label": "Section Padding bottom",
+		"min": 0,
+		"max": 100,
+		"step": 5,
+		"unit": "px",
+		"default": 100
+	},
+	{
+		"type" : "paragraph",
+		"content" : "Ipad pro / Ipad"
+	},
+	{
+		"type": "range",
+		"id": "section_padding_top_lg",
+		"label": "Section Padding Top",
+		"min": 0,
+		"max": 100,
+		"step": 5,
+		"unit": "px",
+		"default": 80
+	},
+	{
+		"type": "range",
+		"id": "section_padding_bottom_lg",
+		"label": "Section Padding bottom",
+		"min": 0,
+		"max": 100,
+		"step": 5,
+		"unit": "px",
+		"default": 80
+	},
+	{
+		"type" : "paragraph",
+		"content" : "Mobile"
+	},
+	{
+		"type": "range",
+		"id": "section_padding_top_xs",
+		"label": "Section Padding Top",
+		"min": 0,
+		"max": 100,
+		"step": 5,
+		"unit": "px",
+		"default": 60
+	},
+	{
+		"type": "range",
+		"id": "section_padding_bottom_xs",
+		"label": "Section Padding bottom",
+		"min": 0,
+		"max": 100,
+		"step": 5,
+		"unit": "px",
+		"default": 60
+	},
+	{
+		"type": "header",
+		"content": "Section Background Color"
+	},
+	{
+		"type": "color",
+		"id": "contact_us_3_bgcolor",
+		"label": "Background Color",
+		"default": "#FFFFFF"
+	},
+	{
+		"type": "checkbox",
+		"id": "contact_us_3_bgcolor_enable",
+		"label": "Show Background Color",
+		"default": true
+	}
+	],
+	"blocks":[
+	{
+		"type": "support_block",
+		"name": "Support Block",
+		"settings": [
+		{
+			"type": "text",
+			"id": "support_title",
+			"label": "Title",
+			"default": "Shopping protection"
+		},
+		{
+			"type": "textarea",
+			"id": "support_desc",
+			"label": "Description",
+			"default": "The quickest way to know a woman is to go shopping with her"
+		}
+		]
+	}
+	],
+	"presets":[
+	{
+		"name": "contact Modern Section 3",
+		"category": "contact Modern Section 3"
+	}
+	]
+}
+{% endschema %}
+<style>
+.contact-support-area {
+	padding-top: {{ section.settings.section_padding_top }}px;
+	padding-bottom: {{ section.settings.section_padding_bottom }}px;
+	{% if section.settings.contact_us_3_bgcolor_enable %}
+	background-color: {{ section.settings.contact_us_3_bgcolor }};
+	{% endif %}
+}
+@media (max-width: 1199px) {
+	.contact-support-area {
+		padding-top: {{ section.settings.section_padding_top_lg }}px;
+		padding-bottom: {{ section.settings.section_padding_bottom_lg }}px;
+	}
+}
+@media (max-width: 767px) {
+	.contact-support-area {
+		padding-top: {{ section.settings.section_padding_top_xs }}px;
+		padding-bottom: {{ section.settings.section_padding_bottom_xs }}px;
+	}
+}
+
+.contact-support-area .support-area ul.contact-support-ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-top: -30px;
+	{% if settings.enable_rtl %}
+	margin-right: -30px;
+	{% else %}
+	margin-left: -30px;
+	{% endif %}
+}
+.contact-support-area .support-area ul.contact-support-ul li.contact-support-li {
+	width: calc(33.33% - 30px);
+	margin-top: 30px;
+	{% if settings.enable_rtl %}
+	margin-right: 30px;
+	{% else %}
+	margin-left: 30px;
+	{% endif %}
+}
+.contact-support-area .support-area ul.contact-support-ul li.contact-support-li .support-block {
+	text-align: center;
+}
+.contact-support-area .support-area ul.contact-support-ul li.contact-support-li .support-block .title-area h4.title {
+	font-size: 18px;
+	line-height: 1;
+	font-weight: 700;
+}
+.contact-support-area .support-area ul.contact-support-ul li.contact-support-li .support-block .desc-area {
+	margin-top: 29px;
+}
+.contact-support-area .support-area ul.contact-support-ul li.contact-support-li .support-block .desc-area p {
+    font-size: 18px;
+    width: 75%;
+    margin: 0 auto;
+    line-height: 30px;
+}
+@media (max-width: 1280px) {
+	.contact-support-area .support-area ul.contact-support-ul li.contact-support-li .support-block .desc-area p {
+		width: 85%;
+	}
+}
+@media (max-width: 1199px) {
+	.contact-support-area .support-area ul.contact-support-ul li.contact-support-li .support-block .desc-area {
+		margin-top: 19px;
+	}
+	.contact-support-area .support-area ul.contact-support-ul li.contact-support-li .support-block .desc-area p {
+		width: 100%;
+	}
+}
+@media (max-width: 991px) {
+	.contact-support-area .support-area ul.contact-support-ul li.contact-support-li .support-block .title-area h4.title {
+		font-size: 16px;
+	}
+	.contact-support-area .support-area ul.contact-support-ul li.contact-support-li .support-block .desc-area {
+		margin-top: 10px;
+	}
+	.contact-support-area .support-area ul.contact-support-ul li.contact-support-li .support-block .desc-area p {
+		font-size: 16px;
+	}
+}
+@media (max-width: 600px) {
+	.contact-support-area .support-area ul.contact-support-ul {
+		{% if settings.enable_rtl %}
+		margin-right: 0px;
+		{% else %}
+		margin-left: 0px;
+		{% endif %}
+	}
+	.contact-support-area .support-area ul.contact-support-ul li.contact-support-li {
+		width: calc(50% - 0px);
+		{% if settings.enable_rtl %}
+		margin-right: 0px;
+		{% else %}
+		margin-left: 0px;
+		{% endif %}
+	}
+}
+@media (max-width: 600px) {
+	.contact-support-area .support-area ul.contact-support-ul li.contact-support-li {
+		width: calc(100% - 0px);
+	}
+}
+</style>

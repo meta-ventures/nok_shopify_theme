@@ -1,0 +1,47 @@
+{%- if settings.company_logo -%}
+{%- capture image_width -%}{{ settings.logo_max_width}}{%- endcapture -%}
+{%- if template == 'index' -%}
+<a href="{{ shop.url }}" class="theme-logo">
+  <img width="{{ settings.company_logo.width }}" height="{{ settings.company_logo.height }}" style="max-width: {{ image_width }}px;" src="{{ settings.company_logo | img_url: 'master' }}" class="img-fluid" alt="{{ settings.company_logo.alt | default: shop.name }}">
+</a>
+{%- endif -%}
+<a href="{{ shop.url }}" class="other-logo">
+  <img width="{{ settings.company_logo_sticky.width }}" height="{{ settings.company_logo_sticky.height }}" style="max-width: {{ image_width }}px;" src="{{ settings.company_logo_sticky | img_url: 'master' }}" class="img-fluid" alt="{{ settings.company_logo_sticky.alt | default: shop.name }}">
+</a>
+{%- elsif settings.body_logo_svg_code != blank %}
+<a href="{{ shop.url }}" class="theme-logo">
+  <span style="max-width: {{ settings.logo_max_width }}px;">
+    {{ settings.body_logo_svg_code | html }}
+  </span>
+</a>
+{%- elsif settings.body_logo_svg != blank %}
+{%- assign logo_svg_url = settings.body_logo_svg | file_url -%}
+<a href="{{ shop.url }}" class="theme-logo">
+<img height="" width="{{settings.logo_max_width}}" src="{{logo_svg_url}}" class="img-fluid" alt="{{ shop.name | escape }}">
+</a>
+{%- else -%}
+<a href="/" class="shop-name">
+  <span>{{ shop.name }}</span>
+</a>
+{%- endif -%}
+<style>
+  a.shop-name span {
+    color: var(--font-color-header);
+    font-size: 24px;
+    font-weight: 600;
+  }
+  a.theme-logo svg{
+    width: 100%;
+  }
+  {%- if template == 'index' -%}
+  .is-sticky a.theme-logo{
+    display: none;
+  }
+  a.other-logo{
+    display: none;
+  }
+  .is-sticky a.other-logo{
+    display: block;
+  }
+  {%- endif -%}
+</style>

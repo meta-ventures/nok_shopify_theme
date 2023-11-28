@@ -1,0 +1,280 @@
+<section class="about-image-area">
+	<div class="container">
+		<div class="row">
+			<div class="col">
+                <div class="about-image">
+                    <span>
+                        <img width="{{ section.settings.about_image_area.width }}" height="{{ section.settings.about_image_area.height }}" class="img-fluid" src="{% if section.settings.about_image_area %}{{ section.settings.about_image_area | img_url: 'master' }}{% else %}https://dummyimage.com/1350x570/232323/999999{% endif %}" alt="">
+                    </span>
+                    <a class="play-button popup-youtube" href="{{ section.settings.banner_bg_button_url }}">
+                      <img width="{{ section.settings.banner_bg_img.width }}" height="{{ section.settings.banner_bg_img.height }}" class="img-fluid" src="{% if section.settings.banner_bg_img %}{{ section.settings.banner_bg_img | img_url: 'master' }}{% else %}https://dummyimage.com/145x145/f7f7f7/999999{% endif %}" alt="">
+                      <i class="ri-play-line"></i>
+                    </a>
+                </div>
+			</div>
+		</div>
+	</div>
+</section>
+
+{% schema %}
+{
+  "name": "About us Section 4",
+  "settings": [
+  	{
+        "type": "header",
+        "content": "Section Padding"
+    },
+    {
+        "type" : "paragraph",
+        "content" : "Desktop / Laptop / tablet"
+    },
+    {
+        "type": "range",
+        "id": "about_product_padding_top",  
+        "label": "Section Padding Top",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "unit": "px",
+        "default": 0
+    },           
+    {
+        "type": "range",
+        "id": "about_product_padding_bottom", 
+        "label": "Section Padding Bottom",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "unit": "px",
+        "default": 0
+    },
+    {
+        "type" : "paragraph",
+        "content" : "Ipad pro / Ipad"
+    },
+    {
+        "type": "range",
+        "id": "about_product_padding_top_ip",  
+        "label": "Section Padding Top",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "unit": "px",
+        "default": 0
+    },           
+    {
+        "type": "range",
+        "id": "about_product_padding_bottom_ip", 
+        "label": "Section Padding Bottom",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "unit": "px",
+        "default": 0
+    },
+    {
+        "type" : "paragraph",
+        "content" : "Mobile"
+    },
+    {
+        "type": "range",
+        "id": "about_product_padding_top_xs",  
+        "label": "Section Padding Top",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "unit": "px",
+        "default": 0
+    },           
+    {
+        "type": "range",
+        "id": "about_product_padding_bottom_xs", 
+        "label": "Section Padding Bottom",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "unit": "px",
+        "default": 0
+    },
+    {
+        "type": "header",
+        "content": "Section Background Color"
+    },
+    {
+        "type": "checkbox",
+        "id": "about_product_bgcolor_enable",
+        "label": "Show Background Color",
+        "default": false
+    },
+    {
+        "type": "color",
+        "id": "about_product_bgcolor",
+        "label": "Background Color",
+        "default": "#FFFFFF"
+    },
+    {
+        "type": "header",
+        "content": "Section Before Background Color"
+    },
+    {
+        "type": "checkbox",
+        "id": "section_before_after_bg_color_enable",
+        "label": "Show Before Background Color",
+        "default": true
+    },
+    {
+        "type": "color",
+        "id": "section_before_after_bg_color",
+        "label": "Before Background Color",
+        "default": "#FFFFFF"
+    },
+    {
+        "type": "header",
+        "content": "About Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "about_image_area",
+      "label": "About Image",
+      "info": "Recommended Size: 1350px x 570px"
+    },
+    {
+        "type": "url",
+        "id": "banner_bg_button_url",
+        "label": "Video URL"
+    },
+    {
+        "type": "image_picker",
+        "id": "banner_bg_img",
+        "label": "video icon image",
+        "info": "Recommended Size: 145px x 145px"
+    }
+  ],
+  "presets":[
+  {
+    "name": "About us Section 4",
+    "category": "About us Section 4"
+  }
+  ]
+}
+{% endschema %}
+
+<style>
+.about-image-area {
+    position: relative;
+    padding-top: {{ section.settings.about_product_padding_top }}px;
+    padding-bottom: {{ section.settings.about_product_padding_bottom }}px;
+    {% if section.settings.about_product_bgcolor_enable %}
+    background-color: {{ section.settings.about_product_bgcolor }};
+    {% endif %}
+}
+@media (max-width: 1199px) {
+    .about-image-area {
+        padding-top: {{ section.settings.about_product_padding_top_ip }}px;
+        padding-bottom: {{ section.settings.about_product_padding_bottom_ip }}px;
+    }
+}
+@media (max-width: 767px) {
+    .about-image-area {
+        padding-top: {{ section.settings.about_product_padding_top_xs }}px;
+        padding-bottom: {{ section.settings.about_product_padding_bottom_xs }}px;
+    }
+}
+{% if section.settings.section_before_after_bg_color_enable %}
+.about-image-area::before {
+    content: '';
+    background-color: {{ section.settings.section_before_after_bg_color }};
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 50%;
+    z-index: -1;
+}
+{% endif %}
+.about-image-area .about-image {
+    position: relative;
+}
+.about-image-area .about-image a.play-button {
+    position: absolute;
+    bottom: 150px;
+    {% if settings.enable_rtl %}
+    left: 150px;
+    {% else %}
+    right: 150px;
+    {% endif %}
+    transform: translate(50%, 50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.about-image-area .about-image a.play-button i {
+    position: absolute;
+    font-size: 31px;
+    color: #fff;
+}
+.about-image-area .about-image a.play-button img {
+    display: inline-block;
+    -webkit-animation: spin 4s linear infinite;
+    animation: spin 4s linear infinite;
+}
+.mfp-container.mfp-iframe-holder{
+    width: auto;
+    left: 15px;
+    right: 15px;
+}
+.mfp-iframe-holder .mfp-close {
+    display: block!important;
+    font-size: 30px;
+    padding: 0;
+    height: auto;
+    width: auto;
+    position: absolute;
+    top: -30px;
+    {%- if settings.enable_rtl -%}
+    left: 0;
+    {%- else -%}
+    right: 0;
+    {%- endif -%}
+    opacity: 1;
+    background-color: transparent!important;
+    line-height: 1;
+}
+.mfp-iframe-scaler iframe{
+    border: none;
+}
+@media (max-width: 1199px) {
+    .about-image-area .about-image a.play-button {
+        width: 120px;
+        height: 120px;
+        bottom: 120px;
+        {% if settings.enable_rtl %}
+        left: 120px;
+        {% else %}
+        right: 120px;
+        {% endif %}
+    }
+    .about-image-area .about-image a.play-button i {
+        font-size: 25px;
+    }
+}
+@media (max-width: 600px) {
+    .about-image-area .about-image span img {
+        height: 350px;
+        object-fit: cover;
+    }
+    .about-image-area .about-image a.play-button {
+        width: 80px;
+        height: 80px;
+        bottom: 60px;
+        {% if settings.enable_rtl %}
+        left: 60px;
+        {% else %}
+        right: 60px;
+        {% endif %}
+    }
+    .about-image-area .about-image a.play-button i {
+        font-size: 20px;
+    }
+}
+</style>

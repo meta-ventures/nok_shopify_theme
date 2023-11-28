@@ -1,0 +1,318 @@
+<section class="modern-contact-area">
+  <div class="contact-image">
+    <span>
+      <img width="{{ section.settings.contact_image.width }}" height="{{ section.settings.contact_image.height }}" class="img-fluid" src="{% if section.settings.contact_image %}{{ section.settings.contact_image | img_url: 'master' }}{% else %}https://dummyimage.com/1920x630/f7f7f7/999999{% endif %}" alt="">
+    </span>
+  </div>
+  <div class="contact-form-area">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="contact-input-area">
+            {% if section.settings.contact_form_title != '' or section.settings.contact_form_subtitle != '' %}
+            <div class="other-page-new-title">
+              <div class="new-title">
+                {% if section.settings.contact_form_subtitle != '' %}
+                <p>{{ section.settings.contact_form_subtitle }}</p>
+                {% endif %}
+                <h1>{{ section.settings.contact_form_title }}</h1>
+              </div>
+            </div>
+            {% endif %}
+            {% include 'contact-form' %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="contact-share">
+          {% if section.settings.contact_shre_title != '' %}
+          <span>{{ section.settings.contact_shre_title }}</span>
+          {% endif %}
+          <div class="social-icon">
+            {% include 'social-midea' %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "contact Modern Section 2",
+  "settings": [
+  {
+    "type": "header",
+    "content": "Section Padding"
+  },
+  {
+    "type" : "paragraph",
+    "content" : "Desktop / Laptop / tablet"
+  },
+  {
+    "type": "range",
+    "id": "about_product_padding_top",
+    "label": "Section Padding Top",
+    "min": 0,
+    "max": 100,
+    "step": 5,
+    "unit": "px",
+    "default": 0
+  },
+  {
+    "type": "range",
+    "id": "about_product_padding_bottom",
+    "label": "Section Padding Bottom",
+    "min": 0,
+    "max": 100,
+    "step": 5,
+    "unit": "px",
+    "default": 0
+  },
+  {
+    "type" : "paragraph",
+    "content" : "Ipad pro / Ipad"
+  },
+  {
+    "type": "range",
+    "id": "about_product_padding_top_ip",
+    "label": "Section Padding Top",
+    "min": 0,
+    "max": 100,
+    "step": 5,
+    "unit": "px",
+    "default": 0
+  },
+  {
+    "type": "range",
+    "id": "about_product_padding_bottom_ip",
+    "label": "Section Padding Bottom",
+    "min": 0,
+    "max": 100,
+    "step": 5,
+    "unit": "px",
+    "default": 0
+  },
+  {
+    "type" : "paragraph",
+    "content" : "Mobile"
+  },
+  {
+    "type": "range",
+    "id": "about_product_padding_top_xs",
+    "label": "Section Padding Top",
+    "min": 0,
+    "max": 100,
+    "step": 5,
+    "unit": "px",
+    "default": 0
+  },
+  {
+    "type": "range",
+    "id": "about_product_padding_bottom_xs",
+    "label": "Section Padding Bottom",
+    "min": 0,
+    "max": 100,
+    "step": 5,
+    "unit": "px",
+    "default": 0
+  },
+  {
+    "type": "header",
+    "content": "Section Background Color"
+  },
+  {
+    "type": "checkbox",
+    "id": "about_product_bgcolor_enable",
+    "label": "Show Background Color",
+    "default": false
+  },
+  {
+    "type": "color",
+    "id": "about_product_bgcolor",
+    "label": "Background Color",
+    "default": "#FFFFFF"
+  },
+  {
+    "type": "header",
+    "content": "Contact Image"
+  },
+  {
+    "type": "image_picker",
+    "id": "contact_image",
+    "label": "Contact Image",
+    "info": "Recommended Size: 1920px x 630px"
+  },
+  {
+    "type": "header",
+    "content": "Contact Form Title"
+  },
+  {
+    "type": "text",
+    "id": "contact_form_subtitle",
+    "label": "Subtitle",
+    "default": "Keep in touch with us"
+  },
+  {
+    "type": "text",
+    "id": "contact_form_title",
+    "label": "Title",
+    "default": "Let's get in touch with us"
+  },
+  {
+    "type": "header",
+    "content": "Social Title"
+  },
+  {
+    "type": "text",
+    "id": "contact_shre_title",
+    "label": "Title",
+    "default": "Social media"
+  } 
+  ],
+  "presets":[
+  {
+    "name": "contact Modern Section 2",
+    "category": "contact Modern Section 2"
+  }
+  ]
+}
+{% endschema %}
+<style>
+  .modern-contact-area {
+    position: relative;
+    padding-top: {{ section.settings.about_product_padding_top }}px;
+    padding-bottom: {{ section.settings.about_product_padding_bottom }}px;
+    {% if section.settings.about_product_bgcolor_enable %}
+    background-color: {{ section.settings.about_product_bgcolor }};
+    {% endif %}
+  }
+  @media (max-width: 1199px) {
+    .modern-contact-area {
+      padding-top: {{ section.settings.about_product_padding_top_ip }}px;
+      padding-bottom: {{ section.settings.about_product_padding_bottom_ip }}px;
+    }
+  }
+  @media (max-width: 767px) {
+    .modern-contact-area {
+      padding-top: {{ section.settings.about_product_padding_top_xs }}px;
+      padding-bottom: {{ section.settings.about_product_padding_bottom_xs }}px;
+    }
+  }
+
+  /* contact input css */
+  .modern-contact-area .contact-form-area .contact-input-area {
+    background-color: #ffffff;
+    padding: 100px;
+    margin-top: -150px;
+    box-shadow: 0 0 10px #00000026;
+  }
+  .modern-contact-area .contact-form-area .contact-input-area form input,  
+  .modern-contact-area .contact-form-area .contact-input-area form .contact-input ul.form-fill li input,
+  .modern-contact-area .contact-form-area .contact-input-area form .contact-input ul.form-fill li textarea {
+    border: 1px solid #e2e2e2;
+  }
+  .modern-contact-area .contact-form-area .contact-input-area form .contact-submit-area .agree-btn .check-input .box-area span.agree-text {
+    width: 100%;
+  }
+  @media (max-width: 1280px) {
+    .modern-contact-area .contact-form-area .contact-input-area {
+      margin-top: -80px;
+    }
+  }
+  @media (max-width: 1199px) {
+    .modern-contact-area .contact-form-area .contact-input-area {
+      padding: 80px 30px;
+    }
+  }
+  @media (max-width: 767px) {
+    .modern-contact-area .contact-form-area .contact-input-area {
+      padding: 60px 15px;
+      margin-top: -50px;
+    }
+  }
+
+  /* contact share css */
+  .modern-contact-area .contact-share {
+    margin-top: 100px;
+    text-align: center;
+  }
+  .modern-contact-area .contact-share span {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1;
+    text-transform: uppercase;
+  } 
+  .modern-contact-area .contact-share .social-icon {
+    margin-top: 30px;
+  }
+  .modern-contact-area .contact-share .social-icon .social {
+    justify-content: center;
+  }
+  .modern-contact-area .contact-share .social-icon .social span.label {
+    display: none;
+  }
+  .modern-contact-area .contact-share .social-icon ul.social-icon li {
+    {% if settings.enable_rtl %}
+    margin-right: 30px;
+    {% else %}
+    margin-left: 30px;
+    {% endif %}
+  }
+  .modern-contact-area .contact-share .social-icon ul.social-icon li:first-child {
+    {% if settings.enable_rtl %}
+    margin-right: 0px;
+    {% else %}
+    margin-left: 0px;
+    {% endif %}
+  }
+  .modern-contact-area .contact-share .social-icon ul.social-icon li a {
+    font-size: 32px;
+    background-image: var(--gradient-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1;
+  }
+  .modern-contact-area .contact-share .social-icon ul.social-icon li a:hover {
+    background-image: var(--hover-gradient-color);
+  }
+  @media (max-width: 1199px) {
+    .modern-contact-area .contact-share {
+      margin-top: 80px;
+    }
+    .modern-contact-area .contact-share span {
+      font-size: 14px;
+    }
+    .modern-contact-area .contact-share .social-icon {
+      margin-top: 10px;
+    }
+    .modern-contact-area .contact-share .social-icon ul.social-icon li {
+      {% if settings.enable_rtl %}
+      margin-right: 20px;
+      {% else %}
+      margin-left: 20px;
+      {% endif %}
+    }
+    .modern-contact-area .contact-share .social-icon ul.social-icon li a {
+      font-size: 22px;
+    }
+  }
+  @media (max-width: 991px) {
+    .modern-contact-area .contact-image span img {
+      height: 400px;
+      object-fit: cover;
+    }
+  }
+  @media (max-width: 767px) {
+    .modern-contact-area .contact-image span img {
+      height: 250px;
+    }
+    .modern-contact-area .contact-share {
+      margin-top: 60px;
+    }
+  }
+</style>

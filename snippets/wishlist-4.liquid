@@ -1,0 +1,82 @@
+<div class="wishlist-four">
+    {% if customer %}
+    <a class="header-wishlist" href="/pages/wishlist" title="Wishlist">
+        <span class="wishlist-icon"><i class="ri-heart-line"></i></span>
+        <span class="wishlist-counter">{% if wishlist.count %}{{ wishlist.count }}{% else %}0{% endif %}</span>
+    </a>
+    <a class="header-wishlist header-wishlist-lg" href="/pages/wishlist" title="Wishlist">
+        <span class="wishlist-icon"><i class="ri-heart-line"></i></span>
+        <span class="wishlist-counter">{% if wishlist.count %}{{ wishlist.count }}{% else %}0{% endif %}</span>
+    </a>
+    {% else %}
+    <a class="header-wishlist" href="/account/login" title="Wishlist">
+        <span class="wishlist-icon"><i class="ri-heart-line"></i></span>
+        <span class="wishlist-counter">{% if wishlist.count %}{{ wishlist.count }}{% else %}0{% endif %}</span>
+    </a>
+    <a class="header-wishlist header-wishlist-lg" href="/account/login" title="Wishlist">
+        <span class="wishlist-icon"><i class="ri-heart-line"></i></span>
+        <span class="wishlist-counter">{% if wishlist.count %}{{ wishlist.count }}{% else %}0{% endif %}</span>
+    </a>    
+    {% endif %}
+</div>
+<style>
+    .wishlist-four{
+        position: relative;
+    }
+    .wishlist-four a.header-wishlist{
+        display: block;
+        position: relative;
+    }
+    .wishlist-four a.header-wishlist.header-wishlist-lg{
+        display: none;
+    }
+    .wishlist-four a.header-wishlist span.wishlist-icon{
+        display: block;
+        color: var(--font-color-header);
+        font-size: 16px;
+        {% if settings.enable_rtl %}
+        padding-left: 10px;
+        {% else %}
+        padding-right: 10px;
+        {% endif %}
+        line-height: 0;
+    }
+    .wishlist-four a.header-wishlist:hover span.wishlist-icon{
+        color: var(--font-color-header);
+    }
+    .wishlist-four a.header-wishlist span.wishlist-icon i{
+        display: block;
+        line-height: 0;
+    }
+    
+    .wishlist-four a.header-wishlist span.wishlist-counter{
+        color: #fff;
+        font-size: 10px;
+        position: absolute;
+        top: -8px;
+        {% if settings.enable_rtl %}
+        left: 0px;
+        {% else %}
+        right: 0px;
+        {% endif %}
+        width: 16px;
+        height: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--font-color-primary);
+        border-radius: 100%;
+        line-height: 1;
+    }
+    .wishlist-four a.header-wishlist:hover span.wishlist-counter{
+        background-color: var(--font-color-primary);
+    }
+    @media (max-width: 1199px) {
+        .wishlist-four a.header-wishlist{
+            display: none;
+        }
+        .wishlist-four a.header-wishlist.header-wishlist-lg{
+            display: block;
+        }
+    }
+</style>

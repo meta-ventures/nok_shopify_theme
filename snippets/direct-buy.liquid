@@ -1,0 +1,17 @@
+{% if product.available %}
+<a href="javascript:void(0)" class="btn btn-cart btn_theme btn-style" onClick="instantBuy{{product.id}}()">
+    <span>{{ block.settings.buy_now_title }}</span>
+</a>
+{% else %}
+<a href="javascript:void(0)" class="btn btn-cart btn_theme disabled btn-style" disabled="disabled" onClick="instantBuy{{product.id}}()">
+    <span>{{ block.settings.buy_now_title }}</span>
+</a>
+{% endif %}
+<script type="text/javascript">
+    function instantBuy{{product.id}}() {
+        jQuery.post('/cart/add', $(".cart-{{ product.id }}").serialize()).
+        always(function(data) {
+            window.location.href ='/checkout';
+        });
+    }
+</script>

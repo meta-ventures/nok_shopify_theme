@@ -1,0 +1,298 @@
+<section class="privacy-policy-rulse">
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<div class="policy-rulse-block">
+					<div class="block-area">
+						{% if section.settings.relse_title_1 != '' %}
+						<h4 class="rulse-title">{{ section.settings.relse_title_1 }}</h4>
+						{% endif %}
+						<ul class="policy-rulse-block-ul">
+							{% for block in section.blocks %}
+							{%- case block.type -%}
+	                        {%- when 'rulse_block_1' -%}
+							{% if block.settings.policy_rulse_text_1 != '' %}
+							<li class="policy-rulse-block-li">
+                                <i class="ri-check-line"></i>
+								<p>{{ block.settings.policy_rulse_text_1 }}</p>
+							</li>
+							{% endif %}
+	                        {%- endcase -%}
+	                        {%- endfor -%}
+						</ul>
+					</div>
+					<div class="block-area">
+						{% if section.settings.relse_title_2 != '' %}
+						<h4 class="rulse-title">{{ section.settings.relse_title_2 }}</h4>
+						{% endif %}
+						<ul class="policy-rulse-block-ul">
+							{% for block in section.blocks %}
+							{%- case block.type -%}
+	                        {%- when 'rulse_block_2' -%}
+							{% if block.settings.policy_rulse_text_2 != '' %}
+							<li class="policy-rulse-block-li">
+                                <i class="ri-check-line"></i>
+								<p>{{ block.settings.policy_rulse_text_2 }}</p>
+							</li>
+							{% endif %}
+	                        {%- endcase -%}
+	                        {%- endfor -%}
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+{% schema %}
+{
+    "name": "Privacy Policy Rulse",
+    "settings": [
+    {
+        "type": "header",
+        "content": "Section Padding"
+    },
+    {
+        "type" : "paragraph",
+        "content" : "Desktop / Laptop / tablet"
+    },
+    {
+        "type": "range",
+        "id": "about_product_padding_top",
+        "label": "Section Padding Top",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "unit": "px",
+        "default": 0
+    },
+    {
+        "type": "range",
+        "id": "about_product_padding_bottom",
+        "label": "Section Padding Bottom",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "unit": "px",
+        "default": 0
+    },
+    {
+        "type" : "paragraph",
+        "content" : "Ipad pro / Ipad"
+    },
+    {
+        "type": "range",
+        "id": "about_product_padding_top_ip",
+        "label": "Section Padding Top",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "unit": "px",
+        "default": 0
+    },
+    {
+        "type": "range",
+        "id": "about_product_padding_bottom_ip",
+        "label": "Section Padding Bottom",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "unit": "px",
+        "default": 0
+    },
+    {
+        "type" : "paragraph",
+        "content" : "Mobile"
+    },
+    {
+        "type": "range",
+        "id": "about_product_padding_top_xs",
+        "label": "Section Padding Top",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "unit": "px",
+        "default": 0
+    },
+    {
+        "type": "range",
+        "id": "about_product_padding_bottom_xs",
+        "label": "Section Padding Bottom",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "unit": "px",
+        "default": 0
+    },
+    {
+        "type": "header",
+        "content": "Section Background Color"
+    },
+    {
+        "type": "checkbox",
+        "id": "about_product_bgcolor_enable",
+        "label": "Show Background Color",
+        "default": false
+    },
+    {
+        "type": "color",
+        "id": "about_product_bgcolor",
+        "label": "Background Color",
+        "default": "#FFFFFF"
+    },
+    {
+        "type": "header",
+        "content": "Block Title"
+    },
+    {
+        "type": "text",
+        "id": "relse_title_1",
+        "label": "Text 1",
+        "default": "Providing your personal data to others"
+    },
+    {
+        "type": "text",
+        "id": "relse_title_2",
+        "label": "Text 2",
+        "default": "Changes to personally identifiable information"
+    }
+    ],
+    "blocks": [
+    {
+        "type": "rulse_block_1",
+        "name": "Rulse Text 1",
+        "settings": [
+        {
+            "type": "textarea",
+            "id": "policy_rulse_text_1",
+            "label": "Text",
+            "default": "Happening today, from social to mobile to the gaming."
+        }
+        ]
+    },
+    {
+        "type": "rulse_block_2",
+        "name": "Rulse Text 2",
+        "settings": [
+        {
+            "type": "textarea",
+            "id": "policy_rulse_text_2",
+            "label": "Text",
+            "default": "Happening today, from social to mobile to the gaming."
+        }
+        ]
+    }
+    ],
+    "presets":[
+    {
+        "name": "Privacy Policy Rulse",
+        "category": "Privacy Policy Rulse"
+    }
+    ]
+}
+{% endschema %}
+
+<style>
+.privacy-policy-rulse {
+    position: relative;
+    padding-top: {{ section.settings.about_product_padding_top }}px;
+    padding-bottom: {{ section.settings.about_product_padding_bottom }}px;
+    {% if section.settings.about_product_bgcolor_enable %}
+    background-color: {{ section.settings.about_product_bgcolor }};
+    {% endif %}
+}
+@media (max-width: 1199px) {
+    .privacy-policy-rulse {
+        padding-top: {{ section.settings.about_product_padding_top_ip }}px;
+        padding-bottom: {{ section.settings.about_product_padding_bottom_ip }}px;
+    }
+}
+@media (max-width: 767px) {
+    .privacy-policy-rulse {
+        padding-top: {{ section.settings.about_product_padding_top_xs }}px;
+        padding-bottom: {{ section.settings.about_product_padding_bottom_xs }}px;
+    }
+}
+
+.privacy-policy-rulse .policy-rulse-block {
+    display: flex;
+    flex-wrap: wrap;
+    {% if settings.enable_rtl %}
+    margin-right: -30px;
+    {% else %}
+    margin-left: -30px;
+    {% endif %}
+    margin-top: -27px;
+}
+.privacy-policy-rulse .policy-rulse-block .block-area {
+    width: calc(50% - 30px);
+    {% if settings.enable_rtl %}
+    margin-right: 30px;
+    {% else %}
+    margin-left: 30px;
+    {% endif %}
+    margin-top: 27px;
+}
+.privacy-policy-rulse .policy-rulse-block .block-area h4.rulse-title {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+}   
+.privacy-policy-rulse .policy-rulse-block .block-area ul.policy-rulse-block-ul {
+    margin-top: 29px;
+}
+.privacy-policy-rulse .policy-rulse-block .block-area ul.policy-rulse-block-ul li.policy-rulse-block-li {
+    margin-top: 18px;
+    display: flex;
+    align-items: center;
+}
+.privacy-policy-rulse .policy-rulse-block .block-area ul.policy-rulse-block-ul li.policy-rulse-block-li:first-child {
+    margin-top: 0px;
+}
+.privacy-policy-rulse .policy-rulse-block .block-area ul.policy-rulse-block-ul li.policy-rulse-block-li i {
+    {% if settings.enable_rtl %}
+    margin-left: 10px;
+    {% else %}
+    margin-right: 10px;
+    {% endif %}
+    font-weight: 700;
+    line-height: 1;
+    font-size: 18px;
+}
+.privacy-policy-rulse .policy-rulse-block .block-area ul.policy-rulse-block-ul li.policy-rulse-block-li p {
+    color: var(--font-color-paragraph);
+    font-size: 18px;
+}   
+@media (max-width: 991px) {
+    .privacy-policy-rulse .policy-rulse-block .block-area h4.rulse-title {
+        font-size: 16px;
+    }
+    .privacy-policy-rulse .policy-rulse-block .block-area ul.policy-rulse-block-ul li.policy-rulse-block-li p {
+        font-size: 16px;
+    }
+}
+@media (max-width: 600px) {
+    .privacy-policy-rulse .policy-rulse-block {
+        {% if settings.enable_rtl %}
+        margin-right: 0px;
+        {% else %}
+        margin-left: 0px;
+        {% endif %}
+    }
+    .privacy-policy-rulse .policy-rulse-block .block-area {
+        width: calc(100% - 0px);
+        {% if settings.enable_rtl %}
+        margin-right: 0px;
+        {% else %}
+        margin-left: 0px;
+        {% endif %}
+    }
+    .privacy-policy-rulse .policy-rulse-block .block-area ul.policy-rulse-block-ul {
+        margin-top: 19px;
+    }
+    .privacy-policy-rulse .policy-rulse-block .block-area ul.policy-rulse-block-ul li.policy-rulse-block-li {
+        margin-top: 6px;
+    }
+}
+</style>

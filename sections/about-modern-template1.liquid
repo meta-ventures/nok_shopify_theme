@@ -1,0 +1,320 @@
+<section class="about-modern-section1">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="about-modern-1-main">
+          <div class="title-area">
+            <div class="title-block">
+              {% if section.settings.about_subtitle != '' %}
+              <span>{{ section.settings.about_subtitle }}</span>
+              {% endif %}
+              {% if section.settings.about_title != '' %}
+              <h1>{{ section.settings.about_title }}</h1>
+              {% endif %}
+            </div>
+          </div>
+          <div class="counter-area">
+            {% for block in section.blocks %}
+            <div class="counter-block">
+              {% if block.settings.counter_number != '' %}
+              <div class="counter-number">
+                <h1 class="count">{{ block.settings.counter_number }}</h1>
+              </div>
+              {% endif %}
+              {% if block.settings.counter_title != '' %}
+              <div class="counter-text">
+                {{ block.settings.counter_title }}
+              </div>
+              {% endif %}
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "About Modern Section 1",
+  "settings": [
+  {
+    "type": "header",
+    "content": "Section Padding"
+  },
+  {
+    "type" : "paragraph",
+    "content" : "Desktop / Laptop"
+  },
+  {
+    "type": "range",
+    "id": "section_padding_top",
+    "label": "Section Padding Top",
+    "min": 0,
+    "max": 100,
+    "step": 5,
+    "unit": "px",
+    "default": 100
+  },
+  {
+    "type": "range",
+    "id": "section_padding_bottom",
+    "label": "Section Padding bottom",
+    "min": 0,
+    "max": 100,
+    "step": 5,
+    "unit": "px",
+    "default": 100
+  },
+  {
+    "type" : "paragraph",
+    "content" : "Ipad pro / Ipad"
+  },
+  {
+    "type": "range",
+    "id": "section_padding_top_lg",
+    "label": "Section Padding Top",
+    "min": 0,
+    "max": 100,
+    "step": 5,
+    "unit": "px",
+    "default": 80
+  },
+  {
+    "type": "range",
+    "id": "section_padding_bottom_lg",
+    "label": "Section Padding bottom",
+    "min": 0,
+    "max": 100,
+    "step": 5,
+    "unit": "px",
+    "default": 80
+  },
+  {
+    "type" : "paragraph",
+    "content" : "Mobile"
+  },
+  {
+    "type": "range",
+    "id": "section_padding_top_xs",
+    "label": "Section Padding Top",
+    "min": 0,
+    "max": 100,
+    "step": 5,
+    "unit": "px",
+    "default": 60
+  },
+  {
+    "type": "range",
+    "id": "section_padding_bottom_xs",
+    "label": "Section Padding bottom",
+    "min": 0,
+    "max": 100,
+    "step": 5,
+    "unit": "px",
+    "default": 60
+  },
+  {
+    "type": "header",
+    "content": "Section Before Background Color"
+  },
+  {
+    "type": "checkbox",
+    "id": "section_bg_color_enable",
+    "label": "Show Background Color",
+    "default": false
+  },
+  {
+    "type": "color",
+    "id": "section_bg_color",
+    "label": "Background Color",
+    "default": "#FFFFFF"
+  },
+  {
+    "type": "header",
+    "content": "Title"
+  },
+  {
+    "type": "text",
+    "id": "about_subtitle",
+    "label": "Subtitle",
+    "default": "Founded in 2001"
+  },
+  {
+    "type": "text",
+    "id": "about_title",
+    "label": "Title",
+    "default": "Amazing things will happen when you listen to the consumer."
+  }
+  ],
+  "blocks":[
+  {
+    "type": "counter_block",
+    "name": "Counter Block",
+    "settings": [
+    {
+      "type": "text",
+      "id": "counter_number",
+      "label": "Counter Number",
+      "default": "92"
+    },
+    {
+      "type": "richtext",
+      "id": "counter_title",
+      "label": "Text"
+    }
+    ]
+  }
+  ],
+  "presets":[
+  {
+    "name": "About Modern Section 1",
+    "category": "About Modern"
+  }
+  ]
+}
+{% endschema %}
+<style>
+.about-modern-section1{
+  padding-top: {{ section.settings.section_padding_top }}px;
+  padding-bottom: {{ section.settings.section_padding_bottom }}px;
+  {% if section.settings.section_bg_color_enable %}
+  background-color: {{ section.settings.section_bg_color }};
+  {% endif %}
+}
+@media (max-width: 1199px){
+  .about-modern-section1{
+    padding-top: {{ section.settings.section_padding_top_ipad }}px;
+    padding-bottom: {{ section.settings.section_padding_bottom_ipad }}px;
+  }
+}
+@media (max-width: 767px){
+  .about-modern-section1{
+    padding-top: {{ section.settings.section_padding_top_xs }}px;
+    padding-bottom: {{ section.settings.section_padding_bottom_xs }}px;
+  }
+}
+
+.about-modern-section1 .about-modern-1-main {
+  display: flex;
+  flex-wrap: wrap;
+}
+.about-modern-section1 .about-modern-1-main .title-area {
+  width: 58.33%;
+}
+.about-modern-section1 .about-modern-1-main .counter-area {
+  width: 41.67%;
+}
+.about-modern-section1 .about-modern-1-main .title-area .title-block {
+  width: 60%;
+}
+.about-modern-section1 .about-modern-1-main .title-area .title-block span {
+  font-size: 18px;
+  margin-bottom: 23px;
+} 
+.about-modern-section1 .about-modern-1-main .title-area .title-block h1 {
+  font-size: 42px;
+}
+.about-modern-section1 .about-modern-1-main .counter-area .counter-block {
+  display: flex;
+  align-items: center;
+  margin-top: 38px;
+}
+.about-modern-section1 .about-modern-1-main .counter-area .counter-block:first-child {
+  margin-top: 0px;
+}
+.about-modern-section1 .about-modern-1-main .counter-area .counter-block .counter-number {
+  min-width: 100px;
+}
+.about-modern-section1 .about-modern-1-main .counter-area .counter-block .counter-number h1.count {
+  font-size: 42px;
+  line-height: 1;
+}
+.about-modern-section1 .about-modern-1-main .counter-area .counter-block .counter-text p {
+  font-size: 18px;
+}
+@media (max-width: 1280px) {
+  .about-modern-section1 .about-modern-1-main .title-area .title-block {
+    width: 70%;
+  }
+}
+@media (max-width: 1199px) {
+  .about-modern-section1 .about-modern-1-main .title-area .title-block span {
+    font-size: 16px;
+    margin-bottom: 17px;
+  }
+  .about-modern-section1 .about-modern-1-main .title-area .title-block h1 {
+    font-size: 32px;
+  }
+  .about-modern-section1 .about-modern-1-main .counter-area .counter-block {
+    margin-top: 16px;
+  }
+  .about-modern-section1 .about-modern-1-main .counter-area .counter-block .counter-number h1.count {
+    font-size: 32px;
+  }
+  .about-modern-section1 .about-modern-1-main .counter-area .counter-block .counter-text p {
+    font-size: 16px;
+  }
+}
+@media (max-width: 991px) {
+  .about-modern-section1 .about-modern-1-main .title-area .title-block {
+    width: 85%;
+  }
+}
+@media (max-width: 600px) {
+  .about-modern-section1 .about-modern-1-main .title-area {
+    width: 100%;
+  }
+  .about-modern-section1 .about-modern-1-main .counter-area {
+    width: 100%;
+    margin-top: 26px;
+    display: flex;
+    align-items: center;
+  }
+  .about-modern-section1 .about-modern-1-main .counter-area .counter-block {
+    margin-top: 0px;
+    {% if settings.enable_rtl %}
+    margin-right: 30px;
+    {% else %}
+    margin-left: 30px;
+    {% endif %}
+  }
+  .about-modern-section1 .about-modern-1-main .counter-area .counter-block:first-child {
+    {% if settings.enable_rtl %}
+    margin-right: 0px;
+    {% else %}
+    margin-left: 0px;
+    {% endif %}
+  }
+  .about-modern-section1 .about-modern-1-main .title-area .title-block span {
+    margin-bottom: 8px;
+  }
+  .about-modern-section1 .about-modern-1-main .title-area .title-block h1 {
+    font-size: 26px;
+  }
+  .about-modern-section1 .about-modern-1-main .counter-area .counter-block .counter-number {
+    min-width: 60px;
+  }
+  .about-modern-section1 .about-modern-1-main .counter-area .counter-block .counter-number h1.count {
+    font-size: 24px;
+  }
+}
+@media (max-width: 479px) {
+  .about-modern-section1 .about-modern-1-main .title-area .title-block {
+    width: 100%;
+  }
+  .about-modern-section1 .about-modern-1-main .counter-area {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .about-modern-section1 .about-modern-1-main .counter-area .counter-block {
+    {% if settings.enable_rtl %}
+    margin-right: 0px;
+    {% else %}
+    margin-left: 0px;
+    {% endif %}
+    margin-top: 16px;
+  }
+}
+</style>

@@ -1,0 +1,293 @@
+<section class="return-policy-info">
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<div class="return-info-main">
+					<div class="return-block">
+						{% if section.settings.info_block_title_1 != '' %}
+						<h4>{{ section.settings.info_block_title_1 }}</h4>
+						{% endif %}
+						<ul class="info-block-ul">
+							{% for block in section.blocks %}
+							{% case block.type %}
+	                        {% when 'return_policy_info_1' %}
+							{% if block.settings.return_info_text_1 != '' %}
+							<li class="info-block-li">
+								<p>{{ block.settings.return_info_text_1 }}</p>
+							</li>
+							{% endif %}
+	                        {% endcase %}
+	                        {% endfor %}
+						</ul>
+					</div>
+					<div class="return-block">
+						{% if section.settings.info_block_title_2 != '' %}
+						<h4>{{ section.settings.info_block_title_2 }}</h4>
+						{% endif %}
+						<ul class="info-block-ul">
+							{% for block in section.blocks %}
+							{% case block.type %}
+	                        {% when 'return_policy_info_2' %}
+							{% if block.settings.return_info_text_2 != '' %}
+							<li class="info-block-li">
+								<p>{{ block.settings.return_info_text_2 }}</p>
+							</li>
+							{% endif %}
+	                        {% endcase %}
+	                        {% endfor %}
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+{% schema %}
+{
+    "name": "Return Policy Info",
+    "settings": [
+    {
+        "type": "header",
+        "content": "Section Padding"
+    },
+    {
+        "type" : "paragraph",
+        "content" : "Desktop / Laptop / tablet"
+    },
+    {
+        "type": "range",
+        "id": "about_product_padding_top",
+        "label": "Section Padding Top",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "unit": "px",
+        "default": 0
+    },
+    {
+        "type": "range",
+        "id": "about_product_padding_bottom",
+        "label": "Section Padding Bottom",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "unit": "px",
+        "default": 0
+    },
+    {
+        "type" : "paragraph",
+        "content" : "Ipad pro / Ipad"
+    },
+    {
+        "type": "range",
+        "id": "about_product_padding_top_ip",
+        "label": "Section Padding Top",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "unit": "px",
+        "default": 0
+    },
+    {
+        "type": "range",
+        "id": "about_product_padding_bottom_ip",
+        "label": "Section Padding Bottom",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "unit": "px",
+        "default": 0
+    },
+    {
+        "type" : "paragraph",
+        "content" : "Mobile"
+    },
+    {
+        "type": "range",
+        "id": "about_product_padding_top_xs",
+        "label": "Section Padding Top",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "unit": "px",
+        "default": 0
+    },
+    {
+        "type": "range",
+        "id": "about_product_padding_bottom_xs",
+        "label": "Section Padding Bottom",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "unit": "px",
+        "default": 0
+    },
+    {
+        "type": "header",
+        "content": "Section Background Color"
+    },
+    {
+        "type": "checkbox",
+        "id": "about_product_bgcolor_enable",
+        "label": "Show Background Color",
+        "default": false
+    },
+    {
+        "type": "color",
+        "id": "about_product_bgcolor",
+        "label": "Background Color",
+        "default": "#FFFFFF"
+    },
+    {
+        "type": "header",
+        "content": "Block Title"
+    },
+    {
+        "type": "text",
+        "id": "info_block_title_1",
+        "label": "Title 1",
+        "default": "Free & easy return"
+    },
+    {
+        "type": "text",
+        "id": "info_block_title_2",
+        "label": "Title 1",
+        "default": "Return policy 30 day"
+    }
+    ],
+    "blocks": [
+    {
+        "type": "return_policy_info_1",
+        "name": "Info Block 1",
+        "settings": [
+        {
+            "type": "textarea",
+            "id": "return_info_text_1",
+            "label": "Text",
+            "default": "Lorem ipsum dolor sit amet consectetur adipiscing sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip"
+        }
+        ]
+    },
+    {
+        "type": "return_policy_info_2",
+        "name": "Info Block 2",
+        "settings": [
+        {
+            "type": "textarea",
+            "id": "return_info_text_2",
+            "label": "Text",
+            "default": "Lorem ipsum dolor sit amet consectetur adipiscing sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip"
+        }
+        ]
+    }
+    ],
+    "presets":[
+    {
+        "name": "Return Policy Info",
+        "category": "Return Policy Info"
+    }
+    ]
+}
+{% endschema %}
+
+<style>
+.return-policy-info {
+    position: relative;
+    padding-top: {{ section.settings.about_product_padding_top }}px;
+    padding-bottom: {{ section.settings.about_product_padding_bottom }}px;
+    {% if section.settings.about_product_bgcolor_enable %}
+    background-color: {{ section.settings.about_product_bgcolor }};
+    {% endif %}
+}
+@media (max-width: 1199px) {
+    .return-policy-info {
+        padding-top: {{ section.settings.about_product_padding_top_ip }}px;
+        padding-bottom: {{ section.settings.about_product_padding_bottom_ip }}px;
+    }
+}
+@media (max-width: 767px) {
+    .return-policy-info {
+        padding-top: {{ section.settings.about_product_padding_top_xs }}px;
+        padding-bottom: {{ section.settings.about_product_padding_bottom_xs }}px;
+    }
+}
+
+.return-policy-info .return-info-main {
+    display: flex;
+    flex-wrap: wrap;
+    {% if settings.enable_rtl %}
+    margin-right: -30px;
+    {% else %}
+    margin-left: -30px;
+    {% endif %}
+}
+.return-policy-info .return-info-main .return-block {
+    width: calc(50% - 30px);
+    {% if settings.enable_rtl %}
+    margin-right: 30px;
+    {% else %}
+    margin-left: 30px;
+    {% endif %}
+}
+.return-policy-info .return-info-main .return-block h4 {    
+    font-size: 24px;
+    font-weight: 500;
+}
+.return-policy-info .return-info-main .return-block h4 span {
+    font-weight: 700;
+}
+.return-policy-info .return-info-main .return-block ul.info-block-ul {
+    margin-top: 36px;
+}
+.return-policy-info .return-info-main .return-block ul.info-block-ul li.info-block-li {
+    margin-bottom: 31px;
+    padding-bottom: 31px;
+    border-bottom: 1px solid #e2e2e2;
+}
+.return-policy-info .return-info-main .return-block ul.info-block-ul li.info-block-li:last-child {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    border-bottom: none;
+}
+.return-policy-info .return-info-main .return-block ul.info-block-ul li.info-block-li p {
+    font-size: 18px;
+    line-height: 30px;
+}
+@media (max-width: 991px) {
+    .return-policy-info .return-info-main .return-block h4 {    
+        font-size: 19px;
+    }
+    .return-policy-info .return-info-main .return-block ul.info-block-ul li.info-block-li p {
+        font-size: 16px;
+    }
+}
+@media (max-width: 600px) {
+    .return-policy-info .return-info-main {
+        {% if settings.enable_rtl %}
+        margin-right: 0px;
+        {% else %}
+        margin-left: 0px;
+        {% endif %}
+    }
+    .return-policy-info .return-info-main .return-block {
+        width: calc(100% - 0px);
+        {% if settings.enable_rtl %}
+        margin-right: 0px;
+        {% else %}
+        margin-left: 0px;
+        {% endif %}
+        margin-top: 25px;
+    }
+    .return-policy-info .return-info-main .return-block:first-child {
+        margin-top: 0px;
+    }
+    .return-policy-info .return-info-main .return-block ul.info-block-ul {
+        margin-top: 16px;
+    }
+    .return-policy-info .return-info-main .return-block ul.info-block-ul li.info-block-li {
+        margin-bottom: 11px;
+        padding-bottom: 11px;
+    }
+}
+</style>

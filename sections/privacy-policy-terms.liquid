@@ -1,0 +1,262 @@
+<section class="privacy-terms">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="privacy-terms-block">
+                    <ul class="privacy-terms-ul terms-block-1">
+                        {% for block in section.blocks %}
+                        {%- case block.type -%}
+                        {%- when 'terms_block_1' -%}
+                        {% if block.settings.terms_text_1 != '' %}
+                        <li class="privacy-terms-li">
+                            <p>{{ block.settings.terms_text_1 }}</p>
+                        </li>
+                        {% endif %}
+                        {%- endcase -%}
+                        {%- endfor -%}
+                    </ul>
+                    <ul class="privacy-terms-ul terms-block-2">
+                        {% for block in section.blocks %}
+                        {%- case block.type -%}
+                        {%- when 'terms_block_2' -%}
+                        {% if block.settings.terms_text_2 != '' %}
+                        <li class="privacy-terms-li">
+                            <p>{{ block.settings.terms_text_2 }}</p>
+                        </li>
+                        {% endif %}
+                        {%- endcase -%}
+                        {%- endfor -%}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% schema %}
+{
+    "name": "Privacy Policy Terms",
+    "settings": [
+    {
+        "type": "header",
+        "content": "Section Padding"
+    },
+    {
+        "type" : "paragraph",
+        "content" : "Desktop / Laptop / tablet"
+    },
+    {
+        "type": "range",
+        "id": "about_product_padding_top",
+        "label": "Section Padding Top",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "unit": "px",
+        "default": 0
+    },
+    {
+        "type": "range",
+        "id": "about_product_padding_bottom",
+        "label": "Section Padding Bottom",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "unit": "px",
+        "default": 0
+    },
+    {
+        "type" : "paragraph",
+        "content" : "Ipad pro / Ipad"
+    },
+    {
+        "type": "range",
+        "id": "about_product_padding_top_ip",
+        "label": "Section Padding Top",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "unit": "px",
+        "default": 0
+    },
+    {
+        "type": "range",
+        "id": "about_product_padding_bottom_ip",
+        "label": "Section Padding Bottom",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "unit": "px",
+        "default": 0
+    },
+    {
+        "type" : "paragraph",
+        "content" : "Mobile"
+    },
+    {
+        "type": "range",
+        "id": "about_product_padding_top_xs",
+        "label": "Section Padding Top",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "unit": "px",
+        "default": 0
+    },
+    {
+        "type": "range",
+        "id": "about_product_padding_bottom_xs",
+        "label": "Section Padding Bottom",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "unit": "px",
+        "default": 0
+    },
+    {
+        "type": "header",
+        "content": "Section Background Color"
+    },
+    {
+        "type": "checkbox",
+        "id": "about_product_bgcolor_enable",
+        "label": "Show Background Color",
+        "default": false
+    },
+    {
+        "type": "color",
+        "id": "about_product_bgcolor",
+        "label": "Background Color",
+        "default": "#FFFFFF"
+    }
+    ],
+    "blocks": [
+    {
+        "type": "terms_block_1",
+        "name": "Terms Text 1",
+        "settings": [
+        {
+            "type": "textarea",
+            "id": "terms_text_1",
+            "label": "Text",
+            "default": "If we have data, let’s look at data. If all we have are opinions."
+        }
+        ]
+    },
+    {
+        "type": "terms_block_2",
+        "name": "Terms Text 2",
+        "settings": [
+        {
+            "type": "textarea",
+            "id": "terms_text_2",
+            "label": "Text",
+            "default": "If we have data, let’s look at data. If all we have are opinions."
+        }
+        ]
+    }
+    ],
+    "presets":[
+    {
+        "name": "Privacy Policy Terms",
+        "category": "Privacy Policy Terms"
+    }
+    ]
+}
+{% endschema %}
+<style>
+    .privacy-terms {
+        position: relative;
+        padding-top: {{ section.settings.about_product_padding_top }}px;
+        padding-bottom: {{ section.settings.about_product_padding_bottom }}px;
+        {% if section.settings.about_product_bgcolor_enable %}
+        background-color: {{ section.settings.about_product_bgcolor }};
+        {% endif %}
+    }
+    @media (max-width: 1199px) {
+        .privacy-terms {
+            padding-top: {{ section.settings.about_product_padding_top_ip }}px;
+            padding-bottom: {{ section.settings.about_product_padding_bottom_ip }}px;
+        }
+    }
+    @media (max-width: 767px) {
+        .privacy-terms {
+            padding-top: {{ section.settings.about_product_padding_top_xs }}px;
+            padding-bottom: {{ section.settings.about_product_padding_bottom_xs }}px;
+        }
+    }
+    .privacy-terms .privacy-terms-block {
+        display: flex;
+        flex-wrap: wrap;
+        {% if settings.enable_rtl %}
+        margin-right: -30px;
+        {% else %}
+        margin-left: -30px;
+        {% endif %}
+        margin-top: -27px;
+    }
+    .privacy-terms .privacy-terms-block ul.privacy-terms-ul {
+        width: calc(50% - 30px);
+        {% if settings.enable_rtl %}
+        margin-right: 30px;
+        {% else %}
+        margin-left: 30px;
+        {% endif %}
+        margin-top: 27px;
+    }
+    .privacy-terms .privacy-terms-block ul.privacy-terms-ul li.privacy-terms-li {
+        position: relative;
+        {% if settings.enable_rtl %}
+        padding-right: 15px;
+        {% else %}
+        padding-left: 15px;
+        {% endif %}
+        margin-top: 18px;
+    }
+    .privacy-terms .privacy-terms-block ul.privacy-terms-ul li.privacy-terms-li:first-child {
+        margin-top: 0px;
+    }
+    .privacy-terms .privacy-terms-block ul.privacy-terms-ul li.privacy-terms-li::before {
+        background-color: var(--font-color-paragraph);
+        content: '';
+        position: absolute;
+        bottom: 50%;
+        transform: translateY(50%);
+        {% if settings.enable_rtl %}
+        right: 0px;
+        {% else %}
+        left: 0px;
+        {% endif %}
+        width: 5px;
+        height: 5px;
+        border-radius: 100%;
+    }
+    .privacy-terms .privacy-terms-block ul.privacy-terms-ul li.privacy-terms-li p {
+        font-size: 18px;
+        color: var(--font-color-paragraph);
+    }
+    @media (max-width: 991px) {
+        .privacy-terms .privacy-terms-block ul.privacy-terms-ul li.privacy-terms-li p {
+            font-size: 16px;
+        }
+    }
+    @media (max-width: 600px) {
+        .privacy-terms .privacy-terms-block {
+            {% if settings.enable_rtl %}
+            margin-right: 0px;
+            {% else %}
+            margin-left: 0px;
+            {% endif %}
+        }
+        .privacy-terms .privacy-terms-block ul.privacy-terms-ul {
+            width: calc(100% - 0px);
+            {% if settings.enable_rtl %}
+            margin-right: 0px;
+            {% else %}
+            margin-left: 0px;
+            {% endif %}
+        }
+        .privacy-terms .privacy-terms-block ul.privacy-terms-ul li.privacy-terms-li {
+            margin-top: 6px;
+        }
+    }
+</style>

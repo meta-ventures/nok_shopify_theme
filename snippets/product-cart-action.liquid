@@ -1,0 +1,21 @@
+{% if product.available %}
+<button type="submit" class="btn add-to-cart ajax-spin-cart btn-style2" id="AddToCart">
+  <span class="cart-title" id="AddToCartText">{{ settings.cart_button_title }}</span>
+  <span class="cart-loading load-anim"><i class="ri-loader-4-line"></i></span>
+  <span class="cart-added"><i class="ri-check-line"></i></span>
+  <span class="cart-unavailable">{{ settings.unavailable_title }}</span>
+</button>
+{% else %}
+<button class="btn add-to-cart disabled btn-style2" disabled="disabled">
+  <span class="cart-text">{{ settings.soldout_button_title }}</span>
+</button>
+{% endif %}
+
+<script>
+  window.addEventListener("DOMContentLoaded", function() {
+    jQuery('.ajax-spin-cart').click(function(e) {
+      e.preventDefault();
+      Shopify.addItemFromForm('add-item-form');
+    });
+  });
+</script>

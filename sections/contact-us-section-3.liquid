@@ -1,0 +1,166 @@
+<section class="form-contact">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="contact-content">
+                    {% include 'contact-form' %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% schema %}
+{
+    "name": "Contact Us Section 3",
+    "settings": [
+    {
+        "type": "header",
+        "content": "Section Padding"
+    },
+    {
+        "type" : "paragraph",
+        "content" : "Desktop / Laptop / Tablet"
+    },
+    {
+        "type": "range",
+        "id": "contact_us_padding_top",
+        "label": "Section Padding Top",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "default": 100
+    },
+    {
+        "type": "range",
+        "id": "contact_us_padding_bottom",
+        "label": "Section Padding Bottom",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "default": 100
+    },
+    {
+        "type" : "paragraph",
+        "content" : "Ipad pro / Ipad"
+    },
+    {
+        "type": "range",
+        "id": "contact_us_padding_top_ip",
+        "label": "Section Padding Top",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "default": 80
+    },
+    {
+        "type": "range",
+        "id": "contact_us_padding_bottom_ip",
+        "label": "Section Padding Bottom",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "default": 80
+    },
+    {
+        "type" : "paragraph",
+        "content" : "Mobile"
+    },
+    {
+        "type": "range",
+        "id": "contact_us_padding_top_xs",
+        "label": "Section Padding Top",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "default": 60
+    },
+    {
+        "type": "range",
+        "id": "contact_us_padding_bottom_xs",
+        "label": "Section Padding Bottom",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "default": 60
+    },
+    {
+        "type": "header",
+        "content": "Section Background Color"
+    },
+    {
+        "type": "color",
+        "id": "contact_us_bgcolor",
+        "label": "Background Color",
+        "default": "#FFFFFF"
+    },
+    {
+        "type": "checkbox",
+        "id": "contact_us_bgcolor_enable",
+        "label": "Show Background Color",
+        "default": true
+    },
+    {
+        "type" : "header",
+        "content" : "Section Border"
+    },
+    {
+        "type" : "checkbox",
+        "id" : "contact_us_border_enable",
+        "label" : "Show Section Border",
+        "default" : true
+    },
+    {
+        "type": "range",
+        "id": "contact_us_border",
+        "label": "Border",
+        "min": 0,
+        "max": 2,
+        "step": 1,
+        "unit": "px",
+        "default": 1
+    },
+    {
+        "type": "color",
+        "id": "contact_us_border_color",
+        "label": "Border Color",
+        "default": "#E2E2E2"
+    }
+    ],
+    "presets":[
+    {
+        "name": "Contact Us Section 3",
+        "category": "Contact Us Section 3"
+    }
+    ]
+}
+{% endschema %}
+<style>
+.form-contact{
+    padding-top: {{ section.settings.contact_us_padding_top }}px;
+    padding-bottom: {{ section.settings.contact_us_padding_bottom }}px;
+    {% if section.settings.contact_us_bgcolor_enable %}
+    background-color: {{ section.settings.contact_us_bgcolor }};
+    {% endif %}
+    {% if section.settings.contact_us_border_enable %}
+    border-top: {{ section.settings.contact_us_border }}px solid {{ section.settings.contact_us_border_color }};
+    {% endif %}
+}
+@media (max-width: 1199px) {
+    .form-contact{
+        padding-top: {{ section.settings.contact_us_padding_top_ip }}px;
+        padding-bottom: {{ section.settings.contact_us_padding_bottom_ip }}px;
+    }
+}
+@media (max-width: 767px) {
+    .form-contact{
+        padding-top: {{ section.settings.contact_us_padding_top_xs }}px;
+        padding-bottom: {{ section.settings.contact_us_padding_bottom_xs }}px;
+    }
+}
+</style>

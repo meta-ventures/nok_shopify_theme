@@ -1,0 +1,79 @@
+<div class="social">
+  <ul class="social-icon">
+    {% if settings.social_icon_1_name != blank %}
+    <li class="facebook">
+      <a href="{{ settings.social_icon_1_link }}">
+        <i class="{{ settings.social_icon_1_name }}"></i>
+      </a>
+    </li>        
+    {% endif %}
+
+    {% if settings.social_icon_2_name != blank %}
+    <li class="twitter">
+      <a href="{{ settings.social_icon_2_link }}">
+        <i class="{{ settings.social_icon_2_name }}"></i>
+      </a>
+    </li>        
+    {% endif %}
+
+    {% if settings.social_icon_3_name != blank %}
+    <li class="gplus">
+      <a href="{{ settings.social_icon_3_link }}">
+        <i class="{{ settings.social_icon_3_name }}"></i>
+      </a>
+    </li>        
+    {% endif %}
+
+    {% if settings.social_icon_4_name != blank %}
+    <li class="pinterest">
+      <a href="{{ settings.social_icon_4_link }}">
+        <i class="{{ settings.social_icon_4_name }}"></i>
+      </a>
+    </li>        
+    {% endif %}
+  </ul>
+</div>
+<style>
+  /* social icon css */
+  .social {
+    display: flex;
+    align-items: center;
+  }
+  .social ul.social-icon{
+    {% if settings.enable_rtl %}
+    margin: -5px -15px 0px 0px;
+    {% else %}
+    margin: -5px 0px 0px -15px;
+    {% endif %}
+    {% if settings.enable_rtl %}
+    padding-right: 15px;
+    {% else %}
+    padding-left: 15px;
+    {% endif %} 
+    line-height: 1;
+  }
+  .social ul.social-icon li{
+    display: inline-block;
+    {% if settings.enable_rtl %}
+    margin: 5px 15px 0px 0px;
+    {% else %}
+    margin: 5px 0px 0px 15px;
+    {% endif %}
+  }
+  .social ul.social-icon li a {
+    display: flex;
+    color: #717171;
+    font-size: 18px;
+    line-height: 1;
+  }
+  .social ul.social-icon li a:hover {
+    background-image: var(--gradient-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  @media (max-width: 1199px) {
+    .social ul.social-icon li a {
+      font-size: 14px;
+    }
+  }
+</style>

@@ -1,0 +1,463 @@
+<section class="deal-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-6 col-lg-6 col-md-12 col-12">
+        <div class="timer-content">
+          <div class="timer-content-center">
+            {% if section.settings.banner_bg_subtitle != '' %}
+            <h6>{{ section.settings.banner_bg_subtitle }}</h6>
+            {% endif %}
+            {% if section.settings.banner_bg_title != '' %}
+            <h2>{{ section.settings.banner_bg_title }}</h2>
+            {% endif %}
+            {% if section.settings.counter_enable %}
+            <ul class="timer-wrap">
+              <li class="timer-wrapper">
+                <span id="deal_days" class="banner-countdown-timer"></span>
+                <span class="banner-countdown-title">{{ settings.day_title }}</span>
+              </li>
+              <li class="timer-wrapper">
+                <span id="deal_hours" class="banner-countdown-timer"></span>
+                <span class="banner-countdown-title">{{ settings.hour_title }}</span>
+              </li>
+              <li class="timer-wrapper">
+                <span id="deal_minutes" class="banner-countdown-timer"></span>
+                <span class="banner-countdown-title">{{ settings.minute_title }}</span>
+              </li>
+              <li class="timer-wrapper">
+                <span id="deal_seconds" class="banner-countdown-timer"></span>
+                <span class="banner-countdown-title">{{ settings.second_title }}</span>
+              </li>
+            </ul>
+            {% endif %}
+            {% if section.settings.banner_bg_button != '' %}
+            <a class="button btn btn-style2" href="{{ section.settings.banner_bg_url }}">{{ section.settings.banner_bg_button }}</a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-6 col-lg-6 col-md-12">
+        <div class="deal-slider owl-carousel owl-theme" id="deal-slider-{{ section.id }}">
+          {% assign category_product_limit = section.settings.category_new_product_limit_handle %}
+          {% for product in collections[section.settings.label_deal_product].products limit: category_product_limit %}
+          <div class="item">
+            {% include 'product-grid-item' %}
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script type="text/javascript">
+  addEventListener('DOMContentLoaded', (event) => {
+    $('#deal-slider-{{ section.id }}').owlCarousel({
+      loop: false,
+      rewind: true,
+      margin: 45,
+      items: 2,
+      dots: false,
+      nav: true,
+      navText: ['<i class="ri-arrow-left-line"></i>','<i class="ri-arrow-right-line"></i>'],
+      {%- if settings.enable_rtl -%}
+      rtl: true,
+      {%- endif -%}
+      autoplay: false,
+      sautoplayTimeout: 5000,
+      autoplayHoverPause: true,
+      responsive:{
+        0:{
+          items: 1,
+          margin: 15
+        },
+        479:{
+          items: 1,
+          margin: 15
+        },
+        540:{
+          items: 2,
+          margin: 15
+        },
+        768:{
+          items: 3,
+          margin: 15
+        },
+        979:{
+          items: 2,
+          margin: 30
+        },
+        1199: {
+          items: 2,
+          margin: 30
+        }
+      }
+    });
+    const second = 1000,
+    minute = second * 60,
+    hour = minute * 60,
+    day = hour * 24;
+    let countDown = new Date('{{ section.settings.deal_banner_month }} {{ section.settings.deal_banner_date }}, {{ section.settings.deal_banner_year }} 00:00:00').getTime(),
+    x = setInterval(function() {
+      let now = new Date().getTime(),
+      distance = countDown - now;
+      document.getElementById('deal_days').innerText = Math.floor(distance / (day)),
+      document.getElementById('deal_hours').innerText = Math.floor((distance % (day)) / (hour)),
+      document.getElementById('deal_minutes').innerText = Math.floor((distance % (hour)) / (minute)),
+      document.getElementById('deal_seconds').innerText = Math.floor((distance % (minute)) / second);
+    }, second)
+  });
+</script>
+{% schema %}
+{
+  "name": "Deal Product",
+  "settings": [
+  {
+    "type" : "header",
+    "content" : "Section Padding"
+  },
+  {
+    "type" : "paragraph",
+    "content" : "Desktop / Laptop / tablet"
+  },
+  {
+    "type": "range",
+    "id": "deal_padding_top",
+    "label": "Section Padding Top",
+    "min": 0,
+    "max": 100,
+    "step": 1,
+    "unit": "px",
+    "default": 100
+  },
+  {
+    "type": "range",
+    "id": "deal_padding_bottom",
+    "label": "Section Padding Bottom",
+    "min": 0,
+    "max": 100,
+    "step": 1,
+    "unit": "px",
+    "default": 100
+  },
+  {
+    "type" : "paragraph",
+    "content" : "Ipad pro / Ipad"
+  },
+  {
+    "type": "range",
+    "id": "deal_padding_top_ip",
+    "label": "Section Padding Top",
+    "min": 0,
+    "max": 100,
+    "step": 1,
+    "unit": "px",
+    "default": 80
+  },
+  {
+    "type": "range",
+    "id": "deal_padding_bottom_ip",
+    "label": "Section Padding Bottom",
+    "min": 0,
+    "max": 100,
+    "step": 1,
+    "unit": "px",
+    "default": 80
+  },
+  {
+    "type" : "paragraph",
+    "content" : "Mobile"
+  },
+  {
+    "type": "range",
+    "id": "deal_padding_top_xs",
+    "label": "Section Padding Top",
+    "min": 0,
+    "max": 100,
+    "step": 1,
+    "unit": "px",
+    "default": 60
+  },
+  {
+    "type": "range",
+    "id": "deal_padding_bottom_xs",
+    "label": "Section Padding Bottom",
+    "min": 0,
+    "max": 100,
+    "step": 1,
+    "unit": "px",
+    "default": 60
+  },
+  {
+    "type": "header",
+    "content": "Section background color"
+  },
+  {
+    "type": "color",
+    "id": "section_bg_color",
+    "label": "Section background color",
+    "default": "#E2E2E2"
+  },
+  {
+    "type": "header",
+    "content": "Banner Content"
+  },
+  {
+    "type": "text",
+    "id": "banner_bg_subtitle",
+    "label": "Sub Title",
+    "default": "Flate 30% extra off"
+  },
+  {
+    "type": "text",
+    "id": "banner_bg_title",
+    "label": "Title",
+    "default": "Upcoming sets"
+  },
+  {
+    "type": "url",
+    "id": "banner_bg_url",
+    "label": "Button url"
+  },
+  {
+    "type": "text",
+    "id": "banner_bg_button",
+    "label": "Button",
+    "default": "Shop now"
+  },
+  {
+    "type": "header",
+    "content": "Countdown Timer"
+  },
+  {
+    "type": "checkbox",
+    "id": "counter_enable",
+    "label": "Counter enable",
+    "default": true
+  },
+  {
+    "type": "text",
+    "id": "deal_banner_date",
+    "label": "Timer Date",
+    "default": "30"
+  },
+  {
+    "type": "select",
+    "id": "deal_banner_month",
+    "label": "Timer Month",
+    "options": [
+    {
+      "label": "Jan",
+      "value": "jan"
+    },
+    {
+      "label": "Feb",
+      "value": "feb"
+    },
+    {
+      "label": "Mar",
+      "value": "mar"
+    },
+    {
+      "label": "Apr",
+      "value": "apr"
+    },
+    {
+      "label": "May",
+      "value": "may"
+    },
+    {
+      "label": "Jun",
+      "value": "jun"
+    },
+    {
+      "label": "Jul",
+      "value": "jul"
+    },
+    {
+      "label": "Aug",
+      "value": "aug"
+    },
+    {
+      "label": "Sep",
+      "value": "sep"
+    },
+    {
+      "label": "Oct",
+      "value": "oct"
+    },
+    {
+      "label": "Nov",
+      "value": "nov"
+    },
+    {
+      "label": "Dec",
+      "value": "dec"
+    }
+    ]
+  },
+  {
+    "type": "text",
+    "id": "deal_banner_year",
+    "label": "Timer Year",
+    "default": "2023"
+  },
+  {
+    "type" : "header",
+    "content" : "Collection"
+  },
+  {
+    "type" : "collection",
+    "id" : "label_deal_product",
+    "label" : "Select Collection"
+  },
+  {
+    "type": "text",
+    "id": "category_new_product_limit_handle",
+    "label": "Product Limit",
+    "default": "5"
+  }
+  ],
+  "presets": [
+  {
+    "name": "Deal Product",
+    "category": "Deal Section"
+  }
+  ]
+}
+{% endschema %}
+<style>
+  .deal-section{
+    padding-top: {{ section.settings.deal_padding_top }}px;
+    padding-bottom: {{ section.settings.deal_padding_bottom }}px;
+    background-color: {{ section.settings.section_bg_color }};
+  }
+  @media (max-width: 1199px) {
+    .deal-section{
+      padding-top: {{ section.settings.deal_padding_top_ip }}px;
+      padding-bottom: {{ section.settings.deal_padding_bottom_ip }}px;
+    }
+  }
+  @media (max-width: 767px) {
+    .deal-section{
+      padding-top: {{ section.settings.deal_padding_top_xs }}px;
+      padding-bottom: {{ section.settings.deal_padding_bottom_xs }}px;
+    }
+  }
+/* banner content css */
+.deal-section .timer-content {
+  text-align: center;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.deal-section .timer-content h6{
+  color: var(--font-color-primary);
+  display: inline-block;
+  font-size: 20px;
+  margin-bottom: 20px;
+  position: relative;
+  text-transform: uppercase;
+  line-height: 1;
+}
+.deal-section .timer-content h2{
+  font-size: 40px;
+  line-height: 1;
+  font-weight: 800;
+}
+.deal-section .timer-content a{
+  margin-top: 60px;
+}
+@media (max-width: 1199px) {
+  .deal-section .timer-content h6{
+    margin-bottom: 15px;
+    font-size: 14px;
+  }
+  .deal-section .timer-content h2{
+    font-size: 24px;
+  }
+  .deal-section .timer-content a{
+    margin-top: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .deal-section .timer-content h2{
+    font-size: 20px;
+  }
+  .deal-section .timer-content h6{
+    font-size: 13px;
+  }
+  .deal-section .timer-content a {
+    margin-top: 15px;
+  }
+}
+/* deal timer css */
+.deal-section ul.timer-wrap{
+  margin-top: 60px;
+}
+.deal-section ul.timer-wrap li{
+  width: 80px;
+  height: 80px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #fff;
+  {%- if settings.enable_rtl -%}
+  margin-left: 10px;
+  {%- else -%}
+  margin-right: 10px;
+  {%- endif -%}
+  text-align: center;
+  border: 1px solid #e2e2e2;
+  background-color: #fff;
+}
+.deal-section ul.timer-wrap li:last-child{
+  {%- if settings.enable_rtl -%}
+  margin-left: 0px;
+  {%- else -%}
+  margin-right: 0px;
+  {%- endif -%}
+}
+.deal-section ul.timer-wrap li span{
+  display: block;
+  line-height: 1;
+}
+.deal-section ul.timer-wrap li span.banner-countdown-timer{
+  color: var(--font-color-primary);
+  font-size: 22px;
+  font-weight: 700;
+}
+.deal-section ul.timer-wrap li span.banner-countdown-title{
+  font-size: 11px;
+  margin-top: 6px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+@media (max-width: 1199px) {
+  .deal-section ul.timer-wrap {
+    margin-top: 30px;
+  }
+  .deal-section ul.timer-wrap li{
+    width: 50px;
+    height: 50px;
+  }
+  .deal-section ul.timer-wrap li span.banner-countdown-timer{
+    font-size: 16px;
+  }
+}
+@media (max-width: 991px) {
+  .deal-section .deal-slider {
+    margin-top: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .deal-timer-wrap{
+    flex-direction: column;
+    margin-top: 24px;
+  }
+  .deal-section ul.timer-wrap {
+    margin-top: 15px;
+  }
+}
+</style>

@@ -1,0 +1,318 @@
+<section class="home-gallery">
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<div class="gallery-area">
+					<ul class="gallery-ul">
+						{% for block in section.blocks %}
+						<li class="gallery-li">
+							<div class="video-gallery gallery-item">
+								<a class="gallery-image">
+									<img width="{{ block.settings.gallery_image.width }}" height="{{ block.settings.gallery_image.height }}" class="img-fluid" src="{% if block.settings.gallery_image %}{{ block.settings.gallery_image | img_url: '310X310', crop: 'center' }}{% else %}https://dummyimage.com/310x310/f7f7f7/999999{% endif %}" alt="">
+								</a>
+								<a class="play-button gallery-btn" href="{{ block.settings.video_image_url }}">
+									{% if block.settings.video_button_title != '' %}
+									<span class="title">{{ block.settings.video_button_title }}</span>
+									{% endif %}
+									{% if block.settings.video_button_icon != '' %}
+									<span class="icon">{{ block.settings.video_button_icon }}</span>
+									{% endif %}
+								</a>
+							</div>
+						</li>
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{% schema %}
+{
+    "name": "Gallery Home",
+    "settings": [
+    {
+        "type": "header",
+        "content": "Section Padding"
+    },
+    {
+        "type" : "paragraph",
+        "content" : "Desktop / Laptop / tablet"
+    },
+    {
+        "type": "range",
+        "id": "section_padding_top",
+        "label": "Section Padding Top",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "unit": "px",
+        "default": 0
+    },
+    {
+        "type": "range",
+        "id": "section_padding_bottom",
+        "label": "Section Padding Bottom",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "unit": "px",
+        "default": 60
+    },
+    {
+        "type" : "paragraph",
+        "content" : "Ipad pro / Ipad"
+    },
+    {
+        "type": "range",
+        "id": "section_padding_top_ipad",
+        "label": "Section Padding Top",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "unit": "px",
+        "default": 0
+    },
+    {
+        "type": "range",
+        "id": "section_padding_bottom_ipad",
+        "label": "Section Padding Bottom",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "unit": "px",
+        "default": 30
+    },
+    {
+        "type" : "paragraph",
+        "content" : "Mobile"
+    },
+    {
+        "type": "range",
+        "id": "section_padding_top_xs",
+        "label": "Section Padding Top",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "unit": "px",
+        "default": 0
+    },
+    {
+        "type": "range",
+        "id": "section_padding_bottom_xs",
+        "label": "Section Padding Bottom",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "unit": "px",
+        "default": 20
+    }
+    ],
+    "blocks":[
+    {
+        "type": "gallery_home",
+        "name": "Gallery Home",
+        "settings": [
+        	{
+		        "type" : "header",
+		        "content" : "Gallery Image"
+		    },
+		    {
+		        "type": "image_picker",
+		        "id": "gallery_image",
+		        "label": "Image",
+		        "info": "Recommended Size: 310x310px"
+		    },
+		    {
+		      "type": "header",
+		      "content": "Gallery Btn"
+		    },
+		    {
+		      "type" : "text",
+		      "id" : "video_button_title",
+		      "label" : "Button Text",
+		      "default" : "Video"
+		    },
+		    {
+		      "type" : "textarea",
+		      "id" : "video_button_icon",
+		      "label" : "Icon",
+		      "default" : "feather-video"
+		    },
+		    {
+		      "type" : "url",
+		      "id" : "video_image_url",
+		      "label" : "url"
+		    }
+        ]
+      }
+      ],
+    "presets":[
+    {
+        "name": "Gallery Home",
+        "category": "Gallery Home"
+    }
+    ]
+}
+{% endschema %}
+
+<style>
+.home-gallery {
+    padding-top: {{ section.settings.section_padding_top }}px;
+    padding-bottom: {{ section.settings.section_padding_bottom }}px;
+}
+@media(max-width: 1199px){
+    .home-gallery {
+        padding-top: {{ section.settings.section_padding_top_ipad }}px;
+        padding-bottom: {{ section.settings.section_padding_bottom_ipad }}px;
+    }
+}
+@media(max-width: 767px){
+    .home-gallery {
+        padding-top: {{ section.settings.section_padding_top_xs }}px;
+        padding-bottom: {{ section.settings.section_padding_bottom_xs }}px;
+    }
+}
+
+.home-gallery .gallery-area ul.gallery-ul {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	{% if settings.enable_rtl %}
+    margin-right: -30px;
+    {% else %}
+    margin-left: -30px;
+    {% endif %}
+	margin-top: -30px;
+}
+.home-gallery .gallery-area ul.gallery-ul li.gallery-li {
+	width: calc(25% - 30px);
+	{% if settings.enable_rtl %}
+    margin-right: 30px;
+    {% else %}
+    margin-left: 30px;
+    {% endif %}
+	margin-top: 30px;
+}
+.home-gallery .gallery-area ul.gallery-ul li.gallery-li .gallery-item {
+	position: relative;
+}
+.home-gallery .gallery-area ul.gallery-ul li.gallery-li .gallery-item a.gallery-image {
+	overflow: hidden;
+	border-radius: 5px;
+}
+.home-gallery .gallery-area ul.gallery-ul li.gallery-li .gallery-item:hover a.gallery-image {
+	filter: brightness(0.5);
+}
+.home-gallery .gallery-area ul.gallery-ul li.gallery-li .gallery-item a.gallery-btn {
+	color: #fff;	
+	position: absolute;
+	bottom: 30px;
+	right: 30px;
+	display: flex;
+	align-items: center;
+}
+.home-gallery .gallery-area ul.gallery-ul li.gallery-li .gallery-item a.gallery-btn span.title {
+	font-size: 18px;
+	margin-right: 5px;
+	opacity: 0;
+	visibility: hidden;
+	-webkit-transition: all .3s ease-in-out 0s;
+	-o-transition: all .3s ease-in-out 0s;
+	transition: all .3s ease-in-out 0s;
+} 	
+.home-gallery .gallery-area ul.gallery-ul li.gallery-li .gallery-item:hover a.gallery-btn span.title {
+	opacity: 1;
+	visibility: visible;
+	-webkit-transition: all .3s ease-in-out 0s;
+	-o-transition: all .3s ease-in-out 0s;
+	transition: all .3s ease-in-out 0s;
+}
+.home-gallery .gallery-area ul.gallery-ul li.gallery-li .gallery-item a.gallery-btn span.icon svg {
+	width: 30px;
+	height: 30px;
+}
+@media (max-width: 1199px) {
+	.home-gallery .gallery-area ul.gallery-ul li.gallery-li {
+		width: calc(33.33% - 30px);
+	}
+}
+@media (max-width: 991px) {
+	.home-gallery .gallery-area ul.gallery-ul li.gallery-li .gallery-item a.gallery-btn {
+		bottom: 15px;
+		{% if settings.enable_rtl %}
+	    left: 15px;
+	    {% else %}
+	    right: 15px;
+	    {% endif %}
+	}
+	.home-gallery .gallery-area ul.gallery-ul li.gallery-li .gallery-item a.gallery-btn span.title {
+		font-size: 14px;
+	}
+	.home-gallery .gallery-area ul.gallery-ul li.gallery-li .gallery-item a.gallery-btn span.icon svg {
+		width: 20px;
+		height: 20px;
+	}
+}
+@media (max-width: 767px) {
+	.home-gallery .gallery-area ul.gallery-ul {
+		margin-top: -12px;
+		{% if settings.enable_rtl %}
+	    margin-right: -12px;
+	    {% else %}
+	    margin-left: -12px;
+	    {% endif %}
+	}
+	.home-gallery .gallery-area ul.gallery-ul li.gallery-li {
+		width: calc(33.33% - 12px);
+		margin-top: 12px;
+		{% if settings.enable_rtl %}
+	    margin-right: 12px;
+	    {% else %}
+	    margin-left: 12px;
+	    {% endif %}
+	}
+}
+@media (max-width: 767px) {
+	.home-gallery .gallery-area ul.gallery-ul li.gallery-li {
+		width: calc(50% - 12px);
+		margin-top: 12px;
+		{% if settings.enable_rtl %}
+	    margin-right: 12px;
+	    {% else %}
+	    margin-left: 12px;
+	    {% endif %}
+	}
+}
+
+/* magificant css */
+.mfp-container.mfp-iframe-holder{
+    width: auto;
+    left: 15px;
+    right: 15px;
+}
+.mfp-iframe-holder .mfp-content{
+    max-width: 700px;
+    height: 400px;
+}
+.mfp-iframe-holder .mfp-close {
+    display: block!important;
+    font-size: 30px;
+    padding: 0;
+    height: auto;
+    width: auto;
+    position: absolute;
+    top: -30px;
+    {%- if settings.enable_rtl -%}
+    left: 0;
+    {%- else -%}
+    right: 0;
+    {%- endif -%}
+    opacity: 1;
+    background-color: transparent!important;
+    line-height: 1;
+}
+.mfp-iframe-scaler iframe{
+    border: none;
+}
+</style>

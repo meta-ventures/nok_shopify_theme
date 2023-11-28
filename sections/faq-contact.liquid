@@ -1,0 +1,318 @@
+<section class="faq-contact-area">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="faq-contact-main">
+                    {% if section.settings.faq_contact_title != '' %}
+                    <div class="title-area">
+                        <span>{{ section.settings.faq_contact_title }}</span>
+                    </div>
+                    {% endif %}
+                    <ul class="faq-contact-ul">
+                        <li class="faq-contact-li">
+                            {% if section.settings.faq_contact_icon_1 != '' %}
+                            <div class="icon">
+                                <span>
+                                    <i class="{{ section.settings.faq_contact_icon_1 }}"></i>
+                                </span>
+                            </div>
+                            {% endif %}
+                            {% if section.settings.faq_contact_text_1 != '' %}
+                            <div class="text">
+                                {{ section.settings.faq_contact_text_1 }}
+                            </div>
+                            {% endif %}
+                        </li>
+                        <li class="faq-contact-li">
+                            {% if section.settings.faq_contact_icon_2 != '' %}
+                            <div class="icon">
+                                <span>
+                                    <i class="{{ section.settings.faq_contact_icon_2 }}"></i>
+                                </span>
+                            </div>
+                            {% endif %}
+                            {% if section.settings.faq_contact_text_2 != '' %}
+                            <div class="text">
+                                {{ section.settings.faq_contact_text_2 }}
+                            </div>
+                            {% endif %}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+  "name": "Faq Contact",
+  "settings": [
+    {
+        "type": "header",
+        "content": "Section Padding"
+    },
+    {
+        "type" : "paragraph",
+        "content" : "Desktop / Laptop / tablet"
+    },
+    {
+        "type": "range",
+        "id": "section_padding_top",  
+        "label": "Section Padding Top", 
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "unit": "px",
+        "default": 0
+    },           
+    {
+        "type": "range",
+        "id": "section_padding_bottom", 
+        "label": "Section Padding Bottom",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "unit": "px",
+        "default": 0
+    },
+    {
+        "type" : "paragraph",
+        "content" : "Ipad pro / Ipad"
+    },
+    {
+        "type": "range",
+        "id": "section_padding_top_ip",  
+        "label": "Section Padding Top",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "unit": "px",
+        "default": 0
+    },           
+    {
+        "type": "range",
+        "id": "section_padding_bottom_ip", 
+        "label": "Section Padding Bottom",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "unit": "px",
+        "default": 0
+    },
+    {
+        "type" : "paragraph",
+        "content" : "Mobile"
+    },
+    {
+        "type": "range",
+        "id": "section_padding_top_xs",  
+        "label": "Section Padding Top",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "unit": "px",
+        "default": 0
+    },           
+    {
+        "type": "range",
+        "id": "section_padding_bottom_xs", 
+        "label": "Section Padding Bottom",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "unit": "px",
+        "default": 0
+    },
+    {
+        "type": "header",
+        "content": "Section Background Color"
+    },
+    {
+        "type": "checkbox",
+        "id": "section_bg_color_enable",
+        "label": "Show Background Color",
+        "default": true
+    },
+    {
+        "type": "color",
+        "id": "section_bg_color",
+        "label": "Background Color",
+        "default": "#272727"
+    },
+    {
+        "type": "header",
+        "content": "Faq Image"
+    },
+    {
+      "type": "text",
+      "id": "faq_contact_title",
+      "label": "Title",
+      "default": "Ask us anything"
+    },
+    {
+        "type": "header",
+        "content": "Text 1"
+    },
+    {
+      "type": "text",
+      "id": "faq_contact_icon_1",
+      "label": "Icon Class"
+    },
+    {
+      "type": "richtext",
+      "id": "faq_contact_text_1",
+      "label": "Text"
+    },
+    {
+        "type": "header",
+        "content": "Text 2"
+    },
+    {
+      "type": "text",
+      "id": "faq_contact_icon_2",
+      "label": "Icon Class"
+    },
+    {
+      "type": "richtext",
+      "id": "faq_contact_text_2",
+      "label": "Text"
+    }
+  ],
+  "presets":[
+  {
+    "name": "Faq Contact",
+    "category": "Faq Contact"
+  }
+  ]
+}
+{% endschema %}
+<style>
+.faq-contact-area {
+    position: relative;
+    padding-top: {{ section.settings.section_padding_top }}px;
+    padding-bottom: {{ section.settings.section_padding_bottom }}px;
+}
+@media (max-width: 1199px) {
+    .faq-contact-area {
+        padding-top: {{ section.settings.section_padding_top_ip }}px;
+        padding-bottom: {{ section.settings.section_padding_bottom_ip }}px;
+    }
+}
+@media (max-width: 767px) {
+    .faq-contact-area {
+        padding-top: {{ section.settings.section_padding_top_xs }}px;
+        padding-bottom: {{ section.settings.section_padding_bottom_xs }}px;
+    }
+}
+.faq-contact-area .faq-contact-main {
+    {% if section.settings.section_bg_color_enable %}
+    background-color: {{ section.settings.section_bg_color }};
+    {% endif %}
+    padding: 50px 30px;
+    text-align: center;
+}
+.faq-contact-area .faq-contact-main .title-area span {
+    color: #767676;
+    font-size: 14px;
+    line-height: 1;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.faq-contact-area .faq-contact-main ul.faq-contact-ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 26px;
+}   
+.faq-contact-area .faq-contact-main ul.faq-contact-ul li.faq-contact-li {
+    {%- if settings.enable_rtl -%}
+    margin-right: 50px;
+    {%- else -%}
+    margin-left: 50px;
+    {%- endif -%}
+    display: flex;
+    align-items: center;
+    line-height: 1;
+}
+.faq-contact-area .faq-contact-main ul.faq-contact-ul li.faq-contact-li:first-child {
+    {%- if settings.enable_rtl -%}
+    margin-right: 0px;
+    {%- else -%}
+    margin-left: 0px;
+    {%- endif -%}
+}
+.faq-contact-area .faq-contact-main ul.faq-contact-ul li.faq-contact-li .icon {
+    {%- if settings.enable_rtl -%}
+    margin-left: 15px;
+    {%- else -%}
+    margin-right: 15px;
+    {%- endif -%}
+}
+.faq-contact-area .faq-contact-main ul.faq-contact-ul li.faq-contact-li .icon span i {
+    color: #ffffff;
+    font-size: 25px;
+    line-height: 1;
+}
+.faq-contact-area .faq-contact-main ul.faq-contact-ul li.faq-contact-li .text p, 
+.faq-contact-area .faq-contact-main ul.faq-contact-ul li.faq-contact-li .text p a {
+    font-size: 24px;
+    color: #ffffff;
+    line-height: 1;
+} 
+.faq-contact-area .faq-contact-main ul.faq-contact-ul li.faq-contact-li .text p a:hover {
+    background-image: var(--gradient-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+@media (max-width: 1199px) {
+    .faq-contact-area .faq-contact-main {
+        padding: 40px 30px;
+    }
+    .faq-contact-area .faq-contact-main ul.faq-contact-ul {
+        margin-top: 16px;
+    }
+    .faq-contact-area .faq-contact-main ul.faq-contact-ul li.faq-contact-li {
+        {%- if settings.enable_rtl -%}
+        margin-right: 30px;
+        {%- else -%}
+        margin-left: 30px;
+        {%- endif -%}
+    }
+    .faq-contact-area .faq-contact-main ul.faq-contact-ul li.faq-contact-li .icon span i {
+        font-size: 20px;
+    }
+    .faq-contact-area .faq-contact-main ul.faq-contact-ul li.faq-contact-li .text p,
+    .faq-contact-area .faq-contact-main ul.faq-contact-ul li.faq-contact-li .text p a {
+        font-size: 20px;
+    }
+}
+@media (max-width: 600px) {
+    .faq-contact-area .faq-contact-main {
+        padding: 30px 15px;
+    }
+    .faq-contact-area .faq-contact-main ul.faq-contact-ul li.faq-contact-li .icon span i {
+        font-size: 17px;
+    }
+    .faq-contact-area .faq-contact-main ul.faq-contact-ul li.faq-contact-li .text p,
+    .faq-contact-area .faq-contact-main ul.faq-contact-ul li.faq-contact-li .text p a {
+        font-size: 17px;
+    }
+}
+@media (max-width: 479px) {
+    .faq-contact-area .faq-contact-main ul.faq-contact-ul {
+        flex-direction: column;
+    }
+    .faq-contact-area .faq-contact-main ul.faq-contact-ul li.faq-contact-li {
+        margin-top: 13px;
+        {%- if settings.enable_rtl -%}
+        margin-right: 0px;
+        {%- else -%}
+        margin-left: 0px;
+        {%- endif -%}
+    }
+    .faq-contact-area .faq-contact-main ul.faq-contact-ul li.faq-contact-li:first-child {
+        margin-top: 0px;
+    }
+}
+</style>

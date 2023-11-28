@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html class="no-js supports-no-cookies" lang="{{ shop.locale }}">
+  <head>
+    <!-- Basic and Helper page needs -->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="var(--font-color-primary)">
+    <link rel="canonical" href="{{ canonical_url }}">
+
+    <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.shopify.com" crossorigin>
+    <link rel="preconnect" href="https://monorail-edge.shopifysvc.com">
+
+    {%- assign header_font = settings.header_font_handle -%}
+    {%- assign section_header_font = settings.section_header_font_handle -%}
+    {%- assign paragraph_font = settings.paragraph_font_handle -%}
+    {%- assign other_font = settings.other_font_handle -%}
+    {%- assign body_font = settings.body_font_handle -%}
+    {%- assign body_font_bolder = body_font | font_modify: 'weight', 'bolder' -%}
+    {%- assign body_font_bold = body_font | font_modify: 'weight', 'bold' -%}
+    {%- assign body_font_italic = body_font | font_modify: 'style', 'italic' -%}
+    {%- assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic' -%}
+    <link rel="preload" as="font" href="{{ body_font | font_url }}" type="font/woff2" crossorigin>
+    <link rel="preload" as="font" href="{{ header_font | font_url }}" type="font/woff2" crossorigin>
+    <link rel="preload" as="font" href="{{ paragraph_font | font_url }}" type="font/woff2" crossorigin>
+    <link rel="preload" as="font" href="{{ body_font_bold | font_url }}" type="font/woff2" crossorigin>
+
+    {%- if settings.favicon != blank -%}
+    <link rel="shortcut icon" href="{{ settings.favicon | img_url: '32x32' }}" type="image/png" />
+    {%- endif -%}
+
+    {%- assign formatted_initial_value = gift_card.initial_value | money_without_trailing_zeros: gift_card.currency -%}
+    {%- assign formatted_initial_value_stripped = formatted_initial_value | strip_html -%}
+    <title>{{ 'gift_cards.issued.title_html' | t: value: formatted_initial_value_stripped, shop: shop.name }}</title>
+
+    <meta name="description" content="{{ 'gift_cards.issued.subtext' | t }}">
+    
+    {%- include 'header-css' -%}
+    <style>*,::after,::before{box-sizing:border-box}body{color: var(--font-color-body);font-size: var(--font-size-body);background-color: var(--background-color-body);font-family: var(--font-stack-body);font-weight: var(--font-weight-body);font-style: var(--font-style-body);letter-spacing: var(--font-letter-spacing-body);}h1,h2,h3,h4,h5,h6{color: var(--font-color-header);font-family: var(--font-stack-header);font-weight: var(--font-weight-header);font-style: var(--font-style-header);}.section-title h2,.content-main-title h2,.my-account-page .page-title h2{color: var(--font-color-section-header);font-family: var(--font-stack-section-header);font-weight: var(--font-weight-section-header);font-style: var(--font-style-section-header);}p{color: var(--font-color-paragraph);font-family: var(--font-stack-paragraph);}</style>
+    <style>
+      {{ header_font | font_face: font_display: 'swap' }}
+      {{ section_header_font | font_face: font_display: 'swap' }}
+      {{ paragraph_font | font_face: font_display: 'swap' }}
+      {{ other_font | font_face: font_display: 'swap' }}
+      {{ body_font | font_face: font_display: 'swap' }}
+      {{ body_font_bolder | font_face: font_display: 'swap' }}
+      {{ body_font_bold | font_face: font_display: 'swap' }}
+      {{ body_font_italic | font_face: font_display: 'swap' }}
+      {{ body_font_bold_italic | font_face: font_display: 'swap' }}
+    </style>
+    {{ 'gift-card.css' | asset_url | stylesheet_tag }}
+
+    <script src="{{ 'vendor/qrcode.js' | shopify_asset_url }}" defer="defer"></script>
+    <script src="{{ 'gift-card.js' | asset_url }}" defer="defer"></script>
+    <script>
+      var theme = {
+        strings: {
+          qrImageAlt: {{ 'gift_cards.issued.qr_image_alt' | t | json }}
+        }
+      };
+    </script>
+    {{ content_for_header }}
+    <!-- JS -->
+    {%- include 'header-js' -%}
+  </head>
+  <body class="template-giftcard">
+    {% include 'slow-window' %}
+    {{ content_for_layout }}
+    <ul class="visually-hidden d-none" aria-hidden="true">
+      <li id="a11y-new-window-message">{{ 'general.accessibility.link_messages.new_window' | t }}</li>
+      <li id="a11y-external-message">{{ 'general.accessibility.link_messages.external' | t }}</li>
+      <li id="a11y-new-window-external-message">{{ 'general.accessibility.link_messages.new_window_and_external' | t }}</li>
+    </ul>
+  </body>
+</html>

@@ -1,0 +1,1044 @@
+{%- if section.settings.product_tab_enable -%}
+<section class="product-description-tab">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="product-tab">
+          <div class="tab">
+            <ul class="nav nav-tabs" role="tablist">
+              {%- for block in section.blocks -%}
+              {%- case block.type -%}
+
+              {%- when 'product_desc' -%}
+              <li role="presentation">
+                <a href="#pro-dec" {% if forloop.first %}class="active"{% endif %} data-bs-toggle="tab" role="tab" {% if forloop.first %}aria-selected="true"{% else %}aria-selected="false"{% endif %}>{{ block.settings.product_info_tab_title }}</a>
+              </li>
+
+              {%- when 'product_add_info' -%}
+              <li role="presentation">
+                <a href="#pro-add-info" {% if forloop.first %}class="active"{% endif %} data-bs-toggle="tab" role="tab" {% if forloop.first %}aria-selected="true"{% else %}aria-selected="false"{% endif %}>{{ block.settings.product_add_info_tab_title }}</a>
+              </li>
+
+              {%- when 'product_fb_comment' -%}
+              <li role="presentation">
+                <a href="#comment-box" {% if forloop.first %}class="active"{% endif %} data-bs-toggle="tab" {% if forloop.first %}aria-selected="true"{% else %}aria-selected="false"{% endif %}>{{ block.settings.product_comments_title }}</a>
+              </li>
+              {%- endcase -%}
+              {%- endfor -%}
+            </ul>
+          </div>
+
+          <div class="description-review-text tab-content">
+            {%- for block in section.blocks -%}
+            {%- case block.type -%}
+
+            {%- when 'product_desc' -%}
+            {%- if product.description -%}
+            <div class="tab-pane{% if forloop.first %} active{% endif %}" id="pro-dec" role="tabpanel">
+              {{ product.description }}
+            </div>
+            {%- endif -%}
+
+            {%- when 'product_add_info' -%}
+            <div class="tab-pane{% if forloop.first %} active{% endif %}" id="pro-add-info" role="tabpanel">
+              <table>
+                <tbody>
+                  {%- if product.vendor != blank -%}
+                  <tr class="product-info">
+                    <th>{{ 'products.general.vendor' | t }}</th>
+                    <td>{{ product.vendor | link_to_vendor }}</td>
+                  </tr>
+                  {%- endif -%}
+
+                  {%- if product.type != blank -%}
+                  <tr class="product-info">
+                    <th>{{ 'products.general.type' | t }}</th>
+                    <td>{{ product.type | link_to_type }}</td>
+                  </tr>
+                  {%- endif -%}
+
+                  {%- unless product.options.size == 1 and product.variants[0].title == 'Default Title'-%}
+                  {%- for option in product.options_with_values-%}
+                  <tr class="product-info">
+                    <th>{{ option.name }}</th>
+                    <td>
+                      {%- for item_option in option.values -%}
+                      {{item_option}}{%- unless forloop.last -%}{{', '}}{%- endunless -%}
+                      {%- endfor -%}
+                    </td>
+                   </tr>
+                  {%- endfor -%}
+                  {%- endunless -%}
+
+                  {%- if current_variant.sku != blank -%}
+                  <tr class="product-info">
+                    <th>{{ 'products.general.sku' | t }}</th>
+                    <td>{{current_variant.sku}}</td>
+                  </tr>
+                  {%- endif -%}
+
+                  {%- if current_variant.barcode != blank -%}
+                  <tr class="product-info">
+                    <th>{{ 'products.general.barcode' | t }}</th>
+                    <td>{{current_variant.barcode}}</td>
+                  </tr>
+                  {%- endif -%}
+
+                  {% if product.variants.first.weight > 0%}
+              <tr class="product-info">
+                <th class="head">{{ 'products.general.weight' | t }}:&nbsp;</th>
+                <td>{{ product.variants.first.weight | weight_with_unit }}</td>
+              </tr>
+              {%- endif -%}
+                </tbody>
+              </table>
+            </div>
+
+            {%- when 'product_fb_comment' -%}
+            <div class="tab-pane{% if forloop.first %} active{% endif %}" id="comment-box" role="tabpanel">
+              <div class="fb-comment-box">
+                <!-- facebook comment box start -->
+                {% include 'facebook-comment' %}
+                {% include 'facebook-comment-box-script' %}
+                <!-- facebook comment box end -->
+              </div>
+            </div>
+            {%- endcase -%}
+            {%- endfor -%}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {%- if section.settings.product_video_tab_enable and product.metafields.my_fields.product_video-%}
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="youtube-video">
+          <iframe src="{{ product.metafields.my_fields.product_video }}"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+</section>
+{%- endif -%}
+{%- if section.settings.product_review_tab_enable -%}
+<section class="review-content">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="product-reviews">
+          {% if section.settings.product_review_title !='' %}
+          <div class="section-capture">
+            <div class="section-title">
+              <div class="section-cont-title">
+                {% if section.settings.product_review_title !='' %}
+                <h2>
+                  <span>{{ section.settings.product_review_title }}</span>
+                </h2>
+                {% endif %}
+              </div>
+
+              {% if section.settings.product_review_desc !='' %}
+              <p>{{ section.settings.product_review_desc }}</p>
+              {% endif %}
+            </div>
+          </div>
+          <div id="shopify-product-reviews" data-id="{{product.id}}">{{ product.metafields.spr.reviews }}</div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{%- endif -%}
+{% schema %}
+{
+  "name": "Information Tab",
+  "settings": [
+  {
+    "type": "checkbox",
+    "id": "product_tab_enable",
+    "label": "Show Product Tab Section",
+    "default": true
+  },
+  {
+    "type": "header",
+    "content": "Section Padding"
+  },
+  {
+    "type" : "paragraph",
+    "content" : "Desktop / Laptop / tablet"
+  },
+  {
+    "type": "range",
+    "id": "product_detail_tab_padding_top",
+    "label": "Section Padding Top",
+    "min": 0,
+    "max": 100,
+    "step": 1,
+    "unit": "px",
+    "default": 100
+  },
+  {
+    "type": "range",
+    "id": "product_detail_tab_padding_bottom",
+    "label": "Section Padding Bottom",
+    "min": 0,
+    "max": 100,
+    "step": 1,
+    "unit": "px",
+    "default": 100
+  },
+  {
+    "type" : "paragraph",
+    "content" : "Ipad pro / Ipad"
+  },
+  {
+    "type": "range",
+    "id": "product_detail_tab_padding_top_ip",
+    "label": "Section Padding Top",
+    "min": 0,
+    "max": 100,
+    "step": 1,
+    "unit": "px",
+    "default": 80
+  },
+  {
+    "type": "range",
+    "id": "product_detail_tab_padding_bottom_ip",
+    "label": "Section Padding Bottom",
+    "min": 0,
+    "max": 100,
+    "step": 1,
+    "unit": "px",
+    "default": 80
+  },
+  {
+    "type" : "paragraph",
+    "content" : "Mobile"
+  },
+  {
+    "type": "range",
+    "id": "product_detail_tab_padding_top_xs",
+    "label": "Section Padding Top",
+    "min": 0,
+    "max": 100,
+    "step": 1,
+    "unit": "px",
+    "default": 60
+  },
+  {
+    "type": "range",
+    "id": "product_detail_tab_padding_bottom_xs",
+    "label": "Section Padding Bottom",
+    "min": 0,
+    "max": 100,
+    "step": 1,
+    "unit": "px",
+    "default": 60
+  },
+  {
+    "type": "header",
+    "content": "Section Backgorund Color"
+  },
+  {
+    "type" : "color",
+    "id" : "product_detail_tab_bgcolor",
+    "label" : "Background Color",
+    "default" : "#F6F6F6"
+  },
+  {
+    "type" : "checkbox",
+    "id" : "product_detail_tab_bgcolor_check",
+    "label" : "Show Backgorund Color",
+    "default" : true
+  },
+  {
+    "type" : "header",
+    "content" : "Section Border"
+  },
+  {
+    "type": "range",
+    "id": "product_detail_tab_border",
+    "label": "Border",
+    "min": 0,
+    "max": 2,
+    "step": 1,
+    "unit": "px",
+    "default": 1
+  },
+  {
+    "type": "color",
+    "id": "product_detail_tab_border_color",
+    "label": "Border Color",
+    "default": "#E2E2E2"
+  },
+  {
+    "type" : "checkbox",
+    "id" : "product_detail_tab_border_enable",
+    "label" : "Show Section Border",
+    "default" : false
+  },
+  {
+    "type": "header",
+    "content": "Tab"
+  },
+  {
+    "type": "select",
+    "id": "product_detail_tab_option",
+    "label": "Tab Option",
+    "options":[
+      {
+        "label": "Regular",
+        "value": "regular_tab"
+      },
+      {
+        "label": "Vertical Left",
+        "value": "vertical_tab_left"
+      },
+      {
+        "label": "Vertical Right",
+        "value": "vertical_tab_right"
+      }
+    ],
+    "default": "regular_tab"
+  },
+  {
+    "type": "header",
+    "content": "Video Content"
+  },
+  {
+    "type": "checkbox",
+    "id": "product_video_tab_enable",
+    "label": "Show Product Video Content",
+    "default": true
+  },
+  {
+    "type": "header",
+    "content": "Review Content"
+  },
+  {
+    "type": "color",
+    "id": "product_review_content_bgcolor",
+    "label": "Content Background Color",
+    "default": "#FFFFFF"
+  },
+  {
+    "type": "checkbox",
+    "id": "product_review_content_bgcolor_enable",
+    "label": "Show Background Color",
+    "default": true
+  },
+  {
+    "type": "text",
+    "id": "product_review_title",
+    "label": "Title",
+    "default": "Customer love"
+  },
+  {
+    "type": "textarea",
+    "id": "product_review_desc",
+    "label": "Description",
+    "default": "Lorem Ipsum is printing & typesetting industry's standard dummy text since texts"
+  },
+  {
+    "type": "checkbox",
+    "id": "product_review_tab_enable",
+    "label": "Show Product Review Content",
+    "info": "Install Free Apps for Product Review [Click Here](https:\/\/apps.shopify.com\/product-reviews)",
+    "default": true
+  }
+  ],
+  "blocks": [
+  {
+    "type": "product_desc",
+    "name": "Product Description",
+    "limit": 1,
+    "settings": [
+      {
+        "type": "header",
+        "content": "Description Tab"
+      },
+      {
+        "type": "text",
+        "id": "product_info_tab_title",
+        "label": "Title",
+        "default": "Description"
+      }
+    ]
+  },
+  {
+    "type": "product_add_info",
+    "name": "Additional Information",
+    "limit": 1,
+    "settings": [
+      {
+        "type": "header",
+        "content": "Additional Tab"
+      },
+      {
+        "type": "text",
+        "id": "product_add_info_tab_title",
+        "label": "Title",
+        "default": "Additional info"
+      }
+    ]
+  },
+  {
+    "type": "product_fb_comment",
+    "name": "Product Facebook Comments",
+    "limit": 1,
+    "settings": [
+      {
+        "type": "header",
+        "content": "Facebook Comments"
+      },
+      {
+        "type": "text",
+        "id": "product_comments_title",
+        "label": "Comments Title",
+        "default": "Comments"
+      },
+      {
+        "type": "text",
+        "id": "facebook_comments_post_limit",
+        "label": "FacebooK Comment Limit",
+        "default": "10"
+      }
+    ]
+  }
+  ]
+}
+{% endschema %}
+{%- if section.settings.product_tab_enable -%}
+<style>
+  .product-description-tab {
+    padding-top: {{ section.settings.product_detail_tab_padding_top }}px;
+    padding-bottom: {{ section.settings.product_detail_tab_padding_bottom }}px;
+    {%- if section.settings.product_detail_tab_bgcolor_check -%}
+    background-color: {{ section.settings.product_detail_tab_bgcolor }};
+    {%- endif -%}
+    {% if section.settings.product_detail_tab_border_enable %}
+    border-top: {{ section.settings.product_detail_tab_border }}px solid {{ section.settings.product_detail_tab_border_color }};
+    {% endif %}
+  }
+  @media (max-width: 1199px) {
+    .product-description-tab {
+      padding-top: {{ section.settings.product_detail_tab_padding_top_ip }}px;
+      padding-bottom: {{ section.settings.product_detail_tab_padding_bottom_ip }}px;
+    }
+  }
+  @media (max-width: 767px) {
+    .product-description-tab {
+      padding-top: {{ section.settings.product_detail_tab_padding_top_xs }}px;
+      padding-bottom: {{ section.settings.product_detail_tab_padding_bottom_xs }}px;
+    }
+  }
+
+  /*=====================================
+    product detail tab css
+  ======================================*/
+  /* vertical tab css */
+  {% if section.settings.product_detail_tab_option == 'vertical_tab_left' or section.settings.product_detail_tab_option == 'vertical_tab_right' %}
+  .product-description-tab .product-tab{
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    {% if section.settings.product_detail_tab_option == 'vertical_tab_left' %}
+    flex-direction: row;
+    {% elsif section.settings.product_detail_tab_option == 'vertical_tab_right' %}
+    flex-direction: row-reverse;
+    {% endif %}
+    {% if settings.enable_rtl %}
+    margin: 0px -50px 0px 0px;
+    {% else %}
+    margin: 0px 0px 0px -50px;
+    {% endif %}
+  }
+  .product-description-tab .product-tab .tab{
+    width: calc(25% - 50px);
+  }
+  .product-description-tab .product-tab .tab-content{
+    width: calc(75% - 50px);
+  }
+  .product-description-tab .product-tab .tab,
+  .product-description-tab .product-tab .tab-content{
+    {% if settings.enable_rtl %}
+    margin: 0px 50px 0px 0px;
+    {% else %}
+    margin: 0px 0px 0px 50px;
+    {% endif %}
+  }
+  .product-description-tab .product-tab .tab ul.nav-tabs{
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    border-bottom: none;
+  }
+  .product-description-tab .product-tab .tab ul.nav-tabs li{
+    margin-top: 30px;
+  }
+  .product-description-tab .product-tab .tab ul.nav-tabs li:first-child{
+    margin-top: 0px;
+  }
+  .product-description-tab .product-tab .tab ul.nav-tabs li a{
+    color: var(--font-color-header);
+    font-size: 16px;
+    padding: 12px 30px;
+    background-color: #FFFFFF;
+    text-transform: uppercase;
+    font-weight: 600;
+    -webkit-transition: all 0s ease-in-out 0s;
+    -o-transition: all 0s ease-in-out 0s;
+    transition: all 0s ease-in-out 0s;
+  }
+  .product-description-tab .product-tab .tab ul.nav-tabs li a.active,
+  .product-description-tab .product-tab .tab ul.nav-tabs li:hover a{
+    background-image: var(--gradient-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  @media (max-width: 1199px) {
+    .product-description-tab .product-tab{
+      {% if settings.enable_rtl %}
+      margin: 0px -30px 0px 0px;
+      {% else %}
+      margin: 0px 0px 0px -30px;
+      {% endif %}
+    }
+    .product-description-tab .product-tab .tab{
+      width: calc(25% - 30px);
+    }
+    .product-description-tab .product-tab .tab-content{
+      width: calc(75% - 30px);
+    }
+    .product-description-tab .product-tab .tab,
+    .product-description-tab .product-tab .tab-content{
+      {% if settings.enable_rtl %}
+      margin: 0px 30px 0px 0px;
+      {% else %}
+      margin: 0px 0px 0px 30px;
+      {% endif %}
+    }
+  }
+  @media (max-width: 991px) {
+    .product-description-tab .product-tab .tab{
+      width: calc(33.33% - 30px);
+    }
+    .product-description-tab .product-tab .tab-content{
+      width: calc(66.67% - 30px);
+    }
+  }
+  @media (max-width: 600px) {
+    .product-description-tab .product-tab{
+      {% if settings.enable_rtl %}
+      margin: 0px -15px 0px 0px;
+      {% else %}
+      margin: 0px 0px 0px -15px;
+      {% endif %}
+    }
+    .product-description-tab .product-tab .tab,
+    .product-description-tab .product-tab .tab-content{
+      width: calc(100% - 15px);
+      {% if settings.enable_rtl %}
+      margin: 0px 15px 0px 0px;
+      {% else %}
+      margin: 0px 0px 0px 15px;
+      {% endif %}
+    }
+    .product-description-tab .product-tab .tab ul.nav-tabs li{
+      margin-top: 15px;
+    }
+  }
+  {% endif %}
+
+  /* regular tab css */
+  {% if section.settings.product_detail_tab_option == 'regular_tab' %}
+  .product-description-tab .product-tab{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+  }
+  .product-description-tab .product-tab .tab{
+    display: flex;
+    justify-content: center;
+  }
+  .product-description-tab .product-tab .tab ul.nav-tabs{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    max-width: 100%;
+    margin-bottom: -15px;
+    padding-bottom: 15px;
+    border-bottom: none;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    -webkit-scrollbar-width: thin;
+  }
+  .product-description-tab .product-tab .tab ul.nav-tabs::-webkit-scrollbar{
+    height: 2px;
+  }
+  .product-description-tab .product-tab .tab ul.nav-tabs::-webkit-scrollbar-track{
+    background-color: #eeeeee;
+  }
+  .product-description-tab .product-tab .tab ul.nav-tabs::-webkit-scrollbar-thumb{
+    background-color: #c1c1c1;
+  }
+  .product-description-tab .product-tab .tab ul.nav-tabs::-webkit-scrollbar-thumb:hover{
+    background-color: var(--font-color-primary);
+  }
+  .product-description-tab .product-tab .tab ul.nav-tabs li{
+    {% if settings.enable_rtl %}
+    margin-left: 30px;
+    {% else %}
+    margin-right: 30px;
+    {% endif %}
+  }
+  .product-description-tab .product-tab .tab ul.nav-tabs li:last-child{
+    {% if settings.enable_rtl %}
+    margin-left: 0px;
+    {% else %}
+    margin-right: 0px;
+    {% endif %}
+  }
+  .product-description-tab .product-tab .tab ul.nav-tabs li a{
+    color: var(--font-color-header);
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+    -webkit-transition: all 0s ease-in-out 0s;
+    -o-transition: all 0s ease-in-out 0s;
+    transition: all 0s ease-in-out 0s;
+  }
+  .product-description-tab .product-tab .tab ul.nav-tabs li a.active,
+  .product-description-tab .product-tab .tab ul.nav-tabs li:hover a{
+    background-image: var(--gradient-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  @media (max-width: 767px) {
+    .product-description-tab .product-tab .tab ul.nav-tabs li{
+      {% if settings.enable_rtl %}
+      margin-left: 15px;
+      {% else %}
+      margin-right: 15px;
+      {% endif %}
+    }
+  }
+  {% endif %}
+
+  /* product extra detail tab css */
+  .product-description-tab .description-review-text .more-description{
+    margin-top: {{ section.settings.product_detail_tab_padding_top | divided_by: 2 | minus: 8 }}px;
+  }
+  .product-description-tab .description-review-text .more-description:first-child{
+    {% if section.settings.product_detail_tab_option == 'regular_tab' %}
+    margin-top: {{ section.settings.product_detail_tab_padding_top | minus: 9 }}px;
+    {% else %}
+    margin-top: 0px;
+    {% endif %}    
+  }
+  .product-description-tab .description-review-text .more-description h6{
+    font-size: 18px;
+    text-transform: capitalize;
+    font-weight: 500;
+    line-height: 1;
+  }
+  .product-description-tab .description-review-text .more-description ul{
+    {% if settings.enable_rtl %}
+    padding-right: 17px;
+    {% else %}
+    padding-left: 17px;
+    {% endif %}
+    list-style: disc;
+  }
+  .product-description-tab .description-review-text .more-description ul li{
+    margin-top: 4px;
+  }
+  .product-description-tab .description-review-text .more-description ul li:first-child{
+    margin-top: 22px;
+  }
+  @media (max-width: 1199px) {
+    .product-description-tab .description-review-text .more-description{
+      margin-top: {{ section.settings.product_detail_tab_padding_top_ip | divided_by: 2 | minus: 8 }}px;
+    }
+    {% if section.settings.product_detail_tab_option == 'regular_tab' %}
+    .product-description-tab .description-review-text .more-description:first-child{
+      margin-top: {{ section.settings.product_detail_tab_padding_top_ip | minus: 9 }}px;
+    }
+    {% endif %}
+  }
+  @media (max-width: 767px) {
+    .product-description-tab .description-review-text .more-description{
+      margin-top: {{ section.settings.product_detail_tab_padding_top_xs | divided_by: 2 | minus: 8 }}px;
+    }
+    {% if section.settings.product_detail_tab_option == 'regular_tab' %}
+    .product-description-tab .description-review-text .more-description:first-child{
+      margin-top: {{ section.settings.product_detail_tab_padding_top_xs | minus: 9 }}px;
+    }
+    {% endif %}
+  }
+  {% unless section.settings.product_detail_tab_option == 'regular_tab' %}
+  @media (max-width: 600px) {
+    .product-description-tab .description-review-text .more-description:first-child{
+      margin-top: {{ section.settings.product_detail_tab_padding_top_xs | minus: 2 }}px;
+    }
+  }
+  {% endunless %}
+
+  /* product additional info tab css */
+  {% if section.settings.product_detail_tab_option == 'regular_tab' %}
+  .product-description-tab .description-review-text table{
+    margin-top: {{ section.settings.product_detail_tab_padding_top }}px;
+  }
+  {% endif %}
+  .product-description-tab .description-review-text table tbody tr th{
+    color: var(--font-color-header);
+    font-weight: 600;
+  }
+  .product-description-tab .description-review-text table tbody tr th,
+  .product-description-tab .description-review-text table tbody tr td{
+    border: 1px solid #e2e2e2;
+  }
+  .product-description-tab .description-review-text table tbody tr td,
+  .product-description-tab .description-review-text table tbody tr td a{
+    color: var(--font-color-body);
+  }
+  .product-description-tab .description-review-text table tbody tr td a:hover{
+    color: var(--font-color-primary);
+  }
+  {% if section.settings.product_detail_tab_option == 'regular_tab' %}
+  @media (max-width: 1199px) {
+    .product-description-tab .description-review-text table{
+      margin-top: {{ section.settings.product_detail_tab_padding_top_ip }}px;
+    }
+  }
+  {% endif %}
+  @media (max-width: 767px) {
+    {% if section.settings.product_detail_tab_option == 'regular_tab' %}
+    .product-description-tab .description-review-text table{
+      margin-top: {{ section.settings.product_detail_tab_padding_top_xs }}px;
+    }
+    {% endif %}
+  }
+  {% unless section.settings.product_detail_tab_option == 'regular_tab' %}
+  @media (max-width: 600px) {
+    .product-description-tab .description-review-text table{
+      margin-top: {{ section.settings.product_detail_tab_padding_top_xs }}px;
+    }
+  }
+  {% endunless %}
+
+  {% if section.settings.product_detail_tab_option == 'regular_tab' %}
+  /* product facebook comment css */
+  .product-description-tab .description-review-text .fb-comment-box{
+    margin-top: {{ section.settings.product_detail_tab_padding_top | minus: 15 }}px;
+  }
+  @media (max-width: 1199px) {
+    .product-description-tab .description-review-text .fb-comment-box{
+      margin-top: {{ section.settings.product_detail_tab_padding_top_ip | minus: 15 }}px;
+    }
+  }
+  @media (max-width: 767px) {
+    .product-description-tab .description-review-text .fb-comment-box{
+      margin-top: {{ section.settings.product_detail_tab_padding_top_xs | minus: 15 }}px;
+    }
+  }
+  {% endif %}
+  {% unless section.settings.product_detail_tab_option == 'regular_tab' %}
+  @media (max-width: 600px) {
+    .product-description-tab .description-review-text .fb-comment-box{
+      margin-top: {{ section.settings.product_detail_tab_padding_top_xs | minus: 15 }}px;
+    }
+  }
+  {% endunless %}
+
+  {% if section.settings.product_detail_tab_option == 'regular_tab' %}
+  /* product size chart css */
+  .product-description-tab .description-review-text .size-chart{
+    margin-top: {{ section.settings.product_detail_tab_padding_top }}px;
+  }
+  @media (max-width: 1199px) {
+    .product-description-tab .description-review-text .size-chart{
+      margin-top: {{ section.settings.product_detail_tab_padding_top_ip }}px;
+    }
+  }
+  @media (max-width: 767px) {
+    .product-description-tab .description-review-text .size-chart{
+      margin-top: {{ section.settings.product_detail_tab_padding_top_xs }}px;
+    }
+  }
+  {% endif %}
+  {% unless section.settings.product_detail_tab_option == 'regular_tab' %}
+  @media (max-width: 600px) {
+    .product-description-tab .description-review-text .size-chart{
+      margin-top: {{ section.settings.product_detail_tab_padding_top_xs }}px;
+    }
+  }
+  {% endunless %}
+
+  /* product video css */
+  .product-description-tab .youtube-video{
+    padding-top: {{ section.settings.product_detail_tab_padding_top }}px;
+  }
+  .product-description-tab .youtube-video .video-wrapper{
+    padding-bottom: 0;
+    line-height: 0;
+  }
+  .product-description-tab .youtube-video .video-wrapper iframe{
+    position: unset;
+    width: 100%;
+    height: 600px;
+    
+  }
+  @media (max-width: 1199px) {
+    .product-description-tab .youtube-video{
+      padding-top: {{ section.settings.product_detail_tab_padding_top_ip }}px;
+    }
+    .product-description-tab .youtube-video .video-wrapper iframe{
+      height: 500px;
+    }
+  }
+  @media (max-width: 767px) {
+    .product-description-tab .youtube-video{
+      padding-top: {{ section.settings.product_detail_tab_padding_top_xs }}px;
+    }
+    .product-description-tab .youtube-video .video-wrapper iframe{
+      height: 350px;
+    }
+  }
+
+  /* product review css */
+  .review-content{
+    padding-top: {{ section.settings.product_detail_tab_padding_top }}px;
+    padding-bottom: {{ section.settings.product_detail_tab_padding_top }}px;
+    {%- if section.settings.product_review_content_bgcolor_enable -%}
+    background-color: {{ section.settings.product_review_content_bgcolor }};
+    {%- endif -%}
+  }
+  @media (max-width: 1199px) {
+    .review-content{
+      padding-top: {{ section.settings.product_detail_tab_padding_top_ip }}px;
+      padding-bottom: {{ section.settings.product_detail_tab_padding_top_ip }}px;
+    }
+  }
+  @media (max-width: 767px) {
+    .review-content{
+      padding-top: {{ section.settings.product_detail_tab_padding_top_xs }}px;
+      padding-bottom: {{ section.settings.product_detail_tab_padding_top_xs }}px;
+    }
+  }
+
+  .review-content #shopify-product-reviews{
+    margin: 0px 0 0;
+  }
+  .review-content #shopify-product-reviews .spr-container{
+    padding: 0;
+    border: none;
+  }
+  .review-content #shopify-product-reviews .spr-container .spr-header h2.spr-header-title{
+    font-size: 18px;
+    margin-bottom: 0;
+    text-transform: capitalize;
+    font-weight: 500;
+    line-height: 1;
+  }
+  .review-content #shopify-product-reviews .spr-container .spr-header .spr-summary .spr-summary-starrating{
+    display: flex;
+    margin: 25px 0 -13px;
+    line-height: 0;
+  }
+  .review-content #shopify-product-reviews .spr-container .spr-header .spr-summary .spr-summary-starrating .spr-icon{
+    display: block;
+    font-size: 14px !important;
+    width: 16px;
+    height: auto;
+    position: unset;
+    line-height: 0;
+  }
+  .review-content #shopify-product-reviews .spr-container .spr-header .spr-summary .spr-summary-starrating .spr-icon-star:before,
+  .review-content #shopify-product-reviews .spr-container .spr-header .spr-summary .spr-summary-starrating .spr-icon-star-half-alt:before,
+  .review-content #shopify-product-reviews .spr-container .spr-header .spr-summary .spr-summary-starrating .spr-icon-star-empty:before{
+    color: #eb592c;
+  }
+  .review-content #shopify-product-reviews .spr-container .spr-header .spr-summary .spr-summary-caption{
+    display: block;
+    margin-top: 25px;
+    line-height: 1;
+  }
+  .review-content #shopify-product-reviews .spr-container .spr-header .spr-summary .spr-summary-actions{
+    display: block;
+    margin-top: 28px;
+    {% if settings.enable_rtl %}
+    text-align: right;
+    {% else %}
+    text-align: left;
+    {% endif %}
+  }
+  .review-content #shopify-product-reviews .spr-container .spr-header .spr-summary .spr-summary-actions-newreview{
+    float: none;
+  }
+  .review-content #shopify-product-reviews .spr-container .spr-header .spr-summary .spr-summary-actions-newreview,
+  .review-content #shopify-product-reviews .spr-container .spr-content .spr-form form .spr-button{
+    color: {{ settings.btn2_color }};
+    font-size: {{ settings.btn2_font_size }}px;
+    padding: {{ settings.btn2_padding_top_bottom }}px {{ settings.btn2_padding_left_right }}px;
+    background-color: {{ settings.btn2_bgcolor }};
+    {% if settings.btn2_text_transform == 'capitalize' %}
+    text-transform: capitalize;
+    {% elsif settings.btn2_text_transform == 'lowercase' %}
+    text-transform: lowercase;
+    {% elsif settings.btn2_text_transform == 'uppercase' %}
+    text-transform: uppercase;
+    {% else %}
+    text-transform: none;
+    {% endif %}
+    font-weight: {{ settings.btn2_font_weight }};
+    border: {{ settings.btn2_border }}px {{ settings.btn2_border_property }} {{ settings.btn2_border_color }};
+    border-radius: {{ settings.btn2_border_radius }}px;
+    letter-spacing: {{ settings.btn2_letter_spacing }}px;
+  }
+  .review-content #shopify-product-reviews .spr-container .spr-header .spr-summary .spr-summary-actions-newreview:hover,
+  .review-content #shopify-product-reviews .spr-container .spr-content .spr-form form .spr-button:hover{
+    color: {{ settings.btn2_hvr_color }};
+    background-color: {{ settings.btn2_hvr_bgcolor }};
+    border: {{ settings.btn2_border }}px {{ settings.btn2_border_property }} {{ settings.btn2_border_hvr_color }};
+  }
+  .review-content #shopify-product-reviews .spr-container .spr-content .spr-form form .spr-button,
+  .review-content #shopify-product-reviews .spr-container .spr-content .spr-form form .spr-button:focus{
+    outline: none;
+    box-shadow: none;
+  }
+  .review-content #shopify-product-reviews .spr-container .spr-content .spr-form{
+    margin: 30px 0 0 0;
+    padding: 30px 0 0 0;
+    border-top: 1px solid #E2E2E2;
+  }
+  .review-content #shopify-product-reviews .spr-container .spr-content .spr-form form h3.spr-form-title{
+    font-size: 18px;
+    text-transform: capitalize;
+    font-weight: 500;
+    line-height: 1;
+  }
+  .review-content #shopify-product-reviews .spr-container .spr-content .spr-form form fieldset label.spr-form-label{
+    display: block;
+    font-size: 14px;
+    margin-bottom: 10px;
+    line-height: 1;
+  }
+  .review-content #shopify-product-reviews .spr-container .spr-content .spr-form form fieldset .spr-form-contact-name{
+    margin: 25px 0 0px 0;
+  }
+  .review-content #shopify-product-reviews .spr-container .spr-content .spr-form form fieldset .spr-form-contact-email,
+  .review-content #shopify-product-reviews .spr-container .spr-content .spr-form form fieldset .spr-form-review-rating,
+  .review-content #shopify-product-reviews .spr-container .spr-content .spr-form form fieldset .spr-form-review-title,
+  .review-content #shopify-product-reviews .spr-container .spr-content .spr-form form fieldset .spr-form-review-body{
+    margin: 15px 0 0px 0;
+  }
+  .review-content #shopify-product-reviews .spr-container .spr-content .spr-form form fieldset .spr-form-review-rating .spr-starrating{
+    display: flex;
+  }
+  .review-content #shopify-product-reviews .spr-container .spr-content .spr-form form fieldset .spr-form-review-rating .spr-starrating a{
+    display: block;
+    font-size: 14px !important;
+    width: 16px;
+    height: auto;
+    position: unset;
+    opacity: 1;
+    line-height: 0;
+  }
+  .review-content #shopify-product-reviews .spr-container .spr-content .spr-form form fieldset .spr-form-review-rating .spr-starrating a.spr-icon,
+  .review-content #shopify-product-reviews .spr-container .spr-content .spr-form form fieldset .spr-form-review-rating .spr-starrating a.spr-icon.spr-icon-star.spr-icon-star-hover::before,
+  .review-content #shopify-product-reviews .spr-container .spr-content .spr-form form fieldset .spr-form-review-rating .spr-starrating a.spr-icon.spr-icon-star-empty::before{
+    color: #eb592c;
+  }
+  .review-content #shopify-product-reviews .spr-container .spr-content .spr-form form .spr-button{
+    float: none;
+    margin-top: 15px;
+  }
+  .review-content #shopify-product-reviews .spr-container .spr-content .spr-form form .spr-form-message-success{
+    color: #28a745;
+    margin-top: 15px;
+    font-weight: 600;
+    line-height: 1;
+  }
+  .review-content #shopify-product-reviews .spr-container .spr-content .spr-reviews{
+    margin: 0px 0 0 0;
+    padding: 0px 0;
+  }
+  .review-content #shopify-product-reviews .spr-container .spr-content .spr-reviews .spr-review{
+    padding: 30px 0 0;
+    margin-top: 25px;
+    border-top: 1px solid #E2E2E2;
+  }
+  .review-content #shopify-product-reviews .spr-container .spr-content .spr-reviews .spr-review:first-child{
+    margin-top: 30px;
+  }
+  .review-content #shopify-product-reviews .spr-container .spr-content .spr-reviews .spr-review .spr-review-header-starratings{
+    display: block;
+    margin: 0;
+    line-height: 0;
+  }
+  .review-content #shopify-product-reviews .spr-container .spr-content .spr-reviews .spr-review .spr-review-header-starratings .spr-icon{
+    font-size: 14px !important;
+    position: unset;
+    height: auto;
+    width: auto;
+    opacity: 1;
+  }
+  .review-content #shopify-product-reviews .spr-container .spr-content .spr-reviews .spr-review .spr-review-header-starratings .spr-icon-star:before,
+  .review-content #shopify-product-reviews .spr-container .spr-content .spr-reviews .spr-review .spr-review-header-starratings .spr-icon-star-empty:before{
+    color: #eb592c;
+  }
+  .review-content #shopify-product-reviews .spr-container .spr-content .spr-reviews .spr-review .spr-review-header h3.spr-review-header-title{
+    font-size: 16px;
+    margin-top: 12px;
+    text-transform: capitalize;
+    font-weight: 500;
+    line-height: 1;
+  }
+  .review-content #shopify-product-reviews .spr-container .spr-content .spr-reviews .spr-review .spr-review-header span.spr-review-header-byline{
+    display: block;
+    font-size: 14px;
+    margin: 10px 0px 0 0;
+    text-transform: capitalize;
+    font-style: normal;
+    opacity: 1;
+    line-height: 1;
+  }
+  .review-content #shopify-product-reviews .spr-container .spr-content .spr-reviews .spr-review .spr-review-header span.spr-review-header-byline strong{
+    color: var(--font-color-primary);
+    font-weight: 400;
+  }
+  .review-content #shopify-product-reviews .spr-container .spr-content .spr-reviews .spr-review .spr-review-content{
+    margin: 6px 0 0px 0;
+  }
+  .review-content #shopify-product-reviews .spr-container .spr-content .spr-reviews .spr-review .spr-review-content p.spr-review-content-body{
+    font-size: 14px;
+    line-height: 25px;
+  }
+  .review-content #shopify-product-reviews .spr-container .spr-content .spr-reviews .spr-review .spr-review-footer{
+    display: none;
+  }
+  @media (max-width: 767px) {
+    .review-content #shopify-product-reviews .spr-container .spr-header h2.spr-header-title,
+    .review-content #shopify-product-reviews .spr-container .spr-header .spr-summary .spr-summary-caption{
+      {%- if settings.enable_rtl -%}
+      text-align: right;
+      {%- else -%}
+      text-align: left;
+      {%- endif -%}
+    }
+  }
+
+  /* product review form error css */
+  .review-content #shopify-product-reviews .spr-container .spr-content .spr-form form .spr-form-message-error{
+    padding: 10px 15px;
+    margin: 15px 0 0;
+  }
+</style>
+{%- endif -%}

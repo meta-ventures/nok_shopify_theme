@@ -1,0 +1,60 @@
+{% capture media_class %}product-featured-media{% endcapture %}
+{% case media.media_type %}
+{% when 'image' %}
+<a href="{{ media.src | img_url: 'master' }}" class="product-single__thumbnail" data-image-id="{{ media.id }}">
+  {% capture zoom_media_id %}ImageZoom-{{ section.id }}-{{ media.id }}{% endcapture %}
+  {%- assign img_url = media | img_url: 'master' -%}
+  {% if section.settings.zoom_enable %}
+  <figure class="zoom" onmousemove="zoom(event)" style="background-image: url({{ img_url }})">
+    <img width="" height="" src="{{ img_url }}" class="img-fluid {{ media_class }}" id="{{ media_id }}" alt="{{ media.alt | escape }}">
+  </figure>
+  {% else %}
+  <img width="{{ item.image.width }}" height="{{ item.image.height }}" src="{{ img_url }}" class="img-fluid {{ media_class }}" id="{{ media_id }}" alt="{{ media.alt | escape }}">
+  {% endif %}
+</a>
+
+{% when 'external_video' %}
+<div class="product-single__media">
+  {{ media | external_video_tag }}
+</div>
+
+{% when 'video' %}
+<div class="product-single__media product-single__media--video product-single__media--{{ media.id }}" data-image-id="{{ media.id }}">
+  {{ media | video_tag: class: 'media-video', autoplay: true, loop: true, controls: true }}
+</div>
+<style>
+  .product-single__media--{{ media.id }}{
+    padding-top: 100%;
+    position: relative;
+  }
+  .product-single__media--{{ media.id }} video.media-video{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+  }
+</style>
+
+{% when 'model' %}
+<div class="product-single__3dmedia product-single__3dmedia--{{ media.id }}" data-image-id="{{ media.id }}">
+  {{ media | media_tag: toggleable: true, data-model-id: media.id }}
+</div>
+<style>
+  .product-single__3dmedia--{{ media.id }}{
+    padding-top: 100%;
+    position: relative;
+  }
+  .product-single__3dmedia model-viewer{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+  }
+</style>
+{% endcase %}

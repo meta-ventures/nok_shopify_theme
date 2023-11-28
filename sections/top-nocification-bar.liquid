@@ -1,0 +1,304 @@
+{%- if section.settings.topbar_notification_enable -%}
+<section class="top-notification-bar" {% if section.settings.bg_img_enable %}style="background-image: url('{% if section.settings.bg_img %}{{ section.settings.bg_img | img_url: 'master' }}{% else %}https://dummyimage.com/1920x50{% endif %}');"{% endif %}>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <ul class="notification-entry">
+          <li class="notify-wrap">
+            <div class="text-wrap">
+              {%- if section.settings.rich_text1 or section.settings.icon1 -%}
+              <div class="richtext">
+                {{ section.settings.icon1 }}
+                {{ section.settings.rich_text1 }}
+              </div>
+              {%- endif -%}
+            </div>
+          </li>
+          <li class="notify-wrap notify-wrap-center">
+            <div class="owl-carousel slider-text" id="slider-text">
+             <div class="item">
+               <div class="richtext">
+                {{ section.settings.icon2 }}
+                {{ section.settings.anim_richtext1 }}
+               </div>
+             </div>
+              <div class="item">
+               <div class="richtext">
+                {{ section.settings.icon3 }}
+                {{ section.settings.anim_richtext2 }}
+               </div>
+             </div>
+             <div class="item">
+              <div class="richtext">
+                {{ section.settings.icon4 }}
+                {{ section.settings.anim_richtext3 }}
+               </div>
+             </div>
+           </div>
+          </li>
+          <li class="notify-wrap notify-wrap-right">
+            <div class="text-wrap">
+              {%- if section.settings.rich_text2 -%}
+              <div class="richtext">
+                {{ section.settings.rich_text2 }}
+              </div>
+              {%- endif -%}
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- <button class="notification-close-btn"><i class="ri-close-line"></i></button> -->
+</section>
+<script>
+  var nToggle = $('.notification-close-btn');
+  nToggle.on('click', function() {
+    $('.top-notification-bar').slideToggle();
+  });
+  addEventListener('DOMContentLoaded', (event) => {
+    $('#slider-text').owlCarousel({
+      {%- if settings.enable_rtl -%}
+      rtl: true,
+      {%- endif -%}
+      loop: true,
+      items: 1,
+      rewind: true,
+      margin: 0,
+      fade: true,
+      nav: false,
+      navText: ['<i class="ri-arrow-left-line"></i>','<i class="ri-arrow-right-line"></i>'],
+      dots: false,
+      autoplay:true,
+      autoplayTimeout:3000,
+      autoplayHoverPause:false
+    });
+  });
+</script>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Topbar notification",
+  "settings": [
+  {
+    "type": "header",
+    "content": "Show topbar notification"
+  },
+  {
+    "type": "checkbox",
+    "id": "topbar_notification_enable",
+    "label": "Show topbar notification",
+    "default": true
+  },
+  {
+      "type": "checkbox",
+      "id": "bg_img_enable",
+      "label": "Background Image enable",
+      "default": true
+  },
+  {
+      "type": "image_picker",
+      "id": "bg_img",
+      "label": "Background Image",
+      "info": "Recommended Size: 1920 x 50px"
+  },
+  {
+    "type": "header",
+    "content": "Section background color"
+  },
+  {
+    "type": "color",
+    "id": "topbar_notification_bg_color",
+    "label": "Section background color",
+    "default": "#fff"
+  },
+  {
+    "type": "color",
+    "id": "topbar_notification_txt_color",
+    "label": "Section text color",
+    "default": "#fff"
+  },
+  {
+    "type": "header",
+    "content": "Icon with link"
+  },
+  {
+    "type": "textarea",
+    "id": "icon1",
+    "label": "Text icon"
+  },
+  {
+    "type": "richtext",
+    "id": "rich_text1",
+    "label": "Text"
+  },
+  {
+    "type": "header",
+    "content": "Animation text"
+  },
+  {
+    "type": "textarea",
+    "id": "icon2",
+    "label": "Text icon"
+  },
+  {
+    "type": "richtext",
+    "id": "anim_richtext1",
+    "label": "animation text"
+  },
+  {
+    "type": "textarea",
+    "id": "icon3",
+    "label": "Text icon"
+  },
+  {
+    "type": "richtext",
+    "id": "anim_richtext2",
+    "label": "animation text"
+  },
+  {
+    "type": "textarea",
+    "id": "icon4",
+    "label": "Text icon"
+  },
+  {
+    "type": "richtext",
+    "id": "anim_richtext3",
+    "label": "animation text"
+  },
+  {
+    "type": "header",
+    "content": "Icon with link"
+  },
+  {
+    "type": "richtext",
+    "id": "rich_text2",
+    "label": "Text"
+  }
+  ]
+}
+{% endschema %}
+
+<style>
+  .top-notification-bar .container-fluid{
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+  @media(max-width: 1599px){
+    .top-notification-bar .container-fluid{
+      padding-right: 30px;
+      padding-left: 30px;
+    }
+  }
+  @media(max-width: 767px){
+    .top-notification-bar .container-fluid{
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+  }
+  .top-notification-bar {
+    position: relative;
+    background-color: {{ section.settings.topbar_notification_bg_color }};
+    z-index: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .top-notification-bar ul.notification-entry {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+  }
+
+  /* text css */
+
+  .top-notification-bar ul li.notify-wrap {
+      width: 20%;
+  }
+  .top-notification-bar ul li.notify-wrap.notify-wrap-right {
+      width: 20%;
+  }
+  .top-notification-bar ul li.notify-wrap .text-wrap .richtext,
+  .top-notification-bar ul li.notify-wrap .text-wrap{
+    display: flex;
+    align-items: center;
+  }
+  .top-notification-bar ul li.notify-wrap:not(:first-child) .text-wrap{
+    justify-content: flex-end;
+  }
+  .top-notification-bar ul li.notify-wrap.notify-wrap-center{
+    width: 60%;
+    text-align: center;
+    justify-content: center;
+  }
+  .top-notification-bar ul li.notify-wrap .richtext:not(:last-child) {
+    padding-right: 15px;
+  }
+  .top-notification-bar ul li.notify-wrap .richtext a,
+  .top-notification-bar ul li.notify-wrap .richtext p {
+    color: {{ section.settings.topbar_notification_txt_color }};
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .top-notification-bar ul li.notify-wrap .richtext a:hover{
+    color: var(--font-color-primary);
+    text-decoration: underline;
+  }
+  .top-notification-bar ul li.notify-wrap .richtext a:not(:first-child){
+    {%- if settings.enable_rtl -%}
+    padding-right: 30px;
+    {%- else -%}
+    padding-left: 30px;
+    {%- endif -%}
+  }
+  .top-notification-bar ul li.notify-wrap .richtext i{
+    color: var(--font-color-primary);
+    display: flex;
+    {%- if settings.enable_rtl -%}
+    padding-left: 10px;
+    {%- else -%}
+    padding-right: 10px;
+    {%- endif -%}
+    font-size: 18px;
+  }
+  .notification-close-btn{
+    position: absolute;
+    right: 60px;
+    bottom: 50%;
+    font-size: 20px;
+    line-height: 1;
+    transform: translateY(50%);
+    color: {{ section.settings.topbar_notification_txt_color }};
+  }
+  .top-notification-bar ul li.notify-wrap .slider-text .richtext{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  @media(max-width: 1599px){
+    .notification-close-btn{
+      right: 15px;
+    }
+  }
+  @media(max-width: 1199px){
+    .top-notification-bar ul li.notify-wrap{
+      display: none;
+    }
+    .top-notification-bar ul li.notify-wrap.notify-wrap-center{
+      display: block;
+      width: 100%;
+    }
+    .top-notification-bar ul li.notify-wrap:not(:first-child) .text-wrap{
+      justify-content: center;
+    }
+  }
+  @media(max-width: 767px){
+    .top-notification-bar ul li.notify-wrap .richtext a,
+    .top-notification-bar ul li.notify-wrap .richtext p {
+      font-size: 12px;
+      flex: none;
+    }
+  }
+</style>

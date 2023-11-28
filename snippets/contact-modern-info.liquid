@@ -1,0 +1,188 @@
+<div class="contact-info-block">
+	<ul class="info-block-ul">
+		<li class="info-block-li">
+			<div class="block-info">
+				{% if settings.icon_class_1 != '' %}
+				<div class="icon">
+					<span>
+						<i class="{{ settings.icon_class_1 }}"></i>
+					</span>
+				</div>
+				{% endif %}
+				{% if settings.modern_contact_text_1 != '' %}
+				<div class="text">
+					{% if settings.title_1 != '' %}
+					<h4 class="title">{{ settings.title_1 }}</h4>
+					{% endif %}
+					<div class="text-area">
+						{{ settings.modern_contact_text_1 }}
+					</div>
+				</div>
+				{% endif %}
+			</div>
+		</li>
+		<li class="info-block-li">
+			<div class="block-info">
+				{% if settings.icon_class_2 != '' %}
+				<div class="icon">
+					<span>
+						<i class="{{ settings.icon_class_2 }}"></i>
+					</span>
+				</div>
+				{% endif %}
+				{% if settings.modern_contact_text_2 != '' %}
+				<div class="text">
+					{% if settings.title_2 != '' %}
+					<h4 class="title">{{ settings.title_2 }}</h4>
+					{% endif %}
+					<div class="text-area">
+						{{ settings.modern_contact_text_2 }}
+					</div>
+				</div>
+				{% endif %}
+			</div>
+		</li>
+		<li class="info-block-li">
+			<div class="block-info">
+				{% if settings.icon_class_3 != '' %}
+				<div class="icon">
+					<span>
+						<i class="{{ settings.icon_class_3 }}"></i>
+					</span>
+				</div>
+				{% endif %}
+				{% if settings.text_3 != '' %}
+				<div class="text">
+					{% if settings.modern_contact_text_3 != '' %}
+					<h4 class="title">{{ settings.title_3 }}</h4>
+					{% endif %}
+					<div class="text-area">
+						{{ settings.modern_contact_text_3 }}
+					</div>
+				</div>
+				{% endif %}
+			</div>
+		</li>
+	</ul>
+</div>
+
+<style>
+.contact-info-block ul.info-block-ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	{% if settings.enable_rtl %}
+    margin-right: -30px;
+    {% else %}
+    margin-left: -30px;
+    {% endif %}	
+	margin-top: -30px;
+}
+.contact-info-block ul.info-block-ul li.info-block-li {
+	width: calc(33.33% - 30px);
+	margin-top: 30px;
+	{% if settings.enable_rtl %}
+    margin-right: 30px;
+    {% else %}
+    margin-left: 30px;
+    {% endif %}
+}
+.contact-info-block ul.info-block-ul li.info-block-li .block-info {
+	text-align: center;
+}
+.contact-info-block ul.info-block-ul li.info-block-li .block-info .icon {
+	display: flex;
+	justify-content: center;
+}
+.contact-info-block ul.info-block-ul li.info-block-li .block-info .icon span {
+	background-image: var(--gradient-color);
+	font-size: 30px;
+	color: #ffffff;
+	width: 90px;
+	height: 90px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 100%;
+}
+.contact-info-block ul.info-block-ul li.info-block-li:hover .block-info .icon span {
+	background-image: var(--hover-gradient-color);
+}
+.contact-info-block ul.info-block-ul li.info-block-li .block-info .text {
+	margin-top: 38px;
+}
+.contact-info-block ul.info-block-ul li.info-block-li .block-info .text h4.title {
+	font-size: 18px;
+	line-height: 1;
+}
+.contact-info-block ul.info-block-ul li.info-block-li .block-info .text .text-area {
+	margin-top: 21px;
+}
+.contact-info-block ul.info-block-ul li.info-block-li .block-info .text .text-area p {
+	margin-top: 8px;
+}
+.contact-info-block ul.info-block-ul li.info-block-li .block-info .text .text-area p, 
+.contact-info-block ul.info-block-ul li.info-block-li .block-info .text .text-area p a {
+	color: var(--font-color-paragraph);
+	font-size: 18px;
+}
+.contact-info-block ul.info-block-ul li.info-block-li .block-info .text .text-area p a:hover {
+	background-image: var(--gradient-color);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+@media (max-width: 991px) {
+	.contact-info-block ul.info-block-ul li.info-block-li .block-info .icon span {
+		font-size: 20px;
+		width: 70px;
+		height: 70px;
+	}
+	.contact-info-block ul.info-block-ul li.info-block-li .block-info .text .text-area p,
+	.contact-info-block ul.info-block-ul li.info-block-li .block-info .text .text-area p a {
+		font-size: 16px;
+	}
+	.contact-info-block ul.info-block-ul li.info-block-li .block-info .text {
+		margin-top: 28px;
+	}
+	.contact-info-block ul.info-block-ul li.info-block-li .block-info .text .text-area {
+		margin-top: 11px;
+	}
+	.contact-info-block ul.info-block-ul li.info-block-li .block-info .text .text-area p {
+		margin-top: 2px;
+	}
+}
+@media (max-width: 600px) {
+	.contact-info-block ul.info-block-ul {
+		{% if settings.enable_rtl %}
+	    margin-right: -15px;
+	    {% else %}
+	    margin-left: -15px;
+	    {% endif %}
+	}
+	.contact-info-block ul.info-block-ul li.info-block-li {
+		width: calc(50% - 15px);
+		{% if settings.enable_rtl %}
+	    margin-right: 15px;
+	    {% else %}
+	    margin-left: 15px;
+	    {% endif %}
+	}
+}
+@media (max-width: 600px) {
+	.contact-info-block ul.info-block-ul {
+		{% if settings.enable_rtl %}
+	    margin-right: 0px;
+	    {% else %}
+	    margin-left: 0px;
+	    {% endif %}
+	}
+	.contact-info-block ul.info-block-ul li.info-block-li {
+		width: calc(100% - 0px);
+		{% if settings.enable_rtl %}
+	    margin-right: 0px;
+	    {% else %}
+	    margin-left: 0px;
+	    {% endif %}
+	}
+}
+</style>

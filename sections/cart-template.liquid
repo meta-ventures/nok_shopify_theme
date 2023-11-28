@@ -1,0 +1,270 @@
+<!-- PAGE SECTION START -->
+<section class="cart-page section-ptb">
+    {%- if cart.item_count > 0 -%}
+    <form action="/cart" method="post" enctype="multipart/form-data" novalidate>
+        <div class="container">
+            <div class="cart-item-wrap">
+                <div class="item-wrap">
+                    <ul class="grid-wrap">
+                        <li class="grid-wrapper title-list">
+                            <ul class="cart-wrap">
+                                <li class="cart-wrapper item-info">
+                                    <div class="list-title">
+                                        <h6>{{ section.settings.item_title }}</h6>
+                                    </div>
+                                </li>
+                                <li class="cart-wrapper">
+                                    <div class="list-title">
+                                        <h6>{{ section.settings.price_title }}</h6>
+                                    </div>
+                                </li>
+                                <li class="cart-wrapper">
+                                    <div class="list-title">
+                                        <h6>{{ section.settings.quantity_title }}</h6>
+                                    </div>
+                                </li>
+                                <li class="cart-wrapper">
+                                    <div class="list-title">
+                                        <h6>{{ section.settings.total_title }}</h6>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        {% for item in cart.items %}
+                        <li class="grid-wrapper">
+                            <ul class="cart-wrap">
+                                <li class="cart-wrapper item-info">
+                                    <div class="item-img">
+                                        <a href="{{ item.url }}">
+                                            <img class="img-fluid" src="{{ item | img_url: '120x120', crop: 'center' }}" width="{{ item.title.width }}" height="{{ item.title.height }}" alt="{{ item.title | escape }}" />
+                                        </a>
+                                    </div>
+                                    <div class="item-title">
+                                        <a href="{{ item.url }}">{{ item.product.title | truncate: 30 }}</a>
+                                        {%- unless item.variant.title contains 'Default' -%}
+                                        {%- for option in item.product.options -%}
+                                        <span class="item-option">
+                                            <span class="pro-variant-title">{{ option }}:</span>
+                                            <span class="pro-variant-type">{{ item.variant.options[forloop.index0] }}</span>
+                                        </span>
+                                        {%- endfor -%}
+                                        {%- endunless -%}
+                                        {% if section.settings.cart_vendor_enable %}
+                                        <span class="item-option">
+                                            <span>{{ item.vendor }}</span>
+                                        </span>
+                                        {% endif %}
+                                    </div>
+                                </li>
+                                <li class="cart-wrapper">
+                                    <div class="price-block">
+                                        <span class="item-price">{{ item.price | money }}</span>
+                                        <ul class="discounts" role="list" aria-label="{{ 'customer.order.discount' | t }}">
+                                            {%- for discount in item.discounts -%}
+                                            <li>
+                                                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-discount color-foreground-{{ settings.accent_icons }}" viewBox="0 0 12 12">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7 0h3a2 2 0 012 2v3a1 1 0 01-.3.7l-6 6a1 1 0 01-1.4 0l-4-4a1 1 0 010-1.4l6-6A1 1 0 017 0zm2 2a1 1 0 102 0 1 1 0 00-2 0z" fill="currentColor">
+                                                </svg>
+                                                {{ discount.title }} (-{{ discount.amount | money }})
+                                            </li>
+                                            {%- endfor -%}
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="cart-wrapper">
+                                    <div class="product-quantity-action">
+                                        <div class="product-quantity" data-variant="{{ item.id }}">
+                                            <div class="cart-plus-minus">
+                                                <input type="text" value="{{ item.quantity }}" name="updates[]" class="qt" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item-remove">
+                                        <span class="remove-wrap">
+                                            <a href="/cart/change?line={{ forloop.index }}&amp;quantity=0"><i class="feather-trash-2"></i></a>
+                                        </span>
+                                    </div>
+                                </li>
+                                <li class="cart-wrapper">
+                                    <span class="amount full-price">
+                                        <span class="amount full-price-{{item.id}}">{{ item.line_price | money }}</span>
+                                    </span>
+                                </li>
+                            </ul>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            <div class="cart-total-block">
+                <ul class="bottom-wrap">
+                    <li class="bottom-wrapper">
+                        {%- if section.settings.cart_notes_enable -%}
+                        <div class="bottom-block">
+                            <h6 class="block-title" for="CartSpecialInstructions">{{ 'cart.general.note' | t }}</h6>
+                            <textarea name="note" id="CartSpecialInstructions" data-cart-notes rows="8">{{ cart.note }}</textarea>
+                        </div>
+                        {%- endif -%}
+                    </li>
+                    <li class="bottom-wrapper">
+                        <div class="bottom-block">
+                            {%- if section.settings.shipping_calculator -%}
+                            {%- include 'cart-shipping-calculator' -%}
+                            {%- endif -%}
+                        </div>
+                    </li>
+                    <li class="bottom-wrapper">
+                        <div class="bottom-block">
+                            <h6 class="block-title">{{ section.settings.cart_total_title }}</h6>
+                            <div class="cart-total-wrap">
+                                <div class="cart-sub-total">
+                                    <span class="total-title">{{ section.settings.cart_total_title }}</span>
+                                    <span class="amount total-price">{{ cart.total_price | money }}</span>
+                                </div>
+                                <div class="cart-sub-total">
+                                    <p>{{ section.settings.tax_info }}</p>
+                                </div>
+                                <div class="proceed-to-checkout">
+                                    <a class="btn btn-style" href="/checkout">{{ section.settings.checkout_button_title }}</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </form>
+    {%- else -%}
+    <div class="container">
+        <div class="section-title">
+            <h2>{{ section.settings.cart_empty_title1 }}</h2>
+            <span class="desc">{{ section.settings.cart_continue_title }} <a href="/collections/all">{{ section.settings.here_title }}</a></span>
+        </div>
+    </div>
+    {%- endif -%}
+</section>
+{% schema %}
+{
+    "name": "Cart Page",
+    "settings": [
+    {
+        "type": "text",
+        "id": "item_title",
+        "label": "Item title",
+        "default": "Product item"
+    },
+    {
+        "type": "text",
+        "id": "price_title",
+        "label": "Price title",
+        "default": "Price"
+    },
+    {
+        "type": "text",
+        "id": "quantity_title",
+        "label": "Quantity title",
+        "default": "Quantity"
+    },
+    {
+        "type": "text",
+        "id": "total_title",
+        "label": "Total price title",
+        "default": "Total price"
+    },
+    {
+        "type": "checkbox",
+        "id": "cart_vendor_enable",
+        "label": "Show Product Vendor",
+        "default": false
+    },
+    {
+        "type": "header",
+        "content": "Note"
+    },
+    {
+        "type": "checkbox",
+        "id": "cart_notes_enable",
+        "label": "Show Cart Notes",
+        "default": true
+    },
+    {
+        "type": "header",
+        "content": "Shipping Calculator"
+    },
+    {
+        "type": "checkbox",
+        "id": "shipping_calculator",
+        "label": "Show shipping calculator",
+        "default": true
+    },
+    {
+        "type": "text",
+        "id": "shipping_calculator_heading",
+        "label": "Shipping Calculator Title",
+        "default": "Shipping Charge"
+    },
+    {
+        "type": "text",
+        "id": "shipping_calculator_button_title",
+        "label": "Shipping Calculator Button Title",
+        "default": "Calculate shipping"
+    },
+    {
+        "type": "text",
+        "id": "cart_note_title",
+        "label": "Cart Note Title",
+        "default": "Special instructions for seller"
+    },
+    {
+        "type": "header",
+        "content": "Cart Totals"
+    },
+    {
+        "type": "text",
+        "id": "cart_total_title",
+        "label": "Cart total title",
+        "default": "Total"
+    },
+    {
+        "type": "text",
+        "id": "checkout_button_title",
+        "label": "Checkout Button Title",
+        "default": "Proceed to Checkout"
+    },
+    {
+        "type": "header",
+        "content": "Cart Empty"
+    },
+    {
+        "type": "text",
+        "id": "cart_empty_title1",
+        "label": "Cart Empty Title1",
+        "default": "Your"
+    },
+    {
+        "type": "text",
+        "id": "cart_continue_title",
+        "label": "Continue Browsing Title",
+        "default": "Continue browsing"
+    },
+    {
+        "type": "text",
+        "id": "here_title",
+        "label": "Here Title",
+        "default": "here"
+    },
+    {
+        "type": "text",
+        "id": "tax_info",
+        "label": "Tax information",
+        "default": "Taxes and shipping calculated at checkout"
+    }
+    ]
+}
+{% endschema %}
+
+<style>
+    .cart-page .section-title {
+        text-align: center;
+    }
+</style>

@@ -1,0 +1,358 @@
+<section class="about-author-slider">
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<div class="author-main-area">
+					<div class="swiper-container" id="about-author">
+						<div class="swiper-wrapper">
+							{% for block in section.blocks %}
+							<div class="swiper-slide">
+								<div class="author-main">
+									<div class="author-image">
+										<span>
+											<img width="{{ block.settings.author_image.width }}" height="{{ block.settings.author_image.height }}" class="img-fluid" src="{% if block.settings.author_image %}{{ block.settings.author_image | img_url: 'master' }}{% else %}https://dummyimage.com/80x80/232323/999999{% endif %}" alt="">
+										</span>
+									</div>
+									<div class="author-content">
+										<div class="author-desc">
+											{% if block.settings.author_desc != '' %}
+											<h6>{{ block.settings.author_desc }}</h6>
+											{% endif %}
+										</div>
+										<div class="author-name">
+											{% if block.settings.author_name != '' %}
+											<span class="name">{{ block.settings.author_name }}</span>
+											{% endif %}
+											{% if block.settings.author_subname != '' %}
+											<span class="sub-name">{{ block.settings.author_subname }}</span>
+											{% endif %}
+										</div>
+									</div>
+								</div>
+							</div>
+							{% endfor %}
+						</div>
+					</div>
+                    <div class="swiper-buttons-other">
+                        <button class="author-button-prev"><i class="ri-arrow-left-line"></i></button>
+                        <button class="author-button-next"><i class="ri-arrow-right-line"></i></button>
+                    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<script>
+addEventListener('DOMContentLoaded', (event) => {
+    var swiper = new Swiper('.swiper-container#about-author', { 
+      slidesPerColumn: 1,
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      observer: true,
+      observeParents: true,
+      navigation: {
+        nextEl: '.author-button-next',
+        prevEl: '.author-button-prev',
+      },
+      {%- if settings.enable_rtl -%}
+      rtl: true,
+      {%- endif -%}
+    });
+});
+</script>
+
+{% schema %}
+{
+  "name": "About us Section 3",
+  "settings": [
+  	{
+        "type": "header",
+        "content": "Section Padding"
+    },
+    {
+        "type" : "paragraph",
+        "content" : "Desktop / Laptop / tablet"
+    },
+    {
+        "type": "range",
+        "id": "about_product_padding_top",  
+        "label": "Section Padding Top",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "default": 100
+    },           
+    {
+        "type": "range",
+        "id": "about_product_padding_bottom", 
+        "label": "Section Padding Bottom",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "default": 100
+    },
+    {
+        "type" : "paragraph",
+        "content" : "Ipad pro / Ipad"
+    },
+    {
+        "type": "range",
+        "id": "about_product_padding_top_ip",  
+        "label": "Section Padding Top",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "default": 80
+    },           
+    {
+        "type": "range",
+        "id": "about_product_padding_bottom_ip", 
+        "label": "Section Padding Bottom",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "default": 80
+    },
+    {
+        "type" : "paragraph",
+        "content" : "Mobile"
+    },
+    {
+        "type": "range",
+        "id": "about_product_padding_top_xs",  
+        "label": "Section Padding Top",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "default": 60
+    },           
+    {
+        "type": "range",
+        "id": "about_product_padding_bottom_xs", 
+        "label": "Section Padding Bottom",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "default": 60
+    },
+    {
+        "type": "header",
+        "content": "Section Background Color"
+    },
+    {
+        "type": "checkbox",
+        "id": "about_product_bgcolor_enable",
+        "label": "Show Background Color",
+        "default": true
+    },
+    {
+        "type": "color",
+        "id": "about_product_bgcolor",
+        "label": "Background Color",
+        "default": "#FFFFFF"
+    }
+  ],
+  "blocks":[
+  {
+    "type": "about_author",
+    "name": "About Author",
+    "settings": [
+	    {
+	        "type": "header",
+	        "content": "Author Image"
+	    },
+    	{
+          "type": "image_picker",
+          "id": "author_image",
+          "label": "Author Image",
+          "info": "Recommended Size: 80px x 80px"
+        },
+        {
+	        "type": "header",
+	        "content": "Author Content"
+	    },
+        {
+          "type": "textarea",
+          "id": "author_desc",
+          "label": "Description",
+          "default": "It is not your customer's job to remember you, it is your obligation and responsibility to make sure they don't have the chance to forget you."
+        },
+        {
+          "type": "text",
+          "id": "author_name",
+          "label": "Author Name",
+          "default": "Wendy watson"
+        },
+        {
+          "type": "text",
+          "id": "author_subname",
+          "label": "Author Sub Name",
+          "default": "Product"
+        }
+    ]
+  }
+  ],
+  "presets":[
+  {
+    "name": "About us Section 3",
+    "category": "About us Section 3"
+  }
+  ]
+}
+{% endschema %}
+
+<style>
+.about-author-slider {
+    padding-top: {{ section.settings.about_product_padding_top }}px;
+    padding-bottom: {{ section.settings.about_product_padding_bottom }}px;
+    {% if section.settings.about_product_bgcolor_enable %}
+    background-color: {{ section.settings.about_product_bgcolor }};
+    {% endif %}
+}
+@media (max-width: 1199px) {
+    .about-author-slider {
+        padding-top: {{ section.settings.about_product_padding_top_ip }}px;
+        padding-bottom: {{ section.settings.about_product_padding_bottom_ip }}px;
+    }
+}
+@media (max-width: 767px) {
+    .about-author-slider {
+        padding-top: {{ section.settings.about_product_padding_top_xs }}px;
+        padding-bottom: {{ section.settings.about_product_padding_bottom_xs }}px;
+    }
+}
+
+.about-author-slider .author-main-area {
+    position: relative;
+    width: 45%;
+    margin: 0 auto;
+}
+.about-author-slider .author-main-area .author-main {
+    text-align: center;    
+}
+.about-author-slider .author-main-area .author-main .author-image span {
+    border: 8px solid #ffffff;
+    border-radius: 100%;
+    overflow: hidden;
+}
+.about-author-slider .author-main-area .author-main .author-content {
+    margin-top: 34px;
+}
+.about-author-slider .author-main-area .author-main .author-content .author-desc h6 {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 40px;
+}
+.about-author-slider .author-main-area .author-main .author-content .author-name {
+    margin-top: 36px;
+}
+.about-author-slider .author-main-area .author-main .author-content .author-name span {
+    font-size: 18px;
+    line-height: 1;
+    font-weight: 300;
+}
+.about-author-slider .author-main-area .author-main .author-content .author-name span.name {
+    position: relative;
+    {% if settings.enable_rtl %}
+    margin-left: 15px;
+    padding-left: 15px;
+    {% else %}
+    margin-right: 15px;
+    padding-right: 15px;
+    {% endif %}
+}
+.about-author-slider .author-main-area .author-main .author-content .author-name span.name::before {
+    content: '/';
+    position: absolute;
+    bottom: 50%;
+    transform: translateY(50%);
+    {% if settings.enable_rtl %}
+    left: -4px;
+    {% else %}
+    right: -4px;
+    {% endif %}
+    font-size: 20px;
+    font-weight: 400;
+}
+.swiper-buttons-other button.author-button-prev {
+    {% if settings.enable_rtl %}
+    right: -150px;
+    {% else %}
+    left: -150px;
+    {% endif %}
+} 
+.swiper-buttons-other button.author-button-next {
+    {% if settings.enable_rtl %}
+    left: -150px;
+    {% else %}
+    right: -150px;
+    {% endif %}
+}
+@media (max-width: 1199px) {
+    .about-author-slider .author-main-area {
+        width: 60%;
+    }
+    .about-author-slider .author-main-area .author-main .author-content .author-desc h6 {
+        font-size: 22px;
+    }
+    .swiper-buttons-other button.author-button-prev {
+        {% if settings.enable_rtl %}
+        right: -100px;
+        {% else %}
+        left: -100px;
+        {% endif %}
+    } 
+    .swiper-buttons-other button.author-button-next {
+        {% if settings.enable_rtl %}
+        left: -100px;
+        {% else %}
+        right: -100px;
+        {% endif %}        
+    }
+}
+@media (max-width: 991px) {
+    .about-author-slider .author-main-area {
+        width: 75%;
+    } 
+}
+@media (max-width: 600px) {
+    .about-author-slider .author-main-area {
+        width: 100%;
+    }
+    .about-author-slider .author-main-area .author-main .author-content {
+        margin-top: 18px;
+    }
+    .about-author-slider .author-main-area .author-main .author-content .author-desc h6 {
+        font-size: 18px;
+        line-height: 30px;
+    }
+    .about-author-slider .author-main-area .author-main .author-content .author-name {
+        margin-top: 19px;
+    }
+    .about-author-slider .author-main-area .author-main .author-content .author-name span {
+        font-size: 16px;
+    }
+    .swiper-buttons-other button.author-button-prev {
+        {% if settings.enable_rtl %}
+        right: 0px;
+        {% else %}
+        left: 0px;
+        {% endif %}
+    } 
+    .swiper-buttons-other button.author-button-next {
+        {% if settings.enable_rtl %}
+        left: 0px;
+        {% else %}
+        right: 0px;
+        {% endif %}        
+    }
+}
+</style>

@@ -1,0 +1,148 @@
+<section class="related-blog section-ptb">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="section-capture">
+                    <div class="section-title">
+                        <div class="section-cont-title">
+
+                            {% if section.settings.related_blog_title !='' %}
+                            <h2>
+                                <span>{{ section.settings.related_blog_title }}</span>
+                            </h2>
+                            {% endif %}
+                        </div>
+
+                        {% if section.settings.related_blog_desc !='' %}
+                        <p>{{ section.settings.related_blog_desc }}</p>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="blog-slider owl-carousel owl-theme" id="related-blog-slider">
+                    {% assign currentHandle = article.handle %}
+                    {% assign articlesFound = 0 %}
+                    {% for addin in blogs[blog.handle].articles %}
+                    {% unless addin.handle == currentHandle %}
+                    <div class="item">
+                        {% include 'related-blog' %}
+                    </div>
+                    {% assign articlesFound = articlesFound | plus: 1 %}
+                    {% endunless %}
+                    {% endfor %}
+                </div>                    
+            </div>
+        </div>
+    </div>
+</section>
+<script type="text/javascript">
+    addEventListener('DOMContentLoaded', (event) => {
+        $('#related-blog-slider').owlCarousel({
+        loop: false,
+        rewind: true,
+        margin: 30,
+        nav: true,
+        navText: ['<i class="ri-arrow-left-line"></i>','<i class="ri-arrow-right-line"></i>'],
+        dots: false,
+        {%- if settings.enable_rtl -%}
+        rtl: true,
+        {%- endif -%}
+        autoplay: true,
+        autoplayTimeout: 5000,
+        autoplayHoverPause: true,
+        responsive:{
+          0:{
+            items: 1,
+            margin: 15
+          },
+          479:{
+            items: 1,
+            margin: 15
+          },
+          768:{
+            items: 2
+          },
+          979:{
+            items: 2
+          },
+          1199: {
+            items: 3
+          }
+        }
+        });
+    });
+</script>
+{% schema %}
+{
+    "name": "Related Blog",
+    "settings": [
+    {
+        "type" : "header",
+        "content" : "Section Background Color"
+    },
+    {
+        "type" : "color",
+        "id" : "related_blog_bgcolor",
+        "label" : "Background Color",
+        "default" : "#f6f6f6"
+    },
+    {
+        "type" : "checkbox",
+        "id" : "related_blog_enable",
+        "label" : "Show Backgorund Color",
+        "default" : true
+    },
+    {
+        "type" : "header",
+        "content" : "Section Border"
+    },
+    {
+        "type": "range",
+        "id": "related_blog_border",
+        "label": "Border",
+        "min": 0,
+        "max": 2,
+        "step": 1,
+        "unit": "px",
+        "default": 1
+    },
+    {
+        "type": "color",
+        "id": "related_blog_border_color",
+        "label": "Border Color",
+        "default": "#E2E2E2"
+    },
+    {
+        "type" : "checkbox",
+        "id" : "related_blog_border_enable",
+        "label" : "Show Section Border",
+        "default" : true
+    },
+    {
+        "type" : "header",
+        "content" : "Section Content"
+    },
+    {
+        "type": "text",
+        "id": "related_blog_title",
+        "label": "Title",
+        "default": "Related blog"
+    },
+    {
+        "type": "textarea",
+        "id": "related_blog_desc",
+        "label": "Description",
+        "default": "Lorem Ipsum is printing & typesetting industry's standard dummy text since texts"
+    }
+    ]
+}
+{% endschema %}
+<style>
+    .related-blog{
+        {% if section.settings.related_blog_enable %}
+        background-color: {{ section.settings.related_blog_bgcolor }};
+        {% endif %}
+        {% if section.settings.related_blog_border_enable %}
+        border-top: {{ section.settings.related_blog_border }}px solid {{ section.settings.related_blog_border_color }};
+        {% endif %}
+    }
+</style>

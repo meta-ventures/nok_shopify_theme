@@ -1,0 +1,151 @@
+<section class="return-image-area">
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<div class="return-image">
+					<span>
+						<img width="{{ section.settings.return_image.width }}" height="{{ section.settings.return_image.height }}" class="img-fluid" src="{% if section.settings.return_image %}{{ section.settings.return_image | img_url: 'master' }}{% else %}https://dummyimage.com/1350x550/f7f7f7/999999{% endif %}" alt="">
+					</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+{% schema %}
+{
+  "name": "Return Policy Image",
+  "settings": [
+  	{
+        "type": "header",
+        "content": "Section Padding"
+    },
+    {
+        "type" : "paragraph",
+        "content" : "Desktop / Laptop / tablet"
+    },
+    {
+        "type": "range",
+        "id": "about_product_padding_top",  
+        "label": "Section Padding Top", 
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "unit": "px",
+        "default": 0
+    },           
+    {
+        "type": "range",
+        "id": "about_product_padding_bottom", 
+        "label": "Section Padding Bottom",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "unit": "px",
+        "default": 0
+    },
+    {
+        "type" : "paragraph",
+        "content" : "Ipad pro / Ipad"
+    },
+    {
+        "type": "range",
+        "id": "about_product_padding_top_ip",  
+        "label": "Section Padding Top",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "unit": "px",
+        "default": 0
+    },           
+    {
+        "type": "range",
+        "id": "about_product_padding_bottom_ip", 
+        "label": "Section Padding Bottom",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "unit": "px",
+        "default": 0
+    },
+    {
+        "type" : "paragraph",
+        "content" : "Mobile"
+    },
+    {
+        "type": "range",
+        "id": "about_product_padding_top_xs",  
+        "label": "Section Padding Top",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "unit": "px",
+        "default": 0
+    },           
+    {
+        "type": "range",
+        "id": "about_product_padding_bottom_xs", 
+        "label": "Section Padding Bottom",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "unit": "px",
+        "default": 0
+    },
+    {
+        "type": "header",
+        "content": "Section Background Color"
+    },
+    {
+        "type": "checkbox",
+        "id": "about_product_bgcolor_enable",
+        "label": "Show Background Color",
+        "default": false
+    },
+    {
+        "type": "color",
+        "id": "about_product_bgcolor",
+        "label": "Background Color",
+        "default": "#FFFFFF"
+    },
+    {
+        "type": "header",
+        "content": "Faq Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "return_image",
+      "label": "Return Image",
+      "info": "Recommended Size: 1350px x 550px"
+    }
+  ],
+  "presets":[
+  {
+    "name": "Return Policy Image",
+    "category": "Return Policy Image"
+  }
+  ]
+}
+{% endschema %}
+<style>
+.return-image-area {
+    position: relative;
+    padding-top: {{ section.settings.about_product_padding_top }}px;
+    padding-bottom: {{ section.settings.about_product_padding_bottom }}px;
+    {% if section.settings.about_product_bgcolor_enable %}
+    background-color: {{ section.settings.about_product_bgcolor }};
+    {% endif %}
+}
+@media (max-width: 1199px) {
+    .return-image-area {
+        padding-top: {{ section.settings.about_product_padding_top_ip }}px;
+        padding-bottom: {{ section.settings.about_product_padding_bottom_ip }}px;
+    }
+}
+@media (max-width: 767px) {
+    .return-image-area {
+        padding-top: {{ section.settings.about_product_padding_top_xs }}px;
+        padding-bottom: {{ section.settings.about_product_padding_bottom_xs }}px;
+    }
+}
+</style>

@@ -1,0 +1,184 @@
+{% unless template == 'index' or template == 'product' or template == 'product.template2' or template == 'product.template3' or template == 'product.template4' or template == 'product.template5' or template == 'product.template6' or template == 'product.template7' or template == 'product.template8' or template == 'search' %}
+<div class="breadcrumb-main-area">
+  <ul class="breadcrumb-list">
+
+    <li class="breadcrumb-item">
+      <a href="/" title="{{ 'general.breadcrumbs.home_link_title' | t }}">{{ 'general.breadcrumbs.home' | t }}</a>
+    </li>
+    {% if template contains 'product' or template contains 'product.template2' or template contains 'product.template3' or template contains 'product.template4' or template contains 'product.template5' or template contains 'product.template6' or template contains 'product.template7' or template contains 'product.template8' %}
+
+    {% comment %}
+    {% if collection %}
+    {% if collection.handle %}
+    {% capture url %}/collections/{{ collection.handle }}{% endcapture %}
+    <li class="breadcrumb-item">
+      {{ collection.title | link_to: url }}
+    </li>
+    {% endif %}
+    {% endif %}
+    {% endcomment %}
+
+    {% elsif template contains 'collection' and collection.handle %}
+
+
+    {% if current_tags %}
+    {% capture url %}/collections/{{ collection.handle }}{% endcapture %}
+    <li class="breadcrumb-item">
+      {{ collection.title | link_to: url }}
+    </li>
+
+    <li class="breadcrumb-item">
+      <span>{{ current_tags | join: " + " | replace: "tags_", "#" }}</span>
+    </li>
+
+    {% else %}
+    <li class="breadcrumb-item">
+      <span>{{ collection.title }}</span>
+    </li>
+    {% endif %}
+
+    {% elsif template == 'blog' or template == 'blog.left' or template == 'blog.right' %}
+    <li class="breadcrumb-item">
+      <span>{{ blog.title }}</span>
+    </li>
+
+    {% comment %}
+    {% if current_tags %}
+    <li class="breadcrumb-item">
+      {{ blog.title | link_to: blog.url }}
+    </li>
+    <li class="breadcrumb-item">
+      <span>{{ current_tags | join: " + " }}</span>
+    </li>
+    {% else %}
+    <li class="breadcrumb-item">
+      <span>{{ blog.title }}</span>
+    </li>
+    {% endif %}
+    {% endcomment %}
+
+
+    {% elsif template == 'article' or template == 'article.left' or template == 'article.right' %}
+
+    <li class="breadcrumb-item">
+      {{ blog.title | link_to: blog.url }}
+    </li>
+
+    {% comment %}
+    <li class="breadcrumb-item">
+      <span>{{ article.title | truncate: 30 }}</span>
+    </li>
+    {% endcomment %}
+
+    {% elsif template contains 'page' %}
+
+    <li class="breadcrumb-item">
+      <span>{{ page.title }}</span>
+    </li>
+
+    {% else %}
+
+    <li class="breadcrumb-item">
+      <span>{{ page_title }}</span>
+    </li>
+
+    {% endif %}
+  </ul>
+  <ul class="breadcrumb-main-title">
+    <li class="breadcrumb-item">
+      <h2>{{ page_title }}</h2>
+    </li>
+  </ul>
+</div>
+
+{% endunless %}
+<style>
+  .breadcrumb-main-area {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .breadcrumb-main-area ul.breadcrumb-list{
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .breadcrumb-main-area ul.breadcrumb-list li{
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    position: relative;
+    {% if settings.enable_rtl %}
+    padding-left: 20px;
+    margin-left: 20px;
+    {% else %}
+    padding-right: 20px;
+    margin-right: 20px;
+    {% endif %}
+  }
+  .breadcrumb-main-area ul.breadcrumb-list li:last-child{
+    {% if settings.enable_rtl %}
+    padding-left: 0px;
+    margin-left: 0px;
+    {% else %}
+    padding-right: 0px;
+    margin-right: 0px;
+    {% endif %}
+  }
+  .breadcrumb-main-area ul.breadcrumb-list li::after{
+    font-size: 18px;
+    font-weight: 500;
+    content: "/";
+    position: absolute;
+    {% if settings.enable_rtl %}
+    left: -5px;
+    {% else %}
+    right: -5px;
+    {% endif %}  
+  }
+  .breadcrumb-main-area ul.breadcrumb-list li:last-child::after{
+    display: none;
+  }
+  .breadcrumb-main-area ul.breadcrumb-list li.breadcrumb-item + li.breadcrumb-item{
+    padding-left: 0;
+  }
+  .breadcrumb-main-area ul.breadcrumb-list li.breadcrumb-item + li.breadcrumb-item::before{
+    content: "";
+    display: block;
+    padding-right: 0;
+  }
+  .breadcrumb-main-area ul.breadcrumb-list li a,
+  .breadcrumb-main-area ul.breadcrumb-list li span{
+    text-transform: capitalize;
+    line-height: 1;
+  }
+  .breadcrumb-main-area ul.breadcrumb-list li a{
+    -webkit-transition: all 0s ease-in-out 0s;
+    -o-transition: all 0s ease-in-out 0s;
+    transition: all 0s ease-in-out 0s;
+  }
+  .breadcrumb-main-area ul.breadcrumb-main-title li.breadcrumb-item h2 {
+    font-size: 36px;
+    line-height: 1;
+  }  
+  @media (max-width: 1199px) {
+    .breadcrumb-main-area ul.breadcrumb-main-title li.breadcrumb-item h2 {
+      font-size: 28px;
+    }
+  }
+  @media (max-width: 600px) {
+    .breadcrumb-main-area ul.breadcrumb-main-title li.breadcrumb-item h2 {
+      font-size: 20px;
+    }
+  }
+  @media (max-width: 320px) {
+    .breadcrumb-main-area {
+      flex-direction: column;
+    }
+    .breadcrumb-main-area ul.breadcrumb-main-title {
+      margin-top: 18px;
+    } 
+  }
+</style>
