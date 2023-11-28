@@ -45,7 +45,6 @@
     "tag_border_radius": 5,
     "newsletter_popup_enable": true,
     "one_day_popup_enable": true,
-    "newsletter_bgimg": "shopify:\/\/shop_images\/DALL_E_2023-11-28_23.05.07_-_Create_a_clean_and_modern_background_image_for_a_newsletter_subscription_popup._The_image_should_be_minimalist_with_an_abstract_design_that_includes_s.png",
     "newsletter_bgimg_enable": false,
     "newsletter_bgcolor": "#ffffff",
     "newsletter_text": "<p>Subscribe to get 10% off on<\/p><p>your next purchase!<\/p>",
@@ -56,10 +55,9 @@
     "acc_login_title": "Hello, sign in",
     "acc_register_title": "Account",
     "body_logo_svg_code": "",
-    "body_logo_svg": "",
-    "company_logo": "shopify:\/\/shop_images\/logo_1.png",
+    "body_logo_svg": "logo.svg",
     "company_logo_sticky": "shopify:\/\/shop_images\/logo_1.png",
-    "logo_max_width": 110,
+    "logo_max_width": 105,
     "footer_logo_svg_code": "",
     "footer_logo_svg": "",
     "footer_logo": "shopify:\/\/shop_images\/logo-white.png",
@@ -1019,7 +1017,7 @@
           "foot_bt_border": 1,
           "foot_bt_border_color": "#e2e2e2",
           "foot_bt_border_enable": false,
-          "copy_right_text1": "<p>© 2022 Budo, All rights reserved<\/p>"
+          "copy_right_text1": "<p>© 2023 NOK Cards. All rights reserved<\/p>"
         }
       },
       "special-category": {

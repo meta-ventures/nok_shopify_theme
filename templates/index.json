@@ -1,1 +1,359 @@
-{"sections":{"1646205661c30791db":{"type":"slider","blocks":{"4f5c2dd7-3445-494c-9535-36efc312feda":{"type":"slide","settings":{"slider_bg_img":"shopify:\/\/shop_images\/budo-drone-slider-01.jpg","slider_img_enable":false,"slider_title":"Introduce the rimonting drone","slider_title_color":"#1c1c1c","slider_desc":"Compact drone with 4.5k 65fps 45min battery average life + 55 mph speed","slider_desc_color":"#616161","price_1":"$1450.00","price_1_color":"#1c1c1c","price_2":"$999.00","price_2_color":"#1c1c1c","slider_button":"Buy now","slider_button_url":"shopify:\/\/collections\/drone-motor","slider_content_position":"left","slider_text_position":"left"}},"b4f1b1d6-da3f-436b-a651-63f35423932c":{"type":"slide","settings":{"slider_bg_img":"shopify:\/\/shop_images\/budo-drone-slider-02.jpg","slider_img_enable":false,"slider_title":"Introduce the rimonting drone","slider_title_color":"#1c1c1c","slider_desc":"Compact drone with 4.5k 65fps 45min battery average life + 55 mph speed","slider_desc_color":"#616161","price_1":"$1450.00","price_1_color":"#1c1c1c","price_2":"$999.00","price_2_color":"#1c1c1c","slider_button":"Buy now","slider_button_url":"shopify:\/\/collections\/flash-light","slider_content_position":"left","slider_text_position":"left"}}},"block_order":["4f5c2dd7-3445-494c-9535-36efc312feda","b4f1b1d6-da3f-436b-a651-63f35423932c"],"custom_css":[],"settings":{"slider_arrow_enable":false,"prev_title":"Prev","next_title":"Next"}},"our-services":{"type":"our-services","blocks":{"1a7d4c95-6709-48ce-8e55-f109869fe74b":{"type":"our_services","settings":{"ser_url":"","service_icon":"feather-battery-charging","service_title":"How to use battery","service_desc":"Lorem Ipsum is simply dummy text of the printing typesetting industry lorem Ipsum."}},"1ed917c6-5e5d-4655-a544-6b4ecc37ba6f":{"type":"our_services","settings":{"ser_url":"","service_icon":"feather-play-circle","service_title":"How to use battery","service_desc":"Lorem Ipsum is simply dummy text of the printing typesetting industry lorem Ipsum."}},"8e11241f-cd97-4cc2-932f-71d876a8686e":{"type":"our_services","settings":{"ser_url":"","service_icon":"feather-settings","service_title":"How to use battery","service_desc":"Lorem Ipsum is simply dummy text of the printing typesetting industry lorem Ipsum."}}},"block_order":["1a7d4c95-6709-48ce-8e55-f109869fe74b","1ed917c6-5e5d-4655-a544-6b4ecc37ba6f","8e11241f-cd97-4cc2-932f-71d876a8686e"],"settings":{"our_ser_padding_top":100,"our_ser_padding_bottom":100,"our_ser_padding_top_ip":80,"our_ser_padding_bottom_ip":80,"our_ser_padding_top_xs":60,"our_ser_padding_bottom_xs":60,"section_bg_image_enable":false,"section_bg_color_enable":true,"section_bg_color":"#f6f6f6","section_subtitle":"Controller","section_title":"How it works"}},"16518975131ca62b36":{"type":"video-banner","settings":{"section_padding_top":100,"section_padding_bottom":100,"section_padding_top_ip":80,"section_padding_bottom_ip":80,"section_padding_top_xs":60,"section_padding_bottom_xs":60,"section_bg_image_enable":true,"section_bg_image":"shopify:\/\/shop_images\/budo-drone-video-img.jpg","section_bg_color_enable":false,"section_bg_color":"#ffffff","video_title":"Best quality of video shoot","video_title_color":"#ffffff","video_desc":"There is only you and your camera.\nThe limitations in your photography\nare in yourself","video_desc_color":"#ffffff","video_icon":"feather-play","video_btn_text":"Watch video","video_url":"https:\/\/www.youtube-nocookie.com\/embed\/DeksxqY7kF4"}},"eeaa7f00-3a9f-451a-8378-3b14498f4877":{"type":"special-category","settings":{"category_special_padding_top":100,"category_special_padding_bottom":100,"category_special_padding_top_ip":80,"category_special_padding_bottom_ip":80,"category_special_padding_top_xs":60,"category_special_padding_bottom_xs":60,"section_bg_image_enable":false,"section_bg_color_enable":true,"section_bg_color":"#f6f6f6","section_subtitle":"Best seller","section_title":"Drone products","product_col":"1","slide_product_limit":"4","category_special_product_limit_handle":"10","special_label_product":"drone-kit"}},"165215715878050227":{"type":"banner-grid2","settings":{"section_padding_top":100,"section_padding_bottom":100,"section_padding_top_ip":80,"section_padding_bottom_ip":80,"section_padding_top_xs":60,"section_padding_bottom_xs":60,"offer_banner_bg_image_enable":true,"section_bg_image":"shopify:\/\/shop_images\/budo-drone-banner.png","section_bg_color_enable":false,"section_bg_color":"#f6f6f6","image_banner":"shopify:\/\/shop_images\/Untitled-1.png","banner_title":"Buy our awesome drone","banner_title_color":"#ffffff","banner_desc":"Portable yet powerful, the nexa pro is your personal drone ready to go with you everywhere.","banner_desc_color":"#ffffff","banner_price_label":"Price only:","banner_price_text":"$999.00","banner_price_color":"#ffffff","banner_btn_1_text":"Buy now","banner_btn_1_icon":"<svg viewbox=\"0 0 24 24\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"css-i6dzq1\"><circle cx=\"9\" cy=\"21\" r=\"1\"><\/circle><circle cx=\"20\" cy=\"21\" r=\"1\"><\/circle><path d=\"M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6\"><\/path><\/svg>","banner_btn_1_url":"shopify:\/\/collections\/all","banner_btn_2_icon":"<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"2.167 .438 251.038 259.969\"><g fill=\"none\" fill-rule=\"evenodd\"><path d=\"m221.503 210.324c-105.235 50.083-170.545 8.18-212.352-17.271-2.587-1.604-6.984.375-3.169 4.757 13.928 16.888 59.573 57.593 119.153 57.593 59.621 0 95.09-32.532 99.527-38.207 4.407-5.627 1.294-8.731-3.16-6.872zm29.555-16.322c-2.826-3.68-17.184-4.366-26.22-3.256-9.05 1.078-22.634 6.609-21.453 9.93.606 1.244 1.843.686 8.06.127 6.234-.622 23.698-2.826 27.337 1.931 3.656 4.79-5.57 27.608-7.255 31.288-1.628 3.68.622 4.629 3.68 2.178 3.016-2.45 8.476-8.795 12.14-17.774 3.639-9.028 5.858-21.622 3.71-24.424z\" fill=\"#f90\" fill-rule=\"nonzero\"><\/path><path d=\"m150.744 108.13c0 13.141.332 24.1-6.31 35.77-5.361 9.489-13.853 15.324-23.341 15.324-12.952 0-20.495-9.868-20.495-24.432 0-28.75 25.76-33.968 50.146-33.968zm34.015 82.216c-2.23 1.992-5.456 2.135-7.97.806-11.196-9.298-13.189-13.615-19.356-22.487-18.502 18.882-31.596 24.527-55.601 24.527-28.37 0-50.478-17.506-50.478-52.565 0-27.373 14.85-46.018 35.96-55.126 18.313-8.066 43.884-9.489 63.43-11.718v-4.365c0-8.018.616-17.506-4.08-24.432-4.128-6.215-12.003-8.777-18.93-8.777-12.856 0-24.337 6.594-27.136 20.257-.57 3.037-2.799 6.026-5.835 6.168l-32.735-3.51c-2.751-.618-5.787-2.847-5.028-7.07 7.543-39.66 43.36-51.616 75.43-51.616 16.415 0 37.858 4.365 50.81 16.795 16.415 15.323 14.849 35.77 14.849 58.02v52.565c0 15.798 6.547 22.724 12.714 31.264 2.182 3.036 2.657 6.69-.095 8.966-6.879 5.74-19.119 16.415-25.855 22.393l-.095-.095\" fill=\"#000\"><\/path><path d=\"m221.503 210.324c-105.235 50.083-170.545 8.18-212.352-17.271-2.587-1.604-6.984.375-3.169 4.757 13.928 16.888 59.573 57.593 119.153 57.593 59.621 0 95.09-32.532 99.527-38.207 4.407-5.627 1.294-8.731-3.16-6.872zm29.555-16.322c-2.826-3.68-17.184-4.366-26.22-3.256-9.05 1.078-22.634 6.609-21.453 9.93.606 1.244 1.843.686 8.06.127 6.234-.622 23.698-2.826 27.337 1.931 3.656 4.79-5.57 27.608-7.255 31.288-1.628 3.68.622 4.629 3.68 2.178 3.016-2.45 8.476-8.795 12.14-17.774 3.639-9.028 5.858-21.622 3.71-24.424z\" fill=\"#f90\" fill-rule=\"nonzero\"><\/path><path d=\"m150.744 108.13c0 13.141.332 24.1-6.31 35.77-5.361 9.489-13.853 15.324-23.341 15.324-12.952 0-20.495-9.868-20.495-24.432 0-28.75 25.76-33.968 50.146-33.968zm34.015 82.216c-2.23 1.992-5.456 2.135-7.97.806-11.196-9.298-13.189-13.615-19.356-22.487-18.502 18.882-31.596 24.527-55.601 24.527-28.37 0-50.478-17.506-50.478-52.565 0-27.373 14.85-46.018 35.96-55.126 18.313-8.066 43.884-9.489 63.43-11.718v-4.365c0-8.018.616-17.506-4.08-24.432-4.128-6.215-12.003-8.777-18.93-8.777-12.856 0-24.337 6.594-27.136 20.257-.57 3.037-2.799 6.026-5.835 6.168l-32.735-3.51c-2.751-.618-5.787-2.847-5.028-7.07 7.543-39.66 43.36-51.616 75.43-51.616 16.415 0 37.858 4.365 50.81 16.795 16.415 15.323 14.849 35.77 14.849 58.02v52.565c0 15.798 6.547 22.724 12.714 31.264 2.182 3.036 2.657 6.69-.095 8.966-6.879 5.74-19.119 16.415-25.855 22.393l-.095-.095\" fill=\"#000\"><\/path><\/g><\/svg>","banner_btn_2_text":"Buy amazon","banner_btn_2_url":"shopify:\/\/products\/budo-non-combat-large-drones-for-300-m"}},"1651906337f627fe84":{"type":"feature-info","blocks":{"58e691b2-b873-44aa-a8a1-3191654f6271":{"type":"service_item","settings":{"service_column_reverse":true,"service_image_icon_1":"shopify:\/\/shop_images\/budo-drone-features-icon-01.png","service_1_title":"Mobile holder","service_1_desc":"Best part about drone aerial photography perspective!","service_image_icon_2":"shopify:\/\/shop_images\/budo-drone-features-icon-02.png","service_2_title":"Long battery","service_2_desc":"Best part about drone aerial photography perspective!","service_image_icon_3":"shopify:\/\/shop_images\/budo-drone-features-icon-03.png","service_3_title":"4K camera","service_3_desc":"Best part about drone aerial photography perspective!"}},"df5650a4-0e2f-47e0-bb16-b93cf46ccf10":{"type":"service_image","settings":{"feature_image":"shopify:\/\/shop_images\/budo-drone-features.png"}},"0e6837e0-1603-47b2-8800-728228b9a7b0":{"type":"service_item","settings":{"service_column_reverse":false,"service_image_icon_1":"shopify:\/\/shop_images\/budo-drone-features-icon-04.png","service_1_title":"High speed","service_1_desc":"Best part about drone aerial photography perspective!","service_image_icon_2":"shopify:\/\/shop_images\/budo-drone-features-icon-05.png","service_2_title":"Easy to fly sky","service_2_desc":"Best part about drone aerial photography perspective!","service_image_icon_3":"shopify:\/\/shop_images\/budo-drone-features-icon-06.png","service_3_title":"Customized control","service_3_desc":"Best part about drone aerial photography perspective!"}}},"block_order":["58e691b2-b873-44aa-a8a1-3191654f6271","df5650a4-0e2f-47e0-bb16-b93cf46ccf10","0e6837e0-1603-47b2-8800-728228b9a7b0"],"settings":{"section_padding_top":0,"section_padding_bottom":100,"section_padding_top_ip":0,"section_padding_bottom_ip":80,"section_padding_top_xs":0,"section_padding_bottom_xs":60,"section_bg_image_enable":false,"section_bg_color_enable":false,"section_bg_color":"#f8f8f8","section_subtitle":"Unique features","section_title":"why for spacial"}},"165218770966e89aa3":{"type":"feature-counter","blocks":{"dcd7a73d-5142-4da8-958a-fc24b8256c21":{"type":"feature_counter","settings":{"feature_item_title":"Packages","feature_item_number":"6,500","feature_item_number_title":"m","feature_item_desc":"Lorem Ipsum simply dummy printing typeset industry"}},"1495a69a-fe5f-41cf-988f-c7018bc9cb02":{"type":"feature_counter","settings":{"feature_item_title":"Satisfied","feature_item_number":"6005","feature_item_number_title":"clients","feature_item_desc":"Lorem Ipsum simply dummy printing typeset industry"}},"4c0044bf-889e-48bc-901d-e4790ea0fe2c":{"type":"feature_counter","settings":{"feature_item_title":"Covered","feature_item_number":"96","feature_item_number_title":"countries","feature_item_desc":"Lorem Ipsum simply dummy printing typeset industry"}},"8d47de1a-a725-4617-a932-975ede5219ac":{"type":"feature_counter","settings":{"feature_item_title":"drone great","feature_item_number":"18","feature_item_number_title":"+ awards","feature_item_desc":"Lorem Ipsum simply dummy printing typeset industry"}}},"block_order":["dcd7a73d-5142-4da8-958a-fc24b8256c21","1495a69a-fe5f-41cf-988f-c7018bc9cb02","4c0044bf-889e-48bc-901d-e4790ea0fe2c","8d47de1a-a725-4617-a932-975ede5219ac"],"settings":{"section_padding_top":100,"section_padding_bottom":100,"section_padding_top_ipad":80,"section_padding_bottom_ipad":80,"section_padding_top_xs":60,"section_padding_bottom_xs":60,"section_border_enable":true,"section_title":"achievements","section_title_bg_image_enable":true,"section_title_bg_image":"shopify:\/\/shop_images\/Untitled-1_3216af3b-6095-48b6-836c-e8ca0a72ab18.png","section_title_after_before_image_enable":true,"section_title_after_before_image":"shopify:\/\/shop_images\/title-bg-png.png"}},"1652247691ba697e15":{"type":"testimonial","blocks":{"157858e3-bd81-4fce-9783-a8dd933441de":{"type":"single_slide","settings":{"testi_desc_review":"A drone is a high-tech version of an old army and a musket. It ought\nto be used in Somalia to hunt bad guys, but not in America. I don’t\nwant to see it hovering over anybody’s home.","testi_review_icon":"fa fa-star","testi_review_icon_color":"#ffc437","testi_authr_name":"Mina hollace","testi_authr_bio":"Developer"}},"393c5ca5-3d3c-4f3b-acc5-1e517ad6a91d":{"type":"single_slide","settings":{"testi_desc_review":"A drone is a high-tech version of an old army and a musket. It ought\nto be used in Somalia to hunt bad guys, but not in America. I don’t\nwant to see it hovering over anybody’s home.","testi_review_icon":"fa fa-star","testi_review_icon_color":"#ffc437","testi_authr_name":"Giusy marino","testi_authr_bio":"Designer"}},"237b9640-3f0b-420b-8c97-a9242e93beae":{"type":"single_slide","settings":{"testi_desc_review":"A drone is a high-tech version of an old army and a musket. It ought\nto be used in Somalia to hunt bad guys, but not in America. I don’t\nwant to see it hovering over anybody’s home.","testi_review_icon":"fa fa-star","testi_review_icon_color":"#ffc437","testi_authr_name":"Adriana rodriguez","testi_authr_bio":"Developer"}},"351abaf5-6935-416e-8593-8adb94671a51":{"type":"single_slide","settings":{"testi_desc_review":"A drone is a high-tech version of an old army and a musket. It ought\nto be used in Somalia to hunt bad guys, but not in America. I don’t\nwant to see it hovering over anybody’s home.","testi_review_icon":"fa fa-star","testi_review_icon_color":"#ffc437","testi_authr_name":"Cathrine minor","testi_authr_bio":"Designer"}}},"block_order":["157858e3-bd81-4fce-9783-a8dd933441de","393c5ca5-3d3c-4f3b-acc5-1e517ad6a91d","237b9640-3f0b-420b-8c97-a9242e93beae","351abaf5-6935-416e-8593-8adb94671a51"],"settings":{"testi_padding_top":100,"testi_padding_bottom":100,"testi_padding_top_ip":70,"testi_padding_bottom_ip":70,"testi_padding_top_xs":50,"testi_padding_bottom_xs":50,"testi_bgimg":"shopify:\/\/shop_images\/image_2023_03_14T12_47_28_032Z.png","testi_bgimg_check":true,"testi_bgcolor":"#f6f6f6","testi_title":"happy client"}}},"order":["1646205661c30791db","our-services","16518975131ca62b36","eeaa7f00-3a9f-451a-8378-3b14498f4877","165215715878050227","1651906337f627fe84","165218770966e89aa3","1652247691ba697e15"]}
+{
+  "sections": {
+    "1646205661c30791db": {
+      "type": "slider",
+      "blocks": {
+        "4f5c2dd7-3445-494c-9535-36efc312feda": {
+          "type": "slide",
+          "settings": {
+            "slider_img_enable": false,
+            "slider_title": "Introduce the rimonting drone",
+            "slider_title_color": "#1c1c1c",
+            "slider_desc": "Compact drone with 4.5k 65fps 45min battery average life + 55 mph speed",
+            "slider_desc_color": "#616161",
+            "price_1": "$1450.00",
+            "price_1_color": "#1c1c1c",
+            "price_2": "$999.00",
+            "price_2_color": "#1c1c1c",
+            "slider_button": "Buy now",
+            "slider_button_url": "shopify:\/\/collections\/drone-motor",
+            "slider_content_position": "left",
+            "slider_text_position": "left"
+          }
+        },
+        "b4f1b1d6-da3f-436b-a651-63f35423932c": {
+          "type": "slide",
+          "settings": {
+            "slider_img_enable": false,
+            "slider_title": "Introduce the rimonting drone",
+            "slider_title_color": "#1c1c1c",
+            "slider_desc": "Compact drone with 4.5k 65fps 45min battery average life + 55 mph speed",
+            "slider_desc_color": "#616161",
+            "price_1": "$1450.00",
+            "price_1_color": "#1c1c1c",
+            "price_2": "$999.00",
+            "price_2_color": "#1c1c1c",
+            "slider_button": "Buy now",
+            "slider_button_url": "shopify:\/\/collections\/flash-light",
+            "slider_content_position": "left",
+            "slider_text_position": "left"
+          }
+        }
+      },
+      "block_order": [
+        "4f5c2dd7-3445-494c-9535-36efc312feda",
+        "b4f1b1d6-da3f-436b-a651-63f35423932c"
+      ],
+      "custom_css": [
+
+      ],
+      "settings": {
+        "slider_arrow_enable": false,
+        "prev_title": "Prev",
+        "next_title": "Next"
+      }
+    },
+    "our-services": {
+      "type": "our-services",
+      "blocks": {
+        "1a7d4c95-6709-48ce-8e55-f109869fe74b": {
+          "type": "our_services",
+          "settings": {
+            "ser_url": "",
+            "service_icon": "feather-battery-charging",
+            "service_title": "How to use battery",
+            "service_desc": "Lorem Ipsum is simply dummy text of the printing typesetting industry lorem Ipsum."
+          }
+        },
+        "1ed917c6-5e5d-4655-a544-6b4ecc37ba6f": {
+          "type": "our_services",
+          "settings": {
+            "ser_url": "",
+            "service_icon": "feather-play-circle",
+            "service_title": "How to use battery",
+            "service_desc": "Lorem Ipsum is simply dummy text of the printing typesetting industry lorem Ipsum."
+          }
+        },
+        "8e11241f-cd97-4cc2-932f-71d876a8686e": {
+          "type": "our_services",
+          "settings": {
+            "ser_url": "",
+            "service_icon": "feather-settings",
+            "service_title": "How to use battery",
+            "service_desc": "Lorem Ipsum is simply dummy text of the printing typesetting industry lorem Ipsum."
+          }
+        }
+      },
+      "block_order": [
+        "1a7d4c95-6709-48ce-8e55-f109869fe74b",
+        "1ed917c6-5e5d-4655-a544-6b4ecc37ba6f",
+        "8e11241f-cd97-4cc2-932f-71d876a8686e"
+      ],
+      "settings": {
+        "our_ser_padding_top": 100,
+        "our_ser_padding_bottom": 100,
+        "our_ser_padding_top_ip": 80,
+        "our_ser_padding_bottom_ip": 80,
+        "our_ser_padding_top_xs": 60,
+        "our_ser_padding_bottom_xs": 60,
+        "section_bg_image_enable": false,
+        "section_bg_color_enable": true,
+        "section_bg_color": "#f6f6f6",
+        "section_subtitle": "Controller",
+        "section_title": "How it works"
+      }
+    },
+    "16518975131ca62b36": {
+      "type": "video-banner",
+      "settings": {
+        "section_padding_top": 100,
+        "section_padding_bottom": 100,
+        "section_padding_top_ip": 80,
+        "section_padding_bottom_ip": 80,
+        "section_padding_top_xs": 60,
+        "section_padding_bottom_xs": 60,
+        "section_bg_image_enable": true,
+        "section_bg_color_enable": false,
+        "section_bg_color": "#ffffff",
+        "video_title": "Best quality of video shoot",
+        "video_title_color": "#ffffff",
+        "video_desc": "There is only you and your camera.\nThe limitations in your photography\nare in yourself",
+        "video_desc_color": "#ffffff",
+        "video_icon": "feather-play",
+        "video_btn_text": "Watch video",
+        "video_url": "https:\/\/www.youtube-nocookie.com\/embed\/DeksxqY7kF4"
+      }
+    },
+    "eeaa7f00-3a9f-451a-8378-3b14498f4877": {
+      "type": "special-category",
+      "settings": {
+        "category_special_padding_top": 100,
+        "category_special_padding_bottom": 100,
+        "category_special_padding_top_ip": 80,
+        "category_special_padding_bottom_ip": 80,
+        "category_special_padding_top_xs": 60,
+        "category_special_padding_bottom_xs": 60,
+        "section_bg_image_enable": false,
+        "section_bg_color_enable": true,
+        "section_bg_color": "#f6f6f6",
+        "section_subtitle": "Best seller",
+        "section_title": "Drone products",
+        "product_col": "1",
+        "slide_product_limit": "4",
+        "category_special_product_limit_handle": "10",
+        "special_label_product": "drone-kit"
+      }
+    },
+    "165215715878050227": {
+      "type": "banner-grid2",
+      "settings": {
+        "section_padding_top": 100,
+        "section_padding_bottom": 100,
+        "section_padding_top_ip": 80,
+        "section_padding_bottom_ip": 80,
+        "section_padding_top_xs": 60,
+        "section_padding_bottom_xs": 60,
+        "offer_banner_bg_image_enable": true,
+        "section_bg_color_enable": false,
+        "section_bg_color": "#f6f6f6",
+        "banner_title": "Buy our awesome drone",
+        "banner_title_color": "#ffffff",
+        "banner_desc": "Portable yet powerful, the nexa pro is your personal drone ready to go with you everywhere.",
+        "banner_desc_color": "#ffffff",
+        "banner_price_label": "Price only:",
+        "banner_price_text": "$999.00",
+        "banner_price_color": "#ffffff",
+        "banner_btn_1_text": "Buy now",
+        "banner_btn_1_icon": "<svg viewbox=\"0 0 24 24\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"css-i6dzq1\"><circle cx=\"9\" cy=\"21\" r=\"1\"><\/circle><circle cx=\"20\" cy=\"21\" r=\"1\"><\/circle><path d=\"M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6\"><\/path><\/svg>",
+        "banner_btn_1_url": "shopify:\/\/collections\/all",
+        "banner_btn_2_icon": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"2.167 .438 251.038 259.969\"><g fill=\"none\" fill-rule=\"evenodd\"><path d=\"m221.503 210.324c-105.235 50.083-170.545 8.18-212.352-17.271-2.587-1.604-6.984.375-3.169 4.757 13.928 16.888 59.573 57.593 119.153 57.593 59.621 0 95.09-32.532 99.527-38.207 4.407-5.627 1.294-8.731-3.16-6.872zm29.555-16.322c-2.826-3.68-17.184-4.366-26.22-3.256-9.05 1.078-22.634 6.609-21.453 9.93.606 1.244 1.843.686 8.06.127 6.234-.622 23.698-2.826 27.337 1.931 3.656 4.79-5.57 27.608-7.255 31.288-1.628 3.68.622 4.629 3.68 2.178 3.016-2.45 8.476-8.795 12.14-17.774 3.639-9.028 5.858-21.622 3.71-24.424z\" fill=\"#f90\" fill-rule=\"nonzero\"><\/path><path d=\"m150.744 108.13c0 13.141.332 24.1-6.31 35.77-5.361 9.489-13.853 15.324-23.341 15.324-12.952 0-20.495-9.868-20.495-24.432 0-28.75 25.76-33.968 50.146-33.968zm34.015 82.216c-2.23 1.992-5.456 2.135-7.97.806-11.196-9.298-13.189-13.615-19.356-22.487-18.502 18.882-31.596 24.527-55.601 24.527-28.37 0-50.478-17.506-50.478-52.565 0-27.373 14.85-46.018 35.96-55.126 18.313-8.066 43.884-9.489 63.43-11.718v-4.365c0-8.018.616-17.506-4.08-24.432-4.128-6.215-12.003-8.777-18.93-8.777-12.856 0-24.337 6.594-27.136 20.257-.57 3.037-2.799 6.026-5.835 6.168l-32.735-3.51c-2.751-.618-5.787-2.847-5.028-7.07 7.543-39.66 43.36-51.616 75.43-51.616 16.415 0 37.858 4.365 50.81 16.795 16.415 15.323 14.849 35.77 14.849 58.02v52.565c0 15.798 6.547 22.724 12.714 31.264 2.182 3.036 2.657 6.69-.095 8.966-6.879 5.74-19.119 16.415-25.855 22.393l-.095-.095\" fill=\"#000\"><\/path><path d=\"m221.503 210.324c-105.235 50.083-170.545 8.18-212.352-17.271-2.587-1.604-6.984.375-3.169 4.757 13.928 16.888 59.573 57.593 119.153 57.593 59.621 0 95.09-32.532 99.527-38.207 4.407-5.627 1.294-8.731-3.16-6.872zm29.555-16.322c-2.826-3.68-17.184-4.366-26.22-3.256-9.05 1.078-22.634 6.609-21.453 9.93.606 1.244 1.843.686 8.06.127 6.234-.622 23.698-2.826 27.337 1.931 3.656 4.79-5.57 27.608-7.255 31.288-1.628 3.68.622 4.629 3.68 2.178 3.016-2.45 8.476-8.795 12.14-17.774 3.639-9.028 5.858-21.622 3.71-24.424z\" fill=\"#f90\" fill-rule=\"nonzero\"><\/path><path d=\"m150.744 108.13c0 13.141.332 24.1-6.31 35.77-5.361 9.489-13.853 15.324-23.341 15.324-12.952 0-20.495-9.868-20.495-24.432 0-28.75 25.76-33.968 50.146-33.968zm34.015 82.216c-2.23 1.992-5.456 2.135-7.97.806-11.196-9.298-13.189-13.615-19.356-22.487-18.502 18.882-31.596 24.527-55.601 24.527-28.37 0-50.478-17.506-50.478-52.565 0-27.373 14.85-46.018 35.96-55.126 18.313-8.066 43.884-9.489 63.43-11.718v-4.365c0-8.018.616-17.506-4.08-24.432-4.128-6.215-12.003-8.777-18.93-8.777-12.856 0-24.337 6.594-27.136 20.257-.57 3.037-2.799 6.026-5.835 6.168l-32.735-3.51c-2.751-.618-5.787-2.847-5.028-7.07 7.543-39.66 43.36-51.616 75.43-51.616 16.415 0 37.858 4.365 50.81 16.795 16.415 15.323 14.849 35.77 14.849 58.02v52.565c0 15.798 6.547 22.724 12.714 31.264 2.182 3.036 2.657 6.69-.095 8.966-6.879 5.74-19.119 16.415-25.855 22.393l-.095-.095\" fill=\"#000\"><\/path><\/g><\/svg>",
+        "banner_btn_2_text": "Buy amazon",
+        "banner_btn_2_url": "shopify:\/\/products\/budo-non-combat-large-drones-for-300-m"
+      }
+    },
+    "1651906337f627fe84": {
+      "type": "feature-info",
+      "blocks": {
+        "58e691b2-b873-44aa-a8a1-3191654f6271": {
+          "type": "service_item",
+          "settings": {
+            "service_column_reverse": true,
+            "service_1_title": "Mobile holder",
+            "service_1_desc": "Best part about drone aerial photography perspective!",
+            "service_2_title": "Long battery",
+            "service_2_desc": "Best part about drone aerial photography perspective!",
+            "service_3_title": "4K camera",
+            "service_3_desc": "Best part about drone aerial photography perspective!"
+          }
+        },
+        "df5650a4-0e2f-47e0-bb16-b93cf46ccf10": {
+          "type": "service_image",
+          "settings": {
+            "feature_image": "shopify:\/\/shop_images\/metal-standard-mockup-v3_7a6a8991-684f-456e-b6a8-8ff37ff997d2.png"
+          }
+        },
+        "0e6837e0-1603-47b2-8800-728228b9a7b0": {
+          "type": "service_item",
+          "settings": {
+            "service_column_reverse": false,
+            "service_1_title": "High speed",
+            "service_1_desc": "Best part about drone aerial photography perspective!",
+            "service_2_title": "Easy to fly sky",
+            "service_2_desc": "Best part about drone aerial photography perspective!",
+            "service_3_title": "Customized control",
+            "service_3_desc": "Best part about drone aerial photography perspective!"
+          }
+        }
+      },
+      "block_order": [
+        "58e691b2-b873-44aa-a8a1-3191654f6271",
+        "df5650a4-0e2f-47e0-bb16-b93cf46ccf10",
+        "0e6837e0-1603-47b2-8800-728228b9a7b0"
+      ],
+      "settings": {
+        "section_padding_top": 0,
+        "section_padding_bottom": 100,
+        "section_padding_top_ip": 0,
+        "section_padding_bottom_ip": 80,
+        "section_padding_top_xs": 0,
+        "section_padding_bottom_xs": 60,
+        "section_bg_image_enable": false,
+        "section_bg_color_enable": false,
+        "section_bg_color": "#f8f8f8",
+        "section_subtitle": "Unique features",
+        "section_title": "why for spacial"
+      }
+    },
+    "165218770966e89aa3": {
+      "type": "feature-counter",
+      "blocks": {
+        "dcd7a73d-5142-4da8-958a-fc24b8256c21": {
+          "type": "feature_counter",
+          "settings": {
+            "feature_item_title": "Packages",
+            "feature_item_number": "6,500",
+            "feature_item_number_title": "m",
+            "feature_item_desc": "Lorem Ipsum simply dummy printing typeset industry"
+          }
+        },
+        "1495a69a-fe5f-41cf-988f-c7018bc9cb02": {
+          "type": "feature_counter",
+          "settings": {
+            "feature_item_title": "Satisfied",
+            "feature_item_number": "6005",
+            "feature_item_number_title": "clients",
+            "feature_item_desc": "Lorem Ipsum simply dummy printing typeset industry"
+          }
+        },
+        "4c0044bf-889e-48bc-901d-e4790ea0fe2c": {
+          "type": "feature_counter",
+          "settings": {
+            "feature_item_title": "Covered",
+            "feature_item_number": "96",
+            "feature_item_number_title": "countries",
+            "feature_item_desc": "Lorem Ipsum simply dummy printing typeset industry"
+          }
+        },
+        "8d47de1a-a725-4617-a932-975ede5219ac": {
+          "type": "feature_counter",
+          "settings": {
+            "feature_item_title": "drone great",
+            "feature_item_number": "18",
+            "feature_item_number_title": "+ awards",
+            "feature_item_desc": "Lorem Ipsum simply dummy printing typeset industry"
+          }
+        }
+      },
+      "block_order": [
+        "dcd7a73d-5142-4da8-958a-fc24b8256c21",
+        "1495a69a-fe5f-41cf-988f-c7018bc9cb02",
+        "4c0044bf-889e-48bc-901d-e4790ea0fe2c",
+        "8d47de1a-a725-4617-a932-975ede5219ac"
+      ],
+      "settings": {
+        "section_padding_top": 100,
+        "section_padding_bottom": 100,
+        "section_padding_top_ipad": 80,
+        "section_padding_bottom_ipad": 80,
+        "section_padding_top_xs": 60,
+        "section_padding_bottom_xs": 60,
+        "section_border_enable": true,
+        "section_title": "achievements",
+        "section_title_bg_image_enable": true,
+        "section_title_after_before_image_enable": true
+      }
+    },
+    "1652247691ba697e15": {
+      "type": "testimonial",
+      "blocks": {
+        "157858e3-bd81-4fce-9783-a8dd933441de": {
+          "type": "single_slide",
+          "settings": {
+            "testi_desc_review": "A drone is a high-tech version of an old army and a musket. It ought\nto be used in Somalia to hunt bad guys, but not in America. I don’t\nwant to see it hovering over anybody’s home.",
+            "testi_review_icon": "fa fa-star",
+            "testi_review_icon_color": "#ffc437",
+            "testi_authr_name": "Mina hollace",
+            "testi_authr_bio": "Developer"
+          }
+        },
+        "393c5ca5-3d3c-4f3b-acc5-1e517ad6a91d": {
+          "type": "single_slide",
+          "settings": {
+            "testi_desc_review": "A drone is a high-tech version of an old army and a musket. It ought\nto be used in Somalia to hunt bad guys, but not in America. I don’t\nwant to see it hovering over anybody’s home.",
+            "testi_review_icon": "fa fa-star",
+            "testi_review_icon_color": "#ffc437",
+            "testi_authr_name": "Giusy marino",
+            "testi_authr_bio": "Designer"
+          }
+        },
+        "237b9640-3f0b-420b-8c97-a9242e93beae": {
+          "type": "single_slide",
+          "settings": {
+            "testi_desc_review": "A drone is a high-tech version of an old army and a musket. It ought\nto be used in Somalia to hunt bad guys, but not in America. I don’t\nwant to see it hovering over anybody’s home.",
+            "testi_review_icon": "fa fa-star",
+            "testi_review_icon_color": "#ffc437",
+            "testi_authr_name": "Adriana rodriguez",
+            "testi_authr_bio": "Developer"
+          }
+        },
+        "351abaf5-6935-416e-8593-8adb94671a51": {
+          "type": "single_slide",
+          "settings": {
+            "testi_desc_review": "A drone is a high-tech version of an old army and a musket. It ought\nto be used in Somalia to hunt bad guys, but not in America. I don’t\nwant to see it hovering over anybody’s home.",
+            "testi_review_icon": "fa fa-star",
+            "testi_review_icon_color": "#ffc437",
+            "testi_authr_name": "Cathrine minor",
+            "testi_authr_bio": "Designer"
+          }
+        }
+      },
+      "block_order": [
+        "157858e3-bd81-4fce-9783-a8dd933441de",
+        "393c5ca5-3d3c-4f3b-acc5-1e517ad6a91d",
+        "237b9640-3f0b-420b-8c97-a9242e93beae",
+        "351abaf5-6935-416e-8593-8adb94671a51"
+      ],
+      "settings": {
+        "testi_padding_top": 100,
+        "testi_padding_bottom": 100,
+        "testi_padding_top_ip": 70,
+        "testi_padding_bottom_ip": 70,
+        "testi_padding_top_xs": 50,
+        "testi_padding_bottom_xs": 50,
+        "testi_bgimg_check": true,
+        "testi_bgcolor": "#f6f6f6",
+        "testi_title": "happy client"
+      }
+    }
+  },
+  "order": [
+    "1646205661c30791db",
+    "our-services",
+    "16518975131ca62b36",
+    "eeaa7f00-3a9f-451a-8378-3b14498f4877",
+    "165215715878050227",
+    "1651906337f627fe84",
+    "165218770966e89aa3",
+    "1652247691ba697e15"
+  ]
+}
