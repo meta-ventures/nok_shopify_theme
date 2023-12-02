@@ -1409,9 +1409,9 @@
               "text_lg_align": "text-lg-start",
               "text_align": "text-start",
               "logo_enable": true,
-              "logo_desc": "27 Eden walk eden centre, Orchard view, Broadway, Paris, France",
-              "text_1": "<p><a href=\"tel:+1 0123 456 7890\" title=\"tel:+1 0123 456 7890\">+1 0123 456 7890<\/a><\/p>",
-              "text_2": "<p><a href=\"mailto:demo@demo.com\" title=\"mailto:demo@demo.com\">demo@demo.com<\/a><\/p>"
+              "logo_desc": "Parkside Cluster R, Jumeirah Lake Towers, Dubai, United Arab Emirates",
+              "text_1": "<p><a href=\"tel:+1 0123 456 7890\" title=\"tel:+1 0123 456 7890\">+971 58 519 0825<\/a><\/p>",
+              "text_2": "<p>support@nok.cards<\/p>"
             }
           },
           "c5300277-4fd7-4d82-a9b8-0283fe2ed6a1": {
@@ -2177,7 +2177,7 @@
           "section_bg_color": "#4367fc",
           "offer_text_title": "Order now",
           "offer_text_title_color": "#ffffff",
-          "offer_text_desc": "Get free gift and become our special member",
+          "offer_text_desc": "Enjoy our special promotion on your first purchase",
           "offer_text_desc_color": "#ffffff",
           "offer_btn_text": "Buy now",
           "offer_btn_icon": "",

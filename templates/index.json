@@ -11,10 +11,10 @@
             "slider_title": "Smart Business Cards for modern networking",
             "slider_title_color": "#1c1c1c",
             "slider_desc": "Say goodbye to outdated paper cards. Improve your connections with just a tap",
-            "slider_desc_color": "#333333",
-            "price_1": "",
+            "slider_desc_color": "#616161",
+            "price_1": "$130.00",
             "price_1_color": "#1c1c1c",
-            "price_2": "",
+            "price_2": "$99.00",
             "price_2_color": "#1c1c1c",
             "slider_button": "Get yours now",
             "slider_button_url": "shopify:\/\/collections\/drone-motor",
@@ -177,12 +177,12 @@
           "type": "service_item",
           "settings": {
             "service_column_reverse": false,
-            "service_1_title": "High speed",
-            "service_1_desc": "Best part about drone aerial photography perspective!",
-            "service_2_title": "Easy to fly sky",
-            "service_2_desc": "Best part about drone aerial photography perspective!",
-            "service_3_title": "Customized control",
-            "service_3_desc": "Best part about drone aerial photography perspective!"
+            "service_1_title": "Instant connections",
+            "service_1_desc": "Share your details with a single tap or scan",
+            "service_2_title": "Customized profiles",
+            "service_2_desc": "Fully customize your own digital profile to match your style",
+            "service_3_title": "easy to use",
+            "service_3_desc": "It takes less than 2 minutes to start connecting with your own profile!"
           }
         }
       },
@@ -208,46 +208,46 @@
     "165218770966e89aa3": {
       "type": "feature-counter",
       "blocks": {
-        "dcd7a73d-5142-4da8-958a-fc24b8256c21": {
-          "type": "feature_counter",
-          "settings": {
-            "feature_item_title": "Packages",
-            "feature_item_number": "6,500",
-            "feature_item_number_title": "m",
-            "feature_item_desc": "Lorem Ipsum simply dummy printing typeset industry"
-          }
-        },
         "1495a69a-fe5f-41cf-988f-c7018bc9cb02": {
           "type": "feature_counter",
           "settings": {
-            "feature_item_title": "Satisfied",
-            "feature_item_number": "6005",
-            "feature_item_number_title": "clients",
-            "feature_item_desc": "Lorem Ipsum simply dummy printing typeset industry"
+            "feature_item_title": "Paper business cards",
+            "feature_item_number": "10",
+            "feature_item_number_title": "billion",
+            "feature_item_desc": "Ten billion cards are printed every year in the US only."
+          }
+        },
+        "dcd7a73d-5142-4da8-958a-fc24b8256c21": {
+          "type": "feature_counter",
+          "settings": {
+            "feature_item_title": "Reduced Carbon Footprint",
+            "feature_item_number": "50",
+            "feature_item_number_title": "metric tons",
+            "feature_item_desc": "Every tap and saves over 5 grams of CO2"
           }
         },
         "4c0044bf-889e-48bc-901d-e4790ea0fe2c": {
           "type": "feature_counter",
           "settings": {
-            "feature_item_title": "Covered",
-            "feature_item_number": "96",
-            "feature_item_number_title": "countries",
-            "feature_item_desc": "Lorem Ipsum simply dummy printing typeset industry"
+            "feature_item_title": "Revenue increase",
+            "feature_item_number": "340",
+            "feature_item_number_title": "%",
+            "feature_item_desc": "Our clients reported up to 340% increased revenue from referrals"
           }
         },
         "8d47de1a-a725-4617-a932-975ede5219ac": {
           "type": "feature_counter",
           "settings": {
-            "feature_item_title": "drone great",
+            "feature_item_title": "Expansion",
             "feature_item_number": "18",
-            "feature_item_number_title": "+ awards",
-            "feature_item_desc": "Lorem Ipsum simply dummy printing typeset industry"
+            "feature_item_number_title": "+ countries",
+            "feature_item_desc": "Satisfied clients all across the globe"
           }
         }
       },
       "block_order": [
-        "dcd7a73d-5142-4da8-958a-fc24b8256c21",
         "1495a69a-fe5f-41cf-988f-c7018bc9cb02",
+        "dcd7a73d-5142-4da8-958a-fc24b8256c21",
         "4c0044bf-889e-48bc-901d-e4790ea0fe2c",
         "8d47de1a-a725-4617-a932-975ede5219ac"
       ],
