@@ -347,7 +347,9 @@
       }
     },
     "dual-banner": {
-      "type": "dual-banner"
+      "type": "dual-banner",
+      "settings": {
+      }
     },
     "165218770966e89aa3": {
       "type": "feature-counter",
@@ -480,6 +482,7 @@
     "165215715878050227",
     "1651906337f627fe84",
     "f4d15051-0550-4a88-947e-16b0e15fc9e5",
+    "dual-banner",
     "165218770966e89aa3",
     "1652247691ba697e15"
   ]
