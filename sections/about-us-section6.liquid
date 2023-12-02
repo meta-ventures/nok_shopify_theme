@@ -12,7 +12,7 @@
                                         <img width="{{ block.settings.member_img.width }}" height="{{ block.settings.member_img.height }}" class="img-fluid" src="{% if block.settings.member_img %}{{ block.settings.member_img | image_url }}{% else %}https://dummyimage.com/455x520/f7f7f7/999999{% endif %}" alt="">
                                     </span>
                                     <div class="team-social">
-                                        {% include 'social-midea' %}
+                                        {% render 'social-midea' %}
                                     </div>
                                 </div>
                                 <div class="about-bio">
@@ -200,7 +200,7 @@
             padding-bottom: {{ section.settings.abt_team_padding_bottom_xs }}px;
         }
     }
-    .about-team .our-team ul.team-wrap {    
+    .about-team .our-team ul.team-wrap {
         display: flex;
         flex-wrap: wrap;
         margin-top: -30px;

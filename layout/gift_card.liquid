@@ -65,7 +65,7 @@
     {%- render 'header-js' -%}
   </head>
   <body class="template-giftcard">
-    {% include 'slow-window' %}
+    {% render 'slow-window' %}
     {{ content_for_layout }}
     <ul class="visually-hidden d-none" aria-hidden="true">
       <li id="a11y-new-window-message">{{ 'general.accessibility.link_messages.new_window' | t }}</li>

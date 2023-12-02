@@ -16,7 +16,7 @@
           {% assign blog_home_limit = section.settings.blog_home_limit_handle %}
           {% for article in blog_home.articles limit: blog_home_limit %}
           <div class="item">
-            {% include 'blog-grid-item' %}
+            {% render 'blog-grid-item' %}
           </div>
           {% endfor %}
         </div>
