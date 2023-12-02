@@ -201,6 +201,7 @@
         "section_padding_top_xs": 0,
         "section_padding_bottom_xs": 60,
         "section_bg_image_enable": false,
+        "section_bg_image": "shopify:\/\/shop_images\/PlasticCard2copiar.webp",
         "section_bg_color_enable": false,
         "section_bg_color": "#f8f8f8",
         "section_subtitle": "Features",
