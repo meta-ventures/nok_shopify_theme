@@ -10,7 +10,7 @@
                         </div>
                     </li>
                     <li class="social-media">
-                        {% include 'social-midea' %}
+                        {% render 'social-midea' %}
                     </li>
                 </ul>
             </div>
@@ -233,8 +233,8 @@
         margin-right: 15px;
         {% else %}
         margin-left: 15px;
-        {% endif %}        
-    } 
+        {% endif %}
+    }
     /* social css */
     .copyright-area ul.ft-bottom li.social-media .social ul.social-icon {
         {% if settings.enable_rtl %}
@@ -242,7 +242,7 @@
         {% else %}
         padding-left: 0px;
         {% endif %}
-    } 
+    }
     @media (max-width: 1199px) {
         .copyright-area .richtext a,
         .copyright-area .richtext p {
@@ -254,7 +254,7 @@
             flex-direction: column;
         }
         .copyright-area ul.ft-bottom li.social-media {
-            margin-top: 13px;    
+            margin-top: 13px;
         }
     }
 </style>

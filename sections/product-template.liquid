@@ -22,7 +22,7 @@
               {%- assign featured_media = current_variant.featured_media | default: product.featured_media -%}
               {%- for media in product.media -%}
               <div class="slick-slide" data-image="{{ media.src | image_url }}" data-image-id="{{ media.id }}">
-                {% include 'media', media: media, featured_media: featured_media %}
+                {% render 'media', media: media, featured_media: featured_media %}
               </div>
               {%- endfor -%}
             </div>
@@ -163,7 +163,7 @@
             <div class="product-info">
               <div class="pro-detail-action">
                 <form action="/cart/add" method="post" class="cart-{{ product.id }}" enctype="multipart/form-data" id="add-item-form">
-                  {% include 'product-swatch-variant' %}
+                  {% render 'product-swatch-variant' %}
                 </form>
               </div>
             </div>
@@ -173,7 +173,7 @@
               <form action="/cart/add" method="post" class="cart-{{ product.id }}" enctype="multipart/form-data" id="add-item-form">
                 <div class="product-quantity-action">
                   <h6>{{ block.settings.qty_title }}</h6>
-                  {% include 'product-quantity' %}
+                  {% render 'product-quantity' %}
                 </div>
               </form>
             </div>
@@ -182,8 +182,8 @@
             <div class="product-info">
               <div class="product-actions">
                 <div class="pro-detail-button">
-                  {% include 'product-cart-action' %}
-                  {% include 'wishlist-5' %}
+                  {% render 'product-cart-action' %}
+                  {% render 'wishlist-5' %}
                   {%- render 'direct-buy' -%}
                 </div>
 
@@ -209,14 +209,14 @@
             <div class="product-info">
               <div class="share-icons">
                 <h6>{{ block.settings.social_share_title }}</h6>
-                {% include 'social-share' %}
+                {% render 'social-share' %}
               </div>
             </div>
 
             {%- when 'product_payment' -%}
             <div class="product-info">
               <div class="product-payment-image">
-                {% include 'payment-icon' %}
+                {% render 'payment-icon' %}
               </div>
             </div>
 

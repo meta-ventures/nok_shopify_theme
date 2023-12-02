@@ -20,7 +20,7 @@
           {% assign category_product_limit = section.settings.category_new_product_limit_handle %}
           {% for product in category_product.products limit: category_product_limit %}
           <div class="swiper-slide">
-            {% include 'product-grid-item' %}
+            {% render 'product-grid-item' %}
           </div>
           {% endfor %}
         </div>

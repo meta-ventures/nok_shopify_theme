@@ -68,7 +68,7 @@
                         {%- when 'article_social'-%}
                         <div class="blog-post-opt">
                             <div class="blog-share">
-                                {% include 'social-share-blog' %}
+                                {% render 'social-share-blog' %}
                             </div>
                         </div>
 
@@ -100,16 +100,16 @@
                     {% paginate article.comments by comment_post_limit %}
                     <div id="comments" class="blog-comments">
                         {% if article.comments.size > 0 %}
-                        {% include 'blog-comments' %}
+                        {% render 'blog-comments' %}
                         {% endif %}
                         {% if paginate.pages > 1 %}
                         <div class="comment-pagination">
-                            {% include 'pagination' %}
+                            {% render 'pagination' %}
                         </div>
                         {% endif %}
                         {% endpaginate %}
                         <div class="blog-comment-form">
-                            {% include 'blog-comment-form' %}
+                            {% render 'blog-comment-form' %}
                         </div>
                     </div>
                     {% endif %}
@@ -117,7 +117,7 @@
             </div>
             {% unless section.settings.sidebar_handle == 'without_sidebar' %}
             <div class="col-xl-3 col-lg-4 col-md-12 col-12 blog-article-wrap">
-                {% include 'blog-sidebar' %}
+                {% render 'blog-sidebar' %}
             </div>
             {% endunless %}
         </div>
@@ -335,7 +335,7 @@
         background-image: var(--gradient-color);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        font-size: 16px;    
+        font-size: 16px;
         margin: 22px 0 23px;
         padding: 30px;
         font-weight: 600;

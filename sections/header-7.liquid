@@ -39,7 +39,7 @@
                       {% assign header_main_menu = section.settings.header_main_menu_1 %}
                       {% for link in linklists[header_main_menu].links %}
                       {% if linklists[header_main_menu].links != '' %}
-                      {% include 'main-menu' %}
+                      {% render 'main-menu' %}
                       {% endif %}
                       {% endfor %}
                     </ul>
@@ -50,7 +50,7 @@
                       {% assign header_main_menu = section.settings.header_main_menu_2 %}
                       {% for link in linklists[header_main_menu].links %}
                       {% if linklists[header_main_menu].links != '' %}
-                      {% include 'main-menu' %}
+                      {% render 'main-menu' %}
                       {% endif %}
                       {% endfor %}
                     </ul>
@@ -129,7 +129,7 @@
       </div>
     </div>
   </div>
-  {% include 'mini-cart2-side' %}
+  {% render 'mini-cart2-side' %}
   {%- render 'search-popup' -%}
   <div class="header-bottom-area">
     <div class="container header-bottom-container">
@@ -152,7 +152,7 @@
                       {% assign header_main_menu = section.settings.header_main_menu_1 %}
                       {% for link in linklists[header_main_menu].links %}
                       {% if linklists[header_main_menu].links != '' %}
-                      {% include 'main-menu' %}
+                      {% render 'main-menu' %}
                       {% endif %}
                       {% endfor %}
                     </ul>
@@ -160,7 +160,7 @@
                       {% assign header_main_menu = section.settings.header_main_menu_2 %}
                       {% for link in linklists[header_main_menu].links %}
                       {% if linklists[header_main_menu].links != '' %}
-                      {% include 'main-menu' %}
+                      {% render 'main-menu' %}
                       {% endif %}
                       {% endfor %}
                     </ul>

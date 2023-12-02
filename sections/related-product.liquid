@@ -38,7 +38,7 @@
             {% else %}
             {% unless current_product_count == true and forloop.last %}
             <div class="swiper-slide">
-              {% include 'product-grid-item' %}
+              {% render 'product-grid-item' %}
             </div>
             {% endunless %}
             {% endif %}
