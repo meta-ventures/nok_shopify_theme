@@ -473,7 +473,11 @@
     "accessibility": {
       "skip_to_content": "TODO",
       "close_modal": "TODO",
-      "link_messages": "TODO",
+      "link_messages": {
+        "new_window": "TODO",
+        "external": "TODO",
+        "new_window_and_external": "TODO"
+      },
       "refresh_page": "TODO",
       "selection_help": "TODO",
       "unit_price_separator": "TODO",
@@ -518,7 +522,11 @@
       "share_on_facebook": "TODO",
       "share_on_twitter": "TODO",
       "share_on_pinterest": "TODO",
-      "alt_text": "TODO"
+      "alt_text": {
+        "share_on_facebook": "TODO",
+        "share_on_twitter": "TODO",
+        "share_on_pinterest": "TODO"
+      }
     }
   },
   "sections": {
