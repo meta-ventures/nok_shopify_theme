@@ -24,7 +24,7 @@
                             {% endfor %}
                         </ul>
                     </div>
-                    {% if section.settings.faq_button_url !='' %}
+                    {% if section.settings.faq_button_url != '' %}
                     <a class="faq-button btn btn-style" href="{{ section.settings.faq_button_url }}">
                         {{ section.settings.faq_button }}
                     </a>
@@ -35,7 +35,7 @@
             <div class="col-xl-4 col-lg-6 col-md-6">
                 <div class="custom-text-img">
                     <a class="{% if section.settings.banner_video_button_enable %} play-button popup-youtube{% endif %}" href="{{ section.settings.custom_text_img_url }}">
-                        <img width="{{ section.settings.custom_text_img.width }}" height="{{ section.settings.custom_text_img.height }}" src="{% if section.settings.custom_text_img %}{{ section.settings.custom_text_img | img_url: 'master' }}{% else %}https://dummyimage.com/600x700{% endif %}" class="img-fluid" alt="">
+                        <img width="{{ section.settings.custom_text_img.width }}" height="{{ section.settings.custom_text_img.height }}" src="{% if section.settings.custom_text_img %}{{ section.settings.custom_text_img | image_url }}{% else %}https://dummyimage.com/600x700{% endif %}" class="img-fluid" alt="">
                         {% if section.settings.banner_video_button_enable %}
                         <span>
                             <i class="ri-play-line"></i>
@@ -70,176 +70,176 @@
 </section>
 {% schema %}
 {
-    "name": "FAQ Custom Text",
-    "settings": [
+  "name": "FAQ Custom Text",
+  "settings": [
     {
-        "type": "header",
-        "content": "Section Padding"
+      "type": "header",
+      "content": "Section Padding"
     },
     {
-        "type" : "paragraph",
-        "content" : "Desktop / Laptop"
+      "type": "paragraph",
+      "content": "Desktop / Laptop"
     },
     {
-        "type": "range",
-        "id": "custom_text_padding_top",
-        "label": "Section Padding Top",
-        "min": 0,
-        "max": 100,
-        "step": 1,
-        "unit": "px",
-        "default": 100
+      "type": "range",
+      "id": "custom_text_padding_top",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 100
     },
     {
-        "type": "range",
-        "id": "custom_text_padding_bottom",
-        "label": "Section Padding Bottom",
-        "min": 0,
-        "max": 100,
-        "step": 1,
-        "unit": "px",
-        "default": 100
+      "type": "range",
+      "id": "custom_text_padding_bottom",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 100
     },
     {
-        "type" : "paragraph",
-        "content" : "Ipad pro / Ipad"
+      "type": "paragraph",
+      "content": "Ipad pro / Ipad"
     },
     {
-        "type": "range",
-        "id": "custom_text_padding_top_ip",
-        "label": "Section Padding Top",
-        "min": 0,
-        "max": 100,
-        "step": 1,
-        "unit": "px",
-        "default": 80
+      "type": "range",
+      "id": "custom_text_padding_top_ip",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 80
     },
     {
-        "type": "range",
-        "id": "custom_text_padding_bottom_ip",
-        "label": "Section Padding Bottom",
-        "min": 0,
-        "max": 100,
-        "step": 1,
-        "unit": "px",
-        "default": 80
+      "type": "range",
+      "id": "custom_text_padding_bottom_ip",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 80
     },
     {
-        "type" : "paragraph",
-        "content" : "Mobile"
+      "type": "paragraph",
+      "content": "Mobile"
     },
     {
-        "type": "range",
-        "id": "custom_text_padding_top_xs",
-        "label": "Section Padding Top",
-        "min": 0,
-        "max": 100,
-        "step": 1,
-        "unit": "px",
-        "default": 60
+      "type": "range",
+      "id": "custom_text_padding_top_xs",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 60
     },
     {
-        "type": "range",
-        "id": "custom_text_padding_bottom_xs",
-        "label": "Section Padding Bottom",
-        "min": 0,
-        "max": 100,
-        "step": 1,
-        "unit": "px",
-        "default": 60
+      "type": "range",
+      "id": "custom_text_padding_bottom_xs",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 60
     },
     {
-        "type": "header",
-        "content": "Custom Text Content"
+      "type": "header",
+      "content": "Custom Text Content"
     },
     {
-        "type": "text",
-        "id": "custom_text_title",
-        "label": "Faq Title",
-        "default": "Why choose our product"
+      "type": "text",
+      "id": "custom_text_title",
+      "label": "Faq Title",
+      "default": "Why choose our product"
     },
     {
-        "type": "url",
-        "id": "faq_button_url",
-        "label": "Faq button url"
+      "type": "url",
+      "id": "faq_button_url",
+      "label": "Faq button url"
     },
     {
-        "type": "text",
-        "id": "faq_button",
-        "label": "Faq button",
-        "default": "Discover now"
+      "type": "text",
+      "id": "faq_button",
+      "label": "Faq button",
+      "default": "Discover now"
     },
     {
-        "type": "header",
-        "content": "Section Background Color"
+      "type": "header",
+      "content": "Section Background Color"
     },
     {
-        "type": "color",
-        "id": "custom_text_bgcolor",
-        "label": "Background Color",
-        "default": "#D6EEFF"
+      "type": "color",
+      "id": "custom_text_bgcolor",
+      "label": "Background Color",
+      "default": "#D6EEFF"
     },
     {
-        "type": "checkbox",
-        "id": "custom_text_bgcolor_enable",
-        "label": "Show Background Color",
-        "default": true
+      "type": "checkbox",
+      "id": "custom_text_bgcolor_enable",
+      "label": "Show Background Color",
+      "default": true
     },
     {
-        "type": "header",
-        "content": "Custom Banner Image"
+      "type": "header",
+      "content": "Custom Banner Image"
     },
     {
-        "type": "image_picker",
-        "id": "custom_text_img",
-        "label": "Banner Image",
-        "info": "Recommended Size: 1920x500 Image"
+      "type": "image_picker",
+      "id": "custom_text_img",
+      "label": "Banner Image",
+      "info": "Recommended Size: 1920x500 Image"
     },
     {
-        "type": "url",
-        "id": "custom_text_img_url",
-        "label": "Video url"
+      "type": "url",
+      "id": "custom_text_img_url",
+      "label": "Video url"
     },
     {
-        "type": "checkbox",
-        "id": "banner_video_button_enable",
-        "label": "Video Button enable",
-        "default": true
+      "type": "checkbox",
+      "id": "banner_video_button_enable",
+      "label": "Video Button enable",
+      "default": true
     },
     {
-        "type": "textarea",
-        "id": "contact_heading",
-        "label": "Contact heading",
-        "default": "Contact Us"
+      "type": "textarea",
+      "id": "contact_heading",
+      "label": "Contact heading",
+      "default": "Contact Us"
     }
-    ],
-    "blocks":[
+  ],
+  "blocks": [
     {
-        "type": "accordion_area",
-        "name": "Faq Accordion",
-        "settings": [
+      "type": "accordion_area",
+      "name": "Faq Accordion",
+      "settings": [
         {
-            "type": "text",
-            "id": "accordion_title",
-            "label": "Accordion Title",
-            "info": "Type Here For Question?",
-            "default": "Type In SideBox For Question?"
+          "type": "text",
+          "id": "accordion_title",
+          "label": "Accordion Title",
+          "info": "Type Here For Question?",
+          "default": "Type In SideBox For Question?"
         },
         {
-            "type": "textarea",
-            "id": "accordion_ans1",
-            "label": "Answer1",
-            "info": "Type Here For Answer",
-            "default": "Type In SideBox For Answer."
+          "type": "textarea",
+          "id": "accordion_ans1",
+          "label": "Answer1",
+          "info": "Type Here For Answer",
+          "default": "Type In SideBox For Answer."
         }
-        ]
+      ]
     }
-    ],
-    "presets":[
+  ],
+  "presets": [
     {
-        "name": "FAQ Custom Text"
+      "name": "FAQ Custom Text"
     }
-    ]
+  ]
 }
 {% endschema %}
 <style>

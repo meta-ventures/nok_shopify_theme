@@ -8,7 +8,7 @@ Shopify.onCartUpdate = function(cart) {
 };
 
 Shopify.cartUpdateInfo = function(cart, cart_cell_id) {
-  var formatMoney = "{{amount}}";
+  var formatMoney = "{{ amount }}";
   if ((typeof cart_cell_id) === 'string') {
     var cart_cell = jQuery(cart_cell_id);
     if (cart_cell.length) {
