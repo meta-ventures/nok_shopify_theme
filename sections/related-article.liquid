@@ -6,14 +6,14 @@
                     <div class="section-title">
                         <div class="section-cont-title">
 
-                            {% if section.settings.related_blog_title !='' %}
+                            {% if section.settings.related_blog_title != '' %}
                             <h2>
                                 <span>{{ section.settings.related_blog_title }}</span>
                             </h2>
                             {% endif %}
                         </div>
 
-                        {% if section.settings.related_blog_desc !='' %}
+                        {% if section.settings.related_blog_desc != '' %}
                         <p>{{ section.settings.related_blog_desc }}</p>
                         {% endif %}
                     </div>
@@ -73,67 +73,67 @@
 </script>
 {% schema %}
 {
-    "name": "Related Blog",
-    "settings": [
+  "name": "Related Blog",
+  "settings": [
     {
-        "type" : "header",
-        "content" : "Section Background Color"
+      "type": "header",
+      "content": "Section Background Color"
     },
     {
-        "type" : "color",
-        "id" : "related_blog_bgcolor",
-        "label" : "Background Color",
-        "default" : "#f6f6f6"
+      "type": "color",
+      "id": "related_blog_bgcolor",
+      "label": "Background Color",
+      "default": "#f6f6f6"
     },
     {
-        "type" : "checkbox",
-        "id" : "related_blog_enable",
-        "label" : "Show Background Color",
-        "default" : true
+      "type": "checkbox",
+      "id": "related_blog_enable",
+      "label": "Show Background Color",
+      "default": true
     },
     {
-        "type" : "header",
-        "content" : "Section Border"
+      "type": "header",
+      "content": "Section Border"
     },
     {
-        "type": "range",
-        "id": "related_blog_border",
-        "label": "Border",
-        "min": 0,
-        "max": 2,
-        "step": 1,
-        "unit": "px",
-        "default": 1
+      "type": "range",
+      "id": "related_blog_border",
+      "label": "Border",
+      "min": 0,
+      "max": 2,
+      "step": 1,
+      "unit": "px",
+      "default": 1
     },
     {
-        "type": "color",
-        "id": "related_blog_border_color",
-        "label": "Border Color",
-        "default": "#E2E2E2"
+      "type": "color",
+      "id": "related_blog_border_color",
+      "label": "Border Color",
+      "default": "#E2E2E2"
     },
     {
-        "type" : "checkbox",
-        "id" : "related_blog_border_enable",
-        "label" : "Show Section Border",
-        "default" : true
+      "type": "checkbox",
+      "id": "related_blog_border_enable",
+      "label": "Show Section Border",
+      "default": true
     },
     {
-        "type" : "header",
-        "content" : "Section Content"
+      "type": "header",
+      "content": "Section Content"
     },
     {
-        "type": "text",
-        "id": "related_blog_title",
-        "label": "Title",
-        "default": "Related blog"
+      "type": "text",
+      "id": "related_blog_title",
+      "label": "Title",
+      "default": "Related blog"
     },
     {
-        "type": "textarea",
-        "id": "related_blog_desc",
-        "label": "Description",
-        "default": "Lorem Ipsum is printing & typesetting industry's standard dummy text since texts"
+      "type": "textarea",
+      "id": "related_blog_desc",
+      "label": "Description",
+      "default": "Lorem Ipsum is printing & typesetting industry's standard dummy text since texts"
     }
-    ]
+  ]
 }
 {% endschema %}
 <style>

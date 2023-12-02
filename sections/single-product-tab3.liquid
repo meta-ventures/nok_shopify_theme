@@ -57,13 +57,13 @@
                   </tr>
                   {%- endif -%}
 
-                  {%- unless product.options.size == 1 and product.variants[0].title == 'Default Title'-%}
-                  {%- for option in product.options_with_values-%}
+                  {%- unless product.options.size == 1 and product.variants[0].title == 'Default Title' -%}
+                  {%- for option in product.options_with_values -%}
                   <tr class="product-info">
                     <th>{{ option.name }}</th>
                     <td>
                       {%- for item_option in option.values -%}
-                      {{item_option}}{%- unless forloop.last -%}{{', '}}{%- endunless -%}
+                      {{ item_option }}{%- unless forloop.last -%}{{ ', ' }}{%- endunless -%}
                       {%- endfor -%}
                     </td>
                    </tr>
@@ -73,18 +73,18 @@
                   {%- if current_variant.sku != blank -%}
                   <tr class="product-info">
                     <th>{{ 'products.general.sku' | t }}</th>
-                    <td>{{current_variant.sku}}</td>
+                    <td>{{ current_variant.sku }}</td>
                   </tr>
                   {%- endif -%}
 
                   {%- if current_variant.barcode != blank -%}
                   <tr class="product-info">
                     <th>{{ 'products.general.barcode' | t }}</th>
-                    <td>{{current_variant.barcode}}</td>
+                    <td>{{ current_variant.barcode }}</td>
                   </tr>
                   {%- endif -%}
 
-                  {% if product.variants.first.weight > 0%}
+                  {% if product.variants.first.weight > 0 %}
               <tr class="product-info">
                 <th class="head">{{ 'products.general.weight' | t }}:&nbsp;</th>
                 <td>{{ product.variants.first.weight | weight_with_unit }}</td>
@@ -111,7 +111,7 @@
     </div>
   </div>
 
-  {%- if section.settings.product_video_tab_enable and product.metafields.my_fields.product_video-%}
+  {%- if section.settings.product_video_tab_enable and product.metafields.my_fields.product_video -%}
   <div class="container">
     <div class="row">
       <div class="col">
@@ -130,23 +130,23 @@
     <div class="row">
       <div class="col">
         <div class="product-reviews">
-          {% if section.settings.product_review_title !='' %}
+          {% if section.settings.product_review_title != '' %}
           <div class="section-capture">
             <div class="section-title">
               <div class="section-cont-title">
-                {% if section.settings.product_review_title !='' %}
+                {% if section.settings.product_review_title != '' %}
                 <h2>
                   <span>{{ section.settings.product_review_title }}</span>
                 </h2>
                 {% endif %}
               </div>
 
-              {% if section.settings.product_review_desc !='' %}
+              {% if section.settings.product_review_desc != '' %}
               <p>{{ section.settings.product_review_desc }}</p>
               {% endif %}
             </div>
           </div>
-          <div id="shopify-product-reviews" data-id="{{product.id}}">{{ product.metafields.spr.reviews }}</div>
+          <div id="shopify-product-reviews" data-id="{{ product.id }}">{{ product.metafields.spr.reviews }}</div>
           {% endif %}
         </div>
       </div>
@@ -158,258 +158,258 @@
 {
   "name": "Information Tab",
   "settings": [
-  {
-    "type": "checkbox",
-    "id": "product_tab_enable",
-    "label": "Show Product Tab Section",
-    "default": true
-  },
-  {
-    "type": "header",
-    "content": "Section Padding"
-  },
-  {
-    "type" : "paragraph",
-    "content" : "Desktop / Laptop / tablet"
-  },
-  {
-    "type": "range",
-    "id": "product_detail_tab_padding_top",
-    "label": "Section Padding Top",
-    "min": 0,
-    "max": 100,
-    "step": 1,
-    "unit": "px",
-    "default": 100
-  },
-  {
-    "type": "range",
-    "id": "product_detail_tab_padding_bottom",
-    "label": "Section Padding Bottom",
-    "min": 0,
-    "max": 100,
-    "step": 1,
-    "unit": "px",
-    "default": 100
-  },
-  {
-    "type" : "paragraph",
-    "content" : "Ipad pro / Ipad"
-  },
-  {
-    "type": "range",
-    "id": "product_detail_tab_padding_top_ip",
-    "label": "Section Padding Top",
-    "min": 0,
-    "max": 100,
-    "step": 1,
-    "unit": "px",
-    "default": 80
-  },
-  {
-    "type": "range",
-    "id": "product_detail_tab_padding_bottom_ip",
-    "label": "Section Padding Bottom",
-    "min": 0,
-    "max": 100,
-    "step": 1,
-    "unit": "px",
-    "default": 80
-  },
-  {
-    "type" : "paragraph",
-    "content" : "Mobile"
-  },
-  {
-    "type": "range",
-    "id": "product_detail_tab_padding_top_xs",
-    "label": "Section Padding Top",
-    "min": 0,
-    "max": 100,
-    "step": 1,
-    "unit": "px",
-    "default": 60
-  },
-  {
-    "type": "range",
-    "id": "product_detail_tab_padding_bottom_xs",
-    "label": "Section Padding Bottom",
-    "min": 0,
-    "max": 100,
-    "step": 1,
-    "unit": "px",
-    "default": 60
-  },
-  {
-    "type": "header",
-    "content": "Section Background Color"
-  },
-  {
-    "type" : "color",
-    "id" : "product_detail_tab_bgcolor",
-    "label" : "Background Color",
-    "default" : "#F6F6F6"
-  },
-  {
-    "type" : "checkbox",
-    "id" : "product_detail_tab_bgcolor_check",
-    "label" : "Show Background Color",
-    "default" : true
-  },
-  {
-    "type" : "header",
-    "content" : "Section Border"
-  },
-  {
-    "type": "range",
-    "id": "product_detail_tab_border",
-    "label": "Border",
-    "min": 0,
-    "max": 2,
-    "step": 1,
-    "unit": "px",
-    "default": 1
-  },
-  {
-    "type": "color",
-    "id": "product_detail_tab_border_color",
-    "label": "Border Color",
-    "default": "#E2E2E2"
-  },
-  {
-    "type" : "checkbox",
-    "id" : "product_detail_tab_border_enable",
-    "label" : "Show Section Border",
-    "default" : false
-  },
-  {
-    "type": "header",
-    "content": "Tab"
-  },
-  {
-    "type": "select",
-    "id": "product_detail_tab_option",
-    "label": "Tab Option",
-    "options":[
-      {
-        "label": "Regular",
-        "value": "regular_tab"
-      },
-      {
-        "label": "Vertical Left",
-        "value": "vertical_tab_left"
-      },
-      {
-        "label": "Vertical Right",
-        "value": "vertical_tab_right"
-      }
-    ],
-    "default": "vertical_tab_left"
-  },
-  {
-    "type": "header",
-    "content": "Video Content"
-  },
-  {
-    "type": "checkbox",
-    "id": "product_video_tab_enable",
-    "label": "Show Product Video Content",
-    "default": true
-  },
-  {
-    "type": "header",
-    "content": "Review Content"
-  },
-  {
-    "type": "color",
-    "id": "product_review_content_bgcolor",
-    "label": "Content Background Color",
-    "default": "#FFFFFF"
-  },
-  {
-    "type": "checkbox",
-    "id": "product_review_content_bgcolor_enable",
-    "label": "Show Background Color",
-    "default": true
-  },
-  {
-    "type": "text",
-    "id": "product_review_title",
-    "label": "Title",
-    "default": "Customer love"
-  },
-  {
-    "type": "textarea",
-    "id": "product_review_desc",
-    "label": "Description",
-    "default": "Lorem Ipsum is printing & typesetting industry's standard dummy text since texts"
-  },
-  {
-    "type": "checkbox",
-    "id": "product_review_tab_enable",
-    "label": "Show Product Review Content",
-    "info": "Install Free Apps for Product Review [Click Here](https:\/\/apps.shopify.com\/product-reviews)",
-    "default": true
-  }
+    {
+      "type": "checkbox",
+      "id": "product_tab_enable",
+      "label": "Show Product Tab Section",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Section Padding"
+    },
+    {
+      "type": "paragraph",
+      "content": "Desktop / Laptop / tablet"
+    },
+    {
+      "type": "range",
+      "id": "product_detail_tab_padding_top",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "product_detail_tab_padding_bottom",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 100
+    },
+    {
+      "type": "paragraph",
+      "content": "Ipad pro / Ipad"
+    },
+    {
+      "type": "range",
+      "id": "product_detail_tab_padding_top_ip",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "product_detail_tab_padding_bottom_ip",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "paragraph",
+      "content": "Mobile"
+    },
+    {
+      "type": "range",
+      "id": "product_detail_tab_padding_top_xs",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "product_detail_tab_padding_bottom_xs",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "header",
+      "content": "Section Background Color"
+    },
+    {
+      "type": "color",
+      "id": "product_detail_tab_bgcolor",
+      "label": "Background Color",
+      "default": "#F6F6F6"
+    },
+    {
+      "type": "checkbox",
+      "id": "product_detail_tab_bgcolor_check",
+      "label": "Show Background Color",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Section Border"
+    },
+    {
+      "type": "range",
+      "id": "product_detail_tab_border",
+      "label": "Border",
+      "min": 0,
+      "max": 2,
+      "step": 1,
+      "unit": "px",
+      "default": 1
+    },
+    {
+      "type": "color",
+      "id": "product_detail_tab_border_color",
+      "label": "Border Color",
+      "default": "#E2E2E2"
+    },
+    {
+      "type": "checkbox",
+      "id": "product_detail_tab_border_enable",
+      "label": "Show Section Border",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Tab"
+    },
+    {
+      "type": "select",
+      "id": "product_detail_tab_option",
+      "label": "Tab Option",
+      "options": [
+        {
+          "label": "Regular",
+          "value": "regular_tab"
+        },
+        {
+          "label": "Vertical Left",
+          "value": "vertical_tab_left"
+        },
+        {
+          "label": "Vertical Right",
+          "value": "vertical_tab_right"
+        }
+      ],
+      "default": "vertical_tab_left"
+    },
+    {
+      "type": "header",
+      "content": "Video Content"
+    },
+    {
+      "type": "checkbox",
+      "id": "product_video_tab_enable",
+      "label": "Show Product Video Content",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Review Content"
+    },
+    {
+      "type": "color",
+      "id": "product_review_content_bgcolor",
+      "label": "Content Background Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "checkbox",
+      "id": "product_review_content_bgcolor_enable",
+      "label": "Show Background Color",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "product_review_title",
+      "label": "Title",
+      "default": "Customer love"
+    },
+    {
+      "type": "textarea",
+      "id": "product_review_desc",
+      "label": "Description",
+      "default": "Lorem Ipsum is printing & typesetting industry's standard dummy text since texts"
+    },
+    {
+      "type": "checkbox",
+      "id": "product_review_tab_enable",
+      "label": "Show Product Review Content",
+      "info": "Install Free Apps for Product Review [Click Here](https://apps.shopify.com/product-reviews)",
+      "default": true
+    }
   ],
   "blocks": [
-  {
-    "type": "product_desc",
-    "name": "Product Description",
-    "limit": 1,
-    "settings": [
-      {
-        "type": "header",
-        "content": "Description Tab"
-      },
-      {
-        "type": "text",
-        "id": "product_info_tab_title",
-        "label": "Title",
-        "default": "Description"
-      }
-    ]
-  },
-  {
-    "type": "product_add_info",
-    "name": "Additional Information",
-    "limit": 1,
-    "settings": [
-      {
-        "type": "header",
-        "content": "Additional Tab"
-      },
-      {
-        "type": "text",
-        "id": "product_add_info_tab_title",
-        "label": "Title",
-        "default": "Additional info"
-      }
-    ]
-  },
-  {
-    "type": "product_fb_comment",
-    "name": "Product Facebook Comments",
-    "limit": 1,
-    "settings": [
-      {
-        "type": "header",
-        "content": "Facebook Comments"
-      },
-      {
-        "type": "text",
-        "id": "product_comments_title",
-        "label": "Comments Title",
-        "default": "Comments"
-      },
-      {
-        "type": "text",
-        "id": "facebook_comments_post_limit",
-        "label": "FacebooK Comment Limit",
-        "default": "10"
-      }
-    ]
-  }
+    {
+      "type": "product_desc",
+      "name": "Product Description",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "header",
+          "content": "Description Tab"
+        },
+        {
+          "type": "text",
+          "id": "product_info_tab_title",
+          "label": "Title",
+          "default": "Description"
+        }
+      ]
+    },
+    {
+      "type": "product_add_info",
+      "name": "Additional Information",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "header",
+          "content": "Additional Tab"
+        },
+        {
+          "type": "text",
+          "id": "product_add_info_tab_title",
+          "label": "Title",
+          "default": "Additional info"
+        }
+      ]
+    },
+    {
+      "type": "product_fb_comment",
+      "name": "Product Facebook Comments",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "header",
+          "content": "Facebook Comments"
+        },
+        {
+          "type": "text",
+          "id": "product_comments_title",
+          "label": "Comments Title",
+          "default": "Comments"
+        },
+        {
+          "type": "text",
+          "id": "facebook_comments_post_limit",
+          "label": "FacebooK Comment Limit",
+          "default": "10"
+        }
+      ]
+    }
   ]
 }
 {% endschema %}

@@ -1,4 +1,4 @@
-<footer class="footer-area" {% if section.settings.footer_bg_img_enable %}style="background-image: url('{% if section.settings.footer_bg_img %}{{ section.settings.footer_bg_img | img_url: 'master' }}{% else %}https://dummyimage.com/1920x450/f7f7f7/999999{% endif %}');"{% endif %} data-section-id="{{ section.id }}">
+<footer class="footer-area" {% if section.settings.footer_bg_img_enable %}style="background-image: url('{% if section.settings.footer_bg_img %}{{ section.settings.footer_bg_img | image_url }}{% else %}https://dummyimage.com/1920x450/f7f7f7/999999{% endif %}');"{% endif %} data-section-id="{{ section.id }}">
   <div class="container">
     <div class="footer-service">
       <ul class="service-ul">
@@ -125,391 +125,391 @@
 {
   "name": "Footer",
   "settings": [
-  {
-    "type": "header",
-    "content": "Section Padding"
-  },
-  {
-    "type" : "paragraph",
-    "content" : "Desktop / Laptop / tablet"
-  },
-  {
-    "type": "range",
-    "id": "foot_padding_top",
-    "label": "Section Padding Top",
-    "min": 0,
-    "max": 100,
-    "step": 5,
-    "unit": "px",
-    "default": 100
-  },
-  {
-    "type": "range",
-    "id": "foot_padding_bottom",
-    "label": "Section Padding Bottom",
-    "min": 0,
-    "max": 100,
-    "step": 5,
-    "unit": "px",
-    "default": 100
-  },
-  {
-    "type" : "paragraph",
-    "content" : "Ipad pro / Ipad"
-  },
-  {
-    "type": "range",
-    "id": "foot_padding_top_ipad",
-    "label": "Section Padding Top",
-    "min": 0,
-    "max": 100,
-    "step": 5,
-    "unit": "px",
-    "default": 80
-  },
-  {
-    "type": "range",
-    "id": "foot_padding_bottom_ipad",
-    "label": "Section Padding Bottom",
-    "min": 0,
-    "max": 100,
-    "step": 5,
-    "unit": "px",
-    "default": 80
-  },
-  {
-    "type" : "paragraph",
-    "content" : "Mobile"
-  },
-  {
-    "type": "range",
-    "id": "foot_padding_top_xs",
-    "label": "Section Padding Top",
-    "min": 0,
-    "max": 100,
-    "step": 5,
-    "unit": "px",
-    "default": 60
-  },
-  {
-    "type": "range",
-    "id": "foot_padding_bottom_xs",
-    "label": "Section Padding Bottom",
-    "min": 0,
-    "max": 100,
-    "step": 5,
-    "unit": "px",
-    "default": 60
-  },
-  {
-    "type": "header",
-    "content": "Footer background"
-  },
-  {
-    "type": "image_picker",
-    "id": "footer_bg_img",
-    "label": "Image",
-    "info": "Recommended Size: 1920 x 770px"
-  },
-  {
-    "type": "checkbox",
-    "id": "footer_bg_img_enable",
-    "label": "Show Background Image",
-    "default": false
-  },
-  {
-    "type": "color",
-    "id": "footer_bg_color",
-    "label": "Background Color",
-    "default": "#fff"
-  },
-  {
-    "type": "color",
-    "id": "text_color",
-    "label": "Text Color",
-    "default": "#f2f0ed"
-  },
-  {
-    "type": "color",
-    "id": "heading_color",
-    "label": "Heading Color",
-    "default": "#333"
-  },
-  {
-    "type": "header",
-    "content": "Footer Service"
-  },
-  {
-    "type": "header",
-    "content": "Service 1"
-  },
-  {
-    "type": "text",
-    "id": "service_subtitle_1",
-    "label": "Subtitle",
-    "default": "Totally free"
-  },
-  {
-    "type": "text",
-    "id": "service_title_1",
-    "label": "Title",
-    "default": "Bike test drive"
-  },
-  {
-    "type": "header",
-    "content": "Service 2"
-  },
-  {
-    "type": "text",
-    "id": "service_subtitle_2",
-    "label": "Subtitle",
-    "default": "Only in 30 days"
-  },
-  {
-    "type": "text",
-    "id": "service_title_2",
-    "label": "Title",
-    "default": "Free returns"
-  },
-  {
-    "type": "header",
-    "content": "Service 3"
-  },
-  {
-    "type": "text",
-    "id": "service_subtitle_3",
-    "label": "Subtitle",
-    "default": "For all standard offer"
-  },
-  {
-    "type": "text",
-    "id": "service_title_3",
-    "label": "Title",
-    "default": "Free shipping"
-  },
-  {
-    "type": "header",
-    "content": "Service 4"
-  },
-  {
-    "type": "text",
-    "id": "service_subtitle_4",
-    "label": "Subtitle",
-    "default": "Standard offer"
-  },
-  {
-    "type": "text",
-    "id": "service_title_4",
-    "label": "Title",
-    "default": "Ride & transport"
-  }
-  ],
-  "blocks":[
-  {
-    "type": "logo_info",
-    "name": "Logo information",
-    "settings": [
+    {
+      "type": "header",
+      "content": "Section Padding"
+    },
+    {
+      "type": "paragraph",
+      "content": "Desktop / Laptop / tablet"
+    },
     {
       "type": "range",
-      "id": "container_width",
-      "label": "Column width",
-      "default": 25,
-      "min": 10,
+      "id": "foot_padding_top",
+      "label": "Section Padding Top",
+      "min": 0,
       "max": 100,
-      "unit": "%"
+      "step": 5,
+      "unit": "px",
+      "default": 100
     },
     {
-      "type": "select",
-      "id": "text_lg_align",
-      "label": "Select text align",
-      "options": [
-        {
-          "value": "text-lg-start",
-          "label": "Text lg start"
-        },
-        {
-          "value": "text-lg-center",
-          "label": "Text lg center"
-        },
-        {
-          "value": "text-lg-end",
-          "label": "Text lg end"
-        }
-      ],
-      "default": "text-lg-center"
+      "type": "range",
+      "id": "foot_padding_bottom",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 100
     },
     {
-      "type": "select",
-      "id": "text_align",
-      "label": "Select text align mobile",
-      "options": [
-        {
-          "value": "text-start",
-          "label": "Text start"
-        },
-        {
-          "value": "text-center",
-          "label": "Text center"
-        },
-        {
-          "value": "text-end",
-          "label": "Text end"
-        }
-      ],
-      "default": "text-start"
+      "type": "paragraph",
+      "content": "Ipad pro / Ipad"
+    },
+    {
+      "type": "range",
+      "id": "foot_padding_top_ipad",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "foot_padding_bottom_ipad",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "paragraph",
+      "content": "Mobile"
+    },
+    {
+      "type": "range",
+      "id": "foot_padding_top_xs",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "foot_padding_bottom_xs",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "header",
+      "content": "Footer background"
+    },
+    {
+      "type": "image_picker",
+      "id": "footer_bg_img",
+      "label": "Image",
+      "info": "Recommended Size: 1920 x 770px"
     },
     {
       "type": "checkbox",
-      "id": "logo_enable",
-      "label": "Show logo",
-      "default": true
+      "id": "footer_bg_img_enable",
+      "label": "Show Background Image",
+      "default": false
     },
     {
-      "type": "richtext",
-      "id": "text_1",
-      "label": "Text 1",
-      "info": "Optional"
+      "type": "color",
+      "id": "footer_bg_color",
+      "label": "Background Color",
+      "default": "#fff"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#f2f0ed"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading Color",
+      "default": "#333"
+    },
+    {
+      "type": "header",
+      "content": "Footer Service"
+    },
+    {
+      "type": "header",
+      "content": "Service 1"
+    },
+    {
+      "type": "text",
+      "id": "service_subtitle_1",
+      "label": "Subtitle",
+      "default": "Totally free"
+    },
+    {
+      "type": "text",
+      "id": "service_title_1",
+      "label": "Title",
+      "default": "Bike test drive"
+    },
+    {
+      "type": "header",
+      "content": "Service 2"
+    },
+    {
+      "type": "text",
+      "id": "service_subtitle_2",
+      "label": "Subtitle",
+      "default": "Only in 30 days"
+    },
+    {
+      "type": "text",
+      "id": "service_title_2",
+      "label": "Title",
+      "default": "Free returns"
+    },
+    {
+      "type": "header",
+      "content": "Service 3"
+    },
+    {
+      "type": "text",
+      "id": "service_subtitle_3",
+      "label": "Subtitle",
+      "default": "For all standard offer"
+    },
+    {
+      "type": "text",
+      "id": "service_title_3",
+      "label": "Title",
+      "default": "Free shipping"
+    },
+    {
+      "type": "header",
+      "content": "Service 4"
+    },
+    {
+      "type": "text",
+      "id": "service_subtitle_4",
+      "label": "Subtitle",
+      "default": "Standard offer"
+    },
+    {
+      "type": "text",
+      "id": "service_title_4",
+      "label": "Title",
+      "default": "Ride & transport"
     }
-    ]
-  },
-  {
-    "type": "footer_menu",
-    "name": "Navigation",
-    "settings": [
-    {
-      "type": "range",
-      "id": "container_width",
-      "label": "Column width",
-      "default": 25,
-      "min": 10,
-      "max": 100,
-      "unit": "%"
-    },
-    {
-      "type": "select",
-      "id": "text_lg_align",
-      "label": "Select text align",
-      "options": [
-        {
-          "value": "text-lg-start",
-          "label": "Text lg start"
-        },
-        {
-          "value": "text-lg-center",
-          "label": "Text lg center"
-        },
-        {
-          "value": "text-lg-end",
-          "label": "Text lg end"
-        }
-      ],
-      "default": "text-lg-center"
-    },
-    {
-      "type": "select",
-      "id": "text_align",
-      "label": "Select text align mobile",
-      "options": [
-        {
-          "value": "text-start",
-          "label": "Text start"
-        },
-        {
-          "value": "text-center",
-          "label": "Text center"
-        },
-        {
-          "value": "text-end",
-          "label": "Text end"
-        }
-      ],
-      "default": "text-start"
-    },
-    {
-      "type": "link_list",
-      "id": "footer_menu_handle",
-      "label": "Select Menu"
-    },
-    {
-      "type": "richtext",
-      "id": "text",
-      "label": "Text",
-      "info": "Optional"
-    }
-    ]
-  },
-  {
-    "type": "custom_text",
-    "name": "Custom text",
-    "settings": [
-    {
-      "type": "range",
-      "id": "container_width",
-      "label": "Column width",
-      "default": 25,
-      "min": 10,
-      "max": 100,
-      "unit": "%"
-    },
-    {
-      "type": "select",
-      "id": "text_lg_align",
-      "label": "Select text align",
-      "options": [
-        {
-          "value": "text-lg-start",
-          "label": "Text lg start"
-        },
-        {
-          "value": "text-lg-center",
-          "label": "Text lg center"
-        },
-        {
-          "value": "text-lg-end",
-          "label": "Text lg end"
-        }
-      ],
-      "default": "text-lg-center"
-    },
-    {
-      "type": "select",
-      "id": "text_align",
-      "label": "Select text align mobile",
-      "options": [
-        {
-          "value": "text-start",
-          "label": "Text start"
-        },
-        {
-          "value": "text-center",
-          "label": "Text center"
-        },
-        {
-          "value": "text-end",
-          "label": "Text end"
-        }
-      ],
-      "default": "text-start"
-    },
-    {
-      "type": "richtext",
-      "id": "custom_text_1",
-      "label": "Text 1",
-      "info": "Optional"
-    },
-    {
-      "type": "richtext",
-      "id": "custom_text_2",
-      "label": "Text 2",
-      "info": "Optional"
-    }
-    ]
-  }
   ],
-  "presets":[
-  {
-    "name": "Footer"
-  }
+  "blocks": [
+    {
+      "type": "logo_info",
+      "name": "Logo information",
+      "settings": [
+        {
+          "type": "range",
+          "id": "container_width",
+          "label": "Column width",
+          "default": 25,
+          "min": 10,
+          "max": 100,
+          "unit": "%"
+        },
+        {
+          "type": "select",
+          "id": "text_lg_align",
+          "label": "Select text align",
+          "options": [
+            {
+              "value": "text-lg-start",
+              "label": "Text lg start"
+            },
+            {
+              "value": "text-lg-center",
+              "label": "Text lg center"
+            },
+            {
+              "value": "text-lg-end",
+              "label": "Text lg end"
+            }
+          ],
+          "default": "text-lg-center"
+        },
+        {
+          "type": "select",
+          "id": "text_align",
+          "label": "Select text align mobile",
+          "options": [
+            {
+              "value": "text-start",
+              "label": "Text start"
+            },
+            {
+              "value": "text-center",
+              "label": "Text center"
+            },
+            {
+              "value": "text-end",
+              "label": "Text end"
+            }
+          ],
+          "default": "text-start"
+        },
+        {
+          "type": "checkbox",
+          "id": "logo_enable",
+          "label": "Show logo",
+          "default": true
+        },
+        {
+          "type": "richtext",
+          "id": "text_1",
+          "label": "Text 1",
+          "info": "Optional"
+        }
+      ]
+    },
+    {
+      "type": "footer_menu",
+      "name": "Navigation",
+      "settings": [
+        {
+          "type": "range",
+          "id": "container_width",
+          "label": "Column width",
+          "default": 25,
+          "min": 10,
+          "max": 100,
+          "unit": "%"
+        },
+        {
+          "type": "select",
+          "id": "text_lg_align",
+          "label": "Select text align",
+          "options": [
+            {
+              "value": "text-lg-start",
+              "label": "Text lg start"
+            },
+            {
+              "value": "text-lg-center",
+              "label": "Text lg center"
+            },
+            {
+              "value": "text-lg-end",
+              "label": "Text lg end"
+            }
+          ],
+          "default": "text-lg-center"
+        },
+        {
+          "type": "select",
+          "id": "text_align",
+          "label": "Select text align mobile",
+          "options": [
+            {
+              "value": "text-start",
+              "label": "Text start"
+            },
+            {
+              "value": "text-center",
+              "label": "Text center"
+            },
+            {
+              "value": "text-end",
+              "label": "Text end"
+            }
+          ],
+          "default": "text-start"
+        },
+        {
+          "type": "link_list",
+          "id": "footer_menu_handle",
+          "label": "Select Menu"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text",
+          "info": "Optional"
+        }
+      ]
+    },
+    {
+      "type": "custom_text",
+      "name": "Custom text",
+      "settings": [
+        {
+          "type": "range",
+          "id": "container_width",
+          "label": "Column width",
+          "default": 25,
+          "min": 10,
+          "max": 100,
+          "unit": "%"
+        },
+        {
+          "type": "select",
+          "id": "text_lg_align",
+          "label": "Select text align",
+          "options": [
+            {
+              "value": "text-lg-start",
+              "label": "Text lg start"
+            },
+            {
+              "value": "text-lg-center",
+              "label": "Text lg center"
+            },
+            {
+              "value": "text-lg-end",
+              "label": "Text lg end"
+            }
+          ],
+          "default": "text-lg-center"
+        },
+        {
+          "type": "select",
+          "id": "text_align",
+          "label": "Select text align mobile",
+          "options": [
+            {
+              "value": "text-start",
+              "label": "Text start"
+            },
+            {
+              "value": "text-center",
+              "label": "Text center"
+            },
+            {
+              "value": "text-end",
+              "label": "Text end"
+            }
+          ],
+          "default": "text-start"
+        },
+        {
+          "type": "richtext",
+          "id": "custom_text_1",
+          "label": "Text 1",
+          "info": "Optional"
+        },
+        {
+          "type": "richtext",
+          "id": "custom_text_2",
+          "label": "Text 2",
+          "info": "Optional"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Footer"
+    }
   ]
 }
 {% endschema %}

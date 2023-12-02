@@ -8,9 +8,9 @@
           <div class="collection-info">
             <div class="collection-image">
               {%- if section.settings.collection_img -%}
-              <img width="{{ collection.image.width }}" height="{{ collection.image.height }}" class="img-fluid" src="{% if collection.image %}{{ collection.image | img_url: 'master' }}{% else %}https://dummyimage.com/1320x400/f7f7f7/999999{% endif %}" alt="">
+              <img width="{{ collection.image.width }}" height="{{ collection.image.height }}" class="img-fluid" src="{% if collection.image %}{{ collection.image | image_url }}{% else %}https://dummyimage.com/1320x400/f7f7f7/999999{% endif %}" alt="">
               {%- else -%}
-              <img width="{{ section.settings.collection_banner.width }}" height="{{ section.settings.collection_banner.height }}" class="img-fluid" src="{% if section.settings.collection_banner %}{{ section.settings.collection_banner | img_url: 'master' }}{% else %}https://dummyimage.com/1320x400/f7f7f7/999999{% endif %}" alt="">
+              <img width="{{ section.settings.collection_banner.width }}" height="{{ section.settings.collection_banner.height }}" class="img-fluid" src="{% if section.settings.collection_banner %}{{ section.settings.collection_banner | image_url }}{% else %}https://dummyimage.com/1320x400/f7f7f7/999999{% endif %}" alt="">
               {%- endif -%}
             </div>
             <div class="collection-description">
@@ -88,16 +88,16 @@
       "content": "Section Background Color"
     },
     {
-      "type" : "color",
-      "id" : "collection_bgcolor",
-      "label" : "Background Color",
-      "default" : "#F6F6F6"
+      "type": "color",
+      "id": "collection_bgcolor",
+      "label": "Background Color",
+      "default": "#F6F6F6"
     },
     {
-      "type" : "checkbox",
-      "id" : "collection_bgcolor_enable",
-      "label" : "Show Background Color",
-      "default" : true
+      "type": "checkbox",
+      "id": "collection_bgcolor_enable",
+      "label": "Show Background Color",
+      "default": true
     },
     {
       "type": "header",
