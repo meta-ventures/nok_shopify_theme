@@ -18,32 +18,38 @@
 
 {% if section.settings.desktop_banner != blank %}
     <div class="banner-desktop">
-        <img src="{{ section.settings.desktop_banner | img_url }}" alt="Desktop Banner">
+        <img src="{{ section.settings.desktop_banner | img_url }}" alt="Desktop Banner" loading="eager">
     </div>
 {% endif %}
 
 {% if section.settings.mobile_banner != blank %}
     <div class="banner-mobile">
-        <img src="{{ section.settings.mobile_banner | img_url }}" alt="Mobile Banner">
+        <img src="{{ section.settings.mobile_banner | img_url }}" alt="Mobile Banner" loading="lazy">
     </div>
 {% endif %}
 
+
+
 <style>
 @media (min-width: 769px) {
-    .banner-desktop {
+    .banner-desktop img {
         display: block;
+        width: 100%;
+        height: auto;
     }
-    .banner-mobile {
+    .banner-mobile img {
         display: none;
     }
 }
 
 @media (max-width: 768px) {
-    .banner-desktop {
+    .banner-desktop img {
         display: none;
     }
-    .banner-mobile {
+    .banner-mobile img {
         display: block;
+        width: 100%;
+        height: auto;
     }
 }
 </style>
