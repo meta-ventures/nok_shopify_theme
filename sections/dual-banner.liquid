@@ -1,6 +1,6 @@
 {% if section.settings.desktop_banner != blank %}
   <div class="banner-desktop">
-      <img src="{% if block.settings.slider_bg_img %}{{ block.settings.slider_bg_img | image_url }}{% else %}https://dummyimage.com/1920x1080{% endif %}"
+      <img src="{% if block.settings.desktop_banner %}{{ block.settings.desktop_banner | image_url }}{% else %}https://dummyimage.com/1920x1080{% endif %}"
            alt="{{ section.settings.desktop_banner.alt }}"
            width="{{ section.settings.desktop_banner.width }}"
            height="{{ section.settings.desktop_banner.height }}"
@@ -10,7 +10,7 @@
 
 {% if section.settings.mobile_banner != blank %}
   <div class="banner-mobile">
-      <img src="{% if block.settings.slider_bg_img %}{{ block.settings.slider_bg_img | image_url }}{% else %}https://dummyimage.com/600x800{% endif %}"
+      <img src="{% if block.settings.mobile_banner %}{{ block.settings.mobile_banner | image_url }}{% else %}https://dummyimage.com/600x800{% endif %}"
            alt="{{ section.settings.mobile_banner.alt }}"
            width="{{ section.settings.mobile_banner.width }}"
            height="{{ section.settings.mobile_banner.height }}"
