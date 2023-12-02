@@ -8,9 +8,9 @@
               <h2>
                 {{ section.settings.testi_title }}
               </h2>
-              {% endif %}              
+              {% endif %}
             </div>
-          </div>  
+          </div>
           <div class="testimonial-slider swiper-container" id="testimonial-{{ section.id }}">
             <div class="swiper-wrapper">
               {% for block in section.blocks %}
@@ -29,7 +29,7 @@
                     <div class="testi-author">
                       <h6>{{ block.settings.testi_authr_name }}</h6>
                       <span>{{ block.settings.testi_authr_bio }}</span>
-                    </div>                      
+                    </div>
                   </div>
               </div>
               {%- endfor -%}
@@ -169,23 +169,23 @@ addEventListener('DOMContentLoaded', (event) => {
   },
   {
     "type" : "header",
-    "content" : "Section Backgorund Image"
+    "content" : "Section Background Image"
   },
   {
     "type": "image_picker",
     "id": "testi_bgimg",
-    "label": "Backgorund Image",
+    "label": "Background Image",
     "info": "Recommended Size: 1920px x 610px"
   },
   {
     "type" : "checkbox",
     "id" : "testi_bgimg_check",
-    "label" : "Show Backgorund Images",
+    "label" : "Show Background Images",
     "default" : true
   },
   {
     "type" : "header",
-    "content" : "Section Backgorund Color"
+    "content" : "Section Background Color"
   },
   {
     "type": "color",
@@ -311,14 +311,14 @@ addEventListener('DOMContentLoaded', (event) => {
   margin-right: 5px;
   {% else %}
   margin-left: 5px;
-  {% endif %} 
+  {% endif %}
 }
 .testimonial-area .testi-info .testi-review i:first-child {
   {% if settings.enable_rtl %}
   margin-right: 0px;
   {% else %}
   margin-left: 0px;
-  {% endif %} 
+  {% endif %}
 }
 .testimonial-area .testi-info .testi-author {
   margin-top: 14px;
@@ -350,7 +350,7 @@ addEventListener('DOMContentLoaded', (event) => {
   left: -5px;
   {% else %}
   right: -5px;
-  {% endif %} 
+  {% endif %}
   width: 10px;
   height: 2px;
 }

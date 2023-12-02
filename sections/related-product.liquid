@@ -38,10 +38,10 @@
             {% else %}
             {% unless current_product_count == true and forloop.last %}
             <div class="swiper-slide">
-              {% include 'product-grid-item' %}        
+              {% include 'product-grid-item' %}
             </div>
             {% endunless %}
-            {% endif %}     
+            {% endif %}
             {% endfor %}
           </div>
         </div>
@@ -99,7 +99,7 @@
       }
     });
   });
-</script> 
+</script>
 {% schema %}
 {
   "name": "Related Product",
@@ -188,7 +188,7 @@
   },
   {
     "type": "header",
-    "content": "Section Backgorund Color"
+    "content": "Section Background Color"
   },
   {
     "type" : "color",
@@ -199,7 +199,7 @@
   {
     "type" : "checkbox",
     "id" : "related_bgcolor_enable",
-    "label" : "Show Backgorund Color",
+    "label" : "Show Background Color",
     "default" : true
   },
   {
@@ -336,7 +336,3 @@
     }
   }
 </style>
-
-
-
-
