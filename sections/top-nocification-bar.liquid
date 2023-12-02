@@ -1,5 +1,5 @@
 {%- if section.settings.topbar_notification_enable -%}
-<section class="top-notification-bar" {% if section.settings.bg_img_enable %}style="background-image: url('{% if section.settings.bg_img %}{{ section.settings.bg_img | img_url: 'master' }}{% else %}https://dummyimage.com/1920x50{% endif %}');"{% endif %}>
+<section class="top-notification-bar" {% if section.settings.bg_img_enable %}style="background-image: url('{% if section.settings.bg_img %}{{ section.settings.bg_img | image_url }}{% else %}https://dummyimage.com/1920x50{% endif %}');"{% endif %}>
   <div class="container">
     <div class="row">
       <div class="col">
@@ -81,101 +81,101 @@
 {
   "name": "Topbar notification",
   "settings": [
-  {
-    "type": "header",
-    "content": "Show topbar notification"
-  },
-  {
-    "type": "checkbox",
-    "id": "topbar_notification_enable",
-    "label": "Show topbar notification",
-    "default": true
-  },
-  {
+    {
+      "type": "header",
+      "content": "Show topbar notification"
+    },
+    {
+      "type": "checkbox",
+      "id": "topbar_notification_enable",
+      "label": "Show topbar notification",
+      "default": true
+    },
+    {
       "type": "checkbox",
       "id": "bg_img_enable",
       "label": "Background Image enable",
       "default": true
-  },
-  {
+    },
+    {
       "type": "image_picker",
       "id": "bg_img",
       "label": "Background Image",
       "info": "Recommended Size: 1920 x 50px"
-  },
-  {
-    "type": "header",
-    "content": "Section background color"
-  },
-  {
-    "type": "color",
-    "id": "topbar_notification_bg_color",
-    "label": "Section background color",
-    "default": "#fff"
-  },
-  {
-    "type": "color",
-    "id": "topbar_notification_txt_color",
-    "label": "Section text color",
-    "default": "#fff"
-  },
-  {
-    "type": "header",
-    "content": "Icon with link"
-  },
-  {
-    "type": "textarea",
-    "id": "icon1",
-    "label": "Text icon"
-  },
-  {
-    "type": "richtext",
-    "id": "rich_text1",
-    "label": "Text"
-  },
-  {
-    "type": "header",
-    "content": "Animation text"
-  },
-  {
-    "type": "textarea",
-    "id": "icon2",
-    "label": "Text icon"
-  },
-  {
-    "type": "richtext",
-    "id": "anim_richtext1",
-    "label": "animation text"
-  },
-  {
-    "type": "textarea",
-    "id": "icon3",
-    "label": "Text icon"
-  },
-  {
-    "type": "richtext",
-    "id": "anim_richtext2",
-    "label": "animation text"
-  },
-  {
-    "type": "textarea",
-    "id": "icon4",
-    "label": "Text icon"
-  },
-  {
-    "type": "richtext",
-    "id": "anim_richtext3",
-    "label": "animation text"
-  },
-  {
-    "type": "header",
-    "content": "Icon with link"
-  },
-  {
-    "type": "richtext",
-    "id": "rich_text2",
-    "label": "Text"
-  }
+    },
+    {
+      "type": "header",
+      "content": "Section background color"
+    },
+    {
+      "type": "color",
+      "id": "topbar_notification_bg_color",
+      "label": "Section background color",
+      "default": "#fff"
+    },
+    {
+      "type": "color",
+      "id": "topbar_notification_txt_color",
+      "label": "Section text color",
+      "default": "#fff"
+    },
+    {
+      "type": "header",
+      "content": "Icon with link"
+    },
+    {
+      "type": "textarea",
+      "id": "icon1",
+      "label": "Text icon"
+    },
+    {
+      "type": "richtext",
+      "id": "rich_text1",
+      "label": "Text"
+    },
+    {
+      "type": "header",
+      "content": "Animation text"
+    },
+    {
+      "type": "textarea",
+      "id": "icon2",
+      "label": "Text icon"
+    },
+    {
+      "type": "richtext",
+      "id": "anim_richtext1",
+      "label": "animation text"
+    },
+    {
+      "type": "textarea",
+      "id": "icon3",
+      "label": "Text icon"
+    },
+    {
+      "type": "richtext",
+      "id": "anim_richtext2",
+      "label": "animation text"
+    },
+    {
+      "type": "textarea",
+      "id": "icon4",
+      "label": "Text icon"
+    },
+    {
+      "type": "richtext",
+      "id": "anim_richtext3",
+      "label": "animation text"
+    },
+    {
+      "type": "header",
+      "content": "Icon with link"
+    },
+    {
+      "type": "richtext",
+      "id": "rich_text2",
+      "label": "Text"
+    }
   ]
 }
 {% endschema %}

@@ -19,7 +19,7 @@
               <div class="team-block">
                 <div class="team-image">
                   <span>
-                    <img width="{{ block.settings.about_team_image.width }}" height="{{ block.settings.about_team_image.height }}" class="img-fluid" src="{% if block.settings.about_team_image %}{{ block.settings.about_team_image | img_url: 'master' }}{% else %}https://dummyimage.com/360x410/f7f7f7/999999{% endif %}" alt="">
+                    <img width="{{ block.settings.about_team_image.width }}" height="{{ block.settings.about_team_image.height }}" class="img-fluid" src="{% if block.settings.about_team_image %}{{ block.settings.about_team_image | image_url }}{% else %}https://dummyimage.com/360x410/f7f7f7/999999{% endif %}" alt="">
                   </span>
                 </div>
                 <div class="team-content">
@@ -44,106 +44,106 @@
   "name": "About Modern Section 5",
   "settings": [
     {
-    "type": "header",
-    "content": "Section Padding"
-  },
-  {
-    "type" : "paragraph",
-    "content" : "Desktop / Laptop"
-  },
-  {
-    "type": "range",
-    "id": "section_padding_top",
-    "label": "Section Padding Top",
-    "min": 0,
-    "max": 100,
-    "step": 5,
-    "unit": "px",
-    "default": 100
-  },
-  {
-    "type": "range",
-    "id": "section_padding_bottom",
-    "label": "Section Padding bottom",
-    "min": 0,
-    "max": 100,
-    "step": 5,
-    "unit": "px",
-    "default": 100
-  },
-  {
-    "type" : "paragraph",
-    "content" : "Ipad pro / Ipad"
-  },
-  {
-    "type": "range",
-    "id": "section_padding_top_lg",
-    "label": "Section Padding Top",
-    "min": 0,
-    "max": 100,
-    "step": 5,
-    "unit": "px",
-    "default": 80
-  },
-  {
-    "type": "range",
-    "id": "section_padding_bottom_lg",
-    "label": "Section Padding bottom",
-    "min": 0,
-    "max": 100,
-    "step": 5,
-    "unit": "px",
-    "default": 80
-  },
-  {
-    "type" : "paragraph",
-    "content" : "Mobile"
-  },
-  {
-    "type": "range",
-    "id": "section_padding_top_xs",
-    "label": "Section Padding Top",
-    "min": 0,
-    "max": 100,
-    "step": 5,
-    "unit": "px",
-    "default": 60
-  },
-  {
-    "type": "range",
-    "id": "section_padding_bottom_xs",
-    "label": "Section Padding bottom",
-    "min": 0,
-    "max": 100,
-    "step": 5,
-    "unit": "px",
-    "default": 60
-  },
-  {
-    "type": "header",
-    "content": "Section Title"
-  },
-  {
-    "type": "textarea",
-    "id": "other_page_title",
-    "label": "Title",
-    "default": "Most of the important things in the world have been accomplished by people who have kept on trying when there seemed to be no hope at all."
-  },
-  {
-    "type": "text",
-    "id": "other_page_subtitle",
-    "label": "Sub Title",
-    "default": "Hasa lindgren"
-  }
-  ],
-  "blocks" : [
+      "type": "header",
+      "content": "Section Padding"
+    },
     {
-      "type" : "about_modern_team",
-      "name" : "About Modern Team",
-      "settings" : [
+      "type": "paragraph",
+      "content": "Desktop / Laptop"
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom",
+      "label": "Section Padding bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 100
+    },
+    {
+      "type": "paragraph",
+      "content": "Ipad pro / Ipad"
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top_lg",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom_lg",
+      "label": "Section Padding bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "paragraph",
+      "content": "Mobile"
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top_xs",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom_xs",
+      "label": "Section Padding bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "header",
+      "content": "Section Title"
+    },
+    {
+      "type": "textarea",
+      "id": "other_page_title",
+      "label": "Title",
+      "default": "Most of the important things in the world have been accomplished by people who have kept on trying when there seemed to be no hope at all."
+    },
+    {
+      "type": "text",
+      "id": "other_page_subtitle",
+      "label": "Sub Title",
+      "default": "Hasa lindgren"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "about_modern_team",
+      "name": "About Modern Team",
+      "settings": [
         {
-          "type" : "header",
-          "content" : "Team Image"
+          "type": "header",
+          "content": "Team Image"
         },
         {
           "type": "image_picker",
@@ -152,8 +152,8 @@
           "info": "Recommended Size: 360px x 410px"
         },
         {
-          "type" : "header",
-          "content" : "Team Content"
+          "type": "header",
+          "content": "Team Content"
         },
         {
           "type": "text",
@@ -170,7 +170,7 @@
       ]
     }
   ],
-  "presets":[
+  "presets": [
     {
       "name": "About Modern Section 5",
       "category": "About Modern"

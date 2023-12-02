@@ -36,7 +36,7 @@
                                 <li class="cart-wrapper item-info">
                                     <div class="item-img">
                                         <a href="{{ item.url }}">
-                                            <img class="img-fluid" src="{{ item | img_url: '120x120', crop: 'center' }}" width="{{ item.title.width }}" height="{{ item.title.height }}" alt="{{ item.title | escape }}" />
+                                            <img class="img-fluid" src="{{ item | image_url: width: 120, height: 120, crop: 'center' }}" width="{{ item.title.width }}" height="{{ item.title.height }}" alt="{{ item.title | escape }}" />
                                         </a>
                                     </div>
                                     <div class="item-title">
@@ -87,7 +87,7 @@
                                 </li>
                                 <li class="cart-wrapper">
                                     <span class="amount full-price">
-                                        <span class="amount full-price-{{item.id}}">{{ item.line_price | money }}</span>
+                                        <span class="amount full-price-{{ item.id }}">{{ item.line_price | money }}</span>
                                     </span>
                                 </li>
                             </ul>
@@ -145,121 +145,121 @@
 </section>
 {% schema %}
 {
-    "name": "Cart Page",
-    "settings": [
+  "name": "Cart Page",
+  "settings": [
     {
-        "type": "text",
-        "id": "item_title",
-        "label": "Item title",
-        "default": "Product item"
+      "type": "text",
+      "id": "item_title",
+      "label": "Item title",
+      "default": "Product item"
     },
     {
-        "type": "text",
-        "id": "price_title",
-        "label": "Price title",
-        "default": "Price"
+      "type": "text",
+      "id": "price_title",
+      "label": "Price title",
+      "default": "Price"
     },
     {
-        "type": "text",
-        "id": "quantity_title",
-        "label": "Quantity title",
-        "default": "Quantity"
+      "type": "text",
+      "id": "quantity_title",
+      "label": "Quantity title",
+      "default": "Quantity"
     },
     {
-        "type": "text",
-        "id": "total_title",
-        "label": "Total price title",
-        "default": "Total price"
+      "type": "text",
+      "id": "total_title",
+      "label": "Total price title",
+      "default": "Total price"
     },
     {
-        "type": "checkbox",
-        "id": "cart_vendor_enable",
-        "label": "Show Product Vendor",
-        "default": false
+      "type": "checkbox",
+      "id": "cart_vendor_enable",
+      "label": "Show Product Vendor",
+      "default": false
     },
     {
-        "type": "header",
-        "content": "Note"
+      "type": "header",
+      "content": "Note"
     },
     {
-        "type": "checkbox",
-        "id": "cart_notes_enable",
-        "label": "Show Cart Notes",
-        "default": true
+      "type": "checkbox",
+      "id": "cart_notes_enable",
+      "label": "Show Cart Notes",
+      "default": true
     },
     {
-        "type": "header",
-        "content": "Shipping Calculator"
+      "type": "header",
+      "content": "Shipping Calculator"
     },
     {
-        "type": "checkbox",
-        "id": "shipping_calculator",
-        "label": "Show shipping calculator",
-        "default": true
+      "type": "checkbox",
+      "id": "shipping_calculator",
+      "label": "Show shipping calculator",
+      "default": true
     },
     {
-        "type": "text",
-        "id": "shipping_calculator_heading",
-        "label": "Shipping Calculator Title",
-        "default": "Shipping Charge"
+      "type": "text",
+      "id": "shipping_calculator_heading",
+      "label": "Shipping Calculator Title",
+      "default": "Shipping Charge"
     },
     {
-        "type": "text",
-        "id": "shipping_calculator_button_title",
-        "label": "Shipping Calculator Button Title",
-        "default": "Calculate shipping"
+      "type": "text",
+      "id": "shipping_calculator_button_title",
+      "label": "Shipping Calculator Button Title",
+      "default": "Calculate shipping"
     },
     {
-        "type": "text",
-        "id": "cart_note_title",
-        "label": "Cart Note Title",
-        "default": "Special instructions for seller"
+      "type": "text",
+      "id": "cart_note_title",
+      "label": "Cart Note Title",
+      "default": "Special instructions for seller"
     },
     {
-        "type": "header",
-        "content": "Cart Totals"
+      "type": "header",
+      "content": "Cart Totals"
     },
     {
-        "type": "text",
-        "id": "cart_total_title",
-        "label": "Cart total title",
-        "default": "Total"
+      "type": "text",
+      "id": "cart_total_title",
+      "label": "Cart total title",
+      "default": "Total"
     },
     {
-        "type": "text",
-        "id": "checkout_button_title",
-        "label": "Checkout Button Title",
-        "default": "Proceed to Checkout"
+      "type": "text",
+      "id": "checkout_button_title",
+      "label": "Checkout Button Title",
+      "default": "Proceed to Checkout"
     },
     {
-        "type": "header",
-        "content": "Cart Empty"
+      "type": "header",
+      "content": "Cart Empty"
     },
     {
-        "type": "text",
-        "id": "cart_empty_title1",
-        "label": "Cart Empty Title1",
-        "default": "Your"
+      "type": "text",
+      "id": "cart_empty_title1",
+      "label": "Cart Empty Title1",
+      "default": "Your"
     },
     {
-        "type": "text",
-        "id": "cart_continue_title",
-        "label": "Continue Browsing Title",
-        "default": "Continue browsing"
+      "type": "text",
+      "id": "cart_continue_title",
+      "label": "Continue Browsing Title",
+      "default": "Continue browsing"
     },
     {
-        "type": "text",
-        "id": "here_title",
-        "label": "Here Title",
-        "default": "here"
+      "type": "text",
+      "id": "here_title",
+      "label": "Here Title",
+      "default": "here"
     },
     {
-        "type": "text",
-        "id": "tax_info",
-        "label": "Tax information",
-        "default": "Taxes and shipping calculated at checkout"
+      "type": "text",
+      "id": "tax_info",
+      "label": "Tax information",
+      "default": "Taxes and shipping calculated at checkout"
     }
-    ]
+  ]
 }
 {% endschema %}
 
