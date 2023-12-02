@@ -6,7 +6,7 @@
 {%- elsif settings.footer_logo_svg_code != blank %}
 <a href="{{ shop.url }}" class="footer-logo">
   <span style="max-width: {{ settings.footer_logo_max_width }}px;">
-    {{ settings.footer_logo_svg_code | html }}
+    {{ settings.footer_logo_svg_code | raw }}
   </span>
 </a>
 {%- elsif settings.footer_logo_svg != blank %}
