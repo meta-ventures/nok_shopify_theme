@@ -344,6 +344,18 @@
         "prev_title": "Prev",
         "next_title": "Next"
       }
+    },
+    "28f44a33-4eb1-44b6-9607-803ed64babc7": {
+      "type": "about-modern-template2",
+      "settings": {
+        "section_padding_top": 100,
+        "section_padding_bottom": 100,
+        "section_padding_top_lg": 80,
+        "section_padding_bottom_lg": 80,
+        "section_padding_top_xs": 60,
+        "section_padding_bottom_xs": 60,
+        "about_modern_image": "shopify:\/\/shop_images\/How_NOK_Card_Works_3.webp"
+      }
     }
   },
   "order": [
@@ -356,6 +368,7 @@
     "1651906337f627fe84",
     "165218770966e89aa3",
     "1652247691ba697e15",
-    "36ccb9d8-e545-426d-a72a-c3a182412cfb"
+    "36ccb9d8-e545-426d-a72a-c3a182412cfb",
+    "28f44a33-4eb1-44b6-9607-803ed64babc7"
   ]
 }
