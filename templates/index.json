@@ -349,6 +349,8 @@
     "dual-banner": {
       "type": "dual-banner",
       "settings": {
+        "desktop_banner": "shopify:\/\/shop_images\/How_NOK_Card_Works_3_0291bf9e-e4c8-451a-a360-79666c5c2230.webp",
+        "mobile_banner": "shopify:\/\/shop_images\/How_NOK_Card_Works_600_x_800_px.webp"
       }
     },
     "165218770966e89aa3": {
