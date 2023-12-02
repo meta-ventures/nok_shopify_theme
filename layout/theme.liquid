@@ -70,7 +70,7 @@
     {%- endif -%}
 
     <!-- Helpers -->
-    {% include 'social-meta-tags' %}
+    {% render 'social-meta-tags' %}
     {%- render 'header-css' -%}
     <style>*,::after,::before{box-sizing:border-box}body{color: var(--font-color-body);font-size: var(--font-size-body);background-color: var(--background-color-body);{% if settings.body_custom_font_handle_enable %}font-family: '{{ settings.body_custom_font_handle }}', sans-serif;font-weight: {{ settings.body_custom_font_weight }};{% if settings.body_custom_font_style == 'italic' %}font-style: italic;{% elsif settings.body_custom_font_style == 'normal' %}font-style: normal;{% elsif settings.body_custom_font_style == 'oblique' %}font-style: oblique;{% elsif settings.body_custom_font_style == 'unset' %}font-style: unset;{% endif %}{% else %}font-family: var(--font-stack-body);font-weight: var(--font-weight-body);font-style: var(--font-style-body);{% endif %}letter-spacing: var(--font-letter-spacing-body);}h1,h2,h3,h4,h5,h6{color: var(--font-color-header);{% if settings.header_custom_font_handle_enable %}font-family: '{{ settings.header_custom_font_handle }}', sans-serif;font-weight: {{ settings.header_custom_font_weight }};{% if settings.header_custom_font_style == 'italic' %}font-style: italic;{% elsif settings.header_custom_font_style == 'normal' %}font-style: normal;{% elsif settings.header_custom_font_style == 'oblique' %}font-style: oblique;{% elsif settings.header_custom_font_style == 'unset' %}font-style: unset;{% endif %}{% else %}font-family: var(--font-stack-header);font-weight: var(--font-weight-header);font-style: var(--font-style-header);{% endif %}}.section-title h2,.content-main-title h2,.my-account-page .page-title h2{color: var(--font-color-section-header);{% if settings.section_header_custom_font_handle_enable %}font-family: '{{ settings.section_header_custom_font_handle }}', sans-serif;font-weight: {{ settings.section_header_custom_font_weight }};{% if settings.section_header_custom_font_style == 'italic' %}font-style: italic;{% elsif settings.section_header_custom_font_style == 'normal' %}font-style: normal;{% elsif settings.section_header_custom_font_style == 'oblique' %}font-style: oblique;{% elsif settings.section_header_custom_font_style == 'unset' %}font-style: unset;{% endif %}{% else %}font-family: var(--font-stack-section-header);font-weight: var(--font-weight-section-header);font-style: var(--font-style-section-header);{% endif %}{% if settings.section_header_text_transform == 'capitalize' %}text-transform: capitalize;{% elsif settings.section_header_text_transform == 'lowercase' %}text-transform: lowercase;{% elsif settings.section_header_text_transform == 'uppercase' %}text-transform: uppercase;{% elsif settings.section_header_text_transform == 'none' %}text-transform: none;{% endif %}}p{color: var(--font-color-paragraph);{% if settings.paragraph_custom_font_handle_enable %}font-family: '{{ settings.paragraph_custom_font_handle }}', sans-serif;font-weight: {{ settings.paragraph_custom_font_weight }};{% if settings.paragraph_custom_font_style == 'italic' %}font-style: italic;{% elsif settings.paragraph_custom_font_style == 'normal' %}font-style: normal;{% elsif settings.paragraph_custom_font_style == 'oblique' %}font-style: oblique;{% elsif settings.paragraph_custom_font_style == 'unset' %}font-style: unset;{% endif %}{% else %}font-family: var(--font-stack-paragraph);{% endif %}line-height: var(--font-line-height-paragraph);}
 
@@ -111,7 +111,7 @@
 
   <body  id="{{ page_title | handle }}" class="{% if customer %}customer-logged-in {% endif %}template-{{ template.name | handle }}">
     {%- if template == 'index' and settings.newsletter_popup_enable -%}
-    {% include 'newsletter-popup' %}
+    {% render 'newsletter-popup' %}
     {%- endif -%}
     {% section 'top-nocification-bar' %}
 
@@ -134,14 +134,14 @@
     {% endif %}
 
     {%- if template != 'index' -%}
-    {% include 'breadcrumb-banner' %}
-    {% include 'breadcrumb02-banner' %}
+    {% render 'breadcrumb-banner' %}
+    {% render 'breadcrumb02-banner' %}
     {%- endif -%}
 
     <main role="main">
       {{ content_for_layout }}
     </main>
-    {% include 'fullscreen-bg' %}
+    {% render 'fullscreen-bg' %}
     {% section 'offer-text' %}
     {%- if settings.footer_style == "Style-1" -%}
     {% section 'footer-1' %}
@@ -162,9 +162,9 @@
     {%- endif -%}
 
     {% section 'copy-right' %}
-    {% include 'back-to-top' %}
+    {% render 'back-to-top' %}
     <!-- Necessary JS -->
-    {% include 'footer-js' %}
-    {% include 'search-autocomplete' %}
+    {% render 'footer-js' %}
+    {% render 'search-autocomplete' %}
   </body>
 </html>

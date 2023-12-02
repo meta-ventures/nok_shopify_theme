@@ -8,7 +8,7 @@
         <ul class="single-blog-area">
           {% for article in blog.articles %}
           <li class="blog-slider">
-            {% include 'blog-grid-item' %}
+            {% render 'blog-grid-item' %}
           </li>
           {% endfor %}
         </ul>
@@ -43,7 +43,7 @@
       {%- endpaginate -%}
       {%- unless section.settings.blog_news_sidebar_handle == 'without_sidebar' -%}
       <div class="col-xl-3 col-lg-4 col-md-12 col-12 blog-grid-wrap">
-        {% include 'blog-sidebar' %}
+        {% render 'blog-sidebar' %}
       </div>
       {%- endunless -%}
     </div>

@@ -19,7 +19,7 @@
               </div>
             </div>
             {% endif %}
-            {% include 'contact-form' %}
+            {% render 'contact-form' %}
           </div>
         </div>
       </div>
@@ -33,7 +33,7 @@
           <span>{{ section.settings.contact_shre_title }}</span>
           {% endif %}
           <div class="social-icon">
-            {% include 'social-midea' %}
+            {% render 'social-midea' %}
           </div>
         </div>
       </div>
@@ -211,7 +211,7 @@
     margin-top: -150px;
     box-shadow: 0 0 10px #00000026;
   }
-  .modern-contact-area .contact-form-area .contact-input-area form input,  
+  .modern-contact-area .contact-form-area .contact-input-area form input,
   .modern-contact-area .contact-form-area .contact-input-area form .contact-input ul.form-fill li input,
   .modern-contact-area .contact-form-area .contact-input-area form .contact-input ul.form-fill li textarea {
     border: 1px solid #e2e2e2;
@@ -246,7 +246,7 @@
     font-weight: 400;
     line-height: 1;
     text-transform: uppercase;
-  } 
+  }
   .modern-contact-area .contact-share .social-icon {
     margin-top: 30px;
   }

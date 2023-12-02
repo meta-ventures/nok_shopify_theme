@@ -24,7 +24,7 @@
                     {% for addin in blogs[blog.handle].articles %}
                     {% unless addin.handle == currentHandle %}
                     <div class="item">
-                        {% include 'related-blog' %}
+                        {% render 'related-blog' %}
                     </div>
                     {% assign articlesFound = articlesFound | plus: 1 %}
                     {% endunless %}

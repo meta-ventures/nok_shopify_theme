@@ -124,8 +124,8 @@
             <div class="tab-pane{% if forloop.first %} active{% endif %}" id="comment-box" role="tabpanel">
               <div class="fb-comment-box">
                 <!-- facebook comment box start -->
-                {% include 'facebook-comment' %}
-                {% include 'facebook-comment-box-script' %}
+                {% render 'facebook-comment' %}
+                {% render 'facebook-comment-box-script' %}
                 <!-- facebook comment box end -->
               </div>
             </div>

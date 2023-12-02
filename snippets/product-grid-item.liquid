@@ -24,7 +24,7 @@
         </div>
         <div class="product-action">
             {%- if settings.wishlist_enable -%}
-            {% include 'wishlist-button' %}
+            {% render 'wishlist-button' %}
             {%- endif -%}
             {%- if settings.product_quickview_enalbe -%}
             <a href="javascript:void(0);" onclick="quiqview('{{ product.handle | handleize }}')" class="quick-view{% unless product.available %} disabled{% endunless %}"{% unless product.available %} disabled="disabled"{% endunless %} data-bs-toggle="tooltip" data-bs-placement="top" title="Quickview">
@@ -84,7 +84,7 @@
             {% endif %}
 
             {%- if settings.wishlist_enable -%}
-            {% include 'wishlist-button' %}
+            {% render 'wishlist-button' %}
             {%- endif -%}
 
             {%- if settings.product_quickview_enalbe -%}
