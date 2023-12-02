@@ -72,10 +72,10 @@
         "1ed917c6-5e5d-4655-a544-6b4ecc37ba6f"
       ],
       "settings": {
-        "our_ser_padding_top": 100,
+        "our_ser_padding_top": 1,
         "our_ser_padding_bottom": 100,
         "our_ser_padding_top_ip": 80,
-        "our_ser_padding_bottom_ip": 80,
+        "our_ser_padding_bottom_ip": 23,
         "our_ser_padding_top_xs": 60,
         "our_ser_padding_bottom_xs": 60,
         "section_bg_image_enable": false,
