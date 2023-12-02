@@ -11,7 +11,7 @@
 {%- elsif settings.body_logo_svg_code != blank %}
 <a href="{{ shop.url }}" class="theme-logo">
   <span style="max-width: {{ settings.logo_max_width }}px;">
-    {{ settings.body_logo_svg_code }}
+    {{ settings.body_logo_svg_code | raw }}
   </span>
 </a>
 {%- elsif settings.body_logo_svg != blank %}
