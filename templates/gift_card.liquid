@@ -5,7 +5,7 @@
 
 <header class="giftcard__header text-center" role="banner">
   <div class="site-header__logo h1 text-center">
-    {% include 'company-logo' %}
+    {% render 'company-logo' %}
     {% comment %}<a href="{{ shop.url }}" class="site-header__link site-header__logo-link">{{ shop.name }}</a>{% endcomment %}
   </div>
 
@@ -37,7 +37,7 @@
         <strong>{{ formatted_initial_value }}</strong>
       </div>
 
-      
+
       <div class="giftcard__code">
         <div class="giftcard__code__inner">
           <input type="text"

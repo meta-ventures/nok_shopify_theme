@@ -37,7 +37,7 @@
         {% if search.performed %}
         <div id="gf-products" class="search-list">
           {% for item in search.results %}
-          {% include 'search-grid' %}
+          {% render 'search-grid' %}
           {% endfor %}
         </div>
         {% endif %}
@@ -58,7 +58,7 @@
 </section>
 {% endpaginate %}
 {% else %}
-{% include 'respond' %}
+{% render 'respond' %}
 {% layout none %}
 {% endunless %}
 <style>

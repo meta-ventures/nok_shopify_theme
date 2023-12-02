@@ -7,9 +7,9 @@
 
 {% if swatch == blank %}
 <div class="swatch error">
-  <p>You must include the snippet swatch.liquid with the name of a product option.</p> 
-  <p>Use: <code>{% raw %}{% include 'swatch' with 'name of your product option here' %}{% endraw %}</code></p>
-  <p>Example: <code>{% raw %}{% include 'swatch' with 'Color' %}{% endraw %}</code></p>
+  <p>You must include the snippet swatch.liquid with the name of a product option.</p>
+  <p>Use: <code>{% raw %}{% render 'swatch' with 'name of your product option here' %}{% endraw %}</code></p>
+  <p>Example: <code>{% raw %}{% render 'swatch' with 'Color' %}{% endraw %}</code></p>
 </div>
 {% else %}
 
@@ -29,10 +29,10 @@
     <script type="text/javascript">
       window.addEventListener("DOMContentLoaded", function() {
         setTimeout(function () {
-          
+
           $('.selector-wrapper:eq({{ option_index }})').hide();
-          
-        },2000); 
+
+        },2000);
       });
     </script>
     {% assign downcased_option = swatch | downcase %}
@@ -45,8 +45,8 @@
 {% unless found_option %}
 <div class="swatch error">
   <p>You included the snippet swatch.liquid with the name of a product option — <code>'{{ swatch }}'</code> — that does not belong to your product.</p>
-  <p>Use <code>{% raw %}{% include 'swatch' with 'name of your product option here' %}{% endraw %}</code></p>
-  <p>Example: <code>{% raw %}{% include 'swatch' with 'Color' %}{% endraw %}</code></p>
+  <p>Use <code>{% raw %}{% render 'swatch' with 'name of your product option here' %}{% endraw %}</code></p>
+  <p>Example: <code>{% raw %}{% render 'swatch' with 'Color' %}{% endraw %}</code></p>
   <p><strong>This is case-sensitive!</strong> Do not put in <code>'color'</code> if your product option name is <code>'Color'</code>.</p>
 </div>
 {% else %}
@@ -82,7 +82,7 @@
       <script type="text/javascript">
         window.addEventListener("DOMContentLoaded", function() {
           $('.swatch[data-option-index="{{ option_index }}"] .{{ value | handle }}').removeClass('soldout').addClass('available').find(':radio').removeAttr('disabled');
-        }); 
+        });
       </script>
       {% endif %}
       {% endfor %}

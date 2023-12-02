@@ -50,7 +50,7 @@
                   <span class="cart-title" id="AddToCartText">{{ settings.cart_button_title }}</span>
                 </button>
                 {%- if settings.wishlist_enable -%}
-                {% include 'wishlist-5' %}
+                {% render 'wishlist-5' %}
                 {%- endif -%}
               </div>
               <script>
@@ -61,7 +61,7 @@
                     jQuery('#quickViewModal').modal('hide');
                   });
                 });
-              </script> 
+              </script>
             </form>
           </div>
         </div>
@@ -109,7 +109,7 @@
         wishlist = JSON.parse(localStorage.getItem('user_wishlist'));
       }
       if (wishlist.indexOf(productHandle) > -1) {
-        
+
         $('.quickview-buttons .action-wishlist .add-wishlist').css('display','none');
         $('.quickview-buttons .action-wishlist .remove-wishlist').css('display','block');
 
@@ -163,7 +163,7 @@
       else {
         $(_parent+' .product-short-desc').html(text_truncate(product.description, 120));
       }
-      
+
       //set variants property
       var inv_qua = variant.inventory_quantity;
 
@@ -267,7 +267,7 @@
       }
       if($(".selector-wrapper label").length) {
         $(".selector-wrapper label").each(function( index ) {
-          
+
           $(this).text(jQuery(this).text() + ":");
         });
       }
@@ -393,18 +393,18 @@
     setTimeout(timeout, 5);
     function timeout() {
       if(jQuery(_parent + " .selector-wrapper").length > 2){
-        
+
         jQuery(_parent + " .single-option-selector").addClass("select--wd");
       }
       else if(jQuery(_parent + " .selector-wrapper").length == 1) {
-        
+
           $.each( jQuery('#quickViewModal .variants_selects .selector-wrapper'), function(index) {
             //alert('fdf43');
             //console.log($(this).find('label'));
             jQuery(_parent + " .single-option-selector").before("<label>"+product.options[index].name+"</label>");
             //$(this).find('label').text(product.options[index].name);
           });
-        
+
         //
         jQuery(_parent + " .single-option-selector").addClass("select--wd");
       }
@@ -491,7 +491,7 @@
   }
   .productmodal .modal-dialog .modal-body .quick-view-img .quick-view-tab-content .product-main-image__item .img_box_1 img{
     backface-visibility: hidden;
-    
+
   }
   .productmodal .modal-dialog .modal-body .quick-view-content{
     padding: 0px 30px;
@@ -624,11 +624,11 @@
   }
   .productmodal .modal-dialog .modal-body .quick-view-content form .quickview-buttons a{
     margin: 15px 0px 0px 0px;
-  }  
+  }
   .productmodal .modal-dialog .modal-body .quick-view-content form .quickview-buttons button,
   .productmodal .modal-dialog .modal-body .quick-view-content form .quickview-buttons a.wishlist {
     width: 100%;
-  } 
+  }
   .productmodal .modal-dialog .modal-body .quick-view-content form .quickview-buttons a i{
     display: block;
     line-height: 0;
