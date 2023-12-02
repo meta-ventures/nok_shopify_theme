@@ -362,5 +362,6 @@
       "error_html": "<span class=\"icon icon-shopping_basket\"></span> Limitar productos",
       "wait_html": "<span class=\"icon icon-shopping_basket\"></span> Espera"
     }
-  }
+  },
+  "sections": "TODO"
 }

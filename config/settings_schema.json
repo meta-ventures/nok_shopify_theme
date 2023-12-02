@@ -1,7 +1,7 @@
 [
   {
     "name": "theme_info",
-    "logo": "https:\/\/cdn.shopify.com\/s\/files\/1\/0044\/8964\/2057\/files\/logo_300x300.jpg?v=1537008425",
+    "logo": "https://cdn.shopify.com/s/files/1/0044/8964/2057/files/logo_300x300.jpg?v=1537008425",
     "settings": [
       {
         "type": "header",
@@ -13,7 +13,7 @@
       },
       {
         "type": "paragraph",
-        "content": "If you have any questions, please do not hesitate to use our support forum. [Create Support](https:\/\/spacingtech.com\/support-center\/)"
+        "content": "If you have any questions, please do not hesitate to use our support forum. [Create Support](https://spacingtech.com/support-center/)"
       }
     ]
   },
@@ -191,7 +191,7 @@
         "type": "textarea",
         "id": "body_custom_font_handle",
         "label": "Custom Font",
-        "info": "[Find more Google fonts](https:\/\/fonts.google.com)",
+        "info": "[Find more Google fonts](https://fonts.google.com)",
         "default": "Open Sans"
       },
       {
@@ -275,7 +275,7 @@
         "type": "textarea",
         "id": "header_custom_font_handle",
         "label": "Custom Font",
-        "info": "[Find more Google fonts](https:\/\/fonts.google.com)",
+        "info": "[Find more Google fonts](https://fonts.google.com)",
         "default": "Open Sans"
       },
       {
@@ -335,7 +335,7 @@
         "type": "textarea",
         "id": "section_header_custom_font_handle",
         "label": "Custom Font",
-        "info": "[Find more Google fonts](https:\/\/fonts.google.com)",
+        "info": "[Find more Google fonts](https://fonts.google.com)",
         "default": "Open Sans"
       },
       {
@@ -433,7 +433,7 @@
         "type": "textarea",
         "id": "paragraph_custom_font_handle",
         "label": "Custom Font",
-        "info": "[Find more Google fonts](https:\/\/fonts.google.com)",
+        "info": "[Find more Google fonts](https://fonts.google.com)",
         "default": "Open Sans"
       },
       {
@@ -507,7 +507,7 @@
         "type": "textarea",
         "id": "other_custom_font_handle",
         "label": "Custom Font",
-        "info": "[Find more Google fonts](https:\/\/fonts.google.com)",
+        "info": "[Find more Google fonts](https://fonts.google.com)",
         "default": "Open Sans"
       }
     ]
@@ -545,7 +545,7 @@
         "id": "google_tracking_id",
         "label": "Tracking Id",
         "default": "UA-110326897-1",
-        "info": "Get Tracking Id [here](https:\/\/analytics.google.com\/)"
+        "info": "Get Tracking Id [here](https://analytics.google.com/)"
       }
     ]
   },
@@ -909,14 +909,14 @@
         "type": "html",
         "id": "body_logo_svg_code",
         "label": "Logo svg code",
-        "placeholder": "<svg><\/svg>"
+        "placeholder": "<svg></svg>"
       },
       {
         "type": "text",
         "id": "body_logo_svg",
         "label": "Logo svg file",
         "placeholder": "Logo_site.svg",
-        "info": "[Upload svg file to Files](\/admin\/settings\/files) and copy name file to input."
+        "info": "[Upload svg file to Files](/admin/settings/files) and copy name file to input."
       },
       {
         "type": "image_picker",
@@ -949,14 +949,14 @@
         "type": "html",
         "id": "footer_logo_svg_code",
         "label": "Logo svg code",
-        "placeholder": "<svg><\/svg>"
+        "placeholder": "<svg></svg>"
       },
       {
         "type": "text",
         "id": "footer_logo_svg",
         "label": "Logo svg file",
         "placeholder": "Logo_site.svg",
-        "info": "[Upload svg file to Files](\/admin\/settings\/files) and copy name file to input."
+        "info": "[Upload svg file to Files](/admin/settings/files) and copy name file to input."
       },
       {
         "type": "image_picker",
@@ -1783,18 +1783,18 @@
       },
       {
         "type": "header",
-        "content": "'New \/ Sale' Label"
+        "content": "'New / Sale' Label"
       },
       {
         "type": "color",
         "id": "new_sale_label_color",
-        "label": "'New \/ Sale' Label Color",
+        "label": "'New / Sale' Label Color",
         "default": "#FFFFFF"
       },
       {
         "type": "color",
         "id": "new_sale_label_bgcolor",
-        "label": "'New \/ Sale' Label Background Color",
+        "label": "'New / Sale' Label Background Color",
         "default": "#0E63FF"
       },
       {
@@ -1843,7 +1843,7 @@
       },
       {
         "type": "paragraph",
-        "content": "New Badge comes from shortcode - Ex: [new_products]30[\/new_products]"
+        "content": "New Badge comes from shortcode - Ex: [new_products]30[/new_products]"
       }
     ]
   },
@@ -2237,7 +2237,7 @@
       },
       {
         "type": "paragraph",
-        "content": "Desktop \/ Laptop"
+        "content": "Desktop / Laptop"
       },
       {
         "type": "range",
@@ -2261,7 +2261,7 @@
       },
       {
         "type": "paragraph",
-        "content": "Ipad pro \/ Ipad"
+        "content": "Ipad pro / Ipad"
       },
       {
         "type": "range",
@@ -2689,7 +2689,7 @@
         "id": "social_icon_1_name",
         "label": "Social Icon Name",
         "default": "ri-facebook-fill",
-        "info": "[See Icon Name](https:\/\/remixicon.com)"
+        "info": "[See Icon Name](https://remixicon.com)"
       },
       {
         "type": "url",
@@ -2705,7 +2705,7 @@
         "id": "social_icon_2_name",
         "label": "Social Icon Name",
         "default": "ri-twitter-fill",
-        "info": "[See Icon Name](https:\/\/remixicon.com)"
+        "info": "[See Icon Name](https://remixicon.com)"
       },
       {
         "type": "url",
@@ -2721,7 +2721,7 @@
         "id": "social_icon_3_name",
         "label": "Social Icon Name",
         "default": "ri-pinterest-fill",
-        "info": "[See Icon Name](https:\/\/remixicon.com)"
+        "info": "[See Icon Name](https://remixicon.com)"
       },
       {
         "type": "url",
@@ -2737,7 +2737,7 @@
         "id": "social_icon_4_name",
         "label": "Social Icon Name",
         "default": "ri-instagram-line",
-        "info": "[See Icon Name](https:\/\/remixicon.com)"
+        "info": "[See Icon Name](https://remixicon.com)"
       },
       {
         "type": "url",
@@ -2825,7 +2825,7 @@
       },
       {
         "type": "header",
-        "content": "My Account \/ Order"
+        "content": "My Account / Order"
       },
       {
         "type": "text",
@@ -2844,7 +2844,7 @@
       },
       {
         "type": "paragraph",
-        "content": "Desktop \/ Laptop \/ tablet"
+        "content": "Desktop / Laptop / tablet"
       },
       {
         "type": "range",
@@ -2868,7 +2868,7 @@
       },
       {
         "type": "paragraph",
-        "content": "Ipad pro \/ Ipad"
+        "content": "Ipad pro / Ipad"
       },
       {
         "type": "range",
