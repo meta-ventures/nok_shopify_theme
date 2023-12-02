@@ -7,7 +7,8 @@
           "type": "slide",
           "settings": {
             "slider_bg_img": "shopify:\/\/shop_images\/In_Hand_Mobile_Mockup_copiar.webp",
-            "slider_img_enable": false,
+            "slider_img_enable": true,
+            "slider_img": "shopify:\/\/shop_images\/In_Hand_Mobile_Mockup_copiar_cell.webp",
             "slider_title": "Smart Business Cards for modern networking",
             "slider_title_color": "#1c1c1c",
             "slider_desc": "Say goodbye to outdated paper cards. Improve your connections with just a tap",
@@ -87,22 +88,35 @@
     },
     "66a29cce-0714-48c3-b6f9-d308232ad3e9": {
       "type": "slider",
+      "blocks": {
+        "c02ea45c-3437-4c33-9dd4-fac763b8af28": {
+          "type": "slide",
+          "settings": {
+            "slider_bg_img": "shopify:\/\/shop_images\/How_NOK_Card_Works_3.webp",
+            "slider_img_enable": true,
+            "slider_img": "shopify:\/\/shop_images\/How_NOK_Card_Works_600_x_800_px.webp",
+            "slider_title": "Introduce the rimonting drone",
+            "slider_title_color": "#FFFFFF",
+            "slider_desc": "Compact drone with 4.5k 65fps 45min battery average life + 55 mph speed",
+            "slider_desc_color": "#FFFFFF",
+            "price_1": "$1450.00",
+            "price_1_color": "#1c1c1c",
+            "price_2": "$999.00",
+            "price_2_color": "#1c1c1c",
+            "slider_button": "Buy now",
+            "slider_button_url": "",
+            "slider_content_position": "left",
+            "slider_text_position": "left"
+          }
+        }
+      },
+      "block_order": [
+        "c02ea45c-3437-4c33-9dd4-fac763b8af28"
+      ],
       "settings": {
         "slider_arrow_enable": true,
         "prev_title": "Prev",
         "next_title": "Next"
-      }
-    },
-    "28f44a33-4eb1-44b6-9607-803ed64babc7": {
-      "type": "about-modern-template2",
-      "settings": {
-        "section_padding_top": 100,
-        "section_padding_bottom": 100,
-        "section_padding_top_lg": 80,
-        "section_padding_bottom_lg": 80,
-        "section_padding_top_xs": 60,
-        "section_padding_bottom_xs": 60,
-        "about_modern_image": "shopify:\/\/shop_images\/How_NOK_Card_Works_3_0291bf9e-e4c8-451a-a360-79666c5c2230.webp"
       }
     },
     "16518975131ca62b36": {
@@ -364,7 +378,6 @@
     "1646205661c30791db",
     "our-services",
     "66a29cce-0714-48c3-b6f9-d308232ad3e9",
-    "28f44a33-4eb1-44b6-9607-803ed64babc7",
     "16518975131ca62b36",
     "eeaa7f00-3a9f-451a-8378-3b14498f4877",
     "165215715878050227",
