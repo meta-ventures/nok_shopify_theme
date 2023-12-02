@@ -242,6 +242,113 @@
         "section_title": "#1 Smart Business Card"
       }
     },
+    "f4d15051-0550-4a88-947e-16b0e15fc9e5": {
+      "type": "brand-logo",
+      "blocks": {
+        "ec46170f-8be1-4587-aef3-2975565f20ef": {
+          "type": "single_brand",
+          "settings": {
+            "logo_url": "",
+            "logo_image": "shopify:\/\/shop_images\/10.webp"
+          }
+        },
+        "f6bcfc7f-d09f-4ade-8b8e-0c9d2439cda0": {
+          "type": "single_brand",
+          "settings": {
+            "logo_url": "",
+            "logo_image": "shopify:\/\/shop_images\/5.webp"
+          }
+        },
+        "fab5a4a6-bc7e-4d07-9435-bdb3de4f13a0": {
+          "type": "single_brand",
+          "settings": {
+            "logo_url": "",
+            "logo_image": "shopify:\/\/shop_images\/1.webp"
+          }
+        },
+        "e1a31d00-cce5-41dd-9676-4c99acdf7ed1": {
+          "type": "single_brand",
+          "settings": {
+            "logo_url": "",
+            "logo_image": "shopify:\/\/shop_images\/6.webp"
+          }
+        },
+        "3acb20f1-1be6-48a2-991c-a1b5abc33af6": {
+          "type": "single_brand",
+          "settings": {
+            "logo_url": "",
+            "logo_image": "shopify:\/\/shop_images\/4.webp"
+          }
+        },
+        "511009f3-c3cf-4637-b93c-6359d43c385d": {
+          "type": "single_brand",
+          "settings": {
+            "logo_url": "",
+            "logo_image": "shopify:\/\/shop_images\/8.webp"
+          }
+        },
+        "18e2e747-16b3-4ddb-b37c-e7668b054857": {
+          "type": "single_brand",
+          "settings": {
+            "logo_url": "",
+            "logo_image": "shopify:\/\/shop_images\/9.webp"
+          }
+        },
+        "7261ed6b-10b7-41bf-a6c3-11165ed5d39f": {
+          "type": "single_brand",
+          "settings": {
+            "logo_url": "",
+            "logo_image": "shopify:\/\/shop_images\/3.webp"
+          }
+        },
+        "41f349bc-9907-4a25-8856-cc7697e9c20a": {
+          "type": "single_brand",
+          "settings": {
+            "logo_url": "",
+            "logo_image": "shopify:\/\/shop_images\/2.webp"
+          }
+        },
+        "77464bc3-b98e-437d-9710-2be3d5ae1766": {
+          "type": "single_brand",
+          "settings": {
+            "logo_url": "",
+            "logo_image": "shopify:\/\/shop_images\/7.webp"
+          }
+        },
+        "45fd7fda-1b3c-4bd2-a953-fee797857d54": {
+          "type": "single_brand",
+          "settings": {
+            "logo_url": "",
+            "logo_image": "shopify:\/\/shop_images\/Sem_nome_420_x_570_px_950_x_225_px_200_x_100_px.webp"
+          }
+        }
+      },
+      "block_order": [
+        "ec46170f-8be1-4587-aef3-2975565f20ef",
+        "f6bcfc7f-d09f-4ade-8b8e-0c9d2439cda0",
+        "fab5a4a6-bc7e-4d07-9435-bdb3de4f13a0",
+        "e1a31d00-cce5-41dd-9676-4c99acdf7ed1",
+        "3acb20f1-1be6-48a2-991c-a1b5abc33af6",
+        "511009f3-c3cf-4637-b93c-6359d43c385d",
+        "18e2e747-16b3-4ddb-b37c-e7668b054857",
+        "7261ed6b-10b7-41bf-a6c3-11165ed5d39f",
+        "41f349bc-9907-4a25-8856-cc7697e9c20a",
+        "77464bc3-b98e-437d-9710-2be3d5ae1766",
+        "45fd7fda-1b3c-4bd2-a953-fee797857d54"
+      ],
+      "settings": {
+        "section_padding_top": 100,
+        "section_padding_bottom": 100,
+        "section_padding_top_ip": 70,
+        "section_padding_bottom_ip": 70,
+        "section_padding_top_xs": 50,
+        "section_padding_bottom_xs": 50,
+        "section_bgcolor": "#fff",
+        "section_bgcolor_check": false,
+        "section_title": "TRUST BY",
+        "section_desc": ""
+      }
+    },
     "165218770966e89aa3": {
       "type": "feature-counter",
       "blocks": {
@@ -289,18 +396,16 @@
         "8d47de1a-a725-4617-a932-975ede5219ac"
       ],
       "settings": {
-        "section_padding_top": 100,
-        "section_padding_bottom": 100,
+        "section_padding_top": 0,
+        "section_padding_bottom": 55,
         "section_padding_top_ipad": 80,
         "section_padding_bottom_ipad": 80,
         "section_padding_top_xs": 60,
         "section_padding_bottom_xs": 60,
         "section_border_enable": true,
-        "section_title": "qweq",
+        "section_title": "",
         "section_title_bg_image_enable": true,
-        "section_title_bg_image": "shopify:\/\/shop_images\/Sem_nome_420_x_570_px_950_x_225_px_5.png",
-        "section_title_after_before_image_enable": true,
-        "section_title_after_before_image": "shopify:\/\/shop_images\/Sem_nome_420_x_570_px_950_x_225_px_5.png"
+        "section_title_after_before_image_enable": true
       }
     },
     "1652247691ba697e15": {
@@ -364,14 +469,6 @@
         "testi_bgcolor": "#f6f6f6",
         "testi_title": "happy client"
       }
-    },
-    "36ccb9d8-e545-426d-a72a-c3a182412cfb": {
-      "type": "slider",
-      "settings": {
-        "slider_arrow_enable": true,
-        "prev_title": "Prev",
-        "next_title": "Next"
-      }
     }
   },
   "order": [
@@ -382,8 +479,8 @@
     "eeaa7f00-3a9f-451a-8378-3b14498f4877",
     "165215715878050227",
     "1651906337f627fe84",
+    "f4d15051-0550-4a88-947e-16b0e15fc9e5",
     "165218770966e89aa3",
-    "1652247691ba697e15",
-    "36ccb9d8-e545-426d-a72a-c3a182412cfb"
+    "1652247691ba697e15"
   ]
 }
