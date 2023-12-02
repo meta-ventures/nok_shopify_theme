@@ -173,6 +173,7 @@
         "df5650a4-0e2f-47e0-bb16-b93cf46ccf10": {
           "type": "service_image",
           "settings": {
+            "feature_image": "shopify:\/\/shop_images\/PlasticCard2copiar.webp"
           }
         },
         "0e6837e0-1603-47b2-8800-728228b9a7b0": {
@@ -201,7 +202,6 @@
         "section_padding_top_xs": 0,
         "section_padding_bottom_xs": 60,
         "section_bg_image_enable": false,
-        "section_bg_image": "shopify:\/\/shop_images\/PlasticCard2copiar.webp",
         "section_bg_color_enable": false,
         "section_bg_color": "#f8f8f8",
         "section_subtitle": "Features",
