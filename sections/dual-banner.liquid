@@ -10,7 +10,7 @@
 
 {% if section.settings.mobile_banner != blank %}
   <div class="banner-mobile">
-      <img src="{{ section.settings.mobile_banner | img_url }}"
+      <img src="{% if block.settings.slider_bg_img %}{{ block.settings.slider_bg_img | image_url }}{% else %}https://dummyimage.com/600x800{% endif %}"
            alt="{{ section.settings.mobile_banner.alt }}"
            width="{{ section.settings.mobile_banner.width }}"
            height="{{ section.settings.mobile_banner.height }}"
