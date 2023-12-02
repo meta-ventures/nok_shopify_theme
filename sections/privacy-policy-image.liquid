@@ -4,7 +4,7 @@
 			<div class="col">
                 <div class="about-image">
                     <span>
-                        <img width="{{ section.settings.privacy_policy_image.width }}" height="{{ section.settings.privacy_policy_image.height }}" class="img-fluid" src="{% if section.settings.privacy_policy_image %}{{ section.settings.privacy_policy_image | img_url: 'master' }}{% else %}https://dummyimage.com/1350x580/232323/999999{% endif %}" alt="">
+                        <img width="{{ section.settings.privacy_policy_image.width }}" height="{{ section.settings.privacy_policy_image.height }}" class="img-fluid" src="{% if section.settings.privacy_policy_image %}{{ section.settings.privacy_policy_image | image_url }}{% else %}https://dummyimage.com/1350x580/232323/999999{% endif %}" alt="">
                     </span>
                 </div>
 			</div>
@@ -16,101 +16,101 @@
 {
   "name": "Privacy Policy Image",
   "settings": [
-  	{
-        "type": "header",
-        "content": "Section Padding"
+    {
+      "type": "header",
+      "content": "Section Padding"
     },
     {
-        "type" : "paragraph",
-        "content" : "Desktop / Laptop / tablet"
+      "type": "paragraph",
+      "content": "Desktop / Laptop / tablet"
     },
     {
-        "type": "range",
-        "id": "about_product_padding_top",  
-        "label": "Section Padding Top",
-        "min": 0,
-        "max": 100,
-        "step": 5,
-        "unit": "px",
-        "default": 0
-    },           
-    {
-        "type": "range",
-        "id": "about_product_padding_bottom", 
-        "label": "Section Padding Bottom",
-        "min": 0,
-        "max": 100,
-        "step": 5,
-        "unit": "px",
-        "default": 0
+      "type": "range",
+      "id": "about_product_padding_top",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 0
     },
     {
-        "type" : "paragraph",
-        "content" : "Ipad pro / Ipad"
+      "type": "range",
+      "id": "about_product_padding_bottom",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 0
     },
     {
-        "type": "range",
-        "id": "about_product_padding_top_ip",  
-        "label": "Section Padding Top",
-        "min": 0,
-        "max": 100,
-        "step": 5,
-        "unit": "px",
-        "default": 0
-    },           
-    {
-        "type": "range",
-        "id": "about_product_padding_bottom_ip", 
-        "label": "Section Padding Bottom",
-        "min": 0,
-        "max": 100,
-        "step": 5,
-        "unit": "px",
-        "default": 0
+      "type": "paragraph",
+      "content": "Ipad pro / Ipad"
     },
     {
-        "type" : "paragraph",
-        "content" : "Mobile"
+      "type": "range",
+      "id": "about_product_padding_top_ip",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 0
     },
     {
-        "type": "range",
-        "id": "about_product_padding_top_xs",  
-        "label": "Section Padding Top",
-        "min": 0,
-        "max": 100,
-        "step": 5,
-        "unit": "px",
-        "default": 0
-    },           
-    {
-        "type": "range",
-        "id": "about_product_padding_bottom_xs", 
-        "label": "Section Padding Bottom",
-        "min": 0,
-        "max": 100,
-        "step": 5,
-        "unit": "px",
-        "default": 0
+      "type": "range",
+      "id": "about_product_padding_bottom_ip",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 0
     },
     {
-        "type": "header",
-        "content": "Section Background Color"
+      "type": "paragraph",
+      "content": "Mobile"
     },
     {
-        "type": "checkbox",
-        "id": "about_product_bgcolor_enable",
-        "label": "Show Background Color",
-        "default": false
+      "type": "range",
+      "id": "about_product_padding_top_xs",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 0
     },
     {
-        "type": "color",
-        "id": "about_product_bgcolor",
-        "label": "Background Color",
-        "default": "#FFFFFF"
+      "type": "range",
+      "id": "about_product_padding_bottom_xs",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 0
     },
     {
-        "type": "header",
-        "content": "About Image"
+      "type": "header",
+      "content": "Section Background Color"
+    },
+    {
+      "type": "checkbox",
+      "id": "about_product_bgcolor_enable",
+      "label": "Show Background Color",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "about_product_bgcolor",
+      "label": "Background Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "header",
+      "content": "About Image"
     },
     {
       "type": "image_picker",
@@ -119,11 +119,11 @@
       "info": "Recommended Size: 1350px x 580px"
     }
   ],
-  "presets":[
-  {
-    "name": "Privacy Policy Image",
-    "category": "Privacy Policy Image"
-  }
+  "presets": [
+    {
+      "name": "Privacy Policy Image",
+      "category": "Privacy Policy Image"
+    }
   ]
 }
 {% endschema %}

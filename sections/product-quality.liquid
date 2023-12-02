@@ -5,9 +5,9 @@
         <div class="text-block">
             {% if section.settings.best_quality_brand_enable %}
             <a href="{{ section.settings.banner_url }}" class="anim-brand">
-                <img width="{{ section.settings.best_quality_brand.width }}" height="{{ section.settings.best_quality_brand.height }}" class="anim-wrap" src="{% if section.settings.best_quality_brand %}{{ section.settings.best_quality_brand | img_url: 'master' }}{% else %}https://dummyimage.com/135x135/f7f7f7/999999{% endif %}" alt="">
+                <img width="{{ section.settings.best_quality_brand.width }}" height="{{ section.settings.best_quality_brand.height }}" class="anim-wrap" src="{% if section.settings.best_quality_brand %}{{ section.settings.best_quality_brand | image_url }}{% else %}https://dummyimage.com/135x135/f7f7f7/999999{% endif %}" alt="">
                 <span class="brand-wrap">
-                    <img width="{{ section.settings.best_brand_wrap.width }}" height="{{ section.settings.best_brand_wrap.height }}" src="{% if section.settings.best_brand_wrap %}{{ section.settings.best_brand_wrap | img_url: 'master' }}{% else %}https://dummyimage.com/100x100/f7f7f7/999999{% endif %}" alt="">
+                    <img width="{{ section.settings.best_brand_wrap.width }}" height="{{ section.settings.best_brand_wrap.height }}" src="{% if section.settings.best_brand_wrap %}{{ section.settings.best_brand_wrap | image_url }}{% else %}https://dummyimage.com/100x100/f7f7f7/999999{% endif %}" alt="">
                 </span>
             </a>
             {% endif %}
@@ -17,7 +17,7 @@
             {% if section.settings.section_description != '' %}
             <p>{{ section.settings.section_description }}</p>
             {% endif %}
-            {%if section.settings.offer_button != '' %}
+            {% if section.settings.offer_button != '' %}
             <a href="{{ section.settings.banner_url }}" class="btn btn-style2">
                 {{ section.settings.button_title }}
             </a>
@@ -29,151 +29,151 @@
 </section>
 {% schema %}
 {
-    "name": "Product Quality",
-    "settings": [
+  "name": "Product Quality",
+  "settings": [
     {
-        "type" : "header",
-        "content" : "Section Padding"
+      "type": "header",
+      "content": "Section Padding"
     },
     {
-        "type" : "paragraph",
-        "content" : "Desktop / Laptop / tablet"
+      "type": "paragraph",
+      "content": "Desktop / Laptop / tablet"
     },
     {
-        "type": "range",
-        "id": "section_padding_top",
-        "label": "Section Padding Top",
-        "min": 0,
-        "max": 100,
-        "step": 5,
-        "unit": "px",
-        "default": 80
+      "type": "range",
+      "id": "section_padding_top",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 80
     },
     {
-        "type": "range",
-        "id": "section_padding_bottom",
-        "label": "Section Padding Bottom",
-        "min": 0,
-        "max": 100,
-        "step": 5,
-        "unit": "px",
-        "default": 80
+      "type": "range",
+      "id": "section_padding_bottom",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 80
     },
     {
-        "type" : "paragraph",
-        "content" : "Ipad pro / Ipad"
+      "type": "paragraph",
+      "content": "Ipad pro / Ipad"
     },
     {
-        "type": "range",
-        "id": "section_padding_top_ipad",
-        "label": "Section Padding Top",
-        "min": 0,
-        "max": 100,
-        "step": 5,
-        "unit": "px",
-        "default": 60
+      "type": "range",
+      "id": "section_padding_top_ipad",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 60
     },
     {
-        "type": "range",
-        "id": "section_padding_bottom_ipad",
-        "label": "Section Padding Bottom",
-        "min": 0,
-        "max": 100,
-        "step": 5,
-        "unit": "px",
-        "default": 60
+      "type": "range",
+      "id": "section_padding_bottom_ipad",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 60
     },
     {
-        "type" : "paragraph",
-        "content" : "Mobile"
+      "type": "paragraph",
+      "content": "Mobile"
     },
     {
-        "type": "range",
-        "id": "section_padding_top_xs",
-        "label": "Section Padding Top",
-        "min": 0,
-        "max": 100,
-        "step": 5,
-        "unit": "px",
-        "default": 40
+      "type": "range",
+      "id": "section_padding_top_xs",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 40
     },
     {
-        "type": "range",
-        "id": "section_padding_bottom_xs",
-        "label": "Section Padding Bottom",
-        "min": 0,
-        "max": 100,
-        "step": 5,
-        "unit": "px",
-        "default": 40
+      "type": "range",
+      "id": "section_padding_bottom_xs",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 40
     },
     {
-        "type": "header",
-        "content": "Background image"
+      "type": "header",
+      "content": "Background image"
     },
     {
-        "type": "checkbox",
-        "id": "banner_bg_img_enable",
-        "label": "Section background image enable",
-        "default": false
+      "type": "checkbox",
+      "id": "banner_bg_img_enable",
+      "label": "Section background image enable",
+      "default": false
     },
     {
-        "type": "image_picker",
-        "id": "banner_bg_img",
-        "label": "Section background image",
-        "info": "Recommended Size: 1920px x 715px"
+      "type": "image_picker",
+      "id": "banner_bg_img",
+      "label": "Section background image",
+      "info": "Recommended Size: 1920px x 715px"
     },
     {
-        "type": "header",
-        "content": "Section title"
+      "type": "header",
+      "content": "Section title"
     },
     {
-        "type": "checkbox",
-        "id": "best_quality_brand_enable",
-        "label": "Brand circle image enable",
-        "default": true
+      "type": "checkbox",
+      "id": "best_quality_brand_enable",
+      "label": "Brand circle image enable",
+      "default": true
     },
     {
-        "type": "image_picker",
-        "id": "best_quality_brand",
-        "label": "Brand circle image",
-        "info": "Recommended Size: 135x135px"
+      "type": "image_picker",
+      "id": "best_quality_brand",
+      "label": "Brand circle image",
+      "info": "Recommended Size: 135x135px"
     },
     {
-        "type": "image_picker",
-        "id": "best_brand_wrap",
-        "label": "Brand circle inner image",
-        "info": "Recommended Size: 100x100px"
+      "type": "image_picker",
+      "id": "best_brand_wrap",
+      "label": "Brand circle inner image",
+      "info": "Recommended Size: 100x100px"
     },
     {
-        "type": "textarea",
-        "id": "section_title",
-        "label": "Section title",
-        "default": "- Free shipping on all orders over $250 -"
+      "type": "textarea",
+      "id": "section_title",
+      "label": "Section title",
+      "default": "- Free shipping on all orders over $250 -"
     },
     {
-        "type": "textarea",
-        "id": "section_description",
-        "label": "Section description",
-        "default": "- Free shipping on all orders over $250 -"
+      "type": "textarea",
+      "id": "section_description",
+      "label": "Section description",
+      "default": "- Free shipping on all orders over $250 -"
     },
     {
-        "type": "text",
-        "id": "button_title",
-        "label": "Button title",
-        "default": "Read story"
+      "type": "text",
+      "id": "button_title",
+      "label": "Button title",
+      "default": "Read story"
     },
     {
-        "type": "url",
-        "id": "banner_url",
-        "label": "Banner url"
+      "type": "url",
+      "id": "banner_url",
+      "label": "Banner url"
     }
-    ],
-    "presets":[
+  ],
+  "presets": [
     {
-        "name": "Product Quality"
+      "name": "Product Quality"
     }
-    ]
+  ]
 }
 {% endschema %}
 <style>
@@ -181,7 +181,7 @@
         padding-top: {{ section.settings.section_padding_top }}px;
         padding-bottom: {{ section.settings.section_padding_bottom }}px;
         {% if section.settings.banner_bg_img_enable %}
-        background-image: url({% if section.settings.banner_bg_img %}{{ section.settings.banner_bg_img | img_url: 'master' }}{% else %}https://dummyimage.com/1920x715/f7f7f7/999999{%endif %});
+        background-image: url({% if section.settings.banner_bg_img %}{{ section.settings.banner_bg_img | image_url }}{% else %}https://dummyimage.com/1920x715/f7f7f7/999999{% endif %});
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;

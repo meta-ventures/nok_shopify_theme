@@ -9,7 +9,7 @@
           {% capture collection_title %}{{ collection.title | escape }}{% endcapture %}
           {% assign collection =  link.object %}
           <li>
-            <div class="collection-img" style="background-image: url('{% if collection.image %}{{ collection | img_url: 'master'  }}{% else %}{{ collection.products.first | img_url: 'master'  }}{% endif %}');">
+            <div class="collection-img" style="background-image: url('{% if collection.image %}{{ collection | image_url  }}{% else %}{{ collection.products.first | image_url  }}{% endif %}');">
               <span>{{ collection.all_products_count }}</span>
             </div>
             <div class="collection-content">
@@ -43,8 +43,8 @@
       "content": "Section Content"
     },
     {
-      "type" : "paragraph",
-      "content" : "Button Title"
+      "type": "paragraph",
+      "content": "Button Title"
     },
     {
       "type": "text",
