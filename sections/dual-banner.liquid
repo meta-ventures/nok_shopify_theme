@@ -1,6 +1,6 @@
 {% if section.settings.desktop_banner != blank %}
   <div class="banner-desktop">
-      <img src="{{ section.settings.desktop_banner | img_url }}"
+      <img src="{% if block.settings.slider_bg_img %}{{ block.settings.slider_bg_img | image_url }}{% else %}https://dummyimage.com/1920x1080{% endif %}"
            alt="{{ section.settings.desktop_banner.alt }}"
            width="{{ section.settings.desktop_banner.width }}"
            height="{{ section.settings.desktop_banner.height }}"
