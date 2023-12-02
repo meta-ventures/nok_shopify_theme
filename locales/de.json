@@ -362,17 +362,5 @@
       "error_html": "<span class=\"icon icon-shopping_basket\"></span> Beschränken",
       "wait_html": "<span class=\"icon icon-shopping_basket\"></span> Warte ab"
     }
-  },
-  "sections": {
-    "header": {
-      "announcement_bar_label": "TODO"
-    },
-    "map": {
-      "address_error": "TODO",
-      "address_no_results": "TODO",
-      "address_query_limit_html": "TODO",
-      "auth_error_html": "TODO",
-      "section_heading": "TODO"
-    }
   }
 }
