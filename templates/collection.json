@@ -1,1 +1,22 @@
-{"sections":{"collection-template":{"type":"collection-template","settings":{"collection_bgcolor":"#f6f6f6","collection_bgcolor_enable":false,"products_limit_handle":"20","collection_info_enable":true,"collection_img":false,"collection_banner":"shopify:\/\/shop_images\/budo-drone-collection-banner.png","collection_description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book","tab_bar_enable":true,"short_by_enable":true,"sidebar_handle":"left_sidebar_handle","collection_categories_title":"Categories","collection_categories_enable":true}}},"order":["collection-template"]}
+{
+  "sections": {
+    "collection-template": {
+      "type": "collection-template",
+      "settings": {
+        "collection_bgcolor": "#f6f6f6",
+        "collection_bgcolor_enable": false,
+        "products_limit_handle": "20",
+        "collection_info_enable": true,
+        "collection_img": false,
+        "collection_banner": "shopify://shop_images/budo-drone-collection-banner.png",
+        "collection_description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
+        "tab_bar_enable": true,
+        "short_by_enable": true,
+        "sidebar_handle": "left_sidebar_handle",
+        "collection_categories_title": "Categories",
+        "collection_categories_enable": true
+      }
+    }
+  },
+  "order": ["collection-template"]
+}

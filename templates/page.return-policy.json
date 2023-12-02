@@ -1,1 +1,141 @@
-{"sections":{"return-policy-info":{"type":"return-policy-info","blocks":{"9264ff81-75b9-4503-98be-69eb8f6c137a":{"type":"return_policy_info_1","settings":{"return_info_text_1":"Lorem ipsum dolor sit amet consectetur adipiscing sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip"}},"0cc4c57a-8d92-4514-add2-d0300d7088b8":{"type":"return_policy_info_1","settings":{"return_info_text_1":"Sample Store uses some of the latest graphics designs which may\nnot be supported in lower version of browsers designs which may\nnot be supported in lower version of browsers"}},"5bb167b0-6e98-4c3c-827c-e484b015d9b8":{"type":"return_policy_info_1","settings":{"return_info_text_1":"It is a long established fact that a reader will be distracted by the\nreadable content of a page when looking at its layout. The point\nof using distribution of letters, as opposed to using"}},"22995740-bdaa-4b85-89cc-1a5abbbda2c7":{"type":"return_policy_info_2","settings":{"return_info_text_2":"Lorem ipsum dolor sit amet consectetur adipiscing sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip"}},"cb489e9c-0bf9-4260-85f4-1f1375ba6908":{"type":"return_policy_info_2","settings":{"return_info_text_2":"Sample Store uses some of the latest graphics designs which may\nnot be supported in lower version of browsers designs which may\nnot be supported in lower version of browsers"}},"074d5edb-7f4b-407d-ad46-083451d57814":{"type":"return_policy_info_2","settings":{"return_info_text_2":"It is a long established fact that a reader will be distracted by the\nreadable content of a page when looking at its layout. The point\nof using distribution of letters, as opposed to using"}}},"block_order":["9264ff81-75b9-4503-98be-69eb8f6c137a","0cc4c57a-8d92-4514-add2-d0300d7088b8","5bb167b0-6e98-4c3c-827c-e484b015d9b8","22995740-bdaa-4b85-89cc-1a5abbbda2c7","cb489e9c-0bf9-4260-85f4-1f1375ba6908","074d5edb-7f4b-407d-ad46-083451d57814"],"settings":{"about_product_padding_top":100,"about_product_padding_bottom":100,"about_product_padding_top_ip":80,"about_product_padding_bottom_ip":80,"about_product_padding_top_xs":60,"about_product_padding_bottom_xs":60,"about_product_bgcolor_enable":false,"about_product_bgcolor":"#ffffff","info_block_title_1":"Free & easy <span>return<\/span>","info_block_title_2":"Return policy <span>30 day<\/span>"}},"166141036447ea14e4":{"type":"return-policy-image","settings":{"about_product_padding_top":0,"about_product_padding_bottom":0,"about_product_padding_top_ip":0,"about_product_padding_bottom_ip":0,"about_product_padding_top_xs":0,"about_product_padding_bottom_xs":0,"about_product_bgcolor_enable":false,"about_product_bgcolor":"#ffffff","return_image":"shopify:\/\/shop_images\/return-policy.jpg"}},"1661410383472b4ec3":{"type":"return-policy-info","blocks":{"2c0fd44c-26f5-4070-a0cd-43b703077047":{"type":"return_policy_info_1","settings":{"return_info_text_1":"Lorem ipsum dolor sit amet consectetur adipiscing sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip"}},"339ab30e-0c98-4d81-a451-db7a05db9235":{"type":"return_policy_info_1","settings":{"return_info_text_1":"Sample Store uses some of the latest graphics designs which may\nnot be supported in lower version of browsers designs which may\nnot be supported in lower version of browsers"}},"cca86646-7fba-493c-8c3c-e8cf7476eba6":{"type":"return_policy_info_1","settings":{"return_info_text_1":"It is a long established fact that a reader will be distracted by the\nreadable content of a page when looking at its layout. The point\nof using distribution of letters, as opposed to using"}},"e39e5dd1-e23a-480a-a0f9-4e7698381a42":{"type":"return_policy_info_2","settings":{"return_info_text_2":"Lorem ipsum dolor sit amet consectetur adipiscing sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip"}},"a7954a77-2097-4151-847b-37667c056623":{"type":"return_policy_info_2","settings":{"return_info_text_2":"Sample Store uses some of the latest graphics designs which may\nnot be supported in lower version of browsers designs which may\nnot be supported in lower version of browsers"}},"116ab0cf-6e4e-45a0-b69b-8d0c9a1972cc":{"type":"return_policy_info_2","settings":{"return_info_text_2":"It is a long established fact that a reader will be distracted by the\nreadable content of a page when looking at its layout. The point\nof using distribution of letters, as opposed to using"}}},"block_order":["2c0fd44c-26f5-4070-a0cd-43b703077047","339ab30e-0c98-4d81-a451-db7a05db9235","cca86646-7fba-493c-8c3c-e8cf7476eba6","e39e5dd1-e23a-480a-a0f9-4e7698381a42","a7954a77-2097-4151-847b-37667c056623","116ab0cf-6e4e-45a0-b69b-8d0c9a1972cc"],"settings":{"about_product_padding_top":100,"about_product_padding_bottom":100,"about_product_padding_top_ip":80,"about_product_padding_bottom_ip":80,"about_product_padding_top_xs":60,"about_product_padding_bottom_xs":60,"about_product_bgcolor_enable":false,"about_product_bgcolor":"#ffffff","info_block_title_1":"What is a <span>return policy<\/span>","info_block_title_2":"Secure with your payment"}}},"order":["return-policy-info","166141036447ea14e4","1661410383472b4ec3"]}
+{
+  "sections": {
+    "return-policy-info": {
+      "type": "return-policy-info",
+      "blocks": {
+        "9264ff81-75b9-4503-98be-69eb8f6c137a": {
+          "type": "return_policy_info_1",
+          "settings": {
+            "return_info_text_1": "Lorem ipsum dolor sit amet consectetur adipiscing sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip"
+          }
+        },
+        "0cc4c57a-8d92-4514-add2-d0300d7088b8": {
+          "type": "return_policy_info_1",
+          "settings": {
+            "return_info_text_1": "Sample Store uses some of the latest graphics designs which may\nnot be supported in lower version of browsers designs which may\nnot be supported in lower version of browsers"
+          }
+        },
+        "5bb167b0-6e98-4c3c-827c-e484b015d9b8": {
+          "type": "return_policy_info_1",
+          "settings": {
+            "return_info_text_1": "It is a long established fact that a reader will be distracted by the\nreadable content of a page when looking at its layout. The point\nof using distribution of letters, as opposed to using"
+          }
+        },
+        "22995740-bdaa-4b85-89cc-1a5abbbda2c7": {
+          "type": "return_policy_info_2",
+          "settings": {
+            "return_info_text_2": "Lorem ipsum dolor sit amet consectetur adipiscing sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip"
+          }
+        },
+        "cb489e9c-0bf9-4260-85f4-1f1375ba6908": {
+          "type": "return_policy_info_2",
+          "settings": {
+            "return_info_text_2": "Sample Store uses some of the latest graphics designs which may\nnot be supported in lower version of browsers designs which may\nnot be supported in lower version of browsers"
+          }
+        },
+        "074d5edb-7f4b-407d-ad46-083451d57814": {
+          "type": "return_policy_info_2",
+          "settings": {
+            "return_info_text_2": "It is a long established fact that a reader will be distracted by the\nreadable content of a page when looking at its layout. The point\nof using distribution of letters, as opposed to using"
+          }
+        }
+      },
+      "block_order": [
+        "9264ff81-75b9-4503-98be-69eb8f6c137a",
+        "0cc4c57a-8d92-4514-add2-d0300d7088b8",
+        "5bb167b0-6e98-4c3c-827c-e484b015d9b8",
+        "22995740-bdaa-4b85-89cc-1a5abbbda2c7",
+        "cb489e9c-0bf9-4260-85f4-1f1375ba6908",
+        "074d5edb-7f4b-407d-ad46-083451d57814"
+      ],
+      "settings": {
+        "about_product_padding_top": 100,
+        "about_product_padding_bottom": 100,
+        "about_product_padding_top_ip": 80,
+        "about_product_padding_bottom_ip": 80,
+        "about_product_padding_top_xs": 60,
+        "about_product_padding_bottom_xs": 60,
+        "about_product_bgcolor_enable": false,
+        "about_product_bgcolor": "#ffffff",
+        "info_block_title_1": "Free & easy <span>return</span>",
+        "info_block_title_2": "Return policy <span>30 day</span>"
+      }
+    },
+    "166141036447ea14e4": {
+      "type": "return-policy-image",
+      "settings": {
+        "about_product_padding_top": 0,
+        "about_product_padding_bottom": 0,
+        "about_product_padding_top_ip": 0,
+        "about_product_padding_bottom_ip": 0,
+        "about_product_padding_top_xs": 0,
+        "about_product_padding_bottom_xs": 0,
+        "about_product_bgcolor_enable": false,
+        "about_product_bgcolor": "#ffffff",
+        "return_image": "shopify://shop_images/return-policy.jpg"
+      }
+    },
+    "1661410383472b4ec3": {
+      "type": "return-policy-info",
+      "blocks": {
+        "2c0fd44c-26f5-4070-a0cd-43b703077047": {
+          "type": "return_policy_info_1",
+          "settings": {
+            "return_info_text_1": "Lorem ipsum dolor sit amet consectetur adipiscing sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip"
+          }
+        },
+        "339ab30e-0c98-4d81-a451-db7a05db9235": {
+          "type": "return_policy_info_1",
+          "settings": {
+            "return_info_text_1": "Sample Store uses some of the latest graphics designs which may\nnot be supported in lower version of browsers designs which may\nnot be supported in lower version of browsers"
+          }
+        },
+        "cca86646-7fba-493c-8c3c-e8cf7476eba6": {
+          "type": "return_policy_info_1",
+          "settings": {
+            "return_info_text_1": "It is a long established fact that a reader will be distracted by the\nreadable content of a page when looking at its layout. The point\nof using distribution of letters, as opposed to using"
+          }
+        },
+        "e39e5dd1-e23a-480a-a0f9-4e7698381a42": {
+          "type": "return_policy_info_2",
+          "settings": {
+            "return_info_text_2": "Lorem ipsum dolor sit amet consectetur adipiscing sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip"
+          }
+        },
+        "a7954a77-2097-4151-847b-37667c056623": {
+          "type": "return_policy_info_2",
+          "settings": {
+            "return_info_text_2": "Sample Store uses some of the latest graphics designs which may\nnot be supported in lower version of browsers designs which may\nnot be supported in lower version of browsers"
+          }
+        },
+        "116ab0cf-6e4e-45a0-b69b-8d0c9a1972cc": {
+          "type": "return_policy_info_2",
+          "settings": {
+            "return_info_text_2": "It is a long established fact that a reader will be distracted by the\nreadable content of a page when looking at its layout. The point\nof using distribution of letters, as opposed to using"
+          }
+        }
+      },
+      "block_order": [
+        "2c0fd44c-26f5-4070-a0cd-43b703077047",
+        "339ab30e-0c98-4d81-a451-db7a05db9235",
+        "cca86646-7fba-493c-8c3c-e8cf7476eba6",
+        "e39e5dd1-e23a-480a-a0f9-4e7698381a42",
+        "a7954a77-2097-4151-847b-37667c056623",
+        "116ab0cf-6e4e-45a0-b69b-8d0c9a1972cc"
+      ],
+      "settings": {
+        "about_product_padding_top": 100,
+        "about_product_padding_bottom": 100,
+        "about_product_padding_top_ip": 80,
+        "about_product_padding_bottom_ip": 80,
+        "about_product_padding_top_xs": 60,
+        "about_product_padding_bottom_xs": 60,
+        "about_product_bgcolor_enable": false,
+        "about_product_bgcolor": "#ffffff",
+        "info_block_title_1": "What is a <span>return policy</span>",
+        "info_block_title_2": "Secure with your payment"
+      }
+    }
+  },
+  "order": ["return-policy-info", "166141036447ea14e4", "1661410383472b4ec3"]
+}

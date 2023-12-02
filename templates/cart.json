@@ -1,1 +1,26 @@
-{"sections":{"cart-template":{"type":"cart-template","settings":{"item_title":"Product item","price_title":"Price","quantity_title":"Quantity","total_title":"Total price","cart_vendor_enable":false,"cart_notes_enable":true,"shipping_calculator":true,"shipping_calculator_heading":"Shipping info","shipping_calculator_button_title":"Calculate","cart_note_title":"Special instructions for seller","cart_total_title":"Total","checkout_button_title":"Checkout","cart_empty_title1":"Your cart is currently empty!","cart_continue_title":"Continue browsing","here_title":"here","tax_info":"Taxes and shipping calculated at checkout"}}},"order":["cart-template"]}
+{
+  "sections": {
+    "cart-template": {
+      "type": "cart-template",
+      "settings": {
+        "item_title": "Product item",
+        "price_title": "Price",
+        "quantity_title": "Quantity",
+        "total_title": "Total price",
+        "cart_vendor_enable": false,
+        "cart_notes_enable": true,
+        "shipping_calculator": true,
+        "shipping_calculator_heading": "Shipping info",
+        "shipping_calculator_button_title": "Calculate",
+        "cart_note_title": "Special instructions for seller",
+        "cart_total_title": "Total",
+        "checkout_button_title": "Checkout",
+        "cart_empty_title1": "Your cart is currently empty!",
+        "cart_continue_title": "Continue browsing",
+        "here_title": "here",
+        "tax_info": "Taxes and shipping calculated at checkout"
+      }
+    }
+  },
+  "order": ["cart-template"]
+}

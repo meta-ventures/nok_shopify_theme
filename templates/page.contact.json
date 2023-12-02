@@ -1,1 +1,116 @@
-{"sections":{"16615780505c9ddeb9":{"type":"contact-us-section-1","settings":{"section_padding_top":100,"section_padding_bottom":0,"section_padding_top_ip":80,"section_padding_bottom_ip":0,"section_padding_top_xs":60,"section_padding_bottom_xs":0,"section_background_color_enable":true,"section_background_color":"#ffffff","contact_info_image":"shopify:\/\/shop_images\/contact.jpg"}},"16615780546205d4e3":{"type":"contact-us-section-2","settings":{"contact_map_padding_top":100,"contact_map_padding_bottom":0,"contact_map_padding_top_ip":80,"contact_map_padding_bottom_ip":0,"contact_map_padding_top_xs":60,"contact_map_padding_bottom_xs":0,"contact_map_bgcolor":"#ffffff","contact_map_bgcolor_enable":true,"contact_us_title":"Contact us","contact_us_desc":"Lorem Ipsum is printing & typesetting industry's standard dummy text since texts","contact_us_map_enable":true,"contact_map":"<iframe src=\"https:\/\/www.google.com\/maps\/embed?pb=!1m18!1m12!1m3!1d3178.943120902953!2d-7.963813984699448!3d37.177822679872456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1ab161c81fb0ff%3A0x867380c80c46b1d!2sAmendoeira%20Organics!5e0!3m2!1sen!2spt!4v1631184615272!5m2!1sen!2spt\" width=\"100%\" height=\"700\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\"><\/iframe>"}},"166157805798050d55":{"type":"contact-us-section-3","settings":{"contact_us_padding_top":100,"contact_us_padding_bottom":100,"contact_us_padding_top_ip":80,"contact_us_padding_bottom_ip":80,"contact_us_padding_top_xs":60,"contact_us_padding_bottom_xs":60,"contact_us_bgcolor":"#f3f2f1","contact_us_bgcolor_enable":true,"contact_us_border_enable":false,"contact_us_border":1,"contact_us_border_color":"#e2e2e2"}},"16615780613cae5288":{"type":"contact-us-section-4","blocks":{"492d418e-aecf-4d25-99fd-6060abe92634":{"type":"store_info","settings":{"info_text_1":"<p><a href=\"tel:+5(654) 123-456-777\" title=\"tel:+5(654) 123-456-777\">+5(654) 123-456-777<\/a><\/p><p><a href=\"mailto:info@yourdomain.com\" title=\"mailto:info@yourdomain.com\">info@yourdomain.com<\/a><\/p>","info_text_2":"<p>23 Broadway, 18th floor<\/p><p>pharchard street, London<\/p>","store_btn_text":"View map","store_btn_url":""}},"86f89533-af83-40df-889f-9e10ca7c68db":{"type":"store_info","settings":{"info_text_1":"<p><a href=\"tel:+5(654) 123-456-788\" title=\"tel:+5(654) 123-456-788\">+5(654) 123-456-788<\/a><\/p><p><a href=\"mailto:info@yourdomain.com\" title=\"mailto:info@yourdomain.com\">info@yourdomain.com<\/a><\/p>","info_text_2":"<p>300 Doulevard roin-germain<\/p><p>87456 paris, France<\/p>","store_btn_text":"View map","store_btn_url":""}},"3ba0dc33-a904-456b-9994-3105bce69e8f":{"type":"store_info","settings":{"info_text_1":"<p><a href=\"tel:+5(654) 123-456-789\" title=\"tel:+5(654) 123-456-789\">+5(654) 123-456-789<\/a><\/p><p><a href=\"mailto:info@yourdomain.com\" title=\"mailto:info@yourdomain.com\">info@yourdomain.com<\/a><\/p>","info_text_2":"<p>89 North stockport road <\/p><p>canal bridge, toronto, Canada<\/p>","store_btn_text":"View map","store_btn_url":""}},"ed002a81-de84-455b-aa98-b5f289235dd1":{"type":"store_info","settings":{"info_text_1":"<p><a href=\"tel:+5(654) 123-456-777\" title=\"tel:+5(654) 123-456-777\">+5(654) 123-456-777<\/a><\/p><p><a href=\"mailto:info@yourdomain.com\" title=\"mailto:info@yourdomain.com\">info@yourdomain.com<\/a><\/p>","info_text_2":"<p>23 Broadway, 18th floor<\/p><p>pharchard street, London<\/p>","store_btn_text":"View map","store_btn_url":""}}},"block_order":["492d418e-aecf-4d25-99fd-6060abe92634","86f89533-af83-40df-889f-9e10ca7c68db","3ba0dc33-a904-456b-9994-3105bce69e8f","ed002a81-de84-455b-aa98-b5f289235dd1"],"settings":{"section_padding_top":100,"section_padding_bottom":100,"section_padding_top_ip":80,"section_padding_bottom_ip":80,"section_padding_top_xs":60,"section_padding_bottom_xs":60,"section_bg_color_enable":false,"section_bg_color":"#f6f6f6","new_subtitle":"Budo store round the world","new_title":"Other store"}}},"order":["16615780505c9ddeb9","16615780546205d4e3","166157805798050d55","16615780613cae5288"]}
+{
+  "sections": {
+    "16615780505c9ddeb9": {
+      "type": "contact-us-section-1",
+      "settings": {
+        "section_padding_top": 100,
+        "section_padding_bottom": 0,
+        "section_padding_top_ip": 80,
+        "section_padding_bottom_ip": 0,
+        "section_padding_top_xs": 60,
+        "section_padding_bottom_xs": 0,
+        "section_background_color_enable": true,
+        "section_background_color": "#ffffff",
+        "contact_info_image": "shopify://shop_images/contact.jpg"
+      }
+    },
+    "16615780546205d4e3": {
+      "type": "contact-us-section-2",
+      "settings": {
+        "contact_map_padding_top": 100,
+        "contact_map_padding_bottom": 0,
+        "contact_map_padding_top_ip": 80,
+        "contact_map_padding_bottom_ip": 0,
+        "contact_map_padding_top_xs": 60,
+        "contact_map_padding_bottom_xs": 0,
+        "contact_map_bgcolor": "#ffffff",
+        "contact_map_bgcolor_enable": true,
+        "contact_us_title": "Contact us",
+        "contact_us_desc": "Lorem Ipsum is printing & typesetting industry's standard dummy text since texts",
+        "contact_us_map_enable": true,
+        "contact_map": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3178.943120902953!2d-7.963813984699448!3d37.177822679872456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1ab161c81fb0ff%3A0x867380c80c46b1d!2sAmendoeira%20Organics!5e0!3m2!1sen!2spt!4v1631184615272!5m2!1sen!2spt\" width=\"100%\" height=\"700\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\"></iframe>"
+      }
+    },
+    "166157805798050d55": {
+      "type": "contact-us-section-3",
+      "settings": {
+        "contact_us_padding_top": 100,
+        "contact_us_padding_bottom": 100,
+        "contact_us_padding_top_ip": 80,
+        "contact_us_padding_bottom_ip": 80,
+        "contact_us_padding_top_xs": 60,
+        "contact_us_padding_bottom_xs": 60,
+        "contact_us_bgcolor": "#f3f2f1",
+        "contact_us_bgcolor_enable": true,
+        "contact_us_border_enable": false,
+        "contact_us_border": 1,
+        "contact_us_border_color": "#e2e2e2"
+      }
+    },
+    "16615780613cae5288": {
+      "type": "contact-us-section-4",
+      "blocks": {
+        "492d418e-aecf-4d25-99fd-6060abe92634": {
+          "type": "store_info",
+          "settings": {
+            "info_text_1": "<p><a href=\"tel:+5(654) 123-456-777\" title=\"tel:+5(654) 123-456-777\">+5(654) 123-456-777</a></p><p><a href=\"mailto:info@yourdomain.com\" title=\"mailto:info@yourdomain.com\">info@yourdomain.com</a></p>",
+            "info_text_2": "<p>23 Broadway, 18th floor</p><p>pharchard street, London</p>",
+            "store_btn_text": "View map",
+            "store_btn_url": ""
+          }
+        },
+        "86f89533-af83-40df-889f-9e10ca7c68db": {
+          "type": "store_info",
+          "settings": {
+            "info_text_1": "<p><a href=\"tel:+5(654) 123-456-788\" title=\"tel:+5(654) 123-456-788\">+5(654) 123-456-788</a></p><p><a href=\"mailto:info@yourdomain.com\" title=\"mailto:info@yourdomain.com\">info@yourdomain.com</a></p>",
+            "info_text_2": "<p>300 Doulevard roin-germain</p><p>87456 paris, France</p>",
+            "store_btn_text": "View map",
+            "store_btn_url": ""
+          }
+        },
+        "3ba0dc33-a904-456b-9994-3105bce69e8f": {
+          "type": "store_info",
+          "settings": {
+            "info_text_1": "<p><a href=\"tel:+5(654) 123-456-789\" title=\"tel:+5(654) 123-456-789\">+5(654) 123-456-789</a></p><p><a href=\"mailto:info@yourdomain.com\" title=\"mailto:info@yourdomain.com\">info@yourdomain.com</a></p>",
+            "info_text_2": "<p>89 North stockport road </p><p>canal bridge, toronto, Canada</p>",
+            "store_btn_text": "View map",
+            "store_btn_url": ""
+          }
+        },
+        "ed002a81-de84-455b-aa98-b5f289235dd1": {
+          "type": "store_info",
+          "settings": {
+            "info_text_1": "<p><a href=\"tel:+5(654) 123-456-777\" title=\"tel:+5(654) 123-456-777\">+5(654) 123-456-777</a></p><p><a href=\"mailto:info@yourdomain.com\" title=\"mailto:info@yourdomain.com\">info@yourdomain.com</a></p>",
+            "info_text_2": "<p>23 Broadway, 18th floor</p><p>pharchard street, London</p>",
+            "store_btn_text": "View map",
+            "store_btn_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "492d418e-aecf-4d25-99fd-6060abe92634",
+        "86f89533-af83-40df-889f-9e10ca7c68db",
+        "3ba0dc33-a904-456b-9994-3105bce69e8f",
+        "ed002a81-de84-455b-aa98-b5f289235dd1"
+      ],
+      "settings": {
+        "section_padding_top": 100,
+        "section_padding_bottom": 100,
+        "section_padding_top_ip": 80,
+        "section_padding_bottom_ip": 80,
+        "section_padding_top_xs": 60,
+        "section_padding_bottom_xs": 60,
+        "section_bg_color_enable": false,
+        "section_bg_color": "#f6f6f6",
+        "new_subtitle": "Budo store round the world",
+        "new_title": "Other store"
+      }
+    }
+  },
+  "order": [
+    "16615780505c9ddeb9",
+    "16615780546205d4e3",
+    "166157805798050d55",
+    "16615780613cae5288"
+  ]
+}

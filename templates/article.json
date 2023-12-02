@@ -1,1 +1,58 @@
-{"sections":{"article-template":{"type":"article-template","blocks":{"article_image":{"type":"article_image","settings":{}},"article_title":{"type":"article_title","settings":{}},"article_content":{"type":"article_content","settings":{}},"article_author":{"type":"article_author","settings":{"article_through":"By"}},"article_tag":{"type":"article_tag","settings":{}},"article_social":{"type":"article_social","settings":{}},"article_next_prev":{"type":"article_next_prev","settings":{"blog_prev_button_title":"Prev post","blog_next_button_title":"Next post"}}},"block_order":["article_image","article_title","article_content","article_author","article_tag","article_social","article_next_prev"],"settings":{"blog_sidebar_position_handle":"sticky_sidebar","sidebar_handle":"left_sidebar_handle","blog_search_bar_enable":true,"archive_enable":true,"recent_post_enable":true,"tags_enable":true,"article_cmt":"Comment","comment_post_limit_handle":"5","article_avtar_enable":false}},"related-article":{"type":"related-article","settings":{"related_blog_bgcolor":"#f6f6f6","related_blog_enable":true,"related_blog_border":1,"related_blog_border_color":"#f6f6f6","related_blog_border_enable":false,"related_blog_title":"Related news","related_blog_desc":""}}},"order":["article-template","related-article"]}
+{
+  "sections": {
+    "article-template": {
+      "type": "article-template",
+      "blocks": {
+        "article_image": { "type": "article_image", "settings": {} },
+        "article_title": { "type": "article_title", "settings": {} },
+        "article_content": { "type": "article_content", "settings": {} },
+        "article_author": {
+          "type": "article_author",
+          "settings": { "article_through": "By" }
+        },
+        "article_tag": { "type": "article_tag", "settings": {} },
+        "article_social": { "type": "article_social", "settings": {} },
+        "article_next_prev": {
+          "type": "article_next_prev",
+          "settings": {
+            "blog_prev_button_title": "Prev post",
+            "blog_next_button_title": "Next post"
+          }
+        }
+      },
+      "block_order": [
+        "article_image",
+        "article_title",
+        "article_content",
+        "article_author",
+        "article_tag",
+        "article_social",
+        "article_next_prev"
+      ],
+      "settings": {
+        "blog_sidebar_position_handle": "sticky_sidebar",
+        "sidebar_handle": "left_sidebar_handle",
+        "blog_search_bar_enable": true,
+        "archive_enable": true,
+        "recent_post_enable": true,
+        "tags_enable": true,
+        "article_cmt": "Comment",
+        "comment_post_limit_handle": "5",
+        "article_avtar_enable": false
+      }
+    },
+    "related-article": {
+      "type": "related-article",
+      "settings": {
+        "related_blog_bgcolor": "#f6f6f6",
+        "related_blog_enable": true,
+        "related_blog_border": 1,
+        "related_blog_border_color": "#f6f6f6",
+        "related_blog_border_enable": false,
+        "related_blog_title": "Related news",
+        "related_blog_desc": ""
+      }
+    }
+  },
+  "order": ["article-template", "related-article"]
+}

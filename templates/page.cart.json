@@ -1,1 +1,4 @@
-{"sections":{"cart-template":{"type":"cart-template","settings":{}}},"order":["cart-template"]}
+{
+  "sections": { "cart-template": { "type": "cart-template", "settings": {} } },
+  "order": ["cart-template"]
+}
