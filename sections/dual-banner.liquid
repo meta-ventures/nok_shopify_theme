@@ -1,3 +1,16 @@
+{% if section.settings.desktop_banner != blank %}
+  <div class="banner-desktop">
+      <img src="{{ section.settings.desktop_banner | img_url }}" alt="Desktop Banner" loading="eager">
+  </div>
+{% endif %}
+
+{% if section.settings.mobile_banner != blank %}
+  <div class="banner-mobile">
+      <img src="{{ section.settings.mobile_banner | img_url }}" alt="Mobile Banner" loading="lazy">
+  </div>
+{% endif %}
+
+
 {% schema %}
 {
     "name": "Dual Banner",
@@ -16,17 +29,7 @@
 }
 {% endschema %}
 
-{% if section.settings.desktop_banner != blank %}
-    <div class="banner-desktop">
-        <img src="{{ section.settings.desktop_banner | img_url }}" alt="Desktop Banner" loading="eager">
-    </div>
-{% endif %}
 
-{% if section.settings.mobile_banner != blank %}
-    <div class="banner-mobile">
-        <img src="{{ section.settings.mobile_banner | img_url }}" alt="Mobile Banner" loading="lazy">
-    </div>
-{% endif %}
 
 
 
