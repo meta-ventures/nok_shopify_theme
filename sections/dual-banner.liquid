@@ -1,0 +1,63 @@
+{% if section.settings.desktop_banner != blank %}
+  <div class="banner-desktop">
+      <img src="{{ section.settings.desktop_banner | img_url }}"
+           alt="{{ section.settings.desktop_banner.alt }}"
+           width="{{ section.settings.desktop_banner.width }}"
+           height="{{ section.settings.desktop_banner.height }}"
+           loading="eager">
+  </div>
+{% endif %}
+
+{% if section.settings.mobile_banner != blank %}
+  <div class="banner-mobile">
+      <img src="{{ section.settings.mobile_banner | img_url }}"
+           alt="{{ section.settings.mobile_banner.alt }}"
+           width="{{ section.settings.mobile_banner.width }}"
+           height="{{ section.settings.mobile_banner.height }}"
+           loading="lazy">
+  </div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Dual Banner",
+  "settings": [
+      {
+          "type": "image_picker",
+          "id": "desktop_banner",
+          "label": "Desktop Banner Image"
+      },
+      {
+          "type": "image_picker",
+          "id": "mobile_banner",
+          "label": "Mobile Banner Image"
+      }
+  ]
+}
+{% endschema %}
+
+<style>
+.banner-desktop img, .banner-mobile img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .banner-desktop {
+      display: none;
+  }
+  .banner-mobile {
+      display: block;
+  }
+}
+
+@media (min-width: 769px) {
+  .banner-desktop {
+      display: block;
+  }
+  .banner-mobile {
+      display: none;
+  }
+}
+</style>

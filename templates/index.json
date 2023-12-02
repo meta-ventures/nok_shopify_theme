@@ -346,6 +346,9 @@
         "section_desc": ""
       }
     },
+    "dual-banner": {
+      "type": "dual-banner"
+    },
     "165218770966e89aa3": {
       "type": "feature-counter",
       "blocks": {
