@@ -191,7 +191,7 @@ var ajaxCart = (function(module, $) {
       addToCartSelector  : 'input[type="submit"]',
       cartCountSelector  : null,
       cartCostSelector   : null,
-      moneyFormat        : '{{ amount }}',
+      moneyFormat        : '{{ shop.money_with_currency_format | json }}',
       disableAjaxCart    : false,
       enableQtySelectors : true
     };
