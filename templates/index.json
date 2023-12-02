@@ -183,11 +183,11 @@
           "settings": {
             "service_column_reverse": true,
             "service_1_title": "Lightining fast nfc",
-            "service_1_desc": "Enhanced NFC chips for the best readability and durability",
+            "service_1_desc": "Enhanced NFC chips for the best speed and readability",
             "service_2_title": "Premium Material",
-            "service_2_desc": "We carefully select our card materials to ensure the highest quality",
-            "service_3_title": "masterfully crafted",
-            "service_3_desc": "From the polished surface and smooth edges, to the outstanding engraving"
+            "service_2_desc": "We carefully select top-notch materials for lasting elegance",
+            "service_3_title": "Masterfully Crafted",
+            "service_3_desc": "Exquisite design with polished finish and precision engraving"
           }
         },
         "df5650a4-0e2f-47e0-bb16-b93cf46ccf10": {
@@ -200,12 +200,12 @@
           "type": "service_item",
           "settings": {
             "service_column_reverse": false,
-            "service_1_title": "High speed",
-            "service_1_desc": "Best part about drone aerial photography perspective!",
-            "service_2_title": "Easy to fly sky",
-            "service_2_desc": "Best part about drone aerial photography perspective!",
-            "service_3_title": "Customized control",
-            "service_3_desc": "Best part about drone aerial photography perspective!"
+            "service_1_title": "Instant Connections",
+            "service_1_desc": "Seamless networking with a single tap",
+            "service_2_title": "Customizable Profiles",
+            "service_2_desc": "Tailor your profile for unique, personal branding",
+            "service_3_title": "Easy to Use",
+            "service_3_desc": "Simple setup, share your profile in seconds"
           }
         }
       },
