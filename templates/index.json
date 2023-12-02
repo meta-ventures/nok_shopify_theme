@@ -347,7 +347,9 @@
       }
     },
     "dual-banner": {
-      "type": "dual-banner"
+      "type": "dual-banner",
+      "settings": {
+      }
     },
     "165218770966e89aa3": {
       "type": "feature-counter",
