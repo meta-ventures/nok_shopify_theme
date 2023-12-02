@@ -12,7 +12,7 @@
     <div class="row pro_details_pos">
       <div class="{% if section.settings.product_img_pos == 'top' or section.settings.product_img_pos == 'bottom' %}col-xl-5{% else %}col-xl-6{% endif %} col-lg-6 col-md-12 col-12 product_details">
         {%- if section.settings.next_prev_enable -%}
-        {%- include 'next-prev-product' -%}
+        {%- render 'next-prev-product' -%}
         {%- endif -%}
         <div class="product_detail_img">
           <!-- product big image start -->
@@ -184,12 +184,12 @@
                 <div class="pro-detail-button">
                   {% include 'product-cart-action' %}
                   {% include 'wishlist-5' %}
-                  {%- include 'direct-buy' -%}
+                  {%- render 'direct-buy' -%}
                 </div>
 
                 {%- if settings.wishlist_enable or product.metafields.my_fields.affiliate_link -%}
                 <div class="pro-aff-che">
-                  
+
                 </div>
                 {%- endif -%}
               </div>
@@ -322,7 +322,7 @@
     {% endfor %}
     {% endif %}
     {% endfor %}
-    $('.product-single .single-option-selector').wrap('<div class="selector-arrow">');  
+    $('.product-single .single-option-selector').wrap('<div class="selector-arrow">');
   };
   var selectCallback = function(variant, selector) {
       timber.productPage({
@@ -1089,7 +1089,7 @@
   }
   .pro-slider .pro-detail-slider .slick-slide a.product-single__thumbnail img{
     border: 1px solid #E2E2E2;
-    
+
   }
   .pro-slider .pro-detail-slider .slick-slide a.product-single__thumbnail img:hover,
   .pro-slider .pro-detail-slider .slick-slide.slick-center a.product-single__thumbnail img{
@@ -1114,7 +1114,7 @@
     justify-content: center;
     background-color: {{ settings.heading_text_color | color_modify: 'alpha', 0.5 }};
     line-height: 0;
-    
+
   }
   .pro-slider .pro-detail-slider .slick-slide a.product-single__thumbnail span.icon-play i,
   .pro-slider .pro-detail-slider .slick-slide a.product-single__thumbnail span.icon-modal i{
@@ -1247,7 +1247,7 @@
     {% endif %}
 
     {% else %}
-    
+
     {% if settings.enable_rtl %}
     padding-right: 50px;
     {% else %}
@@ -1275,7 +1275,7 @@
       {% endif %}
 
       {% else %}
-      
+
       {% if settings.enable_rtl %}
       padding-right: 30px;
       {% else %}
@@ -1284,7 +1284,7 @@
       {% endif %}
     }
   }
-  @media (max-width: 991px) {  
+  @media (max-width: 991px) {
     .product_details_info{
       {% if section.settings.product_pos == 'right' %}
       {% if settings.enable_rtl %}
@@ -1294,7 +1294,7 @@
       {% endif %}
 
       {% else %}
-      
+
       {% if settings.enable_rtl %}
       padding-right: 0px;
       {% else %}
@@ -1331,7 +1331,7 @@
     display: flex;
     align-items: center;
   }
-  .product_details_info .pro-nprist .product-info .pro-prlb .price-box span.new-price, 
+  .product_details_info .pro-nprist .product-info .pro-prlb .price-box span.new-price,
   .product_details_info .pro-nprist .product-info .pro-prlb .price-box span.old-price{
     font-size: 18px;
     font-weight: 600;

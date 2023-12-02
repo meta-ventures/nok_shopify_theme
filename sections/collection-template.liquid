@@ -24,7 +24,7 @@
           {%- endif -%}
         </div>
         {%- if section.settings.tab_bar_enable or section.settings.short_by_enable -%}
-        {%- include 'collection-sorting' -%}
+        {%- render 'collection-sorting' -%}
         {%- endif -%}
         <div class="get-data-products">
           <div class="shop-grid">
@@ -39,7 +39,7 @@
                       <ul class="product-view" id="product-grid" data-id="{{ section.id }}">
                         {%- for product in collection.products -%}
                         <li class="st-col-item{% if section.settings.sidebar_handle == 'without_sidebar' %} st-col{% endif %}">
-                          {%- include 'product-grid-item' -%}
+                          {%- render 'product-grid-item' -%}
                         </li>
                         {%- endfor -%}
                       </ul>
@@ -48,7 +48,7 @@
                 </div>
                 {% if paginate.pages > 1 %}
                 <div class="paginatoin-area">
-                  {%- include 'pagination' -%}
+                  {%- render 'pagination' -%}
                 </div>
                 {% endif %}
               </div>
