@@ -22,10 +22,31 @@
             "slider_content_position": "left",
             "slider_text_position": "left"
           }
+        },
+        "4d68fc28-67db-4b70-9cc9-4d2e2754b525": {
+          "type": "slide",
+          "settings": {
+            "slider_bg_img": "shopify:\/\/shop_images\/How_NOK_Card_Works_3_0291bf9e-e4c8-451a-a360-79666c5c2230.webp",
+            "slider_img_enable": true,
+            "slider_img": "shopify:\/\/shop_images\/How_NOK_Card_Works_600_x_800_px.webp",
+            "slider_title": "Introduce the rimonting drone",
+            "slider_title_color": "#FFFFFF",
+            "slider_desc": "Compact drone with 4.5k 65fps 45min battery average life + 55 mph speed",
+            "slider_desc_color": "#FFFFFF",
+            "price_1": "$1450.00",
+            "price_1_color": "#1c1c1c",
+            "price_2": "$999.00",
+            "price_2_color": "#1c1c1c",
+            "slider_button": "Buy now",
+            "slider_button_url": "",
+            "slider_content_position": "left",
+            "slider_text_position": "left"
+          }
         }
       },
       "block_order": [
-        "4f5c2dd7-3445-494c-9535-36efc312feda"
+        "4f5c2dd7-3445-494c-9535-36efc312feda",
+        "4d68fc28-67db-4b70-9cc9-4d2e2754b525"
       ],
       "custom_css": [
 
