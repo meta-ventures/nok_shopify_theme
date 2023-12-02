@@ -10,7 +10,7 @@
 								<div class="author-main">
 									<div class="author-image">
 										<span>
-											<img width="{{ block.settings.author_image.width }}" height="{{ block.settings.author_image.height }}" class="img-fluid" src="{% if block.settings.author_image %}{{ block.settings.author_image | img_url: 'master' }}{% else %}https://dummyimage.com/80x80/232323/999999{% endif %}" alt="">
+											<img width="{{ block.settings.author_image.width }}" height="{{ block.settings.author_image.height }}" class="img-fluid" src="{% if block.settings.author_image %}{{ block.settings.author_image | image_url }}{% else %}https://dummyimage.com/80x80/232323/999999{% endif %}" alt="">
 										</span>
 									</div>
 									<div class="author-content">
@@ -67,118 +67,118 @@ addEventListener('DOMContentLoaded', (event) => {
 {
   "name": "About us Section 3",
   "settings": [
-  	{
-        "type": "header",
-        "content": "Section Padding"
+    {
+      "type": "header",
+      "content": "Section Padding"
     },
     {
-        "type" : "paragraph",
-        "content" : "Desktop / Laptop / tablet"
+      "type": "paragraph",
+      "content": "Desktop / Laptop / tablet"
     },
     {
-        "type": "range",
-        "id": "about_product_padding_top",  
-        "label": "Section Padding Top",
-        "min": 0,
-        "max": 100,
-        "step": 1,
-        "unit": "px",
-        "default": 100
-    },           
-    {
-        "type": "range",
-        "id": "about_product_padding_bottom", 
-        "label": "Section Padding Bottom",
-        "min": 0,
-        "max": 100,
-        "step": 1,
-        "unit": "px",
-        "default": 100
+      "type": "range",
+      "id": "about_product_padding_top",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 100
     },
     {
-        "type" : "paragraph",
-        "content" : "Ipad pro / Ipad"
+      "type": "range",
+      "id": "about_product_padding_bottom",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 100
     },
     {
-        "type": "range",
-        "id": "about_product_padding_top_ip",  
-        "label": "Section Padding Top",
-        "min": 0,
-        "max": 100,
-        "step": 1,
-        "unit": "px",
-        "default": 80
-    },           
-    {
-        "type": "range",
-        "id": "about_product_padding_bottom_ip", 
-        "label": "Section Padding Bottom",
-        "min": 0,
-        "max": 100,
-        "step": 1,
-        "unit": "px",
-        "default": 80
+      "type": "paragraph",
+      "content": "Ipad pro / Ipad"
     },
     {
-        "type" : "paragraph",
-        "content" : "Mobile"
+      "type": "range",
+      "id": "about_product_padding_top_ip",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 80
     },
     {
-        "type": "range",
-        "id": "about_product_padding_top_xs",  
-        "label": "Section Padding Top",
-        "min": 0,
-        "max": 100,
-        "step": 1,
-        "unit": "px",
-        "default": 60
-    },           
-    {
-        "type": "range",
-        "id": "about_product_padding_bottom_xs", 
-        "label": "Section Padding Bottom",
-        "min": 0,
-        "max": 100,
-        "step": 1,
-        "unit": "px",
-        "default": 60
+      "type": "range",
+      "id": "about_product_padding_bottom_ip",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 80
     },
     {
-        "type": "header",
-        "content": "Section Background Color"
+      "type": "paragraph",
+      "content": "Mobile"
     },
     {
-        "type": "checkbox",
-        "id": "about_product_bgcolor_enable",
-        "label": "Show Background Color",
-        "default": true
+      "type": "range",
+      "id": "about_product_padding_top_xs",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 60
     },
     {
-        "type": "color",
-        "id": "about_product_bgcolor",
-        "label": "Background Color",
-        "default": "#FFFFFF"
+      "type": "range",
+      "id": "about_product_padding_bottom_xs",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "header",
+      "content": "Section Background Color"
+    },
+    {
+      "type": "checkbox",
+      "id": "about_product_bgcolor_enable",
+      "label": "Show Background Color",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "about_product_bgcolor",
+      "label": "Background Color",
+      "default": "#FFFFFF"
     }
   ],
-  "blocks":[
-  {
-    "type": "about_author",
-    "name": "About Author",
-    "settings": [
-	    {
-	        "type": "header",
-	        "content": "Author Image"
-	    },
-    	{
+  "blocks": [
+    {
+      "type": "about_author",
+      "name": "About Author",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Author Image"
+        },
+        {
           "type": "image_picker",
           "id": "author_image",
           "label": "Author Image",
           "info": "Recommended Size: 80px x 80px"
         },
         {
-	        "type": "header",
-	        "content": "Author Content"
-	    },
+          "type": "header",
+          "content": "Author Content"
+        },
         {
           "type": "textarea",
           "id": "author_desc",
@@ -197,14 +197,14 @@ addEventListener('DOMContentLoaded', (event) => {
           "label": "Author Sub Name",
           "default": "Product"
         }
-    ]
-  }
+      ]
+    }
   ],
-  "presets":[
-  {
-    "name": "About us Section 3",
-    "category": "About us Section 3"
-  }
+  "presets": [
+    {
+      "name": "About us Section 3",
+      "category": "About us Section 3"
+    }
   ]
 }
 {% endschema %}

@@ -1,5 +1,5 @@
 {% assign related_product_limit_count = section.settings.related_product_limit_handle %}
-{% assign related_product_limit = related_product_limit_count | plus: 1 %}
+
 
 {% if collection == null or collection.handle == 'frontpage' or collection.handle == 'all' %}
 {% assign product_found = false %}
@@ -20,7 +20,7 @@
       <div class="col">
         <div class="section-capture">
           <div class="section-title">
-            {% if section.settings.related_title !='' %}
+            {% if section.settings.related_title != '' %}
             <h2>{{ section.settings.related_title }}</h2>
             {% endif %}
             {% if section.settings.related_desc != '' %}
@@ -104,201 +104,201 @@
 {
   "name": "Related Product",
   "settings": [
-  {
-    "type": "checkbox",
-    "id": "related_products_enable",
-    "label": "Show Related Product",
-    "default": true
-  },
-  {
-    "type": "header",
-    "content": "Section Padding"
-  },
-  {
-    "type" : "paragraph",
-    "content" : "Desktop / Laptop / tablet"
-  },
-  {
-    "type": "range",
-    "id": "related_padding_top",
-    "label": "Section Padding Top",
-    "min": 0,
-    "max": 100,
-    "step": 1,
-    "unit": "px",
-    "default": 100
-  },
-  {
-    "type": "range",
-    "id": "related_padding_bottom",
-    "label": "Section Padding Bottom",
-    "min": 0,
-    "max": 100,
-    "step": 1,
-    "unit": "px",
-    "default": 100
-  },
-  {
-    "type" : "paragraph",
-    "content" : "Ipad pro / Ipad"
-  },
-  {
-    "type": "range",
-    "id": "related_padding_top_ip",
-    "label": "Section Padding Top",
-    "min": 0,
-    "max": 100,
-    "step": 1,
-    "unit": "px",
-    "default": 80
-  },
-  {
-    "type": "range",
-    "id": "related_padding_bottom_ip",
-    "label": "Section Padding Bottom",
-    "min": 0,
-    "max": 100,
-    "step": 1,
-    "unit": "px",
-    "default": 80
-  },
-  {
-    "type" : "paragraph",
-    "content" : "Mobile"
-  },
-  {
-    "type": "range",
-    "id": "related_padding_top_xs",
-    "label": "Section Padding Top",
-    "min": 0,
-    "max": 100,
-    "step": 1,
-    "unit": "px",
-    "default": 60
-  },
-  {
-    "type": "range",
-    "id": "related_padding_bottom_xs",
-    "label": "Section Padding Bottom",
-    "min": 0,
-    "max": 100,
-    "step": 1,
-    "unit": "px",
-    "default": 60
-  },
-  {
-    "type": "header",
-    "content": "Section Background Color"
-  },
-  {
-    "type" : "color",
-    "id" : "related_bgcolor",
-    "label" : "Background Color",
-    "default" : "#F6F6F6"
-  },
-  {
-    "type" : "checkbox",
-    "id" : "related_bgcolor_enable",
-    "label" : "Show Background Color",
-    "default" : true
-  },
-  {
-    "type" : "header",
-    "content" : "Section Border"
-  },
-  {
-    "type": "range",
-    "id": "related_border",
-    "label": "Border",
-    "min": 0,
-    "max": 2,
-    "step": 1,
-    "unit": "px",
-    "default": 1
-  },
-  {
-    "type": "color",
-    "id": "related_border_color",
-    "label": "Border Color",
-    "default": "#E2E2E2"
-  },
-  {
-    "type" : "checkbox",
-    "id" : "related_border_enable",
-    "label" : "Show Section Border",
-    "info" : "This option only available for product template 2, 3",
-    "default" : false
-  },
-  {
-    "type": "header",
-    "content": "Section Content"
-  },
-  {
-    "type": "text",
-    "id": "related_title",
-    "label": "Title",
-    "default": "Related product"
-  },
-  {
-    "type": "textarea",
-    "id": "related_desc",
-    "label": "Description",
-    "default": "Lorem ipsum is printing & typesetting industry's standard dummy text since texts"
-  },
-  {
-    "type": "header",
-    "content": "Product"
-  },
-  {
-    "type": "select",
-    "id": "product_col",
-    "label": "slides Per Column",
-    "options":[
     {
-      "label": "1 Products",
-      "value": "1"
+      "type": "checkbox",
+      "id": "related_products_enable",
+      "label": "Show Related Product",
+      "default": true
     },
     {
-      "label": "2 Products",
-      "value": "2"
+      "type": "header",
+      "content": "Section Padding"
     },
     {
-      "label": "3 Products",
-      "value": "3"
+      "type": "paragraph",
+      "content": "Desktop / Laptop / tablet"
+    },
+    {
+      "type": "range",
+      "id": "related_padding_top",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "related_padding_bottom",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 100
+    },
+    {
+      "type": "paragraph",
+      "content": "Ipad pro / Ipad"
+    },
+    {
+      "type": "range",
+      "id": "related_padding_top_ip",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "related_padding_bottom_ip",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "paragraph",
+      "content": "Mobile"
+    },
+    {
+      "type": "range",
+      "id": "related_padding_top_xs",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "related_padding_bottom_xs",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "header",
+      "content": "Section Background Color"
+    },
+    {
+      "type": "color",
+      "id": "related_bgcolor",
+      "label": "Background Color",
+      "default": "#F6F6F6"
+    },
+    {
+      "type": "checkbox",
+      "id": "related_bgcolor_enable",
+      "label": "Show Background Color",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Section Border"
+    },
+    {
+      "type": "range",
+      "id": "related_border",
+      "label": "Border",
+      "min": 0,
+      "max": 2,
+      "step": 1,
+      "unit": "px",
+      "default": 1
+    },
+    {
+      "type": "color",
+      "id": "related_border_color",
+      "label": "Border Color",
+      "default": "#E2E2E2"
+    },
+    {
+      "type": "checkbox",
+      "id": "related_border_enable",
+      "label": "Show Section Border",
+      "info": "This option only available for product template 2, 3",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Section Content"
+    },
+    {
+      "type": "text",
+      "id": "related_title",
+      "label": "Title",
+      "default": "Related product"
+    },
+    {
+      "type": "textarea",
+      "id": "related_desc",
+      "label": "Description",
+      "default": "Lorem ipsum is printing & typesetting industry's standard dummy text since texts"
+    },
+    {
+      "type": "header",
+      "content": "Product"
+    },
+    {
+      "type": "select",
+      "id": "product_col",
+      "label": "slides Per Column",
+      "options": [
+        {
+          "label": "1 Products",
+          "value": "1"
+        },
+        {
+          "label": "2 Products",
+          "value": "2"
+        },
+        {
+          "label": "3 Products",
+          "value": "3"
+        }
+      ],
+      "default": "1"
+    },
+    {
+      "type": "select",
+      "id": "slide_product_limit",
+      "label": "slides Per View",
+      "options": [
+        {
+          "label": "2 Products",
+          "value": "2"
+        },
+        {
+          "label": "3 Products",
+          "value": "3"
+        },
+        {
+          "label": "4 Products",
+          "value": "4"
+        },
+        {
+          "label": "5 Products",
+          "value": "5"
+        }
+      ],
+      "default": "4"
+    },
+    {
+      "type": "text",
+      "id": "related_product_limit_handle",
+      "label": "Product Limit",
+      "default": "10"
     }
-    ],
-    "default": "1"
-  },
-  {
-    "type": "select",
-    "id": "slide_product_limit",
-    "label": "slides Per View",
-    "options":[
-    {
-      "label": "2 Products",
-      "value": "2"
-    },
-    {
-      "label": "3 Products",
-      "value": "3"
-    },
-    {
-      "label": "4 Products",
-      "value": "4"
-    },
-    {
-      "label": "5 Products",
-      "value": "5"
-    }
-    ],
-    "default": "4"
-  },
-  {
-    "type": "text",
-    "id": "related_product_limit_handle",
-    "label": "Product Limit",
-    "default": "10"
-  }
   ]
 }
 {% endschema %}

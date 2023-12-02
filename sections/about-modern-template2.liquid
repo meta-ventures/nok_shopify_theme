@@ -1,7 +1,7 @@
 <section class="about-modern-section2">
   <div class="about-modern-image">
     <span>
-      <img width="{{ section.settings.about_modern_image.width }}" height="{{ section.settings.about_modern_image.height }}" class="img-fluid" src="{% if section.settings.about_modern_image %}{{ section.settings.about_modern_image | img_url: 'master' }}{% else %}https://dummyimage.com/1920x700/f7f7f7/999999{% endif %}" alt="">
+      <img width="{{ section.settings.about_modern_image.width }}" height="{{ section.settings.about_modern_image.height }}" class="img-fluid" src="{% if section.settings.about_modern_image %}{{ section.settings.about_modern_image | image_url }}{% else %}https://dummyimage.com/1920x700/f7f7f7/999999{% endif %}" alt="">
     </span>
   </div>
 </section>
@@ -10,93 +10,93 @@
   "name": "About Modern Section 2",
   "settings": [
     {
-    "type": "header",
-    "content": "Section Padding"
-  },
-  {
-    "type" : "paragraph",
-    "content" : "Desktop / Laptop"
-  },
-  {
-    "type": "range",
-    "id": "section_padding_top",
-    "label": "Section Padding Top",
-    "min": 0,
-    "max": 100,
-    "step": 5,
-    "unit": "px",
-    "default": 100
-  },
-  {
-    "type": "range",
-    "id": "section_padding_bottom",
-    "label": "Section Padding bottom",
-    "min": 0,
-    "max": 100,
-    "step": 5,
-    "unit": "px",
-    "default": 100
-  },
-  {
-    "type" : "paragraph",
-    "content" : "Ipad pro / Ipad"
-  },
-  {
-    "type": "range",
-    "id": "section_padding_top_lg",
-    "label": "Section Padding Top",
-    "min": 0,
-    "max": 100,
-    "step": 5,
-    "unit": "px",
-    "default": 80
-  },
-  {
-    "type": "range",
-    "id": "section_padding_bottom_lg",
-    "label": "Section Padding bottom",
-    "min": 0,
-    "max": 100,
-    "step": 5,
-    "unit": "px",
-    "default": 80
-  },
-  {
-    "type" : "paragraph",
-    "content" : "Mobile"
-  },
-  {
-    "type": "range",
-    "id": "section_padding_top_xs",
-    "label": "Section Padding Top",
-    "min": 0,
-    "max": 100,
-    "step": 5,
-    "unit": "px",
-    "default": 60
-  },
-  {
-    "type": "range",
-    "id": "section_padding_bottom_xs",
-    "label": "Section Padding bottom",
-    "min": 0,
-    "max": 100,
-    "step": 5,
-    "unit": "px",
-    "default": 60
-  },
-  {
-    "type": "header",
-    "content": "Faq Image"
-  },
-  {
-    "type": "image_picker",
-    "id": "about_modern_image",
-    "label": "About Image",
-    "info": "Recommended Size: 1920px x 700px"
-  }
+      "type": "header",
+      "content": "Section Padding"
+    },
+    {
+      "type": "paragraph",
+      "content": "Desktop / Laptop"
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom",
+      "label": "Section Padding bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 100
+    },
+    {
+      "type": "paragraph",
+      "content": "Ipad pro / Ipad"
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top_lg",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom_lg",
+      "label": "Section Padding bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "paragraph",
+      "content": "Mobile"
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top_xs",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom_xs",
+      "label": "Section Padding bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "header",
+      "content": "Faq Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "about_modern_image",
+      "label": "About Image",
+      "info": "Recommended Size: 1920px x 700px"
+    }
   ],
-  "presets":[
+  "presets": [
     {
       "name": "About Modern Section 2",
       "category": "About Modern"

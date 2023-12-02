@@ -18,7 +18,7 @@
                 <div class="about-content">
                     <div class="about-banner-area">
                         <div class="single-banner">
-                            <img width="{{ section.settings.about_banner_img.width }}" height="{{ section.settings.about_banner_img.height }}" src="{% if section.settings.about_banner_img %}{{ section.settings.about_banner_img | img_url: 'master' }}{% else %}https://dummyimage.com/1350x700{% endif %}" class="img-fluid" alt="{{ section.settings.about_banner_img.image.alt }}">
+                            <img width="{{ section.settings.about_banner_img.width }}" height="{{ section.settings.about_banner_img.height }}" src="{% if section.settings.about_banner_img %}{{ section.settings.about_banner_img | image_url }}{% else %}https://dummyimage.com/1350x700{% endif %}" class="img-fluid" alt="{{ section.settings.about_banner_img.image.alt }}">
                         </div>
                     </div>
                 </div>
@@ -28,121 +28,121 @@
 </section>
 {% schema %}
 {
-    "name": "About us Section 1",
-    "settings": [
+  "name": "About us Section 1",
+  "settings": [
     {
-        "type": "header",
-        "content": "Section Padding"
+      "type": "header",
+      "content": "Section Padding"
     },
     {
-        "type" : "paragraph",
-        "content" : "Desktop / Laptop / tablet"
+      "type": "paragraph",
+      "content": "Desktop / Laptop / tablet"
     },
     {
-        "type": "range",
-        "id": "about_product_padding_top",  
-        "label": "Section Padding Top",
-        "min": 0,
-        "max": 100,
-        "step": 1,
-        "unit": "px",
-        "default": 100
-    },           
-    {
-        "type": "range",
-        "id": "about_product_padding_bottom", 
-        "label": "Section Padding Bottom",
-        "min": 0,
-        "max": 100,
-        "step": 1,
-        "unit": "px",
-        "default": 100
+      "type": "range",
+      "id": "about_product_padding_top",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 100
     },
     {
-        "type" : "paragraph",
-        "content" : "Ipad pro / Ipad"
+      "type": "range",
+      "id": "about_product_padding_bottom",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 100
     },
     {
-        "type": "range",
-        "id": "about_product_padding_top_ip",  
-        "label": "Section Padding Top",
-        "min": 0,
-        "max": 100,
-        "step": 1,
-        "unit": "px",
-        "default": 80
-    },           
-    {
-        "type": "range",
-        "id": "about_product_padding_bottom_ip", 
-        "label": "Section Padding Bottom",
-        "min": 0,
-        "max": 100,
-        "step": 1,
-        "unit": "px",
-        "default": 80
+      "type": "paragraph",
+      "content": "Ipad pro / Ipad"
     },
     {
-        "type" : "paragraph",
-        "content" : "Mobile"
+      "type": "range",
+      "id": "about_product_padding_top_ip",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 80
     },
     {
-        "type": "range",
-        "id": "about_product_padding_top_xs",  
-        "label": "Section Padding Top",
-        "min": 0,
-        "max": 100,
-        "step": 1,
-        "unit": "px",
-        "default": 60
-    },           
-    {
-        "type": "range",
-        "id": "about_product_padding_bottom_xs", 
-        "label": "Section Padding Bottom",
-        "min": 0,
-        "max": 100,
-        "step": 1,
-        "unit": "px",
-        "default": 60
+      "type": "range",
+      "id": "about_product_padding_bottom_ip",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 80
     },
     {
-        "type": "header",
-        "content": "Section Background Color"
+      "type": "paragraph",
+      "content": "Mobile"
     },
     {
-        "type": "color",
-        "id": "about_product_bgcolor",
-        "label": "Background Color",
-        "default": "#FFFFFF"
+      "type": "range",
+      "id": "about_product_padding_top_xs",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 60
     },
     {
-        "type": "checkbox",
-        "id": "about_product_bgcolor_enable",
-        "label": "Show Background Color",
-        "default": true
+      "type": "range",
+      "id": "about_product_padding_bottom_xs",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 60
     },
     {
-        "type": "header",
-        "content": "Section Title"
+      "type": "header",
+      "content": "Section Background Color"
     },
     {
-        "type": "textarea",
-        "id": "other_page_title",
-        "label": "Title",
-        "default": "We started this company 14 year ago out of a desire t design and build amazing things."
+      "type": "color",
+      "id": "about_product_bgcolor",
+      "label": "Background Color",
+      "default": "#FFFFFF"
     },
     {
-        "type": "text",
-        "id": "other_page_subtitle",
-        "label": "Sub Title",
-        "default": "Hasa lindgren"
+      "type": "checkbox",
+      "id": "about_product_bgcolor_enable",
+      "label": "Show Background Color",
+      "default": true
     },
     {
-        "type": "text",
-        "id": "other_page_newtitle",
-        "label": "New Title",
-        "default": "Co founder"
+      "type": "header",
+      "content": "Section Title"
+    },
+    {
+      "type": "textarea",
+      "id": "other_page_title",
+      "label": "Title",
+      "default": "We started this company 14 year ago out of a desire t design and build amazing things."
+    },
+    {
+      "type": "text",
+      "id": "other_page_subtitle",
+      "label": "Sub Title",
+      "default": "Hasa lindgren"
+    },
+    {
+      "type": "text",
+      "id": "other_page_newtitle",
+      "label": "New Title",
+      "default": "Co founder"
     },
     {
       "type": "header",
@@ -154,13 +154,13 @@
       "label": "Image",
       "info": "Recommended Size: 1350 x 700px"
     }
-    ],
-    "presets":[
+  ],
+  "presets": [
     {
-        "name": "About us Section 1",
-        "category": "About us Section 1"
+      "name": "About us Section 1",
+      "category": "About us Section 1"
     }
-    ]
+  ]
 }
 {% endschema %}
 <style>
