@@ -10,7 +10,7 @@
   <div class="swatch-variant">
     {%- if product.variants.size >= 1 -%}
     {% for option in product.options %}
-    {%- include 'swatch' with option -%}
+    {%- render 'swatch' with option -%}
     {% endfor %}
     {%- endif -%}
   </div>
@@ -26,7 +26,7 @@
         .val(optionValue)
         .trigger('change');
       });
-      
+
     });
   </script>
   {%- endif -%}
@@ -131,7 +131,7 @@
     justify-content: center;
     {% endif %}
   }
-  
+
   /* select variant css */
   .product-variant-option .select-variant .selector-wrapper{
     display: flex;
@@ -145,7 +145,7 @@
     margin-bottom: 0;
     font-weight: 600;
     position: relative;
-    
+
     line-height: 1;
   }
   .product-variant-option .select-variant .selector-wrapper label::after{
@@ -158,7 +158,7 @@
     margin-left: 15px;
     {% endif %}
     padding: 10px 30px 10px 15px;
-    
+
   }
   @media(max-width: 1199px){
     .product-variant-option .swatch-variant{

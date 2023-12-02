@@ -21,7 +21,7 @@
             {% endif %}
           </div>
         </div>
-        
+
         <div class="page-search-bar">
           <form action="/search" method="get" class="page-search-form" role="search">
             <input type="hidden" name="type" value="product">
@@ -33,7 +33,7 @@
             </button>
           </form>
         </div>
-        
+
         {% if search.performed %}
         <div id="gf-products" class="search-list">
           {% for item in search.results %}
@@ -46,7 +46,7 @@
         <div class="paginatoin-area">
           <ul class="paginate">
             <li class="page-numerous">
-              {%- include 'pagination' -%}
+              {%- render 'pagination' -%}
             </li>
           </ul>
         </div>
@@ -72,7 +72,7 @@
     position: relative;
     display: flex;
     align-items: center;
-    
+
     overflow: hidden;
   }
   .search-page .page-search-bar form input{

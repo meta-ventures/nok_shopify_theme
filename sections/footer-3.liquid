@@ -55,7 +55,7 @@
         <li class="ftlink-li logo-info {{ text_align }} {{ text_lg_align }} width-{{ block.id }}">
           <div class="footer-info">
             {% if block.settings.logo_enable %}
-            {%- include 'company-logo-footer' -%}
+            {%- render 'company-logo-footer' -%}
             {% endif %}
             <div class="rich-text">
               {{ block.settings.text_1 }}
@@ -103,10 +103,10 @@
               {% if block.settings.custom_text_2 != '' %}
               {{ block.settings.custom_text_2 }}
               {% endif %}
-            </div>       
+            </div>
             <div class="footer-social">
               {% include 'social-midea' %}
-            </div>     
+            </div>
           </div>
           {%- style -%}
           .footer-list-wrap ul.footer-list li.width-{{ block.id }}{
@@ -623,7 +623,7 @@
     margin-right: -12px;
     {%- else -%}
     margin-left: -12px;
-    {%- endif -%}    
+    {%- endif -%}
   }
   .footer-area .footer-service ul.service-ul li.service-li {
     width: calc(50% - 12px);
@@ -650,7 +650,7 @@
     margin-left: 0px;
     {%- endif -%}
   }
-} 
+}
 
 /* footer link css */
 .footer-list-wrap {
@@ -787,7 +787,7 @@
     font-size: 18px;
   }
 }
-@media (max-width: 767px){  
+@media (max-width: 767px){
   .footer-list-wrap ul.footer-list {
     margin-top: -40px;
   }
@@ -838,7 +838,7 @@
     padding-bottom: 26px;
   }
 
-  /* custom text css */  
+  /* custom text css */
   .footer-list-wrap li.custom-text.custom-text .custom-info .text-block p {
     margin-top: 12px;
   }
