@@ -14,7 +14,7 @@
             <div class="col-xl-5 col-lg-5 col-md-6 col-sm-6 col-12">
                 <div class="custom-text-banner">
                     <a href="" class="banner-hover">
-                        <img width="{{ section.settings.cust_text_banner_img.width }}" height="{{ section.settings.cust_text_banner_img.height }}" src="{% if section.settings.cust_text_banner_img %}{{ section.settings.cust_text_banner_img | img_url: 'master' }}{% else %}https://dummyimage.com/550x500{% endif %}" alt="">
+                        <img width="{{ section.settings.cust_text_banner_img.width }}" height="{{ section.settings.cust_text_banner_img.height }}" src="{% if section.settings.cust_text_banner_img %}{{ section.settings.cust_text_banner_img | image_url }}{% else %}https://dummyimage.com/550x500{% endif %}" alt="">
                     </a>
                 </div>
             </div>
@@ -24,156 +24,156 @@
 <!-- banner-area end -->
 {% schema %}
 {
-    "name": "Custom Text",
-    "settings": [
-        {
-            "type": "header",
-            "content": "Section Padding"
-        },
-        {
-            "type" : "paragraph",
-            "content" : "Desktop / Laptop / tablet"
-        },
-        {
-            "type": "range",
-            "id": "customtext_padding_top",
-            "label": "Section Padding Top",
-            "min": 0,
-            "max": 100,
-            "step": 1,
-            "unit": "px",
-            "default": 100
-        },
-        {
-            "type": "range",
-            "id": "customtext_padding_bottom",
-            "label": "Section Padding Bottom",
-            "min": 0,
-            "max": 100,
-            "step": 1,
-            "unit": "px",
-            "default": 0
-        },
-        {
-            "type" : "paragraph",
-            "content" : "Ipad pro / Ipad"
-        },
-        {
-            "type": "range",
-            "id": "customtext_padding_top_ip",
-            "label": "Section Padding Top",
-            "min": 0,
-            "max": 100,
-            "step": 1,
-            "unit": "px",
-            "default": 80
-        },
-        {
-            "type": "range",
-            "id": "customtext_padding_bottom_ip",
-            "label": "Section Padding Bottom",
-            "min": 0,
-            "max": 100,
-            "step": 1,
-            "unit": "px",
-            "default": 0
-        },
-        {
-            "type" : "paragraph",
-            "content" : "Mobile"
-        },
-        {
-            "type": "range",
-            "id": "customtext_padding_top_xs",
-            "label": "Section Padding Top",
-            "min": 0,
-            "max": 100,
-            "step": 1,
-            "unit": "px",
-            "default": 60
-        },
-        {
-            "type": "range",
-            "id": "customtext_padding_bottom_xs",
-            "label": "Section Padding Bottom",
-            "min": 0,
-            "max": 100,
-            "step": 1,
-            "unit": "px",
-            "default": 0
-        },
-        {
-            "type" : "header",
-            "content" : "Section Background Color"
-        },
-        {
-            "type" : "color",
-            "id" : "custom_bgcolor",
-            "label" : "Background Color",
-            "default" : "#222"
-        },
-        {
-            "type" : "checkbox",
-            "id" : "custom_bg_check",
-            "label" : "Show Background Color",
-            "default" : true
-        },
-        {
-            "type": "header",
-            "content": "Custom Text"
-        },
-        {
-            "type": "text",
-            "id": "cust_text_title",
-            "label": "Title",
-            "default": "Organic farming"
-        },
-        {
-            "type": "color",
-            "id": "cust_text_title_color",
-            "label": "Title Color",
-            "default": "#222"
-        },
-        {
-            "type": "textarea",
-            "id": "cust_text_desc",
-            "label": "Description",
-            "default": "Lorem Ipsum is simply dummy text of the printing and typesetting industry's standard dummy text ever since the texts"
-        },
-        {
-            "type": "color",
-            "id": "cust_text_desc_color",
-            "label": "Description Color",
-            "default": "#666"
-        },
-        {
-            "type": "text",
-            "id": "cust_text_button",
-            "label": "Button Title",
-            "default": "Shop now"
-        },
-        {
-            "type": "url",
-            "id": "cust_text_button_url",
-            "label": "URL"
-        },
-        {
-            "type": "header",
-            "content": "Custom Banner"
-        },
-        {
-            "type": "image_picker",
-            "id": "cust_text_banner_img",
-            "label": "Banner Image",
-            "info": "Recommended Size: 550px x 500px"
-        }
-    ],
-    "presets":[
-        {
-            "name": "Custom Text",
-            "category": "Custom"
-        }
-    ]
+  "name": "Custom Text",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Padding"
+    },
+    {
+      "type": "paragraph",
+      "content": "Desktop / Laptop / tablet"
+    },
+    {
+      "type": "range",
+      "id": "customtext_padding_top",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "customtext_padding_bottom",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "paragraph",
+      "content": "Ipad pro / Ipad"
+    },
+    {
+      "type": "range",
+      "id": "customtext_padding_top_ip",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "customtext_padding_bottom_ip",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "paragraph",
+      "content": "Mobile"
+    },
+    {
+      "type": "range",
+      "id": "customtext_padding_top_xs",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "customtext_padding_bottom_xs",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Section Background Color"
+    },
+    {
+      "type": "color",
+      "id": "custom_bgcolor",
+      "label": "Background Color",
+      "default": "#222"
+    },
+    {
+      "type": "checkbox",
+      "id": "custom_bg_check",
+      "label": "Show Background Color",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Custom Text"
+    },
+    {
+      "type": "text",
+      "id": "cust_text_title",
+      "label": "Title",
+      "default": "Organic farming"
+    },
+    {
+      "type": "color",
+      "id": "cust_text_title_color",
+      "label": "Title Color",
+      "default": "#222"
+    },
+    {
+      "type": "textarea",
+      "id": "cust_text_desc",
+      "label": "Description",
+      "default": "Lorem Ipsum is simply dummy text of the printing and typesetting industry's standard dummy text ever since the texts"
+    },
+    {
+      "type": "color",
+      "id": "cust_text_desc_color",
+      "label": "Description Color",
+      "default": "#666"
+    },
+    {
+      "type": "text",
+      "id": "cust_text_button",
+      "label": "Button Title",
+      "default": "Shop now"
+    },
+    {
+      "type": "url",
+      "id": "cust_text_button_url",
+      "label": "URL"
+    },
+    {
+      "type": "header",
+      "content": "Custom Banner"
+    },
+    {
+      "type": "image_picker",
+      "id": "cust_text_banner_img",
+      "label": "Banner Image",
+      "info": "Recommended Size: 550px x 500px"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Text",
+      "category": "Custom"
+    }
+  ]
 }
 {% endschema %}
 <style>

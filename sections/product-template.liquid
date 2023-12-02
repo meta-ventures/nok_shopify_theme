@@ -4,7 +4,7 @@
 {%- endif -%}
 {%- assign sold_out = true -%}
 {%- if product.available -%}
-{%- assign sold_out = false -%}
+
 {%- endif -%}
 {%- assign current_variant = product.selected_or_first_available_variant -%}
 <section class="product-details-page">
@@ -21,7 +21,7 @@
             <div class="slider-big"{% if settings.enable_rtl %} dir="rtl"{% endif %}>
               {%- assign featured_media = current_variant.featured_media | default: product.featured_media -%}
               {%- for media in product.media -%}
-              <div class="slick-slide" data-image="{{ media.src | img_url: 'master' }}" data-image-id="{{ media.id }}">
+              <div class="slick-slide" data-image="{{ media.src | image_url }}" data-image-id="{{ media.id }}">
                 {% include 'media', media: media, featured_media: featured_media %}
               </div>
               {%- endfor -%}
@@ -32,10 +32,10 @@
           <div class="pro-slider">
             <div class="slider-small pro-detail-slider" id="pro-detail-slider"{% if settings.enable_rtl %} dir="rtl"{% endif %}>
               {% for media in product.media %}
-              <div class="slick-slide" data-image="{{ media.src | img_url: 'master' }}" data-image-id="{{ media.id }}">
+              <div class="slick-slide" data-image="{{ media.src | image_url }}" data-image-id="{{ media.id }}">
                 <a href="javascript:void(0)" class="product-single__thumbnail">
-                  <img width="{{ media.preview_image.width }}" height="{{ media.preview_image.height }}" src="{{ media.preview_image | img_url: '200x220', crop: 'center' }}" class="img-fluid" alt="{{ media.alt | escape }}">
-                  {%- if media.media_type == 'video' or media.media_type =='external_video' -%}
+                  <img width="{{ media.preview_image.width }}" height="{{ media.preview_image.height }}" src="{{ media.preview_image | image_url: width: 200, height: 220, crop: 'center' }}" class="img-fluid" alt="{{ media.alt | escape }}">
+                  {%- if media.media_type == 'video' or media.media_type == 'external_video' -%}
                   <span class="icon-play"><i class="ri-play-line"></i></span>
                   {%- endif -%}
                   {%- if media.media_type == 'model' -%}
@@ -362,22 +362,22 @@
       "content": "Section Padding"
     },
     {
-      "type" : "paragraph",
-      "content" : "Desktop / Laptop / tablet"
+      "type": "paragraph",
+      "content": "Desktop / Laptop / tablet"
     },
     {
       "type": "range",
-      "id": "pro_detail_padding_top",  
+      "id": "pro_detail_padding_top",
       "label": "Section Padding Top",
       "min": 0,
       "max": 100,
       "step": 5,
       "unit": "px",
       "default": 100
-    },           
+    },
     {
       "type": "range",
-      "id": "pro_detail_padding_bottom", 
+      "id": "pro_detail_padding_bottom",
       "label": "Section Padding Bottom",
       "min": 0,
       "max": 100,
@@ -386,22 +386,22 @@
       "default": 100
     },
     {
-      "type" : "paragraph",
-      "content" : "Ipad pro / Ipad"
+      "type": "paragraph",
+      "content": "Ipad pro / Ipad"
     },
     {
       "type": "range",
-      "id": "pro_detail_padding_top_ip",  
+      "id": "pro_detail_padding_top_ip",
       "label": "Section Padding Top",
       "min": 0,
       "max": 100,
       "step": 5,
       "unit": "px",
       "default": 80
-    },           
+    },
     {
       "type": "range",
-      "id": "pro_detail_padding_bottom_ip", 
+      "id": "pro_detail_padding_bottom_ip",
       "label": "Section Padding Bottom",
       "min": 0,
       "max": 100,
@@ -410,22 +410,22 @@
       "default": 80
     },
     {
-      "type" : "paragraph",
-      "content" : "Mobile"
+      "type": "paragraph",
+      "content": "Mobile"
     },
     {
       "type": "range",
-      "id": "pro_detail_padding_top_xs",  
+      "id": "pro_detail_padding_top_xs",
       "label": "Section Padding Top",
       "min": 0,
       "max": 100,
       "step": 5,
       "unit": "px",
       "default": 60
-    },           
+    },
     {
       "type": "range",
-      "id": "pro_detail_padding_bottom_xs", 
+      "id": "pro_detail_padding_bottom_xs",
       "label": "Section Padding Bottom",
       "min": 0,
       "max": 100,
@@ -457,7 +457,7 @@
       "type": "radio",
       "id": "product_pos",
       "label": "Product Position",
-      "options":[
+      "options": [
         {
           "label": "Left",
           "value": "left"
@@ -487,7 +487,7 @@
       "type": "radio",
       "id": "product_img_pos",
       "label": "Image Position",
-      "options":[
+      "options": [
         {
           "label": "Top",
           "value": "top"
@@ -495,7 +495,7 @@
         {
           "label": "Right",
           "value": "right"
-        },        
+        },
         {
           "label": "Bottom",
           "value": "bottom"
@@ -541,7 +541,7 @@
       "type": "select",
       "id": "next_prev_handle",
       "label": "Option",
-      "options":[
+      "options": [
         {
           "label": "Image",
           "value": "image"
@@ -662,36 +662,36 @@
       "name": "Product Variant",
       "limit": 1,
       "settings": [
-      {
-      "type": "header",
-      "content": "Product Variant"
-    },
-    {
-      "type": "radio",
-      "id": "product_variant_handle",
-      "label": "Variant Option",
-      "options":[
-      {
-        "label": "Select Option",
-        "value": "product_variant_select_option"
-      },
-      {
-        "label": "Swatch Option",
-        "value": "product_variant_swatch_option"
-      }
-      ],
-      "default": "product_variant_swatch_option"
-    },
-    {
-      "type": "paragraph",
-      "content": "Product Variant Option Swatch Option For Color"
-    },
-    {
-      "type": "checkbox",
-      "id": "product_variant_color_image_enable",
-      "label": "Show Image In-place Of Color",
-      "default": true
-    }
+        {
+          "type": "header",
+          "content": "Product Variant"
+        },
+        {
+          "type": "radio",
+          "id": "product_variant_handle",
+          "label": "Variant Option",
+          "options": [
+            {
+              "label": "Select Option",
+              "value": "product_variant_select_option"
+            },
+            {
+              "label": "Swatch Option",
+              "value": "product_variant_swatch_option"
+            }
+          ],
+          "default": "product_variant_swatch_option"
+        },
+        {
+          "type": "paragraph",
+          "content": "Product Variant Option Swatch Option For Color"
+        },
+        {
+          "type": "checkbox",
+          "id": "product_variant_color_image_enable",
+          "label": "Show Image In-place Of Color",
+          "default": true
+        }
       ]
     },
     {
