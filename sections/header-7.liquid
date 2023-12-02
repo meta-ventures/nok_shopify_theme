@@ -8,7 +8,7 @@
             <div class="header-main">
               <div class="header-element logo-contect">
                 <div class="logo-desk">
-                  {%- include 'company-logo' -%}
+                  {%- render 'company-logo' -%}
                 </div>
                 <div class="header-contect">
                   {% if section.settings.contact_icon != '' or section.settings.contact_text != '' %}
@@ -44,7 +44,7 @@
                       {% endfor %}
                     </ul>
                     <div class="header-logo">
-                      {%- include 'company-logo' -%}  
+                      {%- render 'company-logo' -%}
                     </div>
                     <ul class="main-menu">
                       {% assign header_main_menu = section.settings.header_main_menu_2 %}
@@ -130,7 +130,7 @@
     </div>
   </div>
   {% include 'mini-cart2-side' %}
-  {%- include 'search-popup' -%}
+  {%- render 'search-popup' -%}
   <div class="header-bottom-area">
     <div class="container header-bottom-container">
       <div class="row header-bottom-container">
@@ -467,7 +467,7 @@ header-7 css
     text-align: right;
     {% else %}
     text-align: left;
-    {% endif %}    
+    {% endif %}
   }
   .header-kaj.header-7 .header-area .header-main-area .header-main .header-element.menu-wrap{
     display: none;
@@ -547,7 +547,7 @@ header-7 css
   padding-right: 0px;
   {% else %}
   padding-left: 0px;
-  {% endif %}  
+  {% endif %}
 }
 .header-kaj.header-7 .header-area .header-main-area .header-main .header-element.menu-wrap .megamenu-content .mainwrap ul.main-menu li.menu-link a.link-title::before {
   background-image: var(--gradient-color);

@@ -12,7 +12,7 @@
           <li class="ftlink-li logo-info {{ text_align }} {{ text_lg_align }} width-{{ block.id }}">
             <div class="footer-info">
               {% if block.settings.logo_enable %}
-              {%- include 'company-logo-footer' -%}
+              {%- render 'company-logo-footer' -%}
               {% endif %}
               {% if block.settings.text != '' %}
               <div class="rich-text">{{ block.settings.text }}</div>
@@ -44,7 +44,7 @@
               </div>
               {% endif %}
               {% if block.settings.payment_enable %}
-              {%- include 'payment-icon' -%}
+              {%- render 'payment-icon' -%}
               {% endif %}
             </div>
             {%- style -%}
@@ -167,13 +167,13 @@
                 </a>
                 <a class="img-content" href="{{ block.settings.insta_url4 }}">
                   <img width="{{ block.settings.insta_img4.width }}" height="{{ block.settings.insta_img4.height }}" class="img-fluid" src="{% if block.settings.insta_img4 %}{{ block.settings.insta_img4 | image_url: width: 80, height: 80, crop: 'center' }}{% else %}https://dummyimage.com/150x150/f7f7f7/999999{% endif %}" alt="">
-                </a> 
+                </a>
                 <a class="img-content" href="{{ block.settings.insta_url5 }}">
                   <img width="{{ block.settings.insta_img5.width }}" height="{{ block.settings.insta_img5.height }}" class="img-fluid" src="{% if block.settings.insta_img5 %}{{ block.settings.insta_img5 | image_url: width: 80, height: 80, crop: 'center' }}{% else %}https://dummyimage.com/150x150/f7f7f7/999999{% endif %}" alt="">
-                </a> 
+                </a>
                 <a class="img-content" href="{{ block.settings.insta_url6 }}">
                   <img width="{{ block.settings.insta_img6.width }}" height="{{ block.settings.insta_img6.height }}" class="img-fluid" src="{% if block.settings.insta_img6 %}{{ block.settings.insta_img6 | image_url: width: 80, height: 80, crop: 'center' }}{% else %}https://dummyimage.com/150x150/f7f7f7/999999{% endif %}" alt="">
-                </a> 
+                </a>
               </div>
               {% if block.settings.text != '' %}
               <div class="rich-text">{{ block.settings.text }}</div>
@@ -195,7 +195,7 @@
   <div class="footer-copyright">
     <div class="container">
       <div class="row">
-        <div class="col">          
+        <div class="col">
           <div class="copyright-text">
             <ul class="copyright-ul">
               {% if section.settings.footer_copyright_text != '' %}
@@ -981,7 +981,7 @@
     font-size: 22px;
     line-height: 34px;
   }
-} 
+}
 @media (max-width: 479px) {
   .footer-list-wrap ul.footer-list li.ftlink-li.logo-info .footer-info .rich-text p {
     font-size: 18px;
@@ -1037,7 +1037,7 @@
   padding-left: 10px;
   {% endif %}
 }
-.footer-list-wrap li.custom-text .custom-text-area .custom-text-block h1.title {  
+.footer-list-wrap li.custom-text .custom-text-area .custom-text-block h1.title {
   font-size: 28px;
   font-weight: 600;
   text-transform: uppercase;
@@ -1187,7 +1187,7 @@
 }
 .footer-list-wrap ul.footer-list li.ftlink-li.insta-wrap .insta-block a:hover:after{
   opacity: .5;
-  visibility: visible;  
+  visibility: visible;
 }
 .footer-list-wrap ul.footer-list li.ftlink-li.insta-wrap .insta-block a:hover:before,
 .footer-list-wrap ul.footer-list li.ftlink-li.insta-wrap .insta-block a:before,
@@ -1229,7 +1229,7 @@
   }
 }
 @media (max-width: 991px){
-  .footer-list-wrap ul.footer-list li.ftlink-li:not(:first-child) { 
+  .footer-list-wrap ul.footer-list li.ftlink-li:not(:first-child) {
     margin-top: 15px;
   }
   .footer-list-wrap ul.footer-list{
@@ -1375,7 +1375,7 @@
   .footer-area .footer-copyright .copyright-text ul.copyright-ul li.copyright-li.social {
     justify-content: center;
     margin-top: 22px;
-  } 
+  }
   .footer-area .footer-copyright .copyright-text ul.copyright-ul li.copyright-li.text p {
     font-size: 16px;
   }

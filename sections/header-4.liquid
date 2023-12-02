@@ -8,7 +8,7 @@
             <div class="header-main-area">
               <div class="header-main">
                 <div class="header-element logo">
-                  {%- include 'company-logo' -%}
+                  {%- render 'company-logo' -%}
                 </div>
                 <div class="header-element menu-wrap">
                   <div class="megamenu-content">
@@ -102,9 +102,9 @@
       </div>
     </div>
   </div>
-  
+
   {% include 'mini-cart2-side' %}
-  {%- include 'search-popup' -%}
+  {%- render 'search-popup' -%}
   <div class="header-bottom-area">
     <div class="container header-bottom-container">
       <div class="row header-bottom-container">
@@ -525,7 +525,7 @@ a.navbar-toggler,
     margin-right: 25px;
     {% else %}
     margin-left: 25px;
-    {% endif %}    
+    {% endif %}
   }
   .header-4 .header-kaj .header-area .header-main-area .header-main .right-block-box ul.shop-element li.side-wrap.toggle-wrap {
     display: flex;

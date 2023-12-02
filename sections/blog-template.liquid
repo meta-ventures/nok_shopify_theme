@@ -34,7 +34,7 @@
             {% endif %}
             {% if paginate.pages > 1 %}
             <li class="page-numerous">
-              {%- include 'pagination' -%}
+              {%- render 'pagination' -%}
             </li>
             {% endif %}
           </ul>
@@ -151,7 +151,7 @@
   .blog-content-wrap .left-wrap{
     flex-direction: row-reverse;
   }
-  .blog-content-wrap .blog-block {    
+  .blog-content-wrap .blog-block {
     {% if section.settings.blog_news_sidebar_handle == 'left_sidebar_handle' %}
     padding-left: 30px;
     {% else %}
@@ -169,7 +169,7 @@
     .blog-content-wrap .blog-grid-wrap:last-child{
       margin-top: 0px;
     }
-    .blog-content-wrap .blog-block {    
+    .blog-content-wrap .blog-block {
       {% if section.settings.blog_news_sidebar_handle == 'left_sidebar_handle' %}
       padding-left: 12px;
       {% else %}

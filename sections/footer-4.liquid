@@ -16,7 +16,7 @@
         <li class="ftlink-li logo-info {{ text_align }} {{ text_lg_align }} width-{{ block.id }}">
           <div class="footer-info">
             {% if block.settings.logo_enable %}
-            {%- include 'company-logo-footer' -%}
+            {%- render 'company-logo-footer' -%}
             {% endif %}
             {% if block.settings.logo_desc != '' %}
             <p class="logo-desc">{{ block.settings.logo_desc }}</p>
@@ -140,13 +140,13 @@
               </a>
               <a class="img-content" href="{{ block.settings.insta_url4 }}">
                 <img width="{{ block.settings.insta_img4.width }}" height="{{ block.settings.insta_img4.height }}" class="img-fluid" src="{% if block.settings.insta_img4 %}{{ block.settings.insta_img4 | image_url: width: 80, height: 80, crop: 'center' }}{% else %}https://dummyimage.com/150x150/f7f7f7/999999{% endif %}" alt="">
-              </a> 
+              </a>
               <a class="img-content" href="{{ block.settings.insta_url5 }}">
                 <img width="{{ block.settings.insta_img5.width }}" height="{{ block.settings.insta_img5.height }}" class="img-fluid" src="{% if block.settings.insta_img5 %}{{ block.settings.insta_img5 | image_url: width: 80, height: 80, crop: 'center' }}{% else %}https://dummyimage.com/150x150/f7f7f7/999999{% endif %}" alt="">
-              </a> 
+              </a>
               <a class="img-content" href="{{ block.settings.insta_url6 }}">
                 <img width="{{ block.settings.insta_img6.width }}" height="{{ block.settings.insta_img6.height }}" class="img-fluid" src="{% if block.settings.insta_img6 %}{{ block.settings.insta_img6 | image_url: width: 80, height: 80, crop: 'center' }}{% else %}https://dummyimage.com/150x150/f7f7f7/999999{% endif %}" alt="">
-              </a> 
+              </a>
             </div>
             {% if block.settings.text != '' %}
             <div class="rich-text">{{ block.settings.text }}</div>
@@ -823,7 +823,7 @@
   .footer-list-wrap ul.footer-list li.ftlink-li ul.footer-sublist li.ftsublink-li:first-child{
     margin-top: 33px;
   }
-  .footer-list-wrap ul.footer-list li.ftlink-li ul.footer-sublist li.ftsublink-li a, 
+  .footer-list-wrap ul.footer-list li.ftlink-li ul.footer-sublist li.ftsublink-li a,
   .footer-list-wrap ul.footer-list li.ftlink-li .rich-text .text-block p,
   .footer-list-wrap ul.footer-list li.ftlink-li .rich-text .text-block p a {
     color: var(--color-text);
@@ -975,7 +975,7 @@
 }
 .footer-list-wrap ul.footer-list li.ftlink-li.insta-wrap .insta-block a:hover:after{
     opacity: .5;
-    visibility: visible;  
+    visibility: visible;
 }
 .footer-list-wrap ul.footer-list li.ftlink-li.insta-wrap .insta-block a:hover:before,
 .footer-list-wrap ul.footer-list li.ftlink-li.insta-wrap .insta-block a:before,
@@ -1013,7 +1013,7 @@
     font-size: 14px;
     line-height: 25px;
   }
-  /* newsletter */ 
+  /* newsletter */
   .footer-list-wrap .news-content .news-wrap button {
     font-size: 14px;
   }

@@ -35,8 +35,8 @@
     <title>{{ 'gift_cards.issued.title_html' | t: value: formatted_initial_value_stripped, shop: shop.name }}</title>
 
     <meta name="description" content="{{ 'gift_cards.issued.subtext' | t }}">
-    
-    {%- include 'header-css' -%}
+
+    {%- render 'header-css' -%}
     <style>*,::after,::before{box-sizing:border-box}body{color: var(--font-color-body);font-size: var(--font-size-body);background-color: var(--background-color-body);font-family: var(--font-stack-body);font-weight: var(--font-weight-body);font-style: var(--font-style-body);letter-spacing: var(--font-letter-spacing-body);}h1,h2,h3,h4,h5,h6{color: var(--font-color-header);font-family: var(--font-stack-header);font-weight: var(--font-weight-header);font-style: var(--font-style-header);}.section-title h2,.content-main-title h2,.my-account-page .page-title h2{color: var(--font-color-section-header);font-family: var(--font-stack-section-header);font-weight: var(--font-weight-section-header);font-style: var(--font-style-section-header);}p{color: var(--font-color-paragraph);font-family: var(--font-stack-paragraph);}</style>
     <style>
       {{ header_font | font_face: font_display: 'swap' }}
@@ -62,7 +62,7 @@
     </script>
     {{ content_for_header }}
     <!-- JS -->
-    {%- include 'header-js' -%}
+    {%- render 'header-js' -%}
   </head>
   <body class="template-giftcard">
     {% include 'slow-window' %}
