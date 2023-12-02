@@ -43,17 +43,8 @@
           "settings": {
             "ser_url": "",
             "service_icon": "feather-battery-charging",
-            "service_title": "How to use battery",
-            "service_desc": "Lorem Ipsum is simply dummy text of the printing typesetting industry lorem Ipsum."
-          }
-        },
-        "1ed917c6-5e5d-4655-a544-6b4ecc37ba6f": {
-          "type": "our_services",
-          "settings": {
-            "ser_url": "",
-            "service_icon": "feather-play-circle",
-            "service_title": "How to use battery",
-            "service_desc": "Lorem Ipsum is simply dummy text of the printing typesetting industry lorem Ipsum."
+            "service_title": "No app needed",
+            "service_desc": "Our platform works on the browser, for all iOS or Android devices"
           }
         },
         "8e11241f-cd97-4cc2-932f-71d876a8686e": {
@@ -61,15 +52,24 @@
           "settings": {
             "ser_url": "",
             "service_icon": "feather-settings",
-            "service_title": "How to use battery",
-            "service_desc": "Lorem Ipsum is simply dummy text of the printing typesetting industry lorem Ipsum."
+            "service_title": "no more paper cards",
+            "service_desc": "You can share your profile with a simple tap. No more need for outdated paper cards."
+          }
+        },
+        "1ed917c6-5e5d-4655-a544-6b4ecc37ba6f": {
+          "type": "our_services",
+          "settings": {
+            "ser_url": "",
+            "service_icon": "feather-play-circle",
+            "service_title": "The first impression matters",
+            "service_desc": "Personalize your profile and get that 'WOW' out of your connections"
           }
         }
       },
       "block_order": [
         "1a7d4c95-6709-48ce-8e55-f109869fe74b",
-        "1ed917c6-5e5d-4655-a544-6b4ecc37ba6f",
-        "8e11241f-cd97-4cc2-932f-71d876a8686e"
+        "8e11241f-cd97-4cc2-932f-71d876a8686e",
+        "1ed917c6-5e5d-4655-a544-6b4ecc37ba6f"
       ],
       "settings": {
         "our_ser_padding_top": 100,
@@ -81,7 +81,7 @@
         "section_bg_image_enable": false,
         "section_bg_color_enable": true,
         "section_bg_color": "#f6f6f6",
-        "section_subtitle": "Controller",
+        "section_subtitle": "Smart business card",
         "section_title": "How it works"
       }
     },
