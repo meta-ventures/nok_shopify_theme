@@ -6,7 +6,7 @@
     },
     "404": {
       "title": "404 Página não encontrada",
-      "subtext_html": "A página que você solicitou não existe. Clique <a href=\"/collections/all\">aqui</a> para voltar às compras."
+      "subtext_html": "A página que você solicitou não existe. Clique <a href=\"\/collections\/all\">aqui<\/a> para voltar às compras."
     },
     "breadcrumbs": {
       "home": "Início",
@@ -97,7 +97,7 @@
       "update": "Atualizar Carrinho",
       "checkout": "Fechar pedido",
       "empty": "Seu carrinho está vazio no momento.",
-      "continue_browsing_html": "Continue navegando <a href=\"/collections/all\">aqui</a>.",
+      "continue_browsing_html": "Continue navegando <a href=\"\/collections\/all\">aqui<\/a>.",
       "close_cart": "Fechar carrinho",
       "savings_html": "Você está economizando {{ price }}",
       "reduce_quantity": "Reduzir quantidade em uma unidade",
@@ -262,10 +262,10 @@
     },
     "onboarding": {
       "modal_title": "Quase lá...",
-      "no_products_html": "Não há produtos na sua coleção \"Primeira Página\". Este espaço reservado aparecerá até que você <a href=\"/admin/collections?tutorial=Frontpage\">adicione um produto a esta coleção</a>.",
+      "no_products_html": "Não há produtos na sua coleção \"Primeira Página\". Este espaço reservado aparecerá até que você <a href=\"\/admin\/collections?tutorial=Frontpage\">adicione um produto a esta coleção<\/a>.",
       "add_product": "Adicionar um produto",
       "product_title": "Exemplo de título de produto",
-      "no_collections_html": "Você não tem coleções para exibir aqui. <a href=\"/admin/custom_collections\">Adicione algumas coleções</a> para acompanhar a \"Primeira Página\" padrão.",
+      "no_collections_html": "Você não tem coleções para exibir aqui. <a href=\"\/admin\/custom_collections\">Adicione algumas coleções<\/a> para acompanhar a \"Primeira Página\" padrão.",
       "add_collection": "Adicionar uma coleção",
       "collection_title": "Exemplo de título de coleção"
     }
@@ -315,7 +315,7 @@
       "sold_out": "Esgotado",
       "on_sale": "Em promoção",
       "new": "primeiro",
-      "on_sale_from_html": "<strong>Em promoção</strong>, a partir de {{ price }}",
+      "on_sale_from_html": "<strong>Em promoção<\/strong>, a partir de {{ price }}",
       "unavailable": "Indisponível",
       "compare_at": "",
       "quantity": "Quantidade",
@@ -357,10 +357,10 @@
       "out_of_stock": "Fora de estoque",
       "many_in_stock": "Muitos em estoque",
       "view_full_info": "Ver informação completa",
-      "add_to_cart_html": "<span class=\"icon icon-shopping_basket\"></span> Adicionar ao cartão",
-      "added_html": "<span class=\"icon icon-shopping_basket\"></span> Adicionado",
-      "error_html": "<span class=\"icon icon-shopping_basket\"></span> Limitar produtos",
-      "wait_html": "<span class=\"icon icon-shopping_basket\"></span> Esperar"
+      "add_to_cart_html": "<span class=\"icon icon-shopping_basket\"><\/span> Adicionar ao cartão",
+      "added_html": "<span class=\"icon icon-shopping_basket\"><\/span> Adicionado",
+      "error_html": "<span class=\"icon icon-shopping_basket\"><\/span> Limitar produtos",
+      "wait_html": "<span class=\"icon icon-shopping_basket\"><\/span> Esperar"
     }
   },
   "sections": {
