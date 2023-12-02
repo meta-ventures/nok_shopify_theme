@@ -9,7 +9,7 @@
 
     <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
     <link rel="preconnect" href="https://fonts.shopify.com" crossorigin>
-    <link rel="preconnect" href="https://monorail-edge.shopifysvc.com">  
+    <link rel="preconnect" href="https://monorail-edge.shopifysvc.com">
 
     {% unless settings.body_custom_font_handle_enable %}
     {%- assign body_font = settings.body_font_handle -%}
@@ -114,7 +114,7 @@
     {% include 'newsletter-popup' %}
     {%- endif -%}
     {% section 'top-nocification-bar' %}
-    
+
     {%- if settings.header_style == "Style-1" -%}
     {% section 'header-1' %}
     {%- elsif settings.header_style == "Style-2" -%}
