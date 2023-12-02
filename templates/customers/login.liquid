@@ -67,7 +67,7 @@
             <div class="acc-page">
               {% form 'recover_customer_password' %}
               {% if form.posted_successfully? %}
-              {% assign resetPassword = true %}
+              
               {% endif %}
               <div class="login-form-container">
                 {{ form.errors | default_errors }}

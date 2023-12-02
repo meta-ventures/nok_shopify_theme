@@ -1,9 +1,9 @@
 {% capture media_class %}product-featured-media{% endcapture %}
 {% case media.media_type %}
 {% when 'image' %}
-<a href="{{ media.src | img_url: 'master' }}" class="product-single__thumbnail" data-image-id="{{ media.id }}">
+<a href="{{ media.src | image_url }}" class="product-single__thumbnail" data-image-id="{{ media.id }}">
   {% capture zoom_media_id %}ImageZoom-{{ section.id }}-{{ media.id }}{% endcapture %}
-  {%- assign img_url = media | img_url: 'master' -%}
+  {%- assign img_url = media | image_url -%}
   {% if section.settings.zoom_enable %}
   <figure class="zoom" onmousemove="zoom(event)" style="background-image: url({{ img_url }})">
     <img width="" height="" src="{{ img_url }}" class="img-fluid {{ media_class }}" id="{{ media_id }}" alt="{{ media.alt | escape }}">

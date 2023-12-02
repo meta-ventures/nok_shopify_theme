@@ -2,7 +2,7 @@
   {% if addin.image %}
   <div class="blog-main-img">
     <a href="{{ addin.url }}" class="blog-img banner-img">
-      <img width="{{ addin.image.width }}" height="{{ addin.image.height }}" class="img-fluid" src="{{ addin.image | img_url: '500x500' }}" alt="{{ addin.title | escape }}" />
+      <img width="{{ addin.image.width }}" height="{{ addin.image.height }}" class="img-fluid" src="{{ addin.image | image_url: width: 500, height: 500 }}" alt="{{ addin.title | escape }}" />
     </a>
   </div>
   <div class="blog-post-content">

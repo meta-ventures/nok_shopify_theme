@@ -169,7 +169,7 @@
                   {% if line_item.fulfillment.tracking_number %}
                   <a href="{{ line_item.fulfillment.tracking_url }}" class="order-company-track">
                     <span class="track-company">{{ line_item.fulfillment.tracking_company }}</span>
-                    <span class="track-num">{{ line_item.fulfillment.tracking_number}}</span>
+                    <span class="track-num">{{ line_item.fulfillment.tracking_number }}</span>
                   </a>
                   {% endif %}
                   <span class="order-fulfill-date">{{ 'customer.order.fulfilled_at' | t: date: created_at }}</span>

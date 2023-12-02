@@ -1,7 +1,7 @@
 <!-- breadcrumb-area start -->
 {% if settings.breadcrumb_banner_enable %}
 {% unless template == 'index' or template == 'product' or template == 'product.template2' or template == 'product.template3' or template == 'product.template4' or template == 'product.template5' or template == 'product.template6' or template == 'product.template7' or template == 'product.template8' or template == 'search' %}
-<section class="breadcrumb-area"{% if settings.breadcrumb_bgimg_enable %} style="background-image: url('{% if settings.breadcrumb_bgimg %}{{ settings.breadcrumb_bgimg | img_url: 'master' }}{% else %}https://dummyimage.com/1920x300{% endif %}');"{% endif %}>
+<section class="breadcrumb-area"{% if settings.breadcrumb_bgimg_enable %} style="background-image: url('{% if settings.breadcrumb_bgimg %}{{ settings.breadcrumb_bgimg | image_url }}{% else %}https://dummyimage.com/1920x300{% endif %}');"{% endif %}>
     <div class="container">
         <div class="row">
             <div class="col">

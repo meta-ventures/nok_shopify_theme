@@ -15,18 +15,18 @@
 {% else %}
 {% assign next = forloop.index %}
 {% endif %}
-{% assign prev = forloop.index | minus:2 %}
+{% assign prev = forloop.index | minus: 2 %}
 {% endif %}
 {% endfor %}
 
 {% if section.settings.next_prev_handle == "image" %}
 <!-- product_Prev_images start -->
 <a class="next-prev-product prev" href="{{ collection.products[prev].url }}" title="{{ collection.products[prev].title }}">
-  <img width="{{ collection.products[prev].featured_image.width }}" height="{{ collection.products[prev].featured_image.height }}" class="img-fluid" src="{{ collection.products[prev].featured_image | img_url: '45x60', crop: 'center' }}" alt="{{ collection.products[prev].featured_image.alt }}"/>
+  <img width="{{ collection.products[prev].featured_image.width }}" height="{{ collection.products[prev].featured_image.height }}" class="img-fluid" src="{{ collection.products[prev].featured_image | image_url: width: 45, height: 60, crop: 'center' }}" alt="{{ collection.products[prev].featured_image.alt }}"/>
 </a>
 <!-- product_Next_images end -->
 <a class="next-prev-product next" href="{{ collection.products[next].url }}" title="{{ collection.products[next].title }}">
-  <img width="{{ collection.products[next].featured_image.width }}" height="{{ collection.products[next].featured_image.height }}" class="img-fluid" src="{{ collection.products[next].featured_image | img_url: '45x60', crop: 'center' }}" alt="{{ collection.products[next].featured_image.alt }}" />
+  <img width="{{ collection.products[next].featured_image.width }}" height="{{ collection.products[next].featured_image.height }}" class="img-fluid" src="{{ collection.products[next].featured_image | image_url: width: 45, height: 60, crop: 'center' }}" alt="{{ collection.products[next].featured_image.alt }}" />
 </a>
 
 {% else %}

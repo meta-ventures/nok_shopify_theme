@@ -38,17 +38,17 @@
       {% else %}
 
       {% if childlink.type == "collection_link" and childlink.object.image %}
-      {% if childlink.title == "bottom"  %}
+      {% if childlink.title == "bottom" %}
       <div class="banner-wrap {{ childlink.title | downcase }} banner-hover">
         <a href="{{ childlink.url }}" class="banner-img">
-          <img width="{{ childlink.object.image.width }}" height="{{ childlink.object.image.height }}" src="{{ childlink.object.image | img_url: 'master' }}" class="img-fluid" alt="{{ childlink.object.image.alt }}">
+          <img width="{{ childlink.object.image.width }}" height="{{ childlink.object.image.height }}" src="{{ childlink.object.image | image_url }}" class="img-fluid" alt="{{ childlink.object.image.alt }}">
         </a>
       </div>
 
       {% elsif childlink.title == "bottom2"  %}
       <div class="banner-wrap {{ childlink.title | downcase }} banner-hover">
         <a href="{{ childlink.url }}" class="banner-img">
-          <img width="{{ childlink.object.image.width }}" height="{{ childlink.object.image.height }}" src="{{ childlink.object.image | img_url: 'master' }}" class="img-fluid" alt="{{ childlink.object.image.alt }}">
+          <img width="{{ childlink.object.image.width }}" height="{{ childlink.object.image.height }}" src="{{ childlink.object.image | image_url }}" class="img-fluid" alt="{{ childlink.object.image.alt }}">
         </a>
       </div>
 
@@ -56,7 +56,7 @@
 
       <li class="menu-banner banner-hover">
         <a href="{{ childlink.url }}" class="banner-img">
-          <img width="{{ childlink.object.image.width }}" height="{{ childlink.object.image.height }}" src="{{ childlink.object.image | img_url: 'master' }}" class="img-fluid" alt="{{ childlink.object.image.alt }}">
+          <img width="{{ childlink.object.image.width }}" height="{{ childlink.object.image.height }}" src="{{ childlink.object.image | image_url }}" class="img-fluid" alt="{{ childlink.object.image.alt }}">
         </a>
         <a href="{{ childlink.url }}" class="menu-banner-title">
           <span>{{ childlink.title }}</span>

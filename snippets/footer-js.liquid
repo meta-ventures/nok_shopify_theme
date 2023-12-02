@@ -36,7 +36,7 @@ setTimeout(function () {
           }
         }
         $button.parent().find("input").val(newVal);
-        var formatMoney = "<span class='money'>{{amount}}</span>";
+        var formatMoney = "<span class='money'>{{ amount }}</span>";
         if($('.cart-item-wrap').length >= 1){
           var vId = $(this).parent().closest('.product-quantity').attr('data-variant');
           console.log(vId);

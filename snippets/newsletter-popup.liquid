@@ -5,7 +5,7 @@
       <div class="modal-content">
         <div class="modal-body">
           <button type="button" class="close" data-bs-dismiss="modal"><i class="ri-close-line"></i></button>
-          <div class="newsletter-info" {% if settings.newsletter_bgimg_enable %}style="background-image: url('{% if settings.newsletter_bgimg %}{{ settings.newsletter_bgimg | img_url: 'master' }}{% else %}https://dummyimage.com/680x450{% endif %}');"{% endif %}>
+          <div class="newsletter-info" {% if settings.newsletter_bgimg_enable %}style="background-image: url('{% if settings.newsletter_bgimg %}{{ settings.newsletter_bgimg | image_url }}{% else %}https://dummyimage.com/680x450{% endif %}');"{% endif %}>
             <div class="subscribe_area">
               <div class="news-title">
                 <div class="title">
