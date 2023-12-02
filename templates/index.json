@@ -160,12 +160,12 @@
           "type": "service_item",
           "settings": {
             "service_column_reverse": true,
-            "service_1_title": "Mobile holder",
-            "service_1_desc": "Best part about drone aerial photography perspective!",
-            "service_2_title": "Long battery",
-            "service_2_desc": "Best part about drone aerial photography perspective!",
-            "service_3_title": "4K camera",
-            "service_3_desc": "Best part about drone aerial photography perspective!"
+            "service_1_title": "Lightining fast nfc",
+            "service_1_desc": "Enhanced NFC chips for the best readability and durability",
+            "service_2_title": "Premium Material",
+            "service_2_desc": "We carefully select our card materials to ensure the highest quality",
+            "service_3_title": "masterfully crafted",
+            "service_3_desc": "From the polished surface and smooth edges, to the outstanding engraving"
           }
         },
         "df5650a4-0e2f-47e0-bb16-b93cf46ccf10": {
@@ -201,8 +201,8 @@
         "section_bg_image_enable": false,
         "section_bg_color_enable": false,
         "section_bg_color": "#f8f8f8",
-        "section_subtitle": "Unique features",
-        "section_title": "why for spacial"
+        "section_subtitle": "Features",
+        "section_title": "#1 Smart Business Card"
       }
     },
     "165218770966e89aa3": {
