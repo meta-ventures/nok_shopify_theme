@@ -1,10 +1,10 @@
-<section class="testimonial-area" {% if section.settings.testi_bgimg_check %} style="background-image: url('{% if section.settings.testi_bgimg %}{{ section.settings.testi_bgimg | img_url: 'master' }}{% else %}https://via.placeholder.com/1920x610{% endif %}');"{% endif %}>
+<section class="testimonial-area" {% if section.settings.testi_bgimg_check %} style="background-image: url('{% if section.settings.testi_bgimg %}{{ section.settings.testi_bgimg | image_url }}{% else %}https://via.placeholder.com/1920x610{% endif %}');"{% endif %}>
   <div class="container">
     <div class="row">
       <div class="col">
           <div class="section-capture">
             <div class="section-title">
-              {% if section.settings.testi_title !='' %}
+              {% if section.settings.testi_title != '' %}
               <h2>
                 {{ section.settings.testi_title }}
               </h2>
@@ -91,174 +91,174 @@ addEventListener('DOMContentLoaded', (event) => {
 {
   "name": "Testimonial",
   "settings": [
-  {
-    "type": "header",
-    "content": "Section Padding"
-  },
-  {
-    "type" : "paragraph",
-    "content" : "Desktop / Laptop"
-  },
-  {
-    "type": "range",
-    "id": "testi_padding_top",
-    "label": "Section Padding Top",
-    "min": 0,
-    "max": 100,
-    "step": 1,
-    "unit": "px",
-    "default": 100
-  },
-  {
-    "type": "range",
-    "id": "testi_padding_bottom",
-    "label": "Section Padding Bottom",
-    "min": 0,
-    "max": 100,
-    "step": 1,
-    "unit": "px",
-    "default": 100
-  },
-  {
-    "type" : "paragraph",
-    "content" : "Ipad pro / Ipad"
-  },
-  {
-    "type": "range",
-    "id": "testi_padding_top_ip",
-    "label": "Section Padding Top",
-    "min": 0,
-    "max": 100,
-    "step": 1,
-    "unit": "px",
-    "default": 70
-  },
-  {
-    "type": "range",
-    "id": "testi_padding_bottom_ip",
-    "label": "Section Padding Bottom",
-    "min": 0,
-    "max": 100,
-    "step": 1,
-    "unit": "px",
-    "default": 70
-  },
-  {
-    "type" : "paragraph",
-    "content" : "Mobile"
-  },
-  {
-    "type": "range",
-    "id": "testi_padding_top_xs",
-    "label": "Section Padding Top",
-    "min": 0,
-    "max": 100,
-    "step": 1,
-    "unit": "px",
-    "default": 50
-  },
-  {
-    "type": "range",
-    "id": "testi_padding_bottom_xs",
-    "label": "Section Padding Bottom",
-    "min": 0,
-    "max": 100,
-    "step": 1,
-    "unit": "px",
-    "default": 50
-  },
-  {
-    "type" : "header",
-    "content" : "Section Background Image"
-  },
-  {
-    "type": "image_picker",
-    "id": "testi_bgimg",
-    "label": "Background Image",
-    "info": "Recommended Size: 1920px x 610px"
-  },
-  {
-    "type" : "checkbox",
-    "id" : "testi_bgimg_check",
-    "label" : "Show Background Images",
-    "default" : true
-  },
-  {
-    "type" : "header",
-    "content" : "Section Background Color"
-  },
-  {
-    "type": "color",
-    "id": "testi_bgcolor",
-    "label": "Background Color",
-    "default": "#ffffff"
-  },
-  {
-    "type" : "header",
-    "content" : "Section Content"
-  },
-  {
-    "type": "text",
-    "id": "testi_title",
-    "label": "Title",
-    "default": "100% satisfaction ratio"
-  }
-  ],
-  "blocks":[
-  {
-    "type": "single_slide",
-    "name": "Testimonial Items",
-    "settings": [
     {
-      "type" : "header",
-      "content" : "Testimonial Description"
+      "type": "header",
+      "content": "Section Padding"
     },
     {
-      "type": "textarea",
-      "id": "testi_desc_review",
-      "label": "Review Content",
-      "default": "I am free to learn at my own pace, follow my own schedule and choose the subject I want to learn from the more syllabus."
+      "type": "paragraph",
+      "content": "Desktop / Laptop"
     },
     {
-      "type" : "header",
-      "content" : "Testimonial Rating"
+      "type": "range",
+      "id": "testi_padding_top",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 100
     },
     {
-      "type": "text",
-      "id": "testi_review_icon",
-      "label": "Rating Class",
-      "default": "fa fa-star"
+      "type": "range",
+      "id": "testi_padding_bottom",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 100
+    },
+    {
+      "type": "paragraph",
+      "content": "Ipad pro / Ipad"
+    },
+    {
+      "type": "range",
+      "id": "testi_padding_top_ip",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 70
+    },
+    {
+      "type": "range",
+      "id": "testi_padding_bottom_ip",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 70
+    },
+    {
+      "type": "paragraph",
+      "content": "Mobile"
+    },
+    {
+      "type": "range",
+      "id": "testi_padding_top_xs",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "testi_padding_bottom_xs",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 50
+    },
+    {
+      "type": "header",
+      "content": "Section Background Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "testi_bgimg",
+      "label": "Background Image",
+      "info": "Recommended Size: 1920px x 610px"
+    },
+    {
+      "type": "checkbox",
+      "id": "testi_bgimg_check",
+      "label": "Show Background Images",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Section Background Color"
     },
     {
       "type": "color",
-      "id": "testi_review_icon_color",
-      "label": "Rating Color",
-      "default": "#f86169"
+      "id": "testi_bgcolor",
+      "label": "Background Color",
+      "default": "#ffffff"
     },
     {
-      "type" : "header",
-      "content" : "Testimonial Author"
+      "type": "header",
+      "content": "Section Content"
     },
     {
-      "type": "textarea",
-      "id": "testi_authr_name",
-      "label": "Reviewer Name",
-      "default": "Mina hollace"
-    },
-    {
-      "type": "textarea",
-      "id": "testi_authr_bio",
-      "label": "Reviewer Bio",
-      "default": "Mina hollace"
+      "type": "text",
+      "id": "testi_title",
+      "label": "Title",
+      "default": "100% satisfaction ratio"
     }
-    ]
-  }
   ],
-  "presets":[
-  {
-    "name": "Testimonial",
-    "category": "7. Testimonial"
-  }
+  "blocks": [
+    {
+      "type": "single_slide",
+      "name": "Testimonial Items",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Testimonial Description"
+        },
+        {
+          "type": "textarea",
+          "id": "testi_desc_review",
+          "label": "Review Content",
+          "default": "I am free to learn at my own pace, follow my own schedule and choose the subject I want to learn from the more syllabus."
+        },
+        {
+          "type": "header",
+          "content": "Testimonial Rating"
+        },
+        {
+          "type": "text",
+          "id": "testi_review_icon",
+          "label": "Rating Class",
+          "default": "fa fa-star"
+        },
+        {
+          "type": "color",
+          "id": "testi_review_icon_color",
+          "label": "Rating Color",
+          "default": "#f86169"
+        },
+        {
+          "type": "header",
+          "content": "Testimonial Author"
+        },
+        {
+          "type": "textarea",
+          "id": "testi_authr_name",
+          "label": "Reviewer Name",
+          "default": "Mina hollace"
+        },
+        {
+          "type": "textarea",
+          "id": "testi_authr_bio",
+          "label": "Reviewer Bio",
+          "default": "Mina hollace"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Testimonial",
+      "category": "7. Testimonial"
+    }
   ]
 }
 {% endschema %}

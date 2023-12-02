@@ -13,7 +13,10 @@
       "unit_price_separator": "per",
       "error": "Error"
     },
-    "meta": { "tags": "Tagged \"{{ tags }}\"", "page": "Page {{ page }}" },
+    "meta": {
+      "tags": "Tagged \"{{ tags }}\"",
+      "page": "Page {{ page }}"
+    },
     "404": {
       "title": "404 Page Not Found",
       "subtext_html": "The page you requested does not exist. Click <a href=\"/collections/all\">here</a> to continue shopping."
@@ -57,7 +60,9 @@
     }
   },
   "sections": {
-    "header": { "announcement_bar_label": "Announcement" },
+    "header": {
+      "announcement_bar_label": "Announcement"
+    },
     "map": {
       "address_error": "Error looking up that address",
       "address_no_results": "No results for that address",
@@ -290,11 +295,19 @@
     }
   },
   "layout": {
-    "navigation": { "menu": "Menu" },
-    "drawers": { "browse": "Browse", "close_menu": "Close menu" },
+    "navigation": {
+      "menu": "Menu"
+    },
+    "drawers": {
+      "browse": "Browse",
+      "close_menu": "Close menu"
+    },
     "cart": {
       "title": "Cart",
-      "items_count": { "one": "item", "other": "items" }
+      "items_count": {
+        "one": "item",
+        "other": "items"
+      }
     },
     "customer": {
       "account": "Account",
@@ -349,7 +362,9 @@
       "qr_image_alt": "QR code — scan to redeem gift card"
     }
   },
-  "date_formats": { "month_day_year": "%B %d, %Y" },
+  "date_formats": {
+    "month_day_year": "%B %d, %Y"
+  },
   "default_lan": {
     "popup_product": {
       "added": "Added to cart successfully!",

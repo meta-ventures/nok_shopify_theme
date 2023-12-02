@@ -1,17 +1,17 @@
-{%- assign on_sale = false -%}
+
 {%- if product.compare_at_price > product.price -%}
-{%- assign on_sale = true -%}
+
 {%- endif -%}
 
-{%- assign sold_out = true -%}
+
 {%- if product.available -%}
-{%- assign sold_out = false -%}
+
 {%- endif -%}
 
-{%- assign variant = product.selected_or_first_available_variant -%}
+
 
 {%- if product.available -%}
-{%- assign func = "Shopify.addItem(" | append: variant.id | append: ", 1)" -%}
+
 {%- endif -%}  
 
 {% if item.featured_image %}
@@ -19,7 +19,7 @@
   <div class="single-product-wrap{% unless item.available %} stock-out{% endunless %}">
     <div class="product-image{% unless item.available %} stock-out{% endunless %}">
       <a class="pro-img" href="{{ item.url | within: collection }}">
-        <img width="{{ item.featured_image.width }}" height="{{ item.featured_image.height }}" class="img-fluid{% if settings.pro_hvr_enable %} img1{% endif %}" src="{{ item.featured_image.src | img_url : '600X685', crop: 'center' }}" alt="{{ item.featured_image.src.alt | escape  }}">
+        <img width="{{ item.featured_image.width }}" height="{{ item.featured_image.height }}" class="img-fluid{% if settings.pro_hvr_enable %} img1{% endif %}" src="{{ item.featured_image.src | img_url : '600X685', crop: 'center' }}" alt="{{ item.featured_image.src.alt | escape }}">
         {% if settings.pro_hvr_enable %}
         <img width="{{ item.images[1].width }}" height="{{ item.images[1].height }}" class="img-fluid{% if settings.pro_hvr_enable %} img2{% endif %}" src="{{ item.images[1] | img_url: '600X685', crop: 'center' }}" alt="{{ item.images.last.alt | escape }}">
         {% endif %}
@@ -61,7 +61,7 @@
 <div class="search-blog-item">
   <div class="search-blog-img">
     <a href="{{ item.url }}" class="banner-hover">
-      <img width="{{ item.image.width }}" height="{{ item.image.height }}" class="img-fluid" src="{{ item.image | img_url: 'master' }}" alt="{{ item.title | escape }}" />
+      <img width="{{ item.image.width }}" height="{{ item.image.height }}" class="img-fluid" src="{{ item.image | image_url }}" alt="{{ item.title | escape }}" />
     </a>
   </div>
   <div class="search-blog-content">

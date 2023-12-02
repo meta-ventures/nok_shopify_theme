@@ -11,7 +11,7 @@
                         <div class="blog-post-opt">
                             <div class="blog-image banner-hover">
                                 <a href="{{ article.url }}" class="banner-img">
-                                    <img width="{{ article.image.width }}" height="{{ article.image.height }}" class="img-fluid" src="{{ article.image | img_url: 'master' }}" alt="{{ article.title | escape }}" />
+                                    <img width="{{ article.image.width }}" height="{{ article.image.height }}" class="img-fluid" src="{{ article.image | image_url }}" alt="{{ article.title | escape }}" />
                                 </a>
                             </div>
                         </div>
@@ -125,17 +125,17 @@
 </section>
 {% schema %}
 {
-    "name": "Article Page",
-    "settings": [
+  "name": "Article Page",
+  "settings": [
     {
-        "type": "header",
-        "content": "Article Sidebar"
+      "type": "header",
+      "content": "Article Sidebar"
     },
     {
-        "type": "radio",
-        "id": "blog_sidebar_position_handle",
-        "label": "Sidebar Position",
-        "options": [
+      "type": "radio",
+      "id": "blog_sidebar_position_handle",
+      "label": "Sidebar Position",
+      "options": [
         {
           "label": "Sticky",
           "value": "sticky_sidebar"
@@ -144,155 +144,155 @@
           "label": "Simple",
           "value": "simple_sidebar"
         }
-        ],
-        "default": "sticky_sidebar"
+      ],
+      "default": "sticky_sidebar"
     },
     {
-        "type": "header",
-        "content": "Article Sidebar Option"
+      "type": "header",
+      "content": "Article Sidebar Option"
     },
     {
-        "type": "radio",
-        "id": "sidebar_handle",
-        "label": "Sidebar Option",
-        "options": [
+      "type": "radio",
+      "id": "sidebar_handle",
+      "label": "Sidebar Option",
+      "options": [
         {
-            "label": "Left Sidebar",
-            "value": "left_sidebar_handle"
+          "label": "Left Sidebar",
+          "value": "left_sidebar_handle"
         },
         {
-            "label": "Right Sidebar",
-            "value": "right_sidebar_handle"
+          "label": "Right Sidebar",
+          "value": "right_sidebar_handle"
         },
         {
-            "label": "Without Sidebar",
-            "value": "without_sidebar"
+          "label": "Without Sidebar",
+          "value": "without_sidebar"
         }
-        ],
-        "default": "left_sidebar_handle"
+      ],
+      "default": "left_sidebar_handle"
     },
     {
-        "type": "paragraph",
-        "content": "Sidebar List"
+      "type": "paragraph",
+      "content": "Sidebar List"
     },
     {
-        "type": "checkbox",
-        "id": "blog_search_bar_enable",
-        "label": "Show Searchbar",
-        "default": true
+      "type": "checkbox",
+      "id": "blog_search_bar_enable",
+      "label": "Show Searchbar",
+      "default": true
     },
     {
-        "type": "checkbox",
-        "id": "archive_enable",
-        "label": "Show Archive",
-        "default": true
+      "type": "checkbox",
+      "id": "archive_enable",
+      "label": "Show Archive",
+      "default": true
     },
     {
-        "type": "checkbox",
-        "id": "recent_post_enable",
-        "label": "Show Recent Posts",
-        "default": true
+      "type": "checkbox",
+      "id": "recent_post_enable",
+      "label": "Show Recent Posts",
+      "default": true
     },
     {
-        "type": "checkbox",
-        "id": "tags_enable",
-        "label": "Show Tags",
-        "default": true
+      "type": "checkbox",
+      "id": "tags_enable",
+      "label": "Show Tags",
+      "default": true
     },
     {
-        "type" : "header",
-        "content" : "Blog Comment Title"
+      "type": "header",
+      "content": "Blog Comment Title"
     },
     {
-        "type": "text",
-        "id": "article_cmt",
-        "label": "Comment Title",
-        "default": "Comment"
+      "type": "text",
+      "id": "article_cmt",
+      "label": "Comment Title",
+      "default": "Comment"
     },
     {
-        "type": "text",
-        "id": "comment_post_limit_handle",
-        "label": "How Many Comment Post Show",
-        "default": "5"
+      "type": "text",
+      "id": "comment_post_limit_handle",
+      "label": "How Many Comment Post Show",
+      "default": "5"
     },
     {
-        "type" : "paragraph",
-        "content" : "Avtar option In place of comment author first two character name"
+      "type": "paragraph",
+      "content": "Avtar option In place of comment author first two character name"
     },
     {
-        "type": "checkbox",
-        "id": "article_avtar_enable",
-        "label": "Show Avtar",
-        "default": false
+      "type": "checkbox",
+      "id": "article_avtar_enable",
+      "label": "Show Avtar",
+      "default": false
     }
-    ],
-    "blocks": [
+  ],
+  "blocks": [
     {
-        "type": "article_image",
-        "name": "Article Image",
-        "limit": 1
+      "type": "article_image",
+      "name": "Article Image",
+      "limit": 1
     },
     {
-        "type": "article_title",
-        "name": "Article Title",
-        "limit": 1
+      "type": "article_title",
+      "name": "Article Title",
+      "limit": 1
     },
     {
-        "type": "article_content",
-        "name": "Article Content",
-        "limit": 1
+      "type": "article_content",
+      "name": "Article Content",
+      "limit": 1
     },
     {
-        "type": "article_author",
-        "name": "Article Author",
-        "limit": 1,
-        "settings": [
+      "type": "article_author",
+      "name": "Article Author",
+      "limit": 1,
+      "settings": [
         {
-            "type" : "header",
-            "content" : "Blog Post By"
+          "type": "header",
+          "content": "Blog Post By"
         },
         {
-            "type": "text",
-            "id": "article_through",
-            "label": "Blog Post Through Text",
-            "default": "By"
+          "type": "text",
+          "id": "article_through",
+          "label": "Blog Post Through Text",
+          "default": "By"
         }
-        ]
+      ]
     },
     {
-        "type": "article_tag",
-        "name": "Article Tag",
-        "limit": 1
+      "type": "article_tag",
+      "name": "Article Tag",
+      "limit": 1
     },
     {
-        "type": "article_social",
-        "name": "Article Social",
-        "limit": 1
+      "type": "article_social",
+      "name": "Article Social",
+      "limit": 1
     },
     {
-        "type": "article_next_prev",
-        "name": "Article Next/Prev",
-        "limit": 1,
-        "settings": [
+      "type": "article_next_prev",
+      "name": "Article Next/Prev",
+      "limit": 1,
+      "settings": [
         {
-            "type": "header",
-            "content": "Blog Previous Next Post"
+          "type": "header",
+          "content": "Blog Previous Next Post"
         },
         {
-            "type": "text",
-            "id": "blog_prev_button_title",
-            "label": "Previous Button Title",
-            "default": "Prev post"
+          "type": "text",
+          "id": "blog_prev_button_title",
+          "label": "Previous Button Title",
+          "default": "Prev post"
         },
         {
-            "type": "text",
-            "id": "blog_next_button_title",
-            "label": "Next Button Title",
-            "default": "Next post"
+          "type": "text",
+          "id": "blog_next_button_title",
+          "label": "Next Button Title",
+          "default": "Next post"
         }
-        ]
+      ]
     }
-    ]
+  ]
 }
 {% endschema %}
 <style>

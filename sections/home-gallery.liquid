@@ -29,130 +29,130 @@
 </section>
 {% schema %}
 {
-    "name": "Gallery Home",
-    "settings": [
+  "name": "Gallery Home",
+  "settings": [
     {
-        "type": "header",
-        "content": "Section Padding"
+      "type": "header",
+      "content": "Section Padding"
     },
     {
-        "type" : "paragraph",
-        "content" : "Desktop / Laptop / tablet"
+      "type": "paragraph",
+      "content": "Desktop / Laptop / tablet"
     },
     {
-        "type": "range",
-        "id": "section_padding_top",
-        "label": "Section Padding Top",
-        "min": 0,
-        "max": 100,
-        "step": 5,
-        "unit": "px",
-        "default": 0
+      "type": "range",
+      "id": "section_padding_top",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 0
     },
     {
-        "type": "range",
-        "id": "section_padding_bottom",
-        "label": "Section Padding Bottom",
-        "min": 0,
-        "max": 100,
-        "step": 5,
-        "unit": "px",
-        "default": 60
+      "type": "range",
+      "id": "section_padding_bottom",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 60
     },
     {
-        "type" : "paragraph",
-        "content" : "Ipad pro / Ipad"
+      "type": "paragraph",
+      "content": "Ipad pro / Ipad"
     },
     {
-        "type": "range",
-        "id": "section_padding_top_ipad",
-        "label": "Section Padding Top",
-        "min": 0,
-        "max": 100,
-        "step": 5,
-        "unit": "px",
-        "default": 0
+      "type": "range",
+      "id": "section_padding_top_ipad",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 0
     },
     {
-        "type": "range",
-        "id": "section_padding_bottom_ipad",
-        "label": "Section Padding Bottom",
-        "min": 0,
-        "max": 100,
-        "step": 5,
-        "unit": "px",
-        "default": 30
+      "type": "range",
+      "id": "section_padding_bottom_ipad",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 30
     },
     {
-        "type" : "paragraph",
-        "content" : "Mobile"
+      "type": "paragraph",
+      "content": "Mobile"
     },
     {
-        "type": "range",
-        "id": "section_padding_top_xs",
-        "label": "Section Padding Top",
-        "min": 0,
-        "max": 100,
-        "step": 5,
-        "unit": "px",
-        "default": 0
+      "type": "range",
+      "id": "section_padding_top_xs",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 0
     },
     {
-        "type": "range",
-        "id": "section_padding_bottom_xs",
-        "label": "Section Padding Bottom",
-        "min": 0,
-        "max": 100,
-        "step": 5,
-        "unit": "px",
-        "default": 20
+      "type": "range",
+      "id": "section_padding_bottom_xs",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 20
     }
-    ],
-    "blocks":[
+  ],
+  "blocks": [
     {
-        "type": "gallery_home",
-        "name": "Gallery Home",
-        "settings": [
-        	{
-		        "type" : "header",
-		        "content" : "Gallery Image"
-		    },
-		    {
-		        "type": "image_picker",
-		        "id": "gallery_image",
-		        "label": "Image",
-		        "info": "Recommended Size: 310x310px"
-		    },
-		    {
-		      "type": "header",
-		      "content": "Gallery Btn"
-		    },
-		    {
-		      "type" : "text",
-		      "id" : "video_button_title",
-		      "label" : "Button Text",
-		      "default" : "Video"
-		    },
-		    {
-		      "type" : "textarea",
-		      "id" : "video_button_icon",
-		      "label" : "Icon",
-		      "default" : "feather-video"
-		    },
-		    {
-		      "type" : "url",
-		      "id" : "video_image_url",
-		      "label" : "url"
-		    }
-        ]
-      }
-      ],
-    "presets":[
-    {
-        "name": "Gallery Home",
-        "category": "Gallery Home"
+      "type": "gallery_home",
+      "name": "Gallery Home",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Gallery Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "gallery_image",
+          "label": "Image",
+          "info": "Recommended Size: 310x310px"
+        },
+        {
+          "type": "header",
+          "content": "Gallery Btn"
+        },
+        {
+          "type": "text",
+          "id": "video_button_title",
+          "label": "Button Text",
+          "default": "Video"
+        },
+        {
+          "type": "textarea",
+          "id": "video_button_icon",
+          "label": "Icon",
+          "default": "feather-video"
+        },
+        {
+          "type": "url",
+          "id": "video_image_url",
+          "label": "url"
+        }
+      ]
     }
-    ]
+  ],
+  "presets": [
+    {
+      "name": "Gallery Home",
+      "category": "Gallery Home"
+    }
+  ]
 }
 {% endschema %}
 

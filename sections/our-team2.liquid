@@ -20,7 +20,7 @@
                         {% for block in section.blocks %}
                         <li class="team-content banner-hover">
                             <a href="javascript:void(0)" class="banner-img">
-                                <img width="{{ block.settings.member_img.width }}" height="{{ block.settings.member_img.height }}" class="img-fluid" src="{% if block.settings.member_img %}{{ block.settings.member_img | img_url: 'master' }}{% else %}https://dummyimage.com/450x580{% endif %}" alt="">
+                                <img width="{{ block.settings.member_img.width }}" height="{{ block.settings.member_img.height }}" class="img-fluid" src="{% if block.settings.member_img %}{{ block.settings.member_img | image_url }}{% else %}https://dummyimage.com/450x580{% endif %}" alt="">
                             </a>
                             <div class="team-info">
                                 <h6>{{ block.settings.member_name }}</h6>
@@ -37,156 +37,156 @@
 </section>
 {% schema %}
 {
-    "name": "Our Team 2",
-    "settings": [
+  "name": "Our Team 2",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Padding"
+    },
+    {
+      "type": "paragraph",
+      "content": "Desktop / Laptop / tablet"
+    },
+    {
+      "type": "range",
+      "id": "abt_team_2_padding_top",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "abt_team_2_padding_bottom",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 100
+    },
+    {
+      "type": "paragraph",
+      "content": "Ipad pro / Ipad"
+    },
+    {
+      "type": "range",
+      "id": "abt_team_2_padding_top_ip",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "abt_team_2_padding_bottom_ip",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "paragraph",
+      "content": "Mobile"
+    },
+    {
+      "type": "range",
+      "id": "abt_team_2_padding_top_xs",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "abt_team_2_padding_bottom_xs",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "header",
+      "content": "Section Background Color"
+    },
+    {
+      "type": "color",
+      "id": "abt_team_2_bgcolor",
+      "label": "Background Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "checkbox",
+      "id": "abt_team_2_bgcolor_enable",
+      "label": "Show Background Color",
+      "default": true
+    },
+    {
+      "type": "paragraph",
+      "content": "Section Content"
+    },
+    {
+      "type": "text",
+      "id": "our_team_title",
+      "label": "Title",
+      "default": "Our team"
+    },
+    {
+      "type": "textarea",
+      "id": "our_team_desc",
+      "label": "Description",
+      "default": "Lorem Ipsum is printing & typesetting industry's standard dummy text since texts"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "our-vision",
+      "name": "Our Vision",
+      "limit": 4,
+      "settings": [
         {
-            "type": "header",
-            "content": "Section Padding"
+          "type": "image_picker",
+          "id": "member_img",
+          "label": "Image",
+          "info": "Recommended Size: 450px x 580px"
         },
         {
-            "type" : "paragraph",
-            "content" : "Desktop / Laptop / tablet"
+          "type": "text",
+          "id": "member_name",
+          "label": "Team Member Name",
+          "default": "Nina theresa"
         },
         {
-            "type": "range",
-            "id": "abt_team_2_padding_top",
-            "label": "Section Padding Top",
-            "min": 0,
-            "max": 100,
-            "step": 1,
-            "unit": "px",
-            "default": 100
+          "type": "text",
+          "id": "member_position",
+          "label": "Team Member Position",
+          "default": "Managing director"
         },
         {
-            "type": "range",
-            "id": "abt_team_2_padding_bottom",
-            "label": "Section Padding Bottom",
-            "min": 0,
-            "max": 100,
-            "step": 1,
-            "unit": "px",
-            "default": 100
-        },
-        {
-            "type" : "paragraph",
-            "content" : "Ipad pro / Ipad"
-        },
-        {
-            "type": "range",
-            "id": "abt_team_2_padding_top_ip",
-            "label": "Section Padding Top",
-            "min": 0,
-            "max": 100,
-            "step": 1,
-            "unit": "px",
-            "default": 80
-        },
-        {
-            "type": "range",
-            "id": "abt_team_2_padding_bottom_ip",
-            "label": "Section Padding Bottom",
-            "min": 0,
-            "max": 100,
-            "step": 1,
-            "unit": "px",
-            "default": 80
-        },
-        {
-            "type" : "paragraph",
-            "content" : "Mobile"
-        },
-        {
-            "type": "range",
-            "id": "abt_team_2_padding_top_xs",
-            "label": "Section Padding Top",
-            "min": 0,
-            "max": 100,
-            "step": 1,
-            "unit": "px",
-            "default": 60
-        },
-        {
-            "type": "range",
-            "id": "abt_team_2_padding_bottom_xs",
-            "label": "Section Padding Bottom",
-            "min": 0,
-            "max": 100,
-            "step": 1,
-            "unit": "px",
-            "default": 60
-        },
-        {
-            "type": "header",
-            "content": "Section Background Color"
-        },
-        {
-            "type": "color",
-            "id": "abt_team_2_bgcolor",
-            "label": "Background Color",
-            "default": "#FFFFFF"
-        },
-        {
-            "type": "checkbox",
-            "id": "abt_team_2_bgcolor_enable",
-            "label": "Show Background Color",
-            "default": true
-        },
-        {
-            "type" : "paragraph",
-            "content" : "Section Content"
-        },
-        {
-            "type": "text",
-            "id": "our_team_title",
-            "label": "Title",
-            "default": "Our team"
-        },
-        {
-            "type": "textarea",
-            "id": "our_team_desc",
-            "label": "Description",
-            "default": "Lorem Ipsum is printing & typesetting industry's standard dummy text since texts"
+          "type": "textarea",
+          "id": "member_desc",
+          "label": "About Team Member Information",
+          "default": "Vestibulum porttitor egestas orci, vitae ullamcorper risus rutrum massa quis."
         }
-    ],
-    "blocks":[
-        {
-            "type": "our-vision",
-            "name": "Our Vision",
-            "limit": 4,
-            "settings": [
-                {
-                    "type": "image_picker",
-                    "id": "member_img",
-                    "label": "Image",
-                    "info": "Recommended Size: 450px x 580px"
-                },
-                {
-                    "type": "text",
-                    "id": "member_name",
-                    "label": "Team Member Name",
-                    "default": "Nina theresa"
-                },
-                {
-                    "type": "text",
-                    "id": "member_position",
-                    "label": "Team Member Position",
-                    "default": "Managing director"
-                },
-                {
-                    "type": "textarea",
-                    "id": "member_desc",
-                    "label": "About Team Member Information",
-                    "default": "Vestibulum porttitor egestas orci, vitae ullamcorper risus rutrum massa quis."
-                }
-            ]
-        }
-    ],
-    "presets":[
-        {
-            "name": "Our Team 2",
-            "category": "2. About Us"
-        }
-    ]
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Our Team 2",
+      "category": "2. About Us"
+    }
+  ]
 }
 {% endschema %}
 <style>

@@ -5,7 +5,7 @@
         <ul class="sitemap-wrap"> 
           {% for link in linklists[section.settings.menu].links %}
           {% assign child_list_handle = link.title | handleize %}
-          {% if linklists[child_list_handle].links =='' %}
+          {% if linklists[child_list_handle].links == '' %}
           <li class="sitemap-wrapper">
             <a href="{{ link.url }}" class="sitemap-title-link">
               <span class="sitemap-link-title">{{ link.title }}</span>
@@ -53,17 +53,17 @@
 </section>
 {% schema %}
 {
-  "name" : "Site Map",
-  "settings" : [
-  {
-    "type" : "header",
-    "content": "Section Sitemap"
-  },
-  {
-    "type" : "link_list",
-    "id" : "menu",
-    "label" : "Sitemap Menu"
-  }
+  "name": "Site Map",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Sitemap"
+    },
+    {
+      "type": "link_list",
+      "id": "menu",
+      "label": "Sitemap Menu"
+    }
   ]
 }
 {% endschema %}

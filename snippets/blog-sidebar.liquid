@@ -152,7 +152,7 @@
     <div class="sidbar-inner{% if forloop.first == true %} sidbar-inner-wrap{% endif %} banner-hover">
       <div class="post-image">
         <a href="{{ article.url }}" class="banner-img">
-          <img width="{{ article.image.width }}" height="{{ article.image.height }}" class="img-fluid" src="{{ article | img_url: '90x90', crop: 'center' }}" alt="Recent Post"></a>
+          <img width="{{ article.image.width }}" height="{{ article.image.height }}" class="img-fluid" src="{{ article | image_url: width: 90, height: 90, crop: 'center' }}" alt="Recent Post"></a>
       </div>
       <div class="recent-blog-content">
         <h4><a href="{{ article.url }}">{{ article.title }}</a></h4>

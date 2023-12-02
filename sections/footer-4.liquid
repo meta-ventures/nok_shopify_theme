@@ -1,7 +1,7 @@
-<footer class="footer-area" {% if section.settings.footer_bg_img_enable %}style="background-image: url('{% if section.settings.footer_bg_img %}{{ section.settings.footer_bg_img | img_url: 'master' }}{% else %}https://dummyimage.com/1920x450/f7f7f7/999999{% endif %}');"{% endif %} data-section-id="{{ section.id }}">
+<footer class="footer-area" {% if section.settings.footer_bg_img_enable %}style="background-image: url('{% if section.settings.footer_bg_img %}{{ section.settings.footer_bg_img | image_url }}{% else %}https://dummyimage.com/1920x450/f7f7f7/999999{% endif %}');"{% endif %} data-section-id="{{ section.id }}">
   <div class="footer-top-image">
     <span>
-      <img width="{{ section.settings.footer_top_image.width }}" height="{{ section.settings.footer_top_image.height }}" class="img-fluid mobile-img" src="{% if section.settings.footer_top_image %}{{ section.settings.footer_top_image | img_url: 'master' }}{% else %}https://dummyimage.com/240x240{% endif %}" alt="">
+      <img width="{{ section.settings.footer_top_image.width }}" height="{{ section.settings.footer_top_image.height }}" class="img-fluid mobile-img" src="{% if section.settings.footer_top_image %}{{ section.settings.footer_top_image | image_url }}{% else %}https://dummyimage.com/240x240{% endif %}" alt="">
     </span>
   </div>
   <div class="container">
@@ -130,22 +130,22 @@
             {% endif %}
             <div class="insta-block">
               <a class="img-content" href="{{ block.settings.insta_url1 }}">
-                <img width="{{ block.settings.insta_img1.width }}" height="{{ block.settings.insta_img1.height }}" class="img-fluid" src="{% if block.settings.insta_img1 %}{{ block.settings.insta_img1 | img_url: '80x80',crop: 'center' }}{% else %}https://dummyimage.com/150x150/f7f7f7/999999{% endif %}" alt="">
+                <img width="{{ block.settings.insta_img1.width }}" height="{{ block.settings.insta_img1.height }}" class="img-fluid" src="{% if block.settings.insta_img1 %}{{ block.settings.insta_img1 | image_url: width: 80, height: 80, crop: 'center' }}{% else %}https://dummyimage.com/150x150/f7f7f7/999999{% endif %}" alt="">
               </a>
               <a class="img-content" href="{{ block.settings.insta_url2 }}">
-                <img width="{{ block.settings.insta_img2.width }}" height="{{ block.settings.insta_img2.height }}" class="img-fluid" src="{% if block.settings.insta_img2 %}{{ block.settings.insta_img2 | img_url: '80x80',crop: 'center' }}{% else %}https://dummyimage.com/150x150/f7f7f7/999999{% endif %}" alt="">
+                <img width="{{ block.settings.insta_img2.width }}" height="{{ block.settings.insta_img2.height }}" class="img-fluid" src="{% if block.settings.insta_img2 %}{{ block.settings.insta_img2 | image_url: width: 80, height: 80, crop: 'center' }}{% else %}https://dummyimage.com/150x150/f7f7f7/999999{% endif %}" alt="">
               </a>
               <a class="img-content" href="{{ block.settings.insta_url3 }}">
-                <img width="{{ block.settings.insta_img3.width }}" height="{{ block.settings.insta_img3.height }}" class="img-fluid" src="{% if block.settings.insta_img3 %}{{ block.settings.insta_img3 | img_url: '80x80',crop: 'center' }}{% else %}https://dummyimage.com/150x150/f7f7f7/999999{% endif %}" alt="">
+                <img width="{{ block.settings.insta_img3.width }}" height="{{ block.settings.insta_img3.height }}" class="img-fluid" src="{% if block.settings.insta_img3 %}{{ block.settings.insta_img3 | image_url: width: 80, height: 80, crop: 'center' }}{% else %}https://dummyimage.com/150x150/f7f7f7/999999{% endif %}" alt="">
               </a>
               <a class="img-content" href="{{ block.settings.insta_url4 }}">
-                <img width="{{ block.settings.insta_img4.width }}" height="{{ block.settings.insta_img4.height }}" class="img-fluid" src="{% if block.settings.insta_img4 %}{{ block.settings.insta_img4 | img_url: '80x80',crop: 'center' }}{% else %}https://dummyimage.com/150x150/f7f7f7/999999{% endif %}" alt="">
+                <img width="{{ block.settings.insta_img4.width }}" height="{{ block.settings.insta_img4.height }}" class="img-fluid" src="{% if block.settings.insta_img4 %}{{ block.settings.insta_img4 | image_url: width: 80, height: 80, crop: 'center' }}{% else %}https://dummyimage.com/150x150/f7f7f7/999999{% endif %}" alt="">
               </a> 
               <a class="img-content" href="{{ block.settings.insta_url5 }}">
-                <img width="{{ block.settings.insta_img5.width }}" height="{{ block.settings.insta_img5.height }}" class="img-fluid" src="{% if block.settings.insta_img5 %}{{ block.settings.insta_img5 | img_url: '80x80',crop: 'center' }}{% else %}https://dummyimage.com/150x150/f7f7f7/999999{% endif %}" alt="">
+                <img width="{{ block.settings.insta_img5.width }}" height="{{ block.settings.insta_img5.height }}" class="img-fluid" src="{% if block.settings.insta_img5 %}{{ block.settings.insta_img5 | image_url: width: 80, height: 80, crop: 'center' }}{% else %}https://dummyimage.com/150x150/f7f7f7/999999{% endif %}" alt="">
               </a> 
               <a class="img-content" href="{{ block.settings.insta_url6 }}">
-                <img width="{{ block.settings.insta_img6.width }}" height="{{ block.settings.insta_img6.height }}" class="img-fluid" src="{% if block.settings.insta_img6 %}{{ block.settings.insta_img6 | img_url: '80x80',crop: 'center' }}{% else %}https://dummyimage.com/150x150/f7f7f7/999999{% endif %}" alt="">
+                <img width="{{ block.settings.insta_img6.width }}" height="{{ block.settings.insta_img6.height }}" class="img-fluid" src="{% if block.settings.insta_img6 %}{{ block.settings.insta_img6 | image_url: width: 80, height: 80, crop: 'center' }}{% else %}https://dummyimage.com/150x150/f7f7f7/999999{% endif %}" alt="">
               </a> 
             </div>
             {% if block.settings.text != '' %}
@@ -168,564 +168,564 @@
 {
   "name": "Footer",
   "settings": [
-  {
-    "type": "header",
-    "content": "Section Padding"
-  },
-  {
-    "type" : "paragraph",
-    "content" : "Desktop / Laptop / tablet"
-  },
-  {
-    "type": "range",
-    "id": "foot_padding_top",
-    "label": "Section Padding Top",
-    "min": 0,
-    "max": 100,
-    "step": 5,
-    "unit": "px",
-    "default": 100
-  },
-  {
-    "type": "range",
-    "id": "foot_padding_bottom",
-    "label": "Section Padding Bottom",
-    "min": 0,
-    "max": 100,
-    "step": 5,
-    "unit": "px",
-    "default": 100
-  },
-  {
-    "type" : "paragraph",
-    "content" : "Ipad pro / Ipad"
-  },
-  {
-    "type": "range",
-    "id": "foot_padding_top_ipad",
-    "label": "Section Padding Top",
-    "min": 0,
-    "max": 100,
-    "step": 5,
-    "unit": "px",
-    "default": 80
-  },
-  {
-    "type": "range",
-    "id": "foot_padding_bottom_ipad",
-    "label": "Section Padding Bottom",
-    "min": 0,
-    "max": 100,
-    "step": 5,
-    "unit": "px",
-    "default": 80
-  },
-  {
-    "type" : "paragraph",
-    "content" : "Mobile"
-  },
-  {
-    "type": "range",
-    "id": "foot_padding_top_xs",
-    "label": "Section Padding Top",
-    "min": 0,
-    "max": 100,
-    "step": 5,
-    "unit": "px",
-    "default": 60
-  },
-  {
-    "type": "range",
-    "id": "foot_padding_bottom_xs",
-    "label": "Section Padding Bottom",
-    "min": 0,
-    "max": 100,
-    "step": 5,
-    "unit": "px",
-    "default": 60
-  },
-  {
-    "type": "header",
-    "content": "Footer background"
-  },
-  {
-    "type": "image_picker",
-    "id": "footer_bg_img",
-    "label": "Image",
-    "info": "Recommended Size: 1920 x 770px"
-  },
-  {
-    "type": "checkbox",
-    "id": "footer_bg_img_enable",
-    "label": "Show Background Image",
-    "default": false
-  },
-  {
-    "type": "color",
-    "id": "footer_bg_color",
-    "label": "Background Color",
-    "default": "#fff"
-  },
-  {
-    "type": "color",
-    "id": "text_color",
-    "label": "Text Color",
-    "default": "#f2f0ed"
-  },
-  {
-    "type": "color",
-    "id": "heading_color",
-    "label": "Heading Color",
-    "default": "#333"
-  },
-  {
-    "type": "header",
-    "content": "Footer Top Image"
-  },
-  {
-    "type": "image_picker",
-    "id": "footer_top_image",
-    "label": "Image",
-    "info": "Recommended Size: 240 x 240px"
-  }
-  ],
-  "blocks":[
-  {
-    "type": "logo_info",
-    "name": "Logo information",
-    "settings": [
+    {
+      "type": "header",
+      "content": "Section Padding"
+    },
+    {
+      "type": "paragraph",
+      "content": "Desktop / Laptop / tablet"
+    },
     {
       "type": "range",
-      "id": "container_width",
-      "label": "Column width",
-      "default": 25,
-      "min": 10,
+      "id": "foot_padding_top",
+      "label": "Section Padding Top",
+      "min": 0,
       "max": 100,
-      "unit": "%"
+      "step": 5,
+      "unit": "px",
+      "default": 100
     },
-    {
-      "type": "select",
-      "id": "text_lg_align",
-      "label": "Select text align",
-      "options": [
-        {
-          "value": "text-lg-start",
-          "label": "Text lg start"
-        },
-        {
-          "value": "text-lg-center",
-          "label": "Text lg center"
-        },
-        {
-          "value": "text-lg-end",
-          "label": "Text lg end"
-        }
-      ],
-      "default": "text-lg-center"
-    },
-    {
-      "type": "select",
-      "id": "text_align",
-      "label": "Select text align mobile",
-      "options": [
-        {
-          "value": "text-start",
-          "label": "Text start"
-        },
-        {
-          "value": "text-center",
-          "label": "Text center"
-        },
-        {
-          "value": "text-end",
-          "label": "Text end"
-        }
-      ],
-      "default": "text-start"
-    },
-    {
-      "type": "checkbox",
-      "id": "logo_enable",
-      "label": "Show logo",
-      "default": true
-    },
-    {
-      "type": "textarea",
-      "id": "logo_desc",
-      "label": "Logo Description",
-      "default": "27 Eden walk eden centre, Orchard view, Broadway, Paris, France"
-    },
-    {
-      "type": "richtext",
-      "id": "text_1",
-      "label": "Text 1",
-      "info": "Optional"
-    },
-    {
-      "type": "richtext",
-      "id": "text_2",
-      "label": "Text 2",
-      "info": "Optional"
-    }
-    ]
-  },
-  {
-    "type": "footer_menu",
-    "name": "Navigation",
-    "settings": [
     {
       "type": "range",
-      "id": "container_width",
-      "label": "Column width",
-      "default": 25,
-      "min": 10,
+      "id": "foot_padding_bottom",
+      "label": "Section Padding Bottom",
+      "min": 0,
       "max": 100,
-      "unit": "%"
+      "step": 5,
+      "unit": "px",
+      "default": 100
     },
     {
-      "type": "select",
-      "id": "text_lg_align",
-      "label": "Select text align",
-      "options": [
-        {
-          "value": "text-lg-start",
-          "label": "Text lg start"
-        },
-        {
-          "value": "text-lg-center",
-          "label": "Text lg center"
-        },
-        {
-          "value": "text-lg-end",
-          "label": "Text lg end"
-        }
-      ],
-      "default": "text-lg-center"
+      "type": "paragraph",
+      "content": "Ipad pro / Ipad"
     },
-    {
-      "type": "select",
-      "id": "text_align",
-      "label": "Select text align mobile",
-      "options": [
-        {
-          "value": "text-start",
-          "label": "Text start"
-        },
-        {
-          "value": "text-center",
-          "label": "Text center"
-        },
-        {
-          "value": "text-end",
-          "label": "Text end"
-        }
-      ],
-      "default": "text-start"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_nav_title",
-      "label": "Show heading",
-      "default": true
-    },
-    {
-      "type": "link_list",
-      "id": "footer_menu_handle",
-      "label": "Select Menu"
-    },
-    {
-      "type": "richtext",
-      "id": "text",
-      "label": "Text",
-      "info": "Optional"
-    }
-    ]
-  },
-  {
-    "type": "custom_text",
-    "name": "Custom text",
-    "settings": [
     {
       "type": "range",
-      "id": "container_width",
-      "label": "Column width",
-      "default": 25,
-      "min": 10,
+      "id": "foot_padding_top_ipad",
+      "label": "Section Padding Top",
+      "min": 0,
       "max": 100,
-      "unit": "%"
+      "step": 5,
+      "unit": "px",
+      "default": 80
     },
-    {
-      "type": "select",
-      "id": "text_lg_align",
-      "label": "Select text align",
-      "options": [
-        {
-          "value": "text-lg-start",
-          "label": "Text lg start"
-        },
-        {
-          "value": "text-lg-center",
-          "label": "Text lg center"
-        },
-        {
-          "value": "text-lg-end",
-          "label": "Text lg end"
-        }
-      ],
-      "default": "text-lg-center"
-    },
-    {
-      "type": "select",
-      "id": "text_align",
-      "label": "Select text align mobile",
-      "options": [
-        {
-          "value": "text-start",
-          "label": "Text start"
-        },
-        {
-          "value": "text-center",
-          "label": "Text center"
-        },
-        {
-          "value": "text-end",
-          "label": "Text end"
-        }
-      ],
-      "default": "text-start"
-    },
-    {
-      "type": "text",
-      "id": "heading1",
-      "label": "Heading",
-      "default": "Office address"
-    },
-    {
-      "type": "richtext",
-      "id": "text_block_1",
-      "label": "Text 1"
-    },
-    {
-      "type": "richtext",
-      "id": "text_block_2",
-      "label": "Text 2"
-    }
-    ]
-  },
-  {
-    "type": "newsletter",
-    "name": "Newsletter",
-    "settings": [
     {
       "type": "range",
-      "id": "container_width",
-      "label": "Column width",
-      "default": 25,
-      "min": 10,
+      "id": "foot_padding_bottom_ipad",
+      "label": "Section Padding Bottom",
+      "min": 0,
       "max": 100,
-      "unit": "%"
+      "step": 5,
+      "unit": "px",
+      "default": 80
     },
     {
-      "type": "select",
-      "id": "text_lg_align",
-      "label": "Select text align",
-      "options": [
-        {
-          "value": "text-lg-start",
-          "label": "Text lg start"
-        },
-        {
-          "value": "text-lg-center",
-          "label": "Text lg center"
-        },
-        {
-          "value": "text-lg-end",
-          "label": "Text lg end"
-        }
-      ],
-      "default": "text-lg-center"
+      "type": "paragraph",
+      "content": "Mobile"
     },
     {
-      "type": "select",
-      "id": "text_align",
-      "label": "Select text align mobile",
-      "options": [
-        {
-          "value": "text-start",
-          "label": "Text start"
-        },
-        {
-          "value": "text-center",
-          "label": "Text center"
-        },
-        {
-          "value": "text-end",
-          "label": "Text end"
-        }
-      ],
-      "default": "text-start"
+      "type": "range",
+      "id": "foot_padding_top_xs",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "foot_padding_bottom_xs",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 60
     },
     {
       "type": "header",
-      "content": "Newsletter"
+      "content": "Footer background"
     },
     {
-      "type": "text",
-      "id": "newsletter_title",
-      "label": "Newsletter Title",
-      "default": "join our newsletter"
+      "type": "image_picker",
+      "id": "footer_bg_img",
+      "label": "Image",
+      "info": "Recommended Size: 1920 x 770px"
     },
     {
-      "type": "richtext",
-      "id": "text",
-      "label": "Text",
-      "info": "Optional",
-      "default": "<p>Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.</p>"
-    }
-    ]
-  },
-  {
-    "type": "instagram_block",
-    "name": "Instagram block",
-    "settings": [
-    {
-      "type": "range",
-      "id": "container_width",
-      "label": "Column width",
-      "default": 25,
-      "min": 10,
-      "max": 100,
-      "unit": "%"
+      "type": "checkbox",
+      "id": "footer_bg_img_enable",
+      "label": "Show Background Image",
+      "default": false
     },
     {
-      "type": "select",
-      "id": "text_lg_align",
-      "label": "Select text align",
-      "options": [
-        {
-          "value": "text-lg-start",
-          "label": "Text lg start"
-        },
-        {
-          "value": "text-lg-center",
-          "label": "Text lg center"
-        },
-        {
-          "value": "text-lg-end",
-          "label": "Text lg end"
-        }
-      ],
-      "default": "text-lg-center"
+      "type": "color",
+      "id": "footer_bg_color",
+      "label": "Background Color",
+      "default": "#fff"
     },
     {
-      "type": "select",
-      "id": "text_align",
-      "label": "Select text align mobile",
-      "options": [
-        {
-          "value": "text-start",
-          "label": "Text start"
-        },
-        {
-          "value": "text-center",
-          "label": "Text center"
-        },
-        {
-          "value": "text-end",
-          "label": "Text end"
-        }
-      ],
-      "default": "text-start"
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#f2f0ed"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading Color",
+      "default": "#333"
     },
     {
       "type": "header",
-      "content": "Instagram"
-    },
-    {
-      "type": "text",
-      "id": "heading",
-      "label": "Heading",
-      "default": "Follow us Instagram"
-    },
-    {
-      "type": "url",
-      "id": "insta_url1",
-      "label": "Instagram image url"
+      "content": "Footer Top Image"
     },
     {
       "type": "image_picker",
-      "id": "insta_img1",
-      "label": "Instagram image",
-      "info": "Recommended Size: 250x250px"
-    },
-    {
-      "type": "url",
-      "id": "insta_url2",
-      "label": "Instagram image url"
-    },
-    {
-      "type": "image_picker",
-      "id": "insta_img2",
-      "label": "Instagram image",
-      "info": "Recommended Size: 250x250px"
-    },
-    {
-      "type": "url",
-      "id": "insta_url3",
-      "label": "Instagram image url"
-    },
-    {
-      "type": "image_picker",
-      "id": "insta_img3",
-      "label": "Instagram image",
-      "info": "Recommended Size: 250x250px"
-    },
-    {
-      "type": "url",
-      "id": "insta_url4",
-      "label": "Instagram image url"
-    },
-    {
-      "type": "image_picker",
-      "id": "insta_img4",
-      "label": "Instagram image",
-      "info": "Recommended Size: 250x250px"
-    },
-    {
-      "type": "url",
-      "id": "insta_url5",
-      "label": "Instagram image url"
-    },
-    {
-      "type": "image_picker",
-      "id": "insta_img5",
-      "label": "Instagram image",
-      "info": "Recommended Size: 250x250px"
-    },
-    {
-      "type": "url",
-      "id": "insta_url6",
-      "label": "Instagram image url"
-    },
-    {
-      "type": "image_picker",
-      "id": "insta_img6",
-      "label": "Instagram image",
-      "info": "Recommended Size: 250x250px"
-    },
-    {
-      "type": "richtext",
-      "id": "text",
-      "label": "Text",
-      "info": "Optional"
+      "id": "footer_top_image",
+      "label": "Image",
+      "info": "Recommended Size: 240 x 240px"
     }
-    ]
-  }
   ],
-  "presets":[
-  {
-    "name": "Footer"
-  }
+  "blocks": [
+    {
+      "type": "logo_info",
+      "name": "Logo information",
+      "settings": [
+        {
+          "type": "range",
+          "id": "container_width",
+          "label": "Column width",
+          "default": 25,
+          "min": 10,
+          "max": 100,
+          "unit": "%"
+        },
+        {
+          "type": "select",
+          "id": "text_lg_align",
+          "label": "Select text align",
+          "options": [
+            {
+              "value": "text-lg-start",
+              "label": "Text lg start"
+            },
+            {
+              "value": "text-lg-center",
+              "label": "Text lg center"
+            },
+            {
+              "value": "text-lg-end",
+              "label": "Text lg end"
+            }
+          ],
+          "default": "text-lg-center"
+        },
+        {
+          "type": "select",
+          "id": "text_align",
+          "label": "Select text align mobile",
+          "options": [
+            {
+              "value": "text-start",
+              "label": "Text start"
+            },
+            {
+              "value": "text-center",
+              "label": "Text center"
+            },
+            {
+              "value": "text-end",
+              "label": "Text end"
+            }
+          ],
+          "default": "text-start"
+        },
+        {
+          "type": "checkbox",
+          "id": "logo_enable",
+          "label": "Show logo",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "logo_desc",
+          "label": "Logo Description",
+          "default": "27 Eden walk eden centre, Orchard view, Broadway, Paris, France"
+        },
+        {
+          "type": "richtext",
+          "id": "text_1",
+          "label": "Text 1",
+          "info": "Optional"
+        },
+        {
+          "type": "richtext",
+          "id": "text_2",
+          "label": "Text 2",
+          "info": "Optional"
+        }
+      ]
+    },
+    {
+      "type": "footer_menu",
+      "name": "Navigation",
+      "settings": [
+        {
+          "type": "range",
+          "id": "container_width",
+          "label": "Column width",
+          "default": 25,
+          "min": 10,
+          "max": 100,
+          "unit": "%"
+        },
+        {
+          "type": "select",
+          "id": "text_lg_align",
+          "label": "Select text align",
+          "options": [
+            {
+              "value": "text-lg-start",
+              "label": "Text lg start"
+            },
+            {
+              "value": "text-lg-center",
+              "label": "Text lg center"
+            },
+            {
+              "value": "text-lg-end",
+              "label": "Text lg end"
+            }
+          ],
+          "default": "text-lg-center"
+        },
+        {
+          "type": "select",
+          "id": "text_align",
+          "label": "Select text align mobile",
+          "options": [
+            {
+              "value": "text-start",
+              "label": "Text start"
+            },
+            {
+              "value": "text-center",
+              "label": "Text center"
+            },
+            {
+              "value": "text-end",
+              "label": "Text end"
+            }
+          ],
+          "default": "text-start"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_nav_title",
+          "label": "Show heading",
+          "default": true
+        },
+        {
+          "type": "link_list",
+          "id": "footer_menu_handle",
+          "label": "Select Menu"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text",
+          "info": "Optional"
+        }
+      ]
+    },
+    {
+      "type": "custom_text",
+      "name": "Custom text",
+      "settings": [
+        {
+          "type": "range",
+          "id": "container_width",
+          "label": "Column width",
+          "default": 25,
+          "min": 10,
+          "max": 100,
+          "unit": "%"
+        },
+        {
+          "type": "select",
+          "id": "text_lg_align",
+          "label": "Select text align",
+          "options": [
+            {
+              "value": "text-lg-start",
+              "label": "Text lg start"
+            },
+            {
+              "value": "text-lg-center",
+              "label": "Text lg center"
+            },
+            {
+              "value": "text-lg-end",
+              "label": "Text lg end"
+            }
+          ],
+          "default": "text-lg-center"
+        },
+        {
+          "type": "select",
+          "id": "text_align",
+          "label": "Select text align mobile",
+          "options": [
+            {
+              "value": "text-start",
+              "label": "Text start"
+            },
+            {
+              "value": "text-center",
+              "label": "Text center"
+            },
+            {
+              "value": "text-end",
+              "label": "Text end"
+            }
+          ],
+          "default": "text-start"
+        },
+        {
+          "type": "text",
+          "id": "heading1",
+          "label": "Heading",
+          "default": "Office address"
+        },
+        {
+          "type": "richtext",
+          "id": "text_block_1",
+          "label": "Text 1"
+        },
+        {
+          "type": "richtext",
+          "id": "text_block_2",
+          "label": "Text 2"
+        }
+      ]
+    },
+    {
+      "type": "newsletter",
+      "name": "Newsletter",
+      "settings": [
+        {
+          "type": "range",
+          "id": "container_width",
+          "label": "Column width",
+          "default": 25,
+          "min": 10,
+          "max": 100,
+          "unit": "%"
+        },
+        {
+          "type": "select",
+          "id": "text_lg_align",
+          "label": "Select text align",
+          "options": [
+            {
+              "value": "text-lg-start",
+              "label": "Text lg start"
+            },
+            {
+              "value": "text-lg-center",
+              "label": "Text lg center"
+            },
+            {
+              "value": "text-lg-end",
+              "label": "Text lg end"
+            }
+          ],
+          "default": "text-lg-center"
+        },
+        {
+          "type": "select",
+          "id": "text_align",
+          "label": "Select text align mobile",
+          "options": [
+            {
+              "value": "text-start",
+              "label": "Text start"
+            },
+            {
+              "value": "text-center",
+              "label": "Text center"
+            },
+            {
+              "value": "text-end",
+              "label": "Text end"
+            }
+          ],
+          "default": "text-start"
+        },
+        {
+          "type": "header",
+          "content": "Newsletter"
+        },
+        {
+          "type": "text",
+          "id": "newsletter_title",
+          "label": "Newsletter Title",
+          "default": "join our newsletter"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text",
+          "info": "Optional",
+          "default": "<p>Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.</p>"
+        }
+      ]
+    },
+    {
+      "type": "instagram_block",
+      "name": "Instagram block",
+      "settings": [
+        {
+          "type": "range",
+          "id": "container_width",
+          "label": "Column width",
+          "default": 25,
+          "min": 10,
+          "max": 100,
+          "unit": "%"
+        },
+        {
+          "type": "select",
+          "id": "text_lg_align",
+          "label": "Select text align",
+          "options": [
+            {
+              "value": "text-lg-start",
+              "label": "Text lg start"
+            },
+            {
+              "value": "text-lg-center",
+              "label": "Text lg center"
+            },
+            {
+              "value": "text-lg-end",
+              "label": "Text lg end"
+            }
+          ],
+          "default": "text-lg-center"
+        },
+        {
+          "type": "select",
+          "id": "text_align",
+          "label": "Select text align mobile",
+          "options": [
+            {
+              "value": "text-start",
+              "label": "Text start"
+            },
+            {
+              "value": "text-center",
+              "label": "Text center"
+            },
+            {
+              "value": "text-end",
+              "label": "Text end"
+            }
+          ],
+          "default": "text-start"
+        },
+        {
+          "type": "header",
+          "content": "Instagram"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Follow us Instagram"
+        },
+        {
+          "type": "url",
+          "id": "insta_url1",
+          "label": "Instagram image url"
+        },
+        {
+          "type": "image_picker",
+          "id": "insta_img1",
+          "label": "Instagram image",
+          "info": "Recommended Size: 250x250px"
+        },
+        {
+          "type": "url",
+          "id": "insta_url2",
+          "label": "Instagram image url"
+        },
+        {
+          "type": "image_picker",
+          "id": "insta_img2",
+          "label": "Instagram image",
+          "info": "Recommended Size: 250x250px"
+        },
+        {
+          "type": "url",
+          "id": "insta_url3",
+          "label": "Instagram image url"
+        },
+        {
+          "type": "image_picker",
+          "id": "insta_img3",
+          "label": "Instagram image",
+          "info": "Recommended Size: 250x250px"
+        },
+        {
+          "type": "url",
+          "id": "insta_url4",
+          "label": "Instagram image url"
+        },
+        {
+          "type": "image_picker",
+          "id": "insta_img4",
+          "label": "Instagram image",
+          "info": "Recommended Size: 250x250px"
+        },
+        {
+          "type": "url",
+          "id": "insta_url5",
+          "label": "Instagram image url"
+        },
+        {
+          "type": "image_picker",
+          "id": "insta_img5",
+          "label": "Instagram image",
+          "info": "Recommended Size: 250x250px"
+        },
+        {
+          "type": "url",
+          "id": "insta_url6",
+          "label": "Instagram image url"
+        },
+        {
+          "type": "image_picker",
+          "id": "insta_img6",
+          "label": "Instagram image",
+          "info": "Recommended Size: 250x250px"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text",
+          "info": "Optional"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Footer"
+    }
   ]
 }
 {% endschema %}

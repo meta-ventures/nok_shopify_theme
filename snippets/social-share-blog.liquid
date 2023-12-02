@@ -11,7 +11,7 @@
 {% capture shareTitle %}{% unless shop.description == blank %}{{ shop.description | url_param_escape }}{% else %}{{ shop.name | url_param_escape }}{% endunless %}{% endcapture %}
 {% endif %}
 
-{% assign shareButtonStyle = section.settings.social_sharing_style %}
+
 
 <ul class="social-icons">
   <li>
@@ -24,9 +24,9 @@
       <i class="ri-twitter-line"></i>
     </a>
   </li>
-  {% if product.featured_image or article.image  %}
+  {% if product.featured_image or article.image %}
   <li>
-    <a target="_blank" href="//pinterest.com/pin/create/button/?url={{ permalinkURL }}&amp;media=http:{% if template contains 'product' %}{{ product | img_url: '1024x1024' }}{% else %}{{ article | img_url: '1024x1024' }}{% endif %}&amp;description={{ shareTitle }}" title="Share on Pinterest" tabindex="0" class="pinterest">
+    <a target="_blank" href="//pinterest.com/pin/create/button/?url={{ permalinkURL }}&amp;media=http:{% if template contains 'product' %}{{ product | image_url: width: 1024, height: 1024 }}{% else %}{{ article | image_url: width: 1024, height: 1024 }}{% endif %}&amp;description={{ shareTitle }}" title="Share on Pinterest" tabindex="0" class="pinterest">
       <i class="ri-pinterest-fill"></i>
     </a>
   </li>

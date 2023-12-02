@@ -1,7 +1,7 @@
 <section class="modern-contact-area">
   <div class="contact-image">
     <span>
-      <img width="{{ section.settings.contact_image.width }}" height="{{ section.settings.contact_image.height }}" class="img-fluid" src="{% if section.settings.contact_image %}{{ section.settings.contact_image | img_url: 'master' }}{% else %}https://dummyimage.com/1920x630/f7f7f7/999999{% endif %}" alt="">
+      <img width="{{ section.settings.contact_image.width }}" height="{{ section.settings.contact_image.height }}" class="img-fluid" src="{% if section.settings.contact_image %}{{ section.settings.contact_image | image_url }}{% else %}https://dummyimage.com/1920x630/f7f7f7/999999{% endif %}" alt="">
     </span>
   </div>
   <div class="contact-form-area">
@@ -45,140 +45,140 @@
 {
   "name": "contact Modern Section 2",
   "settings": [
-  {
-    "type": "header",
-    "content": "Section Padding"
-  },
-  {
-    "type" : "paragraph",
-    "content" : "Desktop / Laptop / tablet"
-  },
-  {
-    "type": "range",
-    "id": "about_product_padding_top",
-    "label": "Section Padding Top",
-    "min": 0,
-    "max": 100,
-    "step": 5,
-    "unit": "px",
-    "default": 0
-  },
-  {
-    "type": "range",
-    "id": "about_product_padding_bottom",
-    "label": "Section Padding Bottom",
-    "min": 0,
-    "max": 100,
-    "step": 5,
-    "unit": "px",
-    "default": 0
-  },
-  {
-    "type" : "paragraph",
-    "content" : "Ipad pro / Ipad"
-  },
-  {
-    "type": "range",
-    "id": "about_product_padding_top_ip",
-    "label": "Section Padding Top",
-    "min": 0,
-    "max": 100,
-    "step": 5,
-    "unit": "px",
-    "default": 0
-  },
-  {
-    "type": "range",
-    "id": "about_product_padding_bottom_ip",
-    "label": "Section Padding Bottom",
-    "min": 0,
-    "max": 100,
-    "step": 5,
-    "unit": "px",
-    "default": 0
-  },
-  {
-    "type" : "paragraph",
-    "content" : "Mobile"
-  },
-  {
-    "type": "range",
-    "id": "about_product_padding_top_xs",
-    "label": "Section Padding Top",
-    "min": 0,
-    "max": 100,
-    "step": 5,
-    "unit": "px",
-    "default": 0
-  },
-  {
-    "type": "range",
-    "id": "about_product_padding_bottom_xs",
-    "label": "Section Padding Bottom",
-    "min": 0,
-    "max": 100,
-    "step": 5,
-    "unit": "px",
-    "default": 0
-  },
-  {
-    "type": "header",
-    "content": "Section Background Color"
-  },
-  {
-    "type": "checkbox",
-    "id": "about_product_bgcolor_enable",
-    "label": "Show Background Color",
-    "default": false
-  },
-  {
-    "type": "color",
-    "id": "about_product_bgcolor",
-    "label": "Background Color",
-    "default": "#FFFFFF"
-  },
-  {
-    "type": "header",
-    "content": "Contact Image"
-  },
-  {
-    "type": "image_picker",
-    "id": "contact_image",
-    "label": "Contact Image",
-    "info": "Recommended Size: 1920px x 630px"
-  },
-  {
-    "type": "header",
-    "content": "Contact Form Title"
-  },
-  {
-    "type": "text",
-    "id": "contact_form_subtitle",
-    "label": "Subtitle",
-    "default": "Keep in touch with us"
-  },
-  {
-    "type": "text",
-    "id": "contact_form_title",
-    "label": "Title",
-    "default": "Let's get in touch with us"
-  },
-  {
-    "type": "header",
-    "content": "Social Title"
-  },
-  {
-    "type": "text",
-    "id": "contact_shre_title",
-    "label": "Title",
-    "default": "Social media"
-  } 
+    {
+      "type": "header",
+      "content": "Section Padding"
+    },
+    {
+      "type": "paragraph",
+      "content": "Desktop / Laptop / tablet"
+    },
+    {
+      "type": "range",
+      "id": "about_product_padding_top",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "about_product_padding_bottom",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "paragraph",
+      "content": "Ipad pro / Ipad"
+    },
+    {
+      "type": "range",
+      "id": "about_product_padding_top_ip",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "about_product_padding_bottom_ip",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "paragraph",
+      "content": "Mobile"
+    },
+    {
+      "type": "range",
+      "id": "about_product_padding_top_xs",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "about_product_padding_bottom_xs",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Section Background Color"
+    },
+    {
+      "type": "checkbox",
+      "id": "about_product_bgcolor_enable",
+      "label": "Show Background Color",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "about_product_bgcolor",
+      "label": "Background Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "header",
+      "content": "Contact Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "contact_image",
+      "label": "Contact Image",
+      "info": "Recommended Size: 1920px x 630px"
+    },
+    {
+      "type": "header",
+      "content": "Contact Form Title"
+    },
+    {
+      "type": "text",
+      "id": "contact_form_subtitle",
+      "label": "Subtitle",
+      "default": "Keep in touch with us"
+    },
+    {
+      "type": "text",
+      "id": "contact_form_title",
+      "label": "Title",
+      "default": "Let's get in touch with us"
+    },
+    {
+      "type": "header",
+      "content": "Social Title"
+    },
+    {
+      "type": "text",
+      "id": "contact_shre_title",
+      "label": "Title",
+      "default": "Social media"
+    }
   ],
-  "presets":[
-  {
-    "name": "contact Modern Section 2",
-    "category": "contact Modern Section 2"
-  }
+  "presets": [
+    {
+      "name": "contact Modern Section 2",
+      "category": "contact Modern Section 2"
+    }
   ]
 }
 {% endschema %}

@@ -5,7 +5,7 @@
             <div class="col">
                 <div class="offer-banner-bg">
                     <div class="offer-banner-image">
-                        <img width="{{ section.settings.image_banner.width }}" height="{{ section.settings.image_banner.height }}" class="img-fluid" src="{% if section.settings.image_banner %}{{ section.settings.image_banner | img_url: 'master' }}{% else %}https://dummyimage.com/420x570/f7f7f7/999999{% endif %}" alt="">
+                        <img width="{{ section.settings.image_banner.width }}" height="{{ section.settings.image_banner.height }}" class="img-fluid" src="{% if section.settings.image_banner %}{{ section.settings.image_banner | image_url }}{% else %}https://dummyimage.com/420x570/f7f7f7/999999{% endif %}" alt="">
                     </div>
                     <div class="offer-banner-content">
                         <div class="banner-content">
@@ -47,237 +47,237 @@
 <!-- banner-area end -->
 {% schema %}
 {
-    "name": "Banner Grid1",
-    "settings": [
+  "name": "Banner Grid1",
+  "settings": [
     {
-        "type": "header",
-        "content": "Section Padding"
+      "type": "header",
+      "content": "Section Padding"
     },
     {
-        "type" : "paragraph",
-        "content" : "Desktop / Laptop / tablet"
+      "type": "paragraph",
+      "content": "Desktop / Laptop / tablet"
     },
     {
-        "type": "range",
-        "id": "section_padding_top",
-        "label": "Section Padding Top",
-        "min": 0,
-        "max": 100,
-        "step": 5,
-        "unit": "px",
-        "default": 0
+      "type": "range",
+      "id": "section_padding_top",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 0
     },
     {
-        "type": "range",
-        "id": "section_padding_bottom",
-        "label": "Section Padding Bottom",
-        "min": 0,
-        "max": 100,
-        "step": 5,
-        "unit": "px",
-        "default": 60
+      "type": "range",
+      "id": "section_padding_bottom",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 60
     },
     {
-        "type" : "paragraph",
-        "content" : "Ipad pro / Ipad"
+      "type": "paragraph",
+      "content": "Ipad pro / Ipad"
     },
     {
-        "type": "range",
-        "id": "section_padding_top_ip",
-        "label": "Section Padding Top",
-        "min": 0,
-        "max": 100,
-        "step": 5,
-        "unit": "px",
-        "default": 0
+      "type": "range",
+      "id": "section_padding_top_ip",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 0
     },
     {
-        "type": "range",
-        "id": "section_padding_bottom_ip",
-        "label": "Section Padding Bottom",
-        "min": 0,
-        "max": 100,
-        "step": 5,
-        "unit": "px",
-        "default": 30
+      "type": "range",
+      "id": "section_padding_bottom_ip",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 30
     },
     {
-        "type" : "paragraph",
-        "content" : "Mobile"
+      "type": "paragraph",
+      "content": "Mobile"
     },
     {
-        "type": "range",
-        "id": "section_padding_top_xs",
-        "label": "Section Padding Top",
-        "min": 0,
-        "max": 100,
-        "step": 5,
-        "unit": "px",
-        "default": 0
+      "type": "range",
+      "id": "section_padding_top_xs",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 0
     },
     {
-        "type": "range",
-        "id": "section_padding_bottom_xs",
-        "label": "Section Padding Bottom",
-        "min": 0,
-        "max": 100,
-        "step": 5,
-        "unit": "px",
-        "default": 20
+      "type": "range",
+      "id": "section_padding_bottom_xs",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 20
     },
     {
-        "type" : "header",
-        "content" : "Background Image"
+      "type": "header",
+      "content": "Background Image"
     },
     {
-        "type" : "checkbox",
-        "id" : "offer_banner_bg_image_enable",
-        "label" : "Show Background Image",
-        "default" : true
+      "type": "checkbox",
+      "id": "offer_banner_bg_image_enable",
+      "label": "Show Background Image",
+      "default": true
     },
     {
-        "type": "image_picker",
-        "id": "section_bg_image",
-        "label": "Background Image",
-        "info": "Recommended Size: 1340 x 600px"
+      "type": "image_picker",
+      "id": "section_bg_image",
+      "label": "Background Image",
+      "info": "Recommended Size: 1340 x 600px"
     },
     {
-        "type" : "header",
-        "content" : "Background Color"
+      "type": "header",
+      "content": "Background Color"
     },
     {
-        "type" : "checkbox",
-        "id" : "section_bg_color_enable",
-        "label" : "Show Background Color",
-        "default" : false
+      "type": "checkbox",
+      "id": "section_bg_color_enable",
+      "label": "Show Background Color",
+      "default": false
     },
     {
-        "type" : "color",
-        "id" : "section_bg_color",
-        "label" : "Background Color",
-        "default" : "#f6f6f6"
+      "type": "color",
+      "id": "section_bg_color",
+      "label": "Background Color",
+      "default": "#f6f6f6"
     },
     {
-        "type": "header",
-        "content": "Banner Content"
+      "type": "header",
+      "content": "Banner Content"
     },
     {
-        "type": "image_picker",
-        "id": "image_banner",
-        "label": "Banner Image",
-        "info": "Recommended Size: 420px x 570px"
+      "type": "image_picker",
+      "id": "image_banner",
+      "label": "Banner Image",
+      "info": "Recommended Size: 420px x 570px"
     },
     {
-        "type": "header",
-        "content": "Banner Image"
+      "type": "header",
+      "content": "Banner Image"
     },
     {
-        "type": "header",
-        "content": "Title"
+      "type": "header",
+      "content": "Title"
     },
     {
-        "type": "text",
-        "id": "banner_title",
-        "label": "Banenr title",
-        "default": "Buy our awesome drone"
+      "type": "text",
+      "id": "banner_title",
+      "label": "Banenr title",
+      "default": "Buy our awesome drone"
     },
     {
-        "type": "color",
-        "id": "banner_title_color",
-        "label": "Banenr title Color",
-        "default": "#ffffff"
+      "type": "color",
+      "id": "banner_title_color",
+      "label": "Banenr title Color",
+      "default": "#ffffff"
     },
     {
-        "type": "header",
-        "content": "Description"
+      "type": "header",
+      "content": "Description"
     },
     {
-        "type": "textarea",
-        "id": "banner_desc",
-        "label": "Banenr Description",
-        "default": "Portable yet powerful, the nexa pro is your personal drone ready to go with you everywhere."
+      "type": "textarea",
+      "id": "banner_desc",
+      "label": "Banenr Description",
+      "default": "Portable yet powerful, the nexa pro is your personal drone ready to go with you everywhere."
     },
     {
-        "type": "color",
-        "id": "banner_desc_color",
-        "label": "Banenr Description Color",
-        "default": "#ffffff"
+      "type": "color",
+      "id": "banner_desc_color",
+      "label": "Banenr Description Color",
+      "default": "#ffffff"
     },
     {
-        "type": "header",
-        "content": "Price"
+      "type": "header",
+      "content": "Price"
     },
     {
-        "type": "text",
-        "id": "banner_price_label",
-        "label": "Price label",
-        "default": "Price only:"
+      "type": "text",
+      "id": "banner_price_label",
+      "label": "Price label",
+      "default": "Price only:"
     },
     {
-        "type": "text",
-        "id": "banner_price_text",
-        "label": "Price Text",
-        "default": "$999.00"
+      "type": "text",
+      "id": "banner_price_text",
+      "label": "Price Text",
+      "default": "$999.00"
     },
     {
-        "type": "color",
-        "id": "banner_price_color",
-        "label": "Banenr Price Color",
-        "default": "#ffffff"
+      "type": "color",
+      "id": "banner_price_color",
+      "label": "Banenr Price Color",
+      "default": "#ffffff"
     },
     {
-        "type": "header",
-        "content": "Banner Button"
+      "type": "header",
+      "content": "Banner Button"
     },
     {
-        "type": "header",
-        "content": "Button 1"
+      "type": "header",
+      "content": "Button 1"
     },
     {
-        "type": "text",
-        "id": "banner_btn_1_text",
-        "label": "Button 1 Text",
-        "default": "Add to cart"
+      "type": "text",
+      "id": "banner_btn_1_text",
+      "label": "Button 1 Text",
+      "default": "Add to cart"
     },
     {
-        "type": "textarea",
-        "id": "banner_btn_1_icon",
-        "label": "Button Icon",
-        "default": "feather-shopping-cart"
+      "type": "textarea",
+      "id": "banner_btn_1_icon",
+      "label": "Button Icon",
+      "default": "feather-shopping-cart"
     },
     {
-        "type": "url",
-        "id": "banner_btn_1_url",
-        "label": "Button 1 url"
+      "type": "url",
+      "id": "banner_btn_1_url",
+      "label": "Button 1 url"
     },
     {
-        "type": "header",
-        "content": "Button 2"
+      "type": "header",
+      "content": "Button 2"
     },
     {
-        "type": "textarea",
-        "id": "banner_btn_2_icon",
-        "label": "Button Icon",
-        "default": "feather-shopping-cart"
+      "type": "textarea",
+      "id": "banner_btn_2_icon",
+      "label": "Button Icon",
+      "default": "feather-shopping-cart"
     },
     {
-        "type": "text",
-        "id": "banner_btn_2_text",
-        "label": "Button 2 Text",
-        "default": "Buy amazon"
+      "type": "text",
+      "id": "banner_btn_2_text",
+      "label": "Button 2 Text",
+      "default": "Buy amazon"
     },
     {
-        "type": "url",
-        "id": "banner_btn_2_url",
-        "label": "Button 2 url"
+      "type": "url",
+      "id": "banner_btn_2_url",
+      "label": "Button 2 url"
     }
-    ],
-    "presets":[
+  ],
+  "presets": [
     {
-        "name": "Banner Grid1",
-        "category": "Banner Grid"
+      "name": "Banner Grid1",
+      "category": "Banner Grid"
     }
-    ]
+  ]
 }
 {% endschema %}
 <style>
@@ -308,7 +308,7 @@
     }
     .offer-banner-area .offer-banner-bg::before {
         {% if section.settings.offer_banner_bg_image_enable %}
-        background-image: url('{% if section.settings.section_bg_image %}{{ section.settings.section_bg_image | img_url: 'master' }}{% else %}https://dummyimage.com/1340x600{% endif %}');
+        background-image: url('{% if section.settings.section_bg_image %}{{ section.settings.section_bg_image | image_url }}{% else %}https://dummyimage.com/1340x600{% endif %}');
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;

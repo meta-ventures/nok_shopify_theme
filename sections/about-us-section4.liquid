@@ -4,10 +4,10 @@
 			<div class="col">
                 <div class="about-image">
                     <span>
-                        <img width="{{ section.settings.about_image_area.width }}" height="{{ section.settings.about_image_area.height }}" class="img-fluid" src="{% if section.settings.about_image_area %}{{ section.settings.about_image_area | img_url: 'master' }}{% else %}https://dummyimage.com/1350x570/232323/999999{% endif %}" alt="">
+                        <img width="{{ section.settings.about_image_area.width }}" height="{{ section.settings.about_image_area.height }}" class="img-fluid" src="{% if section.settings.about_image_area %}{{ section.settings.about_image_area | image_url }}{% else %}https://dummyimage.com/1350x570/232323/999999{% endif %}" alt="">
                     </span>
                     <a class="play-button popup-youtube" href="{{ section.settings.banner_bg_button_url }}">
-                      <img width="{{ section.settings.banner_bg_img.width }}" height="{{ section.settings.banner_bg_img.height }}" class="img-fluid" src="{% if section.settings.banner_bg_img %}{{ section.settings.banner_bg_img | img_url: 'master' }}{% else %}https://dummyimage.com/145x145/f7f7f7/999999{% endif %}" alt="">
+                      <img width="{{ section.settings.banner_bg_img.width }}" height="{{ section.settings.banner_bg_img.height }}" class="img-fluid" src="{% if section.settings.banner_bg_img %}{{ section.settings.banner_bg_img | image_url }}{% else %}https://dummyimage.com/145x145/f7f7f7/999999{% endif %}" alt="">
                       <i class="ri-play-line"></i>
                     </a>
                 </div>
@@ -20,117 +20,117 @@
 {
   "name": "About us Section 4",
   "settings": [
-  	{
-        "type": "header",
-        "content": "Section Padding"
+    {
+      "type": "header",
+      "content": "Section Padding"
     },
     {
-        "type" : "paragraph",
-        "content" : "Desktop / Laptop / tablet"
+      "type": "paragraph",
+      "content": "Desktop / Laptop / tablet"
     },
     {
-        "type": "range",
-        "id": "about_product_padding_top",  
-        "label": "Section Padding Top",
-        "min": 0,
-        "max": 100,
-        "step": 5,
-        "unit": "px",
-        "default": 0
-    },           
-    {
-        "type": "range",
-        "id": "about_product_padding_bottom", 
-        "label": "Section Padding Bottom",
-        "min": 0,
-        "max": 100,
-        "step": 5,
-        "unit": "px",
-        "default": 0
+      "type": "range",
+      "id": "about_product_padding_top",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 0
     },
     {
-        "type" : "paragraph",
-        "content" : "Ipad pro / Ipad"
+      "type": "range",
+      "id": "about_product_padding_bottom",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 0
     },
     {
-        "type": "range",
-        "id": "about_product_padding_top_ip",  
-        "label": "Section Padding Top",
-        "min": 0,
-        "max": 100,
-        "step": 5,
-        "unit": "px",
-        "default": 0
-    },           
-    {
-        "type": "range",
-        "id": "about_product_padding_bottom_ip", 
-        "label": "Section Padding Bottom",
-        "min": 0,
-        "max": 100,
-        "step": 5,
-        "unit": "px",
-        "default": 0
+      "type": "paragraph",
+      "content": "Ipad pro / Ipad"
     },
     {
-        "type" : "paragraph",
-        "content" : "Mobile"
+      "type": "range",
+      "id": "about_product_padding_top_ip",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 0
     },
     {
-        "type": "range",
-        "id": "about_product_padding_top_xs",  
-        "label": "Section Padding Top",
-        "min": 0,
-        "max": 100,
-        "step": 5,
-        "unit": "px",
-        "default": 0
-    },           
-    {
-        "type": "range",
-        "id": "about_product_padding_bottom_xs", 
-        "label": "Section Padding Bottom",
-        "min": 0,
-        "max": 100,
-        "step": 5,
-        "unit": "px",
-        "default": 0
+      "type": "range",
+      "id": "about_product_padding_bottom_ip",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 0
     },
     {
-        "type": "header",
-        "content": "Section Background Color"
+      "type": "paragraph",
+      "content": "Mobile"
     },
     {
-        "type": "checkbox",
-        "id": "about_product_bgcolor_enable",
-        "label": "Show Background Color",
-        "default": false
+      "type": "range",
+      "id": "about_product_padding_top_xs",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 0
     },
     {
-        "type": "color",
-        "id": "about_product_bgcolor",
-        "label": "Background Color",
-        "default": "#FFFFFF"
+      "type": "range",
+      "id": "about_product_padding_bottom_xs",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 0
     },
     {
-        "type": "header",
-        "content": "Section Before Background Color"
+      "type": "header",
+      "content": "Section Background Color"
     },
     {
-        "type": "checkbox",
-        "id": "section_before_after_bg_color_enable",
-        "label": "Show Before Background Color",
-        "default": true
+      "type": "checkbox",
+      "id": "about_product_bgcolor_enable",
+      "label": "Show Background Color",
+      "default": false
     },
     {
-        "type": "color",
-        "id": "section_before_after_bg_color",
-        "label": "Before Background Color",
-        "default": "#FFFFFF"
+      "type": "color",
+      "id": "about_product_bgcolor",
+      "label": "Background Color",
+      "default": "#FFFFFF"
     },
     {
-        "type": "header",
-        "content": "About Image"
+      "type": "header",
+      "content": "Section Before Background Color"
+    },
+    {
+      "type": "checkbox",
+      "id": "section_before_after_bg_color_enable",
+      "label": "Show Before Background Color",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "section_before_after_bg_color",
+      "label": "Before Background Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "header",
+      "content": "About Image"
     },
     {
       "type": "image_picker",
@@ -139,22 +139,22 @@
       "info": "Recommended Size: 1350px x 570px"
     },
     {
-        "type": "url",
-        "id": "banner_bg_button_url",
-        "label": "Video URL"
+      "type": "url",
+      "id": "banner_bg_button_url",
+      "label": "Video URL"
     },
     {
-        "type": "image_picker",
-        "id": "banner_bg_img",
-        "label": "video icon image",
-        "info": "Recommended Size: 145px x 145px"
+      "type": "image_picker",
+      "id": "banner_bg_img",
+      "label": "video icon image",
+      "info": "Recommended Size: 145px x 145px"
     }
   ],
-  "presets":[
-  {
-    "name": "About us Section 4",
-    "category": "About us Section 4"
-  }
+  "presets": [
+    {
+      "name": "About us Section 4",
+      "category": "About us Section 4"
+    }
   ]
 }
 {% endschema %}

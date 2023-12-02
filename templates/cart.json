@@ -22,5 +22,7 @@
       }
     }
   },
-  "order": ["cart-template"]
+  "order": [
+    "cart-template"
+  ]
 }

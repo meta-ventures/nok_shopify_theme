@@ -1,6 +1,13 @@
 {
   "sections": {
-    "sitemap": { "type": "sitemap", "settings": { "menu": "main-menu" } }
+    "sitemap": {
+      "type": "sitemap",
+      "settings": {
+        "menu": "main-menu"
+      }
+    }
   },
-  "order": ["sitemap"]
+  "order": [
+    "sitemap"
+  ]
 }

@@ -104,7 +104,7 @@
           {%- endunless -%}
           {% assign i = 0 %}
           {%- for filter in results.filters -%}
-          {% assign i = i | plus:1 %}
+          {% assign i = i | plus: 1 %}
           {%- assign total_active_values = total_active_values | plus: filter.active_values.size -%}
           {% case filter.type %}
           {% when 'list' %}
@@ -135,9 +135,7 @@
           {% when 'price_range' %}
           {% liquid
             assign currencies_using_comma_decimals = 'ANG,ARS,BRL,BYN,BYR,CLF,CLP,COP,CRC,CZK,INR,DKK,EUR,HRK,HUF,IDR,ISK,MZN,NOK,PLN,RON,RUB,SEK,TRY,UYU,VES,VND' | split: ','
-            assign uses_comma_decimals = false
             if currencies_using_comma_decimals contains cart.currency.iso_code
-              assign uses_comma_decimals = true
             endif
           %}
           <div class="shop-sidebar sidebar-wedget disclosure-has-popup facets__disclosure js-filter" data-index="{{ forloop.index }}">

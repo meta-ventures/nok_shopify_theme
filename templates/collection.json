@@ -18,5 +18,7 @@
       }
     }
   },
-  "order": ["collection-template"]
+  "order": [
+    "collection-template"
+  ]
 }

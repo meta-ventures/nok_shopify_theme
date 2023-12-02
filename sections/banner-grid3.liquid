@@ -20,7 +20,7 @@
             <span class="cat-count">{{ select_category.products.count }} + {{ section.settings.item_title }}</span>
             <div class="cat-img">
                 <span class="cat-title">{{ select_category.title }}</span>
-                <img width="{{ section.settings.cat_banner.width }}" height="{{ section.settings.cat_banner.height }}" class="img-fluid" src="{% if section.settings.cat_banner %}{{ section.settings.cat_banner | img_url: 'master' }}{% else %}https://dummyimage.com/430x555/f7f7f7/999999{% endif %}" alt="">
+                <img width="{{ section.settings.cat_banner.width }}" height="{{ section.settings.cat_banner.height }}" class="img-fluid" src="{% if section.settings.cat_banner %}{{ section.settings.cat_banner | image_url }}{% else %}https://dummyimage.com/430x555/f7f7f7/999999{% endif %}" alt="">
             </div>
           </a>
         </div>
@@ -31,7 +31,7 @@
           <a href="{{ select_category2.url }}">
             <span class="cat-count">{{ select_category2.products.count }} + {{ section.settings.item_title }}</span>
             <div class="cat-img">
-                <img width="{{ section.settings.cat2_banner.width }}" height="{{ section.settings.cat2_banner.height }}" class="img-fluid" src="{% if section.settings.cat2_banner %}{{ section.settings.cat2_banner | img_url: 'master' }}{% else %}https://dummyimage.com/430x555/f7f7f7/999999{% endif %}" alt="">
+                <img width="{{ section.settings.cat2_banner.width }}" height="{{ section.settings.cat2_banner.height }}" class="img-fluid" src="{% if section.settings.cat2_banner %}{{ section.settings.cat2_banner | image_url }}{% else %}https://dummyimage.com/430x555/f7f7f7/999999{% endif %}" alt="">
                 <span class="cat-title">{{ select_category2.title }}</span>
             </div>
           </a>
@@ -44,146 +44,146 @@
 {
   "name": "Banner category",
   "settings": [
-  {
-    "type" : "header",
-    "content" : "Section Padding"
-  },
-  {
-    "type" : "paragraph",
-    "content" : "Desktop / Laptop / tablet"
-  },
-  {
-    "type": "range",
-    "id": "section_padding_top",
-    "label": "Section Padding Top",
-    "min": 0,
-    "max": 100,
-    "step": 5,
-    "unit": "px",
-    "default": 60
-  },
-  {
-    "type": "range",
-    "id": "section_padding_bottom",
-    "label": "Section Padding Bottom",
-    "min": 0,
-    "max": 100,
-    "step": 5,
-    "unit": "px",
-    "default": 60
-  },
-  {
-    "type" : "paragraph",
-    "content" : "Ipad pro / Ipad"
-  },
-  {
-    "type": "range",
-    "id": "section_padding_top_ipad",
-    "label": "Section Padding Top",
-    "min": 0,
-    "max": 100,
-    "step": 5,
-    "unit": "px",
-    "default": 30
-  },
-  {
-    "type": "range",
-    "id": "section_padding_bottom_ipad",
-    "label": "Section Padding Bottom",
-    "min": 0,
-    "max": 100,
-    "step": 5,
-    "unit": "px",
-    "default": 30
-  },
-  {
-    "type" : "paragraph",
-    "content" : "Mobile"
-  },
-  {
-    "type": "range",
-    "id": "section_padding_top_xs",
-    "label": "Section Padding Top",
-    "min": 0,
-    "max": 100,
-    "step": 5,
-    "unit": "px",
-    "default": 20
-  },
-  {
-    "type": "range",
-    "id": "section_padding_bottom_xs",
-    "label": "Section Padding Bottom",
-    "min": 0,
-    "max": 100,
-    "step": 5,
-    "unit": "px",
-    "default": 20
-  },
-  {
-    "type": "textarea",
-    "id": "cat_title",
-    "label": "Category title",
-    "default": "Make your own style"
-  },
-  {
-    "type": "textarea",
-    "id": "cat_description",
-    "label": "Category Description",
-    "default": "different ways today to find Information online you find."
-  },
-  {
-    "type": "url",
-    "id": "des_button_url",
-    "label": "Category button url"
-  },
-  {
-    "type": "text",
-    "id": "des_button",
-    "label": "Category button",
-    "default": "Membership."
-  },
-  {
-    "type": "text",
-    "id": "item_title",
-    "label": "Category items title",
-    "default": "Items"
-  },
-  {
-    "type" : "header",
-    "content" : "Category banner area"
-  },
-  {
-    "type": "collection",
-    "id": "select_category",
-    "label": "Select Your Collection"
-  },
-  {
-    "type": "image_picker",
-    "id": "cat_banner",
-    "label": "Category banner",
-    "info": "Recommended Size: 430x555px"
-  },
-  {
-    "type" : "header",
-    "content" : "Category banner area"
-  },
-  {
-    "type": "collection",
-    "id": "select_category2",
-    "label": "Select Your Collection"
-  },
-  {
-    "type": "image_picker",
-    "id": "cat2_banner",
-    "label": "Category banner",
-    "info": "Recommended Size: 430x555px"
-  }
+    {
+      "type": "header",
+      "content": "Section Padding"
+    },
+    {
+      "type": "paragraph",
+      "content": "Desktop / Laptop / tablet"
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "paragraph",
+      "content": "Ipad pro / Ipad"
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top_ipad",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom_ipad",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 30
+    },
+    {
+      "type": "paragraph",
+      "content": "Mobile"
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top_xs",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom_xs",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "textarea",
+      "id": "cat_title",
+      "label": "Category title",
+      "default": "Make your own style"
+    },
+    {
+      "type": "textarea",
+      "id": "cat_description",
+      "label": "Category Description",
+      "default": "different ways today to find Information online you find."
+    },
+    {
+      "type": "url",
+      "id": "des_button_url",
+      "label": "Category button url"
+    },
+    {
+      "type": "text",
+      "id": "des_button",
+      "label": "Category button",
+      "default": "Membership."
+    },
+    {
+      "type": "text",
+      "id": "item_title",
+      "label": "Category items title",
+      "default": "Items"
+    },
+    {
+      "type": "header",
+      "content": "Category banner area"
+    },
+    {
+      "type": "collection",
+      "id": "select_category",
+      "label": "Select Your Collection"
+    },
+    {
+      "type": "image_picker",
+      "id": "cat_banner",
+      "label": "Category banner",
+      "info": "Recommended Size: 430x555px"
+    },
+    {
+      "type": "header",
+      "content": "Category banner area"
+    },
+    {
+      "type": "collection",
+      "id": "select_category2",
+      "label": "Select Your Collection"
+    },
+    {
+      "type": "image_picker",
+      "id": "cat2_banner",
+      "label": "Category banner",
+      "info": "Recommended Size: 430x555px"
+    }
   ],
-  "presets":[
-  {
-    "name": "banner category"
-  }
+  "presets": [
+    {
+      "name": "banner category"
+    }
   ]
 }
 {% endschema %}

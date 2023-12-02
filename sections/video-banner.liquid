@@ -1,4 +1,4 @@
-<section class="video-banner" {% if section.settings.section_bg_image_enable %}style="background-image: url('{% if section.settings.section_bg_image %}{{ section.settings.section_bg_image | img_url: 'master' }}{% else %}https://dummyimage.com/1920x775{% endif %}');"{% endif %}>
+<section class="video-banner" {% if section.settings.section_bg_image_enable %}style="background-image: url('{% if section.settings.section_bg_image %}{{ section.settings.section_bg_image | image_url }}{% else %}https://dummyimage.com/1920x775{% endif %}');"{% endif %}>
 	<div class="container">
 		<div class="row">
 			<div class="col">
@@ -28,177 +28,177 @@
 {
   "name": "Video Banner",
   "settings": [
-  {
-    "type": "header",
-    "content": "Section Padding"
-  },
-  {
-    "type" : "paragraph",
-    "content" : "Desktop / Laptop / tablet"
-  },
-  {
-    "type": "range",
-    "id": "section_padding_top",
-    "label": "Section Padding Top",
-    "min": 0,
-    "max": 100,
-    "step": 1,
-    "unit": "px",
-    "default": 100
-  },
-  {
-    "type": "range",
-    "id": "section_padding_bottom",
-    "label": "Section Padding bottom",
-    "min": 0,
-    "max": 100,
-    "step": 1,
-    "unit": "px",
-    "default": 0
-  },
-  {
-    "type" : "paragraph",
-    "content" : "Ipad pro / Ipad"
-  },
-  {
-    "type": "range",
-    "id": "section_padding_top_ip",
-    "label": "Section Padding Top",
-    "min": 0,
-    "max": 100,
-    "step": 1,
-    "unit": "px",
-    "default": 80
-  },
-  {
-    "type": "range",
-    "id": "section_padding_bottom_ip",
-    "label": "Section Padding bottom",
-    "min": 0,
-    "max": 100,
-    "step": 1,
-    "unit": "px",
-    "default": 0
-  },
-  {
-    "type" : "paragraph",
-    "content" : "Mobile"
-  },
-  {
-    "type": "range",
-    "id": "section_padding_top_xs",
-    "label": "Section Padding Top",
-    "min": 0,
-    "max": 100,
-    "step": 1,
-    "unit": "px",
-    "default": 60
-  },
-  {
-    "type": "range",
-    "id": "section_padding_bottom_xs",
-    "label": "Section Padding bottom",
-    "min": 0,
-    "max": 100,
-    "step": 1,
-    "unit": "px",
-    "default": 0
-  },
-  {
-    "type" : "header",
-    "content" : "Background Image"
-  },
-  {
-    "type" : "checkbox",
-    "id" : "section_bg_image_enable",
-    "label" : "Show Background Image",
-    "default" : false
-  },
-  {
-    "type": "image_picker",
-    "id": "section_bg_image",
-    "label": "Image",
-    "info": "Recommended Size: 1920 x 775px"
-  },
-  {
-    "type" : "header",
-    "content" : "Background Color"
-  },
-  {
-    "type" : "checkbox",
-    "id" : "section_bg_color_enable",
-    "label" : "Show Background Color",
-    "default" : false
-  },
-  {
-    "type" : "color",
-    "id" : "section_bg_color",
-    "label" : "Background Color",
-    "default" : "#ffffff"
-  },
-  {
-    "type" : "header",
-    "content" : "Video Content"
-  },
-  {
-    "type" : "header",
-    "content" : "Title"
-  },
-  {
-    "type" : "text",
-    "id" : "video_title",
-    "label" : "Title",
-    "default" : "Best quality of video shoot"
-  },
-  {
-    "type" : "color",
-    "id" : "video_title_color",
-    "label" : "Title Color",
-    "default" : "#ffffff"
-  },
-  {
-    "type" : "header",
-    "content" : "Description"
-  },
-  {
-    "type" : "textarea",
-    "id" : "video_desc",
-    "label" : "Description",
-    "default" : "There is only you and your camera. The limitations in your photography are in yourself"
-  },
-  {
-    "type" : "color",
-    "id" : "video_desc_color",
-    "label" : "Description Color",
-    "default" : "#ffffff"
-  },
-  {
-    "type" : "header",
-    "content" : "Video Button"
-  },
-  {
-    "type" : "text",
-    "id" : "video_icon",
-    "label" : "Video Icon",
-    "default" : "feather-play"
-  },
-  {
-    "type" : "text",
-    "id" : "video_btn_text",
-    "label" : "Video Button Text",
-    "default" : "Watch video"
-  },
-  {
-    "type" : "url",
-    "id" : "video_url",
-    "label" : "Video url"
-  }
+    {
+      "type": "header",
+      "content": "Section Padding"
+    },
+    {
+      "type": "paragraph",
+      "content": "Desktop / Laptop / tablet"
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom",
+      "label": "Section Padding bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "paragraph",
+      "content": "Ipad pro / Ipad"
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top_ip",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom_ip",
+      "label": "Section Padding bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "paragraph",
+      "content": "Mobile"
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top_xs",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom_xs",
+      "label": "Section Padding bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Background Image"
+    },
+    {
+      "type": "checkbox",
+      "id": "section_bg_image_enable",
+      "label": "Show Background Image",
+      "default": false
+    },
+    {
+      "type": "image_picker",
+      "id": "section_bg_image",
+      "label": "Image",
+      "info": "Recommended Size: 1920 x 775px"
+    },
+    {
+      "type": "header",
+      "content": "Background Color"
+    },
+    {
+      "type": "checkbox",
+      "id": "section_bg_color_enable",
+      "label": "Show Background Color",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "section_bg_color",
+      "label": "Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Video Content"
+    },
+    {
+      "type": "header",
+      "content": "Title"
+    },
+    {
+      "type": "text",
+      "id": "video_title",
+      "label": "Title",
+      "default": "Best quality of video shoot"
+    },
+    {
+      "type": "color",
+      "id": "video_title_color",
+      "label": "Title Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Description"
+    },
+    {
+      "type": "textarea",
+      "id": "video_desc",
+      "label": "Description",
+      "default": "There is only you and your camera. The limitations in your photography are in yourself"
+    },
+    {
+      "type": "color",
+      "id": "video_desc_color",
+      "label": "Description Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Video Button"
+    },
+    {
+      "type": "text",
+      "id": "video_icon",
+      "label": "Video Icon",
+      "default": "feather-play"
+    },
+    {
+      "type": "text",
+      "id": "video_btn_text",
+      "label": "Video Button Text",
+      "default": "Watch video"
+    },
+    {
+      "type": "url",
+      "id": "video_url",
+      "label": "Video url"
+    }
   ],
-  "presets":[
-  {
-    "name": "Video Banner",
-    "category": "Video Banner"
-  }
+  "presets": [
+    {
+      "name": "Video Banner",
+      "category": "Video Banner"
+    }
   ]
 }
 {% endschema %}

@@ -2,8 +2,11 @@
   "sections": {
     "list-collection-template": {
       "type": "list-collection-template",
-      "settings": {}
+      "settings": {
+      }
     }
   },
-  "order": ["list-collection-template"]
+  "order": [
+    "list-collection-template"
+  ]
 }

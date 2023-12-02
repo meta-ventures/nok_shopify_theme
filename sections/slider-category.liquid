@@ -1,6 +1,6 @@
 {% if section.settings.section_enable %}
 <!-- Browuse categoryies -->
-<section class="slider-category" {% if section.settings.slider_cat_bg_img_enable %}style="background-image: url('{% if section.settings.slider_cat_bg_img %}{{ section.settings.slider_cat_bg_img | img_url: 'master' }}{% else %}https://dummyimage.com/1920x532{% endif %}');"{% endif %}>
+<section class="slider-category" {% if section.settings.slider_cat_bg_img_enable %}style="background-image: url('{% if section.settings.slider_cat_bg_img %}{{ section.settings.slider_cat_bg_img | image_url }}{% else %}https://dummyimage.com/1920x532{% endif %}');"{% endif %}>
   <div class="container">
     <div class="row">
       <div class="col">
@@ -12,7 +12,7 @@
               <a href="{{ category_product.url }}">
                 <span class="cat-svg-icon">
                   {% if block.settings.cat_img %}
-                  <img width="{{ block.settings.cat_img.width }}" height="{{ block.settings.cat_img.height }}" src="{% if block.settings.cat_img %}{{ block.settings.cat_img | img_url: '40x40',crop: 'center' }}{% else %}https://dummyimage.com/50x50{% endif %}" class="img-fluid" alt="">
+                  <img width="{{ block.settings.cat_img.width }}" height="{{ block.settings.cat_img.height }}" src="{% if block.settings.cat_img %}{{ block.settings.cat_img | image_url: width: 40, height: 40, crop: 'center' }}{% else %}https://dummyimage.com/50x50{% endif %}" class="img-fluid" alt="">
                   {% else %}
                   {{ block.settings.cat_icon }}
                   {% endif %}
@@ -70,57 +70,57 @@
 {
   "name": "Category",
   "settings": [
-  {
-    "type" : "header",
-    "content" : "Section enable"
-  },
-  {
-    "type": "checkbox",
-    "id": "section_enable",
-    "label": "Section enable",
-    "default": true
-  },
-  {
-    "type": "header",
-    "content": "Section Background Color"
-  },
-  {
-    "type" : "color",
-    "id" : "cat_bg_color",
-    "label" : "Background Color",
-    "default" : "#fff"
-  }
-  ],
-  "blocks" : [
-  {
-    "name" : "slider-category",
-    "type" : "product_tab",
-    "settings" : [
     {
-        "type": "image_picker",
-        "id": "cat_img",
-        "label": "Category icon image",
-        "info": "Recommended Size: 150px x 150px"
+      "type": "header",
+      "content": "Section enable"
     },
     {
-        "type": "textarea",
-        "id": "cat_icon",
-        "label": "Category icon",
-        "info": "[See Icon Name](https:\/\/remixicon.com)"
+      "type": "checkbox",
+      "id": "section_enable",
+      "label": "Section enable",
+      "default": true
     },
     {
-      "type": "collection",
-      "id": "slider_category_handle",
-      "label": "Select Your Collection"
+      "type": "header",
+      "content": "Section Background Color"
+    },
+    {
+      "type": "color",
+      "id": "cat_bg_color",
+      "label": "Background Color",
+      "default": "#fff"
     }
-    ]
-  }
   ],
-  "presets":[
-  {
-    "name": "Category",
-    "category": "Shop By Category"
-  }
+  "blocks": [
+    {
+      "name": "slider-category",
+      "type": "product_tab",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "cat_img",
+          "label": "Category icon image",
+          "info": "Recommended Size: 150px x 150px"
+        },
+        {
+          "type": "textarea",
+          "id": "cat_icon",
+          "label": "Category icon",
+          "info": "[See Icon Name](https://remixicon.com)"
+        },
+        {
+          "type": "collection",
+          "id": "slider_category_handle",
+          "label": "Select Your Collection"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Category",
+      "category": "Shop By Category"
+    }
   ]
 }
 {% endschema %}

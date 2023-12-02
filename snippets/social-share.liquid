@@ -12,7 +12,7 @@
 
 {% endif %}
 
-{% assign shareButtonStyle = section.settings.social_sharing_style %}
+
 <ul class="pro_social_link">
   <li>
     <a target="_blank" href="//www.facebook.com/sharer.php?u={{ permalinkURL }}" class="facebook" title="Share on Facebook" tabindex="0"><i class="ri-facebook-fill"></i></a>
@@ -20,9 +20,9 @@
   <li>
     <a target="_blank" href="//twitter.com/share?text={{ shareTitle }}&amp;url={{ permalinkURL }};source=webclient" class="twitter" title="Share on Twitter" tabindex="0"><i class="ri-twitter-line"></i></a>
   </li>
-  {% if product.featured_image or article.image  %}
+  {% if product.featured_image or article.image %}
   <li>
-    <a target="_blank" href="//pinterest.com/pin/create/button/?url={{ permalinkURL }}&amp;media=http:{% if template contains 'product' %}{{ product | img_url: '1024x1024' }}{% else %}{{ article | img_url: '1024x1024' }}{% endif %}&amp;description={{ shareTitle }}" class="pinterest" title="Share on Pinterest" tabindex="0"><i class="ri-pinterest-fill"></i></a>
+    <a target="_blank" href="//pinterest.com/pin/create/button/?url={{ permalinkURL }}&amp;media=http:{% if template contains 'product' %}{{ product | image_url: width: 1024, height: 1024 }}{% else %}{{ article | image_url: width: 1024, height: 1024 }}{% endif %}&amp;description={{ shareTitle }}" class="pinterest" title="Share on Pinterest" tabindex="0"><i class="ri-pinterest-fill"></i></a>
   </li>
   {% endif %}
 </ul>

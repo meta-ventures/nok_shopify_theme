@@ -5,12 +5,12 @@
         <div class="about-m-image">
           <div class="image-block">
             <span>
-              <img width="{{ section.settings.about_m_image_1.width }}" height="{{ section.settings.about_m_image_1.height }}" class="img-fluid" src="{% if section.settings.about_m_image_1 %}{{ section.settings.about_m_image_1 | img_url: 'master' }}{% else %}https://dummyimage.com/730x515/f7f7f7/999999{% endif %}" alt="">
+              <img width="{{ section.settings.about_m_image_1.width }}" height="{{ section.settings.about_m_image_1.height }}" class="img-fluid" src="{% if section.settings.about_m_image_1 %}{{ section.settings.about_m_image_1 | image_url }}{% else %}https://dummyimage.com/730x515/f7f7f7/999999{% endif %}" alt="">
             </span>
           </div>
           <div class="image-block">
             <span>
-              <img width="{{ section.settings.about_m_image_2.width }}" height="{{ section.settings.about_m_image_2.height }}" class="img-fluid" src="{% if section.settings.about_m_image_2 %}{{ section.settings.about_m_image_2 | img_url: 'master' }}{% else %}https://dummyimage.com/730x515/f7f7f7/999999{% endif %}" alt="">
+              <img width="{{ section.settings.about_m_image_2.width }}" height="{{ section.settings.about_m_image_2.height }}" class="img-fluid" src="{% if section.settings.about_m_image_2 %}{{ section.settings.about_m_image_2 | image_url }}{% else %}https://dummyimage.com/730x515/f7f7f7/999999{% endif %}" alt="">
             </span>
           </div>
         </div>
@@ -22,104 +22,104 @@
 {
   "name": "About Modern Section 4",
   "settings": [
-  {
-    "type": "header",
-    "content": "Section Padding"
-  },
-  {
-    "type" : "paragraph",
-    "content" : "Desktop / Laptop"
-  },
-  {
-    "type": "range",
-    "id": "section_padding_top",
-    "label": "Section Padding Top",
-    "min": 0,
-    "max": 100,
-    "step": 5,
-    "unit": "px",
-    "default": 100
-  },
-  {
-    "type": "range",
-    "id": "section_padding_bottom",
-    "label": "Section Padding bottom",
-    "min": 0,
-    "max": 100,
-    "step": 5,
-    "unit": "px",
-    "default": 100
-  },
-  {
-    "type" : "paragraph",
-    "content" : "Ipad pro / Ipad"
-  },
-  {
-    "type": "range",
-    "id": "section_padding_top_lg",
-    "label": "Section Padding Top",
-    "min": 0,
-    "max": 100,
-    "step": 5,
-    "unit": "px",
-    "default": 80
-  },
-  {
-    "type": "range",
-    "id": "section_padding_bottom_lg",
-    "label": "Section Padding bottom",
-    "min": 0,
-    "max": 100,
-    "step": 5,
-    "unit": "px",
-    "default": 80
-  },
-  {
-    "type" : "paragraph",
-    "content" : "Mobile"
-  },
-  {
-    "type": "range",
-    "id": "section_padding_top_xs",
-    "label": "Section Padding Top",
-    "min": 0,
-    "max": 100,
-    "step": 5,
-    "unit": "px",
-    "default": 60
-  },
-  {
-    "type": "range",
-    "id": "section_padding_bottom_xs",
-    "label": "Section Padding bottom",
-    "min": 0,
-    "max": 100,
-    "step": 5,
-    "unit": "px",
-    "default": 60
-  },
-  {
-    "type": "header",
-    "content": "Faq Image"
-  },
-  {
-    "type": "image_picker",
-    "id": "about_m_image_1",
-    "label": "Image 1",
-    "info": "Recommended Size: 730px x 515px"
-  },
-  {
-    "type": "image_picker",
-    "id": "about_m_image_2",
-    "label": "Image 2",
-    "info": "Recommended Size: 730px x 515px"
-  }
+    {
+      "type": "header",
+      "content": "Section Padding"
+    },
+    {
+      "type": "paragraph",
+      "content": "Desktop / Laptop"
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom",
+      "label": "Section Padding bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 100
+    },
+    {
+      "type": "paragraph",
+      "content": "Ipad pro / Ipad"
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top_lg",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom_lg",
+      "label": "Section Padding bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "paragraph",
+      "content": "Mobile"
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top_xs",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom_xs",
+      "label": "Section Padding bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "header",
+      "content": "Faq Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "about_m_image_1",
+      "label": "Image 1",
+      "info": "Recommended Size: 730px x 515px"
+    },
+    {
+      "type": "image_picker",
+      "id": "about_m_image_2",
+      "label": "Image 2",
+      "info": "Recommended Size: 730px x 515px"
+    }
   ],
-  "presets":[
-  {
-    "name": "About Modern Section 4",
-    "category": "About Modern"
-  }
+  "presets": [
+    {
+      "name": "About Modern Section 4",
+      "category": "About Modern"
+    }
   ]
 }
 {% endschema %}

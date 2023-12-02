@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col">
-        <div class="newsletter" {% if section.settings.news_bgimg_check %}style="background-image: url('{% if section.settings.news_bgimg %}{{ section.settings.news_bgimg | img_url: 'master' }}{% else %}https://dummyimage.com/1500x500{% endif %}');"{% endif %}>
+        <div class="newsletter" {% if section.settings.news_bgimg_check %}style="background-image: url('{% if section.settings.news_bgimg %}{{ section.settings.news_bgimg | image_url }}{% else %}https://dummyimage.com/1500x500{% endif %}');"{% endif %}>
           <div class="news-con">
             <div class="section-title">
                 <h2>
@@ -40,130 +40,130 @@
 {
   "name": "Newsletter",
   "settings": [
-  {
-    "type" : "header",
-    "content" : "Section Padding"
-  },
-  {
-    "type" : "paragraph",
-    "content" : "Desktop / Laptop / tablet"
-  },
-  {
-    "type": "range",
-    "id": "news_padding_top",
-    "label": "Section Padding Top",
-    "min": 0,
-    "max": 100,
-    "step": 1,
-    "unit": "px",
-    "default": 100
-  },
-  {
-    "type": "range",
-    "id": "news_padding_bottom",
-    "label": "Section Padding Bottom",
-    "min": 0,
-    "max": 100,
-    "step": 1,
-    "unit": "px",
-    "default": 0
-  },
-  {
-    "type" : "paragraph",
-    "content" : "Ipad pro / Ipad"
-  },
-  {
-    "type": "range",
-    "id": "news_padding_top_ip",
-    "label": "Section Padding Top",
-    "min": 0,
-    "max": 100,
-    "step": 1,
-    "unit": "px",
-    "default": 80
-  },
-  {
-    "type": "range",
-    "id": "news_padding_bottom_ip",
-    "label": "Section Padding Bottom",
-    "min": 0,
-    "max": 100,
-    "step": 1,
-    "unit": "px",
-    "default": 0
-  },
-  {
-    "type" : "paragraph",
-    "content" : "Mobile"
-  },
-  {
-    "type": "range",
-    "id": "news_padding_top_xs",
-    "label": "Section Padding Top",
-    "min": 0,
-    "max": 100,
-    "step": 1,
-    "unit": "px",
-    "default": 60
-  },
-  {
-    "type": "range",
-    "id": "news_padding_bottom_xs",
-    "label": "Section Padding Bottom",
-    "min": 0,
-    "max": 100,
-    "step": 1,
-    "unit": "px",
-    "default": 0
-  },
-  {
-    "type" : "header",
-    "content" : "Section Background Imag"
-  },
-  {
-    "type": "image_picker",
-    "id": "news_bgimg",
-    "label": "Background Image",
-    "info": "Recommended Size: 1920 x 450px"
-  },
-  {
-    "type" : "checkbox",
-    "id" : "news_bgimg_check",
-    "label" : "Show Background Image",
-    "default" : true
-  },
-  {
-    "type" : "header",
-    "content" : "Section Background Color"
-  },
-  {
-    "type" : "color",
-    "id" : "news_bgcolor",
-    "label" : "Background Color",
-    "default" : "#fff"
-  },
-  {
-    "type" : "header",
-    "content" : "Section Property"
-  },
-  {
-    "type": "textarea",
-    "id": "newsletter_title",
-    "label": "Title",
-    "default": "Subscribe newsletter"
-  },
-  {
-    "type": "textarea",
-    "id": "sub_title",
-    "label": "Description",
-    "default": "Sign up here to get 20% off on your next purchase, special offers and other discount information"
-  }
+    {
+      "type": "header",
+      "content": "Section Padding"
+    },
+    {
+      "type": "paragraph",
+      "content": "Desktop / Laptop / tablet"
+    },
+    {
+      "type": "range",
+      "id": "news_padding_top",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "news_padding_bottom",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "paragraph",
+      "content": "Ipad pro / Ipad"
+    },
+    {
+      "type": "range",
+      "id": "news_padding_top_ip",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "news_padding_bottom_ip",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "paragraph",
+      "content": "Mobile"
+    },
+    {
+      "type": "range",
+      "id": "news_padding_top_xs",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "news_padding_bottom_xs",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Section Background Imag"
+    },
+    {
+      "type": "image_picker",
+      "id": "news_bgimg",
+      "label": "Background Image",
+      "info": "Recommended Size: 1920 x 450px"
+    },
+    {
+      "type": "checkbox",
+      "id": "news_bgimg_check",
+      "label": "Show Background Image",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Section Background Color"
+    },
+    {
+      "type": "color",
+      "id": "news_bgcolor",
+      "label": "Background Color",
+      "default": "#fff"
+    },
+    {
+      "type": "header",
+      "content": "Section Property"
+    },
+    {
+      "type": "textarea",
+      "id": "newsletter_title",
+      "label": "Title",
+      "default": "Subscribe newsletter"
+    },
+    {
+      "type": "textarea",
+      "id": "sub_title",
+      "label": "Description",
+      "default": "Sign up here to get 20% off on your next purchase, special offers and other discount information"
+    }
   ],
   "presets": [
-  {
-    "name": "Newsletter",
-    "category": "Newsletter"
-  }
+    {
+      "name": "Newsletter",
+      "category": "Newsletter"
+    }
   ]
 }
 {% endschema %}

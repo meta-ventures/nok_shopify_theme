@@ -18,5 +18,7 @@
       }
     }
   },
-  "order": ["wishlist"]
+  "order": [
+    "wishlist"
+  ]
 }

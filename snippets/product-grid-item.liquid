@@ -14,7 +14,7 @@
 <div class="single-product-wrap{% unless product.available %} stock-out{% endunless %}">
     <div class="product-image{% unless product.available %} stock-out{% endunless %}">
         <a class="pro-img" href="{{ product.url | within: collection }}">
-            <img width="{{ product.featured_image.width }}" height="{{ product.featured_image.height }}" class="img-fluid{% if settings.pro_hvr_enable %} img1{% endif %}" src="{{ product.featured_image.src | img_url : '515X575', crop: 'center' }}" alt="{{ product.featured_image.src.alt | escape  }}">
+            <img width="{{ product.featured_image.width }}" height="{{ product.featured_image.height }}" class="img-fluid{% if settings.pro_hvr_enable %} img1{% endif %}" src="{{ product.featured_image.src | img_url : '515X575', crop: 'center' }}" alt="{{ product.featured_image.src.alt | escape }}">
             {% if settings.pro_hvr_enable %}
             <img width="{{ product.images[1].width }}" height="{{ product.images[1].height }}" class="img-fluid{% if settings.pro_hvr_enable %} img2{% endif %}" src="{{ product.images[1] | img_url: '515X575', crop: 'center' }}" alt="{{ product.images.last.alt | escape }}">
             {% endif %}

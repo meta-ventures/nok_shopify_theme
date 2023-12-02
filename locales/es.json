@@ -23,6 +23,40 @@
       "title": "Buscar productos en nuestro sitio",
       "placeholder": "buscar en nuestra tienda",
       "submit": "Buscar"
+    },
+    "accessibility": {
+      "skip_to_content": "TODO",
+      "close_modal": "TODO",
+      "link_messages": {
+        "new_window": "TODO",
+        "external": "TODO",
+        "new_window_and_external": "TODO"
+      },
+      "refresh_page": "TODO",
+      "selection_help": "TODO",
+      "unit_price_separator": "TODO",
+      "error": "TODO"
+    },
+    "password_page": {
+      "opening_soon": "TODO",
+      "login_form_heading": "TODO",
+      "login_form_password_label": "TODO",
+      "login_form_password_placeholder": "TODO",
+      "login_form_submit": "TODO",
+      "signup_form_email_label": "TODO",
+      "signup_form_success": "TODO",
+      "admin_link_html": "TODO",
+      "password_link": "TODO"
+    },
+    "social": {
+      "share_on_facebook": "TODO",
+      "share_on_twitter": "TODO",
+      "share_on_pinterest": "TODO",
+      "alt_text": {
+        "share_on_facebook": "TODO",
+        "share_on_twitter": "TODO",
+        "share_on_pinterest": "TODO"
+      }
     }
   },
   "blogs": {
@@ -78,17 +112,12 @@
   },
   "collections": {
     "general": {
-      "all_of_collection": "Todos",
-      "no_matches": "Lo sentimos, no hay productos que coincidan con su búsqueda.",
-      "link_title": "Navegue por nuestra colección {{ title }}",
-      "grid_view": "Tabla",
-      "list_view": "Lista",
-      "items_with_count": {
-        "one": "{{ count }} artículo",
-        "other": "{{ count }} artículos"
-      }
+      "empty_product_title": "TODO",
+      "empty_product_desc": "TODO",
+      "empty_product_use_fewer_filters": "TODO",
+      "empty_product_text_or": "TODO",
+      "empty_product_html_link": "TODO"
     },
-    "sidebar": { "tags": "Etiquetas" },
     "sorting": {
       "title": "Ordenar por",
       "featured": "Destacados",
@@ -100,10 +129,18 @@
       "date_descending": "Fecha, nuevo a antiguo",
       "date_ascending": "Fecha, antiguo a nuevo"
     },
-    "onboarding": {
-      "modal_title": "Esta página mostrará todos los productos de su tienda",
-      "no_products_html": "Todavía no hay productos pero, una vez que comience a añadirlos, se mostrarán aquí sin importar si están en una colección.",
-      "add_product": "Agregar producto"
+    "facets": {
+      "filter_by_label": "TODO",
+      "results_with_count": "TODO",
+      "product_count_simple": "TODO",
+      "product_count": "TODO",
+      "clear_all": "TODO",
+      "filters_selected": "TODO",
+      "max_price": "TODO",
+      "filter_reset": "TODO",
+      "price_filter_from": "TODO",
+      "price_filter_to": "TODO",
+      "filter_button": "TODO"
     }
   },
   "contact": {
@@ -234,11 +271,19 @@
     }
   },
   "layout": {
-    "navigation": { "menu": "Menú" },
-    "drawers": { "browse": "Navegar", "close_menu": "Cerrar menú" },
+    "navigation": {
+      "menu": "Menú"
+    },
+    "drawers": {
+      "browse": "Navegar",
+      "close_menu": "Cerrar menú"
+    },
     "cart": {
       "title": "Carrito",
-      "items_count": { "one": "artículo", "other": "artículos" }
+      "items_count": {
+        "one": "artículo",
+        "other": "artículos"
+      }
     },
     "customer": {
       "account": "Cuenta",
@@ -259,7 +304,12 @@
       "next_product_html": "Siguiente producto &rarr;",
       "from_text_html": "De {{ price }}",
       "sale_price": "Precio de oferta",
-      "regular_price": "Precio habitual"
+      "regular_price": "Precio habitual",
+      "vendor": "TODO",
+      "type": "TODO",
+      "sku": "TODO",
+      "barcode": "TODO",
+      "weight": "TODO"
     },
     "product": {
       "sold_out": "Agotado",
@@ -274,18 +324,23 @@
   },
   "gift_cards": {
     "issued": {
-      "title": "¡Aquí está su tarjeta de regalo de {{ value }} para {{ shop }}!",
       "subtext": "¡Aquí está su tarjeta de regalo!",
       "disabled": "Inhabilitada",
       "expired": "Expiró en {{ expiry }}",
       "active": "Expira en {{ expiry }}",
-      "redeem": "Use este código al terminar la comprar para canjear su tarjeta de regalo",
       "shop_link": "Empezar a comprar",
       "print": "Imprimir",
-      "add_to_apple_wallet": "Añadir a Apple Wallet"
+      "add_to_apple_wallet": "Añadir a Apple Wallet",
+      "title_html": "TODO",
+      "gift_card_code": "TODO",
+      "redeem_html": "TODO",
+      "remaining_html": "TODO",
+      "qr_image_alt": "TODO"
     }
   },
-  "date_formats": { "month_day_year": "%d de %B, %Y" },
+  "date_formats": {
+    "month_day_year": "%d de %B, %Y"
+  },
   "default_lan": {
     "popup_product": {
       "added": "Añadido a la cesta con éxito!",
@@ -306,6 +361,18 @@
       "added_html": "<span class=\"icon icon-shopping_basket\"></span> Agregado",
       "error_html": "<span class=\"icon icon-shopping_basket\"></span> Limitar productos",
       "wait_html": "<span class=\"icon icon-shopping_basket\"></span> Espera"
+    }
+  },
+  "sections": {
+    "header": {
+      "announcement_bar_label": "TODO"
+    },
+    "map": {
+      "address_error": "TODO",
+      "address_no_results": "TODO",
+      "address_query_limit_html": "TODO",
+      "auth_error_html": "TODO",
+      "section_heading": "TODO"
     }
   }
 }

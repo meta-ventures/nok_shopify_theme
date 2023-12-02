@@ -20,7 +20,7 @@
                     <div class="about-banner-area">
                         <div class="single-banner banner-hover">
                             <a href="{% if block.settings.abt_banner_video_button_enable %}{{ block.settings.abt_banner_video_button_url }}{% else %}javascript:void(0){% endif %}" class="banner-img{% if block.settings.abt_banner_video_button_enable %} play-button popup-youtube{% endif %}">
-                                <img width="{{ block.settings.about_banner_img.width }}" height="{{ block.settings.about_banner_img.height }}" src="{% if block.settings.about_banner_img %}{{ block.settings.about_banner_img | img_url: 'master' }}{% else %}https://dummyimage.com/675x550{% endif %}" class="img-fluid" alt="">
+                                <img width="{{ block.settings.about_banner_img.width }}" height="{{ block.settings.about_banner_img.height }}" src="{% if block.settings.about_banner_img %}{{ block.settings.about_banner_img | image_url }}{% else %}https://dummyimage.com/675x550{% endif %}" class="img-fluid" alt="">
                                 {% if block.settings.abt_banner_video_button_enable %}
                                 <span>
                                     <i class="{{ block.settings.abt_banner_video_icon }}"></i>
@@ -47,178 +47,178 @@
 
 {% schema %}
 {
-    "name": "About Template2",
-    "settings": [
+  "name": "About Template2",
+  "settings": [
     {
-        "type": "header",
-        "content": "Section Padding"
+      "type": "header",
+      "content": "Section Padding"
     },
     {
-        "type" : "paragraph",
-        "content" : "Desktop / Laptop / tablet"
+      "type": "paragraph",
+      "content": "Desktop / Laptop / tablet"
     },
     {
-        "type": "range",
-        "id": "about2_padding_top",  
-        "label": "Section Padding Top",
-        "min": 0,
-        "max": 100,
-        "step": 1,
-        "unit": "px",
-        "default": 100
-    },           
-    {
-        "type": "range",
-        "id": "about2_padding_bottom", 
-        "label": "Section Padding Bottom",
-        "min": 0,
-        "max": 100,
-        "step": 1,
-        "unit": "px",
-        "default": 100
+      "type": "range",
+      "id": "about2_padding_top",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 100
     },
     {
-        "type" : "paragraph",
-        "content" : "Ipad pro / Ipad"
+      "type": "range",
+      "id": "about2_padding_bottom",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 100
     },
     {
-        "type": "range",
-        "id": "about2_padding_top_ip",  
-        "label": "Section Padding Top",
-        "min": 0,
-        "max": 100,
-        "step": 1,
-        "unit": "px",
-        "default": 80
-    },           
-    {
-        "type": "range",
-        "id": "about2_padding_bottom_ip", 
-        "label": "Section Padding Bottom",
-        "min": 0,
-        "max": 100,
-        "step": 1,
-        "unit": "px",
-        "default": 80
+      "type": "paragraph",
+      "content": "Ipad pro / Ipad"
     },
     {
-        "type" : "paragraph",
-        "content" : "Mobile"
+      "type": "range",
+      "id": "about2_padding_top_ip",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 80
     },
     {
-        "type": "range",
-        "id": "about2_padding_top_xs",  
-        "label": "Section Padding Top",
-        "min": 0,
-        "max": 100,
-        "step": 1,
-        "unit": "px",
-        "default": 60
-    },           
-    {
-        "type": "range",
-        "id": "about2_padding_bottom_xs", 
-        "label": "Section Padding Bottom",
-        "min": 0,
-        "max": 100,
-        "step": 1,
-        "unit": "px",
-        "default": 60
+      "type": "range",
+      "id": "about2_padding_bottom_ip",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 80
     },
     {
-        "type": "header",
-        "content": "Section Background Color"
+      "type": "paragraph",
+      "content": "Mobile"
     },
     {
-        "type": "color",
-        "id": "about2_bgcolor",
-        "label": "Background Color",
-        "default": "#FFFFFF"
+      "type": "range",
+      "id": "about2_padding_top_xs",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 60
     },
     {
-        "type": "checkbox",
-        "id": "about2_bgcolor_enable",
-        "label": "Show Background Color",
-        "default": true
+      "type": "range",
+      "id": "about2_padding_bottom_xs",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 60
     },
     {
-        "type": "header",
-        "content": "Section Content"
+      "type": "header",
+      "content": "Section Background Color"
     },
     {
-        "type": "text",
-        "id": "about_product_title",
-        "label": "Title",
-        "default": "About us"
+      "type": "color",
+      "id": "about2_bgcolor",
+      "label": "Background Color",
+      "default": "#FFFFFF"
     },
     {
-        "type": "textarea",
-        "id": "about_des",
-        "label": "Description",
-        "default": "Lorem Ipsum is printing & typesetting industry's standard dummy text since texts"
+      "type": "checkbox",
+      "id": "about2_bgcolor_enable",
+      "label": "Show Background Color",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Section Content"
+    },
+    {
+      "type": "text",
+      "id": "about_product_title",
+      "label": "Title",
+      "default": "About us"
+    },
+    {
+      "type": "textarea",
+      "id": "about_des",
+      "label": "Description",
+      "default": "Lorem Ipsum is printing & typesetting industry's standard dummy text since texts"
     }
-    ],
-    "blocks":[
+  ],
+  "blocks": [
     {
-        "type": "about-description",
-        "name": "About Description",
-        "settings": [
+      "type": "about-description",
+      "name": "About Description",
+      "settings": [
         {
-            "type" : "header",
-            "content" : "Banner Image"
+          "type": "header",
+          "content": "Banner Image"
         },
         {
-            "type": "image_picker",
-            "id": "about_banner_img",
-            "label": "Banner Image",
-            "info": "Recommended Size: 675px x 550px"
+          "type": "image_picker",
+          "id": "about_banner_img",
+          "label": "Banner Image",
+          "info": "Recommended Size: 675px x 550px"
         },
         {
-            "type": "header",
-            "content": "Video Button"
+          "type": "header",
+          "content": "Video Button"
         },
         {
-            "type": "checkbox",
-            "id": "abt_banner_video_button_enable",
-            "label": "Show Video Button",
-            "default": false
+          "type": "checkbox",
+          "id": "abt_banner_video_button_enable",
+          "label": "Show Video Button",
+          "default": false
         },
         {
-            "type": "text",
-            "id": "abt_banner_video_icon",
-            "label": "Icon Class",
-            "default": "ri-play-line"
+          "type": "text",
+          "id": "abt_banner_video_icon",
+          "label": "Icon Class",
+          "default": "ri-play-line"
         },
         {
-            "type": "url",
-            "id": "abt_banner_video_button_url",
-            "label": "Video Button URL"
+          "type": "url",
+          "id": "abt_banner_video_button_url",
+          "label": "Video Button URL"
         },
         {
-            "type" : "header",
-            "content" : "Section Content"
+          "type": "header",
+          "content": "Section Content"
         },
         {
-            "type": "text",
-            "id": "title",
-            "label": "Title",
-            "default": "Our company"
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Our company"
         },
         {
-            "type": "textarea",
-            "id": "text",
-            "label": "Description",
-            "default": "Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+          "type": "textarea",
+          "id": "text",
+          "label": "Description",
+          "default": "Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
         }
-        ]
+      ]
     }
-    ],
-    "presets":[
+  ],
+  "presets": [
     {
-        "name": "About Template2",
-        "category": "2. About Us"
+      "name": "About Template2",
+      "category": "2. About Us"
     }
-    ]
+  ]
 }
 {% endschema %}
 <style>
