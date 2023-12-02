@@ -22,10 +22,31 @@
             "slider_content_position": "left",
             "slider_text_position": "left"
           }
+        },
+        "c25aea12-34fa-449c-9cf9-2d4497fa868f": {
+          "type": "slide",
+          "settings": {
+            "slider_bg_img": "shopify:\/\/shop_images\/In_Hand_Mobile_Mockup_copiar.webp",
+            "slider_img_enable": false,
+            "slider_img": "shopify:\/\/shop_images\/In_Hand_Mobile_Mockup_copiar_cell.webp",
+            "slider_title": "Introduce the rimonting drone",
+            "slider_title_color": "#FFFFFF",
+            "slider_desc": "Compact drone with 4.5k 65fps 45min battery average life + 55 mph speed",
+            "slider_desc_color": "#FFFFFF",
+            "price_1": "$1450.00",
+            "price_1_color": "#1c1c1c",
+            "price_2": "$999.00",
+            "price_2_color": "#1c1c1c",
+            "slider_button": "Buy now",
+            "slider_button_url": "",
+            "slider_content_position": "left",
+            "slider_text_position": "left"
+          }
         }
       },
       "block_order": [
-        "5c34a61d-9064-46a0-8217-997296959f35"
+        "5c34a61d-9064-46a0-8217-997296959f35",
+        "c25aea12-34fa-449c-9cf9-2d4497fa868f"
       ],
       "settings": {
         "slider_arrow_enable": true,
