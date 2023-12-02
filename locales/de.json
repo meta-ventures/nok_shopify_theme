@@ -363,5 +363,8 @@
       "wait_html": "<span class=\"icon icon-shopping_basket\"><\/span> Warte ab"
     }
   },
-  "sections": "TODO"
+  "sections": {
+    "header": "TODO",
+    "map": "TODO"
+  }
 }
