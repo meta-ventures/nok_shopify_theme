@@ -1,1 +1,71 @@
-{}
+{
+  "general": {
+    "accessibility": "TODO",
+    "meta": "TODO",
+    "404": "TODO",
+    "breadcrumbs": "TODO",
+    "newsletter_form": "TODO",
+    "search": "TODO",
+    "password_page": "TODO",
+    "social": "TODO"
+  },
+  "sections": {
+    "header": "TODO",
+    "map": "TODO"
+  },
+  "blogs": {
+    "article": "TODO",
+    "comments": "TODO",
+    "sidebar": "TODO"
+  },
+  "cart": {
+    "general": "TODO",
+    "label": "TODO"
+  },
+  "collections": {
+    "general": "TODO",
+    "sorting": "TODO",
+    "facets": "TODO"
+  },
+  "contact": {
+    "form": "TODO"
+  },
+  "customer": {
+    "account": "TODO",
+    "activate_account": "TODO",
+    "addresses": "TODO",
+    "login": "TODO",
+    "orders": "TODO",
+    "order": "TODO",
+    "recover_password": "TODO",
+    "reset_password": "TODO",
+    "register": "TODO"
+  },
+  "homepage": {
+    "sections": "TODO",
+    "onboarding": "TODO"
+  },
+  "layout": {
+    "navigation": "TODO",
+    "drawers": "TODO",
+    "cart": "TODO",
+    "customer": "TODO",
+    "footer": "TODO"
+  },
+  "products": {
+    "general": "TODO",
+    "product": "TODO"
+  },
+  "gift_cards": {
+    "issued": "TODO"
+  },
+  "date_formats": {
+    "month_day_year": "TODO"
+  },
+  "default_lan": {
+    "popup_product": "TODO"
+  },
+  "popup_quick_view": {
+    "general": "TODO"
+  }
+}

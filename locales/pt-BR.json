@@ -1,9 +1,12 @@
 {
   "general": {
-    "meta": { "tags": "Marcado \"{{ tags }}\"", "page": "Página {{ page }}" },
+    "meta": {
+      "tags": "Marcado \"{{ tags }}\"",
+      "page": "Página {{ page }}"
+    },
     "404": {
       "title": "404 Página não encontrada",
-      "subtext_html": "A página que você solicitou não existe. Clique <a href=\"/collections/all\">aqui</a> para voltar às compras."
+      "subtext_html": "A página que você solicitou não existe. Clique <a href=\"\/collections\/all\">aqui<\/a> para voltar às compras."
     },
     "breadcrumbs": {
       "home": "Início",
@@ -20,6 +23,32 @@
       "title": "Buscar produtos em nosso site",
       "placeholder": "Busque em nossa loja",
       "submit": "Buscar"
+    },
+    "accessibility": {
+      "skip_to_content": "TODO",
+      "close_modal": "TODO",
+      "link_messages": "TODO",
+      "refresh_page": "TODO",
+      "selection_help": "TODO",
+      "unit_price_separator": "TODO",
+      "error": "TODO"
+    },
+    "password_page": {
+      "opening_soon": "TODO",
+      "login_form_heading": "TODO",
+      "login_form_password_label": "TODO",
+      "login_form_password_placeholder": "TODO",
+      "login_form_submit": "TODO",
+      "signup_form_email_label": "TODO",
+      "signup_form_success": "TODO",
+      "admin_link_html": "TODO",
+      "password_link": "TODO"
+    },
+    "social": {
+      "share_on_facebook": "TODO",
+      "share_on_twitter": "TODO",
+      "share_on_pinterest": "TODO",
+      "alt_text": "TODO"
     }
   },
   "blogs": {
@@ -60,7 +89,7 @@
       "update": "Atualizar Carrinho",
       "checkout": "Fechar pedido",
       "empty": "Seu carrinho está vazio no momento.",
-      "continue_browsing_html": "Continue navegando <a href=\"/collections/all\">aqui</a>.",
+      "continue_browsing_html": "Continue navegando <a href=\"\/collections\/all\">aqui<\/a>.",
       "close_cart": "Fechar carrinho",
       "savings_html": "Você está economizando {{ price }}",
       "reduce_quantity": "Reduzir quantidade em uma unidade",
@@ -75,17 +104,12 @@
   },
   "collections": {
     "general": {
-      "all_of_collection": "Todos de {{ collection }}",
-      "no_matches": "Desculpe, mas não há produtos correspondentes à sua busca.",
-      "link_title": "Explore a nossa coleção {{ title }}",
-      "grid_view": "Grelha",
-      "list_view": "Lista",
-      "items_with_count": {
-        "one": "{{ count }} item",
-        "other": "{{ count }} itens"
-      }
+      "empty_product_title": "TODO",
+      "empty_product_desc": "TODO",
+      "empty_product_use_fewer_filters": "TODO",
+      "empty_product_text_or": "TODO",
+      "empty_product_html_link": "TODO"
     },
-    "sidebar": { "tags": "Marcadores" },
     "sorting": {
       "title": "Ordenar por",
       "featured": "Em destaque",
@@ -97,10 +121,18 @@
       "date_descending": "Data, mais recente primeiro",
       "date_ascending": "Data, mais antiga primeiro"
     },
-    "onboarding": {
-      "modal_title": "Esta página mostrará todos os produtos de sua loja",
-      "no_products_html": "Não há nenhum produto ainda, mas, quando você começar a adicioná-los, eles aparecerão aqui, independentemente se estiverem em uma coleção.",
-      "add_product": "Adicionar produto"
+    "facets": {
+      "filter_by_label": "TODO",
+      "results_with_count": "TODO",
+      "product_count_simple": "TODO",
+      "product_count": "TODO",
+      "clear_all": "TODO",
+      "filters_selected": "TODO",
+      "max_price": "TODO",
+      "filter_reset": "TODO",
+      "price_filter_from": "TODO",
+      "price_filter_to": "TODO",
+      "filter_button": "TODO"
     }
   },
   "contact": {
@@ -222,20 +254,28 @@
     },
     "onboarding": {
       "modal_title": "Quase lá...",
-      "no_products_html": "Não há produtos na sua coleção \"Primeira Página\". Este espaço reservado aparecerá até que você <a href=\"/admin/collections?tutorial=Frontpage\">adicione um produto a esta coleção</a>.",
+      "no_products_html": "Não há produtos na sua coleção \"Primeira Página\". Este espaço reservado aparecerá até que você <a href=\"\/admin\/collections?tutorial=Frontpage\">adicione um produto a esta coleção<\/a>.",
       "add_product": "Adicionar um produto",
       "product_title": "Exemplo de título de produto",
-      "no_collections_html": "Você não tem coleções para exibir aqui. <a href=\"/admin/custom_collections\">Adicione algumas coleções</a> para acompanhar a \"Primeira Página\" padrão.",
+      "no_collections_html": "Você não tem coleções para exibir aqui. <a href=\"\/admin\/custom_collections\">Adicione algumas coleções<\/a> para acompanhar a \"Primeira Página\" padrão.",
       "add_collection": "Adicionar uma coleção",
       "collection_title": "Exemplo de título de coleção"
     }
   },
   "layout": {
-    "navigation": { "menu": "Menu" },
-    "drawers": { "browse": "Navegar", "close_menu": "Fechar menu" },
+    "navigation": {
+      "menu": "Menu"
+    },
+    "drawers": {
+      "browse": "Navegar",
+      "close_menu": "Fechar menu"
+    },
     "cart": {
       "title": "Carrinho",
-      "items_count": { "one": "item", "other": "itens" }
+      "items_count": {
+        "one": "item",
+        "other": "itens"
+      }
     },
     "customer": {
       "account": "Conta",
@@ -256,13 +296,18 @@
       "next_product_html": "Próximo produto &rarr;",
       "from_text_html": "A partir de {{ price }}",
       "sale_price": "Preço promocional",
-      "regular_price": "Preço normal"
+      "regular_price": "Preço normal",
+      "vendor": "TODO",
+      "type": "TODO",
+      "sku": "TODO",
+      "barcode": "TODO",
+      "weight": "TODO"
     },
     "product": {
       "sold_out": "Esgotado",
       "on_sale": "Em promoção",
       "new": "primeiro",
-      "on_sale_from_html": "<strong>Em promoção</strong>, a partir de {{ price }}",
+      "on_sale_from_html": "<strong>Em promoção<\/strong>, a partir de {{ price }}",
       "unavailable": "Indisponível",
       "compare_at": "",
       "quantity": "Quantidade",
@@ -271,18 +316,23 @@
   },
   "gift_cards": {
     "issued": {
-      "title": "Aqui está o seu vale-presente de {{ value }} na {{ shop }}!",
       "subtext": "Aqui está o seu vale-presente!",
       "disabled": "Inválido",
       "expired": "Expirado em {{ expiry }}",
       "active": "Expira em {{ expiry }}",
-      "redeem": "Para resgatar o seu vale-presente, utilize este código no fechamento do pedido",
       "shop_link": "Comece a comprar",
       "print": "Imprimir",
-      "add_to_apple_wallet": "Adicionar ao Apple Wallet"
+      "add_to_apple_wallet": "Adicionar ao Apple Wallet",
+      "title_html": "TODO",
+      "gift_card_code": "TODO",
+      "redeem_html": "TODO",
+      "remaining_html": "TODO",
+      "qr_image_alt": "TODO"
     }
   },
-  "date_formats": { "month_day_year": "%d de %B de %Y" },
+  "date_formats": {
+    "month_day_year": "%d de %B de %Y"
+  },
   "default_lan": {
     "popup_product": {
       "button": "Ver carrinho",
@@ -299,10 +349,14 @@
       "out_of_stock": "Fora de estoque",
       "many_in_stock": "Muitos em estoque",
       "view_full_info": "Ver informação completa",
-      "add_to_cart_html": "<span class=\"icon icon-shopping_basket\"></span> Adicionar ao cartão",
-      "added_html": "<span class=\"icon icon-shopping_basket\"></span> Adicionado",
-      "error_html": "<span class=\"icon icon-shopping_basket\"></span> Limitar produtos",
-      "wait_html": "<span class=\"icon icon-shopping_basket\"></span> Esperar"
+      "add_to_cart_html": "<span class=\"icon icon-shopping_basket\"><\/span> Adicionar ao cartão",
+      "added_html": "<span class=\"icon icon-shopping_basket\"><\/span> Adicionado",
+      "error_html": "<span class=\"icon icon-shopping_basket\"><\/span> Limitar produtos",
+      "wait_html": "<span class=\"icon icon-shopping_basket\"><\/span> Esperar"
     }
+  },
+  "sections": {
+    "header": "TODO",
+    "map": "TODO"
   }
 }

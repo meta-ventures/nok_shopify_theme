@@ -1,9 +1,12 @@
 {
   "general": {
-    "meta": { "tags": "Mots clés \"{{ tags }}\"", "page": "Page {{ page }}" },
+    "meta": {
+      "tags": "Mots clés \"{{ tags }}\"",
+      "page": "Page {{ page }}"
+    },
     "404": {
       "title": "404 - Page non trouvée",
-      "subtext_html": "Cette page n'est pas disponible. <a href=\"/collections/all\">Retourner au magasinage</a>"
+      "subtext_html": "Cette page n'est pas disponible. <a href=\"\/collections\/all\">Retourner au magasinage<\/a>"
     },
     "breadcrumbs": {
       "home": "Accueil",
@@ -20,6 +23,40 @@
       "title": "Effectuez une recherche",
       "placeholder": "Rechercher dans la boutique",
       "submit": "Recherche"
+    },
+    "accessibility": {
+      "skip_to_content": "TODO",
+      "close_modal": "TODO",
+      "link_messages": {
+        "new_window": "TODO",
+        "external": "TODO",
+        "new_window_and_external": "TODO"
+      },
+      "refresh_page": "TODO",
+      "selection_help": "TODO",
+      "unit_price_separator": "TODO",
+      "error": "TODO"
+    },
+    "password_page": {
+      "opening_soon": "TODO",
+      "login_form_heading": "TODO",
+      "login_form_password_label": "TODO",
+      "login_form_password_placeholder": "TODO",
+      "login_form_submit": "TODO",
+      "signup_form_email_label": "TODO",
+      "signup_form_success": "TODO",
+      "admin_link_html": "TODO",
+      "password_link": "TODO"
+    },
+    "social": {
+      "share_on_facebook": "TODO",
+      "share_on_twitter": "TODO",
+      "share_on_pinterest": "TODO",
+      "alt_text": {
+        "share_on_facebook": "TODO",
+        "share_on_twitter": "TODO",
+        "share_on_pinterest": "TODO"
+      }
     }
   },
   "blogs": {
@@ -60,7 +97,7 @@
       "update": "Mettre à jour",
       "checkout": "Procéder au paiement",
       "empty": "Votre panier est vide.",
-      "continue_browsing_html": "<a href=\"/collections/all\">Retourner au magasinage</a>.",
+      "continue_browsing_html": "<a href=\"\/collections\/all\">Retourner au magasinage<\/a>.",
       "close_cart": "Fermer le panier",
       "savings_html": "Vous économisez {{ price }}",
       "reduce_quantity": "Réduire la quantité de l'article de un",
@@ -75,17 +112,12 @@
   },
   "collections": {
     "general": {
-      "all_of_collection": "Tout",
-      "no_matches": "Aucun produit ne correspond à votre recherche.",
-      "link_title": "Consultez la collection {{ title }}",
-      "grid_view": "Grille",
-      "list_view": "Liste",
-      "items_with_count": {
-        "one": "{{ count }} item",
-        "other": "{{ count }} items"
-      }
+      "empty_product_title": "TODO",
+      "empty_product_desc": "TODO",
+      "empty_product_use_fewer_filters": "TODO",
+      "empty_product_text_or": "TODO",
+      "empty_product_html_link": "TODO"
     },
-    "sidebar": { "tags": "Filtres" },
     "sorting": {
       "title": "Trier par",
       "featured": "En vedette",
@@ -97,10 +129,18 @@
       "date_descending": "Date: récent à ancien",
       "date_ascending": "Date: ancien à récent"
     },
-    "onboarding": {
-      "modal_title": "Cette page affichera tous les produits de votre magasin",
-      "no_products_html": "Il n'y a aucun produit pour l'instant, mais dès que vous commencerez à les ajouter, ils s'afficheront ici, qu'ils soient dans une collection ou non.",
-      "add_product": "Ajouter un produit"
+    "facets": {
+      "filter_by_label": "TODO",
+      "results_with_count": "TODO",
+      "product_count_simple": "TODO",
+      "product_count": "TODO",
+      "clear_all": "TODO",
+      "filters_selected": "TODO",
+      "max_price": "TODO",
+      "filter_reset": "TODO",
+      "price_filter_from": "TODO",
+      "price_filter_to": "TODO",
+      "filter_button": "TODO"
     }
   },
   "contact": {
@@ -222,20 +262,28 @@
     },
     "onboarding": {
       "modal_title": "Nous y sommes presque...",
-      "no_products_html": "Vous n'avez pas de produit dans votre collection home page. Ce message apparaitra jusqu'à ce qu'un produit soit <a href=\"/admin/collections?tutorial=Frontpage\">ajouté à cette collection</a>.",
+      "no_products_html": "Vous n'avez pas de produit dans votre collection home page. Ce message apparaitra jusqu'à ce qu'un produit soit <a href=\"\/admin\/collections?tutorial=Frontpage\">ajouté à cette collection<\/a>.",
       "add_product": "Ajouter un produit",
       "product_title": "Titre du produit",
-      "no_collections_html": "Vous n'avez pas de collection à afficher ici. <a href=\"/admin/custom_collections\">Ajoutez une ou plusieurs collections</a> pour compléter la page d'accueil par défaut.",
+      "no_collections_html": "Vous n'avez pas de collection à afficher ici. <a href=\"\/admin\/custom_collections\">Ajoutez une ou plusieurs collections<\/a> pour compléter la page d'accueil par défaut.",
       "add_collection": "Ajouter une collection",
       "collection_title": "Titre de la collection"
     }
   },
   "layout": {
-    "navigation": { "menu": "Menu" },
-    "drawers": { "browse": "Explorer", "close_menu": "Fermer le menu" },
+    "navigation": {
+      "menu": "Menu"
+    },
+    "drawers": {
+      "browse": "Explorer",
+      "close_menu": "Fermer le menu"
+    },
     "cart": {
       "title": "Panier",
-      "items_count": { "one": "item", "other": "items" }
+      "items_count": {
+        "one": "item",
+        "other": "items"
+      }
     },
     "customer": {
       "account": "Compte",
@@ -256,13 +304,18 @@
       "next_product_html": "Produit suivant &rarr;",
       "from_text_html": "À partir de {{ price }}",
       "sale_price": "Prix réduit",
-      "regular_price": "Prix régulier"
+      "regular_price": "Prix régulier",
+      "vendor": "TODO",
+      "type": "TODO",
+      "sku": "TODO",
+      "barcode": "TODO",
+      "weight": "TODO"
     },
     "product": {
       "sold_out": "Épuisé",
       "on_sale": "En solde",
       "new": "récent",
-      "on_sale_from_html": "<strong>En solde</strong> {{ price }}",
+      "on_sale_from_html": "<strong>En solde<\/strong> {{ price }}",
       "unavailable": "Non disponible",
       "compare_at": "",
       "quantity": "Quantité",
@@ -271,17 +324,55 @@
   },
   "gift_cards": {
     "issued": {
-      "title": "Votre carte-cadeau {{ shop }} d'une valeur de {{ value }}!",
       "subtext": "Voici votre carte-cadeau!",
       "disabled": "Désactivée",
       "expired": "Expirée le {{ expiry }}",
       "active": "Expire le {{ expiry }}",
-      "redeem": "Entrez ce code lors du paiement pour utiliser votre carte-cadeau",
       "shop_link": "Boutique",
       "print": "Imprimer",
-      "add_to_apple_wallet": "Ajouter à Apple Wallet"
+      "add_to_apple_wallet": "Ajouter à Apple Wallet",
+      "title_html": "TODO",
+      "gift_card_code": "TODO",
+      "redeem_html": "TODO",
+      "remaining_html": "TODO",
+      "qr_image_alt": "TODO"
     }
   },
-  "date_formats": { "month_day_year": "%d %B, %Y" },
-  "default_lan": {}
+  "date_formats": {
+    "month_day_year": "%d %B, %Y"
+  },
+  "default_lan": {
+    "popup_product": {
+      "added": "TODO",
+      "error": "TODO",
+      "button": "TODO"
+    }
+  },
+  "sections": {
+    "header": {
+      "announcement_bar_label": "TODO"
+    },
+    "map": {
+      "address_error": "TODO",
+      "address_no_results": "TODO",
+      "address_query_limit_html": "TODO",
+      "auth_error_html": "TODO",
+      "section_heading": "TODO"
+    }
+  },
+  "popup_quick_view": {
+    "general": {
+      "sku": "TODO",
+      "barcode": "TODO",
+      "availability": "TODO",
+      "in_stock": "TODO",
+      "out_of_stock": "TODO",
+      "many_in_stock": "TODO",
+      "view_full_info": "TODO",
+      "add_to_cart_html": "TODO",
+      "added_html": "TODO",
+      "error_html": "TODO",
+      "wait_html": "TODO"
+    }
+  }
 }

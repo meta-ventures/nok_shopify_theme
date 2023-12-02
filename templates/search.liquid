@@ -1,4 +1,4 @@
-{% assign grid_results = false %}
+
 {% assign respond_js_secret_key = shop.domain | md5 %}
 {% unless search.terms == respond_js_secret_key %}
 {% paginate search.results by 12 %}
