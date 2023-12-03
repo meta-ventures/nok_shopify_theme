@@ -1,5 +1,5 @@
 {% if section.settings.desktop_banner != blank %}
-  <div class="banner-desktop">
+  <div class="dual-banner-{{ section.id }}">
     {{ section.settings.desktop_banner | image_url: 'large', width: 1920 | image_tag }}
   </div>
 {% endif %}
