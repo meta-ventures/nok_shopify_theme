@@ -447,6 +447,15 @@
       }
 
       this.currentScrollTop = scrollTop;
+
+      // Transparent header
+      if ( window.pageYOffset > height ) {
+        this.innerHeader.classList.remove('site-header-transparent');
+        this.mainContent.classList.add('site-header-transition');
+      } else {
+        this.innerHeader.classList.add('site-header-transparent');
+        this.mainContent.classList.remove('site-header-transition');
+      }
     }
 
     hide() {
