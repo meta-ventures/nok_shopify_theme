@@ -3,14 +3,14 @@
 {% style %}
   {% if block.settings.mobile_image_enable %}
     #Banner-{{ section.id }} .banner__media_mobile_image {
-        display: none;
+        display: none !important;
     }
     @media(max-width: 767px){
       #Banner-{{ section.id }} .banner__media_desktop_image {
-            display: none;
+            display: none !important;
         }
         #Banner-{{ section.id }} .banner__media_mobile_image {
-            display: block;
+            display: block !important;
         }
     }
     {% else %}
