@@ -1,0 +1,549 @@
+<section class="feature-info" {% if section.settings.section_bg_image_enable %}style="background-image: url('{% if section.settings.section_bg_image %}{{ section.settings.section_bg_image | image_url }}{% else %}https://dummyimage.com/1920x800{% endif %}');"{% endif %}>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="section-capture">
+          <div class="section-title">
+            {% if section.settings.section_subtitle != '' %}
+            <span class="sub-title">{{ section.settings.section_subtitle }}</span>
+            {% endif %}
+            {% if section.settings.section_title != '' %}
+            <h2>{{ section.settings.section_title }}</h2>
+            {% endif %}
+          </div>
+        </div>
+        <div class="feature-area">
+          <ul class="service-ul">
+            {% for block in section.blocks %}
+            {%- case block.type -%}
+            {%- when 'service_item' -%}
+            <li class="service-li {% if block.settings.service_column_reverse %}column-reverse {% else %}feature-service {% endif %}">
+              <ul class="feature-item-ul">
+                <li class="feature-item-li">
+                  <div class="feature-icon">
+                    <a href="javascript:void(0)">
+                      <img width="{{ block.settings.service_image_icon_1.width }}" height="{{ block.settings.service_image_icon_1.height }}" class="img-fluid" src="{% if block.settings.service_image_icon_1 %}{{ block.settings.service_image_icon_1 | image_url }}{% else %}https://dummyimage.com/512x512{% endif %}" alt="">
+                    </a>
+                  </div>
+                  <div class="feature-content">
+                    {% if block.settings.service_1_title != '' %}
+                    <h4 class="title">{{ block.settings.service_1_title }}</h4>
+                    {% endif %}
+                    {% if block.settings.service_1_desc != '' %}
+                    <p class="desc">{{ block.settings.service_1_desc }}</p>
+                    {% endif %}
+                  </div>
+                </li>
+                <li class="feature-item-li">
+                  <div class="feature-icon">
+                    <a href="javascript:void(0)">
+                      <img width="{{ block.settings.service_image_icon_2.width }}" height="{{ block.settings.service_image_icon_2.height }}" class="img-fluid" src="{% if block.settings.service_image_icon_2 %}{{ block.settings.service_image_icon_2 | image_url }}{% else %}https://dummyimage.com/512x512{% endif %}" alt="">
+                    </a>
+                  </div>
+                  <div class="feature-content">
+                    {% if block.settings.service_2_title != '' %}
+                    <h4 class="title">{{ block.settings.service_2_title }}</h4>
+                    {% endif %}
+                    {% if block.settings.service_2_desc != '' %}
+                    <p class="desc">{{ block.settings.service_2_desc }}</p>
+                    {% endif %}
+                  </div>
+                </li>
+                <li class="feature-item-li">
+                  <div class="feature-icon">
+                    <a href="javascript:void(0)">
+                      <img width="{{ block.settings.service_image_icon_3.width }}" height="{{ block.settings.service_image_icon_3.height }}" class="img-fluid" src="{% if block.settings.service_image_icon_3 %}{{ block.settings.service_image_icon_3 | image_url }}{% else %}https://dummyimage.com/512x512{% endif %}" alt="">
+                    </a>
+                  </div>
+                  <div class="feature-content">
+                    {% if block.settings.service_3_title != '' %}
+                    <h4 class="title">{{ block.settings.service_3_title }}</h4>
+                    {% endif %}
+                    {% if block.settings.service_3_desc != '' %}
+                    <p class="desc">{{ block.settings.service_3_desc }}</p>
+                    {% endif %}
+                  </div>
+                </li>
+              </ul>
+              <style type="text/css">
+              {% if block.settings.service_column_reverse %}
+              .feature-info .feature-area ul.service-ul li.service-li.column-reverse ul.feature-item-ul li.feature-item-li {
+                {%- if settings.enable_rtl -%}
+                text-align: left;
+                {%- else -%}
+                text-align: right;
+                {%- endif -%}
+                flex-direction: row-reverse;
+              }
+              .feature-info .feature-area ul.service-ul li.service-li.column-reverse ul.feature-item-ul li.feature-item-li .feature-content {
+                {%- if settings.enable_rtl -%}
+                padding-left: 40px;
+                {%- else -%}
+                padding-right: 40px;
+                {%- endif -%}
+              }
+              @media (max-width: 1199px) {
+                .feature-info .feature-area ul.service-ul li.service-li.column-reverse ul.feature-item-ul li.feature-item-li .feature-content {
+                  {%- if settings.enable_rtl -%}
+                  padding-left: 30px;
+                  {%- else -%}
+                  padding-right: 30px;
+                  {%- endif -%}
+                }
+              }
+              @media (max-width: 991px) {
+                .feature-info .feature-area ul.service-ul li.service-li.column-reverse ul.feature-item-ul li.feature-item-li {
+                  {%- if settings.enable_rtl -%}
+                  text-align: right;
+                  {%- else -%}
+                  text-align: left;
+                  {%- endif -%}
+                  flex-direction: unset;
+                }
+                .feature-info .feature-area ul.service-ul li.service-li.column-reverse ul.feature-item-ul li.feature-item-li .feature-content {
+                  padding-right: 0px;
+                  {%- if settings.enable_rtl -%}
+                  padding-right: 30px;
+                  {%- else -%}
+                  padding-left: 30px;
+                  {%- endif -%}
+                }
+              }
+              {% else %}
+              .feature-info .feature-area ul.service-ul li.service-li.feature-service ul.feature-item-ul li.feature-item-li .feature-content {
+                {%- if settings.enable_rtl -%}
+                padding-right: 40px;
+                {%- else -%}
+                padding-left: 40px;
+                {%- endif -%}
+              }
+              @media (max-width: 1199px) {
+                .feature-info .feature-area ul.service-ul li.service-li.feature-service ul.feature-item-ul li.feature-item-li .feature-content {
+                  {%- if settings.enable_rtl -%}
+                  padding-right: 30px;
+                  {%- else -%}
+                  padding-left: 30px;
+                  {%- endif -%}
+                }
+              }
+              {% endif %}
+              </style>
+            </li>
+            {%- when 'service_image' -%}
+            <li class="service-image-li feature-image">
+              <span>
+                <img width="{{ block.settings.feature_image.width }}" height="{{ block.settings.feature_image.height }}" class="img-fluid desk-img" src="{% if block.settings.feature_image %}{{ block.settings.feature_image | image_url }}{% else %}https://dummyimage.com/570x570{% endif %}" alt="">
+              </span>
+            </li>
+            {%- endcase -%}
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "Feature Info",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Padding"
+    },
+    {
+      "type": "paragraph",
+      "content": "Desktop / Laptop / tablet"
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom",
+      "label": "Section Padding bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "paragraph",
+      "content": "Ipad pro / Ipad"
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top_ip",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom_ip",
+      "label": "Section Padding bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "paragraph",
+      "content": "Mobile"
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top_xs",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom_xs",
+      "label": "Section Padding bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Background Image"
+    },
+    {
+      "type": "checkbox",
+      "id": "section_bg_image_enable",
+      "label": "Show Background Image",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "section_bg_image",
+      "label": "Background Image",
+      "info": "Recommended Size: 1920 x 800px"
+    },
+    {
+      "type": "header",
+      "content": "Background Color"
+    },
+    {
+      "type": "checkbox",
+      "id": "section_bg_color_enable",
+      "label": "Show Background Color",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "section_bg_color",
+      "label": "Background Color",
+      "default": "#d8d8d8"
+    },
+    {
+      "type": "header",
+      "content": "Section Title"
+    },
+    {
+      "type": "text",
+      "id": "section_subtitle",
+      "label": "Subtitle",
+      "default": "Unique features"
+    },
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Title",
+      "default": "why for spacial"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "service_item",
+      "name": "Service",
+      "limit": 2,
+      "settings": [
+        {
+          "type": "header",
+          "content": "Service content reverse enable"
+        },
+        {
+          "type": "checkbox",
+          "id": "service_column_reverse",
+          "label": "Show content reverse",
+          "default": false
+        },
+        {
+          "type": "header",
+          "content": "Service 1"
+        },
+        {
+          "type": "image_picker",
+          "id": "service_image_icon_1",
+          "label": "Service Icon Image",
+          "info": "Recommended Size: 512px x 512px"
+        },
+        {
+          "type": "text",
+          "id": "service_1_title",
+          "label": "Service Title",
+          "default": "Mobile holder"
+        },
+        {
+          "type": "text",
+          "id": "service_1_desc",
+          "label": "Service Description",
+          "default": "Best part about drone aerial photography perspective!"
+        },
+        {
+          "type": "header",
+          "content": "Service 2"
+        },
+        {
+          "type": "image_picker",
+          "id": "service_image_icon_2",
+          "label": "Service Icon Image",
+          "info": "Recommended Size: 512px x 512px"
+        },
+        {
+          "type": "text",
+          "id": "service_2_title",
+          "label": "Service Title",
+          "default": "Mobile holder"
+        },
+        {
+          "type": "text",
+          "id": "service_2_desc",
+          "label": "Service Description",
+          "default": "Best part about drone aerial photography perspective!"
+        },
+        {
+          "type": "header",
+          "content": "Service 3"
+        },
+        {
+          "type": "image_picker",
+          "id": "service_image_icon_3",
+          "label": "Service Icon Image",
+          "info": "Recommended Size: 512px x 512px"
+        },
+        {
+          "type": "text",
+          "id": "service_3_title",
+          "label": "Service Title",
+          "default": "Mobile holder"
+        },
+        {
+          "type": "text",
+          "id": "service_3_desc",
+          "label": "Service Description",
+          "default": "Best part about drone aerial photography perspective!"
+        }
+      ]
+    },
+    {
+      "type": "service_image",
+      "name": "Service Image",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "header",
+          "content": "Feature Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "feature_image",
+          "label": "Image",
+          "info": "Recommended Size: 570px x 570px"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Feature Info",
+      "category": "Feature Info"
+    }
+  ]
+}
+{% endschema %}
+<style>
+  .feature-info {
+    padding-top: {{ section.settings.section_padding_top }}px;
+    padding-bottom: {{ section.settings.section_padding_bottom }}px;
+
+    {% if section.settings.section_bg_image_enable %}
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    {% endif %}
+    {% if section.settings.section_bg_color_enable %}
+    background-color: {{ section.settings.section_bg_color }};
+    {% endif %}
+  }
+  @media(max-width: 1199px){
+    .feature-info {
+      padding-top: {{ section.settings.section_padding_top_ip }}px;
+      padding-bottom: {{ section.settings.section_padding_bottom_ip }}px;
+    }
+  }
+  @media(max-width: 767px){
+    .feature-info {
+      padding-top: {{ section.settings.section_padding_top_xs }}px;
+      padding-bottom: {{ section.settings.section_padding_bottom_xs }}px;
+    }
+  }
+  /* main css */
+  .feature-info .feature-area ul.service-ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    {% if settings.enable_rtl %}
+    margin-right: -30px;
+    {% else %}
+    margin-left: -30px;
+    {% endif %}
+    margin-top: -40px;
+  }
+  .feature-info .feature-area ul.service-ul li.service-li {
+    width: calc(25% - 30px);
+    {% if settings.enable_rtl %}
+    margin-right: 30px;
+    {% else %}
+    margin-left: 30px;
+    {% endif %}
+    margin-top: 40px;
+  }
+  .feature-info .feature-area ul.service-ul li.service-image-li {
+    width: calc(50% - 30px);
+    {% if settings.enable_rtl %}
+    margin-right: 30px;
+    {% else %}
+    margin-left: 30px;
+    {% endif %}
+    margin-top: 40px;
+    padding: 0px 40px;
+    text-align: center;
+  }
+  @media (max-width: 1199px) {
+    .feature-info .feature-area ul.service-ul li.service-li {
+      width: calc(30% - 30px);
+    }
+    .feature-info .feature-area ul.service-ul li.service-image-li {
+      width: calc(40% - 30px);
+      padding: 0px 30px;
+    }
+  }
+  @media (max-width: 991px) {
+    .feature-info .feature-area ul.service-ul li.service-li {
+      width: calc(50% - 30px);
+    }
+    .feature-info .feature-area ul.service-ul li.service-image-li {
+      width: calc(100% - 30px);
+      padding: 0px;
+      order: -1;
+    }
+  }
+  @media (max-width: 767px) {
+    .feature-info .feature-area ul.service-ul {
+      {% if settings.enable_rtl %}
+      margin-right: -12px;
+      {% else %}
+      margin-left: -12px;
+      {% endif %}
+    }
+    .feature-info .feature-area ul.service-ul li.service-li {
+      width: calc(50% - 12px);
+      {% if settings.enable_rtl %}
+      margin-right: 12px;
+      {% else %}
+      margin-left: 12px;
+      {% endif %}
+    }
+    .feature-info .feature-area ul.service-ul li.service-image-li {
+      width: calc(100% - 12px);
+      {% if settings.enable_rtl %}
+      margin-right: 12px;
+      {% else %}
+      margin-left: 12px;
+      {% endif %}
+    }
+  }
+  @media (max-width: 479px) {
+    .feature-info .feature-area ul.service-ul {
+      margin-top: -25px;
+    }
+    .feature-info .feature-area ul.service-ul li.service-li {
+      width: calc(100% - 12px);
+      margin-top: 25px;
+    }
+    .feature-info .feature-area ul.service-ul li.service-image-li {
+      margin-top: 25px;
+    }
+  }
+ 
+  /* service css */
+  .feature-info .feature-area ul.service-ul li.service-li ul.feature-item-ul li.feature-item-li {
+    display: flex;
+    align-items: center;
+    margin-top: 64px;
+  }
+  .feature-info .feature-area ul.service-ul li.service-li ul.feature-item-ul li.feature-item-li:first-child {
+    margin-top: 0px;
+  }
+  .feature-info .feature-area ul.service-ul li.service-li ul.feature-item-ul li.feature-item-li:hover .feature-icon a {
+    -webkit-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+  }
+  .feature-info .feature-area ul.service-ul li.service-li ul.feature-item-ul li.feature-item-li .feature-icon a,
+  .feature-info .feature-area ul.service-ul li.service-li ul.feature-item-ul li.feature-item-li:hover .feature-icon a {
+    -webkit-transition: all 0.7s ease-in-out 0s;
+    -o-transition: all 0.7s ease-in-out 0s;
+    transition: all 0.7s ease-in-out 0s;
+  }
+  .feature-info .feature-area ul.service-ul li.service-li ul.feature-item-ul li.feature-item-li .feature-icon a img {
+    width: 35px;
+  }
+  .feature-info .feature-area ul.service-ul li.service-li ul.feature-item-ul li.feature-item-li .feature-content {
+    width: calc(100% - 35px);
+  } 
+  .feature-info .feature-area ul.service-ul li.service-li ul.feature-item-ul li.feature-item-li .feature-content h4.title {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .feature-info .feature-area ul.service-ul li.service-li ul.feature-item-ul li.feature-item-li .feature-content p.desc {
+    color: var(--font-color-body);
+    font-size: 18px;
+    margin-top: 24px;
+  }
+  @media (max-width: 1199px){
+    .feature-info .feature-area ul.service-ul li.service-li ul.feature-item-ul li.feature-item-li {
+      margin-top: 25px;
+    }
+    .feature-info .feature-area ul.service-ul li.service-li ul.feature-item-ul li.feature-item-li .feature-content h4.title {
+      font-size: 16px;
+    }
+    .feature-info .feature-area ul.service-ul li.service-li ul.feature-item-ul li.feature-item-li .feature-content p.desc {
+      font-size: 16px;
+      margin-top: 14px;
+    } 
+  }
+</style>
