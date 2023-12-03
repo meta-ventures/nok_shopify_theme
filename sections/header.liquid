@@ -367,14 +367,6 @@
     }
 
     connectedCallback() {
-
-    // Transparent header
-
-    var headerHeight = document.getElementById('site-header').offsetHeight;
-    document.getElementById('MainContent').style.setProperty('--header-height', '-'+ headerHeight + 'px');
-
-    // End transparent header
-
       this.header = document.querySelector('.section-header');
       this.headerIsAlwaysSticky = this.getAttribute('data-sticky-type') === 'always' || this.getAttribute('data-sticky-type') === 'reduce-logo-size';
       this.headerBounds = {};
