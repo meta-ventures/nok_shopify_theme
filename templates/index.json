@@ -50,7 +50,7 @@
         "show_text_below": true
       }
     },
-    "our_services": {
+    "our-services": {
       "type": "our-services",
       "blocks": {
         "service-1": {
@@ -267,7 +267,7 @@
   },
   "order": [
     "image_banner",
-    "our_services",
+    "our-services",
     "rich_text",
     "featured_collection",
     "collage",
