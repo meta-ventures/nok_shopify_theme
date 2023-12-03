@@ -1,0 +1,432 @@
+<section class="our-service-area" {% if section.settings.section_bg_image_enable %}style="background-image: url('{% if section.settings.section_bg_image %}{{ section.settings.section_bg_image | image_url }}{% else %}https://dummyimage.com/1920x1024{% endif %}');"{% endif %}>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="section-capture">
+          <div class="section-title">
+            {% if section.settings.section_subtitle != '' %}
+            <span class="sub-title">{{ section.settings.section_subtitle }}</span>
+            {% endif %}
+            {% if section.settings.section_title != '' %}
+            <h2>{{ section.settings.section_title }}</h2>
+            {% endif %}
+          </div>
+        </div>
+        <ul class="single-service">
+          {% for block in section.blocks %}
+          <li class="ser-box">
+            <div class="ser-block">
+              <a href="{{ block.settings.ser_url }}"><i class="{{ block.settings.service_icon }}"></i></a>
+              <div class="service-text">
+                {% if block.settings.service_title != '' %}
+                <h6>{{ block.settings.service_title }}</h6>
+                {% endif %}
+                {% if block.settings.service_desc != '' %}
+                <p>{{ block.settings.service_desc }}</p>
+                {% endif %}
+              </div>
+            </div>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "Service",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Padding"
+    },
+    {
+      "type": "paragraph",
+      "content": "Desktop / Laptop / tablet"
+    },
+    {
+      "type": "range",
+      "id": "our_ser_padding_top",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "our_ser_padding_bottom",
+      "label": "Section Padding bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "paragraph",
+      "content": "Ipad pro / Ipad"
+    },
+    {
+      "type": "range",
+      "id": "our_ser_padding_top_ip",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "our_ser_padding_bottom_ip",
+      "label": "Section Padding bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "paragraph",
+      "content": "Mobile"
+    },
+    {
+      "type": "range",
+      "id": "our_ser_padding_top_xs",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "our_ser_padding_bottom_xs",
+      "label": "Section Padding bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Background Image"
+    },
+    {
+      "type": "checkbox",
+      "id": "section_bg_image_enable",
+      "label": "Show Background Image",
+      "default": false
+    },
+    {
+      "type": "image_picker",
+      "id": "section_bg_image",
+      "label": "Image",
+      "info": "Recommended Size: 1920 x 770px"
+    },
+    {
+      "type": "header",
+      "content": "Background Color"
+    },
+    {
+      "type": "checkbox",
+      "id": "section_bg_color_enable",
+      "label": "Show Background Color",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "section_bg_color",
+      "label": "Background Color",
+      "default": "#f6f6f6"
+    },
+    {
+      "type": "header",
+      "content": "Section Title"
+    },
+    {
+      "type": "text",
+      "id": "section_subtitle",
+      "label": "Section Subtitle",
+      "default": "Controller"
+    },
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section Title",
+      "default": "How it works"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "our_services",
+      "name": "Our Services",
+      "settings": [
+        {
+          "type": "url",
+          "id": "ser_url",
+          "label": "Icon url"
+        },
+        {
+          "type": "text",
+          "id": "service_icon",
+          "label": "Icon Class",
+          "info": "remixicon.com"
+        },
+        {
+          "type": "text",
+          "id": "service_title",
+          "label": "Service Title",
+          "default": "How to use battery"
+        },
+        {
+          "type": "text",
+          "id": "service_desc",
+          "label": "Service Description",
+          "default": "Lorem Ipsum is simply dummy text of the printing typesetting industry lorem Ipsum."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Service",
+      "category": "Our Service"
+    }
+  ]
+}
+{% endschema %}
+<style>
+  .our-service-area {
+    padding-top: {{ section.settings.our_ser_padding_top }}px;
+    padding-bottom: {{ section.settings.our_ser_padding_bottom }}px;
+    {% if section.settings.section_bg_image_enable %}
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    {% endif %}
+    {% if section.settings.section_bg_color_enable %}
+    background-color: {{ section.settings.section_bg_color }};
+    {% endif %}
+  }
+  @media (max-width: 1199px) {
+    .our-service-area {
+      padding-top: {{ section.settings.our_ser_padding_top_ip }}px;
+      padding-bottom: {{ section.settings.our_ser_padding_bottom_ip }}px;
+    }
+  }
+  @media (max-width: 767px) {
+    .our-service-area {
+      padding-top: {{ section.settings.our_ser_padding_top_xs }}px;
+      padding-bottom: {{ section.settings.our_ser_padding_bottom_xs }}px;
+    }
+  }
+
+  /* service css */
+  .our-service-area ul.single-service {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    {% if settings.enable_rtl %}
+    margin-right: -70px;
+    {% else %}
+    margin-left: -70px;
+    {% endif %}
+    margin-top: -50px;
+  }
+  .our-service-area ul.single-service li.ser-box {
+    width: calc(33.33% - 70px);
+    {% if settings.enable_rtl %}
+    margin-right: 70px;
+    {% else %}
+    margin-left: 70px;
+    {% endif %}
+    margin-top: 50px;
+    border: 1px solid #ededed;
+    border-radius: 10px;
+    overflow: hidden;
+    -webkit-transition: all .3s ease-in-out 0s;
+    -o-transition: all .3s ease-in-out 0s;
+    transition: all .3s ease-in-out 0s;
+  }
+  .our-service-area ul.single-service li.ser-box:hover {
+    box-shadow: 0 0 15px rgb(0 0 0 / 15%);
+    -webkit-transition: all .3s ease-in-out 0s;
+    -o-transition: all .3s ease-in-out 0s;
+    transition: all .3s ease-in-out 0s;
+  }
+  .our-service-area ul.single-service li.ser-box .ser-block {
+    background-color: #fff;
+    padding: 70px;
+    text-align: center;
+  }
+  .our-service-area ul.single-service li.ser-box .ser-block a {
+    position: relative;
+    font-size: 40px;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    border: 1px solid #ededed;
+    border-radius: 100%;
+  }
+  .our-service-area ul.single-service li.ser-box:hover .ser-block a {
+    color: #ffffff;
+  }
+  .our-service-area ul.single-service li.ser-box .ser-block a::before {
+    background-image: var(--gradient-color);
+    content: '';
+    position: absolute;
+    bottom: 50%;
+    transform: translateY(50%);
+    left: 0px;
+    right: 0px;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    border-radius: 100%;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all .3s ease-in-out 0s;
+    -o-transition: all .3s ease-in-out 0s;
+    transition: all .3s ease-in-out 0s;
+  }
+  .our-service-area ul.single-service li.ser-box:hover .ser-block a::before {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: all .3s ease-in-out 0s;
+    -o-transition: all .3s ease-in-out 0s;
+    transition: all .3s ease-in-out 0s;
+  }
+  .our-service-area ul.single-service li.ser-box .ser-block a i {
+    z-index: 1;
+    background-image: var(--gradient-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .our-service-area ul.single-service li.ser-box:hover .ser-block a i {
+    z-index: 1;
+    -webkit-text-fill-color: unset;
+    color: #ffffff;
+  }
+  .our-service-area ul.single-service li.ser-box .ser-block .service-text {
+    margin-top: 45px;
+  }
+  .our-service-area ul.single-service li.ser-box .ser-block .service-text h6 {
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .our-service-area ul.single-service li.ser-box .ser-block .service-text p {
+    font-size: 18px;
+    margin-top: 24px;
+  }
+
+  @media (max-width: 1599px) {
+    .our-service-area ul.single-service li.ser-box .ser-block {
+      padding: 70px 50px;
+    }
+  }
+  @media (max-width: 1199px) {
+    .our-service-area ul.single-service {
+      {% if settings.enable_rtl %}
+      margin-right: -30px;
+      {% else %}
+      margin-left: -30px;
+      {% endif %}
+      margin-top: -30px;
+    }
+    .our-service-area ul.single-service li.ser-box {
+      width: calc(33.33% - 30px);
+      {% if settings.enable_rtl %}
+      margin-right: 30px;
+      {% else %}
+      margin-left: 30px;
+      {% endif %}
+      margin-top: 30px;
+    }
+    .our-service-area ul.single-service li.ser-box .ser-block {
+      padding: 50px 30px;
+    }
+    .our-service-area ul.single-service li.ser-box .ser-block a {
+      font-size: 30px;
+      width: 100px;
+      height: 100px;
+    }
+    .our-service-area ul.single-service li.ser-box .ser-block a::before {
+      width: 80px;
+      height: 80px;
+    }
+    .our-service-area ul.single-service li.ser-box .ser-block .service-text h6 {
+      font-size: 18px;
+    }
+    .our-service-area ul.single-service li.ser-box .ser-block .service-text p {
+      font-size: 16px;
+    }
+  }
+  @media (max-width: 991px) {
+    .our-service-area ul.single-service li.ser-box {
+      width: calc(50% - 30px);
+    }
+  }
+  @media (max-width: 767px) {
+    .our-service-area ul.single-service {
+      {% if settings.enable_rtl %}
+      margin-right: -12px;
+      {% else %}
+      margin-left: -12px;
+      {% endif %}
+    }
+    .our-service-area ul.single-service li.ser-box {
+      width: calc(50% - 12px);
+      {% if settings.enable_rtl %}
+      margin-right: 12px;
+      {% else %}
+      margin-left: 12px;
+      {% endif %}
+    }
+    .our-service-area ul.single-service li.ser-box .ser-block {
+      padding: 30px 12px;
+    }
+    .our-service-area ul.single-service li.ser-box .ser-block a {
+      font-size: 24px;
+      width: 80px;
+      height: 80px;
+    }
+    .our-service-area ul.single-service li.ser-box .ser-block a::before{
+      width: 60px;
+      height: 60px;
+    }
+    .our-service-area ul.single-service li.ser-box .ser-block .service-text {
+      margin-top: 25px;
+    }
+    .our-service-area ul.single-service li.ser-box .ser-block .service-text p {
+      margin-top: 13px;
+    }
+  }
+  @media (max-width: 479px) {
+    .our-service-area ul.single-service {
+      {% if settings.enable_rtl %}
+      margin-right: 0px;
+      {% else %}
+      margin-left: 0px;
+      {% endif %}
+    }
+    .our-service-area ul.single-service li.ser-box {
+      width: calc(100% - 0px);
+      {% if settings.enable_rtl %}
+      margin-right: 0px;
+      {% else %}
+      margin-left: 0px;
+      {% endif %}
+    }
+  }
+</style>
