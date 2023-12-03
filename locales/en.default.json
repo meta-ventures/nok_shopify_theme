@@ -57,6 +57,12 @@
         "share_on_twitter": "Tweet on Twitter",
         "share_on_pinterest": "Pin on Pinterest"
       }
+    },
+    "slider": {
+      "of": "of",
+      "next_slide": "Slide right",
+      "previous_slide": "Slide left",
+      "name": "Slider"
     }
   },
   "sections": {
