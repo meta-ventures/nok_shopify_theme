@@ -36,7 +36,7 @@
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/primary_banner_1920_x_1080.webp",
-        "enable_mobile_image": true,
+        "enable_mobile_image": false,
         "mobile_image": "shopify:\/\/shop_images\/OnlinePaymentMockupcopiar.webp",
         "image_overlay_opacity": 40,
         "image_height": "large",
