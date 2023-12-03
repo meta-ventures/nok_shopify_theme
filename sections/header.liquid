@@ -108,7 +108,8 @@
     }
   }
   /* Transparent header */
-  .template-index .site-header-transparent .header__icon, .template-index .site-header-transparent .header__menu-item span, .template-index .site-header-transparent .header__menu-item svg, .template-index .site-header-transparent .header__active-menu-item {
+  {% if template == 'index' %}template-index{% endif %}
+  .site-header-transparent .header__icon, .site-header-transparent .header__menu-item span, .site-header-transparent .header__menu-item svg, .site-header-transparent .header__active-menu-item {
     color: {{ section.settings.content_color }};
    }
    .site-header-transparent {
