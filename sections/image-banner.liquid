@@ -16,6 +16,7 @@
   {% else %}
     @media(max-width: 911px){
         #Banner-{{ section.id }} .banner__media_desktop_image {
+            shadow: {{ block.settings.enable_mobile_image }};
             height: 550px;
             object-fit: cover;
         }
