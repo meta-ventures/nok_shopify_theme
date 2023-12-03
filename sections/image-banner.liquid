@@ -1,22 +1,21 @@
 {{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
 
 {% style %}
-  {% if block.settings.enable_mobile_image %}
+  {% if section.settings.enable_mobile_image %}
     #Banner-{{ section.id }} .banner__media_mobile_image {
-        display: none !important;
+        display: none;
     }
     @media(max-width: 767px){
       #Banner-{{ section.id }} .banner__media_desktop_image {
-            display: none !important;
+            display: none;
         }
         #Banner-{{ section.id }} .banner__media_mobile_image {
-            display: block !important;
+            display: block;
         }
     }
   {% else %}
     @media(max-width: 911px){
         #Banner-{{ section.id }} .banner__media_desktop_image {
-            shadow: {{ block.settings.enable_mobile_image }};
             height: 550px;
             object-fit: cover;
         }
