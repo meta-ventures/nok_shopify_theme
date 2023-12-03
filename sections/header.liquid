@@ -419,8 +419,6 @@
     }
 
     onScroll() {
-
-
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
       if (this.predictiveSearch && this.predictiveSearch.isOpen) return;
@@ -448,17 +446,6 @@
       }
 
       this.currentScrollTop = scrollTop;
-
-      // Set transparency
-      var header = document.getElementById('site-header');
-      var main = document.getElementById('MainContent');
-      if ( scrollTop > header.offsetHeight ) {
-        header.classList.remove('site-header-transparent');
-        main.classList.add('site-header-transition');
-      } else {
-        header.classList.add('site-header-transparent');
-        main.classList.remove('site-header-transition');
-      }
     }
 
     hide() {
