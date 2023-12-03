@@ -6,7 +6,7 @@
         "4f5c2dd7-3445-494c-9535-36efc312feda": {
           "type": "slide",
           "settings": {
-            "slider_bg_img": "shopify:\/\/shop_images\/In_Hand_Mobile_Mockup_copiar.webp",
+            "slider_bg_img": "shopify:\/\/shop_images\/In_Hand_Mobile_Mockup_copiar_DEFINITIVO.webp",
             "slider_img_enable": true,
             "slider_img": "shopify:\/\/shop_images\/In_Hand_Mobile_Mockup_copiar_cell.webp",
             "slider_title": "Smart Business Cards for modern networking",
@@ -36,13 +36,13 @@
     "our-services": {
       "type": "our-services",
       "blocks": {
-        "1a7d4c95-6709-48ce-8e55-f109869fe74b": {
+        "1ed917c6-5e5d-4655-a544-6b4ecc37ba6f": {
           "type": "our_services",
           "settings": {
             "ser_url": "",
-            "service_icon": "feather-battery-charging",
-            "service_title": "No app needed",
-            "service_desc": "Our platform works on the browser, for all iOS or Android devices"
+            "service_icon": "feather-play-circle",
+            "service_title": "The first impression matters",
+            "service_desc": "Personalize your profile and get that 'WOW' out of your connections"
           }
         },
         "8e11241f-cd97-4cc2-932f-71d876a8686e": {
@@ -54,20 +54,20 @@
             "service_desc": "You can share your profile with a simple tap. No more need for outdated paper cards."
           }
         },
-        "1ed917c6-5e5d-4655-a544-6b4ecc37ba6f": {
+        "1a7d4c95-6709-48ce-8e55-f109869fe74b": {
           "type": "our_services",
           "settings": {
             "ser_url": "",
-            "service_icon": "feather-play-circle",
-            "service_title": "The first impression matters",
-            "service_desc": "Personalize your profile and get that 'WOW' out of your connections"
+            "service_icon": "feather-battery-charging",
+            "service_title": "No app needed",
+            "service_desc": "Our platform works on the browser, for all iOS or Android devices"
           }
         }
       },
       "block_order": [
-        "1a7d4c95-6709-48ce-8e55-f109869fe74b",
+        "1ed917c6-5e5d-4655-a544-6b4ecc37ba6f",
         "8e11241f-cd97-4cc2-932f-71d876a8686e",
-        "1ed917c6-5e5d-4655-a544-6b4ecc37ba6f"
+        "1a7d4c95-6709-48ce-8e55-f109869fe74b"
       ],
       "settings": {
         "our_ser_padding_top": 48,
@@ -342,7 +342,7 @@
         "section_padding_bottom_xs": 50,
         "section_bgcolor": "#ffffff",
         "section_bgcolor_check": false,
-        "section_title": "TRUST BY",
+        "section_title": "TRUSTED BY",
         "section_desc": ""
       }
     },
