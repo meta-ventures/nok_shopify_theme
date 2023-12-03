@@ -57,7 +57,7 @@
           "type": "service",
           "settings": {
             "ser_url": "",
-            "service_icon": "feather-play-circle",
+            "service_icon": "+",
             "service_title": "The first impression matters",
             "service_desc": "Personalize your profile and get that 'WOW' out of your connections"
           }
@@ -130,170 +130,10 @@
         "padding_bottom": 0
       }
     },
-    "feature-info": {
-      "type": "feature-info",
-      "blocks": {
-        "58e691b2-b873-44aa-a8a1-3191654f6271": {
-          "type": "service_item",
-          "settings": {
-            "service_column_reverse": true,
-            "service_1_title": "Lightining fast nfc",
-            "service_1_desc": "Enhanced NFC chips for the best speed and readability",
-            "service_2_title": "Premium Material",
-            "service_2_desc": "We carefully select top-notch materials for lasting elegance",
-            "service_3_title": "Masterfully Crafted",
-            "service_3_desc": "Exquisite design with polished finish and precision engraving"
-          }
-        },
-        "df5650a4-0e2f-47e0-bb16-b93cf46ccf10": {
-          "type": "service_image",
-          "settings": {
-            "feature_image": "shopify:\/\/shop_images\/Sem_nome_420_x_570_px.png"
-          }
-        },
-        "0e6837e0-1603-47b2-8800-728228b9a7b0": {
-          "type": "service_item",
-          "settings": {
-            "service_column_reverse": false,
-            "service_1_title": "Instant Connections",
-            "service_1_desc": "Seamless networking with a single tap",
-            "service_2_title": "Customizable Profiles",
-            "service_2_desc": "Tailor your profile for unique, personal branding",
-            "service_3_title": "Easy to Use",
-            "service_3_desc": "Simple setup, share your profile in seconds"
-          }
-        }
-      },
-      "block_order": [
-        "58e691b2-b873-44aa-a8a1-3191654f6271",
-        "df5650a4-0e2f-47e0-bb16-b93cf46ccf10",
-        "0e6837e0-1603-47b2-8800-728228b9a7b0"
-      ],
-      "settings": {
-        "section_padding_top": 0,
-        "section_padding_bottom": 100,
-        "section_padding_top_ip": 0,
-        "section_padding_bottom_ip": 80,
-        "section_padding_top_xs": 0,
-        "section_padding_bottom_xs": 60,
-        "section_bg_image_enable": false,
-        "section_bg_color_enable": false,
-        "section_bg_color": "#f8f8f8",
-        "section_subtitle": "Features",
-        "section_title": "#1 Smart Business Card"
-      }
-    },
-    "trusted-by": {
-      "type": "trusted-by",
-      "blocks": {
-        "ec46170f-8be1-4587-aef3-2975565f20ef": {
-          "type": "single_brand",
-          "settings": {
-            "logo_url": "",
-            "logo_image": "shopify:\/\/shop_images\/10.webp"
-          }
-        },
-        "f6bcfc7f-d09f-4ade-8b8e-0c9d2439cda0": {
-          "type": "single_brand",
-          "settings": {
-            "logo_url": "",
-            "logo_image": "shopify:\/\/shop_images\/5.webp"
-          }
-        },
-        "fab5a4a6-bc7e-4d07-9435-bdb3de4f13a0": {
-          "type": "single_brand",
-          "settings": {
-            "logo_url": "",
-            "logo_image": "shopify:\/\/shop_images\/1.webp"
-          }
-        },
-        "e1a31d00-cce5-41dd-9676-4c99acdf7ed1": {
-          "type": "single_brand",
-          "settings": {
-            "logo_url": "",
-            "logo_image": "shopify:\/\/shop_images\/6.webp"
-          }
-        },
-        "3acb20f1-1be6-48a2-991c-a1b5abc33af6": {
-          "type": "single_brand",
-          "settings": {
-            "logo_url": "",
-            "logo_image": "shopify:\/\/shop_images\/4.webp"
-          }
-        },
-        "511009f3-c3cf-4637-b93c-6359d43c385d": {
-          "type": "single_brand",
-          "settings": {
-            "logo_url": "",
-            "logo_image": "shopify:\/\/shop_images\/8.webp"
-          }
-        },
-        "18e2e747-16b3-4ddb-b37c-e7668b054857": {
-          "type": "single_brand",
-          "settings": {
-            "logo_url": "",
-            "logo_image": "shopify:\/\/shop_images\/9.webp"
-          }
-        },
-        "7261ed6b-10b7-41bf-a6c3-11165ed5d39f": {
-          "type": "single_brand",
-          "settings": {
-            "logo_url": "",
-            "logo_image": "shopify:\/\/shop_images\/3.webp"
-          }
-        },
-        "41f349bc-9907-4a25-8856-cc7697e9c20a": {
-          "type": "single_brand",
-          "settings": {
-            "logo_url": "",
-            "logo_image": "shopify:\/\/shop_images\/2.webp"
-          }
-        },
-        "77464bc3-b98e-437d-9710-2be3d5ae1766": {
-          "type": "single_brand",
-          "settings": {
-            "logo_url": "",
-            "logo_image": "shopify:\/\/shop_images\/7.webp"
-          }
-        },
-        "45fd7fda-1b3c-4bd2-a953-fee797857d54": {
-          "type": "single_brand",
-          "settings": {
-            "logo_url": "",
-            "logo_image": "shopify:\/\/shop_images\/Sem_nome_420_x_570_px_950_x_225_px_200_x_100_px.webp"
-          }
-        }
-      },
-      "block_order": [
-        "ec46170f-8be1-4587-aef3-2975565f20ef",
-        "f6bcfc7f-d09f-4ade-8b8e-0c9d2439cda0",
-        "fab5a4a6-bc7e-4d07-9435-bdb3de4f13a0",
-        "e1a31d00-cce5-41dd-9676-4c99acdf7ed1",
-        "3acb20f1-1be6-48a2-991c-a1b5abc33af6",
-        "511009f3-c3cf-4637-b93c-6359d43c385d",
-        "18e2e747-16b3-4ddb-b37c-e7668b054857",
-        "7261ed6b-10b7-41bf-a6c3-11165ed5d39f",
-        "41f349bc-9907-4a25-8856-cc7697e9c20a",
-        "77464bc3-b98e-437d-9710-2be3d5ae1766",
-        "45fd7fda-1b3c-4bd2-a953-fee797857d54"
-      ],
-      "settings": {
-        "section_padding_top": 100,
-        "section_padding_bottom": 100,
-        "section_padding_top_ip": 70,
-        "section_padding_bottom_ip": 70,
-        "section_padding_top_xs": 50,
-        "section_padding_bottom_xs": 50,
-        "section_bgcolor": "#ffffff",
-        "section_bgcolor_check": false,
-        "section_title": "TRUSTED BY",
-        "section_desc": ""
-      }
-    },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
-        "title": "Featured products",
+        "title": "Best Sellers",
         "heading_size": "h2",
         "description": "",
         "show_description": false,
@@ -318,47 +158,9 @@
         "padding_bottom": 36
       }
     },
-    "collage": {
-      "type": "collage",
-      "blocks": {
-        "collection-0": {
-          "type": "collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "product": {
-          "type": "product",
-          "settings": {
-            "product": "",
-            "second_image": false
-          }
-        },
-        "collection-1": {
-          "type": "collection",
-          "settings": {
-            "collection": ""
-          }
-        }
-      },
-      "block_order": [
-        "collection-0",
-        "product",
-        "collection-1"
-      ],
-      "settings": {
-        "heading": "Multimedia collage",
-        "heading_size": "h2",
-        "desktop_layout": "left",
-        "mobile_layout": "collage",
-        "card_styles": "product-card-wrapper",
-        "color_scheme": "scheme-1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "video": {
       "type": "video",
+      "disabled": true,
       "settings": {
         "heading": "",
         "heading_size": "h1",
@@ -370,70 +172,13 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "multicolumn": {
-      "type": "multicolumn",
-      "blocks": {
-        "column1": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column2": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column3": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column1",
-        "column2",
-        "column3"
-      ],
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "third",
-        "image_ratio": "adapt",
-        "columns_desktop": 3,
-        "column_alignment": "center",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "scheme-1",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
     "image_banner",
     "our-services",
     "rich_text",
-    "feature-info",
-    "trusted-by",
     "featured_collection",
-    "collage",
-    "video",
-    "multicolumn"
+    "video"
   ]
 }

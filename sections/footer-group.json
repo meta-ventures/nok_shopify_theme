@@ -5,11 +5,11 @@
     "footer": {
       "type": "footer",
       "blocks": {
-        "footer-0": {
-          "type": "link_list",
+        "af35fac2-af4f-4764-85b6-aea0c4103c7e": {
+          "type": "text",
           "settings": {
-            "heading": "Quick links",
-            "menu": "footer"
+            "heading": "",
+            "subtext": "<p>Parkside Cluster R, Jumeirah Lake Towers, Dubai, United Arab Emirates<\/p><p>+971 58 519 0825<br\/>support@nok.cards<\/p>"
           }
         },
         "footer-1": {
@@ -23,24 +23,25 @@
           "type": "text",
           "settings": {
             "heading": "Our mission",
-            "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
+            "subtext": "<p>Revolutionizing networking with eco-friendly, smart business cards for a sustainable and connected world.<\/p>"
           }
         }
       },
       "block_order": [
-        "footer-0",
+        "af35fac2-af4f-4764-85b6-aea0c4103c7e",
         "footer-1",
         "footer-2"
       ],
       "settings": {
-        "color_scheme": "scheme-1",
-        "newsletter_enable": true,
+        "color_scheme": "inverse",
+        "newsletter_enable": false,
         "newsletter_heading": "Subscribe to our emails",
+        "enable_follow_on_shop": true,
         "show_social": true,
-        "enable_country_selector": false,
-        "enable_language_selector": false,
+        "enable_country_selector": true,
+        "enable_language_selector": true,
         "payment_enable": true,
-        "show_policy": false,
+        "show_policy": true,
         "margin_top": 48,
         "padding_top": 36,
         "padding_bottom": 36
