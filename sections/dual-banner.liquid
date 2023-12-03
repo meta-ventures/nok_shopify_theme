@@ -1,12 +1,12 @@
 {% if section.settings.desktop_banner != blank %}
   <div class="banner-desktop">
-    {{ section.settings.desktop_banner | image_url: '100vw' | image_tag }}
+    {{ section.settings.desktop_banner | image_url: width: '100vw' | image_tag }}
   </div>
 {% endif %}
 
 {% if section.settings.mobile_banner != blank %}
   <div class="banner-mobile">
-      {{ section.settings.mobile_banner | image_url: '100vw' | image_tag }}
+      {{ section.settings.mobile_banner | image_url: width: '100vw' | image_tag }}
   </div>
 {% endif %}
 
