@@ -1,5 +1,34 @@
 {{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
 
+{% style %}
+  {% if block.settings.mobile_image_enable %}
+  .home-slider-area .item-{{ block.id }} .slide-image a.image .mobile-img{
+      display: none;
+  }
+  @media(max-width: 767px){
+      .home-slider-area .item-{{ block.id }} .slide-image a.image .desk-img {
+          display: none;
+      }
+      .home-slider-area .item-{{ block.id }} .slide-image a.image .mobile-img {
+          display: block;
+      }
+  }
+  {% else %}
+  @media(max-width: 911px){
+      .home-slider-area .item-{{ block.id }} .slide-image a.image .desk-img {
+          height: 550px;
+          object-fit: cover;
+      }
+  }
+  @media(max-width: 600px){
+      .home-slider-area .item-{{ block.id }} .slide-image a.image .desk-img {
+          height: 450px;
+      }
+  }
+  {% endif %}
+{% endstyle %}
+
+
 {%- if section.settings.image_height == 'adapt' and section.settings.image != blank -%}
   {%- style -%}
     @media screen and (max-width: 749px) {
