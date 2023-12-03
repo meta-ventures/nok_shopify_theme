@@ -910,6 +910,59 @@ summary::-webkit-details-marker {
   text-transform: none;
 }
 
+/* Boostrap containers */
+
+.container {
+  width: 100%;
+  padding-right: var(--bs-gutter-x, .75rem);
+  padding-left: var(--bs-gutter-x, .75rem);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: calc(var(--bs-gutter-x, .75rem) * -.5);
+  margin-left: calc(var(--bs-gutter-x, .75rem) * -.5);
+}
+
+.col {
+  flex: 1 0 0%;
+  padding-right: calc(var(--bs-gutter-x, .75rem) * .5);
+  padding-left: calc(var(--bs-gutter-x, .75rem) * .5);
+}
+
+.col-6 {
+  flex: 0 0 auto;
+  width: 50%;
+}
 
 
 /* component-grid */
