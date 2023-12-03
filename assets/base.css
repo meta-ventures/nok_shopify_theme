@@ -894,8 +894,7 @@ summary::-webkit-details-marker {
 .section-title span.subtitle {
   font-family: 'Barlow', sans-serif;
   font-style: italic;
-  background-image: var(--gradient-color);
-  -webkit-text-fill-color: transparent;
+  color: #446EFF;
   font-size: 20px;
   margin-bottom: 16px;
   font-weight: 600;
