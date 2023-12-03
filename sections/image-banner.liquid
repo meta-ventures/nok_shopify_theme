@@ -1,7 +1,7 @@
 {{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
 
 {% style %}
-  {% if block.settings.mobile_image_enable %}
+  {% if block.settings.enable_mobile_image %}
     #Banner-{{ section.id }} .banner__media_mobile_image {
         display: none !important;
     }
@@ -102,7 +102,7 @@
             widths: widths,
             fetchpriority: fetch_priority
       }}
-      {%- if section.settings.mobile_image_enable and section.settings.image_2 != blank -%}
+      {%- if section.settings.enable_mobile_image and section.settings.image_2 != blank -%}
         {{
           section.settings.image
           | image_url: width: 3840
@@ -216,7 +216,7 @@
     },
     {
       "type": "checkbox",
-      "id": "mobile_image_enable",
+      "id": "enable_mobile_image",
       "label": "Enable Mobile Image"
     },
     {
