@@ -6,15 +6,15 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "The last business card you will ever need",
-            "heading_size": "h0"
+            "heading": "The last Business Card you will ever need",
+            "heading_size": "h1"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "text": "Say goodbye to outdated paper cards. Improve your connections with just a tap",
-            "text_style": "body"
+            "text": "Say goodbye to outdated paper cards. Improve your connections with <strong>just a tap<\/strong>",
+            "text_style": "subtitle"
           }
         },
         "button": {
@@ -37,7 +37,7 @@
       "settings": {
         "image": "shopify:\/\/shop_images\/banner_hand_card_mobile.webp",
         "enable_mobile_image": true,
-        "mobile_image": "shopify:\/\/shop_images\/primary_banner_816_x_1088.webp",
+        "mobile_image": "shopify:\/\/shop_images\/OnlinePaymentMockupcopiar.webp",
         "image_overlay_opacity": 30,
         "image_height": "large",
         "desktop_content_position": "bottom-left",
@@ -45,9 +45,9 @@
         "desktop_content_alignment": "left",
         "color_scheme": "accent-2",
         "image_behavior": "none",
-        "mobile_content_alignment": "center",
+        "mobile_content_alignment": "left",
         "stack_images_on_mobile": false,
-        "show_text_below": false
+        "show_text_below": true
       }
     },
     "slider": {
