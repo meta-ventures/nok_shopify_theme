@@ -383,6 +383,7 @@
       }
       }
     });
+
     document.getElementById("header-search").addEventListener('click',function () {
       var search = document.getElementById('template-index');
       var header = document.getElementById('site-header');
@@ -398,8 +399,8 @@
         }
       }
     });
-
     // End transparent header
+
       this.header = document.querySelector('.section-header');
       this.headerIsAlwaysSticky = this.getAttribute('data-sticky-type') === 'always' || this.getAttribute('data-sticky-type') === 'reduce-logo-size';
       this.headerBounds = {};
