@@ -417,7 +417,7 @@
       if (this.predictiveSearch && this.predictiveSearch.isOpen) return;
 
       if (scrollTop > this.currentScrollTop && scrollTop > this.headerBounds.bottom) {
-        this.classList.remove('site-header-transparent');
+        this.innerHeader.classList.remove('site-header-transparent');
         this.header.classList.add('scrolled-past-header');
         if (this.preventHide) return;
         requestAnimationFrame(this.hide.bind(this));
@@ -435,7 +435,7 @@
           requestAnimationFrame(this.hide.bind(this));
         }
       } else if (scrollTop <= this.headerBounds.top) {
-        this.classList.add('site-header-transparent');
+        this.innerHeader.classList.add('site-header-transparent');
         this.header.classList.remove('scrolled-past-header');
         requestAnimationFrame(this.reset.bind(this));
       }
