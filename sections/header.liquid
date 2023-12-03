@@ -107,6 +107,21 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+  /* Transparent header */
+  .template-index .site-header-transparent .header__icon, .template-index .site-header-transparent .header__menu-item span, .template-index .site-header-transparent .header__menu-item svg, .template-index .site-header-transparent .header__active-menu-item {
+    color: {{ section.settings.content_color }};
+   }
+   .site-header-transparent {
+     background: transparent;
+     position: absolute;
+     border: none;
+     width: 100%;
+     left: 50%;
+     transform: translateX(-50%);
+   }
+   .site-header-transition {
+      margin-top: var(--header-height);
+   }
 {%- endstyle -%}
 
 <script src="{{ 'details-disclosure.js' | asset_url }}" defer="defer"></script>
