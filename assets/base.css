@@ -894,6 +894,14 @@ summary::-webkit-details-marker {
 .section-title span.subtitle {
   font-family: 'Barlow', sans-serif;
   font-style: italic;
+  background-image: var(--gradient-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 20px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
 }
 
 .section-title h2 {
