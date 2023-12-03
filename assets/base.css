@@ -366,6 +366,10 @@ h6,
   margin-block-end: 1.67em;
 }
 
+ul {
+  list-style: none;
+}
+
 blockquote {
   font-style: italic;
   color: rgba(var(--color-foreground), 0.75);
