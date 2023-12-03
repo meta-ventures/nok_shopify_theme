@@ -130,6 +130,59 @@
         "padding_bottom": 0
       }
     },
+    "feature-info": {
+      "type": "feature-info",
+      "blocks": {
+        "58e691b2-b873-44aa-a8a1-3191654f6271": {
+          "type": "service_item",
+          "settings": {
+            "service_column_reverse": true,
+            "service_1_title": "Lightining fast nfc",
+            "service_1_desc": "Enhanced NFC chips for the best speed and readability",
+            "service_2_title": "Premium Material",
+            "service_2_desc": "We carefully select top-notch materials for lasting elegance",
+            "service_3_title": "Masterfully Crafted",
+            "service_3_desc": "Exquisite design with polished finish and precision engraving"
+          }
+        },
+        "df5650a4-0e2f-47e0-bb16-b93cf46ccf10": {
+          "type": "service_image",
+          "settings": {
+            "feature_image": "shopify:\/\/shop_images\/Sem_nome_420_x_570_px.png"
+          }
+        },
+        "0e6837e0-1603-47b2-8800-728228b9a7b0": {
+          "type": "service_item",
+          "settings": {
+            "service_column_reverse": false,
+            "service_1_title": "Instant Connections",
+            "service_1_desc": "Seamless networking with a single tap",
+            "service_2_title": "Customizable Profiles",
+            "service_2_desc": "Tailor your profile for unique, personal branding",
+            "service_3_title": "Easy to Use",
+            "service_3_desc": "Simple setup, share your profile in seconds"
+          }
+        }
+      },
+      "block_order": [
+        "58e691b2-b873-44aa-a8a1-3191654f6271",
+        "df5650a4-0e2f-47e0-bb16-b93cf46ccf10",
+        "0e6837e0-1603-47b2-8800-728228b9a7b0"
+      ],
+      "settings": {
+        "section_padding_top": 0,
+        "section_padding_bottom": 100,
+        "section_padding_top_ip": 0,
+        "section_padding_bottom_ip": 80,
+        "section_padding_top_xs": 0,
+        "section_padding_bottom_xs": 60,
+        "section_bg_image_enable": false,
+        "section_bg_color_enable": false,
+        "section_bg_color": "#f8f8f8",
+        "section_subtitle": "Features",
+        "section_title": "#1 Smart Business Card"
+      }
+    },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
@@ -269,6 +322,7 @@
     "image_banner",
     "our-services",
     "rich_text",
+    "feature-info",
     "featured_collection",
     "collage",
     "video",
