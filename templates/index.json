@@ -35,12 +35,16 @@
         "button"
       ],
       "settings": {
+        "image": "shopify:\/\/shop_images\/primary_banner_1920_x_1080.webp",
+        "mobile_image_enable": true,
+        "mobile_image": "shopify:\/\/shop_images\/primary_banner_816_x_1088.webp",
         "image_overlay_opacity": 40,
         "image_height": "large",
         "desktop_content_position": "bottom-center",
         "show_text_box": false,
         "desktop_content_alignment": "center",
         "color_scheme": "scheme-3",
+        "image_behavior": "none",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": false,
         "show_text_below": false
@@ -48,28 +52,6 @@
     },
     "slider": {
       "type": "slider",
-      "blocks": {
-        "slide": {
-          "type": "slide",
-          "settings": {
-            "slider_bg_img": "shopify:\/\/shop_images\/In_Hand_Mobile_Mockup_copiar_DEFINITIVO.webp",
-            "slider_img_enable": true,
-            "slider_img": "shopify:\/\/shop_images\/In_Hand_Mobile_Mockup_copiar_cell.webp",
-            "slider_title": "Smart Business Cards for modern networking",
-            "slider_title_color": "#1c1c1c",
-            "slider_desc": "Say goodbye to outdated paper cards. Improve your connections with just a tap",
-            "slider_desc_color": "#333333",
-            "price_1": "",
-            "price_1_color": "#1c1c1c",
-            "price_2": "",
-            "price_2_color": "#1c1c1c",
-            "slider_button": "Get yours now",
-            "slider_button_url": "shopify:\/\/collections\/all",
-            "slider_content_position": "left",
-            "slider_text_position": "left"
-          }
-        }
-      },
       "settings": {
         "slider_arrow_enable": true,
         "prev_title": "Prev",
@@ -98,6 +80,8 @@
         "text"
       ],
       "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
         "color_scheme": "scheme-1",
         "full_width": true,
         "padding_top": 40,
@@ -109,15 +93,23 @@
       "settings": {
         "title": "Featured products",
         "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
         "collection": "all",
         "products_to_show": 8,
         "columns_desktop": 4,
+        "full_width": false,
         "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
         "color_scheme": "scheme-1",
         "image_ratio": "adapt",
+        "image_shape": "default",
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
+        "enable_quick_add": false,
         "columns_mobile": "2",
         "swipe_on_mobile": false,
         "padding_top": 28,
@@ -157,6 +149,7 @@
         "heading_size": "h2",
         "desktop_layout": "left",
         "mobile_layout": "collage",
+        "card_styles": "product-card-wrapper",
         "color_scheme": "scheme-1",
         "padding_top": 36,
         "padding_bottom": 36
@@ -167,6 +160,7 @@
       "settings": {
         "heading": "",
         "heading_size": "h1",
+        "enable_video_looping": false,
         "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
         "description": "",
         "full_width": false,
