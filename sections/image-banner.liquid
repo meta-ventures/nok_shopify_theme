@@ -2,29 +2,29 @@
 
 {% style %}
   {% if block.settings.mobile_image_enable %}
-  .home-slider-area .item-{{ block.id }} .slide-image a.image .mobile-img{
-      display: none;
-  }
-  @media(max-width: 767px){
-      .home-slider-area .item-{{ block.id }} .slide-image a.image .desk-img {
-          display: none;
-      }
-      .home-slider-area .item-{{ block.id }} .slide-image a.image .mobile-img {
-          display: block;
-      }
-  }
-  {% else %}
-  @media(max-width: 911px){
-      .home-slider-area .item-{{ block.id }} .slide-image a.image .desk-img {
-          height: 550px;
-          object-fit: cover;
-      }
-  }
-  @media(max-width: 600px){
-      .home-slider-area .item-{{ block.id }} .slide-image a.image .desk-img {
-          height: 450px;
-      }
-  }
+    #Banner-{{ section.id }} .mobile-img{
+        display: none;
+    }
+    @media(max-width: 767px){
+      #Banner-{{ section.id }} .desk-img {
+            display: none;
+        }
+        #Banner-{{ section.id }} .mobile-img {
+            display: block;
+        }
+    }
+    {% else %}
+    @media(max-width: 911px){
+        #Banner-{{ section.id }} .desk-img {
+            height: 550px;
+            object-fit: cover;
+        }
+    }
+    @media(max-width: 600px){
+        #Banner-{{ section.id }} .desk-img {
+            height: 450px;
+        }
+    }
   {% endif %}
 {% endstyle %}
 
