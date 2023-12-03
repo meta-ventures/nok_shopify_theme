@@ -891,7 +891,7 @@ summary::-webkit-details-marker {
   text-align: center;
 }
 
-.section-title span.subtitle {
+.section-title span.sub-title {
   font-family: 'Barlow', sans-serif;
   font-style: italic;
   color: #446EFF;
