@@ -373,34 +373,34 @@
     var headerHeight = document.getElementById('site-header').offsetHeight;
     document.getElementById('MainContent').style.setProperty('--header-height', '-'+ headerHeight + 'px');
 
-    document.getElementById("header-menu").addEventListener('click',function () {
-      var sideMenu = document.getElementById('Details-menu-drawer-container');
-      var header = document.getElementById('site-header');
-      var height = document.getElementById('site-header').offsetHeight;
-      if ( window.pageYOffset < height ) {
-      if (!sideMenu.classList.contains('menu-opening')) {
-        header.classList.remove('site-header-transparent');
-      } else {
-        header.classList.add('site-header-transparent');
-      }
-      }
-    });
+    // document.getElementById("header-menu").addEventListener('click',function () {
+    //   var sideMenu = document.getElementById('Details-menu-drawer-container');
+    //   var header = document.getElementById('site-header');
+    //   var height = document.getElementById('site-header').offsetHeight;
+    //   if ( window.pageYOffset < height ) {
+    //   if (!sideMenu.classList.contains('menu-opening')) {
+    //     header.classList.remove('site-header-transparent');
+    //   } else {
+    //     header.classList.add('site-header-transparent');
+    //   }
+    //   }
+    // });
 
-    document.getElementById("header-search").addEventListener('click',function () {
-      var search = document.getElementById('template-index');
-      var header = document.getElementById('site-header');
-      var main = document.getElementById('MainContent');
-      var height = document.getElementById('site-header').offsetHeight;
-      if ( window.pageYOffset < height ) {
-        if (search.classList.contains('overflow-hidden')) {
-          header.classList.remove('site-header-transparent');
-          main.classList.add('site-header-transition');
-        } else {
-          header.classList.add('site-header-transparent');
-          main.classList.remove('site-header-transition');
-        }
-      }
-    });
+    // document.getElementById("header-search").addEventListener('click',function () {
+    //   var search = document.getElementById('template-index');
+    //   var header = document.getElementById('site-header');
+    //   var main = document.getElementById('MainContent');
+    //   var height = document.getElementById('site-header').offsetHeight;
+    //   if ( window.pageYOffset < height ) {
+    //     if (search.classList.contains('overflow-hidden')) {
+    //       header.classList.remove('site-header-transparent');
+    //       main.classList.add('site-header-transition');
+    //     } else {
+    //       header.classList.add('site-header-transparent');
+    //       main.classList.remove('site-header-transition');
+    //     }
+    //   }
+    // });
     // End transparent header
 
       this.header = document.querySelector('.section-header');
