@@ -424,7 +424,7 @@
         requestAnimationFrame(this.hide.bind(this));
       } else if (scrollTop < this.currentScrollTop && scrollTop > this.headerBounds.bottom) {
         this.innerHeader.classList.remove('site-header-transparent');
-        // this.mainContent.classList.add('site-header-transition');
+        this.mainContent.classList.add('site-header-transition');
         this.header.classList.add('scrolled-past-header');
         if (!this.preventReveal) {
           requestAnimationFrame(this.reveal.bind(this));
@@ -439,7 +439,7 @@
         }
       } else if (scrollTop <= this.headerBounds.top) {
         this.innerHeader.classList.add('site-header-transparent');
-        // this.mainContent.classList.remove('site-header-transition');
+        this.mainContent.classList.remove('site-header-transition');
         this.header.classList.remove('scrolled-past-header');
         requestAnimationFrame(this.reset.bind(this));
       }
