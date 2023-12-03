@@ -396,6 +396,8 @@
     }
 
     setHeaderHeight() {
+      this.mainContent.style.setProperty('--header-height', '-'+ this.innerHeader.offsetHeight + 'px');
+
       document.documentElement.style.setProperty('--header-height', `${this.header.offsetHeight}px`);
     }
 
