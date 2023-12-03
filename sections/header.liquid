@@ -439,6 +439,7 @@
         }
       } else if (scrollTop <= this.headerBounds.top) {
         this.innerHeader.classList.add('site-header-transparent');
+        this.mainContent.classList.remove('site-header-transition');
         this.header.classList.remove('scrolled-past-header');
         requestAnimationFrame(this.reset.bind(this));
       }
