@@ -53,8 +53,8 @@
     "our-services": {
       "type": "our-services",
       "blocks": {
-        "1ed917c6-5e5d-4655-a544-6b4ecc37ba6f": {
-          "type": "our_services",
+        "service-1": {
+          "type": "service",
           "settings": {
             "ser_url": "",
             "service_icon": "feather-play-circle",
@@ -62,8 +62,8 @@
             "service_desc": "Personalize your profile and get that 'WOW' out of your connections"
           }
         },
-        "8e11241f-cd97-4cc2-932f-71d876a8686e": {
-          "type": "our_services",
+        "service-2": {
+          "type": "service",
           "settings": {
             "ser_url": "",
             "service_icon": "feather-settings",
@@ -71,8 +71,8 @@
             "service_desc": "You can share your profile with a simple tap. No more need for outdated paper cards."
           }
         },
-        "1a7d4c95-6709-48ce-8e55-f109869fe74b": {
-          "type": "our_services",
+        "service-3": {
+          "type": "service",
           "settings": {
             "ser_url": "",
             "service_icon": "feather-battery-charging",
@@ -82,9 +82,9 @@
         }
       },
       "block_order": [
-        "1ed917c6-5e5d-4655-a544-6b4ecc37ba6f",
-        "8e11241f-cd97-4cc2-932f-71d876a8686e",
-        "1a7d4c95-6709-48ce-8e55-f109869fe74b"
+        "service-1",
+        "service-2",
+        "service-3"
       ],
       "settings": {
         "our_ser_padding_top": 48,
