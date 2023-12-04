@@ -43,9 +43,11 @@
   }
   .features-square-area ul.single-feature li.feature-wrapper:hover .feature-block .feature-icon {
     color: #ffffff;
+    background-color: blue;
+    border: 10px solid red;
   }
   .features-square-area ul.single-feature li.feature-wrapper .feature-block .feature-icon::before {
-    background-color: var(--gradient-color);
+    /* background-image: var(--gradient-color); */
     content: '';
     position: absolute;
     bottom: 50%;
