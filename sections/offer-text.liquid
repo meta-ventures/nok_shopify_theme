@@ -1,0 +1,366 @@
+<section class="offer-text-area">
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<div class="text-area">
+					<ul class="text-ul">
+						<li class="text-li title">
+              <div class="section-capture">
+                <div class="section-title">
+                  {% if section.settings.offer_text_title != '' %}
+                  <h2 style="color: {{ section.settings.offer_text_title_color }}">{{ section.settings.offer_text_title }}</h2>
+                  {% endif %}
+                </div>
+              </div>
+						</li>
+						<li class="text-li desc">
+							{% if section.settings.offer_text_desc != '' %}
+							<p style="color: {{ section.settings.offer_text_desc_color }}">{{ section.settings.offer_text_desc }}</p>
+							{% endif %}
+						</li>
+						<li class="text-li offer-btn">
+							{% if section.settings.offer_btn_text != '' %}
+							<a href="{{ section.settings.offer_btn_url }}" class="btn-style3">
+								<span>{{ section.settings.offer_btn_text }}</span>
+								<span class="icon">{{ section.settings.offer_btn_icon }}</span>
+							</a>
+							{% endif %}
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+{% schema %}
+{
+  "name": "Offer Text",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Padding"
+    },
+    {
+      "type": "paragraph",
+      "content": "Desktop / Laptop"
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 50
+    },
+    {
+      "type": "paragraph",
+      "content": "Ipad pro / Ipad"
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top_ip",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom_ip",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 50
+    },
+    {
+      "type": "paragraph",
+      "content": "Mobile"
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top_xs",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom_xs",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 50
+    },
+    {
+      "type": "header",
+      "content": "Section Background Image"
+    },
+    {
+      "type": "checkbox",
+      "id": "section_bg_image_enable",
+      "label": "Show Background Images",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "section_bg_image",
+      "label": "Background Image",
+      "info": "Recommended Size: 1920px x 663px"
+    },
+    {
+      "type": "header",
+      "content": "Section Background Color"
+    },
+    {
+      "type": "checkbox",
+      "id": "section_bg_color_enable",
+      "label": "Show Background Color",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "section_bg_color",
+      "label": "Background Color",
+      "default": "#4367FC"
+    },
+    {
+      "type": "header",
+      "content": "Offer Text"
+    },
+    {
+      "type": "header",
+      "content": "Title"
+    },
+    {
+      "type": "text",
+      "id": "offer_text_title",
+      "label": "Offer Title",
+      "default": "Order now"
+    },
+    {
+      "type": "text",
+      "id": "offer_text_title_color",
+      "label": "Title Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Description"
+    },
+    {
+      "type": "textarea",
+      "id": "offer_text_desc",
+      "label": "Description",
+      "default": "Get free gift and become our special member"
+    },
+    {
+      "type": "text",
+      "id": "offer_text_desc_color",
+      "label": "Description Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "text",
+      "id": "offer_btn_text",
+      "label": "Button Text",
+      "default": "Buy now"
+    },
+    {
+      "type": "textarea",
+      "id": "offer_btn_icon",
+      "label": "Button svg Icon"
+    },
+    {
+      "type": "url",
+      "id": "offer_btn_url",
+      "label": "url"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Offer Text",
+      "category": "Offer Text"
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+.offer-text-area {
+  padding-top: {{ section.settings.section_padding_top }}px;
+  padding-bottom: {{ section.settings.section_padding_bottom }}px;
+  {% if section.settings.section_bg_image_enable %}
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  {% endif %}
+  {% if section.settings.section_bg_color_enable %}
+  background-color: {{ section.settings.section_bg_color }};
+  {% endif %}
+}
+@media (max-width: 1199px) {
+  .offer-text-area {
+    padding-top: {{ section.settings.section_padding_top_ip }}px;
+    padding-bottom: {{ section.settings.section_padding_bottom_ip }}px;
+  }
+}
+@media (max-width: 767px) {
+  .offer-text-area {
+    padding-top: {{ section.settings.section_padding_top_xs }}px;
+    padding-bottom: {{ section.settings.section_padding_bottom_xs }}px;
+  }
+}
+/* main css */
+.offer-text-area .text-area ul.text-ul {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+  justify-content: center;
+	{% if settings.enable_rtl %}
+	margin-right: -30px;
+	{% else %}
+	margin-left: -30px;
+	{% endif %}
+  margin-top: -30px;
+}
+.offer-text-area .text-area ul.text-ul li.text-li {
+	{% if settings.enable_rtl %}
+	margin-right: 30px;
+	{% else %}
+	margin-left: 30px;
+	{% endif %}
+  margin-top: 30px;
+}
+.offer-text-area .text-area ul.text-ul li.text-li.title {
+	width: calc(25% - 30px);
+  {% if settings.enable_rtl %}
+  text-align: right;
+  {% else %}
+  text-align: left;
+  {% endif %}
+}
+.offer-text-area .text-area ul.text-ul li.text-li {
+	width: calc(41.67% - 30px);
+	text-align: center;
+}
+.offer-text-area .text-area ul.text-ul li.text-li.offer-btn {
+	width: calc(16.67% - 30px);
+	text-align: center;
+}
+@media (max-width: 1199px) {
+  .offer-text-area .text-area ul.text-ul li.text-li {
+    width: calc(50% - 30px);
+  }
+  .offer-text-area .text-area ul.text-ul li.text-li.offer-btn {
+    width: calc(25% - 30px);
+  }
+}
+@media (max-width: 991px) {
+  .offer-text-area .text-area ul.text-ul li.text-li.title,
+  .offer-text-area .text-area ul.text-ul li.text-li.offer-btn {
+    width: calc(50% - 30px);
+  }
+  .offer-text-area .text-area ul.text-ul li.text-li.desc {
+    width: calc(100% - 30px);
+    order: -1;
+  }
+}
+@media (max-width: 767px) {
+  .offer-text-area .text-area ul.text-ul {
+    {% if settings.enable_rtl %}
+    margin-right: -12px;
+    {% else %}
+    margin-left: -12px;
+    {% endif %}
+    margin-top: -15px;
+  }
+  .offer-text-area .text-area ul.text-ul li.text-li {
+    {% if settings.enable_rtl %}
+    margin-right: 12px;
+    {% else %}
+    margin-left: 12px;
+    {% endif %}
+    margin-top: 15px;
+  }
+  .offer-text-area .text-area ul.text-ul li.text-li.title,
+  .offer-text-area .text-area ul.text-ul li.text-li.offer-btn {
+    width: calc(50% - 12px);
+  }
+  .offer-text-area .text-area ul.text-ul li.text-li.desc {
+    width: calc(100% - 12px);
+  }
+}
+@media (max-width: 479px) {
+  .offer-text-area .text-area ul.text-ul li.text-li.title,
+  .offer-text-area .text-area ul.text-ul li.text-li.offer-btn {
+    width: calc(100% - 12px);
+  }
+  .offer-text-area .text-area ul.text-ul li.text-li.desc {
+    order: unset;
+  }
+}
+
+/* title css */
+.offer-text-area .text-area ul.text-ul li.text-li.title .section-capture {
+  margin-bottom: 0px;
+}
+/* description css */
+.offer-text-area .text-area ul.text-ul li.text-li p {
+  font-size: 24px;
+  {% if settings.other_custom_font_handle_enable %}
+  font-family: '{{ settings.other_custom_font_handle }}', sans-serif;
+  {% endif %}
+}
+/* button css */
+.offer-text-area .text-area ul.text-ul li.text-li.offer-btn a {
+  display: inline-flex;
+}
+.offer-text-area .text-area ul.text-ul li.text-li.offer-btn a span.icon {
+  {% if settings.enable_rtl %}
+  margin-right: 10px;
+  {% else %}
+  margin-left: 10px;
+  {% endif %}
+}
+.offer-text-area .text-area ul.text-ul li.text-li.offer-btn a span.icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+@media (max-width: 1199px) {
+	.offer-text-area .text-area ul.text-ul li.text-li p {
+		font-size: 20px;
+	}
+}
+@media (max-width: 767px) {
+	.offer-text-area .text-area ul.text-ul li.text-li p {
+		font-size: 16px;
+	}
+}
+</style>
