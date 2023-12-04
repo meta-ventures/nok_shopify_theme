@@ -16,7 +16,6 @@
       "block_order": [
         "announcement-bar-0"
       ],
-      "disabled": true,
       "settings": {
         "color_scheme": "",
         "show_line_separator": true,
@@ -35,7 +34,7 @@
         "menu_type_desktop": "dropdown",
         "sticky_header_type": "on-scroll-up",
         "transparent_header": true,
-        "content_color": "#ffffff",
+        "content_color": "#fff",
         "show_line_separator": true,
         "color_scheme": "scheme-1",
         "menu_color_scheme": "",
