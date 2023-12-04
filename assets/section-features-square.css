@@ -44,7 +44,7 @@
   .our-feature-area ul.single-feature li.ser-box:hover .ser-block .feature-icon {
     color: #ffffff;
   }
-  .our-feature-area ul.single-feature li.ser-box .ser-block a::before {
+  .our-feature-area ul.single-feature li.ser-box .ser-block .feature-icon::before {
     background-image: var(--gradient-color);
     content: '';
     position: absolute;
@@ -62,7 +62,7 @@
     -o-transition: all .3s ease-in-out 0s;
     transition: all .3s ease-in-out 0s;
   }
-  .our-feature-area ul.single-feature li.ser-box:hover .ser-block a::before {
+  .our-feature-area ul.single-feature li.ser-box:hover .ser-block .feature-icon::before {
     opacity: 1;
     visibility: visible;
     -webkit-transition: all .3s ease-in-out 0s;
