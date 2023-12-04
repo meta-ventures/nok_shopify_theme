@@ -395,24 +395,24 @@
 
 {% javascript %}
     (function () {
-      consol.log("Counter up")
-    const counterUp = window.counterUp.default;
-    const callback = entries => {
-      entries.forEach( entry => {
-        const el = entry.target
-        if ( entry.isIntersecting && ! el.classList.contains( 'is-visible' ) ) {
-          counterUp( el, {
-            duration: 3000,
-            delay: 16,
-          } )
-          el.classList.add( 'is-visible' )
-        }
-      } )
-    }
+      console.log("Starting counter up")
+      const counterUp = window.counterUp.default;
+      const callback = entries => {
+        entries.forEach( entry => {
+          const el = entry.target
+          if ( entry.isIntersecting && ! el.classList.contains( 'is-visible' ) ) {
+            counterUp( el, {
+              duration: 3000,
+              delay: 16,
+            } )
+            el.classList.add( 'is-visible' )
+          }
+        } )
+      }
 
-    document.querySelectorAll('.count-up').forEach((counter) => {
-      new IntersectionObserver( callback, { threshold: 1 } ).observe( counter )
-    });
+      document.querySelectorAll('.count-up').forEach((counter) => {
+        new IntersectionObserver( callback, { threshold: 1 } ).observe( counter )
+      });
 
     // const script = document.createElement('script');
     // script.src = "{{ 'counter-up.min.js' | asset_url }}";
