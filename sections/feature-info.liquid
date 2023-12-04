@@ -131,9 +131,20 @@
             </li>
             {%- when 'service_image' -%}
             <li class="service-image-li feature-image">
-              <span>
-                <img width="{{ block.settings.feature_image.width }}" height="{{ block.settings.feature_image.height }}" class="img-fluid desk-img" src="{% if block.settings.feature_image %}{{ block.settings.feature_image | image_url }}{% else %}https://dummyimage.com/570x570{% endif %}" alt="">
-              </span>
+              {%- if block.settings.feature_image -%}
+                <span>
+                  {{
+                    block.settings.feature_image
+                    | image_url: width: 1000
+                    | image_tag:
+                        width: block.settings.feature_image.width,
+                        height: block.settings.feature_image.height,
+                        class: 'img-fluid',
+                        widths: '100, 200',
+                        fetchpriority: 'low'
+                  }}
+                </span>
+              {%- endif -%}
             </li>
             {%- endcase -%}
             {% endfor %}
