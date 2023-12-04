@@ -356,7 +356,7 @@
             "feature_item_title": "Paper Waste",
             "feature_item_number": "270",
             "feature_item_number_title": "million",
-            "feature_item_desc": "That's the staggering amount of paper business cards printed <strong>every day</strong> globally."
+            "feature_item_desc": "That's the staggering amount of paper business cards printed <strong>every day<\/strong> globally."
           }
         },
         "1495a69a-fe5f-41cf-988f-c7018bc9cb02": {
@@ -474,7 +474,7 @@
         "section_bg_color": "#4367fc",
         "offer_text_title": "Order now",
         "offer_text_title_color": "#ffffff",
-        "offer_text_desc": "Enjoy our FREE shipping on orders above 120dh",
+        "offer_text_desc": "Enjoy our FREE shipping*",
         "offer_text_desc_color": "#ffffff",
         "offer_btn_text": "Buy now",
         "offer_btn_icon": "",
