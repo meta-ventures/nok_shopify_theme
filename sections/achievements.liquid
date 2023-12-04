@@ -403,49 +403,24 @@
 
 {% endjavascript %}
 (function () {
-  var a; function b() {}
-
-  function isScrolledIntoView($elem) {
-      var docViewTop = $(window).scrollTop();
-      var docViewBottom = docViewTop + $(window).height();
-      var elemTop = $elem.offset().top;
-      var elemBottom = elemTop + $elem.height();
-      return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
-  }
-
-  function count($this) {
-      var current = parseInt($this.html(), 10);
-      if (isScrolledIntoView($this) && !$this.data("isCounting") && current < $this.data('count')) {
-          $this.html(++current);
-          $this.data("isCounting", true);
-          setTimeout(function () {
-              $this.data("isCounting", false);
-              count($this);
-          }, 50);
+  const callback = entries => {
+    entries.forEach( entry => {
+      const el = entry.target
+      if ( entry.isIntersecting && ! el.classList.contains( 'is-visible' ) ) {
+        counterUp( el, {
+          duration: 2000,
+          delay: 16,
+        } )
+        el.classList.add( 'is-visible' )
       }
+    } )
   }
 
-
+  const IO = new IntersectionObserver( callback, { threshold: 1 } )
   document.querySelectorAll('.count').forEach((counter) => {
-    conter.dataset.count = parseInt(conter.innerHTML, 10);
-    counter.innerHTML = 0;
-    couter.dataset.isCounting = false;
+    IO.observe( counter )
+
   });
-
-  $(".c-section4").each(function () {
-      $(this).data('count', parseInt($(this).html(), 10));
-      $(this).html('0');
-      $(this).data("isCounting", false);
-  });
-
-  function startCount() {
-    document.querySelectorAll('.count').forEach((counter) => {
-      count(counter)
-    })
-  };
-  window.addEventListener('scroll', startCount);
-
-  startCount();
 })();
 
 
