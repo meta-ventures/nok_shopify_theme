@@ -8,4 +8,5 @@ console.log("Loading plugins")
 
 const counterUp = window.counterUp.default;
 
+console.log("Counter up started");
 console.log(counterUp);
