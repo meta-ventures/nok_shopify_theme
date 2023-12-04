@@ -4143,3 +4143,72 @@ button[disabled]{
   -o-transition: all 0.3s ease-in-out 0s;
   transition: all 0.3s ease-in-out 0s;
 }
+
+
+/*=====================================
+  slider arrow css
+======================================*/
+.cat-slider.owl-theme .owl-nav,
+.feture_pro_tab .swiper-buttons,
+.feature-pro-owl.owl-carousel .owl-nav,
+.collection-category .collection-slider .owl-nav,
+.product-related-slider.owl-carousel .owl-nav {
+  display: none;
+  justify-content: center;
+  margin-top: 0px;
+}
+.cat-slider.owl-theme .owl-nav button,
+.feture_pro_tab .swiper-buttons button,
+.feature-pro-owl.owl-carousel .owl-nav button,
+.blog-slider.owl-carousel .owl-nav button,
+.collection-category .collection-slider .owl-nav button,
+.product-related-slider.owl-carousel .owl-nav button,
+.deal-slider.owl-carousel .owl-nav button{
+  color: #fff;
+  font-size: 20px;
+  width: 35px;
+  height: 35px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  margin: 0px;
+  border: none;
+  border-radius: 3px;
+  z-index: 1;
+  line-height: 0;
+  cursor: pointer;
+  background-color: var(--font-color-primary);
+}
+
+.cat-slider.owl-theme .owl-nav button:last-child,
+.feture_pro_tab .swiper-buttons button:last-child,
+.feature-pro-owl.owl-carousel .owl-nav button:last-child,
+.blog-slider.owl-carousel .owl-nav button:last-child,
+.collection-category .collection-slider .owl-nav button:last-child,
+.product-related-slider.owl-carousel .owl-nav button:last-child,
+.deal-slider.owl-carousel .owl-nav button:last-child{
+  margin: 0;
+}
+
+.cat-slider.owl-theme .owl-nav button:hover,
+.feture_pro_tab .swiper-buttons button:hover,
+.feature-pro-owl.owl-carousel .owl-nav button:hover,
+.blog-slider.owl-carousel .owl-nav button:hover,
+.collection-category .collection-slider .owl-nav button:hover,
+.product-related-slider.owl-carousel .owl-nav button:hover,
+.deal-slider.owl-carousel .owl-nav button:hover{
+  color: #fff;
+  background-color: var(--btn2-bgcolor);
+}
+@media(max-width: 1199px){
+  .cat-slider.owl-theme .owl-nav button,
+  .feture_pro_tab .swiper-buttons button,
+  .feature-pro-owl.owl-carousel .owl-nav button,
+  .blog-slider.owl-carousel .owl-nav button,
+  .collection-category .collection-slider .owl-nav button,
+  .product-related-slider.owl-carousel .owl-nav button,
+  .deal-slider.owl-carousel .owl-nav button{
+      width: 30px;
+      height: 30px;
+  }
+}
