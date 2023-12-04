@@ -301,4 +301,17 @@
           padding-bottom: {{ section.settings.section_padding_bottom_xs }}px;
       }
   }
+
+  .offer-banner-area .offer-banner-bg::before {
+    {% if section.settings.offer_banner_bg_image_enable %}
+      background-image: url('{% if section.settings.section_bg_image %}{{ section.settings.section_bg_image | image_url }}{% else %}https://dummyimage.com/1340x600{% endif %}');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    {% endif %}
+
+    {% if section.settings.section_bg_color_enable %}
+      background-color: {{ section.settings.section_bg_color }};
+    {% endif %}
+  }
 {% endstyle %}
