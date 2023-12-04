@@ -416,10 +416,8 @@
     }
 
     const IO = new IntersectionObserver( callback, { threshold: 1 } )
-    IO.observe(document.querySelectorAll('.count'))
-    // document.querySelectorAll('.count').forEach((counter) => {
-
-
-    // });
+    document.querySelectorAll('.count').forEach((counter) => {
+      IO.observe( counter )
+    });
   })();
 {% endjavascript %}
