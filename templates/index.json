@@ -373,8 +373,8 @@
           "settings": {
             "feature_item_title": "Waste in Landfills",
             "feature_item_number": "450000",
-            "feature_item_number_title": "tons of paper",
-            "feature_item_desc": "That's the amount of paper ending up in landfills yearly, with 88% of business cards discarded within a week."
+            "feature_item_number_title": "tons",
+            "feature_item_desc": "Amount of paper ending up in landfills, with 88% of business cards discarded within a week."
           }
         },
         "8d47de1a-a725-4617-a932-975ede5219ac": {
