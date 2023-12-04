@@ -407,7 +407,7 @@
           }
         } )
       }
-      new IntersectionObserver( callback, { threshold: 1 } ).observe(el)
+      new IntersectionObserver( callback.bind(opt), { threshold: 1 } ).observe(el)
     }
 
 
