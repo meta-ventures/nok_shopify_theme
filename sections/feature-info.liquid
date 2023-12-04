@@ -22,16 +22,6 @@
                 <li class="feature-item-li">
                   <div class="feature-icon">
                     <a href="javascript:void(0)">
-                      {{
-                        block.settings.service_image_icon_1
-                        | image_url: width: 1000
-                        | image_tag:
-                            width: block.settings.service_image_icon_1.width,
-                            height: block.settings.service_image_icon_1.height,
-                            class: 'img-fluid',
-                            widths: '100, 200',
-                            fetchpriority: 'low'
-                      }}
                       <img width="{{ block.settings.service_image_icon_1.width }}" height="{{ block.settings.service_image_icon_1.height }}" class="img-fluid" src="{% if block.settings.service_image_icon_1 %}{{ block.settings.service_image_icon_1 | image_url }}{% else %}https://dummyimage.com/512x512{% endif %}" alt="">
                     </a>
                   </div>
