@@ -1,0 +1,478 @@
+<!-- banner-area start -->
+<section class="offer-banner-area">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="offer-banner-bg">
+                    <div class="offer-banner-image">
+                        <img width="{{ section.settings.image_banner.width }}" height="{{ section.settings.image_banner.height }}" class="img-fluid" src="{% if section.settings.image_banner %}{{ section.settings.image_banner | image_url }}{% else %}https://dummyimage.com/420x570/f7f7f7/999999{% endif %}" alt="">
+                    </div>
+                    <div class="offer-banner-content">
+                        <div class="banner-content">
+                            {% if section.settings.banner_title != '' %}
+                            <h1 class="title" style="color: {{ section.settings.banner_title_color }}">{{ section.settings.banner_title }}</h1>
+                            {% endif %}
+                            {% if section.settings.banner_desc != '' %}
+                            <p class="desc" style="color: {{ section.settings.banner_desc_color }}">{{ section.settings.banner_desc }}</p>
+                            {% endif %}
+                            <h4 class="price" style="color: {{ section.settings.banner_price_color }}">
+                                {% if section.settings.banner_price_label != '' %}
+                                <span class="label">{{ section.settings.banner_price_label }}</span>
+                                {% endif %}
+                                {% if section.settings.banner_price_text != '' %}
+                                <span class="price">{{ section.settings.banner_price_text }}</span>
+                                {% endif %}
+                            </h4>
+                            <div class="banner-btn">
+                                {% if section.settings.banner_btn_1_text != '' %}
+                                <a href="{{ section.settings.banner_btn_1_url }}" class="btn-1 btn-style2">
+                                    <span>{{ section.settings.banner_btn_1_text }}</span>
+                                    <span class="icon">{{ section.settings.banner_btn_1_icon }}</span>
+                                </a>
+                                {% endif %}
+                                {% if section.settings.banner_btn_2_text != '' %}
+                                <a href="{{ section.settings.banner_btn_2_url }}" class="btn-2 btn-style3">
+                                    <span class="icon">{{ section.settings.banner_btn_2_icon }}</span>
+                                    <span>{{ section.settings.banner_btn_2_text }}</span>
+                                </a>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- banner-area end -->
+{% schema %}
+{
+  "name": "Banner Grid1",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Padding"
+    },
+    {
+      "type": "paragraph",
+      "content": "Desktop / Laptop / tablet"
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "paragraph",
+      "content": "Ipad pro / Ipad"
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top_ip",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom_ip",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 30
+    },
+    {
+      "type": "paragraph",
+      "content": "Mobile"
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top_xs",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom_xs",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Background Image"
+    },
+    {
+      "type": "checkbox",
+      "id": "offer_banner_bg_image_enable",
+      "label": "Show Background Image",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "section_bg_image",
+      "label": "Background Image",
+      "info": "Recommended Size: 1340 x 600px"
+    },
+    {
+      "type": "header",
+      "content": "Background Color"
+    },
+    {
+      "type": "checkbox",
+      "id": "section_bg_color_enable",
+      "label": "Show Background Color",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "section_bg_color",
+      "label": "Background Color",
+      "default": "#f6f6f6"
+    },
+    {
+      "type": "header",
+      "content": "Banner Content"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_banner",
+      "label": "Banner Image",
+      "info": "Recommended Size: 420px x 570px"
+    },
+    {
+      "type": "header",
+      "content": "Banner Image"
+    },
+    {
+      "type": "header",
+      "content": "Title"
+    },
+    {
+      "type": "text",
+      "id": "banner_title",
+      "label": "Banenr title",
+      "default": "Buy our awesome drone"
+    },
+    {
+      "type": "color",
+      "id": "banner_title_color",
+      "label": "Banenr title Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Description"
+    },
+    {
+      "type": "textarea",
+      "id": "banner_desc",
+      "label": "Banenr Description",
+      "default": "Portable yet powerful, the nexa pro is your personal drone ready to go with you everywhere."
+    },
+    {
+      "type": "color",
+      "id": "banner_desc_color",
+      "label": "Banenr Description Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Price"
+    },
+    {
+      "type": "text",
+      "id": "banner_price_label",
+      "label": "Price label",
+      "default": "Price only:"
+    },
+    {
+      "type": "text",
+      "id": "banner_price_text",
+      "label": "Price Text",
+      "default": "$999.00"
+    },
+    {
+      "type": "color",
+      "id": "banner_price_color",
+      "label": "Banenr Price Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Banner Button"
+    },
+    {
+      "type": "header",
+      "content": "Button 1"
+    },
+    {
+      "type": "text",
+      "id": "banner_btn_1_text",
+      "label": "Button 1 Text",
+      "default": "Add to cart"
+    },
+    {
+      "type": "textarea",
+      "id": "banner_btn_1_icon",
+      "label": "Button Icon",
+      "default": "feather-shopping-cart"
+    },
+    {
+      "type": "url",
+      "id": "banner_btn_1_url",
+      "label": "Button 1 url"
+    },
+    {
+      "type": "header",
+      "content": "Button 2"
+    },
+    {
+      "type": "textarea",
+      "id": "banner_btn_2_icon",
+      "label": "Button Icon",
+      "default": "feather-shopping-cart"
+    },
+    {
+      "type": "text",
+      "id": "banner_btn_2_text",
+      "label": "Button 2 Text",
+      "default": "Buy amazon"
+    },
+    {
+      "type": "url",
+      "id": "banner_btn_2_url",
+      "label": "Button 2 url"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Banner Grid1",
+      "category": "Banner Grid"
+    }
+  ]
+}
+{% endschema %}
+<style>
+    .offer-banner-area {
+        padding-top: {{ section.settings.section_padding_top }}px;
+        padding-bottom: {{ section.settings.section_padding_bottom }}px;
+    }
+    @media(max-width: 1199px){
+        .offer-banner-area {
+            padding-top: {{ section.settings.section_padding_top_ip }}px;
+            padding-bottom: {{ section.settings.section_padding_bottom_ip }}px;
+        }
+    }
+    @media(max-width: 767px){
+        .offer-banner-area {
+            padding-top: {{ section.settings.section_padding_top_xs }}px;
+            padding-bottom: {{ section.settings.section_padding_bottom_xs }}px;
+        }
+    }
+
+    .offer-banner-area .offer-banner-bg {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: {{ section.settings.section_padding_top }}px {{ section.settings.section_padding_top | divided_by: 2 }}px;
+        margin-top: 150px;
+    }
+    .offer-banner-area .offer-banner-bg::before {
+        {% if section.settings.offer_banner_bg_image_enable %}
+        background-image: url('{% if section.settings.section_bg_image %}{{ section.settings.section_bg_image | image_url }}{% else %}https://dummyimage.com/1340x600{% endif %}');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        {% endif %}
+        {% if section.settings.section_bg_color_enable %}
+        background-color: {{ section.settings.section_bg_color }};
+        {% endif %}
+        content: '';
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        height: 100%;
+        z-index: -1;
+        border-radius: 5px;
+    }
+    .offer-banner-area .offer-banner-bg .offer-banner-image {
+        width: 50%;
+        margin-top: -300px;
+        text-align: center;
+    }
+    .offer-banner-area .offer-banner-bg .offer-banner-content {
+        width: 50%;
+        {% if settings.enable_rtl %}
+        padding-right: 50px;
+        {% else %}
+        padding-left: 50px;
+        {% endif %}
+    }
+    .offer-banner-area .offer-banner-bg .offer-banner-content .banner-content {
+        max-width: 75%;
+    }
+    .offer-banner-area .offer-banner-bg .offer-banner-content .banner-content h1.title {
+        font-size: 38px;
+        font-weight: 700;
+        font-style: italic;
+    }
+    .offer-banner-area .offer-banner-bg .offer-banner-content .banner-content p.desc {
+        font-size: 22px;
+        margin-top: 32px;
+        opacity: 0.8;
+    }
+    .offer-banner-area .offer-banner-bg .offer-banner-content .banner-content h4.price {
+        margin-top: 36px;
+    }
+    .offer-banner-area .offer-banner-bg .offer-banner-content .banner-content h4.price span.label {
+        font-size: 32px;
+        font-weight: 400;
+    }
+    .offer-banner-area .offer-banner-bg .offer-banner-content .banner-content h4.price span.price {
+        font-size: 32px;
+        font-weight: 600;
+    }
+    .offer-banner-area .offer-banner-bg .offer-banner-content .banner-content .banner-btn {
+        margin-top: 47px;
+        display: flex;
+        align-items: center;
+    }
+    .offer-banner-area .offer-banner-bg .offer-banner-content .banner-content .banner-btn a.btn-1 span.icon {
+        {% if settings.enable_rtl %}
+        margin-right: 5px;
+        {% else %}
+        margin-left: 5px;
+        {% endif %}
+    }
+    .offer-banner-area .offer-banner-bg .offer-banner-content .banner-content .banner-btn a.btn-2 {
+        {% if settings.enable_rtl %}
+        margin-right: 20px;
+        {% else %}
+        margin-left: 20px;
+        {% endif %}
+    }
+    .offer-banner-area .offer-banner-bg .offer-banner-content .banner-content .banner-btn a.btn-2 span.icon {
+        {% if settings.enable_rtl %}
+        margin-left: 5px;
+        {% else %}
+        margin-right: 5px;
+        {% endif %}
+    }
+    .offer-banner-area .offer-banner-bg .offer-banner-content .banner-content .banner-btn a span.icon svg {
+        width: 22px;
+        height: 22px;
+    }
+    @media(max-width: 1499px) {
+        .offer-banner-area .offer-banner-bg .offer-banner-content .banner-content {
+            max-width: 83.33%;
+        }
+    }
+    @media(max-width: 1199px) {
+        .offer-banner-area .offer-banner-bg {
+            padding: {{ section.settings.section_padding_top_ip }}px {{ section.settings.section_padding_top_ip | divided_by: 2 }}px;
+            margin-top: 150px;
+        }
+        .offer-banner-area .offer-banner-bg .offer-banner-image {
+            margin-top: -230px;
+        }
+        .offer-banner-area .offer-banner-bg .offer-banner-content .banner-content {
+            max-width: 100%;
+        }
+        .offer-banner-area .offer-banner-bg .offer-banner-content .banner-content h1.title {
+            font-size: 30px;
+        }
+        .offer-banner-area .offer-banner-bg .offer-banner-content .banner-content p.desc {
+            font-size: 20px;
+            margin-top: 23px;
+        }
+        .offer-banner-area .offer-banner-bg .offer-banner-content .banner-content h4.price {
+            margin-top: 25px;
+        }
+        .offer-banner-area .offer-banner-bg .offer-banner-content .banner-content h4.price span.label,
+        .offer-banner-area .offer-banner-bg .offer-banner-content .banner-content h4.price span.price {
+            font-size: 22px;
+        }
+        .offer-banner-area .offer-banner-bg .offer-banner-content .banner-content .banner-btn {
+            margin-top: 38px;
+        }
+    }
+    @media (max-width: 991px) {
+        .offer-banner-area .offer-banner-bg .offer-banner-image {
+            width: 100%;
+        }
+        .offer-banner-area .offer-banner-bg .offer-banner-content {
+            width: 100%;
+            margin-top: 31px;
+            {% if settings.enable_rtl %}
+            padding-right: 0px;
+            {% else %}
+            padding-left: 0px;
+            {% endif %}
+        }
+    }
+    @media (max-width: 767px) {
+        .offer-banner-area .offer-banner-bg {
+            padding: {{ section.settings.section_padding_top_ip }}px 12px;
+        }
+        .offer-banner-area .offer-banner-bg .offer-banner-content .banner-content h1.title {
+            font-size: 24px;
+        }
+        .offer-banner-area .offer-banner-bg .offer-banner-content .banner-content p.desc {
+            font-size: 16px;
+            margin-top: 12px;
+        }
+        .offer-banner-area .offer-banner-bg .offer-banner-content .banner-content h4.price {
+            margin-top: 11px;
+        }
+        .offer-banner-area .offer-banner-bg .offer-banner-content .banner-content h4.price span.label,
+        .offer-banner-area .offer-banner-bg .offer-banner-content .banner-content h4.price span.price {
+            font-size: 18px;
+        }
+        .offer-banner-area .offer-banner-bg .offer-banner-content .banner-content .banner-btn {
+            margin-top: 28px;
+        }
+    }
+    @media (max-width: 320px) {
+        .offer-banner-area .offer-banner-bg .offer-banner-content .banner-content .banner-btn {
+            flex-direction: column;
+        }
+        .offer-banner-area .offer-banner-bg .offer-banner-content .banner-content .banner-btn a {
+            width: 100%;
+            text-align: center;
+        }
+        .offer-banner-area .offer-banner-bg .offer-banner-content .banner-content .banner-btn a.btn-2 {
+            margin-top: 10px;
+            margin-left: 0px;
+        }
+    }
+</style>
