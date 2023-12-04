@@ -286,6 +286,9 @@
     padding-top: {{ section.settings.section_padding_top }}px;
     padding-bottom: {{ section.settings.section_padding_bottom }}px;
   }
+  .offer-banner-area .offer-banner-bg {
+    padding: {{ section.settings.section_padding_top }}px {{ section.settings.section_padding_top | divided_by: 2 }}px;
+  }
   @media(max-width: 1199px){
       .offer-banner-area {
           padding-top: {{ section.settings.section_padding_top_ip }}px;
