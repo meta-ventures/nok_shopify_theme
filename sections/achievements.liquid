@@ -1,3 +1,6 @@
+<script src="{{ 'counter-up.min.js' | asset_url }}" defer></script>
+
+
 <section class="feature-counter">
     <div class="container">
         <div class="row">
@@ -400,7 +403,7 @@
 
 {% endstyle %}
 
-{% javascript %}
+<script defer>
   (function () {
     const callback = entries => {
       entries.forEach( entry => {
@@ -419,4 +422,4 @@
       new IntersectionObserver( callback, { threshold: 1 } ).observe( counter )
     });
   })();
-{% endjavascript %}
+</script>
