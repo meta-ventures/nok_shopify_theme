@@ -422,7 +422,11 @@
     }
 
     document.querySelectorAll('.count-up').forEach((counter) => {
-      new IntersectionObserver( callback, { threshold: 1 } ).observe( counter )
+      counterUp(counter, {
+        duration: 10000,
+        delay: 1
+      })
+      // new IntersectionObserver( callback, { threshold: 1 } ).observe( counter )
     });
   })();
 </script>
