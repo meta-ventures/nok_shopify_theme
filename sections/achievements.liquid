@@ -413,7 +413,7 @@
         const el = entry.target
         if ( entry.isIntersecting && ! el.classList.contains( 'is-visible' ) ) {
           counterUp( el, {
-            duration: 2000,
+            duration: 3000,
             delay: 16,
           } )
           el.classList.add( 'is-visible' )
@@ -422,11 +422,7 @@
     }
 
     document.querySelectorAll('.count-up').forEach((counter) => {
-      counterUp(counter, {
-        duration: 2000,
-        delay: 16
-      })
-      // new IntersectionObserver( callback, { threshold: 1 } ).observe( counter )
+      new IntersectionObserver( callback, { threshold: 1 } ).observe( counter )
     });
   })();
 </script>
