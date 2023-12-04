@@ -177,10 +177,13 @@
           "type": "service_item",
           "settings": {
             "service_column_reverse": true,
+            "service_image_icon_1": "shopify:\/\/shop_images\/features-icon-01.webp",
             "service_1_title": "Lightining fast nfc",
             "service_1_desc": "Enhanced NFC chips for the best speed and readability",
+            "service_image_icon_2": "shopify:\/\/shop_images\/features-icon-02.webp",
             "service_2_title": "Premium Material",
             "service_2_desc": "We carefully select top-notch materials for lasting elegance",
+            "service_image_icon_3": "shopify:\/\/shop_images\/features-icon-03.webp",
             "service_3_title": "Masterfully Crafted",
             "service_3_desc": "Exquisite design with polished finish and precision engraving"
           }
@@ -195,10 +198,13 @@
           "type": "service_item",
           "settings": {
             "service_column_reverse": false,
+            "service_image_icon_1": "shopify:\/\/shop_images\/features-icon-04.webp",
             "service_1_title": "Instant Connections",
             "service_1_desc": "Seamless networking with a single tap",
+            "service_image_icon_2": "shopify:\/\/shop_images\/features-icon-05.webp",
             "service_2_title": "Customizable Profiles",
             "service_2_desc": "Tailor your profile for unique, personal branding",
+            "service_image_icon_3": "shopify:\/\/shop_images\/features-icon-06.webp",
             "service_3_title": "Easy to Use",
             "service_3_desc": "Simple setup, share your profile in seconds"
           }
@@ -326,6 +332,7 @@
         "section_padding_bottom_xs": 60,
         "section_bgcolor": "#ffffff",
         "section_bgcolor_check": false,
+        "section_subtitle": "",
         "section_title": "TRUSTED BY",
         "section_desc": ""
       }
