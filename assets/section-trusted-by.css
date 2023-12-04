@@ -33,7 +33,10 @@
     }
   }
   @media (max-width: 767px) {
+    .our-brand-logo .brand-logo ul {
+      gap: 30px 20px;
+    }
     .our-brand-logo .brand-logo ul li{
-      width: 50%;
+      width: 30%;
     }
   }
