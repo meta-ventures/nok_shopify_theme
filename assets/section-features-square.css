@@ -2,7 +2,7 @@
   .features-square-area ul.single-feature {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
     gap: 20px;
     padding: 20px;
@@ -27,6 +27,7 @@
     background-color: #fff;
     padding: 70px;
     text-align: center;
+    height: 100%;
   }
   .features-square-area ul.single-feature li.feature-wrapper .feature-block .feature-icon {
     position: relative;
