@@ -339,11 +339,8 @@
       font-style: italic;
   }
   .feature-counter .feature-item ul.counter-ul li.counter-li .counter-area h2.title {
-      {% if settings.enable_rtl %}
-      margin-right: 5px;
-      {% else %}
+      margin: 0;
       margin-left: 5px;
-      {% endif %}
   }
   .feature-counter .feature-item ul.counter-ul li.counter-li p.item-desc {
       width: 80%;
@@ -398,27 +395,29 @@
 
 <script defer>
   (function () {
-    const script = document.createElement('script');
-    script.src = "{{ 'counter-up.min.js' | asset_url }}";
-    script.onload = () => {
-      const counterUp = window.counterUp.default;
-      const callback = entries => {
-        entries.forEach( entry => {
-          const el = entry.target
-          if ( entry.isIntersecting && ! el.classList.contains( 'is-visible' ) ) {
-            counterUp( el, {
-              duration: 3000,
-              delay: 16,
-            } )
-            el.classList.add( 'is-visible' )
-          }
-        } )
-      }
-
-      document.querySelectorAll('.count-up').forEach((counter) => {
-        new IntersectionObserver( callback, { threshold: 1 } ).observe( counter )
-      });
+    const counterUp = window.counterUp.default;
+    const callback = entries => {
+      entries.forEach( entry => {
+        const el = entry.target
+        if ( entry.isIntersecting && ! el.classList.contains( 'is-visible' ) ) {
+          counterUp( el, {
+            duration: 3000,
+            delay: 16,
+          } )
+          el.classList.add( 'is-visible' )
+        }
+      } )
     }
-    document.head.appendChild(script);
+
+    document.querySelectorAll('.count-up').forEach((counter) => {
+      new IntersectionObserver( callback, { threshold: 1 } ).observe( counter )
+    });
+
+    // const script = document.createElement('script');
+    // script.src = "{{ 'counter-up.min.js' | asset_url }}";
+    // script.onload = () => {
+
+    // }
+    // document.head.appendChild(script);
   })();
 </script>
