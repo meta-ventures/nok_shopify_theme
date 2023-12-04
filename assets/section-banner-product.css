@@ -107,9 +107,6 @@
     }
 }
 @media (max-width: 767px) {
-    .offer-banner-area .offer-banner-bg {
-        padding: {{ section.settings.section_padding_top_ip }}px 12px;
-    }
     .offer-banner-area .offer-banner-bg .offer-banner-content .banner-content h1.title {
         font-size: 24px;
     }
