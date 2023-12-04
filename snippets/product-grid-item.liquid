@@ -1,15 +1,18 @@
-{%- assign on_sale = false -%}
-{%- if product.compare_at_price > product.price -%}
-{%- assign on_sale = true -%}
-{%- endif -%}
+{% liquid
+    assign on_sale = false
+    if product.compare_at_price > product.price
+        assign on_sale = true
+    endif
 
-{%- if product.available -%}
+    if product.available
+        assign variant = product.selected_or_first_available_variant
+    endif
 
-{%- endif -%}
-{%- assign variant = product.selected_or_first_available_variant -%}
-{%- if product.available -%}
-{%- assign func = "Shopify.addItem(" | append: variant.id | append: ", 1)" -%}
-{%- endif -%}
+    if product.available
+        assign func = "Shopify.addItem(" | append: variant.id | append: ", 1)"
+    endif
+%}
+
 
 <div class="single-product-wrap{% unless product.available %} stock-out{% endunless %}">
     <div class="product-image{% unless product.available %} stock-out{% endunless %}">
