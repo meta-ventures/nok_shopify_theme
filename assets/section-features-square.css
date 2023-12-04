@@ -1,16 +1,15 @@
-  /* service css */
-  .our-service-area ul.single-service {
+  /* feature css */
+  .features-square-area ul.single-feature {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    margin-left: -70px;
-    margin-top: -50px;
+    gap: 20px;
+    padding: 20px;
   }
-  .our-service-area ul.single-service li.ser-box {
+
+  .features-square-area ul.single-feature li.feature-wrapper {
     width: calc(33.33% - 70px);
-    margin-left: 70px;
-    margin-top: 50px;
     border: 1px solid #ededed;
     border-radius: 10px;
     overflow: hidden;
@@ -18,18 +17,18 @@
     -o-transition: all .3s ease-in-out 0s;
     transition: all .3s ease-in-out 0s;
   }
-  .our-service-area ul.single-service li.ser-box:hover {
+  .features-square-area ul.single-feature li.feature-wrapper:hover {
     box-shadow: 0 0 15px rgb(0 0 0 / 15%);
     -webkit-transition: all .3s ease-in-out 0s;
     -o-transition: all .3s ease-in-out 0s;
     transition: all .3s ease-in-out 0s;
   }
-  .our-service-area ul.single-service li.ser-box .ser-block {
+  .features-square-area ul.single-feature li.feature-wrapper .feature-block {
     background-color: #fff;
     padding: 70px;
     text-align: center;
   }
-  .our-service-area ul.single-service li.ser-box .ser-block a {
+  .features-square-area ul.single-feature li.feature-wrapper .feature-block .feature-icon {
     position: relative;
     font-size: 40px;
     width: 120px;
@@ -41,10 +40,10 @@
     border: 1px solid #ededed;
     border-radius: 100%;
   }
-  .our-service-area ul.single-service li.ser-box:hover .ser-block a {
+  .features-square-area ul.single-feature li.feature-wrapper:hover .feature-block .feature-icon {
     color: #ffffff;
   }
-  .our-service-area ul.single-service li.ser-box .ser-block a::before {
+  .features-square-area ul.single-feature li.feature-wrapper .feature-block .feature-icon::before {
     background-image: var(--gradient-color);
     content: '';
     position: absolute;
@@ -62,108 +61,108 @@
     -o-transition: all .3s ease-in-out 0s;
     transition: all .3s ease-in-out 0s;
   }
-  .our-service-area ul.single-service li.ser-box:hover .ser-block a::before {
+  .features-square-area ul.single-feature li.feature-wrapper:hover .feature-block .feature-icon::before {
     opacity: 1;
     visibility: visible;
     -webkit-transition: all .3s ease-in-out 0s;
     -o-transition: all .3s ease-in-out 0s;
     transition: all .3s ease-in-out 0s;
   }
-  .our-service-area ul.single-service li.ser-box .ser-block a i {
+  /* .features-square-area ul.single-feature li.feature-wrapper .feature-block .feature-icon i {
     z-index: 1;
     background-image: var(--gradient-color);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-  }
-  .our-service-area ul.single-service li.ser-box:hover .ser-block a i {
+  } */
+  /* .features-square-area ul.single-feature li.feature-wrapper:hover .feature-block .feature-icon i {
     z-index: 1;
     -webkit-text-fill-color: unset;
     color: #ffffff;
-  }
-  .our-service-area ul.single-service li.ser-box .ser-block .service-text {
+  } */
+  .features-square-area ul.single-feature li.feature-wrapper .feature-block .feature-text {
     margin-top: 45px;
   }
-  .our-service-area ul.single-service li.ser-box .ser-block .service-text h6 {
+  .features-square-area ul.single-feature li.feature-wrapper .feature-block .feature-text h6 {
     font-size: 20px;
     font-weight: 700;
     text-transform: uppercase;
   }
-  .our-service-area ul.single-service li.ser-box .ser-block .service-text p {
+  .features-square-area ul.single-feature li.feature-wrapper .feature-block .feature-text p {
     font-size: 18px;
     margin-top: 24px;
   }
 
   @media (max-width: 1599px) {
-    .our-service-area ul.single-service li.ser-box .ser-block {
+    .features-square-area ul.single-feature li.feature-wrapper .feature-block {
       padding: 70px 50px;
     }
   }
   @media (max-width: 1199px) {
-    .our-service-area ul.single-service {
+    .features-square-area ul.single-feature {
       margin-left: -30px;
       margin-top: -30px;
     }
-    .our-service-area ul.single-service li.ser-box {
+    .features-square-area ul.single-feature li.feature-wrapper {
       width: calc(33.33% - 30px);
       margin-left: 30px;
       margin-top: 30px;
     }
-    .our-service-area ul.single-service li.ser-box .ser-block {
+    .features-square-area ul.single-feature li.feature-wrapper .feature-block {
       padding: 50px 30px;
     }
-    .our-service-area ul.single-service li.ser-box .ser-block a {
+    .features-square-area ul.single-feature li.feature-wrapper .feature-block a {
       font-size: 30px;
       width: 100px;
       height: 100px;
     }
-    .our-service-area ul.single-service li.ser-box .ser-block a::before {
+    .features-square-area ul.single-feature li.feature-wrapper .feature-block a::before {
       width: 80px;
       height: 80px;
     }
-    .our-service-area ul.single-service li.ser-box .ser-block .service-text h6 {
+    .features-square-area ul.single-feature li.feature-wrapper .feature-block .feature-text h6 {
       font-size: 18px;
     }
-    .our-service-area ul.single-service li.ser-box .ser-block .service-text p {
+    .features-square-area ul.single-feature li.feature-wrapper .feature-block .feature-text p {
       font-size: 16px;
     }
   }
   @media (max-width: 991px) {
-    .our-service-area ul.single-service li.ser-box {
+    .features-square-area ul.single-feature li.feature-wrapper {
       width: calc(50% - 30px);
     }
   }
   @media (max-width: 767px) {
-    .our-service-area ul.single-service {
+    .features-square-area ul.single-feature {
       margin-left: -12px;
     }
-    .our-service-area ul.single-service li.ser-box {
+    .features-square-area ul.single-feature li.feature-wrapper {
       width: calc(50% - 12px);
       margin-left: 12px;
     }
-    .our-service-area ul.single-service li.ser-box .ser-block {
+    .features-square-area ul.single-feature li.feature-wrapper .feature-block {
       padding: 30px 12px;
     }
-    .our-service-area ul.single-service li.ser-box .ser-block a {
+    .features-square-area ul.single-feature li.feature-wrapper .feature-block a {
       font-size: 24px;
       width: 80px;
       height: 80px;
     }
-    .our-service-area ul.single-service li.ser-box .ser-block a::before{
+    .features-square-area ul.single-feature li.feature-wrapper .feature-block a::before{
       width: 60px;
       height: 60px;
     }
-    .our-service-area ul.single-service li.ser-box .ser-block .service-text {
+    .features-square-area ul.single-feature li.feature-wrapper .feature-block .feature-text {
       margin-top: 25px;
     }
-    .our-service-area ul.single-service li.ser-box .ser-block .service-text p {
+    .features-square-area ul.single-feature li.feature-wrapper .feature-block .feature-text p {
       margin-top: 13px;
     }
   }
   @media (max-width: 479px) {
-    .our-service-area ul.single-service {
+    .features-square-area ul.single-feature {
       margin-left: 0px;
     }
-    .our-service-area ul.single-service li.ser-box {
+    .features-square-area ul.single-feature li.feature-wrapper {
       width: calc(100% - 0px);
       margin-left: 0px;
     }
