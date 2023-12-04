@@ -104,7 +104,6 @@
             {%- when 'service_image' -%}
             <li class="service-image-li feature-image">
               {%- if block.settings.feature_image -%}
-                <span>
                   {{
                     block.settings.feature_image
                     | image_url: width: 2000
@@ -114,7 +113,6 @@
                         class: 'img-fluid',
                         fetchpriority: 'low'
                   }}
-                </span>
               {%- endif -%}
             </li>
             {%- endcase -%}
