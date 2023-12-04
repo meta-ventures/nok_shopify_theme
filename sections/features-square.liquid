@@ -1,6 +1,6 @@
 {{ 'section-features-square.css' | asset_url | stylesheet_tag }}
 
-<section class="our-service-area" {% if section.settings.section_bg_image_enable %}style="background-image: url('{% if section.settings.section_bg_image %}{{ section.settings.section_bg_image | image_url }}{% else %}https://dummyimage.com/1920x1024{% endif %}');"{% endif %}>
+<section class="our-feature-area" {% if section.settings.section_bg_image_enable %}style="background-image: url('{% if section.settings.section_bg_image %}{{ section.settings.section_bg_image | image_url }}{% else %}https://dummyimage.com/1920x1024{% endif %}');"{% endif %}>
   <div class="container">
     <div class="row">
       <div class="col">
@@ -14,10 +14,11 @@
             {% endif %}
           </div>
         </div>
-        <ul class="single-service">
+        <ul class="single-feature">
           {% for block in section.blocks %}
           <li class="ser-box">
             <div class="ser-block">
+              <div class="feature-icon" >
                 {%- if block.settings.feature_icon_image != blank -%}
                   {{
                     block.settings.feature_icon_image
@@ -26,8 +27,8 @@
                         width: 50
                   }}
                 {%- endif -%}
-                <i class="{{ block.settings.feature_icon }}"></i>
-              <div class="service-text">
+              </div>
+              <div class="feature-text">
                 {% if block.settings.feature_title != '' %}
                 <h6>{{ block.settings.feature_title }}</h6>
                 {% endif %}
@@ -214,7 +215,7 @@
 {% endschema %}
 
 {% style %}
-  .our-service-area {
+  .our-feature-area {
     padding-top: {{ section.settings.our_ser_padding_top }}px;
     padding-bottom: {{ section.settings.our_ser_padding_bottom }}px;
 
@@ -230,14 +231,14 @@
   }
 
   @media (max-width: 1199px) {
-    .our-service-area {
+    .our-feature-area {
       padding-top: {{ section.settings.our_ser_padding_top_ip }}px;
       padding-bottom: {{ section.settings.our_ser_padding_bottom_ip }}px;
     }
   }
 
   @media (max-width: 767px) {
-    .our-service-area {
+    .our-feature-area {
       padding-top: {{ section.settings.our_ser_padding_top_xs }}px;
       padding-bottom: {{ section.settings.our_ser_padding_bottom_xs }}px;
     }
