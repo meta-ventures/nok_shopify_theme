@@ -2,46 +2,42 @@
 
 <section class="features-square-area" {% if section.settings.section_bg_image_enable %}style="background-image: url('{% if section.settings.section_bg_image %}{{ section.settings.section_bg_image | image_url }}{% else %}https://dummyimage.com/1920x1024{% endif %}');"{% endif %}>
   <div class="container">
-    <div class="row">
-      <div class="col">
-        <div class="section-capture">
-          <div class="section-title">
-            {% if section.settings.section_subtitle != '' %}
-            <span class="sub-title">{{ section.settings.section_subtitle }}</span>
+    <div class="section-capture">
+      <div class="section-title">
+        {% if section.settings.section_subtitle != '' %}
+        <span class="sub-title">{{ section.settings.section_subtitle }}</span>
+        {% endif %}
+        {% if section.settings.section_title != '' %}
+        <h2>{{ section.settings.section_title }}</h2>
+        {% endif %}
+      </div>
+    </div>
+    <ul class="single-feature">
+      {% for block in section.blocks %}
+      <li class="ser-box">
+        <div class="ser-block">
+          <div class="feature-icon" >
+            {%- if block.settings.feature_icon_image != blank -%}
+              {{
+                block.settings.feature_icon_image
+                | image_url: width: 50
+                | image_tag:
+                    width: 50
+              }}
+            {%- endif -%}
+          </div>
+          <div class="feature-text">
+            {% if block.settings.feature_title != '' %}
+            <h6>{{ block.settings.feature_title }}</h6>
             {% endif %}
-            {% if section.settings.section_title != '' %}
-            <h2>{{ section.settings.section_title }}</h2>
+            {% if block.settings.feature_desc != '' %}
+            <p>{{ block.settings.feature_desc }}</p>
             {% endif %}
           </div>
         </div>
-        <ul class="single-feature">
-          {% for block in section.blocks %}
-          <li class="ser-box">
-            <div class="ser-block">
-              <div class="feature-icon" >
-                {%- if block.settings.feature_icon_image != blank -%}
-                  {{
-                    block.settings.feature_icon_image
-                    | image_url: width: 50
-                    | image_tag:
-                        width: 50
-                  }}
-                {%- endif -%}
-              </div>
-              <div class="feature-text">
-                {% if block.settings.feature_title != '' %}
-                <h6>{{ block.settings.feature_title }}</h6>
-                {% endif %}
-                {% if block.settings.feature_desc != '' %}
-                <p>{{ block.settings.feature_desc }}</p>
-                {% endif %}
-              </div>
-            </div>
-          </li>
-          {% endfor %}
-        </ul>
-      </div>
-    </div>
+      </li>
+      {% endfor %}
+    </ul>
   </div>
 </section>
 {% schema %}
