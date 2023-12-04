@@ -18,7 +18,17 @@
           {% for block in section.blocks %}
           <li class="ser-box">
             <div class="ser-block">
-              <a href="{{ block.settings.ser_url }}"><i class="{{ block.settings.feature_icon }}"></i></a>
+              <a href="{{ block.settings.ser_url }}">
+                {%- if block.settings.feature_icon_image != blank -%}
+                  {{
+                    block.settings.feature_icon_image
+                    | image_url: width: 50
+                    | image_tag:
+                        width: 50
+                  }}
+                {%- endif -%}
+                <i class="{{ block.settings.feature_icon }}"></i>
+              </a>
               <div class="service-text">
                 {% if block.settings.feature_title != '' %}
                 <h6>{{ block.settings.feature_title }}</h6>
@@ -175,10 +185,9 @@
           "label": "Icon url"
         },
         {
-          "type": "text",
-          "id": "feature_icon",
-          "label": "Icon Class",
-          "info": "remixicon.com"
+          "type": "image_picker",
+          "id": "feature_icon_image",
+          "label": "Icon Class"
         },
         {
           "type": "text",
@@ -198,7 +207,9 @@
   "presets": [
     {
       "name": "Features Square",
-      "category": "Features"
+      "category": "Features",
+      "settings": {},
+      "blocks": []
     }
   ]
 }
