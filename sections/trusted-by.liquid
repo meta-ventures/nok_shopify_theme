@@ -21,11 +21,22 @@
         <div class="brand-logo">
           <ul>
             {% for block in section.blocks %}
-            <li>
-              <a href="{{ block.settings.logo_url }}" class="brand-img">
-                <img width="{{ block.settings.logo_image.width }}" height="{{ block.settings.logo_image.height }}" class="img-fluid" src="{% if block.settings.logo_image %}{{ block.settings.logo_image | image_url }} {% else %}https://dummyimage.com/200x100 {% endif %}" alt="">
-              </a>
-            </li>
+              {%- if block.settings.logo_image -%}
+                <li>
+                  <a href="{{ block.settings.logo_url }}" class="brand-img">
+                    {{
+                      block.settings.logo_image
+                      | image_url: width: 200
+                      | image_tag:
+                          width: block.settings.logo_image.width,
+                          height: block.settings.logo_image.height,
+                          class: 'img-fluid',
+                          widths: '100, 200',
+                          fetchpriority: 'low'
+                    }}
+                  </a>
+                </li>
+              {%- endif -%}
             {% endfor %}
           </ul>
         </div>
