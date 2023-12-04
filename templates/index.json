@@ -38,7 +38,7 @@
         "image": "shopify:\/\/shop_images\/banner_hand_card_mobile.webp",
         "enable_mobile_image": true,
         "mobile_image": "shopify:\/\/shop_images\/OnlinePaymentMockupcopiar.webp",
-        "image_overlay_opacity": 0,
+        "image_overlay_opacity": 20,
         "image_height": "large",
         "desktop_content_position": "bottom-left",
         "show_text_box": false,
