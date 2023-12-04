@@ -402,10 +402,7 @@
         entries.forEach( entry => {
           const el = entry.target
           if ( entry.isIntersecting && ! el.classList.contains( 'is-visible' ) ) {
-            counterUp( el, {
-              duration: 3000,
-              delay: 16,
-            } )
+            counterUp(el, opt)
             el.classList.add( 'is-visible' )
           }
         } )
