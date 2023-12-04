@@ -1,0 +1,400 @@
+<section class="feature-counter">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="feature-counter-title">
+                    {% if section.settings.section_title != '' %}
+                    <h1 class="title">{{ section.settings.section_title }}</h1>
+                    {% endif %}
+                </div>
+                <div class="feature-item">
+                    <ul class="counter-ul">
+                        {% for block in section.blocks %}
+                        <li class="counter-li">
+                            {% if block.settings.feature_item_title != '' %}
+                            <span class="subtitle">{{ block.settings.feature_item_title }}</span>
+                            {% endif %}
+                            <div class="counter-area">
+                                {% if block.settings.feature_item_number != '' %}
+                                <h2 class="count">
+                                    <span>{{ block.settings.feature_item_number }}</span>                                
+                                </h2>                           
+                                {% endif %}
+                                {% if block.settings.feature_item_number_title != '' %}
+                                <h2 class="title">
+                                    <span>{{ block.settings.feature_item_number_title }}</span>
+                                </h2> 
+                                {% endif %}
+                            </div>
+                            {% if block.settings.feature_item_desc != '' %}
+                            <p class="item-desc">{{ block.settings.feature_item_desc }}</p>
+                            {% endif %}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% schema %}
+{
+  "name": "Feature Counter",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Padding"
+    },
+    {
+      "type": "paragraph",
+      "content": "Desktop / Laptop / tablet"
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "paragraph",
+      "content": "Ipad pro / Ipad"
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top_ipad",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom_ipad",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 30
+    },
+    {
+      "type": "paragraph",
+      "content": "Mobile"
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top_xs",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom_xs",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Section Border"
+    },
+    {
+      "type": "checkbox",
+      "id": "section_border_enable",
+      "label": "Show Border",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Section Title"
+    },
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section Title",
+      "default": "achievements"
+    },
+    {
+      "type": "header",
+      "content": "Title bg Image"
+    },
+    {
+      "type": "checkbox",
+      "id": "section_title_bg_image_enable",
+      "label": "Show Title bg Image",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "section_title_bg_image",
+      "label": "Title bg image",
+      "info": "Recommended Size: 950x225px"
+    },
+    {
+      "type": "header",
+      "content": "Title After Before Image"
+    },
+    {
+      "type": "checkbox",
+      "id": "section_title_after_before_image_enable",
+      "label": "Show Title After Before Image",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "section_title_after_before_image",
+      "label": "Title After Before image",
+      "info": "Recommended Size: 950x225px"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature_counter",
+      "name": "Feature Counter",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "header",
+          "content": "Feature Item"
+        },
+        {
+          "type": "header",
+          "content": "Feature Title"
+        },
+        {
+          "type": "text",
+          "id": "feature_item_title",
+          "label": "Feature Subtitle",
+          "default": "Packages"
+        },
+        {
+          "type": "header",
+          "content": "Counter Number & Title"
+        },
+        {
+          "type": "text",
+          "id": "feature_item_number",
+          "label": "Counter Number",
+          "default": "6500"
+        },
+        {
+          "type": "text",
+          "id": "feature_item_number_title",
+          "label": "Counter Number Title",
+          "default": "countries"
+        },
+        {
+          "type": "header",
+          "content": "Counter Description"
+        },
+        {
+          "type": "textarea",
+          "id": "feature_item_desc",
+          "label": "Feature Description",
+          "default": "Lorem Ipsum simply dummy printing typeset industry"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Feature Counter",
+      "category": "Feature Counter"
+    }
+  ]
+}
+{% endschema %}
+<style>
+    .feature-counter {
+        padding-top: {{ section.settings.section_padding_top }}px;
+        padding-bottom: {{ section.settings.section_padding_bottom }}px;
+        {% if section.settings.section_border_enable %}
+        border-top: 1px solid #eeeeee;
+        {% endif %}
+    }
+    @media(max-width: 1199px){
+        .feature-counter {
+            padding-top: {{ section.settings.section_padding_top_ipad }}px;
+            padding-bottom: {{ section.settings.section_padding_bottom_ipad }}px;
+        }
+    }
+    @media(max-width: 767px){
+        .feature-counter {
+            padding-top: {{ section.settings.section_padding_top_xs }}px;
+            padding-bottom: {{ section.settings.section_padding_bottom_xs }}px;
+        }
+    }
+    /* main title css */
+    .feature-counter .feature-counter-title {
+        position: relative;
+        margin-bottom: 100px;
+        text-align: center;
+    }
+    {% if section.settings.section_title_after_before_image_enable %}
+    .feature-counter .feature-counter-title::before {
+        background-image: url('{% if section.settings.section_title_after_before_image %}{{ section.settings.section_title_after_before_image | image_url }}{% else %}https://dummyimage.com/950x225{% endif %}');
+        content: '';
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        background-size: inherit;
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index: -1;
+    }
+    {% endif %}
+    .feature-counter .feature-counter-title h1.title {
+        {% if section.settings.section_title_bg_image_enable %}
+        background-image: url('{% if section.settings.section_title_bg_image %}{{ section.settings.section_title_bg_image | image_url }}{% else %}https://dummyimage.com/950x225{% endif %}');
+        background-size: inherit;
+        background-repeat: no-repeat;
+        background-position: center;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        {% endif %}
+        font-size: 150px;
+        font-weight: 700;
+        line-height: 1;
+        font-style: italic;        
+    }
+    @media (max-width: 1199px) {
+        .feature-counter .feature-counter-title {
+            margin-bottom: 80px;
+        }
+        .feature-counter .feature-counter-title h1.title {
+            font-size: 82px;
+        }
+    }
+    @media (max-width: 767px) {
+        .feature-counter .feature-counter-title {
+            margin-bottom: 60px;
+        }
+        .feature-counter .feature-counter-title h1.title {
+            font-size: 42px;
+        }
+    }
+    /* counter css */
+    .feature-counter .feature-item ul.counter-ul {
+        {% if settings.enable_rtl %}
+        margin-right: -30px;
+        {% else %}
+        margin-left: -30px;
+        {% endif %}  
+        margin-top: -30px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .feature-counter .feature-item ul.counter-ul li.counter-li {
+        width: calc(25% - 30px);
+        margin-top: 30px;
+        {% if settings.enable_rtl %}
+        margin-right: 30px;
+        {% else %}
+        margin-left: 30px;
+        {% endif %}   
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .feature-counter .feature-item ul.counter-ul li.counter-li span.subtitle {
+        background-image: var(--gradient-color);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 18px;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+    .feature-counter .feature-item ul.counter-ul li.counter-li .counter-area {
+        margin-top: 18px;
+        display: flex;
+        align-items: center;
+    }
+    .feature-counter .feature-item ul.counter-ul li.counter-li .counter-area h2 {
+        font-size: 28px;        
+        font-weight: 700;
+        font-style: italic;
+    }
+    .feature-counter .feature-item ul.counter-ul li.counter-li .counter-area h2.title {
+        {% if settings.enable_rtl %}
+        margin-right: 5px;
+        {% else %}
+        margin-left: 5px;
+        {% endif %}        
+    }
+    .feature-counter .feature-item ul.counter-ul li.counter-li p.item-desc {
+        width: 80%;
+        font-size: 18px;
+        margin-top: 12px;
+    }
+    @media (max-width: 1499px) {
+        .feature-counter .feature-item ul.counter-ul li.counter-li p.item-desc {
+            width: 100%;
+        }
+    }
+    @media (max-width: 1199px) {
+        .feature-counter .feature-item ul.counter-ul li.counter-li span.subtitle {
+            font-size: 16px;
+        }
+        .feature-counter .feature-item ul.counter-ul li.counter-li .counter-area h2 {
+            font-size: 22px;
+        }
+        .feature-counter .feature-item ul.counter-ul li.counter-li p.item-desc {
+            font-size: 16px;
+        }
+    }
+    @media (max-width: 991px) {
+        .feature-counter .feature-item ul.counter-ul li.counter-li {
+            width: calc(50% - 30px);
+        }
+    }
+    @media (max-width: 767px) {
+        .feature-counter .feature-item ul.counter-ul {
+            {% if settings.enable_rtl %}
+            margin-right: -12px;
+            {% else %}
+            margin-left: -12px;
+            {% endif %}  
+        }
+        .feature-counter .feature-item ul.counter-ul li.counter-li {
+            width: calc(50% - 12px);
+            {% if settings.enable_rtl %}
+            margin-right: 12px;
+            {% else %}
+            margin-left: 12px;
+            {% endif %}   
+        }
+    }
+    @media (max-width: 479px) {
+        .feature-counter .feature-item ul.counter-ul li.counter-li {
+            width: calc(100% - 12px);
+        }
+    }
+</style>
