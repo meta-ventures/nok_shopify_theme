@@ -4,13 +4,9 @@
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    margin-top: -30px;
-    margin-left: -20px;
   }
   .our-brand-logo .brand-logo ul li{
     width: calc(16.66% - 20px);
-    margin-top: 30px;
-    margin-left: 20px;
     text-align: center;
   }
   .our-brand-logo .brand-logo ul li img {
@@ -32,11 +28,11 @@
   }
   @media (max-width: 1199px) {
     .our-brand-logo .brand-logo ul li{
-      width: calc(25% - 20px);
+      width: 25%;
     }
   }
   @media (max-width: 767px) {
     .our-brand-logo .brand-logo ul li{
-      width: calc(50% - 20px);
+      width: 50%;
     }
   }
