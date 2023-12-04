@@ -393,8 +393,8 @@
 
 {% endstyle %}
 
-<script defer>
-  (function () {
+{% javascript %}
+    (function () {
     const counterUp = window.counterUp.default;
     const callback = entries => {
       entries.forEach( entry => {
@@ -420,4 +420,4 @@
     // }
     // document.head.appendChild(script);
   })();
-</script>
+{% endjavascript %}
