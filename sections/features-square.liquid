@@ -1,3 +1,5 @@
+{{ 'section-features-square.css' | asset_url | stylesheet_tag }}
+
 <section class="our-service-area" {% if section.settings.section_bg_image_enable %}style="background-image: url('{% if section.settings.section_bg_image %}{{ section.settings.section_bg_image | image_url }}{% else %}https://dummyimage.com/1920x1024{% endif %}');"{% endif %}>
   <div class="container">
     <div class="row">
