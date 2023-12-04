@@ -69,17 +69,17 @@
     -o-transition: all .3s ease-in-out 0s;
     transition: all .3s ease-in-out 0s;
   }
-  .our-feature-area ul.single-feature li.ser-box .ser-block a i {
+  /* .our-feature-area ul.single-feature li.ser-box .ser-block .feature-icon i {
     z-index: 1;
     background-image: var(--gradient-color);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-  }
-  .our-feature-area ul.single-feature li.ser-box:hover .ser-block a i {
+  } */
+  /* .our-feature-area ul.single-feature li.ser-box:hover .ser-block .feature-icon i {
     z-index: 1;
     -webkit-text-fill-color: unset;
     color: #ffffff;
-  }
+  } */
   .our-feature-area ul.single-feature li.ser-box .ser-block .feature-text {
     margin-top: 45px;
   }
