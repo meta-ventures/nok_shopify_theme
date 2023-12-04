@@ -914,61 +914,6 @@ summary::-webkit-details-marker {
   text-transform: none;
 }
 
-/* Boostrap containers */
-
-.container {
-  width: 100%;
-  padding-right: var(--bs-gutter-x, .75rem);
-  padding-left: var(--bs-gutter-x, .75rem);
-  margin-right: auto;
-  margin-left: auto;
-}
-
-@media (min-width: 576px) {
-  .container {
-    max-width: 540px;
-  }
-}
-@media (min-width: 768px) {
-  .container {
-    max-width: 720px;
-  }
-}
-@media (min-width: 992px) {
-  .container {
-    max-width: 960px;
-  }
-}
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1140px;
-  }
-}
-@media (min-width: 1400px) {
-  .container {
-    max-width: 1320px;
-  }
-}
-
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: calc(var(--bs-gutter-x, .75rem) * -.5);
-  margin-left: calc(var(--bs-gutter-x, .75rem) * -.5);
-}
-
-.col {
-  flex: 1 0 0%;
-  padding-right: calc(var(--bs-gutter-x, .75rem) * .5);
-  padding-left: calc(var(--bs-gutter-x, .75rem) * .5);
-}
-
-.col-6 {
-  flex: 0 0 auto;
-  width: 50%;
-}
-
-
 /* component-grid */
 .grid {
   display: flex;
@@ -3636,4 +3581,191 @@ body{
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: antialiased;
   text-size-adjust: 100%;
+}
+/*=====================================
+  Headings css
+======================================*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+  color: var(--font-color-header);
+  margin: 0;
+  padding: 0;
+
+  font-family: 'Barlow', sans-serif;
+  font-weight: 600;
+
+  font-style: normal;
+
+
+  line-height: normal;
+}
+
+/*=====================================
+  paragraph css
+======================================*/
+p {
+  color: var(--font-color-paragraph);
+  margin-bottom: 0px;
+
+  font-family: 'Barlow', sans-serif;
+  font-weight: 400;
+
+  font-style: normal;
+
+
+  line-height: var(--font-line-height-paragraph);
+}
+
+/*=====================================
+  'a' tag css
+======================================*/
+a{
+  text-decoration: none;
+  display: inline-block;
+  color: var(--font-color-header);
+}
+a:hover{
+  color: var(--font-color-primary);
+  text-decoration: none;
+}
+a,
+a:hover{
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -o-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+a:focus{
+  outline: none;
+}
+
+/*=====================================
+  'span' tag css
+======================================*/
+span{
+  display: inline-block;
+}
+
+/*=====================================
+  'button' tag css
+======================================*/
+button{
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  outline: 0;
+  padding: 0;
+  font-family: var(--font-stack-body);
+}
+button,
+button:hover{
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -o-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+button,
+button:focus{
+  outline: none;
+}
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus{
+  outline: none;
+  box-shadow: none;
+}
+input::-webkit-search-cancel-button,
+input::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+a.navbar-toggler {
+  display: flex;
+  padding: 0;
+  border: none;
+  outline: none;
+  border-radius: 0;
+  font-size: 18px;
+  line-height: 1;
+}
+a.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+/*=====================================
+  'ul', 'li' tag css
+======================================*/
+ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*=====================================
+  lazyload css
+======================================*/
+.lazyload,
+.lazyloading {
+  opacity: 0;
+}
+.lazyload,
+.lazyloading {
+  background: url("loading-black-small.svg") center center no-repeat #fff !important;
+  position: relative;
+  border-color: transparent !important;
+  opacity: 1 !important;
+  transition: all 0s ease-in-out !important;
+  -moz-transition: all 0s ease-in-out !important;
+  -webkit-transition: all 0s ease-in-out !important;
+  -ms-transition: all 0s ease-in-out !important;
+  -o-transition: all 0s ease-in-out !important;
+}
+
+
+/*=====================================
+  container css
+======================================*/
+.container{
+  max-width: 1340px;
+}
+.container-fluid {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+@media (max-width: 1599px) {
+  .container-fluid {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media (max-width: 1599px) and (min-width: 1360px) {
+  .container{
+    max-width: 1300px;
+  }
+}
+@media (max-width: 1359px) and (min-width: 1200px) {
+  .container{
+    max-width: 1200px;
+  }
+}
+@media (max-width: 1199px) {
+  .container{
+    max-width: 960px;
+  }
+}
+@media (max-width: 991px) {
+  .container{
+    max-width: 720px;
+  }
+}
+@media (max-width: 767px) {
+  .container-fluid {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .container{
+    max-width: 100%;
+  }
 }
