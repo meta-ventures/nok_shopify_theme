@@ -4,13 +4,10 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    margin-left: -70px;
-    margin-top: -50px;
   }
+
   .features-square-area ul.single-feature li.ser-box {
     width: calc(33.33% - 70px);
-    margin-left: 70px;
-    margin-top: 50px;
     border: 1px solid #ededed;
     border-radius: 10px;
     overflow: hidden;
