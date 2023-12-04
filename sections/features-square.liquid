@@ -46,6 +46,82 @@
   "settings": [
     {
       "type": "header",
+      "content": "Section Padding"
+    },
+    {
+      "type": "paragraph",
+      "content": "Desktop / Laptop / Tablet"
+    },
+    {
+      "type": "range",
+      "id": "our_ser_padding_top",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "our_ser_padding_bottom",
+      "label": "Section Padding bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "paragraph",
+      "content": "Ipad Pro / Ipad"
+    },
+    {
+      "type": "range",
+      "id": "our_ser_padding_top_ip",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "our_ser_padding_bottom_ip",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "paragraph",
+      "content": "Mobile"
+    },
+    {
+      "type": "range",
+      "id": "our_ser_padding_top_xs",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "our_ser_padding_bottom_xs",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "header",
       "content": "Background Image"
     },
     {
@@ -99,9 +175,14 @@
       "name": "Feature",
       "settings": [
         {
+          "type": "url",
+          "id": "ser_url",
+          "label": "Icon url"
+        },
+        {
           "type": "image_picker",
           "id": "feature_icon_image",
-          "label": "Icon Image SVG"
+          "label": "Icon Class"
         },
         {
           "type": "text",
@@ -134,8 +215,8 @@
 
 {% style %}
   .features-square-area {
-    /* padding-top: {{ section.settings.our_ser_padding_top }}px;
-    padding-bottom: {{ section.settings.our_ser_padding_bottom }}px; */
+    padding-top: {{ section.settings.our_ser_padding_top }}px;
+    padding-bottom: {{ section.settings.our_ser_padding_bottom }}px;
 
     {% if section.settings.section_bg_image_enable %}
       background-repeat: no-repeat;
@@ -150,15 +231,15 @@
 
   @media (max-width: 1199px) {
     .features-square-area {
-      /* padding-top: {{ section.settings.our_ser_padding_top_ip }}px;
-      padding-bottom: {{ section.settings.our_ser_padding_bottom_ip }}px; */
+      padding-top: {{ section.settings.our_ser_padding_top_ip }}px;
+      padding-bottom: {{ section.settings.our_ser_padding_bottom_ip }}px;
     }
   }
 
   @media (max-width: 767px) {
     .features-square-area {
-      /* padding-top: {{ section.settings.our_ser_padding_top_xs }}px;
-      padding-bottom: {{ section.settings.our_ser_padding_bottom_xs }}px; */
+      padding-top: {{ section.settings.our_ser_padding_top_xs }}px;
+      padding-bottom: {{ section.settings.our_ser_padding_bottom_xs }}px;
     }
   }
 {% endstyle %}
