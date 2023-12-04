@@ -57,7 +57,7 @@
           "type": "feature",
           "settings": {
             "ser_url": "",
-            "feature_icon": "+",
+            "feature_icon_image": "shopify:\/\/shop_images\/shooting-star-line-svgrepo-com.svg",
             "feature_title": "The first impression matters",
             "feature_desc": "Personalize your profile and get that 'WOW' out of your connections"
           }
@@ -66,7 +66,6 @@
           "type": "feature",
           "settings": {
             "ser_url": "",
-            "feature_icon": "feather-settings",
             "feature_title": "no more paper cards",
             "feature_desc": "You can share your profile with a simple tap. No more need for outdated paper cards."
           }
@@ -75,7 +74,6 @@
           "type": "feature",
           "settings": {
             "ser_url": "",
-            "feature_icon": "feather-battery-charging",
             "feature_title": "No app needed",
             "feature_desc": "Our platform works on the browser, for all iOS or Android devices"
           }
