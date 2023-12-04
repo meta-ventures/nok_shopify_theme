@@ -1,6 +1,3 @@
-<script src="{{ 'counter-up.min.js' | asset_url }}" defer></script>
-
-
 <section class="feature-counter">
     <div class="container">
         <div class="row">
@@ -20,7 +17,7 @@
                             <div class="counter-area">
                                 {% if block.settings.feature_item_number != '' %}
                                 <h2 class="count">
-                                    <span>{{ block.settings.feature_item_number }}</span>
+                                    <span class="count-up">{{ block.settings.feature_item_number }}</span>
                                 </h2>
                                 {% endif %}
                                 {% if block.settings.feature_item_number_title != '' %}
@@ -403,6 +400,7 @@
 
 {% endstyle %}
 
+<script src="{{ 'counter-up.min.js' | asset_url }}" defer></script>
 <script defer>
   (function () {
     const callback = entries => {
@@ -418,7 +416,7 @@
       } )
     }
 
-    document.querySelectorAll('.count').forEach((counter) => {
+    document.querySelectorAll('.count-up').forEach((counter) => {
       new IntersectionObserver( callback, { threshold: 1 } ).observe( counter )
     });
   })();
