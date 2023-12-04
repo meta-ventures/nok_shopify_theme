@@ -56,6 +56,7 @@
         "feature-1": {
           "type": "feature",
           "settings": {
+            "ser_url": "",
             "feature_title": "The first impression matters",
             "feature_desc": "Personalize your profile and get that 'WOW' out of your connections"
           }
@@ -63,6 +64,7 @@
         "feature-2": {
           "type": "feature",
           "settings": {
+            "ser_url": "",
             "feature_title": "no more paper cards",
             "feature_desc": "You can share your profile with a simple tap. No more need for outdated paper cards."
           }
@@ -70,6 +72,7 @@
         "feature-3": {
           "type": "feature",
           "settings": {
+            "ser_url": "",
             "feature_title": "No app needed",
             "feature_desc": "Our platform works on the browser, for all iOS or Android devices"
           }
@@ -81,6 +84,12 @@
         "feature-3"
       ],
       "settings": {
+        "our_ser_padding_top": 40,
+        "our_ser_padding_bottom": 40,
+        "our_ser_padding_top_ip": 40,
+        "our_ser_padding_bottom_ip": 40,
+        "our_ser_padding_top_xs": 30,
+        "our_ser_padding_bottom_xs": 30,
         "section_bg_image_enable": false,
         "section_bg_color_enable": true,
         "section_bg_color": "#f6f6f6",
@@ -128,12 +137,12 @@
         "0e6837e0-1603-47b2-8800-728228b9a7b0"
       ],
       "settings": {
-        "section_padding_top": 25,
-        "section_padding_bottom": 25,
-        "section_padding_top_ip": 25,
-        "section_padding_bottom_ip": 25,
-        "section_padding_top_xs": 25,
-        "section_padding_bottom_xs": 25,
+        "section_padding_top": 40,
+        "section_padding_bottom": 40,
+        "section_padding_top_ip": 40,
+        "section_padding_bottom_ip": 40,
+        "section_padding_top_xs": 30,
+        "section_padding_bottom_xs": 30,
         "section_bg_image_enable": false,
         "section_bg_color_enable": false,
         "section_bg_color": "#f8f8f8",
@@ -236,12 +245,12 @@
         "45fd7fda-1b3c-4bd2-a953-fee797857d54"
       ],
       "settings": {
-        "section_padding_top": 25,
-        "section_padding_bottom": 25,
-        "section_padding_top_ip": 25,
-        "section_padding_bottom_ip": 25,
-        "section_padding_top_xs": 25,
-        "section_padding_bottom_xs": 25,
+        "section_padding_top": 40,
+        "section_padding_bottom": 40,
+        "section_padding_top_ip": 40,
+        "section_padding_bottom_ip": 40,
+        "section_padding_top_xs": 30,
+        "section_padding_bottom_xs": 30,
         "section_bgcolor": "#ffffff",
         "section_bgcolor_check": false,
         "section_title": "TRUSTED BY",
