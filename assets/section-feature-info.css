@@ -82,6 +82,7 @@
 }
 .feature-info .feature-area ul.service-ul li.service-li ul.feature-item-ul li.feature-item-li .feature-icon a img {
   width: 35px;
+  height: auto;
 }
 .feature-info .feature-area ul.service-ul li.service-li ul.feature-item-ul li.feature-item-li .feature-content {
   width: calc(100% - 35px);
