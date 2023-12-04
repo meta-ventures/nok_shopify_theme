@@ -3729,6 +3729,7 @@ ul{
 ======================================*/
 .container{
   max-width: 1340px;
+  margin: 0 auto;
 }
 .container-fluid {
   padding-left: 100px;
