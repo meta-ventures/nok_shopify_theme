@@ -1,35 +1,41 @@
+{{ 'section-trusted-by.css' | asset_url | stylesheet_tag }}
+
 <section class="our-brand-logo">
   <div class="container">
-    <div class="row">
-      <div class="col">
-        {% if section.settings.section_title != '' %}
-        <div class="section-capture">
-          <div class="section-title">
-            <div class="section-cont-title">
-              {% if section.settings.section_title != '' %}
-              <h2>
-                <span>{{ section.settings.section_title }}</span>
-              </h2>
-              {% endif %}
-            </div>
-            {% if section.settings.section_desc != '' %}
-            <p>{{ section.settings.section_desc }}</p>
-            {% endif %}
-          </div>
-        </div>
+    <div class="section-capture">
+      <div class="section-title">
+        {% if section.settings.section_subtitle != '' %}
+          <span class="sub-title">{{ section.settings.section_subtitle }}</span>
         {% endif %}
-        <div class="brand-logo">
-          <ul>
-            {% for block in section.blocks %}
+        {% if section.settings.section_title != '' %}
+          <h2>{{ section.settings.section_title }}</h2>
+        {% endif %}
+        {% if section.settings.section_desc != '' %}
+          <p>{{ section.settings.section_desc }}</p>
+        {% endif %}
+      </div>
+    </div>
+    <div class="brand-logo">
+      <ul>
+        {% for block in section.blocks %}
+          {%- if block.settings.logo_image -%}
             <li>
               <a href="{{ block.settings.logo_url }}" class="brand-img">
-                <img width="{{ block.settings.logo_image.width }}" height="{{ block.settings.logo_image.height }}" class="img-fluid" src="{% if block.settings.logo_image %}{{ block.settings.logo_image | image_url }} {% else %}https://dummyimage.com/200x100 {% endif %}" alt="">
+                {{
+                  block.settings.logo_image
+                  | image_url: width: 200
+                  | image_tag:
+                      width: block.settings.logo_image.width,
+                      height: block.settings.logo_image.height,
+                      class: 'img-fluid',
+                      widths: '100, 200',
+                      fetchpriority: 'low'
+                }}
               </a>
             </li>
-            {% endfor %}
-          </ul>
-        </div>
-      </div>
+          {%- endif -%}
+        {% endfor %}
+      </ul>
     </div>
   </div>
 </div>
@@ -135,9 +141,14 @@
     },
     {
       "type": "text",
+      "id": "section_subtitle",
+      "label": "Subtitle"
+    },
+    {
+      "type": "text",
       "id": "section_title",
       "label": "Title",
-      "default": "Shop by brands"
+      "default": "TRUSTED BY"
     },
     {
       "type": "textarea",
@@ -173,7 +184,7 @@
 }
 {% endschema %}
 
-<style>
+{% style %}
   .our-brand-logo {
     padding-top: {{ section.settings.section_padding_top }}px;
     padding-bottom: {{ section.settings.section_padding_bottom }}px;
@@ -193,51 +204,4 @@
       padding-bottom: {{ section.settings.section_padding_bottom_xs }}px;
     }
   }
-
-  /* brand logo css */
-  .our-brand-logo .brand-logo ul{
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    margin-top: -30px;
-    {%- if settings.enable_rtl -%}
-    margin-right: -20px;
-    {%- else -%}
-    margin-left: -20px;
-    {%- endif -%}
-  }
-  .our-brand-logo .brand-logo ul li{
-    width: calc(16.66% - 20px);
-    margin-top: 30px;
-    {%- if settings.enable_rtl -%}
-    margin-right: 20px;
-    {%- else -%}
-    margin-left: 20px;
-    {%- endif -%}
-    text-align: center;
-  }
-  .our-brand-logo .brand-logo ul li a:hover img {
-    -webkit-filter: saturate(0);
-    -moz-filter: saturate(0);
-    -ms-filter: saturate(0);
-    -o-filter: saturate(0);
-    filter: saturate(0);
-  }
-  .our-brand-logo .brand-logo ul li a img,
-  .our-brand-logo .brand-logo ul li a:hover img {
-    -webkit-transition: all 0.3s ease-in-out 0s;
-    -o-transition: all 0.3s ease-in-out 0s;
-    transition: all 0.3s ease-in-out 0s;
-  }
-  @media (max-width: 1199px) {
-    .our-brand-logo .brand-logo ul li{
-      width: calc(25% - 20px);
-    }
-  }
-  @media (max-width: 767px) {
-    .our-brand-logo .brand-logo ul li{
-      width: calc(50% - 20px);
-    }
-  }
-</style>
+{% endstyle %}

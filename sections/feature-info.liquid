@@ -1,145 +1,123 @@
+{{ 'section-feature-info.css' | asset_url | stylesheet_tag }}
+
 <section class="feature-info" {% if section.settings.section_bg_image_enable %}style="background-image: url('{% if section.settings.section_bg_image %}{{ section.settings.section_bg_image | image_url }}{% else %}https://dummyimage.com/1920x800{% endif %}');"{% endif %}>
   <div class="container">
-    <div class="row">
-      <div class="col">
-        <div class="section-capture">
-          <div class="section-title">
-            {% if section.settings.section_subtitle != '' %}
-            <span class="sub-title">{{ section.settings.section_subtitle }}</span>
-            {% endif %}
-            {% if section.settings.section_title != '' %}
-            <h2>{{ section.settings.section_title }}</h2>
-            {% endif %}
-          </div>
-        </div>
-        <div class="feature-area">
-          <ul class="service-ul">
-            {% for block in section.blocks %}
-            {%- case block.type -%}
-            {%- when 'service_item' -%}
-            <li class="service-li {% if block.settings.service_column_reverse %}column-reverse {% else %}feature-service {% endif %}">
-              <ul class="feature-item-ul">
-                <li class="feature-item-li">
-                  <div class="feature-icon">
-                    <a href="javascript:void(0)">
-                      <img width="{{ block.settings.service_image_icon_1.width }}" height="{{ block.settings.service_image_icon_1.height }}" class="img-fluid" src="{% if block.settings.service_image_icon_1 %}{{ block.settings.service_image_icon_1 | image_url }}{% else %}https://dummyimage.com/512x512{% endif %}" alt="">
-                    </a>
-                  </div>
-                  <div class="feature-content">
-                    {% if block.settings.service_1_title != '' %}
-                    <h4 class="title">{{ block.settings.service_1_title }}</h4>
-                    {% endif %}
-                    {% if block.settings.service_1_desc != '' %}
-                    <p class="desc">{{ block.settings.service_1_desc }}</p>
-                    {% endif %}
-                  </div>
-                </li>
-                <li class="feature-item-li">
-                  <div class="feature-icon">
-                    <a href="javascript:void(0)">
-                      <img width="{{ block.settings.service_image_icon_2.width }}" height="{{ block.settings.service_image_icon_2.height }}" class="img-fluid" src="{% if block.settings.service_image_icon_2 %}{{ block.settings.service_image_icon_2 | image_url }}{% else %}https://dummyimage.com/512x512{% endif %}" alt="">
-                    </a>
-                  </div>
-                  <div class="feature-content">
-                    {% if block.settings.service_2_title != '' %}
-                    <h4 class="title">{{ block.settings.service_2_title }}</h4>
-                    {% endif %}
-                    {% if block.settings.service_2_desc != '' %}
-                    <p class="desc">{{ block.settings.service_2_desc }}</p>
-                    {% endif %}
-                  </div>
-                </li>
-                <li class="feature-item-li">
-                  <div class="feature-icon">
-                    <a href="javascript:void(0)">
-                      <img width="{{ block.settings.service_image_icon_3.width }}" height="{{ block.settings.service_image_icon_3.height }}" class="img-fluid" src="{% if block.settings.service_image_icon_3 %}{{ block.settings.service_image_icon_3 | image_url }}{% else %}https://dummyimage.com/512x512{% endif %}" alt="">
-                    </a>
-                  </div>
-                  <div class="feature-content">
-                    {% if block.settings.service_3_title != '' %}
-                    <h4 class="title">{{ block.settings.service_3_title }}</h4>
-                    {% endif %}
-                    {% if block.settings.service_3_desc != '' %}
-                    <p class="desc">{{ block.settings.service_3_desc }}</p>
-                    {% endif %}
-                  </div>
-                </li>
-              </ul>
-              <style type="text/css">
-              {% if block.settings.service_column_reverse %}
+    <div class="section-capture">
+      <div class="section-title">
+        {% if section.settings.section_subtitle != '' %}
+        <span class="sub-title">{{ section.settings.section_subtitle }}</span>
+        {% endif %}
+        {% if section.settings.section_title != '' %}
+        <h2>{{ section.settings.section_title }}</h2>
+        {% endif %}
+      </div>
+    </div>
+    <div class="feature-area">
+      <ul class="service-ul">
+        {% for block in section.blocks %}
+          {%- case block.type -%}
+          {%- when 'service_item' -%}
+          <li class="service-li {% if block.settings.service_column_reverse %}column-reverse {% else %}feature-service {% endif %}">
+            <ul class="feature-item-ul">
+              <li class="feature-item-li">
+                <div class="feature-icon">
+                  <a href="javascript:void(0)">
+                    <img width="{{ block.settings.service_image_icon_1.width }}" height="{{ block.settings.service_image_icon_1.height }}" class="img-fluid" src="{% if block.settings.service_image_icon_1 %}{{ block.settings.service_image_icon_1 | image_url }}{% else %}https://dummyimage.com/512x512{% endif %}" alt="">
+                  </a>
+                </div>
+                <div class="feature-content">
+                  {% if block.settings.service_1_title != '' %}
+                  <h4 class="title">{{ block.settings.service_1_title }}</h4>
+                  {% endif %}
+                  {% if block.settings.service_1_desc != '' %}
+                  <p class="desc">{{ block.settings.service_1_desc }}</p>
+                  {% endif %}
+                </div>
+              </li>
+              <li class="feature-item-li">
+                <div class="feature-icon">
+                  <a href="javascript:void(0)">
+                    <img width="{{ block.settings.service_image_icon_2.width }}" height="{{ block.settings.service_image_icon_2.height }}" class="img-fluid" src="{% if block.settings.service_image_icon_2 %}{{ block.settings.service_image_icon_2 | image_url }}{% else %}https://dummyimage.com/512x512{% endif %}" alt="">
+                  </a>
+                </div>
+                <div class="feature-content">
+                  {% if block.settings.service_2_title != '' %}
+                  <h4 class="title">{{ block.settings.service_2_title }}</h4>
+                  {% endif %}
+                  {% if block.settings.service_2_desc != '' %}
+                  <p class="desc">{{ block.settings.service_2_desc }}</p>
+                  {% endif %}
+                </div>
+              </li>
+              <li class="feature-item-li">
+                <div class="feature-icon">
+                  <a href="javascript:void(0)">
+                    <img width="{{ block.settings.service_image_icon_3.width }}" height="{{ block.settings.service_image_icon_3.height }}" class="img-fluid" src="{% if block.settings.service_image_icon_3 %}{{ block.settings.service_image_icon_3 | image_url }}{% else %}https://dummyimage.com/512x512{% endif %}" alt="">
+                  </a>
+                </div>
+                <div class="feature-content">
+                  {% if block.settings.service_3_title != '' %}
+                  <h4 class="title">{{ block.settings.service_3_title }}</h4>
+                  {% endif %}
+                  {% if block.settings.service_3_desc != '' %}
+                  <p class="desc">{{ block.settings.service_3_desc }}</p>
+                  {% endif %}
+                </div>
+              </li>
+            </ul>
+            <style type="text/css">
+            {% if block.settings.service_column_reverse %}
+            .feature-info .feature-area ul.service-ul li.service-li.column-reverse ul.feature-item-ul li.feature-item-li {
+              text-align: right;
+              flex-direction: row-reverse;
+            }
+            .feature-info .feature-area ul.service-ul li.service-li.column-reverse ul.feature-item-ul li.feature-item-li .feature-content {
+              padding-right: 40px;
+            }
+            @media (max-width: 1199px) {
+              .feature-info .feature-area ul.service-ul li.service-li.column-reverse ul.feature-item-ul li.feature-item-li .feature-content {
+                padding-right: 30px;
+              }
+            }
+            @media (max-width: 991px) {
               .feature-info .feature-area ul.service-ul li.service-li.column-reverse ul.feature-item-ul li.feature-item-li {
-                {%- if settings.enable_rtl -%}
                 text-align: left;
-                {%- else -%}
-                text-align: right;
-                {%- endif -%}
-                flex-direction: row-reverse;
+                flex-direction: unset;
               }
               .feature-info .feature-area ul.service-ul li.service-li.column-reverse ul.feature-item-ul li.feature-item-li .feature-content {
-                {%- if settings.enable_rtl -%}
-                padding-left: 40px;
-                {%- else -%}
-                padding-right: 40px;
-                {%- endif -%}
+                padding-right: 0px;
+                padding-left: 30px;
               }
-              @media (max-width: 1199px) {
-                .feature-info .feature-area ul.service-ul li.service-li.column-reverse ul.feature-item-ul li.feature-item-li .feature-content {
-                  {%- if settings.enable_rtl -%}
-                  padding-left: 30px;
-                  {%- else -%}
-                  padding-right: 30px;
-                  {%- endif -%}
-                }
-              }
-              @media (max-width: 991px) {
-                .feature-info .feature-area ul.service-ul li.service-li.column-reverse ul.feature-item-ul li.feature-item-li {
-                  {%- if settings.enable_rtl -%}
-                  text-align: right;
-                  {%- else -%}
-                  text-align: left;
-                  {%- endif -%}
-                  flex-direction: unset;
-                }
-                .feature-info .feature-area ul.service-ul li.service-li.column-reverse ul.feature-item-ul li.feature-item-li .feature-content {
-                  padding-right: 0px;
-                  {%- if settings.enable_rtl -%}
-                  padding-right: 30px;
-                  {%- else -%}
-                  padding-left: 30px;
-                  {%- endif -%}
-                }
-              }
-              {% else %}
+            }
+            {% else %}
+            .feature-info .feature-area ul.service-ul li.service-li.feature-service ul.feature-item-ul li.feature-item-li .feature-content {
+              padding-left: 40px;
+            }
+            @media (max-width: 1199px) {
               .feature-info .feature-area ul.service-ul li.service-li.feature-service ul.feature-item-ul li.feature-item-li .feature-content {
-                {%- if settings.enable_rtl -%}
-                padding-right: 40px;
-                {%- else -%}
-                padding-left: 40px;
-                {%- endif -%}
+                padding-left: 30px;
               }
-              @media (max-width: 1199px) {
-                .feature-info .feature-area ul.service-ul li.service-li.feature-service ul.feature-item-ul li.feature-item-li .feature-content {
-                  {%- if settings.enable_rtl -%}
-                  padding-right: 30px;
-                  {%- else -%}
-                  padding-left: 30px;
-                  {%- endif -%}
-                }
-              }
-              {% endif %}
-              </style>
-            </li>
-            {%- when 'service_image' -%}
+            }
+            {% endif %}
+            </style>
+          </li>
+          {%- when 'service_image' -%}
             <li class="service-image-li feature-image">
-              <span>
-                <img width="{{ block.settings.feature_image.width }}" height="{{ block.settings.feature_image.height }}" class="img-fluid desk-img" src="{% if block.settings.feature_image %}{{ block.settings.feature_image | image_url }}{% else %}https://dummyimage.com/570x570{% endif %}" alt="">
-              </span>
+              {%- if block.settings.feature_image -%}
+                  {{
+                    block.settings.feature_image
+                    | image_url: width: 2000
+                    | image_tag:
+                        width: block.settings.feature_image.width,
+                        height: block.settings.feature_image.height,
+                        class: 'img-fluid',
+                        fetchpriority: 'low'
+                  }}
+              {%- endif -%}
             </li>
-            {%- endcase -%}
-            {% endfor %}
-          </ul>
-        </div>
-      </div>
+          {%- endcase -%}
+        {% endfor %}
+      </ul>
     </div>
   </div>
 </section>
@@ -382,8 +360,9 @@
   ]
 }
 {% endschema %}
-<style>
-  .feature-info {
+
+{% style %}
+ .feature-info {
     padding-top: {{ section.settings.section_padding_top }}px;
     padding-bottom: {{ section.settings.section_padding_bottom }}px;
 
@@ -409,142 +388,4 @@
       padding-bottom: {{ section.settings.section_padding_bottom_xs }}px;
     }
   }
-  /* main css */
-
-  .feature-info .feature-area ul.service-ul {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    {% if settings.enable_rtl %}
-    margin-right: -30px;
-    {% else %}
-    margin-left: -30px;
-    {% endif %}
-    margin-top: -40px;
-  }
-  .feature-info .feature-area ul.service-ul li.service-li {
-    width: calc(25% - 30px);
-    {% if settings.enable_rtl %}
-    margin-right: 30px;
-    {% else %}
-    margin-left: 30px;
-    {% endif %}
-    margin-top: 40px;
-  }
-  .feature-info .feature-area ul.service-ul li.service-image-li {
-    width: calc(50% - 30px);
-    {% if settings.enable_rtl %}
-    margin-right: 30px;
-    {% else %}
-    margin-left: 30px;
-    {% endif %}
-    margin-top: 40px;
-    padding: 0px 40px;
-    text-align: center;
-  }
-  @media (max-width: 1199px) {
-    .feature-info .feature-area ul.service-ul li.service-li {
-      width: calc(30% - 30px);
-    }
-    .feature-info .feature-area ul.service-ul li.service-image-li {
-      width: calc(40% - 30px);
-      padding: 0px 30px;
-    }
-  }
-  @media (max-width: 991px) {
-    .feature-info .feature-area ul.service-ul li.service-li {
-      width: calc(50% - 30px);
-    }
-    .feature-info .feature-area ul.service-ul li.service-image-li {
-      width: calc(100% - 30px);
-      padding: 0px;
-      order: -1;
-    }
-  }
-  @media (max-width: 767px) {
-    .feature-info .feature-area ul.service-ul {
-      {% if settings.enable_rtl %}
-      margin-right: -12px;
-      {% else %}
-      margin-left: -12px;
-      {% endif %}
-    }
-    .feature-info .feature-area ul.service-ul li.service-li {
-      width: calc(50% - 12px);
-      {% if settings.enable_rtl %}
-      margin-right: 12px;
-      {% else %}
-      margin-left: 12px;
-      {% endif %}
-    }
-    .feature-info .feature-area ul.service-ul li.service-image-li {
-      width: calc(100% - 12px);
-      {% if settings.enable_rtl %}
-      margin-right: 12px;
-      {% else %}
-      margin-left: 12px;
-      {% endif %}
-    }
-  }
-  @media (max-width: 479px) {
-    .feature-info .feature-area ul.service-ul {
-      margin-top: -25px;
-    }
-    .feature-info .feature-area ul.service-ul li.service-li {
-      width: calc(100% - 12px);
-      margin-top: 25px;
-    }
-    .feature-info .feature-area ul.service-ul li.service-image-li {
-      margin-top: 25px;
-    }
-  }
-
-  /* service css */
-  .feature-info .feature-area ul.service-ul li.service-li ul.feature-item-ul li.feature-item-li {
-    display: flex;
-    align-items: center;
-    margin-top: 64px;
-  }
-  .feature-info .feature-area ul.service-ul li.service-li ul.feature-item-ul li.feature-item-li:first-child {
-    margin-top: 0px;
-  }
-  .feature-info .feature-area ul.service-ul li.service-li ul.feature-item-ul li.feature-item-li:hover .feature-icon a {
-    -webkit-transform: rotateY(180deg);
-    -o-transform: rotateY(180deg);
-    transform: rotateY(180deg);
-  }
-  .feature-info .feature-area ul.service-ul li.service-li ul.feature-item-ul li.feature-item-li .feature-icon a,
-  .feature-info .feature-area ul.service-ul li.service-li ul.feature-item-ul li.feature-item-li:hover .feature-icon a {
-    -webkit-transition: all 0.7s ease-in-out 0s;
-    -o-transition: all 0.7s ease-in-out 0s;
-    transition: all 0.7s ease-in-out 0s;
-  }
-  .feature-info .feature-area ul.service-ul li.service-li ul.feature-item-ul li.feature-item-li .feature-icon a img {
-    width: 35px;
-  }
-  .feature-info .feature-area ul.service-ul li.service-li ul.feature-item-ul li.feature-item-li .feature-content {
-    width: calc(100% - 35px);
-  }
-  .feature-info .feature-area ul.service-ul li.service-li ul.feature-item-ul li.feature-item-li .feature-content h4.title {
-    font-size: 18px;
-    font-weight: 700;
-    text-transform: uppercase;
-  }
-  .feature-info .feature-area ul.service-ul li.service-li ul.feature-item-ul li.feature-item-li .feature-content p.desc {
-    color: var(--font-color-body);
-    font-size: 18px;
-    margin-top: 24px;
-  }
-  @media (max-width: 1199px){
-    .feature-info .feature-area ul.service-ul li.service-li ul.feature-item-ul li.feature-item-li {
-      margin-top: 25px;
-    }
-    .feature-info .feature-area ul.service-ul li.service-li ul.feature-item-ul li.feature-item-li .feature-content h4.title {
-      font-size: 16px;
-    }
-    .feature-info .feature-area ul.service-ul li.service-li ul.feature-item-ul li.feature-item-li .feature-content p.desc {
-      font-size: 16px;
-      margin-top: 14px;
-    }
-  }
-</style>
+{% endstyle %}

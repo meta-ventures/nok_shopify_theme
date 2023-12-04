@@ -1,0 +1,43 @@
+
+  .our-brand-logo .brand-logo ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px 60px;
+    flex-wrap: wrap;
+  }
+  .our-brand-logo .brand-logo ul li{
+    width: calc(16.66% - 20px);
+    text-align: center;
+  }
+  .our-brand-logo .brand-logo ul li img {
+    width: 100%;
+    height: auto;
+  }
+
+  .our-brand-logo .brand-logo ul li a:hover img {
+    -webkit-filter: saturate(0);
+    -moz-filter: saturate(0);
+    -ms-filter: saturate(0);
+    -o-filter: saturate(0);
+    filter: saturate(0);
+  }
+  .our-brand-logo .brand-logo ul li a img,
+  .our-brand-logo .brand-logo ul li a:hover img {
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -o-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+  }
+  @media (max-width: 1199px) {
+    .our-brand-logo .brand-logo ul li{
+      width: 25%;
+    }
+  }
+  @media (max-width: 767px) {
+    .our-brand-logo .brand-logo ul {
+      gap: 30px 20px;
+    }
+    .our-brand-logo .brand-logo ul li{
+      width: 30%;
+    }
+  }

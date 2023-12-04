@@ -1,0 +1,330 @@
+{{ 'section-banner-product.css' | asset_url | stylesheet_tag }}
+
+<section class="offer-banner-area">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="offer-banner-bg">
+                    <div class="offer-banner-image">
+                        <img width="{{ section.settings.image_banner.width }}" height="{{ section.settings.image_banner.height }}" class="img-fluid" src="{% if section.settings.image_banner %}{{ section.settings.image_banner | image_url }}{% else %}https://dummyimage.com/420x570/f7f7f7/999999{% endif %}" alt="">
+                    </div>
+                    <div class="offer-banner-content">
+                        <div class="banner-content">
+                            {% if section.settings.banner_title != '' %}
+                            <h1 class="title" style="color: {{ section.settings.banner_title_color }}">{{ section.settings.banner_title }}</h1>
+                            {% endif %}
+                            {% if section.settings.banner_desc != '' %}
+                            <p class="desc" style="color: {{ section.settings.banner_desc_color }}">{{ section.settings.banner_desc }}</p>
+                            {% endif %}
+                            <h4 class="price" style="color: {{ section.settings.banner_price_color }}">
+                                {% if section.settings.banner_price_label != '' %}
+                                <span class="label">{{ section.settings.banner_price_label }}</span>
+                                {% endif %}
+                                {% if section.settings.banner_price_text != '' %}
+                                <span class="price">{{ section.settings.banner_price_text }}</span>
+                                {% endif %}
+                            </h4>
+                            <div class="banner-btn">
+                                {% if section.settings.banner_btn_1_text != '' %}
+                                <a href="{{ section.settings.banner_btn_1_url }}" class="btn-1 btn-style2">
+                                    <span>{{ section.settings.banner_btn_1_text }}</span>
+                                    <span class="icon">{{ section.settings.banner_btn_1_icon }}</span>
+                                </a>
+                                {% endif %}
+                                {% if section.settings.banner_btn_2_text != '' %}
+                                <a href="{{ section.settings.banner_btn_2_url }}" class="btn-2 btn-style3">
+                                    <span class="icon">{{ section.settings.banner_btn_2_icon }}</span>
+                                    <span>{{ section.settings.banner_btn_2_text }}</span>
+                                </a>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- banner-area end -->
+{% schema %}
+{
+  "name": "Banner Product",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Padding"
+    },
+    {
+      "type": "paragraph",
+      "content": "Desktop / Laptop / tablet"
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "paragraph",
+      "content": "Ipad pro / Ipad"
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top_ip",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom_ip",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 30
+    },
+    {
+      "type": "paragraph",
+      "content": "Mobile"
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top_xs",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom_xs",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Background Image"
+    },
+    {
+      "type": "checkbox",
+      "id": "offer_banner_bg_image_enable",
+      "label": "Show Background Image",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "section_bg_image",
+      "label": "Background Image",
+      "info": "Recommended Size: 1340 x 600px"
+    },
+    {
+      "type": "header",
+      "content": "Background Color"
+    },
+    {
+      "type": "checkbox",
+      "id": "section_bg_color_enable",
+      "label": "Show Background Color",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "section_bg_color",
+      "label": "Background Color",
+      "default": "#f6f6f6"
+    },
+    {
+      "type": "header",
+      "content": "Banner Content"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_banner",
+      "label": "Banner Image",
+      "info": "Recommended Size: 420px x 570px"
+    },
+    {
+      "type": "header",
+      "content": "Banner Image"
+    },
+    {
+      "type": "header",
+      "content": "Title"
+    },
+    {
+      "type": "text",
+      "id": "banner_title",
+      "label": "Banenr title",
+      "default": "Buy our awesome drone"
+    },
+    {
+      "type": "color",
+      "id": "banner_title_color",
+      "label": "Banenr title Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Description"
+    },
+    {
+      "type": "textarea",
+      "id": "banner_desc",
+      "label": "Banenr Description",
+      "default": "Portable yet powerful, the nexa pro is your personal drone ready to go with you everywhere."
+    },
+    {
+      "type": "color",
+      "id": "banner_desc_color",
+      "label": "Banenr Description Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Price"
+    },
+    {
+      "type": "text",
+      "id": "banner_price_label",
+      "label": "Price label",
+      "default": "Price only:"
+    },
+    {
+      "type": "text",
+      "id": "banner_price_text",
+      "label": "Price Text",
+      "default": "$999.00"
+    },
+    {
+      "type": "color",
+      "id": "banner_price_color",
+      "label": "Banenr Price Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Banner Button"
+    },
+    {
+      "type": "header",
+      "content": "Button 1"
+    },
+    {
+      "type": "text",
+      "id": "banner_btn_1_text",
+      "label": "Button 1 Text",
+      "default": "Add to cart"
+    },
+    {
+      "type": "textarea",
+      "id": "banner_btn_1_icon",
+      "label": "Button Icon",
+      "default": "feather-shopping-cart"
+    },
+    {
+      "type": "url",
+      "id": "banner_btn_1_url",
+      "label": "Button 1 url"
+    },
+    {
+      "type": "header",
+      "content": "Button 2"
+    },
+    {
+      "type": "textarea",
+      "id": "banner_btn_2_icon",
+      "label": "Button Icon",
+      "default": "feather-shopping-cart"
+    },
+    {
+      "type": "text",
+      "id": "banner_btn_2_text",
+      "label": "Button 2 Text",
+      "default": "Buy amazon"
+    },
+    {
+      "type": "url",
+      "id": "banner_btn_2_url",
+      "label": "Button 2 url"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Banner Product",
+      "category": "Banner Product"
+    }
+  ]
+}
+{% endschema %}
+
+{% style %}
+  .offer-banner-area {
+    padding-top: {{ section.settings.section_padding_top }}px;
+    padding-bottom: {{ section.settings.section_padding_bottom }}px;
+  }
+  .offer-banner-area .offer-banner-bg {
+    padding: {{ section.settings.section_padding_top }}px {{ section.settings.section_padding_top | divided_by: 2 }}px;
+  }
+  @media(max-width: 1199px){
+      .offer-banner-area {
+          padding-top: {{ section.settings.section_padding_top_ip }}px;
+          padding-bottom: {{ section.settings.section_padding_bottom_ip }}px;
+      }
+  }
+  @media(max-width: 767px){
+      .offer-banner-area {
+          padding-top: {{ section.settings.section_padding_top_xs }}px;
+          padding-bottom: {{ section.settings.section_padding_bottom_xs }}px;
+      }
+  }
+
+  .offer-banner-area .offer-banner-bg::before {
+    {% if section.settings.offer_banner_bg_image_enable %}
+      background-image: url('{% if section.settings.section_bg_image %}{{ section.settings.section_bg_image | image_url }}{% else %}https://dummyimage.com/1340x600{% endif %}');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    {% endif %}
+
+    {% if section.settings.section_bg_color_enable %}
+      background-color: {{ section.settings.section_bg_color }};
+    {% endif %}
+  }
+  @media(max-width: 1199px) {
+    .offer-banner-area .offer-banner-bg {
+        padding: {{ section.settings.section_padding_top_ip }}px {{ section.settings.section_padding_top_ip | divided_by: 2 }}px;
+        margin-top: 150px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .offer-banner-area .offer-banner-bg {
+        padding: {{ section.settings.section_padding_top_ip }}px 12px;
+    }
+  }
+{% endstyle %}

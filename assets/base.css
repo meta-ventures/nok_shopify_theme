@@ -508,7 +508,7 @@ h6:empty {
   text-underline-offset: 0.3rem;
   color: rgb(var(--color-link));
   background-color: transparent;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   font-family: inherit;
 }
 
@@ -3592,7 +3592,7 @@ h3,
 h4,
 h5,
 h6{
-  color: var(--font-color-header);
+  /* color: var(--font-color-header); */
   margin: 0;
   padding: 0;
 
@@ -3609,7 +3609,7 @@ h6{
   paragraph css
 ======================================*/
 p {
-  color: var(--font-color-paragraph);
+  /* color: var(--font-color-paragraph); */
   margin-bottom: 0px;
 
   font-family: 'Barlow', sans-serif;
@@ -3798,7 +3798,7 @@ section {
 .other-page-title .title-area h4,
 .my-account-page .page-title h2 {
   color: var(--font-color-section-header);
-
+  font-size: 60px;
   font-family: 'Barlow', sans-serif;
   font-weight: 700;
 

@@ -43,9 +43,14 @@
   }
   .features-square-area ul.single-feature li.feature-wrapper:hover .feature-block .feature-icon {
     color: #ffffff;
+    /* background-color: #f4f4ff; */
+    border: 1px solid var(--font-color-secondary);
+    -webkit-transition: all .3s ease-in-out 0s;
+    -o-transition: all .3s ease-in-out 0s;
+    transition: all .3s ease-in-out 0s;
   }
   .features-square-area ul.single-feature li.feature-wrapper .feature-block .feature-icon::before {
-    background-image: var(--gradient-color);
+    /* background-image: var(--gradient-color); */
     content: '';
     position: absolute;
     bottom: 50%;
