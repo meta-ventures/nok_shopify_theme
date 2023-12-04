@@ -29,7 +29,7 @@
     padding: 70px;
     text-align: center;
   }
-  .our-feature-area ul.single-feature li.ser-box .ser-block a {
+  .our-feature-area ul.single-feature li.ser-box .ser-block .feature-icon {
     position: relative;
     font-size: 40px;
     width: 120px;
@@ -41,7 +41,7 @@
     border: 1px solid #ededed;
     border-radius: 100%;
   }
-  .our-feature-area ul.single-feature li.ser-box:hover .ser-block a {
+  .our-feature-area ul.single-feature li.ser-box:hover .ser-block .feature-icon {
     color: #ffffff;
   }
   .our-feature-area ul.single-feature li.ser-box .ser-block a::before {
