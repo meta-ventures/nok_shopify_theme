@@ -16,7 +16,7 @@
           {% for block in section.blocks %}
           <li class="ser-box">
             <div class="ser-block">
-              <a href="{{ block.settings.ser_url }}"><i class="{{ block.settings.service_icon }}"></i></a>
+              <a href="{{ block.settings.ser_url }}"><i class="{{ block.settings.feature_icon }}"></i></a>
               <div class="service-text">
                 {% if block.settings.feature_title != '' %}
                 <h6>{{ block.settings.feature_title }}</h6>
@@ -174,7 +174,7 @@
         },
         {
           "type": "text",
-          "id": "service_icon",
+          "id": "feature_icon",
           "label": "Icon Class",
           "info": "remixicon.com"
         },
