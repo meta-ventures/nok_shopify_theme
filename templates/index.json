@@ -236,12 +236,12 @@
         "45fd7fda-1b3c-4bd2-a953-fee797857d54"
       ],
       "settings": {
-        "section_padding_top": 100,
-        "section_padding_bottom": 100,
-        "section_padding_top_ip": 70,
-        "section_padding_bottom_ip": 70,
-        "section_padding_top_xs": 50,
-        "section_padding_bottom_xs": 50,
+        "section_padding_top": 25,
+        "section_padding_bottom": 25,
+        "section_padding_top_ip": 25,
+        "section_padding_bottom_ip": 25,
+        "section_padding_top_xs": 25,
+        "section_padding_bottom_xs": 25,
         "section_bgcolor": "#ffffff",
         "section_bgcolor_check": false,
         "section_title": "TRUSTED BY",
