@@ -18,7 +18,6 @@
           {% for block in section.blocks %}
           <li class="ser-box">
             <div class="ser-block">
-              <a href="{{ block.settings.ser_url }}">
                 {%- if block.settings.feature_icon_image != blank -%}
                   {{
                     block.settings.feature_icon_image
@@ -28,7 +27,6 @@
                   }}
                 {%- endif -%}
                 <i class="{{ block.settings.feature_icon }}"></i>
-              </a>
               <div class="service-text">
                 {% if block.settings.feature_title != '' %}
                 <h6>{{ block.settings.feature_title }}</h6>
