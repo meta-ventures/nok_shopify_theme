@@ -3774,6 +3774,11 @@ ul{
 /*=====================================
   Section headings css
 ======================================*/
+section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
 .section-capture,
 .content-main-title,
 .other-page-title,
