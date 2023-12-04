@@ -1,8 +1,9 @@
 
   .our-brand-logo .brand-logo ul{
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
     flex-wrap: wrap;
   }
   .our-brand-logo .brand-logo ul li{
