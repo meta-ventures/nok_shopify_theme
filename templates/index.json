@@ -121,24 +121,32 @@
         "video_url": "https:\/\/www.youtube-nocookie.com\/embed\/DeksxqY7kF4"
       }
     },
-    "special-category": {
-      "type": "special-category",
+    "featured_collection": {
+      "type": "featured-collection",
       "settings": {
-        "category_special_padding_top": 100,
-        "category_special_padding_bottom": 100,
-        "category_special_padding_top_ip": 80,
-        "category_special_padding_bottom_ip": 80,
-        "category_special_padding_top_xs": 60,
-        "category_special_padding_bottom_xs": 60,
-        "section_bg_image_enable": false,
-        "section_bg_color_enable": true,
-        "section_bg_color": "#f6f6f6",
-        "section_subtitle": "Best seller",
-        "section_title": "Custom NOK Cards",
-        "product_col": "1",
-        "slide_product_limit": "4",
-        "category_special_product_limit_handle": "10",
-        "special_label_product": "nok-card"
+        "title": "Best Sellers",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "all",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 28,
+        "padding_bottom": 36
       }
     },
     "banner-product": {
@@ -337,34 +345,6 @@
         "section_desc": ""
       }
     },
-    "featured_collection": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Best Sellers",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "all",
-        "products_to_show": 8,
-        "columns_desktop": 4,
-        "full_width": false,
-        "show_view_all": false,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "scheme-1",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": false,
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 28,
-        "padding_bottom": 36
-      }
-    },
     "video": {
       "type": "video",
       "disabled": true,
@@ -385,11 +365,10 @@
     "image_banner",
     "features-square",
     "video-banner",
-    "special-category",
+    "featured_collection",
     "banner-product",
     "feature-info",
     "trusted-by",
-    "featured_collection",
     "video"
   ]
 }
