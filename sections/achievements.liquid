@@ -6,30 +6,30 @@
         {% endif %}
     </div>
     <div class="feature-item">
-        <ul class="counter-ul">
-            {% for block in section.blocks %}
-            <li class="counter-li">
-                {% if block.settings.feature_item_title != '' %}
-                <span class="subtitle">{{ block.settings.feature_item_title }}</span>
-                {% endif %}
-                <div class="counter-area">
-                    {% if block.settings.feature_item_number != '' %}
-                    <h2 class="count">
-                        <span class="count-up">{{ block.settings.feature_item_number }}</span>
-                    </h2>
-                    {% endif %}
-                    {% if block.settings.feature_item_number_title != '' %}
-                    <h2 class="title">
-                        <span>{{ block.settings.feature_item_number_title }}</span>
-                    </h2>
-                    {% endif %}
-                </div>
-                {% if block.settings.feature_item_desc != '' %}
-                <p class="item-desc">{{ block.settings.feature_item_desc }}</p>
-                {% endif %}
-            </li>
-            {% endfor %}
-        </ul>
+      <ul class="counter-ul">
+        {% for block in section.blocks %}
+          <li class="counter-li">
+              {% if block.settings.feature_item_title != '' %}
+              <span class="subtitle">{{ block.settings.feature_item_title }}</span>
+              {% endif %}
+              <div class="counter-area">
+                  {% if block.settings.feature_item_number != '' %}
+                  <h2 class="count">
+                      <span class="count-up">{{ block.settings.feature_item_number }}</span>
+                  </h2>
+                  {% endif %}
+                  {% if block.settings.feature_item_number_title != '' %}
+                  <h2 class="title">
+                      <span>{{ block.settings.feature_item_number_title }}</span>
+                  </h2>
+                  {% endif %}
+              </div>
+              {% if block.settings.feature_item_desc != '' %}
+              <p class="item-desc">{{ block.settings.feature_item_desc }}</p>
+              {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
     </div>
   </div>
 </section>
