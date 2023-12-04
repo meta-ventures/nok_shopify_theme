@@ -4,7 +4,8 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 30px;
+    gap: 20px;
+    padding: 20px;
   }
 
   .features-square-area ul.single-feature li.ser-box {
