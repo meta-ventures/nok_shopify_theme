@@ -100,6 +100,27 @@
         "section_title": "How it works"
       }
     },
+    "video-banner": {
+      "type": "video-banner",
+      "settings": {
+        "section_padding_top": 100,
+        "section_padding_bottom": 100,
+        "section_padding_top_ip": 80,
+        "section_padding_bottom_ip": 80,
+        "section_padding_top_xs": 60,
+        "section_padding_bottom_xs": 60,
+        "section_bg_image_enable": true,
+        "section_bg_color_enable": false,
+        "section_bg_color": "#ffffff",
+        "video_title": "Cut the costs and reduce global warming",
+        "video_title_color": "#ffffff",
+        "video_desc": "You only need one card for limitless connections. Save on printing cost and reduce your carbon footprint.",
+        "video_desc_color": "#ffffff",
+        "video_icon": "feather-play",
+        "video_btn_text": "Watch video",
+        "video_url": "https:\/\/www.youtube-nocookie.com\/embed\/DeksxqY7kF4"
+      }
+    },
     "banner-product": {
       "type": "banner-product",
       "settings": {
@@ -285,6 +306,7 @@
         "section_padding_bottom_xs": 60,
         "section_bgcolor": "#ffffff",
         "section_bgcolor_check": false,
+        "section_title": "TRUSTED BY",
         "section_desc": ""
       }
     },
@@ -335,6 +357,7 @@
   "order": [
     "image_banner",
     "features-square",
+    "video-banner",
     "banner-product",
     "feature-info",
     "trusted-by",
