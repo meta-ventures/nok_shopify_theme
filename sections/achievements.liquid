@@ -400,7 +400,9 @@
 
 {% endstyle %}
 
-<script src="{{ 'counter-up.min.js' | asset_url }}"></script>
+{% comment %} <script src="{{ 'counter-up.min.js' | asset_url }}"></script> {% endcomment %}
+<script src="https://unpkg.com/counterup2@2.0.2/dist/index.js">	</script>
+
 <script defer>
   const { counterUp } = window.counterUp;
 
