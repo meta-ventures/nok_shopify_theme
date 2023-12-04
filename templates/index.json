@@ -138,7 +138,7 @@
         "product_col": "1",
         "slide_product_limit": "4",
         "category_special_product_limit_handle": "10",
-        "special_label_product": "nok-card"
+        "special_label_product": "custom-cards"
       }
     },
     "banner-product": {
