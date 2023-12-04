@@ -18,11 +18,11 @@
             <div class="ser-block">
               <a href="{{ block.settings.ser_url }}"><i class="{{ block.settings.service_icon }}"></i></a>
               <div class="service-text">
-                {% if block.settings.service_title != '' %}
-                <h6>{{ block.settings.service_title }}</h6>
+                {% if block.settings.feature_title != '' %}
+                <h6>{{ block.settings.feature_title }}</h6>
                 {% endif %}
-                {% if block.settings.service_desc != '' %}
-                <p>{{ block.settings.service_desc }}</p>
+                {% if block.settings.feature_desc != '' %}
+                <p>{{ block.settings.feature_desc }}</p>
                 {% endif %}
               </div>
             </div>
@@ -180,13 +180,13 @@
         },
         {
           "type": "text",
-          "id": "service_title",
+          "id": "feature_title",
           "label": "Service Title",
           "default": "How to use battery"
         },
         {
           "type": "text",
-          "id": "service_desc",
+          "id": "feature_desc",
           "label": "Service Description",
           "default": "Lorem Ipsum is simply dummy text of the printing typesetting industry lorem Ipsum."
         }
