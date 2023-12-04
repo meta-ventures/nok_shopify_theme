@@ -3609,7 +3609,7 @@ h6{
   paragraph css
 ======================================*/
 p {
-  color: var(--font-color-paragraph);
+  /* color: var(--font-color-paragraph); */
   margin-bottom: 0px;
 
   font-family: 'Barlow', sans-serif;
