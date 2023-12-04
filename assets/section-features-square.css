@@ -45,7 +45,7 @@
     color: #ffffff;
   }
   .features-square-area ul.single-feature li.feature-wrapper .feature-block .feature-icon::before {
-    background-image: var(--gradient-color);
+    /* background-image: var(--gradient-color); */
     content: '';
     position: absolute;
     bottom: 50%;
