@@ -465,6 +465,27 @@
         "testi_bgcolor": "#f6f6f6",
         "testi_title": "happy client"
       }
+    },
+    "offer-text": {
+      "type": "offer-text",
+      "settings": {
+        "section_padding_top": 50,
+        "section_padding_bottom": 50,
+        "section_padding_top_ip": 50,
+        "section_padding_bottom_ip": 50,
+        "section_padding_top_xs": 50,
+        "section_padding_bottom_xs": 50,
+        "section_bg_image_enable": true,
+        "section_bg_color_enable": true,
+        "section_bg_color": "#4367fc",
+        "offer_text_title": "Order now",
+        "offer_text_title_color": "#ffffff",
+        "offer_text_desc": "Enjoy our FREE shipping on orders above 120dh",
+        "offer_text_desc_color": "#ffffff",
+        "offer_btn_text": "Buy now",
+        "offer_btn_icon": "",
+        "offer_btn_url": "shopify:\/\/collections\/all"
+      }
     }
   },
   "order": [
@@ -476,6 +497,7 @@
     "feature-info",
     "trusted-by",
     "achievements",
-    "testimonials"
+    "testimonials",
+    "offer-text"
   ]
 }
