@@ -400,8 +400,10 @@
 
 {% endstyle %}
 
-<script src="{{ 'counter-up.min.js' | asset_url }}"></script>
+<script src="{{ 'counter-up.min.js' | asset_url }}" defer></script>
 <script defer>
+  const { counterUp } = window.counterUp;
+
   (function () {
     const callback = entries => {
       entries.forEach( entry => {
