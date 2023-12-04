@@ -68,62 +68,34 @@
               <style type="text/css">
               {% if block.settings.service_column_reverse %}
               .feature-info .feature-area ul.service-ul li.service-li.column-reverse ul.feature-item-ul li.feature-item-li {
-                {%- if settings.enable_rtl -%}
-                text-align: left;
-                {%- else -%}
                 text-align: right;
-                {%- endif -%}
                 flex-direction: row-reverse;
               }
               .feature-info .feature-area ul.service-ul li.service-li.column-reverse ul.feature-item-ul li.feature-item-li .feature-content {
-                {%- if settings.enable_rtl -%}
-                padding-left: 40px;
-                {%- else -%}
                 padding-right: 40px;
-                {%- endif -%}
               }
               @media (max-width: 1199px) {
                 .feature-info .feature-area ul.service-ul li.service-li.column-reverse ul.feature-item-ul li.feature-item-li .feature-content {
-                  {%- if settings.enable_rtl -%}
-                  padding-left: 30px;
-                  {%- else -%}
                   padding-right: 30px;
-                  {%- endif -%}
                 }
               }
               @media (max-width: 991px) {
                 .feature-info .feature-area ul.service-ul li.service-li.column-reverse ul.feature-item-ul li.feature-item-li {
-                  {%- if settings.enable_rtl -%}
-                  text-align: right;
-                  {%- else -%}
                   text-align: left;
-                  {%- endif -%}
                   flex-direction: unset;
                 }
                 .feature-info .feature-area ul.service-ul li.service-li.column-reverse ul.feature-item-ul li.feature-item-li .feature-content {
                   padding-right: 0px;
-                  {%- if settings.enable_rtl -%}
-                  padding-right: 30px;
-                  {%- else -%}
                   padding-left: 30px;
-                  {%- endif -%}
                 }
               }
               {% else %}
               .feature-info .feature-area ul.service-ul li.service-li.feature-service ul.feature-item-ul li.feature-item-li .feature-content {
-                {%- if settings.enable_rtl -%}
-                padding-right: 40px;
-                {%- else -%}
                 padding-left: 40px;
-                {%- endif -%}
               }
               @media (max-width: 1199px) {
                 .feature-info .feature-area ul.service-ul li.service-li.feature-service ul.feature-item-ul li.feature-item-li .feature-content {
-                  {%- if settings.enable_rtl -%}
-                  padding-right: 30px;
-                  {%- else -%}
                   padding-left: 30px;
-                  {%- endif -%}
                 }
               }
               {% endif %}
