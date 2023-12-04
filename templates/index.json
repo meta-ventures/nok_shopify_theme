@@ -345,19 +345,125 @@
         "section_desc": ""
       }
     },
-    "video": {
-      "type": "video",
-      "disabled": true,
+    "achievements": {
+      "type": "achievements",
+      "blocks": {
+        "dcd7a73d-5142-4da8-958a-fc24b8256c21": {
+          "type": "feature_counter",
+          "settings": {
+            "feature_item_title": "Packages",
+            "feature_item_number": "6,500",
+            "feature_item_number_title": "m",
+            "feature_item_desc": "Lorem Ipsum simply dummy printing typeset industry"
+          }
+        },
+        "1495a69a-fe5f-41cf-988f-c7018bc9cb02": {
+          "type": "feature_counter",
+          "settings": {
+            "feature_item_title": "Satisfied",
+            "feature_item_number": "6005",
+            "feature_item_number_title": "clients",
+            "feature_item_desc": "Lorem Ipsum simply dummy printing typeset industry"
+          }
+        },
+        "4c0044bf-889e-48bc-901d-e4790ea0fe2c": {
+          "type": "feature_counter",
+          "settings": {
+            "feature_item_title": "Covered",
+            "feature_item_number": "96",
+            "feature_item_number_title": "countries",
+            "feature_item_desc": "Lorem Ipsum simply dummy printing typeset industry"
+          }
+        },
+        "8d47de1a-a725-4617-a932-975ede5219ac": {
+          "type": "feature_counter",
+          "settings": {
+            "feature_item_title": "drone great",
+            "feature_item_number": "18",
+            "feature_item_number_title": "+ awards",
+            "feature_item_desc": "Lorem Ipsum simply dummy printing typeset industry"
+          }
+        }
+      },
+      "block_order": [
+        "dcd7a73d-5142-4da8-958a-fc24b8256c21",
+        "1495a69a-fe5f-41cf-988f-c7018bc9cb02",
+        "4c0044bf-889e-48bc-901d-e4790ea0fe2c",
+        "8d47de1a-a725-4617-a932-975ede5219ac"
+      ],
       "settings": {
-        "heading": "",
-        "heading_size": "h1",
-        "enable_video_looping": false,
-        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
-        "description": "",
-        "full_width": false,
-        "color_scheme": "scheme-1",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "section_padding_top": 0,
+        "section_padding_bottom": 55,
+        "section_padding_top_ipad": 80,
+        "section_padding_bottom_ipad": 80,
+        "section_padding_top_xs": 60,
+        "section_padding_bottom_xs": 60,
+        "section_border_enable": true,
+        "section_title": "",
+        "section_title_bg_image_enable": true,
+        "section_title_after_before_image_enable": true
+      }
+    },
+    "testimonials": {
+      "type": "testimonials",
+      "blocks": {
+        "157858e3-bd81-4fce-9783-a8dd933441de": {
+          "type": "single_slide",
+          "settings": {
+            "testi_desc_review": "A drone is a high-tech version of an old army and a musket. It ought\nto be used in Somalia to hunt bad guys, but not in America. I don’t\nwant to see it hovering over anybody’s home.",
+            "testi_review_icon": "fa fa-star",
+            "testi_review_icon_color": "#ffc437",
+            "testi_authr_name": "Mina hollace",
+            "testi_authr_bio": "Developer"
+          }
+        },
+        "393c5ca5-3d3c-4f3b-acc5-1e517ad6a91d": {
+          "type": "single_slide",
+          "settings": {
+            "testi_desc_review": "A drone is a high-tech version of an old army and a musket. It ought\nto be used in Somalia to hunt bad guys, but not in America. I don’t\nwant to see it hovering over anybody’s home.",
+            "testi_review_icon": "fa fa-star",
+            "testi_review_icon_color": "#ffc437",
+            "testi_authr_name": "Giusy marino",
+            "testi_authr_bio": "Designer"
+          }
+        },
+        "237b9640-3f0b-420b-8c97-a9242e93beae": {
+          "type": "single_slide",
+          "settings": {
+            "testi_desc_review": "A drone is a high-tech version of an old army and a musket. It ought\nto be used in Somalia to hunt bad guys, but not in America. I don’t\nwant to see it hovering over anybody’s home.",
+            "testi_review_icon": "fa fa-star",
+            "testi_review_icon_color": "#ffc437",
+            "testi_authr_name": "Adriana rodriguez",
+            "testi_authr_bio": "Developer"
+          }
+        },
+        "351abaf5-6935-416e-8593-8adb94671a51": {
+          "type": "single_slide",
+          "settings": {
+            "testi_desc_review": "A drone is a high-tech version of an old army and a musket. It ought\nto be used in Somalia to hunt bad guys, but not in America. I don’t\nwant to see it hovering over anybody’s home.",
+            "testi_review_icon": "fa fa-star",
+            "testi_review_icon_color": "#ffc437",
+            "testi_authr_name": "Cathrine minor",
+            "testi_authr_bio": "Designer"
+          }
+        }
+      },
+      "block_order": [
+        "157858e3-bd81-4fce-9783-a8dd933441de",
+        "393c5ca5-3d3c-4f3b-acc5-1e517ad6a91d",
+        "237b9640-3f0b-420b-8c97-a9242e93beae",
+        "351abaf5-6935-416e-8593-8adb94671a51"
+      ],
+      "settings": {
+        "testi_padding_top": 100,
+        "testi_padding_bottom": 100,
+        "testi_padding_top_ip": 70,
+        "testi_padding_bottom_ip": 70,
+        "testi_padding_top_xs": 50,
+        "testi_padding_bottom_xs": 50,
+        "testi_bgimg_check": true,
+        "testi_bgcolor": "#f6f6f6",
+        "testi_title": "happy client"
       }
     }
   },
@@ -369,6 +475,7 @@
     "banner-product",
     "feature-info",
     "trusted-by",
-    "video"
+    "achievements",
+    "testimonials"
   ]
 }

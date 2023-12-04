@@ -1,0 +1,430 @@
+<section class="testimonial-area" {% if section.settings.testi_bgimg_check %} style="background-image: url('{% if section.settings.testi_bgimg %}{{ section.settings.testi_bgimg | image_url }}{% else %}https://via.placeholder.com/1920x610{% endif %}');"{% endif %}>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+          <div class="section-capture">
+            <div class="section-title">
+              {% if section.settings.testi_title != '' %}
+              <h2>
+                {{ section.settings.testi_title }}
+              </h2>
+              {% endif %}
+            </div>
+          </div>
+          <div class="testimonial-slider swiper-container" id="testimonial-{{ section.id }}">
+            <div class="swiper-wrapper">
+              {% for block in section.blocks %}
+              <div class="swiper-slide">
+                  <div class="testi-info">
+                    <div class="testi-desc">
+                      <p>{{ block.settings.testi_desc_review }}</p>
+                    </div>
+                    <div class="testi-review">
+                      <i class="{{ block.settings.testi_review_icon }}" style="color: {{ block.settings.testi_review_icon_color }};"></i>
+                      <i class="{{ block.settings.testi_review_icon }}" style="color: {{ block.settings.testi_review_icon_color }};"></i>
+                      <i class="{{ block.settings.testi_review_icon }}" style="color: {{ block.settings.testi_review_icon_color }};"></i>
+                      <i class="{{ block.settings.testi_review_icon }}" style="color: {{ block.settings.testi_review_icon_color }};"></i>
+                      <i class="{{ block.settings.testi_review_icon }}" style="color: {{ block.settings.testi_review_icon_color }};"></i>
+                    </div>
+                    <div class="testi-author">
+                      <h6>{{ block.settings.testi_authr_name }}</h6>
+                      <span>{{ block.settings.testi_authr_bio }}</span>
+                    </div>
+                  </div>
+              </div>
+              {%- endfor -%}
+            </div>
+            <div class="swiper-arrow">
+              <div class="swiper-button swiper-button-prev-{{ section.id }}"><i class="ri-arrow-left-line"></i></div>
+              <div class="swiper-button swiper-button-next-{{ section.id }}"><i class="ri-arrow-right-line"></i></div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+addEventListener('DOMContentLoaded', (event) => {
+  var swiper = new Swiper('#testimonial-{{ section.id }}', {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    observer: true,
+    loop: true,
+    observeParents: true,
+    {%- if settings.enable_rtl -%}
+    rtl: true,
+    {%- endif -%}
+    navigation: {
+      nextEl: '.swiper-button-next-{{ section.id }}',
+      prevEl: '.swiper-button-prev-{{ section.id }}',
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+        spaceBetween: 15
+      },
+      479: {
+        slidesPerView: 1,
+        spaceBetween: 15
+      },
+      540: {
+        slidesPerView: 1,
+        spaceBetween: 15
+      },
+      768: {
+        slidesPerView: 1,
+        spaceBetween: 15
+      },
+      979: {
+        slidesPerView: 1,
+        spaceBetween: 15
+      },
+      1199: {
+        slidesPerView: 1,
+        spaceBetween: 20
+      }
+    }
+  });
+});
+</script>
+{% schema %}
+{
+  "name": "Testimonial",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Padding"
+    },
+    {
+      "type": "paragraph",
+      "content": "Desktop / Laptop"
+    },
+    {
+      "type": "range",
+      "id": "testi_padding_top",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "testi_padding_bottom",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 100
+    },
+    {
+      "type": "paragraph",
+      "content": "Ipad pro / Ipad"
+    },
+    {
+      "type": "range",
+      "id": "testi_padding_top_ip",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 70
+    },
+    {
+      "type": "range",
+      "id": "testi_padding_bottom_ip",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 70
+    },
+    {
+      "type": "paragraph",
+      "content": "Mobile"
+    },
+    {
+      "type": "range",
+      "id": "testi_padding_top_xs",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "testi_padding_bottom_xs",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 50
+    },
+    {
+      "type": "header",
+      "content": "Section Background Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "testi_bgimg",
+      "label": "Background Image",
+      "info": "Recommended Size: 1920px x 610px"
+    },
+    {
+      "type": "checkbox",
+      "id": "testi_bgimg_check",
+      "label": "Show Background Images",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Section Background Color"
+    },
+    {
+      "type": "color",
+      "id": "testi_bgcolor",
+      "label": "Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Section Content"
+    },
+    {
+      "type": "text",
+      "id": "testi_title",
+      "label": "Title",
+      "default": "100% satisfaction ratio"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "single_slide",
+      "name": "Testimonial Items",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Testimonial Description"
+        },
+        {
+          "type": "textarea",
+          "id": "testi_desc_review",
+          "label": "Review Content",
+          "default": "I am free to learn at my own pace, follow my own schedule and choose the subject I want to learn from the more syllabus."
+        },
+        {
+          "type": "header",
+          "content": "Testimonial Rating"
+        },
+        {
+          "type": "text",
+          "id": "testi_review_icon",
+          "label": "Rating Class",
+          "default": "fa fa-star"
+        },
+        {
+          "type": "color",
+          "id": "testi_review_icon_color",
+          "label": "Rating Color",
+          "default": "#f86169"
+        },
+        {
+          "type": "header",
+          "content": "Testimonial Author"
+        },
+        {
+          "type": "textarea",
+          "id": "testi_authr_name",
+          "label": "Reviewer Name",
+          "default": "Mina hollace"
+        },
+        {
+          "type": "textarea",
+          "id": "testi_authr_bio",
+          "label": "Reviewer Bio",
+          "default": "Mina hollace"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Testimonial",
+      "category": "7. Testimonial"
+    }
+  ]
+}
+{% endschema %}
+<style>
+.testimonial-area{
+  padding-top: {{ section.settings.testi_padding_top }}px;
+  padding-bottom: {{ section.settings.testi_padding_bottom }}px;
+  {% if section.settings.testi_bgimg_check %}
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+  {% endif %}
+  background-color: {{ section.settings.testi_bgcolor }};
+}
+@media (max-width: 1199px) {
+  .testimonial-area{
+    padding-top: {{ section.settings.testi_padding_top_ip }}px;
+    padding-bottom: {{ section.settings.testi_padding_bottom_ip }}px;
+  }
+}
+@media (max-width: 767px) {
+  .testimonial-area{
+    padding-top: {{ section.settings.testi_padding_top_xs }}px;
+    padding-bottom: {{ section.settings.testi_padding_bottom_xs }}px;
+  }
+}
+
+/* testi content css */
+.testimonial-area .testi-info {
+  width: 55%;
+  margin: 0 auto;
+  text-align: center;
+}
+.testimonial-area .testi-info .testi-desc {
+  text-align: center;
+}
+.testimonial-area .testi-info .testi-desc p {
+  color: var(--font-color-body);
+  font-size: 24px;
+  line-height: 36px;
+}
+.testimonial-area .testi-info .testi-review {
+  margin-top: 40px;
+}
+.testimonial-area .testi-info .testi-review i {
+  font-size: 16px;
+  {% if settings.enable_rtl %}
+  margin-right: 5px;
+  {% else %}
+  margin-left: 5px;
+  {% endif %}
+}
+.testimonial-area .testi-info .testi-review i:first-child {
+  {% if settings.enable_rtl %}
+  margin-right: 0px;
+  {% else %}
+  margin-left: 0px;
+  {% endif %}
+}
+.testimonial-area .testi-info .testi-author {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.testimonial-area .testi-info .testi-author h6 {
+  position: relative;
+  font-size: 16px;
+  {% if settings.enable_rtl %}
+  margin-left: 15px;
+  padding-left: 15px;
+  {% else %}
+  margin-right: 15px;
+  padding-right: 15px;
+  {% endif %}
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+}
+.testimonial-area .testi-info .testi-author h6::before {
+  background-color: #616161;
+  content: '';
+  position: absolute;
+  bottom: 50%;
+  transform: translateY(50%);
+  {% if settings.enable_rtl %}
+  left: -5px;
+  {% else %}
+  right: -5px;
+  {% endif %}
+  width: 10px;
+  height: 2px;
+}
+.testimonial-area .testi-info .testi-author span {
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+@media (max-width: 1359px) {
+  .testimonial-area .testi-info {
+    width: 60%;
+  }
+}
+@media (max-width: 1199px) {
+  .testimonial-area .testi-info .testi-desc p {
+    font-size: 20px;
+  }
+}
+@media (max-width: 991px) {
+  .testimonial-area .testi-info {
+    width: 80%;
+  }
+  .testimonial-area .testi-info .testi-desc p {
+    font-size: 18px;
+  }
+}
+@media (max-width: 767px) {
+  .testimonial-area .testi-info {
+    width: 100%;
+  }
+  .testimonial-area .testi-info .testi-desc p {
+    font-size: 16px;
+    line-height: 30px;
+  }
+  .testimonial-area .testi-info .testi-review {
+    margin-top: 20px;
+  }
+  .testimonial-area .testi-info .testi-author h6 {
+    font-size: 14px;
+  }
+  .testimonial-area .testi-info .testi-author span {
+    font-size: 14px;
+  }
+}
+
+/* swiper button css */
+.testimonial-area .testimonial-slider .swiper-arrow .swiper-button {
+  position: absolute;
+  bottom: 50%;
+  transform: translateY(50%);
+  z-index: 2;
+}
+.testimonial-area .testimonial-slider .swiper-arrow ..swiper-button-prev-{{ section.id }} {
+  {% if settings.enable_rtl %}
+  right: 0px;
+  {% else %}
+  left: 0px;
+  {% endif %}
+}
+.testimonial-area .testimonial-slider .swiper-arrow .swiper-button-next-{{ section.id }} {
+  {% if settings.enable_rtl %}
+  left: 0px;
+  {% else %}
+  right: 0px;
+  {% endif %}
+}
+@media (max-width: 767px) {
+  .testimonial-area .testimonial-slider .swiper-arrow {
+    justify-content: center;
+    margin-top: 30px;
+  }
+  .testimonial-area .testimonial-slider .swiper-arrow .swiper-button {
+    position: unset;
+    transform: unset;
+  }
+}
+</style>

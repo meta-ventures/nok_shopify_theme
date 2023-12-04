@@ -35,6 +35,8 @@
       <script src="{{ 'animations.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
 
+    {%- render 'head-js' -%}
+
     {{ content_for_header }}
 
     {%- liquid
@@ -253,8 +255,6 @@
 
     {%- render 'head-css' -%}
 
-
-
     {%- unless settings.type_body_font.system? -%}
       <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
     {%- endunless -%}
@@ -276,7 +276,7 @@
       >
     {%- endif -%}
 
-    {%- render 'head-js' -%}
+
     <script>
       document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
       if (Shopify.designMode) {
