@@ -1,0 +1,143 @@
+.offer-banner-area .offer-banner-bg {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 150px;
+}
+.offer-banner-area .offer-banner-bg::before {
+    content: '';
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    height: 100%;
+    z-index: -1;
+    border-radius: 5px;
+}
+.offer-banner-area .offer-banner-bg .offer-banner-image {
+    width: 50%;
+    margin-top: -300px;
+    text-align: center;
+}
+.offer-banner-area .offer-banner-bg .offer-banner-content {
+    width: 50%;
+    padding-left: 50px;
+}
+.offer-banner-area .offer-banner-bg .offer-banner-content .banner-content {
+    max-width: 75%;
+}
+.offer-banner-area .offer-banner-bg .offer-banner-content .banner-content h1.title {
+    font-size: 38px;
+    font-weight: 700;
+    font-style: italic;
+}
+.offer-banner-area .offer-banner-bg .offer-banner-content .banner-content p.desc {
+    font-size: 22px;
+    margin-top: 32px;
+    opacity: 0.8;
+}
+.offer-banner-area .offer-banner-bg .offer-banner-content .banner-content h4.price {
+    margin-top: 36px;
+}
+.offer-banner-area .offer-banner-bg .offer-banner-content .banner-content h4.price span.label {
+    font-size: 32px;
+    font-weight: 400;
+}
+.offer-banner-area .offer-banner-bg .offer-banner-content .banner-content h4.price span.price {
+    font-size: 32px;
+    font-weight: 600;
+}
+.offer-banner-area .offer-banner-bg .offer-banner-content .banner-content .banner-btn {
+    margin-top: 47px;
+    display: flex;
+    align-items: center;
+}
+.offer-banner-area .offer-banner-bg .offer-banner-content .banner-content .banner-btn a.btn-1 span.icon {
+    margin-left: 5px;
+}
+.offer-banner-area .offer-banner-bg .offer-banner-content .banner-content .banner-btn a.btn-2 {
+    margin-left: 20px;
+}
+.offer-banner-area .offer-banner-bg .offer-banner-content .banner-content .banner-btn a.btn-2 span.icon {
+    margin-right: 5px;
+}
+.offer-banner-area .offer-banner-bg .offer-banner-content .banner-content .banner-btn a span.icon svg {
+    width: 22px;
+    height: 22px;
+}
+@media(max-width: 1499px) {
+    .offer-banner-area .offer-banner-bg .offer-banner-content .banner-content {
+        max-width: 83.33%;
+    }
+}
+@media(max-width: 1199px) {
+    .offer-banner-area .offer-banner-bg .offer-banner-image {
+        margin-top: -230px;
+    }
+    .offer-banner-area .offer-banner-bg .offer-banner-content .banner-content {
+        max-width: 100%;
+    }
+    .offer-banner-area .offer-banner-bg .offer-banner-content .banner-content h1.title {
+        font-size: 30px;
+    }
+    .offer-banner-area .offer-banner-bg .offer-banner-content .banner-content p.desc {
+        font-size: 20px;
+        margin-top: 23px;
+    }
+    .offer-banner-area .offer-banner-bg .offer-banner-content .banner-content h4.price {
+        margin-top: 25px;
+    }
+    .offer-banner-area .offer-banner-bg .offer-banner-content .banner-content h4.price span.label,
+    .offer-banner-area .offer-banner-bg .offer-banner-content .banner-content h4.price span.price {
+        font-size: 22px;
+    }
+    .offer-banner-area .offer-banner-bg .offer-banner-content .banner-content .banner-btn {
+        margin-top: 38px;
+    }
+}
+@media (max-width: 991px) {
+    .offer-banner-area .offer-banner-bg .offer-banner-image {
+        width: 100%;
+    }
+    .offer-banner-area .offer-banner-bg .offer-banner-content {
+        width: 100%;
+        margin-top: 31px;
+        padding-left: 0px;
+    }
+}
+@media (max-width: 767px) {
+    .offer-banner-area .offer-banner-bg {
+        padding: {{ section.settings.section_padding_top_ip }}px 12px;
+    }
+    .offer-banner-area .offer-banner-bg .offer-banner-content .banner-content h1.title {
+        font-size: 24px;
+    }
+    .offer-banner-area .offer-banner-bg .offer-banner-content .banner-content p.desc {
+        font-size: 16px;
+        margin-top: 12px;
+    }
+    .offer-banner-area .offer-banner-bg .offer-banner-content .banner-content h4.price {
+        margin-top: 11px;
+    }
+    .offer-banner-area .offer-banner-bg .offer-banner-content .banner-content h4.price span.label,
+    .offer-banner-area .offer-banner-bg .offer-banner-content .banner-content h4.price span.price {
+        font-size: 18px;
+    }
+    .offer-banner-area .offer-banner-bg .offer-banner-content .banner-content .banner-btn {
+        margin-top: 28px;
+    }
+}
+@media (max-width: 320px) {
+    .offer-banner-area .offer-banner-bg .offer-banner-content .banner-content .banner-btn {
+        flex-direction: column;
+    }
+    .offer-banner-area .offer-banner-bg .offer-banner-content .banner-content .banner-btn a {
+        width: 100%;
+        text-align: center;
+    }
+    .offer-banner-area .offer-banner-bg .offer-banner-content .banner-content .banner-btn a.btn-2 {
+        margin-top: 10px;
+        margin-left: 0px;
+    }
+}

@@ -314,4 +314,10 @@
       background-color: {{ section.settings.section_bg_color }};
     {% endif %}
   }
+  @media(max-width: 1199px) {
+    .offer-banner-area .offer-banner-bg {
+        padding: {{ section.settings.section_padding_top_ip }}px {{ section.settings.section_padding_top_ip | divided_by: 2 }}px;
+        margin-top: 150px;
+    }
+  }
 {% endstyle %}
