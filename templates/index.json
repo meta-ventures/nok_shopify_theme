@@ -110,6 +110,7 @@
         "section_padding_top_xs": 60,
         "section_padding_bottom_xs": 60,
         "section_bg_image_enable": true,
+        "section_bg_image": "shopify:\/\/shop_images\/rayancastro_Ultra_realistic_view_from_above_including_forest__655f78a5-cc1a-4e6e-a4f5-69b4618b8cf4_3.webp",
         "section_bg_color_enable": false,
         "section_bg_color": "#ffffff",
         "video_title": "Cut the costs and reduce global warming",
@@ -125,6 +126,7 @@
       "type": "featured-collection",
       "settings": {
         "title": "Best Sellers",
+        "subtitle": "Best Seller",
         "heading_size": "h2",
         "description": "",
         "show_description": false,
