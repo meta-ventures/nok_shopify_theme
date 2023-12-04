@@ -50,41 +50,41 @@
         "show_text_below": true
       }
     },
-    "our-services": {
-      "type": "our-services",
+    "features-square": {
+      "type": "features-square",
       "blocks": {
-        "service-1": {
-          "type": "service",
+        "feature-1": {
+          "type": "feature",
           "settings": {
             "ser_url": "",
-            "service_icon": "+",
-            "service_title": "The first impression matters",
-            "service_desc": "Personalize your profile and get that 'WOW' out of your connections"
+            "feature_icon": "+",
+            "feature_title": "The first impression matters",
+            "feature_desc": "Personalize your profile and get that 'WOW' out of your connections"
           }
         },
-        "service-2": {
-          "type": "service",
+        "feature-2": {
+          "type": "feature",
           "settings": {
             "ser_url": "",
-            "service_icon": "feather-settings",
-            "service_title": "no more paper cards",
-            "service_desc": "You can share your profile with a simple tap. No more need for outdated paper cards."
+            "feature_icon": "feather-settings",
+            "feature_title": "no more paper cards",
+            "feature_desc": "You can share your profile with a simple tap. No more need for outdated paper cards."
           }
         },
-        "service-3": {
-          "type": "service",
+        "feature-3": {
+          "type": "feature",
           "settings": {
             "ser_url": "",
-            "service_icon": "feather-battery-charging",
-            "service_title": "No app needed",
-            "service_desc": "Our platform works on the browser, for all iOS or Android devices"
+            "feature_icon": "feather-battery-charging",
+            "feature_title": "No app needed",
+            "feature_desc": "Our platform works on the browser, for all iOS or Android devices"
           }
         }
       },
       "block_order": [
-        "service-1",
-        "service-2",
-        "service-3"
+        "feature-1",
+        "feature-2",
+        "feature-3"
       ],
       "settings": {
         "our_ser_padding_top": 48,
@@ -336,7 +336,7 @@
   },
   "order": [
     "image_banner",
-    "our-services",
+    "features-square",
     "rich_text",
     "feature-info",
     "trusted-by",
