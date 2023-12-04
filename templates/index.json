@@ -353,37 +353,37 @@
         "dcd7a73d-5142-4da8-958a-fc24b8256c21": {
           "type": "feature_counter",
           "settings": {
-            "feature_item_title": "Packages",
-            "feature_item_number": "6,500",
-            "feature_item_number_title": "m",
-            "feature_item_desc": "Lorem Ipsum simply dummy printing typeset industry"
+            "feature_item_title": "Paper Waste",
+            "feature_item_number": "270",
+            "feature_item_number_title": "million",
+            "feature_item_desc": "That's the staggering amount of paper business cards printed <strong>every day</strong> globally."
           }
         },
         "1495a69a-fe5f-41cf-988f-c7018bc9cb02": {
           "type": "feature_counter",
           "settings": {
-            "feature_item_title": "Satisfied",
-            "feature_item_number": "6005",
-            "feature_item_number_title": "clients",
-            "feature_item_desc": "Lorem Ipsum simply dummy printing typeset industry"
+            "feature_item_title": "Trees for paper",
+            "feature_item_number": "1.2",
+            "feature_item_number_title": "million",
+            "feature_item_desc": "Over 1.2 million trees annually are used to meet the paper demand for these cards."
           }
         },
         "4c0044bf-889e-48bc-901d-e4790ea0fe2c": {
           "type": "feature_counter",
           "settings": {
-            "feature_item_title": "Covered",
-            "feature_item_number": "96",
-            "feature_item_number_title": "countries",
-            "feature_item_desc": "Lorem Ipsum simply dummy printing typeset industry"
+            "feature_item_title": "Waste in Landfills",
+            "feature_item_number": "450,000",
+            "feature_item_number_title": "tons",
+            "feature_item_desc": "88% of paper business cards are discarded within a week ending up in landfills."
           }
         },
         "8d47de1a-a725-4617-a932-975ede5219ac": {
           "type": "feature_counter",
           "settings": {
-            "feature_item_title": "drone great",
-            "feature_item_number": "18",
-            "feature_item_number_title": "+ awards",
-            "feature_item_desc": "Lorem Ipsum simply dummy printing typeset industry"
+            "feature_item_title": "Reduced Carbon Footprint",
+            "feature_item_number": "50",
+            "feature_item_number_title": "metric tons",
+            "feature_item_desc": "Each NOK card tap is one less paper card manufactured, printed and transported."
           }
         }
       },
@@ -457,7 +457,7 @@
         "testi_bgimg": "shopify:\/\/shop_images\/testimonial_bg.webp",
         "testi_bgimg_check": true,
         "testi_bgcolor": "#f6f6f6",
-        "testi_title": "happy client"
+        "testi_title": "Testimonials"
       }
     },
     "offer-text": {
