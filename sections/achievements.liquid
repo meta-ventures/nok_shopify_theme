@@ -412,7 +412,10 @@
 
 
     document.querySelectorAll('.count-up').forEach((counter) => {
-
+      countUpWhenVisible(counter, {
+        duration: 3000,
+        delay: 16,
+      })
     });
   })();
 {% endjavascript %}
