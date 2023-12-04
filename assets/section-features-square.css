@@ -2,7 +2,7 @@
   .features-square-area ul.single-feature {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
     gap: 20px;
     padding: 20px;
