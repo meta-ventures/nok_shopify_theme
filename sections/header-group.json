@@ -11,10 +11,19 @@
             "text": "Enjoy Holiday Discounts site-wide until 24th December! FREE Shipping on orders above 120 AED",
             "link": ""
           }
+        },
+        "0fe77034-b36d-4185-8827-558fb2335559": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "text": "Click here to join our X-mas giveaway!",
+            "link": ""
+          }
         }
       },
       "block_order": [
-        "announcement-bar-0"
+        "announcement-bar-0",
+        "0fe77034-b36d-4185-8827-558fb2335559"
       ],
       "custom_css": [
 
