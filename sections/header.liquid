@@ -108,20 +108,23 @@
     }
   }
   /* Transparent header */
+  .site-header-transparent-logo {
+    display: none;
+  }
 
   {% if template == 'index' %}
     .site-header-transparent .header__icon, .site-header-transparent .header__menu-item span, .site-header-transparent .header__menu-item svg, .site-header-transparent .header__active-menu-item {
       color: {{ section.settings.content_color }};
     }
 
-    {%- if section.settings.transparent_header and settings.transparent_header_logo != blank -%}
-    .site-header-transparent .header__heading-logo-wrapper {
-      display: none;
-    }
-    .site-header-transparent .site-header-transparent-logo {
-      display: inline-block;
-    }
+    {%- if section.settings.transparent_header and section.settings.transparent_header_logo != blank -%}
 
+      .site-header-transparent .header__heading-logo-wrapper {
+        display: none;
+      }
+      .site-header-transparent .site-header-transparent-logo {
+        display: inline-block !important;
+      }
     {%- endif -%}
 
     sticky-header {
@@ -219,26 +222,22 @@
                   preload: true
                 }}
               </div>
+              {%- if section.settings.transparent_header and section.settings.transparent_header_logo != blank -%}
+                <div class="header__heading-logo-wrapper site-header-transparent-logo">
+                  {{ section.settings.transparent_header_logo | image_url: width: 600 | image_tag:
+                    class: 'header__heading-logo motion-reduce',
+                    widths: widths,
+                    height: logo_height,
+                    width: settings.logo_width,
+                    alt: logo_alt,
+                    sizes: sizes,
+                    preload: true
+                  }}
+                </div>
+              {%- endif -%}
             {%- else -%}
               <span class="h2">{{ shop.name }}</span>
             {%- endif -%}
-          {%- if section.settings.transparent_header and settings.transparent_header_logo != blank -%}
-            <div class="header__heading-logo-wrapper site-header-transparent-logo">
-              {%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
-              {%- assign logo_height = settings.logo_width | divided_by: settings.logo.aspect_ratio -%}
-              {% capture sizes %}(max-width: {{ settings.logo_width | times: 2 }}px) 50vw, {{ settings.logo_width }}px{% endcapture %}
-              {% capture widths %}{{ settings.logo_width }}, {{ settings.logo_width | times: 1.5 | round }}, {{ settings.logo_width | times: 2 }}{% endcapture %}
-              {{ settings.transparent_header_logo | image_url: width: 600 | image_tag:
-                class: 'header__heading-logo motion-reduce',
-                widths: widths,
-                height: logo_height,
-                width: settings.transparent_header_logo,
-                alt: logo_alt,
-                sizes: sizes,
-                preload: true
-              }}
-            </div>
-          {%- endif -%}
           </a>
       {%- if request.page_type == 'index' -%}
         </h1>
