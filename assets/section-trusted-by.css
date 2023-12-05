@@ -35,7 +35,7 @@
   }
   @media (max-width: 767px) {
     .our-brand-logo .brand-logo ul {
-      gap: 30px 20px;
+      gap: 30px 40px;
     }
     .our-brand-logo .brand-logo ul li{
       width: 30%;
