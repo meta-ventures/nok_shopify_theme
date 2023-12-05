@@ -3751,11 +3751,6 @@ ul{
 /*=====================================
   Section headings css
 ======================================*/
-/*
-section {
-  padding-top: 25px;
-  padding-bottom: 25px;
-} */
 
 /* Landing page section sub-titles */
 .section-title {
@@ -3793,6 +3788,7 @@ section {
 
   font-style: italic;
 }
+
 .section-title h2,
 .content-main-title .title-area h2,
 .other-page-title .title-area h4,
@@ -3823,6 +3819,10 @@ section {
   .other-page-title,
   .my-account-page .page-title {
     margin-bottom: 40px;
+  }
+
+  .section-capture .section-title h2 {
+    font-size: 30px;
   }
 }
 @media (max-width: 479px) {
