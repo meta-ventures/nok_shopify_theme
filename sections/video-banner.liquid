@@ -1,27 +1,23 @@
 <section class="video-banner" {% if section.settings.section_bg_image_enable %}style="background-image: url('{% if section.settings.section_bg_image %}{{ section.settings.section_bg_image | image_url }}{% else %}https://dummyimage.com/1920x775{% endif %}');"{% endif %}>
 	<div class="container">
-		<div class="row">
-			<div class="col">
-				<div class="video-content-area">
-					<div class="content">
-            <div class="section-capture">
-              <div class="section-title">
-                {% if section.settings.video_title != '' %}
-                <h2 style="color: {{ section.settings.video_title_color }};">{{ section.settings.video_title }}</h2>
-                {% endif %}
-              </div>
-            </div>
-						{% if section.settings.video_desc != '' %}
-						<p class="desc" style="color: {{ section.settings.video_desc_color }};">{{ section.settings.video_desc }}</p>
-						{% endif %}
-						<a class="play-button popup-youtube" href="{{ section.settings.video_url }}">
-              <span class="video-icon"><i class="{{ section.settings.video_icon }}"></i></span>
-              <span class="text">{{ section.settings.video_btn_text }}</span>
-            </a>
-					</div>
-				</div>
-			</div>
-		</div>
+    <div class="video-content-area">
+      <div class="content">
+        <div class="section-capture">
+          <div class="section-title">
+            {% if section.settings.video_title != '' %}
+            <h2 style="color: {{ section.settings.video_title_color }};">{{ section.settings.video_title }}</h2>
+            {% endif %}
+          </div>
+        </div>
+        {% if section.settings.video_desc != '' %}
+        <p class="desc" style="color: {{ section.settings.video_desc_color }};">{{ section.settings.video_desc }}</p>
+        {% endif %}
+        {% comment %} <a class="play-button popup-youtube" href="{{ section.settings.video_url }}">
+          <span class="video-icon"><i class="{{ section.settings.video_icon }}"></i></span>
+          <span class="text">{{ section.settings.video_btn_text }}</span>
+        </a> {% endcomment %}
+      </div>
+    </div>
 	</div>
 </section>
 {% schema %}
@@ -238,15 +234,25 @@
   width: 33.33%;
   margin-left: auto;
   margin-right: 110px;
+  background-color: rgba(0,0,0,0.5);
+  padding: 50px;
+  border-radius: 4px;
 }
+
 .video-banner .video-content-area .content .section-capture {
   text-align: left;
   margin-bottom: 0px;
 }
+
+.video-banner .video-content-area .content .section-capture h2 {
+  font-size: 50px;
+}
+
 .video-banner .video-content-area .content p.desc {
 	font-size: 24px;
 	margin-top: 40px;
-  opacity: 0.8;
+  opacity: 1;
+  font-weight: 400;
 }
 .video-banner .video-content-area .content a.play-button {
 	margin-top: 52px;
@@ -323,6 +329,9 @@
   .video-banner .video-content-area .content p.desc {
     font-size: 20px;
   }
+  .video-banner .video-content-area .content .section-capture h2 {
+    font-size: 30px;
+  }
 }
 @media (max-width: 991px) {
 	.video-banner .video-content-area {
@@ -333,7 +342,10 @@
 @media (max-width: 767px) {
   .video-banner .video-content-area {
     width: 41.67%;
+    margin: 0 auto;
+    padding: 20px;
   }
+
 	.video-banner .video-content-area .content p.desc {
     font-size: 16px;
     margin-top: 14px;
