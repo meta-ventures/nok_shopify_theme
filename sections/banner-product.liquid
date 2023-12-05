@@ -16,7 +16,7 @@
                             {% if section.settings.banner_desc != '' %}
                             <p class="desc" style="color: {{ section.settings.banner_desc_color }}">{{ section.settings.banner_desc }}</p>
                             {% endif %}
-                            <h4 class="price" style="color: {{ section.settings.banner_price_color }}">
+                            <h4 class="banner-price">
                                 {% if section.settings.banner_price_label != '' %}
                                 <span class="label">{{ section.settings.banner_price_label }}</span>
                                 {% endif %}
@@ -173,13 +173,13 @@
     {
       "type": "text",
       "id": "banner_title",
-      "label": "Banenr title",
+      "label": "Banner title",
       "default": "Buy our awesome drone"
     },
     {
       "type": "color",
       "id": "banner_title_color",
-      "label": "Banenr title Color",
+      "label": "Banner title Color",
       "default": "#ffffff"
     },
     {
@@ -189,13 +189,13 @@
     {
       "type": "textarea",
       "id": "banner_desc",
-      "label": "Banenr Description",
+      "label": "Banner Description",
       "default": "Portable yet powerful, the nexa pro is your personal drone ready to go with you everywhere."
     },
     {
       "type": "color",
       "id": "banner_desc_color",
-      "label": "Banenr Description Color",
+      "label": "Banner Description Color",
       "default": "#ffffff"
     },
     {
@@ -217,7 +217,7 @@
     {
       "type": "color",
       "id": "banner_price_color",
-      "label": "Banenr Price Color",
+      "label": "Banner Price Color",
       "default": "#ffffff"
     },
     {
@@ -277,6 +277,13 @@
 {% endschema %}
 
 {% style %}
+  .offer-banner-content .banner-content .banner-price .label {
+    color: {{ section.settings.banner_price_color }};
+  }
+  .offer-banner-content .banner-content .banner-price .price {
+    color: {{ section.settings.banner_price_color }};
+  }
+
   .offer-banner-area {
     padding-top: {{ section.settings.section_padding_top }}px;
     padding-bottom: {{ section.settings.section_padding_bottom }}px;
