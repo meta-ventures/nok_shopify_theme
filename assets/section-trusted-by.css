@@ -13,14 +13,19 @@
   .our-brand-logo .brand-logo ul li img {
     width: 100%;
     height: auto;
-  }
-
-  .our-brand-logo .brand-logo ul li a:hover img {
     -webkit-filter: saturate(0);
     -moz-filter: saturate(0);
     -ms-filter: saturate(0);
     -o-filter: saturate(0);
     filter: saturate(0);
+  }
+
+  .our-brand-logo .brand-logo ul li a:hover img {
+    -webkit-filter: saturate(1);
+    -moz-filter: saturate(1);
+    -ms-filter: saturate(1);
+    -o-filter: saturate(1);
+    filter: saturate(1);
   }
   .our-brand-logo .brand-logo ul li a img,
   .our-brand-logo .brand-logo ul li a:hover img {
