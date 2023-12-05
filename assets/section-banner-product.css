@@ -41,7 +41,7 @@
     font-size: 22px;
     margin-top: 32px;
     opacity: 0.8;
-    font-weight: 500;
+    font-weight: 500 !important;
 }
 .offer-banner-area .offer-banner-bg .offer-banner-content .banner-content h4.banner-price {
     margin-top: 36px;
