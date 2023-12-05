@@ -94,12 +94,12 @@
     },
     {
       "type": "paragraph",
-      "content": "Ipad pro / Ipad"
+      "content": "Mobile"
     },
     {
       "type": "range",
-      "id": "section_padding_top_ip",
-      "label": "Section Padding Top",
+      "id": "section_margin_top_xs",
+      "label": "Section Margin Top",
       "min": 0,
       "max": 100,
       "step": 5,
@@ -108,17 +108,13 @@
     },
     {
       "type": "range",
-      "id": "section_padding_bottom_ip",
-      "label": "Section Padding Bottom",
+      "id": "section_margin_bottom_xs",
+      "label": "Section Margin Bottom",
       "min": 0,
       "max": 100,
       "step": 5,
       "unit": "px",
-      "default": 30
-    },
-    {
-      "type": "paragraph",
-      "content": "Mobile"
+      "default": 0
     },
     {
       "type": "range",
@@ -128,7 +124,7 @@
       "max": 100,
       "step": 5,
       "unit": "px",
-      "default": 0
+      "default": 30
     },
     {
       "type": "range",
@@ -138,7 +134,7 @@
       "max": 100,
       "step": 5,
       "unit": "px",
-      "default": 20
+      "default": 30
     },
     {
       "type": "header",
@@ -316,16 +312,14 @@
     padding-bottom: {{ section.settings.section_padding_bottom }}px;
   }
 
-  @media(max-width: 1199px){
-      .offer-banner-area {
-          padding-top: {{ section.settings.section_margin_top }}px;
-          padding-bottom: {{ section.settings.section_margin_bottom }}px;
-      }
-  }
   @media(max-width: 767px){
       .offer-banner-area {
-          padding-top: {{ section.settings.section_margin_top }}px;
-          padding-bottom: {{ section.settings.section_margin_bottom }}px;
+          padding-top: {{ section.settings.section_margin_top_xs }}px;
+          padding-bottom: {{ section.settings.section_margin_bottom_xs }}px;
+      }
+      .offer-banner-area .offer-banner-bg {
+        padding-top: {{ section.settings.section_padding_top_xs }}px;
+        padding-bottom: {{ section.settings.section_padding_bottom_xs }}px;
       }
   }
 
