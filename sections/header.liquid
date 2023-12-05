@@ -114,13 +114,17 @@
       color: {{ section.settings.content_color }};
     }
 
-    {%- if section.settings.transparent_header and section.settings.transparent_header_logo != blank -%}
-    .site-header-transparent .header__heading-logo-wrapper {
+    .site-header-transparent-logo {
       display: none;
     }
-    .site-header-transparent .site-header-transparent-logo {
-      display: inline-block;
-    }
+
+    {%- if section.settings.transparent_header and section.settings.transparent_header_logo != blank -%}
+      .site-header-transparent .header__heading-logo-wrapper {
+        display: none;
+      }
+      .site-header-transparent .site-header-transparent-logo {
+        display: inline-block;
+      }
     {%- endif -%}
 
     sticky-header {
