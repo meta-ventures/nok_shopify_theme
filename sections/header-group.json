@@ -19,11 +19,19 @@
             "text": "Click here to join our X-mas giveaway!",
             "link": ""
           }
+        },
+        "2acabe08-84e4-4de0-83ea-c6240826d20b": {
+          "type": "announcement",
+          "settings": {
+            "text": "FREE Shipping on orders above 120 AED",
+            "link": ""
+          }
         }
       },
       "block_order": [
         "announcement-bar-0",
-        "0fe77034-b36d-4185-8827-558fb2335559"
+        "0fe77034-b36d-4185-8827-558fb2335559",
+        "2acabe08-84e4-4de0-83ea-c6240826d20b"
       ],
       "custom_css": [
 
