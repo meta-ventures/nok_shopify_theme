@@ -20,6 +20,11 @@
     margin-top: -300px;
     text-align: center;
 }
+
+.offer-banner-area .offer-banner-bg .offer-banner-image img {
+    max-width: 100%;
+    height: auto;
+}
 .offer-banner-area .offer-banner-bg .offer-banner-content {
     width: 50%;
     padding-left: 50px;
@@ -102,7 +107,7 @@
     }
     .offer-banner-area .offer-banner-bg .offer-banner-content {
         width: 100%;
-        margin-top: 31px;
+        margin-top: -50px;
         padding-left: 0px;
     }
 }
