@@ -108,6 +108,9 @@
     }
   }
   /* Transparent header */
+  .site-header-transparent-logo {
+    display: none;
+  }
 
   {% if template == 'index' %}
     .site-header-transparent .header__icon, .site-header-transparent .header__menu-item span, .site-header-transparent .header__menu-item svg, .site-header-transparent .header__active-menu-item {
@@ -115,9 +118,6 @@
     }
 
     {%- if section.settings.transparent_header and section.settings.transparent_header_logo != blank -%}
-      .site-header-transparent-logo {
-        display: none;
-      }
 
       .site-header-transparent .header__heading-logo-wrapper {
         display: none;
