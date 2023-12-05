@@ -1,27 +1,23 @@
 <section class="video-banner" {% if section.settings.section_bg_image_enable %}style="background-image: url('{% if section.settings.section_bg_image %}{{ section.settings.section_bg_image | image_url }}{% else %}https://dummyimage.com/1920x775{% endif %}');"{% endif %}>
 	<div class="container">
-		<div class="row">
-			<div class="col">
-				<div class="video-content-area">
-					<div class="content">
-            <div class="section-capture">
-              <div class="section-title">
-                {% if section.settings.video_title != '' %}
-                <h2 style="color: {{ section.settings.video_title_color }};">{{ section.settings.video_title }}</h2>
-                {% endif %}
-              </div>
-            </div>
-						{% if section.settings.video_desc != '' %}
-						<p class="desc" style="color: {{ section.settings.video_desc_color }};">{{ section.settings.video_desc }}</p>
-						{% endif %}
-						<a class="play-button popup-youtube" href="{{ section.settings.video_url }}">
-              <span class="video-icon"><i class="{{ section.settings.video_icon }}"></i></span>
-              <span class="text">{{ section.settings.video_btn_text }}</span>
-            </a>
-					</div>
-				</div>
-			</div>
-		</div>
+    <div class="video-content-area">
+      <div class="content">
+        <div class="section-capture">
+          <div class="section-title">
+            {% if section.settings.video_title != '' %}
+            <h2 style="color: {{ section.settings.video_title_color }};">{{ section.settings.video_title }}</h2>
+            {% endif %}
+          </div>
+        </div>
+        {% if section.settings.video_desc != '' %}
+        <p class="desc" style="color: {{ section.settings.video_desc_color }};">{{ section.settings.video_desc }}</p>
+        {% endif %}
+        {% comment %} <a class="play-button popup-youtube" href="{{ section.settings.video_url }}">
+          <span class="video-icon"><i class="{{ section.settings.video_icon }}"></i></span>
+          <span class="text">{{ section.settings.video_btn_text }}</span>
+        </a> {% endcomment %}
+      </div>
+    </div>
 	</div>
 </section>
 {% schema %}
