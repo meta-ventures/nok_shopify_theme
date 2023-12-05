@@ -19,18 +19,18 @@
             "link": ""
           }
         },
-        "0fe77034-b36d-4185-8827-558fb2335559": {
-          "type": "announcement",
-          "disabled": true,
-          "settings": {
-            "text": "Click here to join our X-mas giveaway!",
-            "link": ""
-          }
-        },
         "4d9b4c14-e48d-4e33-bf48-c46af507e298": {
           "type": "announcement",
           "settings": {
             "text": "Free Global Shipping on orders above $100",
+            "link": ""
+          }
+        },
+        "0fe77034-b36d-4185-8827-558fb2335559": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "text": "Click here to join our Holidays' giveaway!",
             "link": ""
           }
         }
@@ -38,8 +38,8 @@
       "block_order": [
         "announcement-bar-0",
         "2acabe08-84e4-4de0-83ea-c6240826d20b",
-        "0fe77034-b36d-4185-8827-558fb2335559",
-        "4d9b4c14-e48d-4e33-bf48-c46af507e298"
+        "4d9b4c14-e48d-4e33-bf48-c46af507e298",
+        "0fe77034-b36d-4185-8827-558fb2335559"
       ],
       "custom_css": [
 
