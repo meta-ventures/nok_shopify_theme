@@ -3758,11 +3758,11 @@ section {
 } */
 
 /* Landing page section sub-titles */
-.section-capture .section-title {
+.section-title {
   text-align: center;
 }
 
-.section-capture .section-title span.sub-title {
+.section-title span.sub-title {
   font-family: 'Barlow', sans-serif;
   font-style: italic;
   color: #446EFF;
@@ -3773,7 +3773,7 @@ section {
   text-transform: uppercase;
 }
 
-.section-capture .section-title h2 {
+.section-title h2 {
   color: var(--font-color-section-header);
   font-family: 'Barlow', sans-serif;
   font-weight: 700;
