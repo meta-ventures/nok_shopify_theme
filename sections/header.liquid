@@ -114,7 +114,7 @@
       color: {{ section.settings.content_color }};
     }
 
-    {%- if section.settings.transparent_header and settings.transparent_header_logo != blank -%}
+    {%- if section.settings.transparent_header and section.settings.transparent_header_logo != blank -%}
     .site-header-transparent .header__heading-logo-wrapper {
       display: none;
     }
@@ -222,7 +222,7 @@
             {%- else -%}
               <span class="h2">{{ shop.name }}</span>
             {%- endif -%}
-          {%- if section.settings.transparent_header and settings.transparent_header_logo != blank -%}
+          {%- if section.settings.transparent_header and section.settings.transparent_header_logo != blank -%}
             <div class="header__heading-logo-wrapper site-header-transparent-logo">
               {%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
               {%- assign logo_height = settings.logo_width | divided_by: settings.logo.aspect_ratio -%}
