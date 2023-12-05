@@ -112,12 +112,14 @@
     "banner-product": {
       "type": "banner-product",
       "settings": {
+        "section_margin_top": 0,
+        "section_margin_bottom": 60,
         "section_padding_top": 0,
         "section_padding_bottom": 50,
-        "section_padding_top_ip": 0,
-        "section_padding_bottom_ip": 0,
-        "section_padding_top_xs": 0,
-        "section_padding_bottom_xs": 0,
+        "section_margin_top_xs": 0,
+        "section_margin_bottom_xs": 0,
+        "section_padding_top_xs": 40,
+        "section_padding_bottom_xs": 45,
         "offer_banner_bg_image_enable": true,
         "section_bg_image": "shopify:\/\/shop_images\/Design_sem_nome_24.webp",
         "section_bg_color_enable": false,
