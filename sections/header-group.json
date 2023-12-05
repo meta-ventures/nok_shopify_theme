@@ -46,6 +46,7 @@
         "menu_type_desktop": "dropdown",
         "sticky_header_type": "on-scroll-up",
         "transparent_header": true,
+        "transparent_header_logo": "shopify:\/\/shop_images\/nok_logo_white.png",
         "content_color": "#ffffff",
         "show_line_separator": true,
         "color_scheme": "scheme-1",
