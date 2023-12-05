@@ -16,6 +16,9 @@
       "block_order": [
         "announcement-bar-0"
       ],
+      "custom_css": [
+        ".utility-bar.gradient {border: 0;}"
+      ],
       "settings": {
         "color_scheme": "inverse",
         "show_line_separator": false,
