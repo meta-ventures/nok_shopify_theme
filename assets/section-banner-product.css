@@ -42,14 +42,14 @@
     margin-top: 32px;
     opacity: 0.8;
 }
-.offer-banner-area .offer-banner-bg .offer-banner-content .banner-content h4.price {
+.offer-banner-area .offer-banner-bg .offer-banner-content .banner-content h4.banner-price {
     margin-top: 36px;
 }
-.offer-banner-area .offer-banner-bg .offer-banner-content .banner-content h4.price span.label {
+.offer-banner-area .offer-banner-bg .offer-banner-content .banner-content h4.banner-price span.label {
     font-size: 32px;
     font-weight: 400;
 }
-.offer-banner-area .offer-banner-bg .offer-banner-content .banner-content h4.price span.price {
+.offer-banner-area .offer-banner-bg .offer-banner-content .banner-content h4.banner-price span.price {
     font-size: 32px;
     font-weight: 600;
 }
@@ -90,11 +90,11 @@
         font-size: 20px;
         margin-top: 23px;
     }
-    .offer-banner-area .offer-banner-bg .offer-banner-content .banner-content h4.price {
+    .offer-banner-area .offer-banner-bg .offer-banner-content .banner-content h4.banner-price {
         margin-top: 25px;
     }
-    .offer-banner-area .offer-banner-bg .offer-banner-content .banner-content h4.price span.label,
-    .offer-banner-area .offer-banner-bg .offer-banner-content .banner-content h4.price span.price {
+    .offer-banner-area .offer-banner-bg .offer-banner-content .banner-content h4.banner-price span.label,
+    .offer-banner-area .offer-banner-bg .offer-banner-content .banner-content h4.banner-price span.price {
         font-size: 22px;
     }
     .offer-banner-area .offer-banner-bg .offer-banner-content .banner-content .banner-btn {
@@ -119,11 +119,11 @@
         font-size: 16px;
         margin-top: 12px;
     }
-    .offer-banner-area .offer-banner-bg .offer-banner-content .banner-content h4.price {
+    .offer-banner-area .offer-banner-bg .offer-banner-content .banner-content h4.banner-price {
         margin-top: 11px;
     }
-    .offer-banner-area .offer-banner-bg .offer-banner-content .banner-content h4.price span.label,
-    .offer-banner-area .offer-banner-bg .offer-banner-content .banner-content h4.price span.price {
+    .offer-banner-area .offer-banner-bg .offer-banner-content .banner-content h4.banner-price span.label,
+    .offer-banner-area .offer-banner-bg .offer-banner-content .banner-content h4.banner-price span.price {
         font-size: 18px;
     }
     .offer-banner-area .offer-banner-bg .offer-banner-content .banner-content .banner-btn {
