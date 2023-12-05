@@ -3821,6 +3821,10 @@ ul{
     margin-bottom: 40px;
   }
 
+  .section-capture .section-title span.sub-title {
+    font-size: 18px;
+  }
+
   .section-capture .section-title h2 {
     font-size: 30px;
   }
