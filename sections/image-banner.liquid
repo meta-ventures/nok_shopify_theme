@@ -1,6 +1,10 @@
 {{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
 
 {% style %}
+  #Banner-{{ section.id }} {
+    height: 80vh;
+  }
+
   {% if section.settings.enable_mobile_image %}
     #Banner-{{ section.id }} .banner__media_mobile_image {
         display: none;
