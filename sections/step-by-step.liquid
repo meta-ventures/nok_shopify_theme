@@ -1,0 +1,245 @@
+{{ 'section-features-square.css' | asset_url | stylesheet_tag }}
+
+<section class="features-square-area" {% if section.settings.section_bg_image_enable %}style="background-image: url('{% if section.settings.section_bg_image %}{{ section.settings.section_bg_image | image_url }}{% else %}https://dummyimage.com/1920x1024{% endif %}');"{% endif %}>
+  <div class="container">
+    <div class="section-capture">
+      <div class="section-title">
+        {% if section.settings.section_subtitle != '' %}
+        <span class="sub-title">{{ section.settings.section_subtitle }}</span>
+        {% endif %}
+        {% if section.settings.section_title != '' %}
+        <h2>{{ section.settings.section_title }}</h2>
+        {% endif %}
+      </div>
+    </div>
+    <ul class="single-feature">
+      {% for block in section.blocks %}
+      <li class="feature-wrapper">
+        <div class="feature-block">
+          <div class="feature-icon" >
+            {%- if block.settings.feature_icon_image != blank -%}
+              {{
+                block.settings.feature_icon_image
+                | image_url: width: 50
+                | image_tag:
+                    width: 50
+              }}
+            {%- endif -%}
+          </div>
+          <div class="feature-text">
+            {% if block.settings.feature_title != '' %}
+            <h6>{{ block.settings.feature_title }}</h6>
+            {% endif %}
+            {% if block.settings.feature_desc != '' %}
+            <p>{{ block.settings.feature_desc }}</p>
+            {% endif %}
+          </div>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "Features Square",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Padding"
+    },
+    {
+      "type": "paragraph",
+      "content": "Desktop / Laptop / Tablet"
+    },
+    {
+      "type": "range",
+      "id": "our_ser_padding_top",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "our_ser_padding_bottom",
+      "label": "Section Padding bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "paragraph",
+      "content": "Ipad Pro / Ipad"
+    },
+    {
+      "type": "range",
+      "id": "our_ser_padding_top_ip",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "our_ser_padding_bottom_ip",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "paragraph",
+      "content": "Mobile"
+    },
+    {
+      "type": "range",
+      "id": "our_ser_padding_top_xs",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "our_ser_padding_bottom_xs",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Background Image"
+    },
+    {
+      "type": "checkbox",
+      "id": "section_bg_image_enable",
+      "label": "Show Background Image",
+      "default": false
+    },
+    {
+      "type": "image_picker",
+      "id": "section_bg_image",
+      "label": "Image",
+      "info": "Recommended Size: 1920 x 770px"
+    },
+    {
+      "type": "header",
+      "content": "Background Color"
+    },
+    {
+      "type": "checkbox",
+      "id": "section_bg_color_enable",
+      "label": "Show Background Color",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "section_bg_color",
+      "label": "Background Color",
+      "default": "#f6f6f6"
+    },
+    {
+      "type": "header",
+      "content": "Section Title"
+    },
+    {
+      "type": "text",
+      "id": "section_subtitle",
+      "label": "Section Subtitle",
+      "default": "Controller"
+    },
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section Title",
+      "default": "How it works"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Feature",
+      "settings": [
+        {
+          "type": "url",
+          "id": "ser_url",
+          "label": "Icon url"
+        },
+        {
+          "type": "image_picker",
+          "id": "feature_icon_image",
+          "label": "Icon Class"
+        },
+        {
+          "type": "text",
+          "id": "feature_title",
+          "label": "Feature Title",
+          "default": "How to use battery"
+        },
+        {
+          "type": "text",
+          "id": "feature_desc",
+          "label": "Feature Description",
+          "default": "Lorem Ipsum is simply dummy text of the printing typesetting industry lorem Ipsum."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Features Square",
+      "category": "Features",
+      "settings": {
+      },
+      "blocks": [
+
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+{% style %}
+  .features-square-area {
+    padding-top: {{ section.settings.our_ser_padding_top }}px;
+    padding-bottom: {{ section.settings.our_ser_padding_bottom }}px;
+
+    {% if section.settings.section_bg_image_enable %}
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    {% endif %}
+
+    {% if section.settings.section_bg_color_enable %}
+      background-color: {{ section.settings.section_bg_color }};
+    {% endif %}
+  }
+
+  @media (max-width: 1199px) {
+    .features-square-area {
+      padding-top: {{ section.settings.our_ser_padding_top_ip }}px;
+      padding-bottom: {{ section.settings.our_ser_padding_bottom_ip }}px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .features-square-area {
+      padding-top: {{ section.settings.our_ser_padding_top_xs }}px;
+      padding-bottom: {{ section.settings.our_ser_padding_bottom_xs }}px;
+    }
+  }
+{% endstyle %}
