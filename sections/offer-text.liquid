@@ -2,7 +2,7 @@
 	<div class="container">
     <div class="text-area">
       <div class="text-ul">
-        <div class="text-li title">
+        <div class="text-item title">
           <div class="section-capture">
             <div class="section-title">
               {% if section.settings.offer_text_title != '' %}
@@ -11,12 +11,12 @@
             </div>
           </div>
         </div>
-        <div class="text-li desc">
+        <div class="text-item desc">
           {% if section.settings.offer_text_desc != '' %}
           <p style="color: {{ section.settings.offer_text_desc_color }}">{{ section.settings.offer_text_desc }}</p>
           {% endif %}
         </div>
-        <div class="text-li offer-btn">
+        <div class="text-item offer-btn">
           {% if section.settings.offer_btn_text != '' %}
           <a href="{{ section.settings.offer_btn_url }}" class="btn-style3">
             <span>{{ section.settings.offer_btn_text }}</span>
@@ -233,46 +233,46 @@
   }
 }
 /* main css */
-.offer-text-area .text-area ul.text-ul {
+.offer-text-area .text-area .text-ul {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
   justify-content: center;
 }
-.offer-text-area .text-area ul.text-ul li.text-li {
+.offer-text-area .text-area .text-ul .text-item {
 
 }
-.offer-text-area .text-area ul.text-ul li.text-li.title {
+.offer-text-area .text-area .text-ul .text-item.title {
 	width: 25%;
 }
-.offer-text-area .text-area ul.text-ul li.text-li {
+.offer-text-area .text-area .text-ul .text-item {
 	width: 41.67%;
 	text-align: center;
 }
-.offer-text-area .text-area ul.text-ul li.text-li.offer-btn {
+.offer-text-area .text-area .text-ul .text-item.offer-btn {
 	width: 16.67%;
 	text-align: center;
 }
 @media (max-width: 1199px) {
-  .offer-text-area .text-area ul.text-ul li.text-li {
+  .offer-text-area .text-area .text-ul .text-item {
     width: 50%;
   }
-  .offer-text-area .text-area ul.text-ul li.text-li.offer-btn {
+  .offer-text-area .text-area .text-ul .text-item.offer-btn {
     width: 25%;
   }
 }
 @media (max-width: 991px) {
-  .offer-text-area .text-area ul.text-ul li.text-li.title,
-  .offer-text-area .text-area ul.text-ul li.text-li.offer-btn {
+  .offer-text-area .text-area .text-ul .text-item.title,
+  .offer-text-area .text-area .text-ul .text-item.offer-btn {
     width: 50%;
   }
-  .offer-text-area .text-area ul.text-ul li.text-li.desc {
+  .offer-text-area .text-area .text-ul .text-item.desc {
     width: 100%;
     order: -1;
   }
 }
 @media (max-width: 767px) {
-  .offer-text-area .text-area ul.text-ul {
+  .offer-text-area .text-area .text-ul {
     {% if settings.enable_rtl %}
     margin-right: -12px;
     {% else %}
@@ -280,7 +280,7 @@
     {% endif %}
     margin-top: -15px;
   }
-  .offer-text-area .text-area ul.text-ul li.text-li {
+  .offer-text-area .text-area .text-ul .text-item {
     {% if settings.enable_rtl %}
     margin-right: 12px;
     {% else %}
@@ -288,58 +288,58 @@
     {% endif %}
     margin-top: 15px;
   }
-  .offer-text-area .text-area ul.text-ul li.text-li.title,
-  .offer-text-area .text-area ul.text-ul li.text-li.offer-btn {
+  .offer-text-area .text-area .text-ul .text-item.title,
+  .offer-text-area .text-area .text-ul .text-item.offer-btn {
     width: calc(50% - 12px);
   }
-  .offer-text-area .text-area ul.text-ul li.text-li.desc {
+  .offer-text-area .text-area .text-ul .text-item.desc {
     width: calc(100% - 12px);
   }
 }
 @media (max-width: 479px) {
-  .offer-text-area .text-area ul.text-ul li.text-li.title,
-  .offer-text-area .text-area ul.text-ul li.text-li.offer-btn {
+  .offer-text-area .text-area .text-ul .text-item.title,
+  .offer-text-area .text-area .text-ul .text-item.offer-btn {
     width: calc(100% - 12px);
   }
-  .offer-text-area .text-area ul.text-ul li.text-li.desc {
+  .offer-text-area .text-area .text-ul .text-item.desc {
     order: unset;
   }
 }
 
 /* title css */
-.offer-text-area .text-area ul.text-ul li.text-li.title .section-capture {
+.offer-text-area .text-area .text-ul .text-item.title .section-capture {
   margin-bottom: 0px;
 }
 /* description css */
-.offer-text-area .text-area ul.text-ul li.text-li p {
+.offer-text-area .text-area .text-ul .text-item p {
   font-size: 24px;
   {% if settings.other_custom_font_handle_enable %}
   font-family: '{{ settings.other_custom_font_handle }}', sans-serif;
   {% endif %}
 }
 /* button css */
-.offer-text-area .text-area ul.text-ul li.text-li.offer-btn a {
+.offer-text-area .text-area .text-ul .text-item.offer-btn a {
   display: inline-flex;
 }
-.offer-text-area .text-area ul.text-ul li.text-li.offer-btn a span.icon {
+.offer-text-area .text-area .text-ul .text-item.offer-btn a span.icon {
   {% if settings.enable_rtl %}
   margin-right: 10px;
   {% else %}
   margin-left: 10px;
   {% endif %}
 }
-.offer-text-area .text-area ul.text-ul li.text-li.offer-btn a span.icon svg {
+.offer-text-area .text-area .text-ul .text-item.offer-btn a span.icon svg {
   width: 22px;
   height: 22px;
 }
 
 @media (max-width: 1199px) {
-	.offer-text-area .text-area ul.text-ul li.text-li p {
+	.offer-text-area .text-area .text-ul .text-item p {
 		font-size: 20px;
 	}
 }
 @media (max-width: 767px) {
-	.offer-text-area .text-area ul.text-ul li.text-li p {
+	.offer-text-area .text-area .text-ul .text-item p {
 		font-size: 16px;
 	}
 }
