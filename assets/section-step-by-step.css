@@ -33,6 +33,8 @@
   align-items: center;
   flex-wrap: wrap;
   height: 800px;
+  padding: 40px;
+  background-color: white;
 }
 
 .steps-wrapper .step-card{
