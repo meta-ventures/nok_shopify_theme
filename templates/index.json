@@ -124,7 +124,7 @@
           "type": "step",
           "settings": {
             "step_image": "shopify:\/\/shop_images\/how_to_step_2.webp",
-            "step_title": "Instantly Connect",
+            "step_title": "Engage",
             "step_desc": "Create an engaging profile and get that 'WOW' out of every connections"
           }
         },
@@ -132,8 +132,8 @@
           "type": "step",
           "settings": {
             "step_image": "shopify:\/\/shop_images\/how_to_step_3.webp",
-            "step_title": "No app needed",
-            "step_desc": "Our platform works on the browser, for all iOS or Android devices"
+            "step_title": "Instantly Connect",
+            "step_desc": "With one click, your connections can save your contact, or reach you on your preferred social platform"
           }
         }
       },
