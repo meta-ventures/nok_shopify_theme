@@ -14,11 +14,11 @@
   <div class="steps-wrapper">
     {% for block in section.blocks %}
       <div class="step-card">
-        {{ block.settings.image |
+        {{ block.settings.step_image |
           image_url: width: 600 | image_tag:
           class: 'step-image',
-          height: block.settings.image.height,
-          width: block.settings.image.width
+          height: block.settings.step_image.height,
+          width: block.settings.step_image.width
         }}
         <div class="step-content">
           <h3></h3>
