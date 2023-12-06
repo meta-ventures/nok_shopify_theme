@@ -1,32 +1,3 @@
-/* <div class="container">
-  <div class="section-capture">
-    <div class="section-title">
-      {% if section.settings.section_subtitle != '' %}
-      <span class="sub-title">{{ section.settings.section_subtitle }}</span>
-      {% endif %}
-      {% if section.settings.section_title != '' %}
-      <h2>{{ section.settings.section_title }}</h2>
-      {% endif %}
-    </div>
-  </div>
-  <div class="steps-wrapper">
-    {% for block in section.blocks %}
-      <div class="step-card">
-        {{ block.settings.step_image |
-          image_url: width: 600 | image_tag:
-          class: 'step-image',
-          height: block.settings.step_image.height,
-          width: block.settings.step_image.width
-        }}
-        <div class="step-content">
-          <h3>{{ block.settings.step_title }}</h3>
-          <p>{{ block.settings.step_desc }}</p>
-        </div>
-      </div>
-    {% endfor %}
-  </div>
-</div>
- */
 .steps-wrapper {
   display: flex;
   justify-content: space-around;
