@@ -457,11 +457,11 @@
     "offer-text": {
       "type": "offer-text",
       "settings": {
-        "section_padding_top": 50,
-        "section_padding_bottom": 50,
+        "section_padding_top": 0,
+        "section_padding_bottom": 27,
         "section_padding_top_ip": 50,
         "section_padding_bottom_ip": 50,
-        "section_padding_top_xs": 50,
+        "section_padding_top_xs": 34,
         "section_padding_bottom_xs": 50,
         "section_bg_image_enable": true,
         "section_bg_color_enable": true,
