@@ -53,11 +53,12 @@
 }
 
 .steps-wrapper .step-card .step-content {
-
+  flex-grow: auto;
 }
 .steps-wrapper .step-card .step-content h3 {
-
+  font-size: 20px;
 }
-.steps-wrapper .step-card .step-content p {
 
+.steps-wrapper .step-card .step-content p {
+  font-size: 16px;
 }
