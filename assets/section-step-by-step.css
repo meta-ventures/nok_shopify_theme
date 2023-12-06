@@ -32,6 +32,7 @@
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
+  height: 800px;
 }
 
 .steps-wrapper .step-card{
