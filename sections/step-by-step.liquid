@@ -62,7 +62,7 @@
     },
     {
       "type": "range",
-      "id": "margin_top",
+      "id": "margin_top_desktop",
       "label": "Desktop Margin Top",
       "min": 0,
       "max": 100,
@@ -72,7 +72,7 @@
     },
     {
       "type": "range",
-      "id": "margin_bottom",
+      "id": "margin_bottom_desktop",
       "label": "Desktop Margin Bottom",
       "min": 0,
       "max": 100,
@@ -92,7 +92,7 @@
     },
     {
       "type": "range",
-      "id": "padding_bottom_mobile",
+      "id": "margin_bottom_mobile",
       "label": "Mobile Margin Bottom",
       "min": 0,
       "max": 100,
@@ -143,5 +143,22 @@
 {% style %}
   #Steps-{{ section.id }} {
     background-color: {{ section.settings.section_bg_color }};
+    padding-top: {{ section.settings.section_margin_top }};
+    padding-bottom: {{ section.settings.section_margin_top }};
   }
+  #Steps-{{ section.id }} {
+
+  }
+
+  @media screen and (max-width: 767px) {
+    #Steps-{{ section.id }} {
+      padding-top: {{ section.settings.section_margin_top }};
+      padding-bottom: {{ section.settings.section_margin_top }};
+    }
+    .steps-wrapper .step-card {
+      width: 100%;
+      padding: 15px;
+    }
+  }
+
 {% endstyle %}
