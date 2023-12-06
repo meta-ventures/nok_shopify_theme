@@ -516,8 +516,7 @@
         "testi_padding_bottom_ip": 70,
         "testi_padding_top_xs": 50,
         "testi_padding_bottom_xs": 50,
-        "testi_bgimg": "shopify:\/\/shop_images\/testimonial_bg.webp",
-        "testi_bgimg_check": true,
+        "testi_bgimg_check": false,
         "testi_bgcolor": "#f6f6f6",
         "testi_title": "Testimonials"
       }
