@@ -148,8 +148,8 @@
         "section_bg_color": "#f6f6f6",
         "margin_top_desktop": 100,
         "margin_bottom_desktop": 100,
-        "margin_top_mobile": 100,
-        "margin_bottom_mobile": 100
+        "margin_top_mobile": 60,
+        "margin_bottom_mobile": 60
       }
     },
     "banner-product": {
@@ -185,46 +185,6 @@
     },
     "50a65b12-5877-4ee3-80d6-ec6e81f8cf11": {
       "type": "multirow",
-      "blocks": {
-        "template--21701438701890__50a65b12-5877-4ee3-80d6-ec6e81f8cf11-row-1": {
-          "type": "row",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/how_to_step_1.webp",
-            "caption": "Caption",
-            "heading": "Row",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "button_label": "Button label",
-            "button_link": ""
-          }
-        },
-        "template--21701438701890__50a65b12-5877-4ee3-80d6-ec6e81f8cf11-row-2": {
-          "type": "row",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/how_to_step_2.webp",
-            "caption": "Caption",
-            "heading": "Row",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "button_label": "Button label",
-            "button_link": ""
-          }
-        },
-        "template--21701438701890__50a65b12-5877-4ee3-80d6-ec6e81f8cf11-row-3": {
-          "type": "row",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/how_to_step_3.webp",
-            "caption": "Caption",
-            "heading": "Row",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "button_label": "Button label",
-            "button_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "template--21701438701890__50a65b12-5877-4ee3-80d6-ec6e81f8cf11-row-1",
-        "template--21701438701890__50a65b12-5877-4ee3-80d6-ec6e81f8cf11-row-2",
-        "template--21701438701890__50a65b12-5877-4ee3-80d6-ec6e81f8cf11-row-3"
-      ],
       "disabled": true,
       "settings": {
         "image_height": "medium",
@@ -240,57 +200,6 @@
         "mobile_content_alignment": "left",
         "padding_top": 36,
         "padding_bottom": 36
-      }
-    },
-    "features-square": {
-      "type": "features-square",
-      "blocks": {
-        "feature-1": {
-          "type": "feature",
-          "settings": {
-            "ser_url": "",
-            "feature_icon_image": "shopify:\/\/shop_images\/analytics-icon.svg",
-            "feature_title": "The first impression matters",
-            "feature_desc": "Personalize your profile and get that 'WOW' out of your connections"
-          }
-        },
-        "feature-2": {
-          "type": "feature",
-          "settings": {
-            "ser_url": "",
-            "feature_icon_image": "shopify:\/\/shop_images\/icon-close.svg",
-            "feature_title": "no more paper cards",
-            "feature_desc": "You can share your profile with a simple tap. No more need for outdated paper cards."
-          }
-        },
-        "feature-3": {
-          "type": "feature",
-          "settings": {
-            "ser_url": "",
-            "feature_icon_image": "shopify:\/\/shop_images\/icon-globe.svg",
-            "feature_title": "No app needed",
-            "feature_desc": "Our platform works on the browser, for all iOS or Android devices"
-          }
-        }
-      },
-      "block_order": [
-        "feature-1",
-        "feature-2",
-        "feature-3"
-      ],
-      "disabled": true,
-      "settings": {
-        "our_ser_padding_top": 80,
-        "our_ser_padding_bottom": 80,
-        "our_ser_padding_top_ip": 80,
-        "our_ser_padding_bottom_ip": 80,
-        "our_ser_padding_top_xs": 60,
-        "our_ser_padding_bottom_xs": 60,
-        "section_bg_image_enable": false,
-        "section_bg_color_enable": true,
-        "section_bg_color": "#f6f6f6",
-        "section_subtitle": "Smart business card",
-        "section_title": "How it works"
       }
     },
     "featured_collection": {
@@ -584,6 +493,57 @@
         "offer_btn_icon": "",
         "offer_btn_url": "shopify:\/\/collections\/all"
       }
+    },
+    "features-square": {
+      "type": "features-square",
+      "blocks": {
+        "feature-1": {
+          "type": "feature",
+          "settings": {
+            "ser_url": "",
+            "feature_icon_image": "shopify:\/\/shop_images\/analytics-icon.svg",
+            "feature_title": "The first impression matters",
+            "feature_desc": "Personalize your profile and get that 'WOW' out of your connections"
+          }
+        },
+        "feature-2": {
+          "type": "feature",
+          "settings": {
+            "ser_url": "",
+            "feature_icon_image": "shopify:\/\/shop_images\/icon-close.svg",
+            "feature_title": "no more paper cards",
+            "feature_desc": "You can share your profile with a simple tap. No more need for outdated paper cards."
+          }
+        },
+        "feature-3": {
+          "type": "feature",
+          "settings": {
+            "ser_url": "",
+            "feature_icon_image": "shopify:\/\/shop_images\/icon-globe.svg",
+            "feature_title": "No app needed",
+            "feature_desc": "Our platform works on the browser, for all iOS or Android devices"
+          }
+        }
+      },
+      "block_order": [
+        "feature-1",
+        "feature-2",
+        "feature-3"
+      ],
+      "disabled": true,
+      "settings": {
+        "our_ser_padding_top": 80,
+        "our_ser_padding_bottom": 80,
+        "our_ser_padding_top_ip": 80,
+        "our_ser_padding_bottom_ip": 80,
+        "our_ser_padding_top_xs": 60,
+        "our_ser_padding_bottom_xs": 60,
+        "section_bg_image_enable": false,
+        "section_bg_color_enable": true,
+        "section_bg_color": "#f6f6f6",
+        "section_subtitle": "Smart business card",
+        "section_title": "How it works"
+      }
     }
   },
   "order": [
@@ -592,12 +552,12 @@
     "step-by-step",
     "banner-product",
     "50a65b12-5877-4ee3-80d6-ec6e81f8cf11",
-    "features-square",
     "featured_collection",
     "trusted-by",
     "video-banner",
     "achievements",
     "testimonials",
-    "offer-text"
+    "offer-text",
+    "features-square"
   ]
 }
