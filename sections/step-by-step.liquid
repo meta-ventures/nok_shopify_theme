@@ -1,43 +1,44 @@
 {{ 'section-step-by-step.css' | asset_url | stylesheet_tag }}
 
-  <div class="container">
-    <div class="section-capture">
-      <div class="section-title">
-        {% if section.settings.section_subtitle != '' %}
-        <span class="sub-title">{{ section.settings.section_subtitle }}</span>
-        {% endif %}
-        {% if section.settings.section_title != '' %}
-        <h2>{{ section.settings.section_title }}</h2>
-        {% endif %}
-      </div>
+<div class="container">
+  <div class="section-capture">
+    <div class="section-title">
+      {% if section.settings.section_subtitle != '' %}
+      <span class="sub-title">{{ section.settings.section_subtitle }}</span>
+      {% endif %}
+      {% if section.settings.section_title != '' %}
+      <h2>{{ section.settings.section_title }}</h2>
+      {% endif %}
     </div>
-    <ul class="single-feature">
-      {% for block in section.blocks %}
-      <li class="feature-wrapper">
-        <div class="feature-block">
-          <div class="feature-icon" >
-            {%- if block.settings.feature_icon_image != blank -%}
-              {{
-                block.settings.feature_icon_image
-                | image_url: width: 50
-                | image_tag:
-                    width: 50
-              }}
-            {%- endif -%}
-          </div>
-          <div class="feature-text">
-            {% if block.settings.feature_title != '' %}
-            <h6>{{ block.settings.feature_title }}</h6>
-            {% endif %}
-            {% if block.settings.feature_desc != '' %}
-            <p>{{ block.settings.feature_desc }}</p>
-            {% endif %}
-          </div>
+  </div>
+  <div class="steps-wrapper">
+    {% for block in section.blocks %}
+    <li class="feature-wrapper">
+      <div class="feature-block">
+        <div class="feature-icon" >
+          {%- if block.settings.feature_icon_image != blank -%}
+            {{
+              block.settings.feature_icon_image
+              | image_url: width: 50
+              | image_tag:
+                  width: 50
+            }}
+          {%- endif -%}
         </div>
-      </li>
-      {% endfor %}
-    </ul>
-</section>
+        <div class="feature-text">
+          {% if block.settings.feature_title != '' %}
+          <h6>{{ block.settings.feature_title }}</h6>
+          {% endif %}
+          {% if block.settings.feature_desc != '' %}
+          <p>{{ block.settings.feature_desc }}</p>
+          {% endif %}
+        </div>
+      </div>
+    </li>
+    {% endfor %}
+  </div>
+</div>
+
 {% schema %}
 {
   "name": "Features Square",
