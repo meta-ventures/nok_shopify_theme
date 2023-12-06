@@ -4,6 +4,7 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 60px 40px;
+  padding: 20px;
 }
 
 .steps-wrapper .step-card {
