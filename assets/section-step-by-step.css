@@ -32,20 +32,24 @@
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  height: 800px;
+  /* height: 800px; */
   padding: 40px;
   background-color: gray;
 }
 
 .steps-wrapper .step-card {
   width: 30%;
-  height: 100%;
+  height: 600px;
   display: flex;
   flex-direction: column;
   align-items: stretch;
   background-color: white;
   box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.1);
   border-radius: 4px;
+}
+.steps-wrapper .step-card .step-image {
+  width: 100%;
+  height: 300px;
 }
 
 .steps-wrapper .step-card .step-content {
