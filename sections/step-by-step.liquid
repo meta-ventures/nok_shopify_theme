@@ -143,8 +143,8 @@
 {% style %}
   #Steps-{{ section.id }} {
     background-color: {{ section.settings.section_bg_color }};
-    padding-top: {{ section.settings.section_margin_top }};
-    padding-bottom: {{ section.settings.section_margin_top }};
+    padding-top: {{ section.settings.margin_top_desktop }};
+    padding-bottom: {{ section.settings.margin_bottom_desktop }};
   }
   #Steps-{{ section.id }} {
 
@@ -152,8 +152,8 @@
 
   @media screen and (max-width: 767px) {
     #Steps-{{ section.id }} {
-      padding-top: {{ section.settings.section_margin_top }};
-      padding-bottom: {{ section.settings.section_margin_top }};
+      padding-top: {{ section.settings.margin_top_mobile }};
+      padding-bottom: {{ section.settings.margin_bottom_mobile }};
     }
     .steps-wrapper .step-card {
       width: 100%;
