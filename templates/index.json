@@ -116,16 +116,16 @@
           "type": "step",
           "settings": {
             "step_image": "shopify:\/\/shop_images\/how_to_step_1.webp",
-            "step_title": "The first impression matters",
-            "step_desc": "Personalize your profile and get that 'WOW' out of your connections"
+            "step_title": "Simply Tap",
+            "step_desc": "You can share your profile with a simple tap. No more need for outdated paper cards."
           }
         },
         "step-2": {
           "type": "step",
           "settings": {
             "step_image": "shopify:\/\/shop_images\/how_to_step_2.webp",
-            "step_title": "no more paper cards",
-            "step_desc": "You can share your profile with a simple tap. No more need for outdated paper cards."
+            "step_title": "Instantly Connect",
+            "step_desc": "Create an engaging profile and get that 'WOW' out of every connections"
           }
         },
         "step-3": {
@@ -144,7 +144,12 @@
       ],
       "settings": {
         "section_subtitle": "Smart business card",
-        "section_title": "How it works"
+        "section_title": "How it works",
+        "section_bg_color": "#f6f6f6",
+        "margin_top_desktop": 100,
+        "margin_bottom_desktop": 100,
+        "margin_top_mobile": 100,
+        "margin_bottom_mobile": 100
       }
     },
     "banner-product": {
