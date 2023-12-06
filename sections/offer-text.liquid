@@ -1,8 +1,8 @@
 <section class="offer-text-area">
 	<div class="container">
     <div class="text-area">
-      <ul class="text-ul">
-        <li class="text-li title">
+      <div class="text-ul">
+        <div class="text-li title">
           <div class="section-capture">
             <div class="section-title">
               {% if section.settings.offer_text_title != '' %}
@@ -10,21 +10,21 @@
               {% endif %}
             </div>
           </div>
-        </li>
-        <li class="text-li desc">
+        </div>
+        <div class="text-li desc">
           {% if section.settings.offer_text_desc != '' %}
           <p style="color: {{ section.settings.offer_text_desc_color }}">{{ section.settings.offer_text_desc }}</p>
           {% endif %}
-        </li>
-        <li class="text-li offer-btn">
+        </div>
+        <div class="text-li offer-btn">
           {% if section.settings.offer_btn_text != '' %}
           <a href="{{ section.settings.offer_btn_url }}" class="btn-style3">
             <span>{{ section.settings.offer_btn_text }}</span>
             <span class="icon">{{ section.settings.offer_btn_icon }}</span>
           </a>
           {% endif %}
-        </li>
-      </ul>
+        </div>
+      </div>
     </div>
 	</div>
 </section>
@@ -238,52 +238,36 @@
 	flex-wrap: wrap;
 	align-items: center;
   justify-content: center;
-	{% if settings.enable_rtl %}
-	margin-right: -30px;
-	{% else %}
-	margin-left: -30px;
-	{% endif %}
-  margin-top: -30px;
 }
 .offer-text-area .text-area ul.text-ul li.text-li {
-	{% if settings.enable_rtl %}
-	margin-right: 30px;
-	{% else %}
-	margin-left: 30px;
-	{% endif %}
-  margin-top: 30px;
+
 }
 .offer-text-area .text-area ul.text-ul li.text-li.title {
-	width: calc(25% - 30px);
-  {% if settings.enable_rtl %}
-  text-align: right;
-  {% else %}
-  text-align: left;
-  {% endif %}
+	width: 25%;
 }
 .offer-text-area .text-area ul.text-ul li.text-li {
-	width: calc(41.67% - 30px);
+	width: 41.67%;
 	text-align: center;
 }
 .offer-text-area .text-area ul.text-ul li.text-li.offer-btn {
-	width: calc(16.67% - 30px);
+	width: 16.67%;
 	text-align: center;
 }
 @media (max-width: 1199px) {
   .offer-text-area .text-area ul.text-ul li.text-li {
-    width: calc(50% - 30px);
+    width: 50%;
   }
   .offer-text-area .text-area ul.text-ul li.text-li.offer-btn {
-    width: calc(25% - 30px);
+    width: 25%;
   }
 }
 @media (max-width: 991px) {
   .offer-text-area .text-area ul.text-ul li.text-li.title,
   .offer-text-area .text-area ul.text-ul li.text-li.offer-btn {
-    width: calc(50% - 30px);
+    width: 50%;
   }
   .offer-text-area .text-area ul.text-ul li.text-li.desc {
-    width: calc(100% - 30px);
+    width: 100%;
     order: -1;
   }
 }
