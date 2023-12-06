@@ -410,7 +410,7 @@
   .banner__box > * + .banner__heading {
     font-size: 28px;
   }
-  .banner__box > * + .banner__text {
+  .banner__box .banner__text {
     font-size: 16px;
   }
 
