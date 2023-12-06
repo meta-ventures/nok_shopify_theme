@@ -116,7 +116,7 @@
           "type": "step",
           "settings": {
             "step_image": "shopify:\/\/shop_images\/how_to_step_1.webp",
-            "step_title": "Simply Tap",
+            "step_title": "Tap",
             "step_desc": "You can share your profile with a simple tap. No more need for outdated paper cards."
           }
         },
