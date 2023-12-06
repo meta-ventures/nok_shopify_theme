@@ -407,6 +407,10 @@
 }
 
 @media screen and (max-width: 749px) {
+  .banner__box > * + .banner__text {
+    font-size: 12px;
+  }
+
   .banner--stacked .banner__box {
     width: 100%;
   }
