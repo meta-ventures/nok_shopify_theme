@@ -1,35 +1,31 @@
 <section class="offer-text-area">
 	<div class="container">
-		<div class="row">
-			<div class="col">
-				<div class="text-area">
-					<ul class="text-ul">
-						<li class="text-li title">
-              <div class="section-capture">
-                <div class="section-title">
-                  {% if section.settings.offer_text_title != '' %}
-                  <h2 style="color: {{ section.settings.offer_text_title_color }}">{{ section.settings.offer_text_title }}</h2>
-                  {% endif %}
-                </div>
-              </div>
-						</li>
-						<li class="text-li desc">
-							{% if section.settings.offer_text_desc != '' %}
-							<p style="color: {{ section.settings.offer_text_desc_color }}">{{ section.settings.offer_text_desc }}</p>
-							{% endif %}
-						</li>
-						<li class="text-li offer-btn">
-							{% if section.settings.offer_btn_text != '' %}
-							<a href="{{ section.settings.offer_btn_url }}" class="btn-style3">
-								<span>{{ section.settings.offer_btn_text }}</span>
-								<span class="icon">{{ section.settings.offer_btn_icon }}</span>
-							</a>
-							{% endif %}
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
+    <div class="text-area">
+      <ul class="text-ul">
+        <li class="text-li title">
+          <div class="section-capture">
+            <div class="section-title">
+              {% if section.settings.offer_text_title != '' %}
+              <h2 style="color: {{ section.settings.offer_text_title_color }}">{{ section.settings.offer_text_title }}</h2>
+              {% endif %}
+            </div>
+          </div>
+        </li>
+        <li class="text-li desc">
+          {% if section.settings.offer_text_desc != '' %}
+          <p style="color: {{ section.settings.offer_text_desc_color }}">{{ section.settings.offer_text_desc }}</p>
+          {% endif %}
+        </li>
+        <li class="text-li offer-btn">
+          {% if section.settings.offer_btn_text != '' %}
+          <a href="{{ section.settings.offer_btn_url }}" class="btn-style3">
+            <span>{{ section.settings.offer_btn_text }}</span>
+            <span class="icon">{{ section.settings.offer_btn_icon }}</span>
+          </a>
+          {% endif %}
+        </li>
+      </ul>
+    </div>
 	</div>
 </section>
 
