@@ -1,4 +1,4 @@
-<div class="container">
+/* <div class="container">
   <div class="section-capture">
     <div class="section-title">
       {% if section.settings.section_subtitle != '' %}
@@ -26,12 +26,12 @@
     {% endfor %}
   </div>
 </div>
-
+ */
 .steps-wrapper {
   display: flex;
   justify-content: space-around;
   align-items: center;
-
+  flex-wrap: wrap;
 }
 
 .steps-wrapper .step-card{
