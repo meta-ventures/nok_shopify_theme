@@ -98,32 +98,5 @@
 {% endschema %}
 
 {% style %}
-  .features-square-area {
-    padding-top: {{ section.settings.our_ser_padding_top }}px;
-    padding-bottom: {{ section.settings.our_ser_padding_bottom }}px;
 
-    {% if section.settings.section_bg_image_enable %}
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-    {% endif %}
-
-    {% if section.settings.section_bg_color_enable %}
-      background-color: {{ section.settings.section_bg_color }};
-    {% endif %}
-  }
-
-  @media (max-width: 1199px) {
-    .features-square-area {
-      padding-top: {{ section.settings.our_ser_padding_top_ip }}px;
-      padding-bottom: {{ section.settings.our_ser_padding_bottom_ip }}px;
-    }
-  }
-
-  @media (max-width: 767px) {
-    .features-square-area {
-      padding-top: {{ section.settings.our_ser_padding_top_xs }}px;
-      padding-bottom: {{ section.settings.our_ser_padding_bottom_xs }}px;
-    }
-  }
 {% endstyle %}
