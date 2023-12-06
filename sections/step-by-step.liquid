@@ -1,31 +1,32 @@
 {{ 'section-step-by-step.css' | asset_url | stylesheet_tag }}
-
-<div class="container">
-  <div class="section-capture">
-    <div class="section-title">
-      {% if section.settings.section_subtitle != '' %}
-      <span class="sub-title">{{ section.settings.section_subtitle }}</span>
-      {% endif %}
-      {% if section.settings.section_title != '' %}
-      <h2>{{ section.settings.section_title }}</h2>
-      {% endif %}
-    </div>
-  </div>
-  <div class="steps-wrapper">
-    {% for block in section.blocks %}
-      <div class="step-card">
-        {{ block.settings.step_image |
-          image_url: width: 600 | image_tag:
-          class: 'step-image',
-          height: block.settings.step_image.height,
-          width: block.settings.step_image.width
-        }}
-        <div class="step-content">
-          <h3>{{ block.settings.step_title }}</h3>
-          <p>{{ block.settings.step_desc }}</p>
-        </div>
+<div id="Steps-{{ section.id }}">
+  <div class="container">
+    <div class="section-capture">
+      <div class="section-title">
+        {% if section.settings.section_subtitle != '' %}
+        <span class="sub-title">{{ section.settings.section_subtitle }}</span>
+        {% endif %}
+        {% if section.settings.section_title != '' %}
+        <h2>{{ section.settings.section_title }}</h2>
+        {% endif %}
       </div>
-    {% endfor %}
+    </div>
+    <div class="steps-wrapper">
+      {% for block in section.blocks %}
+        <div class="step-card">
+          {{ block.settings.step_image |
+            image_url: width: 600 | image_tag:
+            class: 'step-image',
+            height: block.settings.step_image.height,
+            width: block.settings.step_image.width
+          }}
+          <div class="step-content">
+            <h3>{{ block.settings.step_title }}</h3>
+            <p>{{ block.settings.step_desc }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
   </div>
 </div>
 
@@ -48,6 +49,56 @@
       "id": "section_title",
       "label": "Section Title",
       "default": "How it works"
+    },
+    {
+      "type": "color",
+      "id": "section_bg_color",
+      "label": "Background Color",
+      "default": "#f6f6f6"
+    },
+    {
+      "type": "header",
+      "content": "Section Margin"
+    },
+    {
+      "type": "range",
+      "id": "margin_top_desktop",
+      "label": "Desktop Margin Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom_desktop",
+      "label": "Desktop Margin Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "margin_top_mobile",
+      "label": "Mobile Margin Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom_mobile",
+      "label": "Mobile Margin Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 100
     }
   ],
   "blocks": [
@@ -88,3 +139,26 @@
   ]
 }
 {% endschema %}
+
+{% style %}
+  #Steps-{{ section.id }} {
+    background-color: {{ section.settings.section_bg_color }};
+    padding-top: {{ section.settings.margin_top_desktop }};
+    padding-bottom: {{ section.settings.margin_bottom_desktop }};
+  }
+  #Steps-{{ section.id }} {
+
+  }
+
+  @media screen and (max-width: 767px) {
+    #Steps-{{ section.id }} {
+      padding-top: {{ section.settings.margin_top_mobile }};
+      padding-bottom: {{ section.settings.margin_bottom_mobile }};
+    }
+    .steps-wrapper .step-card {
+      width: 100%;
+      padding: 15px;
+    }
+  }
+
+{% endstyle %}
