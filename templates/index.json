@@ -35,15 +35,15 @@
         "button"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/banner_hand_card_mobile.webp",
+        "image": "shopify:\/\/shop_images\/main_banner_pc.webp",
         "enable_mobile_image": true,
-        "mobile_image": "shopify:\/\/shop_images\/OnlinePaymentMockupcopiar.webp",
-        "image_overlay_opacity": 30,
+        "mobile_image": "shopify:\/\/shop_images\/main_banner_mobile.webp",
+        "image_overlay_opacity": 0,
         "image_height": "large",
         "desktop_content_position": "bottom-left",
         "show_text_box": false,
         "desktop_content_alignment": "left",
-        "color_scheme": "accent-2",
+        "color_scheme": "background-1",
         "image_behavior": "none",
         "mobile_content_alignment": "left",
         "stack_images_on_mobile": false,
@@ -71,7 +71,7 @@
         "df5650a4-0e2f-47e0-bb16-b93cf46ccf10": {
           "type": "service_image",
           "settings": {
-            "feature_image": "shopify:\/\/shop_images\/Sem_nome_420_x_570_px.png"
+            "feature_image": "shopify:\/\/shop_images\/product_mockup_iphone_card_samantha.webp"
           }
         },
         "0e6837e0-1603-47b2-8800-728228b9a7b0": {
@@ -124,7 +124,7 @@
         "section_bg_image": "shopify:\/\/shop_images\/Design_sem_nome_24.webp",
         "section_bg_color_enable": false,
         "section_bg_color": "#f6f6f6",
-        "image_banner": "shopify:\/\/shop_images\/Sem_nome_420_x_570_px_1.webp",
+        "image_banner": "shopify:\/\/shop_images\/product_mockup_card.webp",
         "banner_title": "Your logo. Limitless options.",
         "banner_title_color": "#ffffff",
         "banner_desc": "NOK Cards are available in several different materials, from Carbon Fiber to Bamboo. You choose how you want to stand out.",
@@ -138,6 +138,65 @@
         "banner_btn_2_icon": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"2.167 .438 251.038 259.969\"><g fill=\"none\" fill-rule=\"evenodd\"><path d=\"m221.503 210.324c-105.235 50.083-170.545 8.18-212.352-17.271-2.587-1.604-6.984.375-3.169 4.757 13.928 16.888 59.573 57.593 119.153 57.593 59.621 0 95.09-32.532 99.527-38.207 4.407-5.627 1.294-8.731-3.16-6.872zm29.555-16.322c-2.826-3.68-17.184-4.366-26.22-3.256-9.05 1.078-22.634 6.609-21.453 9.93.606 1.244 1.843.686 8.06.127 6.234-.622 23.698-2.826 27.337 1.931 3.656 4.79-5.57 27.608-7.255 31.288-1.628 3.68.622 4.629 3.68 2.178 3.016-2.45 8.476-8.795 12.14-17.774 3.639-9.028 5.858-21.622 3.71-24.424z\" fill=\"#f90\" fill-rule=\"nonzero\"><\/path><path d=\"m150.744 108.13c0 13.141.332 24.1-6.31 35.77-5.361 9.489-13.853 15.324-23.341 15.324-12.952 0-20.495-9.868-20.495-24.432 0-28.75 25.76-33.968 50.146-33.968zm34.015 82.216c-2.23 1.992-5.456 2.135-7.97.806-11.196-9.298-13.189-13.615-19.356-22.487-18.502 18.882-31.596 24.527-55.601 24.527-28.37 0-50.478-17.506-50.478-52.565 0-27.373 14.85-46.018 35.96-55.126 18.313-8.066 43.884-9.489 63.43-11.718v-4.365c0-8.018.616-17.506-4.08-24.432-4.128-6.215-12.003-8.777-18.93-8.777-12.856 0-24.337 6.594-27.136 20.257-.57 3.037-2.799 6.026-5.835 6.168l-32.735-3.51c-2.751-.618-5.787-2.847-5.028-7.07 7.543-39.66 43.36-51.616 75.43-51.616 16.415 0 37.858 4.365 50.81 16.795 16.415 15.323 14.849 35.77 14.849 58.02v52.565c0 15.798 6.547 22.724 12.714 31.264 2.182 3.036 2.657 6.69-.095 8.966-6.879 5.74-19.119 16.415-25.855 22.393l-.095-.095\" fill=\"#000\"><\/path><path d=\"m221.503 210.324c-105.235 50.083-170.545 8.18-212.352-17.271-2.587-1.604-6.984.375-3.169 4.757 13.928 16.888 59.573 57.593 119.153 57.593 59.621 0 95.09-32.532 99.527-38.207 4.407-5.627 1.294-8.731-3.16-6.872zm29.555-16.322c-2.826-3.68-17.184-4.366-26.22-3.256-9.05 1.078-22.634 6.609-21.453 9.93.606 1.244 1.843.686 8.06.127 6.234-.622 23.698-2.826 27.337 1.931 3.656 4.79-5.57 27.608-7.255 31.288-1.628 3.68.622 4.629 3.68 2.178 3.016-2.45 8.476-8.795 12.14-17.774 3.639-9.028 5.858-21.622 3.71-24.424z\" fill=\"#f90\" fill-rule=\"nonzero\"><\/path><path d=\"m150.744 108.13c0 13.141.332 24.1-6.31 35.77-5.361 9.489-13.853 15.324-23.341 15.324-12.952 0-20.495-9.868-20.495-24.432 0-28.75 25.76-33.968 50.146-33.968zm34.015 82.216c-2.23 1.992-5.456 2.135-7.97.806-11.196-9.298-13.189-13.615-19.356-22.487-18.502 18.882-31.596 24.527-55.601 24.527-28.37 0-50.478-17.506-50.478-52.565 0-27.373 14.85-46.018 35.96-55.126 18.313-8.066 43.884-9.489 63.43-11.718v-4.365c0-8.018.616-17.506-4.08-24.432-4.128-6.215-12.003-8.777-18.93-8.777-12.856 0-24.337 6.594-27.136 20.257-.57 3.037-2.799 6.026-5.835 6.168l-32.735-3.51c-2.751-.618-5.787-2.847-5.028-7.07 7.543-39.66 43.36-51.616 75.43-51.616 16.415 0 37.858 4.365 50.81 16.795 16.415 15.323 14.849 35.77 14.849 58.02v52.565c0 15.798 6.547 22.724 12.714 31.264 2.182 3.036 2.657 6.69-.095 8.966-6.879 5.74-19.119 16.415-25.855 22.393l-.095-.095\" fill=\"#000\"><\/path><\/g><\/svg>",
         "banner_btn_2_text": "Buy amazon",
         "banner_btn_2_url": ""
+      }
+    },
+    "50a65b12-5877-4ee3-80d6-ec6e81f8cf11": {
+      "type": "multirow",
+      "blocks": {
+        "template--21701438701890__50a65b12-5877-4ee3-80d6-ec6e81f8cf11-row-1": {
+          "type": "row",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/how_to_step_1.webp",
+            "caption": "Caption",
+            "heading": "Row",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        },
+        "template--21701438701890__50a65b12-5877-4ee3-80d6-ec6e81f8cf11-row-2": {
+          "type": "row",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/how_to_step_2.webp",
+            "caption": "Caption",
+            "heading": "Row",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        },
+        "template--21701438701890__50a65b12-5877-4ee3-80d6-ec6e81f8cf11-row-3": {
+          "type": "row",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/how_to_step_3.webp",
+            "caption": "Caption",
+            "heading": "Row",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--21701438701890__50a65b12-5877-4ee3-80d6-ec6e81f8cf11-row-1",
+        "template--21701438701890__50a65b12-5877-4ee3-80d6-ec6e81f8cf11-row-2",
+        "template--21701438701890__50a65b12-5877-4ee3-80d6-ec6e81f8cf11-row-3"
+      ],
+      "disabled": true,
+      "settings": {
+        "image_height": "medium",
+        "desktop_image_width": "medium",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "image_layout": "alternate-left",
+        "section_color_scheme": "",
+        "row_color_scheme": "",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "features-square": {
@@ -176,6 +235,7 @@
         "feature-2",
         "feature-3"
       ],
+      "disabled": true,
       "settings": {
         "our_ser_padding_top": 80,
         "our_ser_padding_bottom": 80,
@@ -488,6 +548,7 @@
     "image_banner",
     "feature-info",
     "banner-product",
+    "50a65b12-5877-4ee3-80d6-ec6e81f8cf11",
     "features-square",
     "featured_collection",
     "trusted-by",
