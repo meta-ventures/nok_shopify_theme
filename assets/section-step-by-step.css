@@ -22,8 +22,8 @@
 }
 
 .steps-wrapper .step-card .step-image {
-  width: 100%;
-  height: 380px;
+  width: 90%;
+  /* height: 325px; */
   object-fit: contain;
 }
 
