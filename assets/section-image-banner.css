@@ -347,10 +347,6 @@
   z-index: 1;
 }
 
-.banner__box p {
-  color: white;
-}
-
 @media screen and (min-width: 750px) {
   .banner--desktop-transparent .banner__box {
     background: transparent;
