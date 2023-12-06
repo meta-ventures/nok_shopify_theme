@@ -62,3 +62,9 @@
 .steps-wrapper .step-card .step-content p {
   font-size: 16px;
 }
+
+@media screen and (max-width: 767px) {
+  .steps-wrapper .step-card {
+    width: 100%;
+  }
+}
