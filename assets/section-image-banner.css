@@ -330,6 +330,11 @@
 }
 
 @media screen and (max-width: 749px) {
+  .banner__content {
+    align-items: start;
+    padding-top: 75px;
+  }
+
   .banner--mobile-bottom:not(.banner--stacked) .banner__content {
     order: 2;
   }
