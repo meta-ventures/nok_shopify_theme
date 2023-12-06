@@ -1,6 +1,5 @@
 {{ 'section-step-by-step.css' | asset_url | stylesheet_tag }}
 
-<section class="features-square-area" {% if section.settings.section_bg_image_enable %}style="background-image: url('{% if section.settings.section_bg_image %}{{ section.settings.section_bg_image | image_url }}{% else %}https://dummyimage.com/1920x1024{% endif %}');"{% endif %}>
   <div class="container">
     <div class="section-capture">
       <div class="section-title">
@@ -38,120 +37,11 @@
       </li>
       {% endfor %}
     </ul>
-  </div>
 </section>
 {% schema %}
 {
   "name": "Features Square",
   "settings": [
-    {
-      "type": "header",
-      "content": "Section Padding"
-    },
-    {
-      "type": "paragraph",
-      "content": "Desktop / Laptop / Tablet"
-    },
-    {
-      "type": "range",
-      "id": "our_ser_padding_top",
-      "label": "Section Padding Top",
-      "min": 0,
-      "max": 100,
-      "step": 1,
-      "unit": "px",
-      "default": 100
-    },
-    {
-      "type": "range",
-      "id": "our_ser_padding_bottom",
-      "label": "Section Padding bottom",
-      "min": 0,
-      "max": 100,
-      "step": 1,
-      "unit": "px",
-      "default": 0
-    },
-    {
-      "type": "paragraph",
-      "content": "Ipad Pro / Ipad"
-    },
-    {
-      "type": "range",
-      "id": "our_ser_padding_top_ip",
-      "label": "Section Padding Top",
-      "min": 0,
-      "max": 100,
-      "step": 1,
-      "unit": "px",
-      "default": 80
-    },
-    {
-      "type": "range",
-      "id": "our_ser_padding_bottom_ip",
-      "label": "Section Padding Bottom",
-      "min": 0,
-      "max": 100,
-      "step": 1,
-      "unit": "px",
-      "default": 0
-    },
-    {
-      "type": "paragraph",
-      "content": "Mobile"
-    },
-    {
-      "type": "range",
-      "id": "our_ser_padding_top_xs",
-      "label": "Section Padding Top",
-      "min": 0,
-      "max": 100,
-      "step": 1,
-      "unit": "px",
-      "default": 60
-    },
-    {
-      "type": "range",
-      "id": "our_ser_padding_bottom_xs",
-      "label": "Section Padding Bottom",
-      "min": 0,
-      "max": 100,
-      "step": 1,
-      "unit": "px",
-      "default": 0
-    },
-    {
-      "type": "header",
-      "content": "Background Image"
-    },
-    {
-      "type": "checkbox",
-      "id": "section_bg_image_enable",
-      "label": "Show Background Image",
-      "default": false
-    },
-    {
-      "type": "image_picker",
-      "id": "section_bg_image",
-      "label": "Image",
-      "info": "Recommended Size: 1920 x 770px"
-    },
-    {
-      "type": "header",
-      "content": "Background Color"
-    },
-    {
-      "type": "checkbox",
-      "id": "section_bg_color_enable",
-      "label": "Show Background Color",
-      "default": true
-    },
-    {
-      "type": "color",
-      "id": "section_bg_color",
-      "label": "Background Color",
-      "default": "#f6f6f6"
-    },
     {
       "type": "header",
       "content": "Section Title"
@@ -160,7 +50,7 @@
       "type": "text",
       "id": "section_subtitle",
       "label": "Section Subtitle",
-      "default": "Controller"
+      "default": "Smart Business Card"
     },
     {
       "type": "text",
