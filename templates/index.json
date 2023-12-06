@@ -183,25 +183,6 @@
         "banner_btn_2_url": ""
       }
     },
-    "50a65b12-5877-4ee3-80d6-ec6e81f8cf11": {
-      "type": "multirow",
-      "disabled": true,
-      "settings": {
-        "image_height": "medium",
-        "desktop_image_width": "medium",
-        "heading_size": "h1",
-        "text_style": "body",
-        "button_style": "secondary",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "image_layout": "alternate-left",
-        "section_color_scheme": "",
-        "row_color_scheme": "",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
@@ -551,7 +532,6 @@
     "feature-info",
     "step-by-step",
     "banner-product",
-    "50a65b12-5877-4ee3-80d6-ec6e81f8cf11",
     "featured_collection",
     "trusted-by",
     "video-banner",

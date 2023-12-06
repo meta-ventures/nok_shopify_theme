@@ -1,35 +1,31 @@
 <section class="offer-text-area">
 	<div class="container">
-		<div class="row">
-			<div class="col">
-				<div class="text-area">
-					<ul class="text-ul">
-						<li class="text-li title">
-              <div class="section-capture">
-                <div class="section-title">
-                  {% if section.settings.offer_text_title != '' %}
-                  <h2 style="color: {{ section.settings.offer_text_title_color }}">{{ section.settings.offer_text_title }}</h2>
-                  {% endif %}
-                </div>
-              </div>
-						</li>
-						<li class="text-li desc">
-							{% if section.settings.offer_text_desc != '' %}
-							<p style="color: {{ section.settings.offer_text_desc_color }}">{{ section.settings.offer_text_desc }}</p>
-							{% endif %}
-						</li>
-						<li class="text-li offer-btn">
-							{% if section.settings.offer_btn_text != '' %}
-							<a href="{{ section.settings.offer_btn_url }}" class="btn-style3">
-								<span>{{ section.settings.offer_btn_text }}</span>
-								<span class="icon">{{ section.settings.offer_btn_icon }}</span>
-							</a>
-							{% endif %}
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
+    <div class="text-area">
+      <div class="text-ul">
+        <div class="text-item title">
+          <div class="section-capture">
+            <div class="section-title">
+              {% if section.settings.offer_text_title != '' %}
+              <h2 style="color: {{ section.settings.offer_text_title_color }}">{{ section.settings.offer_text_title }}</h2>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+        <div class="text-item desc">
+          {% if section.settings.offer_text_desc != '' %}
+          <p style="color: {{ section.settings.offer_text_desc_color }}">{{ section.settings.offer_text_desc }}</p>
+          {% endif %}
+        </div>
+        <div class="text-item offer-btn">
+          {% if section.settings.offer_btn_text != '' %}
+          <a href="{{ section.settings.offer_btn_url }}" class="btn-style3">
+            <span>{{ section.settings.offer_btn_text }}</span>
+            <span class="icon">{{ section.settings.offer_btn_icon }}</span>
+          </a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
 	</div>
 </section>
 
@@ -237,62 +233,52 @@
   }
 }
 /* main css */
-.offer-text-area .text-area ul.text-ul {
+.offer-text-area .text-area .text-ul {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
   justify-content: center;
-	{% if settings.enable_rtl %}
-	margin-right: -30px;
-	{% else %}
-	margin-left: -30px;
-	{% endif %}
-  margin-top: -30px;
+  width: 100%;
 }
-.offer-text-area .text-area ul.text-ul li.text-li {
-	{% if settings.enable_rtl %}
-	margin-right: 30px;
-	{% else %}
-	margin-left: 30px;
-	{% endif %}
+.offer-text-area .text-area .text-ul .text-item {
+  flex-grow: 1;
+}
+.offer-text-area .text-area .text-ul .text-item.title {
+	width: 25%;
+}
+.offer-text-area .text-area .text-ul .text-item {
+	width: 41.67%;
+	text-align: center;
+}
+
+.offer-text-area .text-area .text-ul .text-item p {
   margin-top: 30px;
 }
-.offer-text-area .text-area ul.text-ul li.text-li.title {
-	width: calc(25% - 30px);
-  {% if settings.enable_rtl %}
-  text-align: right;
-  {% else %}
-  text-align: left;
-  {% endif %}
-}
-.offer-text-area .text-area ul.text-ul li.text-li {
-	width: calc(41.67% - 30px);
+.offer-text-area .text-area .text-ul .text-item.offer-btn {
+	width: 16.67%;
 	text-align: center;
-}
-.offer-text-area .text-area ul.text-ul li.text-li.offer-btn {
-	width: calc(16.67% - 30px);
-	text-align: center;
+  margin-top: 30px;
 }
 @media (max-width: 1199px) {
-  .offer-text-area .text-area ul.text-ul li.text-li {
-    width: calc(50% - 30px);
+  .offer-text-area .text-area .text-ul .text-item {
+    width: 50%;
   }
-  .offer-text-area .text-area ul.text-ul li.text-li.offer-btn {
-    width: calc(25% - 30px);
+  .offer-text-area .text-area .text-ul .text-item.offer-btn {
+    width: 25%;
   }
 }
 @media (max-width: 991px) {
-  .offer-text-area .text-area ul.text-ul li.text-li.title,
-  .offer-text-area .text-area ul.text-ul li.text-li.offer-btn {
-    width: calc(50% - 30px);
+  .offer-text-area .text-area .text-ul .text-item.title,
+  .offer-text-area .text-area .text-ul .text-item.offer-btn {
+    width: 50%;
   }
-  .offer-text-area .text-area ul.text-ul li.text-li.desc {
-    width: calc(100% - 30px);
+  .offer-text-area .text-area .text-ul .text-item.desc {
+    width: 100%;
     order: -1;
   }
 }
 @media (max-width: 767px) {
-  .offer-text-area .text-area ul.text-ul {
+  .offer-text-area .text-area .text-ul {
     {% if settings.enable_rtl %}
     margin-right: -12px;
     {% else %}
@@ -300,7 +286,7 @@
     {% endif %}
     margin-top: -15px;
   }
-  .offer-text-area .text-area ul.text-ul li.text-li {
+  .offer-text-area .text-area .text-ul .text-item {
     {% if settings.enable_rtl %}
     margin-right: 12px;
     {% else %}
@@ -308,58 +294,58 @@
     {% endif %}
     margin-top: 15px;
   }
-  .offer-text-area .text-area ul.text-ul li.text-li.title,
-  .offer-text-area .text-area ul.text-ul li.text-li.offer-btn {
+  .offer-text-area .text-area .text-ul .text-item.title,
+  .offer-text-area .text-area .text-ul .text-item.offer-btn {
     width: calc(50% - 12px);
   }
-  .offer-text-area .text-area ul.text-ul li.text-li.desc {
+  .offer-text-area .text-area .text-ul .text-item.desc {
     width: calc(100% - 12px);
   }
 }
 @media (max-width: 479px) {
-  .offer-text-area .text-area ul.text-ul li.text-li.title,
-  .offer-text-area .text-area ul.text-ul li.text-li.offer-btn {
+  .offer-text-area .text-area .text-ul .text-item.title,
+  .offer-text-area .text-area .text-ul .text-item.offer-btn {
     width: calc(100% - 12px);
   }
-  .offer-text-area .text-area ul.text-ul li.text-li.desc {
+  .offer-text-area .text-area .text-ul .text-item.desc {
     order: unset;
   }
 }
 
 /* title css */
-.offer-text-area .text-area ul.text-ul li.text-li.title .section-capture {
+.offer-text-area .text-area .text-ul .text-item.title .section-capture {
   margin-bottom: 0px;
 }
 /* description css */
-.offer-text-area .text-area ul.text-ul li.text-li p {
+.offer-text-area .text-area .text-ul .text-item p {
   font-size: 24px;
   {% if settings.other_custom_font_handle_enable %}
   font-family: '{{ settings.other_custom_font_handle }}', sans-serif;
   {% endif %}
 }
 /* button css */
-.offer-text-area .text-area ul.text-ul li.text-li.offer-btn a {
+.offer-text-area .text-area .text-ul .text-item.offer-btn a {
   display: inline-flex;
 }
-.offer-text-area .text-area ul.text-ul li.text-li.offer-btn a span.icon {
+.offer-text-area .text-area .text-ul .text-item.offer-btn a span.icon {
   {% if settings.enable_rtl %}
   margin-right: 10px;
   {% else %}
   margin-left: 10px;
   {% endif %}
 }
-.offer-text-area .text-area ul.text-ul li.text-li.offer-btn a span.icon svg {
+.offer-text-area .text-area .text-ul .text-item.offer-btn a span.icon svg {
   width: 22px;
   height: 22px;
 }
 
 @media (max-width: 1199px) {
-	.offer-text-area .text-area ul.text-ul li.text-li p {
+	.offer-text-area .text-area .text-ul .text-item p {
 		font-size: 20px;
 	}
 }
 @media (max-width: 767px) {
-	.offer-text-area .text-area ul.text-ul li.text-li p {
+	.offer-text-area .text-area .text-ul .text-item p {
 		font-size: 16px;
 	}
 }
