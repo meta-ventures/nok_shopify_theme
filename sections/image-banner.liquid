@@ -97,7 +97,8 @@
             class: 'banner__media_desktop_image',
             sizes: sizes,
             widths: widths,
-            fetchpriority: fetch_priority
+            fetchpriority: fetch_priority,
+            preload: true
       }}
 
       {%- if section.settings.enable_mobile_image and section.settings.mobile_image != blank -%}
