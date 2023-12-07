@@ -17,12 +17,16 @@
                             <p class="desc" style="color: {{ section.settings.banner_desc_color }}">{{ section.settings.banner_desc }}</p>
                             {% endif %}
                             <h4 class="banner-price">
-                                {% if section.settings.banner_price_label != '' %}
+                              {% assign branded_nok_card = all_products['branded-nok-card-polymer'] %}
+                              {% if section.settings.banner_price_label != '' %}
                                 <span class="label">{{ section.settings.banner_price_label }}</span>
-                                {% endif %}
-                                {% if section.settings.banner_price_text != '' %}
+                              {% endif %}
+
+                              {% if section.settings.banner_price_text != '' %}
                                 <span class="price">{{ section.settings.banner_price_text }}</span>
-                                {% endif %}
+                                {% elsif branded_nok_card %}
+                                  <span class="price">{{ branded_nok_card.price | money }}</span>
+                              {% endif %}
                             </h4>
                             <div class="banner-btn">
                                 {% if section.settings.banner_btn_1_text != '' %}
