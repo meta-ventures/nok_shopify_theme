@@ -1465,5 +1465,95 @@
         "default": "scheme-1"
       }
     ]
+  },
+  {
+    "name": "Newsletter Popup",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "newsletter_popup_enable",
+        "label": "Newsletter Popup Enable",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "one_day_popup_enable",
+        "label": "Show Popup one time for per day",
+        "default": true
+      },
+      {
+        "type": "header",
+        "content": "Newsletter Content"
+      },
+      {
+        "type": "paragraph",
+        "content": "Newsletter background image"
+      },
+      {
+        "type": "image_picker",
+        "id": "newsletter_bgimg",
+        "label": "Background Image",
+        "info": "Recommended Size: 650px x 350px"
+      },
+      {
+        "type": "checkbox",
+        "id": "newsletter_bgimg_enable",
+        "label": "Show Background Image",
+        "default": true
+      },
+      {
+        "type": "paragraph",
+        "content": "Newsletter background color"
+      },
+      {
+        "type": "color",
+        "id": "newsletter_bgcolor",
+        "label": "Background Color",
+        "default": "#fff"
+      },
+      {
+        "type": "paragraph",
+        "content": "Newsletter Popup Title"
+      },
+      {
+        "type": "text",
+        "id": "newsletter_popup_title",
+        "label": "Title",
+        "default": "Subscribe to our newsletter"
+      },
+      {
+        "type": "paragraph",
+        "content": "Newsletter Popup Description"
+      },
+      {
+        "type": "richtext",
+        "id": "newsletter_text",
+        "label": "Description"
+      },
+      {
+        "type": "text",
+        "id": "email_placeholder",
+        "label": "Email Placeholer",
+        "default": "Enter your email"
+      },
+      {
+        "type": "color",
+        "id": "input_placeholder_color",
+        "label": "Input Text Color",
+        "default": "#222222"
+      },
+      {
+        "type": "textarea",
+        "id": "newsletter_success_text",
+        "label": "Newsletter Success Text",
+        "default": "Thank you for subscribe use this code for first order"
+      },
+      {
+        "type": "text",
+        "id": "newsletter_coupon_code",
+        "label": "Coupon Code",
+        "default": "WELCOME10"
+      }
+    ]
   }
 ]

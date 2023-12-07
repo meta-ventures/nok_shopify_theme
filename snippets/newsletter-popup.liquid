@@ -1,0 +1,142 @@
+{% if settings.newsletter_popup_enable %}
+<div class="popup_wrapper" id="one-time-newsletter">
+  <div class="modal fade" id="news-letter-modal">
+    <div class="newsletter_popup_inner modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body">
+          <button type="button" class="close" data-bs-dismiss="modal"><i class="ri-close-line"></i></button>
+          <div class="newsletter-info" {% if settings.newsletter_bgimg_enable %}style="background-image: url('{% if settings.newsletter_bgimg %}{{ settings.newsletter_bgimg | image_url }}{% else %}https://dummyimage.com/680x450{% endif %}');"{% endif %}>
+            <div class="subscribe_area">
+              <div class="news-title">
+                <div class="title">
+                  <h2><span>{{ settings.newsletter_popup_title }}</span></h2>
+                </div>
+                <div class="desc">
+                  <p>{{ settings.newsletter_text }}</p>
+                </div>
+              </div>
+              <div class="popup-newsletter">
+                {%- render 'newsletter' -%}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .popup_wrapper .modal-dialog{
+    max-width: 680px;
+  }
+  .popup_wrapper .modal-content{
+    border: none;
+    overflow: hidden;
+    border-radius: 0px;
+  }
+  .popup_wrapper .modal-body{
+    padding: 0px;
+  }
+  .popup_wrapper .modal-body button.close {
+    font-size: 28px;
+    position: absolute;
+    top: 15px;
+    {% if settings.enable_rtl %}
+    left: 15px;
+    {% else %}
+    right: 15px;
+    {% endif %}
+    display: flex;
+  }
+  .popup_wrapper .modal-body button.close:hover {
+    color: var(--btn2-bgcolor);
+  }
+  .popup_wrapper .newsletter-info{
+    padding: 45px 60px;
+    height: 450px;
+    {% if settings.newsletter_bgimg_enable %}
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    {% else %}
+    background-color: {{ settings.newsletter_bgcolor }};
+    {% endif %}
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .popup_wrapper .newsletter-info .subscribe_area{
+    width: 60%;
+  }
+  .popup_wrapper .newsletter-info .subscribe_area .news-title .title h2{
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+  .popup_wrapper .newsletter-info .subscribe_area .news-title .desc {
+    margin-top: 17px;
+  }
+  .popup_wrapper .newsletter-info .subscribe_area .news-title .desc p{
+    color: #767676;
+    font-size: 18px;
+  }
+  .newsletter-info .subscribe_area .popup-newsletter{
+    margin-top: 41px;
+  }
+  .newsletter-info .subscribe_area .popup-newsletter .news-content p.text-success{
+    margin: -7px 0 18px;
+  }
+  .newsletter-info .subscribe_area .popup-newsletter .news-content .subscribe-block input{
+    background-color: transparent;
+    width: 100%;
+    padding: 16px 30px;
+    border-radius: 5px;
+  }
+  .newsletter-info .subscribe_area .popup-newsletter .news-content .subscribe-block input::-webkit-input-placeholder,
+  .newsletter-info .subscribe_area .popup-newsletter .news-content .subscribe-block input::-moz-placeholder,
+  .newsletter-info .subscribe_area .popup-newsletter .news-content .subscribe-block input::-ms-input-placeholder,
+  .newsletter-info .subscribe_area .popup-newsletter .news-content .subscribe-block input::placeholder{
+    color: {{ settings.input_placeholder_color }};
+  }
+  .newsletter-info .subscribe_area .popup-newsletter .news-content .subscribe-block .email-submit{
+    margin-top: 30px;
+  }
+  .newsletter-info .subscribe_area .popup-newsletter .news-content .subscribe-block .email-submit button.news-sub{
+    display: none;
+  }
+  @media (max-width: 1199px) {
+    .newsletter-info .subscribe_area .popup-newsletter .news-content .subscribe-block input {
+      padding: 12px 30px;
+    }
+  }
+  @media (max-width : 600px) {
+    .popup_wrapper .modal-dialog{
+      max-width: 100%;
+      margin: 0px;
+      padding: 15px;
+    }
+    .popup_wrapper .newsletter-info{
+      padding: 30px 15px;
+      height: 350px;
+    }
+  }
+  @media (max-width : 540px) {
+    .popup_wrapper .modal-body button.close {
+      font-size: 22px;
+      top: 5px;
+      right: 5px;
+    }
+    .popup_wrapper .newsletter-info .subscribe_area {
+      width: 100%;
+    }
+    .popup_wrapper .newsletter-info .subscribe_area .news-title .title h2 {
+      font-size: 17px;
+    }
+    .popup_wrapper .newsletter-info .subscribe_area .news-title .desc p {
+      font-size: 16px;
+    }
+    .newsletter-info .subscribe_area .popup-newsletter .news-content .subscribe-block .email-submit {
+      margin-top: 20px;
+    }
+  }
+</style>
+{% endif %}
