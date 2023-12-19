@@ -21,6 +21,7 @@
         },
         "4d9b4c14-e48d-4e33-bf48-c46af507e298": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "Free Global Shipping on orders above $100",
             "link": ""
