@@ -1,9 +1,9 @@
 {
   "current": {
-    "logo": "shopify:\/\/shop_images\/nok_logo_color.png",
+    "logo": "shopify:\/\/shop_images\/logo.svg",
     "logo_width": 100,
-    "favicon": "shopify:\/\/shop_images\/icon-color-nok.svg",
-    "type_header_font": "lato_n4",
+    "favicon": "shopify:\/\/shop_images\/nok_icon_color.png",
+    "type_header_font": "din_next_n7",
     "heading_scale": 100,
     "type_body_font": "lato_n4",
     "body_scale": 100,
@@ -153,9 +153,9 @@
         "settings": {
           "button_color": "#000000",
           "button_icon": "chat_bubble",
+          "button_text": "chat_with_us",
           "button_horizontal_position": "bottom_right",
           "button_vertical_position": "lowest",
-          "button_text": "chat_with_us",
           "greeting_message": "👋 Hi, message us with any questions. We're happy to help!"
         }
       }
@@ -190,7 +190,7 @@
           "text": "#ffffff",
           "button": "#ffffff",
           "button_label": "#000000",
-          "secondary_button_label": "#fff",
+          "secondary_button_label": "#ffffff",
           "shadow": "#121212"
         }
       },
