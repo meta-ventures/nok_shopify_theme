@@ -7,6 +7,7 @@
       "blocks": {
         "announcement-bar-0": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "Holiday SALE 30% OFF site-wide until 25th December!!",
             "link": ""
