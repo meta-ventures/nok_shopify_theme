@@ -167,7 +167,7 @@
       },
       "2633443231138920854": {
         "type": "shopify:\/\/apps\/avada-seo-suite\/blocks\/avada-seo\/15507c6e-1aa3-45d3-b698-7e175e033440",
-        "disabled": true,
+        "disabled": false,
         "settings": {
         }
       }
